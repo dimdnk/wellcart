@@ -1,0 +1,320 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WellCart Platform\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-11 12:05+0300\n"
+"PO-Revision-Date: 2016-08-11 12:05+0300\n"
+"Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
+"Language-Team: WellCart Development Team <translate@wellcart.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate;__;setValue;setLabel;setLegend;_refresh\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../src/Controller/Admin/LanguagesController.php:89
+msgid "Language profile successfully created."
+msgstr ""
+
+#: ../src/Controller/Admin/LanguagesController.php:90
+msgid "Language profile successfully modified."
+msgstr ""
+
+#: ../src/Controller/Admin/LanguagesController.php:108
+#: ../src/Controller/Admin/LanguagesController.php:129
+msgid "This language no longer exists."
+msgstr ""
+
+#: ../src/Controller/Admin/LanguagesController.php:135
+msgid "Language was deleted successfully."
+msgstr ""
+
+#: ../src/Controller/Admin/UrlRewritesController.php:89
+msgid "Url Rewrite successfully created."
+msgstr ""
+
+#: ../src/Controller/Admin/UrlRewritesController.php:90
+msgid "Url Rewrite successfully modified."
+msgstr ""
+
+#: ../src/Controller/Admin/UrlRewritesController.php:108
+#: ../src/Controller/Admin/UrlRewritesController.php:129
+msgid "This url rewrite no longer exists."
+msgstr ""
+
+#: ../src/Controller/Admin/UrlRewritesController.php:135
+msgid "URL rewrite was deleted successfully."
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:44
+msgid "Is Active"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:68
+msgid "Is Primary"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:92
+msgid "Name"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:113
+#: ../src/PageView/Admin/LanguagesGrid.php:105
+msgid "Code"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:132
+msgid "Locale"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:151
+msgid "Territory"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:182 ../src/Form/UrlRewrite.php:97
+#: ../src/Service/ConfigurationEditor.php:271
+#: ../src/Service/ConfigurationEditor.php:279
+#: ../src/Service/ConfigurationEditor.php:284
+msgid "Save"
+msgstr ""
+
+#: ../src/Form/Locale/Language.php:196 ../src/Form/UrlRewrite.php:111
+msgid "Save & Continue Edit"
+msgstr ""
+
+#: ../src/Form/UrlRewrite.php:44
+msgid "Request Path"
+msgstr ""
+
+#: ../src/Form/UrlRewrite.php:66 ../src/PageView/Admin/UrlRewritesGrid.php:97
+msgid "Target Path"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguageForm.php:40
+#: ../src/PageView/Admin/LanguageForm.php:44
+#: ../src/PageView/Admin/LanguagesGrid.php:60
+#: ../src/PageView/Admin/LanguagesGrid.php:64
+msgid "Languages"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguageForm.php:56
+#, php-format
+msgid "Edit language settings: %s"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguageForm.php:64
+#, php-format
+msgid "Create language settings %s"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:91
+msgid "Language"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:98
+msgid "ISO"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:113
+msgid "Enabled"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:121
+msgid "Primary"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:129
+#: ../src/PageView/Admin/UrlRewritesGrid.php:113
+msgid "<i class=\"fa fa-pencil-square-o\"></i>"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:131
+#: ../src/PageView/Admin/UrlRewritesGrid.php:115
+msgid "Edit"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:144
+#: ../src/PageView/Admin/UrlRewritesGrid.php:128
+msgid "<i class=\"fa fa-trash-o\"></i>"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:146
+#: ../src/PageView/Admin/LanguagesGrid.php:171
+#: ../src/PageView/Admin/UrlRewritesGrid.php:130
+#: ../src/PageView/Admin/UrlRewritesGrid.php:155
+msgid "Delete"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:150
+#: ../src/PageView/Admin/UrlRewritesGrid.php:134
+msgid "Are you sure you want to delete this item?"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:164
+#: ../src/PageView/Admin/UrlRewritesGrid.php:148
+msgid "Actions"
+msgstr ""
+
+#: ../src/PageView/Admin/LanguagesGrid.php:185
+#: ../src/PageView/Admin/UrlRewritesGrid.php:169
+msgid "Create"
+msgstr ""
+
+#: ../src/PageView/Admin/UrlRewriteForm.php:40
+#: ../src/PageView/Admin/UrlRewriteForm.php:44
+#: ../src/PageView/Admin/UrlRewritesGrid.php:59
+#: ../src/PageView/Admin/UrlRewritesGrid.php:63
+msgid "URL Rewrites"
+msgstr ""
+
+#: ../src/PageView/Admin/UrlRewriteForm.php:54
+msgid "Edit URL Rewrite"
+msgstr ""
+
+#: ../src/PageView/Admin/UrlRewriteForm.php:58
+msgid "Add New URL Rewrite"
+msgstr ""
+
+#: ../src/PageView/Admin/UrlRewritesGrid.php:90
+msgid "Request  Path"
+msgstr ""
+
+#: ../src/PageView/Admin/UrlRewritesGrid.php:105
+msgid "Is System"
+msgstr ""
+
+#: ../view/item-view/copyright.phtml:12
+msgid "Copyright"
+msgstr ""
+
+#: ../view/item-view/copyright.phtml:17
+msgid "All rights reserved."
+msgstr ""
+
+#: ../view/item-view/html-notices.phtml:15
+msgid "JavaScript seems to be disabled in your browser."
+msgstr ""
+
+#: ../view/item-view/html-notices.phtml:21
+msgid ""
+"You must have JavaScript enabled in your browser to utilize the "
+"functionality of this website."
+msgstr ""
+
+#: ../view/partial/form/table-fieldset.phtml:31
+msgid "No form elements defined."
+msgstr ""
+
+#: ../view/partial/paginator/counters.phtml:14
+msgid "Showing"
+msgstr ""
+
+#: ../view/partial/paginator/counters.phtml:15
+#: ../view/partial/paginator/counters.phtml:24
+msgid "of"
+msgstr ""
+
+#: ../view/partial/paginator/counters.phtml:17
+msgid "item(s)"
+msgstr ""
+
+#: ../view/partial/paginator/counters.phtml:23
+msgid "Page"
+msgstr ""
+
+#: ../view/template/error/404.phtml:8
+msgid "Page Not Found"
+msgstr ""
+
+#: ../view/template/error/404.phtml:15
+msgid "A 404 error occurred"
+msgstr ""
+
+#: ../view/template/error/404.phtml:27
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: ../view/template/error/404.phtml:32
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: ../view/template/error/404.phtml:37
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: ../view/template/error/404.phtml:42
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: ../view/template/error/404.phtml:47
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: ../view/template/error/404.phtml:60
+msgid "Controller"
+msgstr ""
+
+#: ../view/template/error/404.phtml:69
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: ../view/template/error/404.phtml:89 ../view/template/error/index.phtml:20
+msgid "Additional information"
+msgstr ""
+
+#: ../view/template/error/404.phtml:92 ../view/template/error/404.phtml:126
+#: ../view/template/error/index.phtml:23 ../view/template/error/index.phtml:60
+msgid "File"
+msgstr ""
+
+#: ../view/template/error/404.phtml:100 ../view/template/error/404.phtml:134
+#: ../view/template/error/index.phtml:31 ../view/template/error/index.phtml:68
+msgid "Message"
+msgstr ""
+
+#: ../view/template/error/404.phtml:107 ../view/template/error/404.phtml:141
+#: ../view/template/error/index.phtml:39 ../view/template/error/index.phtml:77
+msgid "Stack trace"
+msgstr ""
+
+#: ../view/template/error/404.phtml:120 ../view/template/error/index.phtml:54
+msgid "Previous exceptions"
+msgstr ""
+
+#: ../view/template/error/404.phtml:160 ../view/template/error/index.phtml:98
+msgid "No Exception available"
+msgstr ""
+
+#: ../view/template/error/index.phtml:8
+msgid "Sorry, something went wrong."
+msgstr ""
+
+#: ../view/template/error/index.phtml:10
+msgid "An error occurred"
+msgstr ""
+
+#: ../view/template/index/index.phtml:8
+msgid "Homepage"
+msgstr ""
+
+#: ../view/template/index/index.phtml:13
+msgid "Create something awesome!"
+msgstr ""
+
+#: ../view/template/index/index.phtml:17
+msgid "You have successfully installed the WellCart Application Platform."
+msgstr ""
+
+#: ../view/template/index/index.phtml:29
+msgid "Register Account"
+msgstr ""
+
+#: ../view/template/index/index.phtml:35
+msgid "Login to Control Panel"
+msgstr ""

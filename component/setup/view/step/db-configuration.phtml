@@ -1,0 +1,21 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle(__('Database Configuration'))
+?>
+<fieldset>
+    <legend><?php
+        echo __(
+            'Please enter your database connection details.'
+        )
+        ?></legend>
+    <div class="col-md-9">
+        <?php echo $this->notifications ?>
+
+        <?php echo $this->formRenderer($form); ?>
+    </div>
+</fieldset>

@@ -1,0 +1,20 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$actionResult = $this->context->getActionResult();
+?>
+<div class="page-header page-header-default">
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4><?php echo $actionResult->getPageTitle() ?></h4>
+        </div>
+    </div>
+
+    <div class="breadcrumb-line">
+        <?php echo $this->breadcrumbs ?>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * WellCart Platform
+ *
+ * @copyright    Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license      http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+-->
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true"
+         verbose="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true">
+    <php>
+        <env name="WELLCART_APPLICATION_ENV" value="testing"/>
+    </php>
+    <testsuites>
+        <testsuite name="WellCart Mapping Drivers Test Suite">
+            <directory suffix="Test.php">./</directory>
+            <exclude>./bin/</exclude>
+            <exclude>./public/</exclude>
+            <exclude>./vendor/</exclude>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+        <log type="coverage-html" target="report" charset="UTF-8"/>
+        <log type="coverage-clover" target="report/clover.xml"/>
+    </logging>
+</phpunit>

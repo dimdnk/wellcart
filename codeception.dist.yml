@@ -1,0 +1,41 @@
+#
+# WellCart Platform
+#
+# @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+# @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+#
+actor: Tester
+include:
+ - component/base/tests
+ - component/command-bus/tests
+ - component/schema-migration/tests
+ - component/setup/tests
+ - component/admin/tests
+ - component/rest-api/tests
+ - component/user/tests
+ - module/cms/tests
+ - module/directory/tests
+ - module/catalog/tests
+ - theme/frontend-ui/tests
+ - theme/backend-ui/tests
+ - theme/setup-ui/tests
+paths:
+    log: data/logs
+settings:
+    no-rebuild: true
+    bootstrap: bootstrap.php
+    colors: true
+    memory_limit: 1024M
+    backup_globals: true
+coverage:
+    enabled: true
+    remote: false
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+   enabled:
+       - PhpBrowser:
+           url: 'http://wellcart.local'
+           curl:
+               CURLOPT_RETURNTRANSFER: true

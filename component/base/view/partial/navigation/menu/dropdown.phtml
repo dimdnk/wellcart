@@ -1,0 +1,177 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<?php
+/* @var $container Zend\Navigation\Navigation */
+$container = $this->container;
+?>
+<ul class="<?php echo $this->navigation()->menu()->getUlClass(); ?>">
+    <?php foreach ($container as $page): ?>
+        <?php
+        if (!$this->navigation()->accept($page)) {
+            continue;
+        }
+        ?>
+        <?php /* @var $page Zend\Navigation\Page\Mvc */ ?>
+        <?php $hasChildren = $page->hasPages() ?>
+        <?php if (!$hasChildren): ?>
+            <li<?php
+            if ($page->isActive()) {
+                echo ' class="active"';
+            }
+            ?>>
+                <a
+                    class="nav-header"
+                    href="<?php echo $page->getHref() ?>"
+                    <?php if ($page->getTarget() != ""): ?>
+                        target="<?php echo $page->getTarget(); ?>"
+                    <?php endif; ?>
+                    >
+                    <?php if ($page->get("icon") !== ""): ?>
+                        <span class="<?php echo $page->get(
+                            "icon"
+                        ); ?>"></span>&nbsp;
+                    <?php endif; ?>
+                    <?php echo $page->getLabel() ?>
+                </a>
+            </li>
+        <?php else: ?>
+            <?php
+            //check if access is allowed at least one item
+            $access = false;
+            foreach ($page->getPages() as $child) {
+                if ($this->navigation()->accept($child)
+                    && $child->get(
+                        "separator"
+                    ) !== true
+                ) {
+                    $access = true;
+                }
+            }
+            if ($access) :
+                ?>
+                <li class="dropdown<?php
+                if ($page->isActive(true)) {
+                    echo ' active';
+                }
+                ?>">
+                    <a class="dropdown-toggle" data-hover="dropdown"
+                       data-toggle="dropdown" href="#">
+                        <?php if ($page->get("icon") !== ""): ?>
+                            <span class="<?php
+                            echo $page->get(
+                                "icon"
+                            );
+                            ?>"></span>&nbsp;
+                        <?php endif; ?>
+                        <?php echo $page->getLabel() ?>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <?php foreach ($page->getPages() as $child): ?>
+                            <?php
+                            if (!$this->navigation()->accept($child)) {
+                                continue;
+                            }
+                            ?>
+                            <?php if ($child->get("separator") === true): ?>
+                                <li class="divider"></li>
+                                <?php
+                                continue;
+                            endif;
+                            ?>
+                            <li<?php
+                            if ($child->isActive()) {
+                                echo ' class="active"';
+                            }
+                            ?>>
+                                <a
+                                    <?php if ($child->hasPages()): ?>
+                                        class="dropdown-toggle"
+                                        data-toggle="dropdown" href="#"
+                                    <?php else: ?>
+                                        href="<?php echo $child->getHref() ?>"
+                                        <?php if ($child->getTarget() != ""): ?>
+                                            target="<?php
+                                            echo $child->getTarget();
+                                            ?>"
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                    >
+                                    <?php if ($child->get("icon") !== ""): ?>
+                                        <span class="<?php
+                                        echo $child->get(
+                                            "icon"
+                                        );
+                                        ?>"></span>&nbsp;
+                                    <?php endif; ?>
+                                    <?php echo $child->getLabel() ?>
+                                </a>
+
+                                <?php if ($child->hasPages()): ?>
+                                    <ul class="dropdown-menu">
+                                        <?php foreach (
+                                            $child->getPages() as $sub
+                                        ): ?>
+                                            <?php
+                                            if (!$this->navigation()->accept(
+                                                $sub
+                                            )
+                                            ) {
+                                                continue;
+                                            }
+                                            ?>
+                                            <?php if ($sub->get("separator")
+                                                === true
+                                            ): ?>
+                                                <li class="divider"></li>
+                                                <?php
+                                                continue;
+                                            endif;
+                                            ?>
+                                            <li<?php
+                                            if ($sub->isActive()) {
+                                                echo ' class="active"';
+                                            }
+                                            ?>>
+                                                <a
+                                                    href="<?php echo $sub->getHref(
+                                                    ) ?>"
+                                                    <?php if ($sub->getTarget()
+                                                        != ""
+                                                    ): ?>
+                                                        target="<?php
+                                                        echo $sub->getTarget();
+                                                        ?>"
+                                                    <?php endif; ?> >
+                                                    <?php if ($sub->get("icon")
+                                                        !== ""
+                                                    ): ?>
+                                                        <span class="<?php
+                                                        echo $sub->get(
+                                                            "icon"
+                                                        );
+                                                        ?>"></span>&nbsp;
+                                                    <?php endif; ?>
+                                                    <?php echo $sub->getLabel(
+                                                    ) ?>
+                                                </a>
+
+                                            </li>
+                                        <?php endforeach ?>
+                                    </ul>
+
+                                <?php endif ?>
+                            </li>
+                        <?php endforeach ?>
+                    </ul>
+                </li>
+            <?php endif; ?>
+        <?php endif ?>
+    <?php endforeach ?>
+</ul>

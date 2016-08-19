@@ -1,0 +1,37 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle(__('Homepage'));
+?>
+<p><br/></p>
+
+<div class="jumbotron">
+    <h2><?php echo __('Create something awesome!') ?></h2>
+
+    <h3><?php
+        echo __(
+            'You have successfully installed the WellCart Application Platform.'
+        )
+        ?></h3>
+</div>
+
+
+<p>
+    <a class="btn btn-primary"
+       href="<?php echo $this->url('zfcuser/register') ?>"
+       role="button">
+        <i class="fa fa-user-plus"></i>
+
+        <?php echo __('Register Account') ?></a>
+
+    <a class="btn btn-info" href="<?php echo $this->url('zfcadmin') ?>"
+       role="button">
+        <i class="fa fa-sign-in"></i>
+
+        <?php echo __('Login to Control Panel') ?></a>
+
+</p>

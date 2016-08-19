@@ -1,0 +1,27 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+
+<p>
+    <?php if ($paginator->count()) : ?>
+        <?php
+        echo
+            $this->translate('Showing') . ' ' . $paginator->getCurrentItemCount(
+            ) . ' ' . $this->translate('of') . ' '
+            . $paginator->getTotalItemCount() . ' ' . $this->translate(
+                'item(s)'
+            );
+        ?>
+        &nbsp;&nbsp;
+        <?php
+        echo
+            $this->translate('Page') . ' ' . $paginator->getCurrentPageNumber()
+            . ' ' . $this->translate('of') . ' ' . $paginator->count();
+        ?>
+    <?php endif ?>
+</p>

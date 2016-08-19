@@ -1,0 +1,96 @@
+{
+  "name": "wellcart/theme-backend-ui",
+  "description": "WellCart Backend UI Foundation",
+  "license": "BSD-3-Clause",
+  "homepage": "http://wellcart.org/",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Dima Denisenko",
+      "email": "dima@wellcart.org",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.0.0",
+    "wellcart/component-library": "0.1.*",
+    "wellcart/theme-frontend-ui": "0.1.*",
+    "wellcart/component-base": "0.1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.5.0",
+    "codeception/codeception": "2.2.*",
+    "phpmd/phpmd": "2.*",
+    "sebastian/phpcpd": "2.*",
+    "pdepend/pdepend": "2.*",
+    "phploc/phploc": "3.*",
+    "squizlabs/php_codesniffer": "^2.6.1",
+    "satooshi/php-coveralls": "~1.0"
+  },
+  "suggest": {
+    "ext-xdebug": "Extension which provides debugging and profiling capabilities, make possible code coverage support."
+  },
+  "config": {
+    "bin-dir": "bin/",
+    "preferred-install": "dist",
+    "platform": {
+      "ext-mongo": "1.6"
+    },
+    "component-dir": "tests/public/assets/lib",
+    "component-baseurl": "/assets/lib"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "php -r \"chmod('tests/config/autoload', 0777);\"",
+      "php -r \"chmod('tests/public/assets', 0777);\"",
+      "php -r \"chmod('tests/public/themes', 0777);\"",
+      "php -r \"chmod('tests/public/media', 0777);\"",
+      "php -r \"chmod('tests/data', 0777);\"",
+      "php -r \"chmod('tests/data/cache', 0777);\"",
+      "php -r \"chmod('tests/data/logs', 0777);\"",
+      "php -r \"chmod('tests/data/db/migrations', 0777);\"",
+      "php -r \"chmod('tests/data/db/seeds', 0777);\"",
+      "php -r \"chmod('tests/data/sessions', 0777);\"",
+      "php -r \"chmod('tests/data/upload', 0777);\""
+    ],
+    "test": "codecept run",
+    "coveralls": "coveralls",
+    "cs": "phpcs",
+    "cs-fix": "phpcbf"
+  },
+  "extra": {
+    "wellcart": {
+      "type": "theme",
+      "name": "WellCart\\Theme\\BackendUi",
+      "context": {
+        "common": {
+          "require": {
+            "-90000": "WellCart\\Theme\\FrontendUi",
+            "-80400": "WellCart\\Theme\\BackendUi"
+          }
+        },
+        "frontend": {
+          "require": {}
+        },
+        "backend": {
+          "require": {
+          }
+        },
+        "setup": {
+          "require": {}
+        }
+      }
+    },
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "classmap": [
+      "./src/Module.php",
+      "tests/unit/"
+    ]
+  }
+}

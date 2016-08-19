@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * WellCart Platform
+ *
+ * @copyright    Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license      http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+-->
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         syntaxCheck="true"
+         verbose="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         bootstrap="./bootstrap.php">
+    <php>
+        <env name="WELLCART_APPLICATION_ENV" value="testing"/>
+    </php>
+    <testsuites>
+        <testsuite name="WellCart Platform Test Suite">
+            <directory suffix="Test.php">./component/base/tests/unit/</directory>
+            <directory suffix="Test.php">./component/command-bus/tests/unit/</directory>
+            <directory suffix="Test.php">./component/schema-migration/tests/unit/</directory>
+            <directory suffix="Test.php">./component/setup/tests/unit/</directory>
+            <directory suffix="Test.php">./component/admin/tests/unit/</directory>
+            <directory suffix="Test.php">./component/rest-api/tests/unit/</directory>
+
+            <directory suffix="Test.php">./component/user/tests/unit/</directory>
+            <directory suffix="Test.php">./module/cms/tests/unit/</directory>
+            <directory suffix="Test.php">./module/directory/tests/unit/</directory>
+            <directory suffix="Test.php">./module/catalog/tests/unit/</directory>
+
+            <directory suffix="Test.php">./theme/frontend-ui/tests/unit/</directory>
+            <directory suffix="Test.php">./theme/backend-ui/tests/unit/</directory>
+            <directory suffix="Test.php">./theme/setup-ui/tests/unit/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./component/base/src/</directory>
+            <directory suffix=".php">./component/command-bus/src/</directory>
+            <directory suffix=".php">./component/schema-migration/src/</directory>
+            <directory suffix=".php">./component/setup/src/</directory>
+            <directory suffix=".php">./component/admin/src/</directory>
+            <directory suffix=".php">./component/rest-api/src/</directory>
+
+            <directory suffix=".php">./component/user/src/</directory>
+            <directory suffix=".php">./module/cms/src/</directory>
+            <directory suffix=".php">./module/directory/src/</directory>
+            <directory suffix=".php">./module/catalog/src/</directory>
+
+            <directory suffix=".php">./theme/frontend-ui/src/</directory>
+            <directory suffix=".php">./theme/backend-ui/src/</directory>
+            <directory suffix=".php">./theme/setup-ui/src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="true"/>
+        <log type="coverage-html" target="report" charset="UTF-8"/>
+        <log type="coverage-clover" target="report/clover.xml"/>
+    </logging>
+</phpunit>

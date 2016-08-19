@@ -1,0 +1,95 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+use WellCart\Utility\Config;
+
+$this->headTitle(__('Log into Control Panel'));
+$form = $this->form;
+$form->prepare();
+$form->setAttribute('method', 'post');
+$form->setAttribute('class', 'form-signin');
+
+$identity = $form->get('identity');
+$identity->setAttributes(
+    [
+        'class'       => 'form-control',
+        'placeholder' => __('Email'),
+        'required'    => 'required',
+        'type'        => 'email',
+        'autofocus'   => 'autofocus',
+    ]
+);
+
+$credential = $form->get('credential');
+$credential->setAttributes(
+    [
+        'class'       => 'form-control',
+        'placeholder' => __('Password'),
+        'required'    => 'required',
+    ]
+);
+echo $this->headLink();
+?>
+<div class="container">
+    <div class="card card-container">
+        <?php echo $this->form()->openTag($form) ?>
+        <fieldset>
+            <legend><?php echo __('Welcome to Control Panel') ?></legend>
+
+            <div class="input-group">
+                <span class="input-group-addon input-group-addon-login">
+                    <i class="fa fa-envelope-o fa-fw"></i>
+                </span>
+                <?php echo $this->formInput($identity) ?>
+
+            </div>
+            <?php
+            echo $this->formElementErrors(
+                $identity, array('class' => 'errors')
+            )
+            ?>
+
+
+            <div class="input-group">
+                <span class="input-group-addon input-group-addon-login">
+                    <i class="fa fa-lock fa-fw"></i>
+                </span>
+                <?php echo $this->formInput($form->get('credential')) ?>
+
+            </div>
+            <?php
+            echo $this->formElementErrors(
+                $form->get('credential'), array('class' => 'errors')
+            )
+            ?>
+            <button class="btn btn-primary btn-block btn-signin"
+                    type="submit"
+                    data-disable-with="<?php echo __('Sign In') ?>">
+                <?php echo __('Sign In') ?>
+            </button>
+
+            <?php
+            if (Config::get(
+                'acmailer_options.communications.enabled', true
+            )
+            ):
+                ?>
+                <p><a href="<?php
+                    echo $this->url(
+                        'admin-account-recovery/initiate'
+                    )
+                    ?>"
+                      class=""><?php echo __('Forgot your password?') ?></a></p>
+            <?php endif ?>
+        </fieldset>
+        <?php echo $this->form()->closeTag() ?>
+        <!-- /form -->
+    </div>
+    <div class="card-container">
+        <?php echo $this->partial('wellcart-base/item-view/copyright') ?>
+    </div>
+</div><!-- /container -->

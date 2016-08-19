@@ -1,0 +1,49 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle(__('Forgot Password'));
+$form = $this->form;
+$form->prepare();
+$form->setAttribute('class', 'form-signin');
+echo $this->headLink();
+?>
+<div class="container">
+    <div class="card card-container">
+
+        <?php if ($isRecoverPossible): ?>
+            <?php echo $this->form()->openTag($form) ?>
+            <fieldset>
+                <legend><?php echo __('Find Your Account') ?></legend>
+
+
+                <p><?php
+                    echo __(
+                        'Enter your email address. You will receive an email with a link to reset your password.'
+                    )
+                    ?></p>
+
+                <?php echo $this->formRow($form->get('email')) ?>
+                <?php echo $this->formInput($form->get('submit')) ?>
+
+                <p><a href="<?php echo $this->url('zfcadmin') ?>"><i
+                            class="fa fa-arrow-left"></i>
+                        <?php echo __('Back to Log in') ?></a></p>
+            </fieldset>
+            <?php echo $this->form()->closeTag() ?>
+        <?php else: ?>
+            <p class="alert alert-warning"
+               role="alert"><?php
+                echo __(
+                    'Sorry, reset password by mail messaging has been disabled.'
+                )
+                ?></p>
+        <?php endif ?>
+    </div>
+    <div class="card-container">
+        <?php echo $this->partial('wellcart-base/item-view/copyright') ?>
+    </div>
+</div>

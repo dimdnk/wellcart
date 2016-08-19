@@ -1,0 +1,5 @@
+local.php
+*.local.php
+db.global.php
+development.config.php
+installed.php

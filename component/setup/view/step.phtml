@@ -1,0 +1,43 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<?php
+echo $this->partial(
+    'wizard/header',
+    array('wizard' => $this->wizard, 'form' => $this->wizard->getForm())
+)
+?>
+<?php
+$wizardForm = $this->wizard->getForm();
+$wizardForm->prepare();
+
+$currentStep = $this->wizard->getCurrentStep();
+?>
+<?php echo $this->form()->openTag($wizardForm) . PHP_EOL; ?>
+    <fieldset>
+        <div class="container-fluid">
+            <?php
+            echo $this->partial(
+                'wellcart-setup/buttons',
+                ['wizard' => $this->wizard, 'form' => $this->wizard->getForm()]
+            )
+            ?>
+            <?php
+            echo $this->partial(
+                $currentStep->getViewTemplate(), array(
+                    'notifications' => $this->notifications,
+                    'form'          => $wizardForm->get('step'),
+                    'wizard'        => $this->wizard,
+                    'steps'         => $this->wizard->getSteps(),
+                    'currentStep'   => $this->wizard->getCurrentStep(),
+                )
+            );
+            ?>
+        </div>
+    </fieldset>
+<?php echo $this->form()->closeTag($wizardForm) . PHP_EOL; ?>

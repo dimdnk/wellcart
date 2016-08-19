@@ -1,0 +1,57 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+$actionResult = $this->context->getActionResult();
+$breadcrumbs = $actionResult->getBreadcrumbs();
+$pager = $actionResult->getPager();
+$previous = $pager->getPreviousUrl();
+$next = $pager->getNextUrl();
+?>
+<nav class="page-navigator page-navigator-wrapper row" role="navigation">
+    <div class="col-md-9 page-breadcrumb">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-dashboard"></i> &nbsp; &nbsp; <a
+                    href="<?php
+                    echo $this->url(
+                        'zfcadmin'
+                    )
+                    ?>"><?php
+                    echo $this->__(
+                        'Dashboard'
+                    )
+                    ?></a></li>
+            <?php if (isset($breadcrumbs) && is_array($breadcrumbs)): ?>
+                <?php foreach ($breadcrumbs as $item): ?>
+                    <li><a href="<?php
+                        echo $this->url(
+                            $item['route'], $item['params']
+                        )
+                        ?>"><?php echo $item['label'] ?></a></li>
+                <?php endforeach ?>
+            <?php endif ?>
+        </ol>
+    </div>
+    <div class="col-md-3 page-prev-next">
+        <?php if (!$pager->isEmpty()): ?>
+            <ul class="pager">
+                <li class="previous<?php if (!$previous): ?> disabled<?php endif ?>">
+                    <a href="<?php if (!$previous): ?>#<?php else: ?><?php echo $previous ?><?php endif ?>"
+                       title="<?php echo $pager->getPreviousLabel() ?>"><span
+                            aria-hidden="true">&larr;</span> <?php echo __(
+                            'Previous'
+                        ) ?></a></li>
+                <li class="next<?php if (!$next): ?> disabled<?php endif ?>"><a
+                        href="<?php if (!$next): ?>#<?php else: ?><?php echo $next ?><?php endif ?>"
+                        title="<?php echo $pager->getNextLabel(
+                        ) ?>"><?php echo __(
+                            'Next'
+                        ) ?> <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        <?php endif ?>
+    </div>
+</nav>

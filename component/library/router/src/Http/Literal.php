@@ -1,0 +1,30 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+namespace WellCart\Router\Http;
+
+use Zend\Mvc\Router\Http\Literal as Route;
+
+class Literal extends Route
+{
+
+    /**
+     * Create a new literal route.
+     *
+     * @param  string $route
+     * @param  array  $defaults
+     */
+    public function __construct($route, array $defaults = array())
+    {
+        if (empty($defaults['format'])) {
+            $defaults['format'] = 'html';
+        }
+
+        parent:: __construct($route, $defaults);
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="WellCart\RestApi\Entity\OAuth2\PublicKey" table="oauth2_public_keys"
+            repository-class="WellCart\RestApi\Repository\OAuth2\PublicKeys">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="publicKey" column="public_key" type="text" nullable="true"/>
+        <field name="privateKey" column="private_key" type="text" nullable="true"/>
+        <field name="encryptionAlgorithm" column="encryption_algorithm" type="string" nullable="true"/>
+        <one-to-one field="client" target-entity="WellCart\RestApi\Entity\OAuth2\Client"
+                    inversed-by="publicKey">
+            <join-columns>
+                <join-column name="client_id" referenced-column-name="id" nullable="false" unique="true"
+                             on-delete="CASCADE"/>
+            </join-columns>
+        </one-to-one>
+    </entity>
+</doctrine-mapping>

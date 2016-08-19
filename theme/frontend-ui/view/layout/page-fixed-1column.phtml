@@ -1,0 +1,51 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<?php echo $this->doctype() . PHP_EOL; ?>
+<html lang="<?php echo $this->locale()->getLanguage()->getCode() ?>">
+<head>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->HtmlHead ?>
+</head>
+<body id="html-body-region" class="<?php echo $this->bodyClass() ?>">
+<?php echo $this->PostBodyStart ?>
+
+<?php echo $this->PrePageHeader ?>
+<header id="page-header-region" class="page-header-wrapper container"
+        role="header">
+    <?php echo $this->PageHeader ?>
+</header>
+<?php echo $this->PostPageHeader ?>
+
+<?php echo $this->PrePageMain ?>
+<main id="page-main-region" class="page-main-wrapper container" role="main">
+    <div class="row">
+        <div id="page-content-region" class="page-content-wrapper col-lg-12">
+            <?php echo $this->PrePageContent; ?>
+            <?php
+            /**
+             * Main page content
+             */
+            echo $this->content;
+            ?>
+            <?php echo $this->PostPageContent; ?>
+        </div>
+    </div>
+</main>
+<?php echo $this->PostPageMain ?>
+
+<?php echo $this->PrePageFooter ?>
+<footer id="page-footer-region" class="page-footer-wrapper container"
+        role="footer">
+    <?php echo $this->PageFooter ?>
+</footer>
+<?php echo $this->PostPageFooter ?>
+
+<?php echo $this->PreBodyEnd ?>
+</body>
+</html>

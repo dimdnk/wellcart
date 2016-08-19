@@ -1,0 +1,86 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+use Zend\Form\ElementInterface as Element;
+
+$form = $this->form;
+$helper = $this->plugin('formTabsRenderer');
+$form->prepare();
+$formName = $form->getName();
+$this->strokerFormPrepare($formName, $form);
+$menu = $helper->getTabMenuLinks($form);
+
+echo $this->form()->openTag($form);
+echo $helper->navTabs($menu, $form->getNavTabsAttributes());
+
+$activeClass = ' active';
+$html = '<div class="tab-content">';
+foreach ($form->getTabs() as $tab) {
+    /**
+     * @var $tab \WellCart\Ui\Form\Tab
+     */
+    $elements = $tab->toArray();
+    $tabId = 'tab-' . $formName . '-' . $tab->getId();
+    $html .= '<div id="' . $tabId . '"  role="tabpanel" class="tab-pane'
+        . $activeClass
+        . '">';
+    $activeClass = '';
+
+    $html .= "<div class='row form-body'>";
+    switch ($tab->getOption('layout')) {
+        case '3columns':
+            $html .= '<div class="col-md-4 ' . $tabId . '-left" >'
+                . $helper->renderRow(
+                    $elements, function (Element $el) use ($tab) {
+                    return $el->getOption('tab') == $tab->getId() . '-left';
+                }
+                ) . "</div>";
+            $html .= '<div class="col-md-4 ' . $tabId . '-center" >'
+                . $helper->renderRow(
+                    $elements, function (Element $el) use ($tab) {
+                    return $el->getOption('tab') == $tab->getId() . '-center';
+                }
+                ) . "</div>";
+            $html .= '<div class="col-md-4 ' . $tabId . '-right" >'
+                . $helper->renderRow(
+                    $elements, function (Element $el) use ($tab) {
+                    return $el->getOption('tab') == $tab->getId() . '-right';
+                }
+                ) . "</div>";
+            break;
+
+        case '2columns':
+            $html .= '<div class="col-md-6 ' . $tabId . '-left">'
+                . $helper->renderRow(
+                    $elements, function (Element $el) use ($tab) {
+                    return $el->getOption('tab') == $tab->getId() . '-left';
+                }
+                ) . "</div>";
+            $html .= '<div class="col-md-6 ' . $tabId . '-right">'
+                . $helper->renderRow(
+                    $elements, function (Element $el) use ($tab) {
+                    return $el->getOption('tab') == $tab->getId() . '-right';
+                }
+                ) . "</div>";
+            break;
+
+
+        case '1column':
+        default:
+            $html .= '<div class="col-md-12">' . $helper->renderRow($elements)
+                . "</div>";
+            break;
+    }
+    $html .= "<template class='tab-pane-template'></template>\n";
+
+    $html .= "</div>\n</div>\n";
+}
+
+$html .= "</div>\n";
+echo $html;
+echo $this->form()->closeTag($form); ?>

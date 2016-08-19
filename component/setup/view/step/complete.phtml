@@ -1,0 +1,47 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle(__('Your installation is complete!'));
+?>
+<fieldset>
+    <legend><?php echo __('Complete') ?></legend>
+
+    <?php echo $this->notifications ?>
+
+    <p><?php
+        echo __(
+            'You have just finished installing platform. Thank you for using WellCart!'
+        )
+        ?></p>
+
+    <p>
+        <a href="<?php echo $this->url('wellcart-base:home') ?>"
+           class='btn btn-next'
+           data-disable-with="<?php
+           echo __(
+               'Discover Website'
+           )
+           ?>  &nbsp; <span class='fa fa-chevron-circle-right'>">
+            <?php
+            echo __(
+                'Discover Website'
+            )
+            ?> &nbsp; <span class='fa fa-chevron-circle-right'></a>
+        <a href="<?php echo $this->url('zfcadmin') ?>" class='btn btn-next'
+           role='button'
+           data-disable-with="<?php
+           echo __(
+               'Login to Control Panel'
+           )
+           ?>  &nbsp; <span class='fa fa-chevron-circle-right'>">
+            <?php
+            echo __(
+                'Login to Control Panel'
+            )
+            ?> &nbsp; <span class='fa fa-chevron-circle-right'></a>
+    </p>
+</fieldset>

@@ -1,0 +1,59 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle(__('System Requirements'));
+$currentStep = $this->wizard->getCurrentStep();
+?>
+
+<h4><?php echo __('Check your server is set-up correctly.') ?></h4>
+<?php echo $this->notifications ?>
+<table class="table table-bordered table-striped data-grid">
+    <thead>
+    <tr>
+        <th><?php echo __('Title') ?></th>
+        <th><?php echo __('Expected Value') ?></th>
+        <th><?php echo __('Server Value') ?></th>
+        <th><?php echo __('Success') ?></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach (
+        $currentStep->getSetup()->checkRequirements() as $groupTitle =>
+        $group
+    ) :
+        ?>
+        <tr class="group-row">
+            <td colspan="100"><strong><?php echo __($groupTitle) ?></strong>
+            </td>
+        </tr>
+        <?php foreach ($group as $option) : ?>
+        <tr class="option-row row-<?php echo $option['success'] ? 'success'
+            : 'failure'
+        ?>">
+            <td class="title"><?php echo __($option['title']) ?></td>
+            <td class="expected"><?php echo __($option['expected']) ?></td>
+            <td class="server"><?php echo __($option['value']) ?></td>
+            <td class="result">
+                        <span
+                            class="label label-<?php echo $option['success']
+                                ? 'success' : 'danger'
+                            ?>">
+                            <?php
+                            if ($option['success']): echo __('Yes');
+                            else: echo __(
+                                'No'
+                            );
+                            endif;
+                            ?>
+                        </span>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    <?php endforeach; ?>
+    </tbody>
+</table>

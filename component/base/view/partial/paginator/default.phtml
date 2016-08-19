@@ -1,0 +1,75 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$params = $_GET;
+unset($params['page']);
+$querySuffix = '&amp;' . http_build_query($params, '', '&amp;');
+if ($this->pageCount > 1):
+    ?>
+    <div class="row-fluid">
+        <ul class="pagination pagination-sm">
+            <!-- Previous page link -->
+            <?php if (isset($this->previous)): ?>
+                <li>
+                    <a href="<?php
+                    echo $this->url(
+                        $this->route
+                    );
+                    ?>?page=<?php
+                    echo
+                        $this->previous . $querySuffix;
+                    ?>">
+                        <<
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="#">
+                        <<
+                    </a>
+                </li>
+            <?php endif; ?>
+            <!-- Numbered page links -->
+            <?php foreach ($this->pagesInRange as $page): ?>
+                <?php if ($page != $this->current): ?>
+                    <li>
+                        <a href="<?php
+                        echo $this->url(
+                            $this->route
+                        );
+                        ?>?page=<?php echo $page . $querySuffix; ?>">
+                            <?php echo $page; ?>
+                        </a>
+                    </li>
+                <?php else: ?>
+                    <li class="active">
+                        <a href="#"><?php echo $page; ?></a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!-- Next page link -->
+            <?php if (isset($this->next)): ?>
+                <li>
+                    <a href="<?php
+                    echo $this->url(
+                        $this->route
+                    );
+                    ?>?page=<?php echo $this->next . $querySuffix; ?>">
+                        >>
+                    </a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="#">
+                        >>
+                    </a>
+                </li>
+            <?php endif; ?>
+        </ul>
+    </div>
+<?php endif; ?>

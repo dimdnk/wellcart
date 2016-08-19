@@ -1,0 +1,45 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle($pageTitle);
+$this->headTitle($formTitle);
+?>
+<?php
+/**
+ * Page Header
+ */
+echo $this->PageHeader;
+?>
+<!-- Content area -->
+<div class="content">
+    <div class="col-md-12 form-main-container">
+        <div
+            class="container<?php if ($this->fluidContainer): ?>-fluid<?php endif ?><?php if ($this->containerClass): ?> <?php echo $this->containerClass ?><?php endif ?>">
+            <?php echo $this->PrePageContent ?>
+            <div class="panel panel-flat">
+                <?php echo $this->form()->openTag($form); ?>
+                <?php echo $this->partial(
+                    'wellcart-admin/page-view/form/standard/toolbar',
+                    $this->vars()
+                ) ?>
+                <div class="panel-body">
+                    <?php echo $this->formPreRenderer ?>
+                    <?php if ($this->content) : ?>
+                        <?php echo $this->content ?>
+                    <?php else: ?>
+                        <?php echo $this->partial(
+                            $this->form->getLayout(), $this->vars()
+                        ) ?>
+                    <?php endif ?>
+                    <?php echo $this->formPostRenderer ?>
+                </div>
+                <?php echo $this->form()->closeTag(); ?>
+            </div>
+            <?php echo $this->PostPageContent ?>
+        </div>
+    </div>
+</div>

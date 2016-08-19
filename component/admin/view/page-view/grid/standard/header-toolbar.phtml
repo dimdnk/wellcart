@@ -1,0 +1,31 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<div class="panel-heading">
+    <h5 class="panel-title">
+        <?php
+        echo $this->partial(
+            'partial/paginator/counters', ['paginator' => $this->paginator]
+        );
+        ?>
+    </h5>
+
+    <div class="heading-elements">
+        <?php foreach ($this->grid->getToolbarButtons() as $button):
+            /**
+             * @var $button \WellCart\Ui\Datagrid\ToolbarButton
+             */
+            ?>
+            <a class="<?php echo $button->getClass() ?>" role="button"
+               href="<?php echo $button->getLink() ?>">
+                <i class="<?php echo $button->getIcon(
+                ) ?>"></i> <?php echo $button->getLabel() ?>
+            </a>
+        <?php endforeach; ?>
+    </div>
+</div>

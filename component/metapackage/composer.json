@@ -1,0 +1,156 @@
+{
+  "name": "wellcart/component-library",
+  "description": "WellCart Components Package",
+  "license": "BSD-3-Clause",
+  "homepage": "http://wellcart.org/",
+  "type": "metapackage",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Dima Denisenko",
+      "email": "dima@wellcart.org",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.0.0",
+    "ext-PDO": "*",
+    "ext-pdo_mysql": "*",
+    "lib-libxml": "*",
+    "ext-ctype": "*",
+    "ext-hash": "*",
+    "ext-spl": "*",
+    "ext-gd": "*",
+    "ext-dom": "*",
+    "ext-simplexml": "*",
+    "ext-xsl": "*",
+    "wellcart/component-utility": "0.1.*",
+    "wellcart/component-console": "0.1.*",
+    "wellcart/component-db": "0.1.*",
+    "wellcart/component-filter": "0.1.*",
+    "wellcart/component-form": "0.1.*",
+    "wellcart/component-hydrator": "0.1.*",
+    "wellcart/component-input-filter": "0.1.*",
+    "wellcart/component-log": "0.1.*",
+    "wellcart/component-module-manager": "0.1.*",
+    "wellcart/component-mvc": "0.1.*",
+    "wellcart/component-navigation": "0.1.*",
+    "wellcart/component-orm": "0.1.*",
+    "wellcart/component-router": "0.1.*",
+    "wellcart/component-service-manager": "0.1.*",
+    "wellcart/component-session": "0.1.*",
+    "wellcart/component-stdlib": "0.1.*",
+    "wellcart/component-test": "0.1.*",
+    "wellcart/component-ui": "0.1.*",
+    "wellcart/component-validator": "0.1.*",
+    "wellcart/component-view": "0.1.*",
+    "wellcart/component-schema-migration": "0.1.*",
+    "wellcart/component-command-bus": "0.1.*",
+    "wellcart/component-mapping-drivers": "0.1.*",
+    "zendframework/zendframework": "2.5.3",
+    "zendframework/zend-developer-tools": "1.1.*",
+    "container-interop/container-interop": "^1.1.0",
+    "zf-commons/zfc-base": "0.*",
+    "zf-commons/zfc-twig": "dev-master",
+    "slm/queue": "0.6.*",
+    "slm/queue-doctrine": "0.6.*",
+    "bitweb/zf2-cron-module": "2.0.*",
+    "prolic/humus-amqp-module": "dev-master",
+    "atukai/at-php-settings": "1.*",
+    "hrevert/ht-img-module": "0.4.*",
+    "radnan/rdn-factory": "1.*",
+    "radnan/rdn-require-js": "1.*",
+    "acelaya/zf2-acmailer": "5.*",
+    "radnan/rdn-csv": "1.*",
+    "soflomo/log": "dev-master",
+    "swix/swix-em-config": "dev-master",
+    "firephp/firephp-core": "0.4.*",
+    "leafo/scssphp": "^0.6.5",
+    "ccampbell/chromephp": "4.*",
+    "tinymce/tinymce": "4.4.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.5.0",
+    "codeception/codeception": "2.2.*",
+    "phpmd/phpmd": "2.*",
+    "sebastian/phpcpd": "2.*",
+    "pdepend/pdepend": "2.*",
+    "phploc/phploc": "3.*",
+    "squizlabs/php_codesniffer": "^2.6.1",
+    "satooshi/php-coveralls": "~1.0"
+  },
+  "suggest": {
+    "ext-xdebug": "Extension which provides debugging and profiling capabilities, make possible code coverage support."
+  },
+  "config": {
+    "bin-dir": "bin/",
+    "platform": {
+      "ext-mongo": "1.6"
+    },
+    "preferred-install": "dist",
+    "component-dir": "public/assets/lib",
+    "component-baseurl": "/assets/lib"
+  },
+  "extra": {
+    "wellcart": {
+      "type": "metapackage",
+      "context": {
+        "global": {
+          "name": "global",
+          "extends": false,
+          "require": {}
+        },
+        "common": {
+          "name": "common",
+          "extends": false,
+          "require": {}
+        },
+        "console": {
+          "name": "console",
+          "extends": "common",
+          "require": {}
+        },
+        "api": {
+          "name": "api",
+          "extends": "common",
+          "require": {}
+        },
+        "frontend": {
+          "name": "frontend",
+          "extends": "common",
+          "require": {}
+        },
+        "backend": {
+          "name": "backend",
+          "extends": "frontend",
+          "require": {}
+        },
+        "setup": {
+          "name": "setup",
+          "extends": false,
+          "require": {}
+        }
+      }
+    },
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "component": {
+      "blueimp/jquery-file-upload": {
+        "scripts": [
+          "js/*.js",
+          "js/vendor/*.js",
+          "js/cors/*.js"
+        ],
+        "styles": [
+          "css/*.css"
+        ],
+        "files": [
+          "img/*.gif"
+        ]
+      }
+    }
+  }
+}

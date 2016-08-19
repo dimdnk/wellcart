@@ -1,0 +1,103 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+/**
+ * @var $panels \Zend\Stdlib\PriorityList
+ */
+$panels = $this->panels;
+/**
+ * @var $form \WellCart\Form\Form
+ */
+$form = $this->form;
+$form->prepare();
+$this->strokerFormPrepare('configuration_editor', $form);
+?>
+<?php echo $this->form()->openTag($form); ?>
+<p></p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <?php
+            echo $this->partial(
+                'wellcart-admin/partial/settings/navigation'
+            )
+            ?>
+        </div>
+        <div class="col-md-10">
+            <div class="panel panel-flat">
+                <div class="panel-heading"
+                     data-spy="affix"
+                     data-offset-top="180">
+                    <h5 class="panel-title">
+                        &nbsp; <i class="fa fa-cog"></i>
+                        &nbsp; <?php echo __(
+                            'System Settings'
+                        ) ?>
+                    </h5>
+
+                    <div class="heading-elements"
+                    ">
+                    <?php echo $this->formRow($form->get('csrf')); ?>
+                    <?php echo $this->formSubmit($form->get('save')); ?>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="panel-group" id="fieldsets" role="tablist">
+                    <?php
+                    $in = true;
+                    foreach ($panels as $panelId => $panel):
+                        if (!$form->has($panelId)) {
+                            continue;
+                        }
+                        /**
+                         * @var $fieldset \WellCart\Form\Form
+                         */
+                        $fieldset = $form->get($panelId);
+                        ?>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse"
+                                       data-parent="#fieldsets"
+                                       href="#<?php echo $panelId ?>">
+                                        <?php echo __(
+                                            $panel['label']
+                                        ) ?>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="<?php echo $panelId ?>"
+                                 class="panel-collapse collapse <?php
+                                 if ($in) {
+                                     echo 'in';
+                                     $in = false;
+                                 }
+                                 ?>">
+                                <div class="panel-body">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-7">
+                                                <?php
+                                                echo $this->formCollection(
+                                                    $fieldset
+                                                );
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<?php echo $this->form()->closeTag(); ?>

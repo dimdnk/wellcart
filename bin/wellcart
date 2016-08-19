@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+/**
+ * Check PHP version
+ */
+if (version_compare(phpversion(), '7.0.0', '<') === true) {
+    echo 'WellCart supports PHP 7.0.0 or newer. Your version is '
+        . phpversion() . '.';
+    exit;
+}
+
+$_ENV['WELLCART_APPLICATION_CONTEXT'] = 'global';
+
+/**
+ * This makes our life easier when dealing with paths. Everything is relative
+ * to the application root now.
+ */
+$dirs = [
+    __DIR__ . '/../',
+    __DIR__ . '/../../../../',
+    __DIR__ . '/../tests/',
+];
+
+foreach ($dirs as $dir) {
+    if (is_file($dir . '/bootstrap.php')) {
+        chdir($dir);
+        break;
+    }
+}
+
+$bootstrap = getcwd() . '/bootstrap.php';
+$app = include $bootstrap;
+$app->run();

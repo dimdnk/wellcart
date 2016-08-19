@@ -1,0 +1,33 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$headLink = $this->headLink();
+$headScript = $this->headScript();
+?>
+<?php
+echo $this->headMeta();
+echo $this->jsEnv();
+$headLink(
+    array('rel'  => 'icon',
+          'href' => $this->themePath('wellcart-frontend-ui/images/favicon.ico'),
+          'type' => 'image/x-icon'), 'APPEND'
+);
+$headLink(
+    array('rel'  => 'shortcut icon',
+          'href' => $this->themePath('wellcart-frontend-ui/images/favicon.ico'),
+          'type' => 'image/x-icon'), 'APPEND'
+);
+
+$headScript
+    ->appendFile(
+        $this->assetPath(
+            'wellcart-base/js/lib/validation/localization/messages_'
+            . $this->locale()->getLanguage()->getCode() . '.js'
+        )
+    );
+
+echo $headLink . PHP_EOL;

@@ -1,0 +1,17 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<?php
+echo $this->navigation('system_config_editor_navigation')
+    ->menu()
+    ->setUlClass('nav nav-pills nav-stacked')
+    ->setMaxDepth(1)
+    ->setRenderInvisible(false)
+    ->setPartial('partial/navigation/menu/dropdown')
+    ->__toString();
+?>

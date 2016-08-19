@@ -1,0 +1,22 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<div class="form-group">
+    <?php if ($form->has('next')) { ?>
+        <button class="btn btn-next" type="submit" value="next"
+                data-disable-with="<?php
+                echo __(
+                    'Next'
+                )
+                ?> &nbsp; <span class='fa fa-chevron-circle-right'>"
+                role="button" name="next">
+            <?php echo __('Next') ?> &nbsp; <span
+                class='fa fa-chevron-circle-right'></span>
+        </button>
+    <?php } ?>
+</div>

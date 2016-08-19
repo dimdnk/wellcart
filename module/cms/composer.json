@@ -1,0 +1,99 @@
+{
+  "name": "wellcart/module-cms",
+  "description": "The CMS module allows creating, editing and managing pages with different content type.",
+  "license": "BSD-3-Clause",
+  "homepage": "http://wellcart.org/",
+  "type": "library",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Dima Denisenko",
+      "email": "dima@wellcart.org",
+      "role": "Developer"
+    },
+    {
+      "name": "WellCart CMS Module Contributors",
+      "homepage": "https://github.com/wellcart/module-cms/contributors"
+    }
+  ],
+  "config": {
+    "bin-dir": "bin/",
+    "process-timeout": 4000,
+    "platform": {
+      "ext-mongo": "1.6"
+    },
+    "preferred-install": "dist",
+    "component-dir": "tests/public/assets/lib",
+    "component-baseurl": "/assets/lib"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "php -r \"chmod('tests/config/autoload', 0777);\"",
+      "php -r \"chmod('tests/public/assets', 0777);\"",
+      "php -r \"chmod('tests/public/themes', 0777);\"",
+      "php -r \"chmod('tests/public/media', 0777);\"",
+      "php -r \"chmod('tests/data', 0777);\"",
+      "php -r \"chmod('tests/data/cache', 0777);\"",
+      "php -r \"chmod('tests/data/logs', 0777);\"",
+      "php -r \"chmod('tests/data/db/migrations', 0777);\"",
+      "php -r \"chmod('tests/data/db/seeds', 0777);\"",
+      "php -r \"chmod('tests/data/sessions', 0777);\"",
+      "php -r \"chmod('tests/data/upload', 0777);\""
+    ],
+    "test": "codecept run",
+    "coveralls": "coveralls",
+    "cs": "phpcs",
+    "cs-fix": "phpcbf"
+  },
+  "extra": {
+    "wellcart": {
+      "type": "module",
+      "name": "WellCart\\CMS",
+      "context": {
+        "common": {
+          "name": "common",
+          "extends": false,
+          "require": {
+            "-72730": "WellCart\\CMS"
+          }
+        }
+      }
+    },
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.0.0",
+    "wellcart/component-base": "0.1.*",
+    "wellcart/component-setup": "0.1.*",
+    "wellcart/component-admin": "0.1.*",
+    "wellcart/component-rest-api": "0.1.*",
+    "wellcart/component-user": "0.1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.5.0",
+    "codeception/codeception": "2.2.*",
+    "phpmd/phpmd": "2.*",
+    "sebastian/phpcpd": "2.*",
+    "pdepend/pdepend": "2.*",
+    "phploc/phploc": "3.*",
+    "squizlabs/php_codesniffer": "^2.6.1",
+    "satooshi/php-coveralls": "~1.0"
+  },
+  "suggest": {
+    "ext-xdebug": "Extension which provides debugging and profiling capabilities, make possible code coverage support."
+  },
+  "autoload": {
+    "psr-4": {
+      "WellCart\\CMS\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/unit/"
+    ]
+  }
+}

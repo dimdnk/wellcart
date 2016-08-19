@@ -1,0 +1,51 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+use WellCart\Utility\Config;
+
+/**
+ * @var $user \WellCart\User\Spec\UserEntity
+ **/
+?>
+<p class="greeting"><?php echo $user->getDisplayName() ?>,</p>
+<p><?php
+    echo sprintf(
+        __('Welcome to %s.'),
+        Config::get('website.name', __('Demo Application'))
+    )
+    ?></p>
+<p>
+    <?php
+    echo
+    sprintf(
+        __(
+            'To sign in to our site, use these credentials on the <a href="%s" target="_blank">My Account</a> page:'
+        ), $this->url('zfcuser')
+    )
+    ?>
+</p>
+<ul>
+    <li><strong><?php echo __('Email:') ?></strong>
+        <?php echo $user->getEmail() ?>
+    </li>
+    <li><strong><?php echo __('Password:') ?></strong>
+        <em><?php
+            echo __(
+                'Password you set when creating account'
+            )
+            ?></em>
+    </li>
+</ul>
+<p>
+    <?php
+    echo sprintf(
+        __(
+            'Forgot your account password? Click <a href="%s">here</a> to reset it.'
+        ), $this->url('user-account-recovery/initiate')
+    )
+    ?>
+</p>

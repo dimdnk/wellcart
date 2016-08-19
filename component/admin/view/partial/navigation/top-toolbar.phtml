@@ -1,0 +1,79 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$admin = $this->zfcUserIdentity();
+if (!$admin) {
+    return;
+}
+
+$notifications = $this->adminNotifications();
+$recentCount = $notifications->getRecentCount();
+$messages = $notifications->getMessages();
+?>
+<ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a id="top-toolbar-notifications-menu"
+           <?php if ($recentCount): ?>href="#" class="dropdown-toggle"
+           data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true"
+           aria-expanded="false"
+           <?php else: ?>href="<?php
+           echo $this->url(
+               'zfcadmin/admin/notifications'
+           )
+           ?>" <?php endif; ?> role="button"
+            >
+            <span
+                class="label<?php if ($recentCount): ?> label-danger<?php endif ?> pull-left"><?php echo $recentCount ?></span>
+            <i class="fa fa-bell"></i>
+        </a>
+        <?php if ($recentCount): ?>
+            <ul class="dropdown-menu list-group"
+                aria-labelledby="top-toolbar-notifications-menu">
+                <?php foreach ($messages as $message): ?>
+                    <li class="list-group-item"><?php echo $message->getTitle(
+                        ) ?></li>
+                <?php endforeach; ?>
+                <li>
+                    <a href="<?php
+                    echo $this->url(
+                        'zfcadmin/admin/notifications'
+                    )
+                    ?>"><i class="fa fa-caret-right" aria-hidden="true"></i>
+                        <?php echo sprintf(
+                            __('See All (%s unread)'), $recentCount
+                        ) ?></a>
+                </li>
+            </ul>
+        <?php endif ?>
+    </li>
+
+    <li class="dropdown">
+        <a id="top-toolbar-user-menu" href="#" class="dropdown-toggle"
+           data-toggle="dropdown" data-hover="dropdown" role="button"
+           aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i> &nbsp; <?php
+            echo $admin->getDisplayName()
+            ?>
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="top-toolbar-user-menu">
+            <li><a href="<?php
+                echo $this->url(
+                    'zfcadmin/admin/accounts',
+                    ['action' => 'update', 'id' => $admin->getId()]
+                )
+                ?>">
+                    <i class="fa fa-pencil-square-o"></i>
+                    &nbsp; <?php echo __('Profile') ?></a>
+            </li>
+            <li><a href="<?php echo $this->url('zfcadmin/logout') ?>">
+                    <i class="fa fa-sign-out"></i>
+                    &nbsp; <?php echo __('Logout') ?></a></li>
+        </ul>
+    </li>
+    <li class="dropdown"> <?php echo str_repeat('&nbsp;', 9) ?> </li>
+</ul>

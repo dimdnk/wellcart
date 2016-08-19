@@ -1,0 +1,38 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+$this->headTitle($pageTitle);
+$content = $this->content;
+?>
+<?php
+/**
+ * Page Header
+ */
+echo $this->PageHeader;
+?>
+<!-- Content area -->
+<div class="content">
+    <div
+        class="container<?php if ($this->fluidContainer): ?>-fluid<?php endif ?><?php if ($this->containerClass): ?> <?php echo $this->containerClass ?><?php endif ?>">
+
+        <?php echo $this->PrePageContent ?>
+        <div class="row">
+            <div class="col-md-12 grid-main-container">
+                <div class="panel panel-flat">
+
+                    <?php if ($content) : ?>
+                        <?php echo $content ?>
+                    <?php else: ?>
+                        <?php echo $this->grid ?>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->PostPageContent ?>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+
+use WellCart\Form\View\Helper\FormCollection;
+use WellCart\Ui\Form\Element\TableFieldsetCollection;
+
+/**
+ * @var $collection TableFieldsetCollection
+ */
+$collection = $this->element;
+/**
+ * @var $helper FormCollection
+ */
+$helper = $this->context;
+$helper->setPartial(null);
+
+$elementHelper = $this->plugin('formElement');
+$escapeHtmlAttribHelper = $this->plugin('escapehtmlattr');
+
+$columns = $collection->getColumns();
+$rowActions = $collection->getRowActions();
+$items = $collection->getIterator();
+?>
+<?php if (!count($columns)): ?>
+    <p class="alert alert-warning text-center" role="alert"><?php echo __(
+            'No form elements defined.'
+        ) ?></p>
+<?php else : ?>
+    <fieldset class="<?php echo $collection->getAttribute(
+        'class'
+    ) ?>">
+        <table
+            class="table table-striped table-bordered table-datagrid table-fieldset table-<?php echo $collection->getAttribute(
+                'class'
+            ) ?>">
+            <caption><?php echo __($collection->getCaption()) ?></caption>
+            <thead>
+            <tr>
+                <?php foreach ($columns as $column): ?>
+                    <th class="col-head-<?php echo $column->getElementName() ?>"
+                        width="<?php echo $column->getWidth() . '%' ?>">
+                        <?php echo $column->getLabel(); ?>
+                    </th>
+                <?php endforeach ?>
+                <?php if (count($rowActions)): ?>
+                    <th class="actions">
+
+                    </th>
+                <?php endif ?>
+            </tr>
+            </thead>
+            <tbody class="table-fieldset-body">
+            <?php foreach ($items as $fieldset): ?>
+                <tr class="row-fieldset">
+                    <?php foreach ($columns as $column): ?>
+                        <td>
+                            <?php echo $elementHelper(
+                                $fieldset->get($column->getElementName())
+                            ) ?>
+                        </td>
+                    <?php endforeach ?>
+                    <?php if (count($rowActions)): ?>
+                        <td>
+                            <?php foreach ($rowActions as $rowAction): ?>
+                                <?php echo $elementHelper(
+                                    $fieldset->get($rowAction->getElementName())
+                                ) ?>
+                            <?php endforeach ?>
+                        </td>
+                    <?php endif ?>
+                </tr>
+            <?php endforeach ?>
+            </tbody>
+        </table>
+        <?php
+        $template = '';
+        $items = [$collection->getTemplateElement()];
+        ob_start();
+        ?>
+        <?php foreach ($items as $fieldset): ?>
+            <tr class="row-fieldset">
+                <?php foreach ($columns as $column): ?>
+                    <td>
+                        <?php echo $elementHelper(
+                            $fieldset->get($column->getElementName())
+                        ) ?>
+                    </td>
+                <?php endforeach ?>
+                <?php if (count($rowActions)): ?>
+                    <td>
+                        <?php foreach ($rowActions as $rowAction): ?>
+                            <?php echo $elementHelper(
+                                $fieldset->get($rowAction->getElementName())
+                            ) ?>
+                        <?php endforeach ?>
+                    </td>
+                <?php endif ?>
+            </tr>
+        <?php endforeach ?>
+        <?php
+        $template = sprintf(
+            $helper->getTemplateWrapper(),
+            $escapeHtmlAttribHelper(ob_get_contents())
+        );
+        ob_end_clean();
+        ?>
+        <?php echo $template ?>
+    </fieldset>
+<?php endif ?>

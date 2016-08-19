@@ -1,0 +1,39 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$admin = $this->zfcUserIdentity();
+?>
+<div class="sidebar-user">
+    <div class="media">
+        <div class="media-body">
+            <span class="media-heading text-semibold"> <?php
+                echo $admin->getDisplayName()
+                ?></span>
+
+            <div class="text-size-mini text-muted">
+                <i class="icon-mail5 text-size-small"></i>
+                &nbsp; <?php
+                echo $admin->getEmail()
+                ?>
+            </div>
+        </div>
+
+        <div class="media-right media-middle">
+            <ul class="icons-list">
+                <li>
+                    <a href="<?php
+                    echo $this->url(
+                        'zfcadmin/admin/accounts',
+                        ['action' => 'update', 'id' => $admin->getId()]
+                    )
+                    ?>"><i
+                            class="icon-cog3"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

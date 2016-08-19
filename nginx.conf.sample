@@ -1,0 +1,63 @@
+# WellCart Vars
+# set $WELLCART_ROOT /path/to/wellcart/root;
+# set $WELLCART_APPLICATION_ENV production; # or development
+#
+# Example configuration:
+# upstream fastcgi_backend {
+#    # use tcp connection
+#    # server  127.0.0.1:9000;
+#    # or socket
+#    server   unix:/var/run/php7-fpm.sock;
+# }
+# server {
+#    listen 80;
+#    server_name wellcart.local;
+#    set $WELLCART_ROOT /var/www/wellcart;
+#    set $WELLCART_APPLICATION_ENV development;
+#    include /vagrant/wellcart/nginx.conf.sample;
+# }
+
+
+root $WELLCART_ROOT/public;
+
+index index.php;
+autoindex off;
+charset off;
+
+location / {
+    try_files $uri $uri/ /index.php?$args;
+}
+
+location /assets/ {
+    location ~* \.(ico|jpg|jpeg|png|gif|svg|js|css|swf|eot|ttf|otf|woff|woff2)$ {
+        add_header Cache-Control "public";
+        add_header X-Frame-Options "SAMEORIGIN";
+        expires +1y;
+    }
+    location ~* \.(zip|gz|gzip|bz2|csv|xml)$ {
+        add_header Cache-Control "no-store";
+        add_header X-Frame-Options "SAMEORIGIN";
+        expires    off;
+    }
+    add_header X-Frame-Options "SAMEORIGIN";
+}
+
+
+
+gzip on;
+gzip_disable "msie6";
+
+gzip_comp_level 6;
+gzip_min_length 1100;
+gzip_proxied any;
+gzip_types
+    text/plain
+    text/css
+    text/js
+    text/xml
+    text/javascript
+    application/javascript
+    application/x-javascript
+    application/json
+    application/xml
+    application/xml+rss;

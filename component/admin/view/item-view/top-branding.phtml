@@ -1,0 +1,24 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<div id="top-branding-region" class="top-branding-wrapper">
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a href="<?php echo $this->url('zfcadmin') ?>" class="navbar-brand">
+                &nbsp;
+                &nbsp;<?php echo $this->websiteTitle ?></a>
+        </div>
+
+        <?php
+        echo $this->partial(
+            'wellcart-admin/partial/navigation/top-toolbar', $this
+        )
+        ?>
+
+    </div>
+</div>

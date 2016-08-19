@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="WellCart\RestApi\Entity\OAuth2\AccessToken" table="oauth2_access_tokens"
+            repository-class="WellCart\RestApi\Repository\OAuth2\AccessTokens">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="accessToken" column="access_token" type="text" nullable="true"/>
+        <field name="expires" type="datetime" nullable="true"/>
+        <many-to-one field="client" target-entity="WellCart\RestApi\Entity\OAuth2\Client"
+                     inversed-by="accessToken">
+            <join-columns>
+                <join-column name="client_id" referenced-column-name="id" nullable="false" on-delete="CASCADE"/>
+            </join-columns>
+        </many-to-one>
+        <many-to-one field="user" target-entity="WellCart\User\Entity\User" inversed-by="accessToken">
+            <join-columns>
+                <join-column name="user_id" referenced-column-name="user_id" nullable="true" on-delete="CASCADE"/>
+            </join-columns>
+        </many-to-one>
+        <many-to-many field="scope" target-entity="WellCart\RestApi\Entity\OAuth2\Scope"
+                      mapped-by="accessToken"/>
+    </entity>
+</doctrine-mapping>

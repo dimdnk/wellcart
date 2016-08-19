@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="WellCart\RestApi\Entity\OAuth2\Scope" table="oauth2_scopes"
+            repository-class="WellCart\RestApi\Repository\OAuth2\Scopes">
+        <entity-listeners>
+            <entity-listener class="WellCart\RestApi\EventListener\ScopeEntityListener"/>
+        </entity-listeners>
+
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="scope" type="text" nullable="true"/>
+        <field name="isDefault" column="is_default" type="boolean" nullable="true"/>
+        <many-to-many field="client" target-entity="WellCart\RestApi\Entity\OAuth2\Client"
+                      inversed-by="scope">
+            <join-table name="oauth2_client_to_scope">
+                <join-columns>
+                    <join-column name="scope_id" referenced-column-name="id" nullable="false"/>
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="client_id" referenced-column-name="id" nullable="false"/>
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+        <many-to-many field="authorizationCode"
+                      target-entity="WellCart\RestApi\Entity\OAuth2\AuthorizationCode"
+                      inversed-by="scope">
+            <join-table name="oauth2_authorization_code_to_scope">
+                <join-columns>
+                    <join-column name="scope_id" referenced-column-name="id" nullable="false"/>
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="auth_code_id" referenced-column-name="id" nullable="false"/>
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+        <many-to-many field="refreshToken" target-entity="WellCart\RestApi\Entity\OAuth2\RefreshToken"
+                      inversed-by="scope">
+            <join-table name="oauth2_refresh_token_to_scope">
+                <join-columns>
+                    <join-column name="scope_id" referenced-column-name="id" nullable="false"/>
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="refresh_token_id" referenced-column-name="id" nullable="false"/>
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+        <many-to-many field="accessToken" target-entity="WellCart\RestApi\Entity\OAuth2\AccessToken"
+                      inversed-by="scope">
+            <join-table name="oauth2_access_token_to_scope">
+                <join-columns>
+                    <join-column name="scope_id" referenced-column-name="id" nullable="false"/>
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="access_token_id" referenced-column-name="id" nullable="false"/>
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+    </entity>
+</doctrine-mapping>

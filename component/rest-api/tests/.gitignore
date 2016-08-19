@@ -1,0 +1,8 @@
+*.phar
+application.config.php
+db.global.php
+phpunit.xml
+codeception.yml
+*.suite.yml
+installed.php
+/report

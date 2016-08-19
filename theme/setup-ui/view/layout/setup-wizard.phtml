@@ -1,0 +1,97 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+/**
+ * @var  $wizard \Wizard\WizardInterface
+ */
+$wizard = $this->wizard;
+$currentStep = $this->currentStep;
+$stepsCount = ($wizard) ? $wizard->getTotalStepCount() : 0;
+$steps = ($wizard) ? $wizard->getSteps() : [];
+$this->headTitle(__('Installation Wizard'), 'PREPEND');
+?>
+<?php echo $this->doctype() . PHP_EOL; ?>
+<html lang="<?php echo $this->locale()->getLanguage()->getCode() ?>">
+<head>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->HtmlHead ?>
+</head>
+<body id="html-body-region" class="<?php echo $this->bodyClass() ?>">
+<?php echo $this->PostBodyStart ?>
+<div class="container-fluid">
+    <header id="page-header-region" class="page-header-wrapper row"
+            role="header">
+        <div class="card card-header"
+             style="padding-top: 0.1em; padding-left: 2em; padding-right: 2em;">
+            <?php echo $this->PageHeader ?>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row wizard">
+            <div class="col-lg-3" role="menubar">
+                <ol class="wizard-sidebar" role="menu">
+                    <?php if ($stepsCount > 0): ?>
+                        <?php foreach ($steps as $step): ?>
+                            <li
+                                class="wizard<?php
+                                if ($step->isComplete()
+                                ):
+                                    ?>-completed<?php endif ?>
+                                        <?php
+                                if ($step->getName() == $currentStep->getName()
+                                ):
+                                    ?>wizard-active<?php endif ?>">
+                                <?php echo $step->getTitle() ?>
+                            </li>
+                        <?php endforeach ?>
+                    <?php endif ?>
+                </ol>
+            </div>
+            <main id="page-main-region" class="page-main-wrapper col-lg-9"
+                  role="main">
+                <?php echo $this->PrePageContent; ?>
+                <div class="card card-deck-wrapper card-block">
+                    <?php if ($currentStep): ?>
+                        <div class="card-header">
+                            <?php
+                            echo sprintf(
+                                __('Step %s:'), $step->getWizard()
+                                ->getCurrentStepNumber()
+                            )
+                            ?>&nbsp;<?php echo $currentStep->getTitle() ?>
+                        </div>
+                        <div class="card card-block">
+                            <?php
+                            /**
+                             * Main page content
+                             */
+                            echo $this->content;
+                            ?>
+                        </div>
+                    <?php else: ?>
+                        <div class="card card-block">
+                            <?php
+                            /**
+                             * Main page content
+                             */
+                            echo $this->content;
+                            ?>
+                        </div>
+                    <?php endif ?>
+                </div>
+                <?php echo $this->PostPageContent; ?>
+            </main>
+        </div>
+    </div>
+    <footer id="page-footer-region" class="page-footer-wrapper container"
+            role="footer">
+        <?php echo $this->PageFooter ?>
+    </footer>
+</div>
+<?php echo $this->PreBodyEnd ?>
+</body>
+</html>

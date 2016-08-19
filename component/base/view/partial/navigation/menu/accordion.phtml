@@ -1,0 +1,186 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+?>
+<?php
+/* @var $container Zend\Navigation\Navigation */
+$container = $this->container;
+$navigation = $this->navigation();
+?>
+
+<ul class="navigation navigation-accordion <?php echo $navigation->menu()
+    ->getUlClass(); ?>">
+    <?php foreach ($container as $firstLevel): ?>
+        <?php
+        if (!$navigation->accept($firstLevel)) {
+            continue;
+        }
+        ?>
+        <?php /* @var $firstLevel Zend\Navigation\Page\Mvc */ ?>
+        <?php $hasSecondLevel = $firstLevel->hasPages() ?>
+        <?php if (!$hasSecondLevel): ?>
+            <li<?php
+            if ($firstLevel->isActive()) {
+                echo ' class="active"';
+            }
+            ?>>
+                <a
+                    href="<?php echo $firstLevel->getHref() ?>"
+                    <?php if ($firstLevel->getTarget() != ""): ?>
+                        target="<?php echo $firstLevel->getTarget(); ?>"
+                    <?php endif; ?>
+                    >
+                    <?php if ($firstLevel->get("icon") !== ""): ?>
+                        <i class="<?php echo $firstLevel->get(
+                            "icon"
+                        ); ?>"></i>&nbsp;
+                    <?php endif; ?>
+                    <span><?php echo $firstLevel->getLabel() ?></span>
+                </a>
+            </li>
+        <?php else: ?>
+            <?php
+            //check if access is allowed at least one item
+            $access = false;
+            foreach ($firstLevel->getPages() as $secondLevel) {
+                if ($navigation->accept($secondLevel)
+                ) {
+                    $access = true;
+                }
+            }
+            if ($access) :
+                ?>
+                <li class="<?php
+                if ($firstLevel->isActive(true)) {
+                    echo ' active';
+                }
+                ?>">
+                    <a
+                        <?php if ($firstLevel->hasPages()): ?>class="has-ul"
+                        href="#"<?php else: ?>
+                        href="<?php echo $firstLevel->getHref() ?>"
+                        <?php if ($firstLevel->getTarget() != ""): ?>
+                            target="<?php
+                            echo $firstLevel->getTarget();
+                            ?>"
+                        <?php endif; ?>
+                    <?php endif; ?>>
+                        <?php if ($firstLevel->get("icon") !== ""): ?>
+                            <i class="<?php
+                            echo $firstLevel->get(
+                                "icon"
+                            );
+                            ?>"></i>&nbsp;
+                        <?php endif; ?>
+                        <span><?php echo $firstLevel->getLabel() ?></span>
+                    </a>
+                    <ul class="<?php if (!$firstLevel->isActive(
+                        true
+                    )
+                    ): ?>hidden-ul<?php endif ?>">
+                        <?php foreach (
+                            $firstLevel->getPages() as $secondLevel
+                        ): ?>
+                            <?php
+                            if (!$navigation->accept(
+                                $secondLevel
+                            )
+                            ) {
+                                continue;
+                            }
+                            ?>
+                            <li<?php
+                            if ($secondLevel->isActive()) {
+                                echo ' class="active"';
+                            }
+                            ?>>
+                                <a
+                                    <?php if ($secondLevel->hasPages()
+                                    ): ?>
+                                        href="#" class="has-ul"
+                                    <?php else: ?>
+                                        href="<?php echo $secondLevel->getHref(
+                                        ) ?>"
+                                        <?php if ($secondLevel->getTarget()
+                                            != ""
+                                        ): ?>
+                                            target="<?php
+                                            echo $secondLevel->getTarget();
+                                            ?>"
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                    >
+                                    <?php echo $secondLevel->getLabel() ?>
+                                </a>
+
+                                <?php if ($secondLevel->hasPages()): ?>
+                                    <ul class="<?php if (!$secondLevel->isActive(
+                                        true
+                                    )
+                                    ): ?>hidden-ul<?php endif ?>">
+                                        <?php foreach (
+                                            $secondLevel->getPages() as
+                                            $thirdLevel
+                                        ): ?>
+                                            <?php
+                                            if (!$navigation->accept(
+                                                $thirdLevel
+                                            )
+                                            ) {
+                                                continue;
+                                            }
+                                            ?>
+                                            <li<?php
+                                            if ($thirdLevel->isActive()) {
+                                                echo ' class="active"';
+                                            }
+                                            ?>>
+                                                <a
+                                                    <?php if ($thirdLevel->hasPages(
+                                                    )
+                                                    ): ?>
+                                                        href="#" class="has-ul"
+                                                    <?php else: ?>
+                                                        href="<?php echo $thirdLevel->getHref(
+                                                        ) ?>"
+                                                        <?php if ($thirdLevel->getTarget(
+                                                            )
+                                                            != ""
+                                                        ): ?>
+                                                            target="<?php
+                                                            echo $thirdLevel->getTarget(
+                                                            );
+                                                            ?>"
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                    >
+                                                    <?php if ($thirdLevel->get(
+                                                            "icon"
+                                                        )
+                                                        !== ""
+                                                    ): ?>
+                                                        <i class="<?php
+                                                        echo $thirdLevel->get(
+                                                            "icon"
+                                                        );
+                                                        ?>"></i>&nbsp;
+                                                    <?php endif; ?>
+                                                    <?php echo $thirdLevel->getLabel(
+                                                    ) ?>
+                                                </a>
+                                            </li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                <?php endif ?>
+                            </li>
+                        <?php endforeach ?>
+                    </ul>
+                </li>
+            <?php endif; ?>
+        <?php endif ?>
+    <?php endforeach ?>
+</ul>

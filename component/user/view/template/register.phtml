@@ -1,0 +1,26 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$this->headTitle(__('Sign Up'));
+?>
+<h1><?php echo $this->translate('Sign up'); ?></h1>
+<?php if (!$this->enableRegistration): ?>
+    <div class="alert alert-danger">
+        <p><?php echo __('Registration is disabled') ?></p>
+    </div>
+    <?php
+    return;
+endif;
+
+$form = $this->registerForm;
+$form->prepare();
+$form->setAttribute('action', $this->url('zfcuser/register'));
+$form->setAttribute('method', 'post');
+?>
+<div class="register-form">
+    <?php echo $this->form($form) ?>
+</div>

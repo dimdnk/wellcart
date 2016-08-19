@@ -1,0 +1,21 @@
+<?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+$helper = $this->navigation('backend_main_navigation');
+?>
+<div id="main-menu-region" class="main-menu-wrapper">
+    <?php
+    echo $helper
+        ->menu()
+        ->setUlClass('navigation-main')
+        ->setMaxDepth(3)
+        ->setRenderInvisible(false)
+        ->setPartial('partial/navigation/menu/accordion')
+        ->__toString();
+    ?>
+</div>
+
