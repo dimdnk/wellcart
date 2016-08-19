@@ -18,10 +18,6 @@ use WellCart\Utility\PHPEnvironment;
 if (is_file(__DIR__ . '/../../../bootstrap.php')) {
     require_once __DIR__ . '/../../../bootstrap.php';
 }
-CodeceptionAutoload::addNamespace(
-    'WellCart\CommandBus\Test',
-    __DIR__ . '/support'
-);
 
 if (!defined('WELLCART')) {
     define('WELLCART', true);
@@ -32,6 +28,11 @@ if (!defined('WELLCART')) {
     Bootstrap::init();
     application();
 }
+
+CodeceptionAutoload::addNamespace(
+    'WellCart\CommandBus\Test',
+    __DIR__ . '/support'
+);
 
 /**
  * Bootstrap test environment

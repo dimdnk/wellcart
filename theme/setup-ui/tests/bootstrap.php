@@ -19,11 +19,6 @@ if (is_file(__DIR__ . '/../../../bootstrap.php')) {
     require_once __DIR__ . '/../../../bootstrap.php';
 }
 
-CodeceptionAutoload::addNamespace(
-    'WellCart\Theme\SetupUi\Test',
-    __DIR__ . '/support'
-);
-
 if (!defined('WELLCART')) {
     define('WELLCART', true);
     chdir(__DIR__);
@@ -32,6 +27,11 @@ if (!defined('WELLCART')) {
      */
     Bootstrap::init();
 }
+
+CodeceptionAutoload::addNamespace(
+    'WellCart\Theme\SetupUi\Test',
+    __DIR__ . '/support'
+);
 
 /**
  * Bootstrap test environment
