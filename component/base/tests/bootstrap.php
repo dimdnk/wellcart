@@ -148,3 +148,5 @@ class Bootstrap
     }
 
 }
+
+return application();

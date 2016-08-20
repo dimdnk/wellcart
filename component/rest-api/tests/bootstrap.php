@@ -147,3 +147,5 @@ class Bootstrap
         return str_replace('\\', '/', $dir . '/' . $path) . '/';
     }
 }
+
+return application();
