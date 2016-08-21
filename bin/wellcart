@@ -18,13 +18,10 @@ if (version_compare(phpversion(), '7.0.0', '<') === true) {
 
 $_ENV['WELLCART_APPLICATION_CONTEXT'] = 'global';
 
-/**
- * This makes our life easier when dealing with paths. Everything is relative
- * to the application root now.
- */
 $dirs = [
-    __DIR__ . '/../',
     __DIR__ . '/../../../../',
+    __DIR__ . '/../../../../tests/',
+    __DIR__ . '/../',
     __DIR__ . '/../tests/',
 ];
 
