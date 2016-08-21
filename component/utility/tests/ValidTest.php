@@ -539,9 +539,6 @@ class ValidTest extends TestCase
     {
         return array(
             array('75.125.175.50', false, true),
-            // PHP 5.3.6 fixed a bug that allowed 127.0.0.1 as a public ip: http://bugs.php.net/53150
-            array('127.0.0.1', false,
-                  version_compare(PHP_VERSION, '5.3.6', '<')),
             array('256.257.258.259', false, false),
             array('255.255.255.255', false, false),
             array('192.168.0.1', false, false),
@@ -558,15 +555,15 @@ class ValidTest extends TestCase
      *
      * @dataProvider  providerIp
      *
-     * @param string  $input_ip
-     * @param boolean $allow_private
-     * @param boolean $expected_result
+     * @param string  $inputIp
+     * @param boolean $allowPrivate
+     * @param boolean $expectedResult
      */
-    public function testIp($input_ip, $allow_private, $expected_result)
+    public function testIp($inputIp, $allowPrivate, $expectedResult)
     {
         $this->assertEquals(
-            $expected_result,
-            Valid::ip($input_ip, $allow_private)
+            $expectedResult,
+            Valid::ip($inputIp, $allowPrivate)
         );
     }
 
@@ -581,9 +578,9 @@ class ValidTest extends TestCase
             // Border line
             array('some', 4, true),
             // Exceeds
-            array('KOHANARULLLES', 2, false),
+            array('UPPERCASEDEMO', 2, false),
             // Under
-            array('CakeSucks', 10, true),
+            array('SnakeCaseDemo', 10, true),
             // Empty test
             array('', -10, false),
             array(null, -10, false),
