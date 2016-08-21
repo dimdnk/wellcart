@@ -580,7 +580,7 @@ class ValidTest extends TestCase
             // Exceeds
             array('UPPERCASEDEMO', 2, false),
             // Under
-            array('SnakeCaseDemo', 10, true),
+            array('SnakeCaseDemo', 13, true),
             // Empty test
             array('', -10, false),
             array(null, -10, false),
