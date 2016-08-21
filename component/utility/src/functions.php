@@ -6,7 +6,7 @@
  * @license      http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-declare(strict_types = 1);
+
 
 use WellCart\Utility\Arr;
 use WellCart\Utility\Str;
