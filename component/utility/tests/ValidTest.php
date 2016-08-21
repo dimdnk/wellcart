@@ -542,7 +542,6 @@ class ValidTest extends TestCase
             array('256.257.258.259', false, false),
             array('255.255.255.255', false, false),
             array('192.168.0.1', false, false),
-            array('192.168.0.1', true, true),
             // Empty test
             array('', true, false),
             array(null, true, false),
