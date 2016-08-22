@@ -149,18 +149,11 @@
     "component-baseurl": "/assets/lib"
   },
   "scripts": {
-    "post-autoload-dump": [
-      "php -r \"chmod('config/autoload', 0777);\"",
-      "php -r \"chmod('data', 0777);\"",
-      "php -r \"chmod('data/cache', 0777);\"",
-      "php -r \"chmod('data/logs', 0777);\"",
-      "php -r \"chmod('data/db/migrations', 0777);\"",
-      "php -r \"chmod('data/db/seeds', 0777);\"",
-      "php -r \"chmod('data/sessions', 0777);\"",
-      "php -r \"chmod('data/upload', 0777);\"",
-      "php -r \"chmod('public/assets', 0777);\"",
-      "php -r \"chmod('public/themes', 0777);\"",
-      "php -r \"chmod('public/media', 0777);\""
+    "post-install-cmd": [
+      "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
+    ],
+    "post-update-cmd": [
+      "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
     ],
     "serve": "php -S 0.0.0.0:8080 -t public/ public/index.php",
     "test": "codecept run",
