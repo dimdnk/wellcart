@@ -40,7 +40,6 @@
       "php -r \"chmod('tests/data/sessions', 0777);\"",
       "php -r \"chmod('tests/data/upload', 0777);\""
     ],
-    "test": "codecept run",
     "coveralls": "coveralls",
     "cs": "phpcs",
     "cs-fix": "phpcbf"
