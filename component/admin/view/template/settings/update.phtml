@@ -39,65 +39,64 @@ $this->strokerFormPrepare('configuration_editor', $form);
                         ) ?>
                     </h6>
 
-                    <div class="heading-elements"
-                    ">
-                    <?php echo $this->formRow($form->get('csrf')); ?>
-                    <?php echo $this->formSubmit($form->get('save')); ?>
+                    <div class="heading-elements">
+                        <?php echo $this->formRow($form->get('csrf')); ?>
+                        <?php echo $this->formSubmit($form->get('save')); ?>
+                    </div>
                 </div>
-            </div>
-            <div class="card-block">
-                <div class="panel-group" id="fieldsets" role="tablist">
-                    <?php
-                    $in = true;
-                    foreach ($panels as $panelId => $panel):
-                        if (!$form->has($panelId)) {
-                            continue;
-                        }
-                        /**
-                         * @var $fieldset \WellCart\Form\Form
-                         */
-                        $fieldset = $form->get($panelId);
-                        ?>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse"
-                                       data-parent="#fieldsets"
-                                       href="#<?php echo $panelId ?>">
-                                        <?php echo __(
-                                            $panel['label']
-                                        ) ?>
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="<?php echo $panelId ?>"
-                                 class="panel-collapse collapse <?php
-                                 if ($in) {
-                                     echo 'in';
-                                     $in = false;
-                                 }
-                                 ?>">
-                                <div class="panel-body">
-                                    <div class="container-fluid">
-                                        <div class="row">
-                                            <div class="col-md-7">
-                                                <?php
-                                                echo $this->formCollection(
-                                                    $fieldset
-                                                );
-                                                ?>
+                <div class="card-block">
+                    <div class="panel-group" id="fieldsets" role="tablist">
+                        <?php
+                        $in = true;
+                        foreach ($panels as $panelId => $panel):
+                            if (!$form->has($panelId)) {
+                                continue;
+                            }
+                            /**
+                             * @var $fieldset \WellCart\Form\Form
+                             */
+                            $fieldset = $form->get($panelId);
+                            ?>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse"
+                                           data-parent="#fieldsets"
+                                           href="#<?php echo $panelId ?>">
+                                            <?php echo __(
+                                                $panel['label']
+                                            ) ?>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="<?php echo $panelId ?>"
+                                     class="panel-collapse collapse <?php
+                                     if ($in) {
+                                         echo 'in';
+                                         $in = false;
+                                     }
+                                     ?>">
+                                    <div class="panel-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <?php
+                                                    echo $this->formCollection(
+                                                        $fieldset
+                                                    );
+                                                    ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php endforeach ?>
+                        <?php endforeach ?>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
-</div>
 </div>
 <?php echo $this->form()->closeTag(); ?>
