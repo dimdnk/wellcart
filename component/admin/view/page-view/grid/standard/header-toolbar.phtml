@@ -7,13 +7,13 @@
  */
 ?>
 <div class="panel-heading">
-    <h5 class="panel-title">
+    <h6 class="panel-title">
         <?php
         echo $this->partial(
             'partial/paginator/counters', ['paginator' => $this->paginator]
         );
         ?>
-    </h5>
+    </h6>
 
     <div class="heading-elements">
         <?php foreach ($this->grid->getToolbarButtons() as $button):
