@@ -48,13 +48,16 @@
     "ext-xdebug": "Extension which provides debugging and profiling capabilities, make possible code coverage support."
   },
   "autoload": {
+    "files": [
+      "./lib/Codeception/SuiteManager.php"
+    ],
+    "classmap": [
+      "./lib"
+    ],
     "psr-4": {
       "WellCart\\Test\\": "src/"
     }
   },
   "autoload-dev": {
-    "classmap": [
-      "./lib"
-    ]
   }
 }
