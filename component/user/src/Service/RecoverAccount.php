@@ -210,7 +210,7 @@ class RecoverAccount
 
         $mailSubject = sprintf(
             __('[%s] Password Reset Confirmation for %s'),
-            Config::get('website.name', 'Demo Application'),
+            Config::get('wellcart.website.name', 'Demo Application'),
             $user->getDisplayName()
         );
 

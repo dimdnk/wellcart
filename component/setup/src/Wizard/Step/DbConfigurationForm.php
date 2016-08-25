@@ -152,7 +152,7 @@ class DbConfigurationForm extends Form implements InputFilterProviderInterface
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
-                    'value'        => Config::get('website.name'),
+                    'value'        => Config::get('wellcart.website.name'),
                 ],
             ],
             ['priority' => 450]

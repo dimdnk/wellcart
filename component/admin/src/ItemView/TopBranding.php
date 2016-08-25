@@ -34,7 +34,7 @@ class TopBranding extends AbstractItemView implements InitializableInterface
      */
     public function init()
     {
-        $websiteTitle = Config::get('website.name', __('Demo Application'));
+        $websiteTitle = Config::get('wellcart.website.name', __('Demo Application'));
         $this->setVariables(compact('websiteTitle'));
     }
 }

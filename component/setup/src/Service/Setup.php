@@ -273,7 +273,7 @@ class Setup
             function () use ($data) {
                 $editor = $this->getConfigurationEditor();
                 $set = [
-                    'website.name'     => Arr::get(
+                    'wellcart.website.name'     => Arr::get(
                         $data,
                         'website_name',
                         'Demo Application'

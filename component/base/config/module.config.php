@@ -103,10 +103,12 @@ return [
             'ZfcDatagrid\Datagrid'                         => false,
         ],
     ],
-
-    'website'                    => [
-        'name' => 'Demo Application',
+    'wellcart'                   => [
+        'website' => [
+            'name' => 'Demo Application',
+        ],
     ],
+
     'db'                         => [
         'driver'         => 'pdo_mysql',
         'username'       => 'root',

@@ -65,7 +65,7 @@ class ConfirmEmailController extends AbstractActionController
                         $this->__(
                             'Thank you for registering with %s. Please, log in.'
                         ),
-                        Config::get('website.name')
+                        Config::get('wellcart.website.name')
                     )
                 );
 

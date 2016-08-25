@@ -31,8 +31,10 @@ return [
         ],
     ],
 
-    'website'              => [
-        'name' => 'WellCart',
+    'wellcart'                   => [
+        'website' => [
+            'name' => 'WellCart',
+        ],
     ],
     'php_settings'         => [
         'log_errors'             => true,

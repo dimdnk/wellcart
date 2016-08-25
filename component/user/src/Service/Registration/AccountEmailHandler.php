@@ -157,7 +157,7 @@ class AccountEmailHandler
     ) {
         $mailSubject = sprintf(
             __('Welcome to %s'),
-            Config::get('website.name', 'Demo Application')
+            Config::get('wellcart.website.name', 'Demo Application')
         );
 
         return $this->send(
@@ -283,7 +283,7 @@ class AccountEmailHandler
 
         $mailSubject = sprintf(
             __('Welcome to %s'),
-            Config::get('website.name', 'Demo Application')
+            Config::get('wellcart.website.name', 'Demo Application')
         );
 
         return $this->send(
@@ -309,7 +309,7 @@ class AccountEmailHandler
 
         $mailSubject = sprintf(
             __('Please confirm your %s account'),
-            Config::get('website.name', 'Demo Application')
+            Config::get('wellcart.website.name', 'Demo Application')
         );
 
         return $this->send(

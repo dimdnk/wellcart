@@ -20,9 +20,9 @@ return [
                     'element'  => [
 
 
-                        'website.name'     =>
+                        'wellcart.website.name'     =>
                             [
-                                'name'                       => 'website.name',
+                                'name'                       => 'wellcart.website.name',
                                 'options'                    => [
                                     'label'            => 'Website Name',
                                     'twb-layout'       => 'horizontal',
