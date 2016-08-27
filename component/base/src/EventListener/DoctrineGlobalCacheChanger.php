@@ -24,11 +24,11 @@ class DoctrineGlobalCacheChanger
     public function __invoke(EventInterface $event)
     {
         $values = &$event->getParams()['values'];
-        $cacheInstance = (!empty($values['doctrine.global_cache_instance']))
+        $cacheInstance = (!empty($values['wellcart.doctrine.global_cache_instance']))
             ?
-            $values['doctrine.global_cache_instance']
+            $values['wellcart.doctrine.global_cache_instance']
             :
-            Config::get('doctrine.global_cache_instance', 'array');
+            Config::get('wellcart.doctrine.global_cache_instance', 'array');
 
         $types = [
             'metadata_cache',

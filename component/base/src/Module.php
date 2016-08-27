@@ -91,7 +91,7 @@ class Module implements
          */
         application($app);
 
-        $locale = Config::get('localization.locale');
+        $locale = Config::get('wellcart.localization.locale');
 
         ini_set('intl.default_locale', str_replace('_', '-', $locale));
         Locale::setDefault(str_replace('_', '-', $locale));
@@ -359,7 +359,7 @@ class Module implements
                                 ->getIdentity()
                                 ->getTimeZone();
                         } catch (\Throwable $e) {
-                            $tz = Config::get('localization.timezone');
+                            $tz = Config::get('wellcart.localization.timezone');
                         }
 
                         return new DateViewHelper($tz);

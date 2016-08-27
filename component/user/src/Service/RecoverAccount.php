@@ -276,7 +276,7 @@ class RecoverAccount
     protected function getEmailContact()
     {
         return Config::get(
-            'acmailer_options.contacts.' . $this->options['email_contact'],
+            'wellcart.email_communications.contacts.' . $this->options['email_contact'],
             false
         );
     }
@@ -319,7 +319,7 @@ class RecoverAccount
     protected function isEmailCommunicationsEnabled()
     {
         return (bool)Config::get(
-            'acmailer_options.communications.enabled',
+            'wellcart.email_communications.enabled',
             true
         );
     }

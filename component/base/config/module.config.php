@@ -6,6 +6,36 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
+    'wellcart'                   => [
+        'website'              => [
+            'name' => 'Demo Application',
+        ],
+        'localization'         =>
+            [
+                'country_code' => 'GB',
+                'timezone'     => 'Etc/GMT',
+                'locale'       => 'en_US',
+            ],
+        'email_communications' => [
+            'enabled'  => true,
+            'contacts' => [
+                'general'               => [
+                    'name'  => 'Default Website Owner',
+                    'email' => 'owner@example.com',
+                ],
+                'support'               => [
+                    'name'  => 'Default Website Customer Support',
+                    'email' => 'support@example.com',
+                ],
+                'website_administrator' => [
+                    'name'  => 'Default Website Administrator',
+                    'email' => 'admin@example.com',
+                ],
+            ],
+        ],
+        'doctrine'             => ['global_cache_instance' => 'array',]
+    ],
+
     /**
      * =========================================================
      * Service manager configuration
@@ -101,11 +131,6 @@ return [
             'StandardJsonModel'                            => false,
             'StandardImageModel'                           => false,
             'ZfcDatagrid\Datagrid'                         => false,
-        ],
-    ],
-    'wellcart'                   => [
-        'website' => [
-            'name' => 'Demo Application',
         ],
     ],
 
@@ -495,12 +520,6 @@ return [
             ]
         ],
     ],
-    'localization'               =>
-        [
-            'country_code' => 'GB',
-            'timezone'     => 'Etc/GMT',
-            'locale'       => 'en_US',
-        ],
     'session_containers'         => [
         'BaseSessionContainer' => 'BaseSessionContainer',
         'CsrfSessionContainer' => 'CsrfSessionContainer',

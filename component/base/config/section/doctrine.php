@@ -33,7 +33,6 @@ $driverClass = (Arr::get($masterDbConfig, 'driver') != 'pdo_mysql') ? 'PDOPgSql'
     : 'PDOMySql';
 
 return [
-    'global_cache_instance' => 'array',
     // SQL logger collector, used when ZendDeveloperTools and its toolbar are active
     'sql_logger_collector'  => [
         // configuration for the `doctrine.sql_logger_collector.orm_default` service

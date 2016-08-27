@@ -20,7 +20,7 @@ class EmailContactSelector extends Select
     public function __construct($name = null, $options = [])
     {
         parent::__construct($name, $options);
-        $contacts = Config::get('acmailer_options.contacts', []);
+        $contacts = Config::get('wellcart.email_communications.contacts', []);
         $valueOptions = [];
         foreach ($contacts as $code => $contact) {
             $valueOptions[$code] = $contact['name'];

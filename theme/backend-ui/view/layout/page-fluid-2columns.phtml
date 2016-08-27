@@ -49,8 +49,11 @@
         <!-- Footer -->
         <?php echo $this->PrePageFooter ?>
         <footer id="page-footer-region"
-                class="page-footer-wrapper text-muted" role="footer">
-            <?php echo $this->PageFooter ?>
+                class="page-footer-wrapper text-muted container-fluid"
+                role="footer">
+            <div class="row">
+                <div class="col-md-12"><?php echo $this->PageFooter ?></div>
+            </div>
         </footer>
         <?php echo $this->PostPageFooter ?>
         <!-- /footer -->

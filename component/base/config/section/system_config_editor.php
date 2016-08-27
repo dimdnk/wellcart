@@ -103,9 +103,9 @@ return [
                     'label'    => 'Localization',
                     'priority' => -20,
                     'element'  => [
-                        'localization.locale'       =>
+                        'wellcart.localization.locale'       =>
                             [
-                                'name'                       => 'localization.locale',
+                                'name'                       => 'wellcart.localization.locale',
                                 'options'                    => [
                                     'label'            => 'Locale',
                                     'twb-layout'       => 'horizontal',
@@ -129,9 +129,9 @@ return [
                                     'validators' => [],
                                 ],
                             ],
-                        'localization.timezone'     =>
+                        'wellcart.localization.timezone'     =>
                             [
-                                'name'                       => 'localization.timezone',
+                                'name'                       => 'wellcart.localization.timezone',
                                 'options'                    => [
                                     'label'            => 'Timezone',
                                     'twb-layout'       => 'horizontal',
@@ -155,9 +155,9 @@ return [
                                     'validators' => [],
                                 ],
                             ],
-                        'localization.country_code' =>
+                        'wellcart.localization.country_code' =>
                             [
-                                'name'                       => 'localization.country_code',
+                                'name'                       => 'wellcart.localization.country_code',
                                 'options'                    => [
                                     'label'            => 'Country',
                                     'twb-layout'       => 'horizontal',
@@ -234,9 +234,9 @@ return [
                     'label'    => 'Mail Server Configuration',
                     'priority' => -19,
                     'element'  => [
-                        'acmailer_options.communications.enabled'                          =>
+                        'wellcart.email_communications.enabled'                          =>
                             [
-                                'name'                       => 'acmailer_options.communications.enabled',
+                                'name'                       => 'wellcart.email_communications.enabled',
                                 'options'                    => [
                                     'label'            => 'Disable Email Communications',
                                     'twb-layout'       => 'horizontal',
@@ -503,9 +503,9 @@ return [
                     'label'    => 'General Contact',
                     'priority' => -21,
                     'element'  => [
-                        'acmailer_options.contacts.general.name'  =>
+                        'wellcart.email_communications.contacts.general.name'  =>
                             [
-                                'name'                       => 'acmailer_options.contacts.general.name',
+                                'name'                       => 'wellcart.email_communications.contacts.general.name',
                                 'options'                    => [
                                     'label'            => 'Sender Name',
                                     'twb-layout'       => 'horizontal',
@@ -538,9 +538,9 @@ return [
                                     ],
                                 ],
                             ],
-                        'acmailer_options.contacts.general.email' =>
+                        'wellcart.email_communications.contacts.general.email' =>
                             [
-                                'name'                       => 'acmailer_options.contacts.general.email',
+                                'name'                       => 'wellcart.email_communications.contacts.general.email',
                                 'options'                    => [
                                     'label'            => 'Sender Email',
                                     'twb-layout'       => 'horizontal',
@@ -582,9 +582,9 @@ return [
                     'label'    => 'Customer Support',
                     'priority' => -22,
                     'element'  => [
-                        'acmailer_options.contacts.support.name'  =>
+                        'wellcart.email_communications.contacts.support.name'  =>
                             [
-                                'name'                       => 'acmailer_options.contacts.support.name',
+                                'name'                       => 'wellcart.email_communications.contacts.support.name',
                                 'options'                    => [
                                     'label'            => 'Sender Name',
                                     'twb-layout'       => 'horizontal',
@@ -617,9 +617,9 @@ return [
                                     ],
                                 ],
                             ],
-                        'acmailer_options.contacts.support.email' =>
+                        'wellcart.email_communications.contacts.support.email' =>
                             [
-                                'name'                       => 'acmailer_options.contacts.support.email',
+                                'name'                       => 'wellcart.email_communications.contacts.support.email',
                                 'options'                    => [
                                     'label'            => 'Sender Email',
                                     'twb-layout'       => 'horizontal',
@@ -661,9 +661,9 @@ return [
                     'label'    => 'Website Administrator Contact',
                     'priority' => -23,
                     'element'  => [
-                        'acmailer_options.contacts.website_administrator.name'  =>
+                        'wellcart.email_communications.contacts.website_administrator.name'  =>
                             [
-                                'name'                       => 'acmailer_options.contacts.website_administrator.name',
+                                'name'                       => 'wellcart.email_communications.contacts.website_administrator.name',
                                 'options'                    => [
                                     'label'            => 'Sender Name',
                                     'twb-layout'       => 'horizontal',
@@ -696,9 +696,9 @@ return [
                                     ],
                                 ],
                             ],
-                        'acmailer_options.contacts.website_administrator.email' =>
+                        'wellcart.email_communications.contacts.website_administrator.email' =>
                             [
-                                'name'                       => 'acmailer_options.contacts.website_administrator.email',
+                                'name'                       => 'wellcart.email_communications.contacts.website_administrator.email',
                                 'options'                    => [
                                     'label'            => 'Sender Email',
                                     'twb-layout'       => 'horizontal',
@@ -784,9 +784,9 @@ return [
                                     ],
                                 ],
                             ],
-                        'doctrine.global_cache_instance'        =>
+                        'wellcart.doctrine.global_cache_instance'        =>
                             [
-                                'name'                       => 'doctrine.global_cache_instance',
+                                'name'                       => 'wellcart.doctrine.global_cache_instance',
                                 'options'                    => [
                                     'label'            => 'Doctrine ORM Cache',
                                     'twb-layout'       => 'horizontal',

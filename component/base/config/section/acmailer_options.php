@@ -6,21 +6,6 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'communications' => ['enabled' => true],
-    'contacts'       => [
-        'general'               => [
-            'name'  => 'Default Website Owner',
-            'email' => 'owner@example.com',
-        ],
-        'support'               => [
-            'name'  => 'Default Website Customer Support',
-            'email' => 'support@example.com',
-        ],
-        'website_administrator' => [
-            'name'  => 'Default Website Administrator',
-            'email' => 'admin@example.com',
-        ],
-    ],
     // Default mail service
     'default'        => [
 
