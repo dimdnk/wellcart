@@ -36,8 +36,8 @@ return [
             'admin\notification'                          => 'WellCart\Admin\Service\Notification',
         ],
         'factories'          => [
-            'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy' => 'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategyFactory',
-            'backend_main_navigation'                                => 'WellCart\Admin\Navigation\Service\BackendMainMenuFactory',
+            'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy' => 'WellCart\Admin\Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory',
+            'backend_main_navigation'                                => 'WellCart\Admin\Factory\Navigation\Service\BackendMainMenuFactory',
         ],
         'abstract_factories' => [],
         'services'           => [],

@@ -50,7 +50,7 @@ return [
             'ZfcDatagrid\Datagrid'                                       => 'WellCart\Ui\Datagrid\DatagridFactory',
 
             'HtImgModule\Imagine\Loader\LoaderPluginManager'             => 'WellCart\Stdlib\HtImg\Factory\Imagine\Loader\LoaderPluginManagerFactory',
-            'HtImg\ModuleOptions'                                        => 'WellCart\Base\Options\HtImgModuleOptionsFactory',
+            'HtImg\ModuleOptions'                                        => 'WellCart\Base\Factory\Options\HtImgModuleOptionsFactory',
 
             'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContext'        => 'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContextFactory',
             'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Layout\Listener\ActionHandlesListenerFactory',

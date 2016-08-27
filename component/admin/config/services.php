@@ -16,7 +16,7 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'system_config_editor_navigation'                 => 'WellCart\Admin\Navigation\Service\SystemConfigEditorFactory',
+        'system_config_editor_navigation'                 => 'WellCart\Admin\Factory\Navigation\Service\SystemConfigEditorFactory',
         'WellCart\Admin\Form\Account'                     =>
             function (ContainerInterface $services) {
                 $form = new Form\Account(

@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Admin\Navigation\Service;
+namespace WellCart\Admin\Factory\Navigation\Service;
 
 use Zend\Navigation\Exception;
 use Zend\Navigation\Service\DefaultNavigationFactory;

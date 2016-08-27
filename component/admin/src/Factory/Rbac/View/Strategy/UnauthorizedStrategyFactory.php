@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Admin\Rbac\View\Strategy;
+namespace WellCart\Admin\Factory\Rbac\View\Strategy;
 
 use Interop\Container\ContainerInterface;
 

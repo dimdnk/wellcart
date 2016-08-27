@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\Options;
+namespace WellCart\Base\Factory\Options;
 
 use HtImgModule\Options\ModuleOptions;
 use Interop\Container\ContainerInterface;
