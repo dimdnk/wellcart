@@ -13,15 +13,40 @@ namespace WellCart\Admin\Command\Handler;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
 use WellCart\Admin\Command\PersistAdminAccount;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Str;
+use WellCart\User\Service\User as UserService;
+use WellCart\User\Spec\AclRoleEntity;
 
 class PersistAdminAccountHandler
-    implements ObjectManagerAwareInterface, ServiceLocatorAwareInterface
+    implements ObjectManagerAwareInterface
 {
-    use ProvidesObjectManager, ServiceLocatorAwareTrait;
+    use ProvidesObjectManager;
+
+    /**
+     * @var UserService
+     */
+    protected $userService;
+    /**
+     * @var AclRoleEntity
+     */
+    protected $defaultRole;
+
+    /**
+     * Object constructor
+     *
+     * @param UserService   $userService
+     * @param AclRoleEntity $defaultRole
+     */
+    public function __construct(
+        UserService $userService,
+        AclRoleEntity $defaultRole
+    )
+    {
+        $this->userService = $userService;
+        $this->defaultRole = $defaultRole;
+    }
+
 
     /**
      * @param PersistAdminAccount $command
@@ -32,17 +57,13 @@ class PersistAdminAccountHandler
     {
         $user = $command->getAdministrator();
         $data = $command->getData();
-        $userService = $this->getServiceLocator()
-            ->get('zfcuser_user_service');
+        $userService = $this->userService;
         $userService->getUserMapper()->setUserEntityClass(
             get_class($user)
         );
 
         if ($user->getId()) {
-            $role = $this->getServiceLocator()->get(
-                'WellCart\User\Spec\AclRoleRepository'
-            )->findOneBy(['name' => 'admin']);
-            $user->addRole($role);
+            $user->addRole($this->defaultRole);
             if ($password = Arr::get($data, 'password')) {
                 $passwordVerify = Arr::get($data, 'passwordVerify');
                 if ((strlen($password) < 6) || ($password != $passwordVerify)) {

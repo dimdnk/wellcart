@@ -12,16 +12,34 @@ namespace WellCart\User\Command\Handler;
 
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\User\Command\PersistUserAccount;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Str;
+use WellCart\User\Service\User as UserService;
+use WellCart\User\Spec\AclRoleEntity;
 
 class PersistUserAccountHandler
-    implements ObjectManagerAwareInterface, ServiceLocatorAwareInterface
+    implements ObjectManagerAwareInterface
 {
-    use ProvidesObjectManager, ServiceLocatorAwareTrait;
+    use ProvidesObjectManager;
+
+    /**
+     * @var UserService
+     */
+    protected $userService;
+
+    /**
+     * Object constructor
+     *
+     * @param UserService   $userService
+     */
+    public function __construct(
+        UserService $userService
+    )
+    {
+        $this->userService = $userService;
+    }
+
 
     /**
      * @param PersistUserAccount $command
@@ -32,8 +50,7 @@ class PersistUserAccountHandler
     {
         $user = $command->getUser();
         $data = $command->getData();
-        $userService = $this->getServiceLocator()
-            ->get('zfcuser_user_service');
+        $userService = $this->userService;
         $userService->getUserMapper()->setUserEntityClass(
             get_class($user)
         );
@@ -66,7 +83,7 @@ class PersistUserAccountHandler
                 $er = trim($er, ', ');
                 throw new \DomainException(
                     sprintf(
-                        'Admin user registration failed. %s',
+                        'User registration failed. %s',
                         $er
                     )
                 );

@@ -13,8 +13,6 @@ namespace WellCart\Admin\Rbac\View\Strategy;
 use WellCart\Mvc\Application;
 use WellCart\Mvc\Controller\PluginManagerAwareInterface;
 use WellCart\Mvc\Controller\PluginManagerAwareTrait;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Stdlib\RequestAwareInterface;
 use WellCart\Stdlib\RequestAwareTrait;
 use WellCart\View\Model\ViewModel;
@@ -30,12 +28,11 @@ class UnauthorizedStrategy extends Strategy implements
     PluginManagerAwareInterface,
     InjectApplicationEventInterface,
     Stdlib\DispatchableInterface,
-    RequestAwareInterface,
-    ServiceLocatorAwareInterface
+    RequestAwareInterface
 {
 
     use PluginManagerAwareTrait,
-        RequestAwareTrait, ServiceLocatorAwareTrait;
+        RequestAwareTrait;
 
     /**
      * @var Event

@@ -12,8 +12,6 @@ namespace WellCart\Admin\PageView\Grid;
 
 use WellCart\Admin\PageView\EntityPageView;
 use WellCart\ORM\QueryBuilder;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Ui\Datagrid;
 use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 use WellCart\Ui\Datagrid\Controller\Plugin\GridFilterBuilder;
@@ -21,10 +19,7 @@ use Zend\Stdlib\ArrayUtils;
 use Zend\Stdlib\PriorityList;
 
 abstract class Standard extends EntityPageView
-    implements ServiceLocatorAwareInterface
 {
-    use ServiceLocatorAwareTrait;
-
     /**
      * Default layout handle for grid
      */

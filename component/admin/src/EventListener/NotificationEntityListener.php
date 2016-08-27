@@ -12,13 +12,9 @@ namespace WellCart\Admin\EventListener;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use WellCart\Admin\Spec\NotificationEntity;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 
-class NotificationEntityListener implements ServiceLocatorAwareInterface
+class NotificationEntityListener
 {
-    use ServiceLocatorAwareTrait;
-
     public function preRemove(
         NotificationEntity $notification,
         LifecycleEventArgs $event

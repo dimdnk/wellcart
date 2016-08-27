@@ -12,36 +12,9 @@ namespace WellCart\User\Service;
 
 use WellCart\User\AbstractUser as UserEntity;
 use Zend\Crypt\Password\Bcrypt;
-use Zend\ServiceManager\ServiceManager;
-use Zend\ServiceManager\ServiceManagerAwareInterface;
 
-class User extends \ZfcUser\Service\User implements ServiceManagerAwareInterface
+class User extends \ZfcUser\Service\User
 {
-    /**
-     * @var ServiceManager
-     */
-    protected $serviceManager;
-
-    /**
-     * @return mixed
-     */
-    public function getServiceManager(): ServiceManager
-    {
-        return $this->serviceManager;
-    }
-
-    /**
-     * @param mixed $serviceManager
-     *
-     * @return User
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
-    {
-        $this->serviceManager = $serviceManager;
-        return $this;
-    }
-
-
     /**
      * Update user password
      *

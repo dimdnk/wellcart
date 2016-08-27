@@ -14,14 +14,29 @@ use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use WellCart\Admin\Exception\UnprocessableEntityException;
 use WellCart\Admin\Spec\AdministratorEntity;
 use WellCart\Admin\Spec\AdministratorRepository;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Utility\Arr;
+use Zend\Authentication\AuthenticationServiceInterface;
 
-class AdministratorEntityListener implements ServiceLocatorAwareInterface
+class AdministratorEntityListener
 {
 
-    use ServiceLocatorAwareTrait;
+    /**
+     * @var AuthenticationServiceInterface
+     */
+    protected $auth;
+
+    /**
+     * Object constructor
+     *
+     * @param AuthenticationServiceInterface   $auth
+     */
+    public function __construct(
+        AuthenticationServiceInterface $auth
+    )
+    {
+        $this->auth = $auth;
+    }
+
 
     /**
      * @param AdministratorEntity $user
@@ -69,7 +84,7 @@ class AdministratorEntityListener implements ServiceLocatorAwareInterface
 
     public function preRemove(AdministratorEntity $user)
     {
-        $auth = $this->getServiceLocator()->get('zfcuser_auth_service');
+        $auth = $this->auth;
         if ($auth->hasIdentity()
             && $auth->getIdentity()
                 ->getId() == $user->getId()

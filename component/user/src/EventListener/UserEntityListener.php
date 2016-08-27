@@ -11,16 +11,30 @@ declare(strict_types = 1);
 namespace WellCart\User\EventListener;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\User\Exception\UnprocessableEntityException;
 use WellCart\User\Spec\UserEntity;
 use WellCart\Utility\Arr;
+use Zend\Authentication\AuthenticationServiceInterface;
 
-class UserEntityListener implements ServiceLocatorAwareInterface
+class UserEntityListener
 {
 
-    use ServiceLocatorAwareTrait;
+    /**
+     * @var AuthenticationServiceInterface
+     */
+    protected $auth;
+
+    /**
+     * Object constructor
+     *
+     * @param AuthenticationServiceInterface   $auth
+     */
+    public function __construct(
+        AuthenticationServiceInterface $auth
+    )
+    {
+        $this->auth = $auth;
+    }
 
     public function preUpdate(
         UserEntity $user,
@@ -40,7 +54,7 @@ class UserEntityListener implements ServiceLocatorAwareInterface
 
     public function preRemove(UserEntity $user)
     {
-        $auth = $this->getServiceLocator()->get('zfcuser_auth_service');
+        $auth = $this->auth;
         if ($auth->hasIdentity()
             && $auth->getIdentity()
                 ->getId() == $user->getId()

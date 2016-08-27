@@ -10,18 +10,28 @@ declare(strict_types = 1);
 
 namespace WellCart\User\EventListener\Login;
 
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\User\Spec\UserRepository;
 use WellCart\Utility\Config;
 use Zend\Authentication\Exception\RuntimeException;
 use Zend\Authentication\Result;
 use ZfcUser\Authentication\Adapter\AdapterChainEvent as AuthenticationAdapterChainEvent;
 
-class HandleFailedLoginCount implements ServiceLocatorAwareInterface
+class HandleFailedLoginCount
 {
+    /**
+     * @var UserRepository
+     */
+    protected $userRepository;
 
-    use ServiceLocatorAwareTrait;
+    /**
+     * Object constructor.
+     *
+     * @param UserRepository $userRepository
+     */
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
 
     /**
      * @param AuthenticationAdapterChainEvent $e
@@ -46,9 +56,7 @@ class HandleFailedLoginCount implements ServiceLocatorAwareInterface
         /**
          * @var $users UserRepository
          */
-        $users = $this->getServiceLocator()->get(
-            'WellCart\User\Spec\UserRepository'
-        );
+        $users = $this->userRepository;
 
         /**
          * @var $user \WellCart\User\Spec\UserEntity

@@ -13,12 +13,9 @@ namespace WellCart\Admin\PageView\Form;
 use WellCart\Admin\PageView\EntityPageView;
 use WellCart\Form\Form;
 use WellCart\ORM\Entity;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 
-class Standard extends EntityPageView implements ServiceLocatorAwareInterface
+class Standard extends EntityPageView
 {
-    use ServiceLocatorAwareTrait;
 
     /**
      * Default layout handle for form

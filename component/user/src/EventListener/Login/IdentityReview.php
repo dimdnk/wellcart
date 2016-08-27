@@ -10,18 +10,28 @@ declare(strict_types = 1);
 
 namespace WellCart\User\EventListener\Login;
 
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\User\Spec\UserEntity;
 use WellCart\User\Spec\UserRepository;
 use WellCart\Utility\Config;
 use Zend\Authentication\Result;
 use ZfcUser\Authentication\Adapter\AdapterChainEvent as AuthenticationAdapterChainEvent;
 
-class IdentityReview implements ServiceLocatorAwareInterface
+class IdentityReview
 {
 
-    use ServiceLocatorAwareTrait;
+    /**
+     * @var UserRepository
+     */
+    protected $userRepository;
+
+    /**
+     * Object constructor.
+     * @param UserRepository $userRepository
+     */
+    public function __construct(UserRepository $userRepository)
+    {
+        $this->userRepository =  $userRepository;
+    }
 
     /**
      * @param AuthenticationAdapterChainEvent $e
@@ -52,9 +62,7 @@ class IdentityReview implements ServiceLocatorAwareInterface
         /**
          * @var $users UserRepository
          */
-        $users = $this->getServiceLocator()->get(
-            'WellCart\User\Spec\UserRepository'
-        );
+        $users = $this->userRepository;
 
         /**
          * @var $user UserEntity
