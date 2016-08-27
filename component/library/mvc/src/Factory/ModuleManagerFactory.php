@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Mvc\Service;
+namespace WellCart\Mvc\Factory;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Mvc\Application;

@@ -160,7 +160,7 @@ abstract class Config
             'service_manager'          =>
                 [
                     'factories' => [
-                        'ModuleManager' => 'WellCart\Mvc\Service\ModuleManagerFactory',
+                        'ModuleManager' => 'WellCart\Mvc\Factory\ModuleManagerFactory',
                     ]
                 ],
         );

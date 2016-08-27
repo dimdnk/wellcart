@@ -6,11 +6,12 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Ui\Layout\Listener;
+namespace WellCart\Ui\Factory\Layout\Listener;
 
 use ConLayout\Options\ModuleOptions;
 use ConLayout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
+use WellCart\Ui\Layout\Listener\ActionHandlesListener;
 
 class ActionHandlesListenerFactory
 {

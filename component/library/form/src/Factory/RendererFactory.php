@@ -6,11 +6,12 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Form\StrokerForm;
+namespace WellCart\Form\Factory\StrokerForm;
 
 use Interop\Container\ContainerInterface;
 use StrokerForm\Renderer\JqueryValidate\Options;
 use StrokerForm\Renderer\JqueryValidate\Rule\RulePluginManager;
+use WellCart\Form\StrokerForm\Renderer;
 
 class RendererFactory
 {
@@ -21,7 +22,7 @@ class RendererFactory
      */
     public function __invoke(ContainerInterface $container) : Renderer
     {
-        $renderer = new Renderer();
+        $renderer = new  Renderer();
         $pluginManager = new RulePluginManager();
         $pluginManager->setServiceLocator($container);
         $renderer->setRulePluginManager($pluginManager);

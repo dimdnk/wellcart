@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Stdlib\HtImg\Factory\Imagine\Loader;
+namespace WellCart\Stdlib\Factory\HtImg\Imagine\Loader;
 
 use HtImgModule\Imagine\Loader\LoaderPluginManager;
 use Interop\Container\ContainerInterface;

@@ -8,9 +8,10 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Catalog\Form\Element;
+namespace WellCart\Catalog\Factory\Form\Element;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Catalog\Form\Element\ProductPrice;
 use WellCart\Directory\Spec\CurrencyEntity;
 
 class ProductPriceFactory

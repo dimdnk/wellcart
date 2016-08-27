@@ -11,6 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Admin\Factory\Rbac\View\Strategy;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy;
 
 class UnauthorizedStrategyFactory
 {

@@ -6,21 +6,23 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Ui\Layout\Listener;
+namespace WellCart\Ui\Factory\Theme;
 
-use ConLayout\Layout\LayoutInterface;
 use Interop\Container\ContainerInterface;
+use WellCart\Ui\Theme\Manager;
 
-class LoadLayoutListenerFactory
+class ManagerFactory
 {
     /**
      * @param ContainerInterface $container
      *
-     * @return LoadLayoutListener
+     * @return Manager
      */
-    public function __invoke(ContainerInterface $container
-    ): LoadLayoutListener
+    public function __invoke(ContainerInterface $container): Manager
     {
-        return new LoadLayoutListener($container->get(LayoutInterface::class));
+        $config = $container->get('Configuration');
+
+        $manager = new Manager($container, $config['ze_theme']);
+        return $manager;
     }
 }

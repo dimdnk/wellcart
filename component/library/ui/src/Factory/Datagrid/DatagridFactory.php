@@ -6,9 +6,10 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Ui\Datagrid;
+namespace WellCart\Ui\Factory\Datagrid;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Ui\Datagrid\Datagrid;
 
 class DatagridFactory
 {

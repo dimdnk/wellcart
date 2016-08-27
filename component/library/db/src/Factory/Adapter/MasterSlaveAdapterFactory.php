@@ -6,10 +6,12 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Db\Adapter;
+namespace WellCart\Db\Factory\Adapter;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Db\Adapter\Driver\Pdo;
+use WellCart\Db\Adapter\MasterAdapter;
+use WellCart\Db\Adapter\SlaveAdapter;
 use WellCart\Db\Profiler\Profiler;
 use WellCart\Utility\Arr;
 use Zend\Db\TableGateway\Feature\GlobalAdapterFeature;

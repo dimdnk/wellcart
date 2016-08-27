@@ -334,7 +334,7 @@ return [
     ],
     'form_elements'              => [
         'factories'  => [
-            'catalogProductPrice' => Catalog\Form\Element\ProductPriceFactory::class,
+            'catalogProductPrice' => Catalog\Factory\Form\Element\ProductPriceFactory::class,
         ],
         'invokables' => [
             'catalogProductImage' => Catalog\Form\Element\ProductImage::class,

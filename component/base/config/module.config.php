@@ -43,19 +43,19 @@ return [
      */
     'service_manager'            => [
         'factories'          => [
-            'Application'                                                => 'WellCart\Mvc\Service\ApplicationFactory',
-            'stroker_form.renderer'                                      => 'WellCart\Form\StrokerForm\RendererFactory',
-            'Zend\Db\Adapter\Adapter'                                    => 'WellCart\Db\Adapter\MasterSlaveAdapterFactory',
-            'ZeThemeManager'                                             => 'WellCart\Ui\Theme\ManagerFactory',
-            'ZfcDatagrid\Datagrid'                                       => 'WellCart\Ui\Datagrid\DatagridFactory',
+            'Application'                                                => 'WellCart\Mvc\Factory\ApplicationFactory',
+            'stroker_form.renderer'                                      => 'WellCart\Form\Factory\StrokerForm\RendererFactory',
+            'Zend\Db\Adapter\Adapter'                                    => 'WellCart\Db\Factory\Adapter\MasterSlaveAdapterFactory',
+            'ZeThemeManager'                                             => 'WellCart\Ui\Factory\Theme\ManagerFactory',
+            'ZfcDatagrid\Datagrid'                                       => 'WellCart\Ui\Factory\Datagrid\DatagridFactory',
 
-            'HtImgModule\Imagine\Loader\LoaderPluginManager'             => 'WellCart\Stdlib\HtImg\Factory\Imagine\Loader\LoaderPluginManagerFactory',
+            'HtImgModule\Imagine\Loader\LoaderPluginManager'             => 'WellCart\Stdlib\Factory\HtImg\Imagine\Loader\LoaderPluginManagerFactory',
             'HtImg\ModuleOptions'                                        => 'WellCart\Base\Factory\Options\HtImgModuleOptionsFactory',
 
-            'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContext'        => 'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContextFactory',
-            'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Layout\Listener\ActionHandlesListenerFactory',
-            'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Layout\Listener\LoadLayoutListenerFactory',
-            'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Layout\Listener\PrepareActionViewModelListenerFactory',
+            'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContext'        => 'WellCart\Ui\Factory\Layout\Listener\AreaBasedOnThemeContextFactory',
+            'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\Listener\ActionHandlesListenerFactory',
+            'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Factory\Layout\Listener\LoadLayoutListenerFactory',
+            'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\Listener\PrepareActionViewModelListenerFactory',
 
         ],
         'abstract_factories' => [
