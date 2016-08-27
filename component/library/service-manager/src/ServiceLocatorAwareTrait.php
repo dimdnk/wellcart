@@ -15,18 +15,18 @@ trait ServiceLocatorAwareTrait
     /**
      * @var ServiceLocatorInterface
      */
-    protected $container = null;
+    protected $serviceLocator;
 
     /**
      * Set service locator
      *
-     * @param ServiceLocatorInterface $container
+     * @param ServiceLocatorInterface $serviceLocator
      *
      * @return mixed
      */
-    public function setServiceLocator(ServiceLocatorInterface $container)
+    public function setServiceLocator(ServiceLocatorInterface $serviceLocator)
     {
-        $this->serviceLocator = $container;
+        $this->serviceLocator = $serviceLocator;
 
         return $this;
     }

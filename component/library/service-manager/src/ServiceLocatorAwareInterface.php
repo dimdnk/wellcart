@@ -15,9 +15,9 @@ interface ServiceLocatorAwareInterface
     /**
      * Set service locator
      *
-     * @param ServiceLocatorInterface $container
+     * @param ServiceLocatorInterface $serviceLocator
      */
-    public function setServiceLocator(ServiceLocatorInterface $container);
+    public function setServiceLocator(ServiceLocatorInterface $serviceLocator);
 
     /**
      * Get service locator
