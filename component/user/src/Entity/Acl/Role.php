@@ -170,7 +170,7 @@ class Role extends AbstractRole implements AclRoleEntity
     /**
      * @return Collection|AclPermissionEntity[]
      */
-    public function getPermissionsDefinition(): Collection
+    public function getPermissions(): Collection
     {
         return $this->permissions;
     }
@@ -493,4 +493,6 @@ class Role extends AbstractRole implements AclRoleEntity
         $this->name = $name;
         return $this;
     }
+
+
 }

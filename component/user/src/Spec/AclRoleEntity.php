@@ -73,7 +73,7 @@ interface AclRoleEntity extends
     /**
      * @return Collection|AclPermissionEntity[]
      */
-    public function getPermissionsDefinition(): Collection;
+    public function getPermissions(): Collection;
 
     /**
      * @param Collection|AclPermissionEntity[] $permission
