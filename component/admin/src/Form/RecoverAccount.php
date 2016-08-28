@@ -52,6 +52,9 @@ class RecoverAccount extends RecoverUserAccountForm
                             'options' => [
                                 'entity_class' => 'WellCart\Admin\Entity\Administrator',
                                 'fields'       => ['email'],
+                                'messages'     => [
+                                    'noObjectFound' => 'No such user exists. Please make sure that you entered your email correctly.'
+                                ],
                             ],
                         ],
                     ],

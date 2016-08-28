@@ -62,6 +62,18 @@ return [
                     'themes/wellcart-backend-ui/css/authentication.css' => ['href' => 'themes/wellcart-backend-ui/css/authentication.css'],
                 ],
             ],
+            'blocks' => [
+                'page.notifications.flash_notifications' => [
+                    'capture_to' => 'notifications',
+                    'parent'     => 'action.result',
+                    'class'      => 'WellCart\Base\ItemView\FlashNotifications',
+                ],
+                'page.notifications.notifications'       => [
+                    'capture_to' => 'notifications',
+                    'parent'     => 'action.result',
+                    'class'      => 'WellCart\Base\ItemView\Notifications',
+                ],
+            ],
         ],
     ],
     'backend/unauthorized'        => [

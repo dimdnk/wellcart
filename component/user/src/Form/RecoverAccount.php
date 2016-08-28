@@ -101,6 +101,9 @@ class RecoverAccount extends \WellCart\Form\Form
                             'options' => [
                                 'entity_class' => 'WellCart\User\Entity\User',
                                 'fields'       => ['email'],
+                                'messages'     => [
+                                    'noObjectFound' => 'No such user exists. Please make sure that you entered your email correctly.'
+                                ],
                             ],
                         ],
                     ],

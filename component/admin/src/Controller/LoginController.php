@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Admin\Controller;
 
+use Zend\Authentication\Result as AuthenticationResult;
 use ZfcUser\Controller\UserController;
 
 class LoginController extends UserController
@@ -54,8 +55,24 @@ class LoginController extends UserController
 
             if (!$auth->isValid()) {
                 $adapter->resetAdapters();
+                if (
+                in_array(
+                    $auth->getCode(),
+                    [
+                        AuthenticationResult::FAILURE_CREDENTIAL_INVALID,
+                        AuthenticationResult::FAILURE_IDENTITY_NOT_FOUND,
+                        AuthenticationResult::FAILURE_UNCATEGORIZED]
+                )
+                ) {
+                    $message = __(
+                        'Unable to log in. Please check that you have entered your login and password correctly.'
+                    );
+                } else {
+                    $message = $auth->getMessages()[0];
+                }
+
                 $this->flashMessenger()->addErrorMessage(
-                    $auth->getMessages()[0]
+                    $message
                 );
                 return $this->redirect()->toRoute('zfcadmin');
             }
