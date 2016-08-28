@@ -13,18 +13,18 @@ return [
      */
     'service_manager'      => [
         'invokables'         => [
-            'WellCart\Admin\ItemView\PageHead'                          => 'WellCart\Admin\ItemView\PageHead',
-            'WellCart\Admin\ItemView\PageNavigator'                     => 'WellCart\Admin\ItemView\PageNavigator',
+            'WellCart\Admin\ItemView\PageHead'                   => 'WellCart\Admin\ItemView\PageHead',
+            'WellCart\Admin\ItemView\PageNavigator'              => 'WellCart\Admin\ItemView\PageNavigator',
 
-            'zfcDatagrid.renderer.HtmlDataGrid'                         => 'WellCart\Admin\PageView\Grid\Renderer',
-            'WellCart\Admin\EventListener\SetupPageVariables'           => 'WellCart\Admin\EventListener\SetupPageVariables',
-            'WellCart\Admin\EventListener\RemoveConfigCacheFile'        => 'WellCart\Admin\EventListener\RemoveConfigCacheFile',
-            'WellCart\Admin\ItemView\TopBranding'                       => 'WellCart\Admin\ItemView\TopBranding',
-            'WellCart\Admin\ItemView\MainNavigationMenu'                => 'WellCart\Admin\ItemView\MainNavigationMenu',
-            'WellCart\Admin\ItemView\Account\WelcomeBox'                => 'WellCart\Admin\ItemView\Account\WelcomeBox',
+            'zfcDatagrid.renderer.HtmlDataGrid'                  => 'WellCart\Admin\PageView\Grid\Renderer',
+            'WellCart\Admin\EventListener\SetupPageVariables'    => 'WellCart\Admin\EventListener\SetupPageVariables',
+            'WellCart\Admin\EventListener\RemoveConfigCacheFile' => 'WellCart\Admin\EventListener\RemoveConfigCacheFile',
+            'WellCart\Admin\ItemView\TopBranding'                => 'WellCart\Admin\ItemView\TopBranding',
+            'WellCart\Admin\ItemView\MainNavigationMenu'         => 'WellCart\Admin\ItemView\MainNavigationMenu',
+            'WellCart\Admin\ItemView\Account\WelcomeBox'         => 'WellCart\Admin\ItemView\Account\WelcomeBox',
 
-            'WellCart\Admin\Form\RecoverAccount'                        => 'WellCart\Admin\Form\RecoverAccount',
-            'WellCart\Admin\Command\Handler\PersistAdminAccountHandler' => 'WellCart\Admin\Command\Handler\PersistAdminAccountHandler',
+            'WellCart\Admin\Form\RecoverAccount'                 => 'WellCart\Admin\Form\RecoverAccount',
+
         ],
         'aliases'            => [
             'wellcart-admin_db_adapter'                   => 'Zend\Db\Adapter\Adapter',
@@ -36,8 +36,10 @@ return [
             'admin\notification'                          => 'WellCart\Admin\Service\Notification',
         ],
         'factories'          => [
-            'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy' => 'WellCart\Admin\Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory',
-            'backend_main_navigation'                                => 'WellCart\Admin\Factory\Navigation\Service\BackendMainMenuFactory',
+            'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy'    => 'WellCart\Admin\Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory',
+            'WellCart\Admin\Command\Handler\PersistAdminAccountHandler' => 'WellCart\Admin\Factory\Command\Handler\PersistAdminAccountHandlerFactory',
+            'WellCart\Admin\EventListener\AdministratorEntityListener'  => 'WellCart\Admin\Factory\EventListener\AdministratorEntityListenerFactory',
+            'backend_main_navigation'                                   => 'WellCart\Admin\Factory\Navigation\Service\BackendMainMenuFactory',
         ],
         'abstract_factories' => [],
         'services'           => [],
