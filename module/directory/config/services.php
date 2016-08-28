@@ -17,7 +17,13 @@ return [
         'WellCart\Directory\PageView\Admin\CurrenciesGrid' =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\CurrenciesGrid(
-                    $services->get('WellCart\Directory\Spec\CurrencyRepository')
+                    $services->get(
+                        'WellCart\Directory\Spec\CurrencyRepository'
+                    ),
+                    $services
+                        ->get('Zend\Authentication\AuthenticationService')
+                        ->getIdentity()
+                        ->getTimeZone()
                 );
             },
 

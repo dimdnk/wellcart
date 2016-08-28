@@ -20,13 +20,17 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CurrenciesGrid extends Standard
 {
+    protected $timeZone;
+
     public function __construct(
         CurrencyRepository $repository,
+       $timeZone,
         $variables = null,
         $options = null
     ) {
         $this->setRepository($repository);
         parent::__construct($variables, $options);
+        $this->timeZone = $timeZone;
     }
 
     /**
@@ -127,10 +131,7 @@ class CurrenciesGrid extends Standard
             \IntlDateFormatter::SHORT
         );
         $type->setOutputTimezone(
-            $this->getServiceLocator()
-                ->get('Zend\Authentication\AuthenticationService')
-                ->getIdentity()
-                ->getTimeZone()
+            $this->timeZone
         );
         $col->setType($type);
         $col->setSortable(true);
