@@ -15,13 +15,14 @@ use WellCart\Directory\Entity\Country;
 use WellCart\Directory\Entity\Currency;
 use WellCart\Directory\Entity\Zone;
 use WellCart\Setup\DataFixture\AbstractFixture;
-use WellCart\User\Entity\Acl\Permission;
-use WellCart\Utility\Arr;
+use WellCart\Setup\DataFixture\PermissionsProviderInterface;
 
 /**
  * @codeCoverageIgnore
  */
-class Install extends AbstractFixture
+class Install
+    extends AbstractFixture
+    implements PermissionsProviderInterface
 {
     /**
      * Load data fixtures with the passed EntityManager
@@ -30,26 +31,11 @@ class Install extends AbstractFixture
      */
     public function load(ObjectManager $manager)
     {
-        $this->loadPermissions($manager);
         $this->loadCurrencies($manager);
         $this->loadCountries($manager);
     }
 
-    private function loadPermissions(ObjectManager $manager)
-    {
-        $permissions = $this->getPermissions();
-        foreach ($permissions as $permission) {
-            $name = Arr::get($permission, 'name');
-            $description = Arr::get($permission, 'description');
-            $object = new Permission($name);
-            $object->setDescription($description)
-                ->setIsSystem(true);
-            $manager->persist($object);
-            $manager->flush();
-        }
-    }
-
-    private function getPermissions(): array
+    public function getPermissionsDefinition(): array
     {
         return [
             ['name' => 'directory/currencies/group-action-handler',],
@@ -106,7 +92,7 @@ class Install extends AbstractFixture
 
     private function loadCountries(ObjectManager $manager)
     {
-        $rows = $this->getRows('countries');
+        $rows = include __DIR__ . '/../../../config/resources/countries.php';
         $date = new \DateTime();
         foreach ($rows as $row) {
             $country = new Country();
@@ -136,10 +122,5 @@ class Install extends AbstractFixture
             $manager->flush();
             $manager->clear();
         }
-    }
-
-    private function getRows($type)
-    {
-        return include __DIR__ . '/../../../config/resources/' . $type . '.php';
     }
 }

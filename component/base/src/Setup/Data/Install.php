@@ -13,13 +13,14 @@ namespace WellCart\Base\Setup\Data;
 use Doctrine\Common\Persistence\ObjectManager;
 use WellCart\Base\Entity\Locale\Language;
 use WellCart\Setup\DataFixture\AbstractFixture;
-use WellCart\User\Entity\Acl\Permission;
-use WellCart\Utility\Arr;
+use WellCart\Setup\DataFixture\PermissionsProviderInterface;
 
 /**
  * @codeCoverageIgnore
  */
-class Install extends AbstractFixture
+class Install
+    extends AbstractFixture
+    implements PermissionsProviderInterface
 {
     /**
      * Load data fixtures with the passed EntityManager
@@ -28,7 +29,6 @@ class Install extends AbstractFixture
      */
     public function load(ObjectManager $manager)
     {
-        $this->loadPermissions($manager);
         $language = new Language();
         $language->setName('English')
             ->setCode('en')
@@ -42,21 +42,7 @@ class Install extends AbstractFixture
         $manager->flush();
     }
 
-    private function loadPermissions(ObjectManager $manager)
-    {
-        $permissions = $this->getPermissions();
-        foreach ($permissions as $permission) {
-            $name = Arr::get($permission, 'name');
-            $description = Arr::get($permission, 'description');
-            $object = new Permission($name);
-            $object->setDescription($description)
-                ->setIsSystem(true);
-            $manager->persist($object);
-            $manager->flush();
-        }
-    }
-
-    private function getPermissions(): array
+    public function getPermissionsDefinition(): array
     {
         return [
             ['name' => 'base/languages/group-action-handler',],

@@ -68,6 +68,7 @@ class Setup
                     $this->updateDatabaseSchema();
                     $this->generateProxyClasses();
                     $this->updateData();
+                    $this->refreshPermissions();
                 }
             );
         } catch (Throwable $e) {
@@ -248,6 +249,25 @@ class Setup
     }
 
     /**
+     * Refresh superadmin permissions
+     */
+    public function refreshPermissions()
+    {
+        $em = $this->getEntityManager();
+        $roles = $em->getRepository(
+            'WellCart\User\Spec\AclRoleEntity'
+        );
+
+        $superAdmin = $roles->findOneBy(['name' => 'superadmin']);
+        $permissions = $em->getRepository(
+            'WellCart\User\Spec\AclPermissionEntity'
+        )->findAll();
+        $superAdmin->setPermissions($permissions);
+        $em->persist($superAdmin);
+        $em->flush($superAdmin);
+    }
+
+    /**
      * @return array
      */
     protected function getConfiguration()
@@ -319,6 +339,7 @@ class Setup
                     $this->updateDatabaseSchema();
                     $this->generateProxyClasses();
                     $this->updateData();
+                    $this->refreshPermissions();
                 }
             );
         } finally {
@@ -614,22 +635,13 @@ class Setup
                     $roles = $em->getRepository(
                         'WellCart\User\Spec\AclRoleEntity'
                     );
-
-                    $superAdmin = $roles->findOneBy(['name' => 'superadmin']);
-                    $admin->addRole($roles->findOneBy(['name' => 'admin']))
-                        ->addRole($superAdmin)
+                    $admin->addRole($roles->findOneBy(['name' => 'superadmin']))
+                        ->addRole($roles->findOneBy(['name' => 'admin']))
                         ->setEmailConfirmationToken(null)
                         ->setPasswordResetToken(null)
                         ->setFailedLoginCount(0);
 
                     $em->flush($admin);
-
-                    $permissions = $em->getRepository(
-                        'WellCart\User\Spec\AclPermissionEntity'
-                    )->findAll();
-                    $superAdmin->setPermissions($permissions);
-                    $em->persist($superAdmin);
-                    $em->flush($superAdmin);
                 }
             );
         } catch (Throwable $e) {

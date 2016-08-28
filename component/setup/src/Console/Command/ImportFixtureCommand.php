@@ -16,6 +16,7 @@ use DoctrineDataFixtureModule\Command\ImportCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use WellCart\Setup\DataFixture\Loader;
+use WellCart\Setup\DataFixture\PermissionsLoader;
 
 class ImportFixtureCommand extends ImportCommand
 {
@@ -28,7 +29,15 @@ class ImportFixtureCommand extends ImportCommand
             $purger->setPurgeMode(self::PURGE_MODE_TRUNCATE);
         }
 
+        $fixtures = $loader->getFixtures();
+        if(empty($fixtures)) {
+            return;
+        }
+
         $executor = new ORMExecutor($this->em, $purger);
-        $executor->execute($loader->getFixtures(), $input->getOption('append'));
+        $executor->execute($fixtures, $input->getOption('append'));
+
+       $permissionsLoader = new PermissionsLoader($this->em);
+       $permissionsLoader->load($fixtures);
     }
 }

@@ -12,14 +12,15 @@ namespace WellCart\User\Setup\Data;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use WellCart\Setup\DataFixture\AbstractFixture;
-use WellCart\User\Entity\Acl\Permission;
+use WellCart\Setup\DataFixture\PermissionsProviderInterface;
 use WellCart\User\Entity\Acl\Role;
-use WellCart\Utility\Arr;
 
 /**
  * @codeCoverageIgnore
  */
-class Install extends AbstractFixture
+class Install
+    extends AbstractFixture
+    implements PermissionsProviderInterface
 {
     /**
      * Load data fixtures with the passed EntityManager
@@ -28,16 +29,16 @@ class Install extends AbstractFixture
      */
     public function load(ObjectManager $manager)
     {
-        $this->loadPermissions($manager);
+        $superadmin = new Role;
+        $superadmin->setName('superadmin')
+            ->setDescription('Administrative user, has access to everything.')
+            ->setIsSystem(true);
+
         $admin = new Role;
         $admin->setName('admin')
             ->setDescription('Grunt administrative access.')
             ->setIsSystem(true);
 
-        $superadmin = new Role;
-        $superadmin->setName('superadmin')
-            ->setDescription('Administrative user, has access to everything.')
-            ->setIsSystem(true);
 
         $guest = new Role;
         $guest->setName('guest')
@@ -51,30 +52,14 @@ class Install extends AbstractFixture
             ->setIsDefault(true)
             ->setIsSystem(true);
 
-        $manager->persist($admin);
         $manager->persist($superadmin);
+        $manager->persist($admin);
         $manager->persist($guest);
         $manager->persist($user);
         $manager->flush();
     }
 
-    private function loadPermissions(ObjectManager $manager)
-    {
-        $permissions = $this->getPermissions();
-        foreach ($permissions as $permission) {
-            $name = Arr::get($permission, 'name');
-            $description = Arr::get($permission, 'description');
-            $object = new Permission($name);
-            $object->setDescription($description)
-                ->setIsSystem(true);
-            $manager->persist($object);
-            $manager->flush();
-        }
-        unset($permissions);
-        return $manager->getRepository(Permission::class)->findAll();
-    }
-
-    private function getPermissions(): array
+    public function getPermissionsDefinition(): array
     {
         return [
             ['name' => 'user/accounts/group-action-handler',],
