@@ -22,11 +22,12 @@ class EntityListenerResolver extends DefaultEntityListenerResolver
      */
     public function resolve($className)
     {
-        $listener = parent::resolve($className);
-        if ($listener instanceof ServiceLocatorAwareInterface) {
-            $listener->setServiceLocator($this->getServiceLocator());
+        $className = trim($className, '\\');
+        $locator = $this->getServiceLocator();
+        if ($locator->has($className)) {
+            return $locator->get($className);
         }
-        return $listener;
+        return parent::resolve($className);
     }
 
 }

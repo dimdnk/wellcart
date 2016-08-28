@@ -12,7 +12,7 @@ namespace WellCart\User\Factory\EventListener;
 
 use Interop\Container\ContainerInterface;
 use WellCart\User\EventListener\UserEntityListener;
-use Zend\Authentication\AuthenticationServiceInterface;
+use Zend\Authentication\AuthenticationService;
 
 class UserEntityListenerFactory
 {
@@ -21,7 +21,7 @@ class UserEntityListenerFactory
     ): UserEntityListener
     {
         return new UserEntityListener(
-            $container->get(AuthenticationServiceInterface::class)
+            $container->get(AuthenticationService::class)
         );
     }
 }

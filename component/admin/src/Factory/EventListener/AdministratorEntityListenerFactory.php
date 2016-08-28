@@ -12,7 +12,7 @@ namespace WellCart\Admin\Factory\EventListener;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Admin\EventListener\AdministratorEntityListener;
-use Zend\Authentication\AuthenticationServiceInterface;
+use Zend\Authentication\AuthenticationService;
 
 class AdministratorEntityListenerFactory
 {
@@ -21,7 +21,7 @@ class AdministratorEntityListenerFactory
     ): AdministratorEntityListener
     {
         return new AdministratorEntityListener(
-            $container->get(AuthenticationServiceInterface::class)
+            $container->get(AuthenticationService::class)
         );
     }
 }

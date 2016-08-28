@@ -42,6 +42,7 @@ class User extends \ZfcUser\Service\User
         $this->authService = $authService;
         $this->registerForm = $registerForm;
         $this->changePasswordForm = $changePasswordForm;
+        $this->formHydrator = $formHydrator;
         $this->options = $options;
     }
 
