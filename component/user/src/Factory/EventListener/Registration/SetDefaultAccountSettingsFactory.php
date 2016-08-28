@@ -9,7 +9,22 @@
 declare(strict_types = 1);
 
 namespace WellCart\User\Factory\EventListener\Registration;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\Base\Spec\LocaleLanguageRepository;
+use WellCart\User\EventListener\Registration\SetDefaultAccountSettings;
+use WellCart\User\Spec\AclRoleRepository;
+
 class SetDefaultAccountSettingsFactory
 {
+    public function __invoke(
+        ContainerInterface $container
+    ): SetDefaultAccountSettings
+    {
+        return new SetDefaultAccountSettings(
+            $container->get(AclRoleRepository::class),
+            $container->get(LocaleLanguageRepository::class)
+                ->findDefaultLanguage()
+        );
+    }
 }

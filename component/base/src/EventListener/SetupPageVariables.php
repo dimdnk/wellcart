@@ -135,7 +135,9 @@ class SetupPageVariables extends AbstractListenerAggregate
      */
     private function addHeadTitle(HeadTitle $headTitle, array $config)
     {
-        $headTitle(Arr::get($config, 'wellcart.website.name', 'Demo Application'))
+        $headTitle(
+            Arr::get($config, 'wellcart.website.name', 'Demo Application')
+        )
             ->setSeparator(' - ')
             ->setAutoEscape(false);
     }
@@ -143,7 +145,7 @@ class SetupPageVariables extends AbstractListenerAggregate
     /**
      * Add html body classes
      *
-     * @param BodyClass  $bodyClass
+     * @param BodyClass $bodyClass
      * @param RouteMatch $routeMatch
      */
     private function addHtmlBodyClasses(

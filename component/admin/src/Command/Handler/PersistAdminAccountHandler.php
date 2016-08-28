@@ -13,10 +13,10 @@ namespace WellCart\Admin\Command\Handler;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
 use WellCart\Admin\Command\PersistAdminAccount;
-use WellCart\Utility\Arr;
-use WellCart\Utility\Str;
 use WellCart\User\Service\User as UserService;
 use WellCart\User\Spec\AclRoleEntity;
+use WellCart\Utility\Arr;
+use WellCart\Utility\Str;
 
 class PersistAdminAccountHandler
     implements ObjectManagerAwareInterface
@@ -41,8 +41,7 @@ class PersistAdminAccountHandler
     public function __construct(
         UserService $userService,
         AclRoleEntity $defaultRole
-    )
-    {
+    ) {
         $this->userService = $userService;
         $this->defaultRole = $defaultRole;
     }

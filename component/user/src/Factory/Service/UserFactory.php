@@ -9,7 +9,21 @@
 declare(strict_types = 1);
 
 namespace WellCart\User\Factory\Service;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\User\Service\User;
+
 class UserFactory
 {
+    public function __invoke(ContainerInterface $container): User
+    {
+        return new User(
+            $container->get('zfcuser_user_mapper'),
+            $container->get('zfcuser_auth_service'),
+            $container->get('zfcuser_register_form'),
+            $container->get('zfcuser_change_password_form'),
+            $container->get('zfcuser_register_form_hydrator'),
+            $container->get('zfcuser_module_options')
+        );
+    }
 }

@@ -9,7 +9,18 @@
 declare(strict_types = 1);
 
 namespace WellCart\User\Factory\Command\Handler;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\User\Command\Handler\PersistUserAccountHandler;
+
 class PersistUserAccountHandlerFactory
 {
+    public function __invoke(
+        ContainerInterface $container
+    ):PersistUserAccountHandler
+    {
+        return new PersistUserAccountHandler(
+            $container->get('zfcuser_user_service')
+        );
+    }
 }

@@ -34,11 +34,11 @@ $driverClass = (Arr::get($masterDbConfig, 'driver') != 'pdo_mysql') ? 'PDOPgSql'
 
 return [
     // SQL logger collector, used when ZendDeveloperTools and its toolbar are active
-    'sql_logger_collector'  => [
+    'sql_logger_collector' => [
         // configuration for the `doctrine.sql_logger_collector.orm_default` service
         'orm_default' => [],
     ],
-    'connection'            => [
+    'connection'           => [
         'orm_default' => [
             // configuration instance to use. The retrieved service name will
             // be `doctrine.configuration.$thisSetting`
@@ -134,7 +134,7 @@ return [
             ],
         ],
     ],
-    'driver'                => [
+    'driver'               => [
         'wellcart_base_driver' => [
             'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
             'cache' => 'array',
@@ -149,7 +149,7 @@ return [
             ]
         ]
     ],
-    'cache'                 => [
+    'cache'                => [
         'apc'        => [
             'namespace' => 'WellCartORM',
         ],
@@ -188,7 +188,7 @@ return [
     ],
     // Configuration details for the ORM.
     // See http://docs.doctrine-project.org/en/latest/reference/configuration.html
-    'configuration'         => [
+    'configuration'        => [
         // Configuration for service `doctrine.configuration.orm_default` service
         'orm_default' => [
             'entity_listener_resolver' => 'WellCart\ORM\Mapping\EntityListenerResolver',
@@ -276,7 +276,7 @@ return [
             ],
         ]
     ],
-    'eventmanager'          => [
+    'eventmanager'         => [
         'orm_default' => [
             'subscribers' => [
                 'WellCart\Base\EventListener\SystemEntityListener' => 'WellCart\Base\EventListener\SystemEntityListener',
@@ -288,7 +288,7 @@ return [
             ],
         ],
     ],
-    'entity_resolver'       => [
+    'entity_resolver'      => [
         'orm_default' => [
             'resolvers' => [
                 'WellCart\Base\Spec\ConfigurationEntity'  => 'WellCart\Base\Entity\Configuration',

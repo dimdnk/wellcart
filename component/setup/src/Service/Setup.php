@@ -273,12 +273,14 @@ class Setup
             function () use ($data) {
                 $editor = $this->getConfigurationEditor();
                 $set = [
-                    'wellcart.website.name'     => Arr::get(
+                    'wellcart.website.name' => Arr::get(
                         $data,
                         'website_name',
                         'Demo Application'
                     ),
-                    'router.base_path' => Arr::get($data, 'base_path', '/'),
+                    'router.base_path'      => Arr::get(
+                        $data, 'base_path', '/'
+                    ),
                 ];
                 $editor->saveConfigSet($set);
             }

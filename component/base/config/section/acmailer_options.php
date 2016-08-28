@@ -7,7 +7,7 @@
  */
 return [
     // Default mail service
-    'default'        => [
+    'default' => [
 
         /**
          **********

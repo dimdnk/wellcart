@@ -9,7 +9,20 @@
 declare(strict_types = 1);
 
 namespace WellCart\Admin\Factory\Command\Handler;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\Admin\Command\Handler\PersistAdminAccountHandler;
+use WellCart\User\Spec\AclRoleRepository;
+
 class PersistAdminAccountHandlerFactory
 {
+    public function __invoke(
+        ContainerInterface $container
+    ): PersistAdminAccountHandler
+    {
+        return new PersistAdminAccountHandler(
+            $container->get('zfcuser_user_service'),
+            $container->get(AclRoleRepository::class)->findDefaultRole()
+        );
+    }
 }

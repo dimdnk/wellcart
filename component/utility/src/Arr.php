@@ -7,7 +7,6 @@
  */
 
 
-
 namespace WellCart\Utility;
 
 use Closure;

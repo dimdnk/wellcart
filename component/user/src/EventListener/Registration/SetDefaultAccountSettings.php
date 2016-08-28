@@ -12,9 +12,6 @@ namespace WellCart\User\EventListener\Registration;
 
 use WellCart\Admin\Spec\AdministratorEntity;
 use WellCart\Base\Spec\LocaleLanguageEntity as LanguageEntity;
-use WellCart\ServiceManager\ServiceLocatorAwareInterface;
-use WellCart\ServiceManager\ServiceLocatorAwareTrait;
-use WellCart\User\Spec\AclRoleEntity;
 use WellCart\User\Spec\AclRoleRepository;
 use Zend\EventManager\EventInterface;
 
@@ -31,15 +28,16 @@ class SetDefaultAccountSettings
 
     /**
      * Object constructor.
-     * @param AclRoleRepository  $roles
-     * @param LanguageEntity $defaultLanguage
+     *
+     * @param AclRoleRepository $roles
+     * @param LanguageEntity    $defaultLanguage
      */
     public function __construct(
         AclRoleRepository $roles,
-        LanguageEntity $defaultLanguage)
-    {
-        $this->roles =  $roles;
-        $this->defaultLanguage =  $defaultLanguage;
+        LanguageEntity $defaultLanguage
+    ) {
+        $this->roles = $roles;
+        $this->defaultLanguage = $defaultLanguage;
     }
 
     /**

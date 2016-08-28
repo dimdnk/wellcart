@@ -7,7 +7,6 @@
  */
 
 
-
 namespace WellCart\Utility\Exception;
 
 class InvalidArgumentException extends \InvalidArgumentException implements

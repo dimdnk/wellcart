@@ -18,6 +18,16 @@ trait ServiceLocatorAwareTrait
     protected $serviceLocator;
 
     /**
+     * Get service locator
+     *
+     * @return ServiceLocatorInterface
+     */
+    public function getServiceLocator()
+    {
+        return $this->serviceLocator;
+    }
+
+    /**
      * Set service locator
      *
      * @param ServiceLocatorInterface $serviceLocator
@@ -29,15 +39,5 @@ trait ServiceLocatorAwareTrait
         $this->serviceLocator = $serviceLocator;
 
         return $this;
-    }
-
-    /**
-     * Get service locator
-     *
-     * @return ServiceLocatorInterface
-     */
-    public function getServiceLocator()
-    {
-        return $this->serviceLocator;
     }
 }

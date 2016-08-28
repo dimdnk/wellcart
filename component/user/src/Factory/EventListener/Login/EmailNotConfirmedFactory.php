@@ -9,7 +9,15 @@
 declare(strict_types = 1);
 
 namespace WellCart\User\Factory\EventListener\Login;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\User\EventListener\Login\EmailNotConfirmed;
+use WellCart\User\Spec\UserRepository;
+
 class EmailNotConfirmedFactory
 {
+    public function __invoke(ContainerInterface $container): EmailNotConfirmed
+    {
+        return new EmailNotConfirmed($container->get(UserRepository::class));
+    }
 }

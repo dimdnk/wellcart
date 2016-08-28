@@ -27,12 +27,11 @@ class UserEntityListener
     /**
      * Object constructor
      *
-     * @param AuthenticationServiceInterface   $auth
+     * @param AuthenticationServiceInterface $auth
      */
     public function __construct(
         AuthenticationServiceInterface $auth
-    )
-    {
+    ) {
         $this->auth = $auth;
     }
 

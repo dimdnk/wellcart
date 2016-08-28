@@ -510,7 +510,10 @@ class AbstractUser extends AbstractEntity implements
      */
     public function getTimeZone()
     {
-        return ($this->timeZone) ?: Config::get('wellcart.localization.timezone');
+        return ($this->timeZone)
+            ?: Config::get(
+                'wellcart.localization.timezone'
+            );
     }
 
     /**

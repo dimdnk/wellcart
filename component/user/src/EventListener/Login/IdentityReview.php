@@ -26,11 +26,12 @@ class IdentityReview
 
     /**
      * Object constructor.
+     *
      * @param UserRepository $userRepository
      */
     public function __construct(UserRepository $userRepository)
     {
-        $this->userRepository =  $userRepository;
+        $this->userRepository = $userRepository;
     }
 
     /**

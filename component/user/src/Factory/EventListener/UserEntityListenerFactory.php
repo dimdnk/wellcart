@@ -9,7 +9,19 @@
 declare(strict_types = 1);
 
 namespace WellCart\User\Factory\EventListener;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\User\EventListener\UserEntityListener;
+use Zend\Authentication\AuthenticationServiceInterface;
+
 class UserEntityListenerFactory
 {
+    public function __invoke(
+        ContainerInterface $container
+    ): UserEntityListener
+    {
+        return new UserEntityListener(
+            $container->get(AuthenticationServiceInterface::class)
+        );
+    }
 }

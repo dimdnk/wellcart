@@ -50,8 +50,8 @@ class UnauthorizedStrategy extends Strategy implements
      */
     public function __construct(
         UnauthorizedStrategyOptions $options,
-        LayoutUpdaterInterface $layoutUpdater)
-    {
+        LayoutUpdaterInterface $layoutUpdater
+    ) {
         parent::__construct($options);
         $this->layoutUpdater = $layoutUpdater;
     }

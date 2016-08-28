@@ -9,7 +9,19 @@
 declare(strict_types = 1);
 
 namespace WellCart\Admin\Factory\EventListener;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\Admin\EventListener\AdministratorEntityListener;
+use Zend\Authentication\AuthenticationServiceInterface;
+
 class AdministratorEntityListenerFactory
 {
+    public function __invoke(
+        ContainerInterface $container
+    ): AdministratorEntityListener
+    {
+        return new AdministratorEntityListener(
+            $container->get(AuthenticationServiceInterface::class)
+        );
+    }
 }

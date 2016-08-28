@@ -19,7 +19,7 @@ class ScriptHandler
     public static function setPermissions()
     {
         $prefix = '';
-        if (is_dir(getcwd().'/tests')) {
+        if (is_dir(getcwd() . '/tests')) {
             $prefix = 'tests/';
         }
         $directories = [

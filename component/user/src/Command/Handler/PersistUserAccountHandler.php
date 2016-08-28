@@ -13,10 +13,9 @@ namespace WellCart\User\Command\Handler;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
 use WellCart\User\Command\PersistUserAccount;
+use WellCart\User\Service\User as UserService;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Str;
-use WellCart\User\Service\User as UserService;
-use WellCart\User\Spec\AclRoleEntity;
 
 class PersistUserAccountHandler
     implements ObjectManagerAwareInterface
@@ -31,12 +30,11 @@ class PersistUserAccountHandler
     /**
      * Object constructor
      *
-     * @param UserService   $userService
+     * @param UserService $userService
      */
     public function __construct(
         UserService $userService
-    )
-    {
+    ) {
         $this->userService = $userService;
     }
 

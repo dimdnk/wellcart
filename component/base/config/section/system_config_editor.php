@@ -20,7 +20,7 @@ return [
                     'element'  => [
 
 
-                        'wellcart.website.name'     =>
+                        'wellcart.website.name' =>
                             [
                                 'name'                       => 'wellcart.website.name',
                                 'options'                    => [
@@ -55,7 +55,7 @@ return [
                                     ],
                                 ],
                             ],
-                        'router.base_path' =>
+                        'router.base_path'      =>
                             [
                                 'name'                       => 'router.base_path',
                                 'options'                    => [
@@ -234,7 +234,7 @@ return [
                     'label'    => 'Mail Server Configuration',
                     'priority' => -19,
                     'element'  => [
-                        'wellcart.email_communications.enabled'                          =>
+                        'wellcart.email_communications.enabled'                            =>
                             [
                                 'name'                       => 'wellcart.email_communications.enabled',
                                 'options'                    => [
@@ -748,7 +748,7 @@ return [
                     'label'    => 'Developer Settings',
                     'priority' => -19,
                     'element'  => [
-                        'zenddevelopertools.toolbar.enabled'    =>
+                        'zenddevelopertools.toolbar.enabled'      =>
                             [
                                 'name'                       => 'zenddevelopertools.toolbar.enabled',
                                 'options'                    => [
@@ -784,7 +784,7 @@ return [
                                     ],
                                 ],
                             ],
-                        'wellcart.doctrine.global_cache_instance'        =>
+                        'wellcart.doctrine.global_cache_instance' =>
                             [
                                 'name'                       => 'wellcart.doctrine.global_cache_instance',
                                 'options'                    => [
@@ -820,7 +820,7 @@ return [
                                     ],
                                 ],
                             ],
-                        'view_manager.display_exceptions'       =>
+                        'view_manager.display_exceptions'         =>
                             [
                                 'name'                       => 'view_manager.display_exceptions',
                                 'options'                    => [
@@ -856,7 +856,7 @@ return [
                                     ],
                                 ],
                             ],
-                        'view_manager.display_not_found_reason' =>
+                        'view_manager.display_not_found_reason'   =>
                             [
                                 'name'                       => 'view_manager.display_not_found_reason',
                                 'options'                    => [

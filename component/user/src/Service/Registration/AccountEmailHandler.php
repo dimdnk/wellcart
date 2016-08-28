@@ -128,7 +128,8 @@ class AccountEmailHandler
     protected function getEmailContact()
     {
         return Config::get(
-            'wellcart.email_communications.contacts.' . $this->options['email_contact'],
+            'wellcart.email_communications.contacts.'
+            . $this->options['email_contact'],
             false
         );
     }

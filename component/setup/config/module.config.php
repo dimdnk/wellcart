@@ -31,7 +31,7 @@ return [
         ],
     ],
 
-    'wellcart'                   => [
+    'wellcart'             => [
         'website' => [
             'name' => 'WellCart',
         ],

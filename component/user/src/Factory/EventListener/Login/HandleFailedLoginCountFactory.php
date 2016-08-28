@@ -9,7 +9,19 @@
 declare(strict_types = 1);
 
 namespace WellCart\User\Factory\EventListener\Login;
-// @todo implement factory
+
+use Interop\Container\ContainerInterface;
+use WellCart\User\EventListener\Login\HandleFailedLoginCount;
+use WellCart\User\Spec\UserRepository;
+
 class HandleFailedLoginCountFactory
 {
+    public function __invoke(
+        ContainerInterface $container
+    ): HandleFailedLoginCount
+    {
+        return new HandleFailedLoginCount(
+            $container->get(UserRepository::class)
+        );
+    }
 }
