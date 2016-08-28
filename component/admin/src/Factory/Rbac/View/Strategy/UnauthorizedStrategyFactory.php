@@ -26,7 +26,8 @@ class UnauthorizedStrategyFactory
         $moduleOptions = $container->get('ZfcRbac\Options\ModuleOptions');
 
         return new UnauthorizedStrategy(
-            $moduleOptions->getUnauthorizedStrategy()
+            $moduleOptions->getUnauthorizedStrategy(),
+            $container->get('ConLayout\Updater\LayoutUpdaterInterface')
         );
     }
 }

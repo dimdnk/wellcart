@@ -51,6 +51,7 @@ class LoginController extends UserController
         try {
             $adapter->prepareForAuthentication($this->getRequest());
             $auth = $auth->getAuthService()->authenticate($adapter);
+
             if (!$auth->isValid()) {
                 $adapter->resetAdapters();
                 $this->flashMessenger()->addErrorMessage(
@@ -59,6 +60,7 @@ class LoginController extends UserController
                 return $this->redirect()->toRoute('zfcadmin');
             }
         } catch (\Throwable $e) {
+            error_log($e->__toString());
             $this->flashMessenger()->addErrorMessage($e->getMessage());
             return $this->redirect()->toRoute('zfcadmin');
         }

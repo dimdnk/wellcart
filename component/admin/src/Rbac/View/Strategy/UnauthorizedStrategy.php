@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Admin\Rbac\View\Strategy;
 
+use ConLayout\Updater\LayoutUpdaterInterface;
 use WellCart\Mvc\Application;
 use WellCart\Mvc\Controller\PluginManagerAwareInterface;
 use WellCart\Mvc\Controller\PluginManagerAwareTrait;
@@ -22,6 +23,7 @@ use Zend\Mvc\InjectApplicationEventInterface;
 use Zend\Mvc\MvcEvent;
 use Zend\Stdlib;
 use ZfcRbac\Exception\UnauthorizedExceptionInterface;
+use ZfcRbac\Options\UnauthorizedStrategyOptions;
 use ZfcRbac\View\Strategy\UnauthorizedStrategy as Strategy;
 
 class UnauthorizedStrategy extends Strategy implements
@@ -38,6 +40,22 @@ class UnauthorizedStrategy extends Strategy implements
      * @var Event
      */
     protected $event;
+    protected $layoutUpdater;
+
+    /**
+     * UnauthorizedStrategy constructor.
+     *
+     * @param UnauthorizedStrategyOptions $options
+     * @param LayoutUpdaterInterface      $layoutUpdater
+     */
+    public function __construct(
+        UnauthorizedStrategyOptions $options,
+        LayoutUpdaterInterface $layoutUpdater)
+    {
+        parent::__construct($options);
+        $this->layoutUpdater = $layoutUpdater;
+    }
+
 
     /**
      * @private
@@ -70,9 +88,7 @@ class UnauthorizedStrategy extends Strategy implements
         $this->setEvent($event);
 
         $layout = $this->getControllerPlugin('layout');
-        $layoutUpdater = $this
-            ->getServiceLocator()
-            ->get('ConLayout\Updater\LayoutUpdaterInterface');
+        $layoutUpdater = $this->layoutUpdater;
 
         $layout->setController($this);
         $forward = $this->getControllerPlugin('forward');
