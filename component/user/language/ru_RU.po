@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 12:07+0300\n"
-"PO-Revision-Date: 2016-08-11 12:07+0300\n"
+"POT-Creation-Date: 2016-08-29 17:14+0300\n"
+"PO-Revision-Date: 2016-08-29 17:14+0300\n"
 "Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Command/Handler/PersistUserAccountHandler.php:47
+#: ../src/Command/Handler/PersistUserAccountHandler.php:62
 msgid ""
 "Please enter 6 or more characters for password. Repeat to confirm. Leading "
 "or trailing spaces will be ignored. "
@@ -91,21 +91,21 @@ msgstr ""
 msgid "You are already logged in."
 msgstr ""
 
-#: ../src/EventListener/Login/EmailNotConfirmed.php:55
+#: ../src/EventListener/Login/EmailNotConfirmed.php:65
 msgid "This account is not confirmed. Please, check your email."
 msgstr ""
 
-#: ../src/EventListener/Login/HandleFailedLoginCount.php:62
+#: ../src/EventListener/Login/HandleFailedLoginCount.php:70
 msgid "You exceeded the maximum allowed number of login attempt."
 msgstr ""
 
 #: ../src/EventListener/Registration/AddRequiredFieldsToForm.php:35
-#: ../src/Form/Account.php:128 ../src/PageView/Admin/AccountsGrid.php:97
+#: ../src/Form/Account.php:127 ../src/PageView/Admin/AccountsGrid.php:97
 msgid "First Name"
 msgstr "Имя"
 
 #: ../src/EventListener/Registration/AddRequiredFieldsToForm.php:48
-#: ../src/Form/Account.php:149 ../src/PageView/Admin/AccountsGrid.php:104
+#: ../src/Form/Account.php:148 ../src/PageView/Admin/AccountsGrid.php:104
 msgid "Last Name"
 msgstr "Фамилия"
 
@@ -114,32 +114,32 @@ msgstr "Фамилия"
 msgid "Email"
 msgstr "Email"
 
-#: ../src/Form/Account.php:67 ../src/PageView/Admin/RoleForm.php:43
+#: ../src/Form/Account.php:66 ../src/PageView/Admin/RoleForm.php:43
 msgid "Roles"
 msgstr "Роли"
 
-#: ../src/Form/Account.php:87
+#: ../src/Form/Account.php:86
 msgid "Language"
 msgstr "Язык"
 
-#: ../src/Form/Account.php:107
+#: ../src/Form/Account.php:106
 msgid "Timezone"
 msgstr "Временная зона"
 
-#: ../src/Form/Account.php:182
+#: ../src/Form/Account.php:181
 msgid "New Password"
 msgstr ""
 
-#: ../src/Form/Account.php:203
+#: ../src/Form/Account.php:202
 msgid "Password Verify"
 msgstr "Повтор пароля"
 
-#: ../src/Form/Account.php:237 ../src/Form/AccountPreferences.php:290
-#: ../src/Form/Acl/Role.php:138
+#: ../src/Form/Account.php:236 ../src/Form/AccountPreferences.php:290
+#: ../src/Form/Acl/Role.php:137
 msgid "Save"
 msgstr "Сохранить"
 
-#: ../src/Form/Account.php:251 ../src/Form/Acl/Role.php:152
+#: ../src/Form/Account.php:250 ../src/Form/Acl/Role.php:151
 msgid "Save & Continue Edit"
 msgstr "Сохранить и редактировать"
 
@@ -233,11 +233,11 @@ msgstr ""
 msgid "Name"
 msgstr "Название"
 
-#: ../src/Form/Acl/Role.php:88
+#: ../src/Form/Acl/Role.php:87
 msgid "Description"
 msgstr "Описание"
 
-#: ../src/Form/Acl/Role.php:107
+#: ../src/Form/Acl/Role.php:106
 msgid "Permissions"
 msgstr ""
 
@@ -245,8 +245,8 @@ msgstr ""
 msgid "Email Address"
 msgstr "Электронный адрес"
 
-#: ../src/Form/RecoverAccount.php:50 ../src/Form/RecoverAccount.php:55
-#: ../src/Form/RecoverAccount.php:56
+#: ../src/Form/RecoverAccount.php:49 ../src/Form/RecoverAccount.php:54
+#: ../src/Form/RecoverAccount.php:55
 msgid "Reset Password"
 msgstr "Сброс пароля"
 
@@ -345,13 +345,13 @@ msgstr "По умолчанию"
 msgid "[%s] Password Reset Confirmation for %s"
 msgstr ""
 
-#: ../src/Service/Registration/AccountEmailHandler.php:159
-#: ../src/Service/Registration/AccountEmailHandler.php:285
+#: ../src/Service/Registration/AccountEmailHandler.php:160
+#: ../src/Service/Registration/AccountEmailHandler.php:286
 #, php-format
 msgid "Welcome to %s"
 msgstr "Добро пожаловать на %s"
 
-#: ../src/Service/Registration/AccountEmailHandler.php:311
+#: ../src/Service/Registration/AccountEmailHandler.php:312
 #, php-format
 msgid "Please confirm your %s account"
 msgstr ""

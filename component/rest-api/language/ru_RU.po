@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 12:06+0300\n"
-"PO-Revision-Date: 2016-08-11 12:06+0300\n"
+"POT-Creation-Date: 2016-08-29 17:13+0300\n"
+"PO-Revision-Date: 2016-08-29 17:13+0300\n"
 "Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
@@ -72,37 +72,37 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:82
+#: ../src/Form/OAuth2/Client.php:81
 msgid "Secret"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:85
+#: ../src/Form/OAuth2/Client.php:84
 msgid "Minimum 6 chars"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:102
+#: ../src/Form/OAuth2/Client.php:101
 msgid "Secret Verify"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:105
+#: ../src/Form/OAuth2/Client.php:104
 msgid "Repeat new secret"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:123
+#: ../src/Form/OAuth2/Client.php:122
 msgid "Redirect URI"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:126
+#: ../src/Form/OAuth2/Client.php:125
 msgid "Optional"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:154 ../src/Form/OAuth2/PublicKey.php:146
-#: ../src/Form/OAuth2/Scope.php:99
+#: ../src/Form/OAuth2/Client.php:153 ../src/Form/OAuth2/PublicKey.php:145
+#: ../src/Form/OAuth2/Scope.php:98
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/OAuth2/Client.php:168 ../src/Form/OAuth2/PublicKey.php:160
-#: ../src/Form/OAuth2/Scope.php:113
+#: ../src/Form/OAuth2/Client.php:167 ../src/Form/OAuth2/PublicKey.php:159
+#: ../src/Form/OAuth2/Scope.php:112
 msgid "Save & Continue Edit"
 msgstr ""
 
@@ -111,24 +111,24 @@ msgid "Client"
 msgstr ""
 
 #: ../src/Form/OAuth2/PublicKey.php:65
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:89
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:88
 msgid "Public Key"
 msgstr ""
 
-#: ../src/Form/OAuth2/PublicKey.php:68 ../src/Form/OAuth2/PublicKey.php:89
+#: ../src/Form/OAuth2/PublicKey.php:68 ../src/Form/OAuth2/PublicKey.php:88
 msgid "Absolute path on server."
 msgstr ""
 
-#: ../src/Form/OAuth2/PublicKey.php:86
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:96
+#: ../src/Form/OAuth2/PublicKey.php:85
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:95
 msgid "Private Key"
 msgstr ""
 
-#: ../src/Form/OAuth2/PublicKey.php:106
+#: ../src/Form/OAuth2/PublicKey.php:105
 msgid "Encryption Algorithm"
 msgstr ""
 
-#: ../src/Form/OAuth2/PublicKey.php:107
+#: ../src/Form/OAuth2/PublicKey.php:106
 msgid "- Select Algorithm -"
 msgstr ""
 
@@ -168,43 +168,43 @@ msgid "Client ID"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:96
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:111
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:110
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:105
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:98
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:113
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:112
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:107
 msgid "Edit"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:111
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:126
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:125
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:120
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:113
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:128
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:127
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:122
 msgid "Delete"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:117
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:132
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:131
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:126
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:131
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:146
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:145
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:140
 msgid "Actions"
 msgstr ""
 
 #: ../src/PageView/Admin/OAuth2/ClientsGrid.php:139
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:154
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:153
 #: ../src/PageView/Admin/OAuth2/ScopesGrid.php:148
 msgid "Create"
 msgstr ""
@@ -230,7 +230,7 @@ msgstr ""
 msgid "Public Keys"
 msgstr ""
 
-#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:103
+#: ../src/PageView/Admin/OAuth2/PublicKeysGrid.php:102
 msgid "Encryption"
 msgstr ""
 

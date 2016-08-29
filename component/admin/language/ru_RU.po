@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 12:04+0300\n"
-"PO-Revision-Date: 2016-08-11 12:05+0300\n"
+"POT-Creation-Date: 2016-08-29 17:12+0300\n"
+"PO-Revision-Date: 2016-08-29 17:12+0300\n"
 "Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Command/Handler/PersistAdminAccountHandler.php:51
+#: ../src/Command/Handler/PersistAdminAccountHandler.php:71
 msgid ""
 "Please enter 6 or more characters for password. Repeat to confirm. Leading "
 "or trailing spaces will be ignored. "
@@ -53,6 +53,12 @@ msgstr ""
 msgid "The message has been marked as Read."
 msgstr ""
 
+#: ../src/Controller/LoginController.php:68
+msgid ""
+"Unable to log in. Please check that you have entered your login and password "
+"correctly."
+msgstr ""
+
 #: ../src/Controller/RecoverAccountController.php:73
 msgid "We'll email you a link to reset your password."
 msgstr "Мы отправим вам на почту ссылку для восстановления пароля."
@@ -82,48 +88,48 @@ msgstr "Вы уже вошли в систему."
 msgid "Control Panel"
 msgstr "Панель управления"
 
-#: ../src/Form/Account.php:46 ../src/PageView/Admin/AccountsGrid.php:89
+#: ../src/Form/Account.php:46 ../src/PageView/Admin/AccountsGrid.php:88
 #: ../view/template/login/form.phtml:20
 msgid "Email"
 msgstr "Email"
 
-#: ../src/Form/Account.php:67
+#: ../src/Form/Account.php:66
 msgid "Roles"
 msgstr ""
 
-#: ../src/Form/Account.php:87
+#: ../src/Form/Account.php:86
 msgid "Language"
 msgstr "Язык"
 
-#: ../src/Form/Account.php:108
+#: ../src/Form/Account.php:107
 msgid "Timezone"
 msgstr "Временная зона"
 
-#: ../src/Form/Account.php:129 ../src/PageView/Admin/AccountsGrid.php:97
+#: ../src/Form/Account.php:128 ../src/PageView/Admin/AccountsGrid.php:96
 msgid "First Name"
 msgstr "Имя"
 
-#: ../src/Form/Account.php:149 ../src/PageView/Admin/AccountsGrid.php:105
+#: ../src/Form/Account.php:148 ../src/PageView/Admin/AccountsGrid.php:104
 msgid "Last Name"
 msgstr "Фамилия"
 
-#: ../src/Form/Account.php:194
+#: ../src/Form/Account.php:193
 msgid "New Password"
 msgstr ""
 
-#: ../src/Form/Account.php:215
+#: ../src/Form/Account.php:214
 msgid "Password Verify"
 msgstr "Повторите пароль"
 
-#: ../src/Form/Account.php:236
+#: ../src/Form/Account.php:235
 msgid "Save"
 msgstr "Сохранить"
 
-#: ../src/Form/Account.php:250
+#: ../src/Form/Account.php:249
 msgid "Save & Continue Edit"
 msgstr "Сохранить и перейти к редактированию"
 
-#: ../src/ItemView/TopBranding.php:37
+#: ../src/ItemView/TopBranding.php:38
 msgid "Demo Application"
 msgstr "Demo Application"
 
@@ -147,37 +153,37 @@ msgstr "Создание учётной записи администратор�
 msgid "Administrator Accounts"
 msgstr "Администраторы"
 
-#: ../src/PageView/Admin/AccountsGrid.php:114
+#: ../src/PageView/Admin/AccountsGrid.php:113
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:116
+#: ../src/PageView/Admin/AccountsGrid.php:115
 msgid "Edit"
 msgstr "Редактировать"
 
-#: ../src/PageView/Admin/AccountsGrid.php:130
-#: ../src/PageView/Admin/NotificationsGrid.php:160
+#: ../src/PageView/Admin/AccountsGrid.php:129
+#: ../src/PageView/Admin/NotificationsGrid.php:159
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:132
-#: ../src/PageView/Admin/AccountsGrid.php:158
-#: ../src/PageView/Admin/NotificationsGrid.php:162
-#: ../src/PageView/Admin/NotificationsGrid.php:200
+#: ../src/PageView/Admin/AccountsGrid.php:131
+#: ../src/PageView/Admin/AccountsGrid.php:157
+#: ../src/PageView/Admin/NotificationsGrid.php:161
+#: ../src/PageView/Admin/NotificationsGrid.php:199
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../src/PageView/Admin/AccountsGrid.php:136
-#: ../src/PageView/Admin/NotificationsGrid.php:166
+#: ../src/PageView/Admin/AccountsGrid.php:135
+#: ../src/PageView/Admin/NotificationsGrid.php:165
 msgid "Are you sure you want to delete this item?"
 msgstr "Вы уверенны, что хотите удалить запись?"
 
-#: ../src/PageView/Admin/AccountsGrid.php:150
-#: ../src/PageView/Admin/NotificationsGrid.php:180
+#: ../src/PageView/Admin/AccountsGrid.php:149
+#: ../src/PageView/Admin/NotificationsGrid.php:179
 msgid "Actions"
 msgstr "Действия"
 
-#: ../src/PageView/Admin/AccountsGrid.php:171
+#: ../src/PageView/Admin/AccountsGrid.php:170
 msgid "Create"
 msgstr "Создать"
 
@@ -189,37 +195,33 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:106
+#: ../src/PageView/Admin/NotificationsGrid.php:105
 msgid "Date Added"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:126
+#: ../src/PageView/Admin/NotificationsGrid.php:125
 msgid "Title"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:135
+#: ../src/PageView/Admin/NotificationsGrid.php:134
 msgid "Message"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:143
+#: ../src/PageView/Admin/NotificationsGrid.php:142
 msgid "<i class=\"fa fa-check-circle-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:145
+#: ../src/PageView/Admin/NotificationsGrid.php:144
 msgid "Mark As Read"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:187
+#: ../src/PageView/Admin/NotificationsGrid.php:186
 msgid "Mark as Read"
 msgstr ""
 
-#: ../src/PageView/Grid/Standard.php:293
+#: ../src/PageView/Grid/Standard.php:292
 msgid "ID"
 msgstr "ID"
-
-#: ../view/item-view/main-navigation-menu.phtml:18
-msgid "Toggle navigation"
-msgstr "Toggle navigation"
 
 #: ../view/item-view/page-navigator.phtml:25
 #: ../view/template/dashboard/index.phtml:8
@@ -235,11 +237,11 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: ../view/page-view/form/standard/toolbar.phtml:27
+#: ../view/page-view/form/standard/toolbar.phtml:26
 msgid "Back"
 msgstr "Назад"
 
-#: ../view/page-view/form/standard/toolbar.phtml:37
+#: ../view/page-view/form/standard/toolbar.phtml:36
 #: ../view/page-view/grid/standard/table.phtml:132
 msgid "Reset"
 msgstr "Сброс"
@@ -281,7 +283,7 @@ msgstr "Выйти"
 msgid "Log into Control Panel"
 msgstr ""
 
-#: ../view/template/login/form.phtml:31
+#: ../view/template/login/form.phtml:30
 msgid "Password"
 msgstr "Пароль"
 
@@ -338,6 +340,9 @@ msgstr "Новый пароль вышей учётной записи"
 #: ../view/template/settings/update.phtml:39
 msgid "System Settings"
 msgstr "Системные настройки"
+
+#~ msgid "Toggle navigation"
+#~ msgstr "Toggle navigation"
 
 #~ msgid "User Accounts Grid"
 #~ msgstr "User Accounts Grid"

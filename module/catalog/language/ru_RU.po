@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 12:03+0300\n"
-"PO-Revision-Date: 2016-08-11 12:03+0300\n"
+"POT-Creation-Date: 2016-08-29 17:14+0300\n"
+"PO-Revision-Date: 2016-08-29 17:14+0300\n"
 "Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
@@ -59,11 +59,11 @@ msgid "Category successfully modified."
 msgstr ""
 
 #: ../src/Controller/Admin/CategoriesController.php:107
-#: ../src/Controller/Admin/CategoriesController.php:128
+#: ../src/Controller/Admin/CategoriesController.php:127
 msgid "This category no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/CategoriesController.php:138
+#: ../src/Controller/Admin/CategoriesController.php:137
 msgid "Category was deleted successfully."
 msgstr ""
 
@@ -118,13 +118,13 @@ msgstr ""
 msgid "Product was deleted successfully."
 msgstr ""
 
-#: ../src/Form/Attribute.php:64 ../src/Form/Brand.php:157
+#: ../src/Form/Attribute.php:64 ../src/Form/Brand.php:156
 #: ../src/Form/Category.php:58 ../src/Form/Feature.php:64
 #: ../src/Form/Product.php:76 ../src/Form/ProductTemplate.php:59
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/Attribute.php:78 ../src/Form/Brand.php:171
+#: ../src/Form/Attribute.php:78 ../src/Form/Brand.php:170
 #: ../src/Form/Category.php:72 ../src/Form/Feature.php:78
 #: ../src/Form/Product.php:90 ../src/Form/ProductTemplate.php:73
 msgid "Save & Continue Edit"
@@ -194,31 +194,31 @@ msgstr ""
 msgid "Brand Name"
 msgstr ""
 
-#: ../src/Form/Brand.php:69
+#: ../src/Form/Brand.php:68
 msgid "Brand Image"
 msgstr ""
 
-#: ../src/Form/Brand.php:88 ../src/Form/Category/CategoryI18nFieldset.php:92
+#: ../src/Form/Brand.php:87 ../src/Form/Category/CategoryI18nFieldset.php:92
 #: ../src/Form/Product/ProductI18nFieldset.php:95
 msgid "Page Title"
 msgstr ""
 
-#: ../src/Form/Brand.php:107 ../src/Form/Category/CategoryI18nFieldset.php:109
+#: ../src/Form/Brand.php:106 ../src/Form/Category/CategoryI18nFieldset.php:109
 #: ../src/Form/Product/ProductI18nFieldset.php:112
 msgid "Meta Keywords"
 msgstr ""
 
-#: ../src/Form/Brand.php:126 ../src/Form/Category/CategoryI18nFieldset.php:126
+#: ../src/Form/Brand.php:125 ../src/Form/Category/CategoryI18nFieldset.php:126
 #: ../src/Form/Product/ProductI18nFieldset.php:129
 msgid "Meta Description"
 msgstr ""
 
-#: ../src/Form/Brand.php:129 ../src/Form/Category/CategoryI18nFieldset.php:129
+#: ../src/Form/Brand.php:128 ../src/Form/Category/CategoryI18nFieldset.php:129
 #: ../src/Form/Product/ProductI18nFieldset.php:132
 msgid "Maximum 255 chars"
 msgstr ""
 
-#: ../src/Form/Brand.php:217
+#: ../src/Form/Brand.php:216
 msgid "Remove Image"
 msgstr ""
 
@@ -293,7 +293,6 @@ msgid "Template"
 msgstr ""
 
 #: ../src/Form/Product/ProductFieldset.php:88
-#: ../src/PageView/Admin/BrandForm.php:44
 msgid "Brand"
 msgstr ""
 
@@ -363,7 +362,7 @@ msgstr ""
 #: ../src/PageView/Admin/CategoriesGrid.php:134
 #: ../src/PageView/Admin/FeaturesGrid.php:132
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:131
-#: ../src/PageView/Admin/ProductsGrid.php:139
+#: ../src/PageView/Admin/ProductsGrid.php:137
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
@@ -372,7 +371,7 @@ msgstr ""
 #: ../src/PageView/Admin/CategoriesGrid.php:136
 #: ../src/PageView/Admin/FeaturesGrid.php:134
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:133
-#: ../src/PageView/Admin/ProductsGrid.php:141
+#: ../src/PageView/Admin/ProductsGrid.php:139
 msgid "Edit"
 msgstr ""
 
@@ -381,7 +380,7 @@ msgstr ""
 #: ../src/PageView/Admin/CategoriesGrid.php:149
 #: ../src/PageView/Admin/FeaturesGrid.php:147
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:146
-#: ../src/PageView/Admin/ProductsGrid.php:154
+#: ../src/PageView/Admin/ProductsGrid.php:152
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
@@ -394,7 +393,7 @@ msgstr ""
 #: ../src/PageView/Admin/FeaturesGrid.php:174
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:148
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:173
-#: ../src/PageView/Admin/ProductsGrid.php:156
+#: ../src/PageView/Admin/ProductsGrid.php:154
 msgid "Delete"
 msgstr ""
 
@@ -403,7 +402,7 @@ msgstr ""
 #: ../src/PageView/Admin/CategoriesGrid.php:155
 #: ../src/PageView/Admin/FeaturesGrid.php:153
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:152
-#: ../src/PageView/Admin/ProductsGrid.php:160
+#: ../src/PageView/Admin/ProductsGrid.php:158
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
@@ -412,7 +411,7 @@ msgstr ""
 #: ../src/PageView/Admin/CategoriesGrid.php:169
 #: ../src/PageView/Admin/FeaturesGrid.php:167
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:166
-#: ../src/PageView/Admin/ProductsGrid.php:174
+#: ../src/PageView/Admin/ProductsGrid.php:172
 msgid "Actions"
 msgstr ""
 
@@ -421,11 +420,12 @@ msgstr ""
 #: ../src/PageView/Admin/CategoriesGrid.php:190
 #: ../src/PageView/Admin/FeaturesGrid.php:188
 #: ../src/PageView/Admin/ProductTemplatesGrid.php:187
-#: ../src/PageView/Admin/ProductsGrid.php:182
+#: ../src/PageView/Admin/ProductsGrid.php:180
 msgid "Create"
 msgstr ""
 
 #: ../src/PageView/Admin/BrandForm.php:40
+#: ../src/PageView/Admin/BrandForm.php:44
 #: ../src/PageView/Admin/BrandsGrid.php:63
 msgid "Brands"
 msgstr ""
@@ -462,19 +462,19 @@ msgstr ""
 msgid "Create new Feature"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductForm.php:40
-#: ../src/PageView/Admin/ProductForm.php:44
+#: ../src/PageView/Admin/ProductForm.php:39
+#: ../src/PageView/Admin/ProductForm.php:43
 #: ../src/PageView/Admin/ProductsGrid.php:94
 #: ../src/PageView/Admin/ProductsGrid.php:98
 msgid "Products"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductForm.php:59
+#: ../src/PageView/Admin/ProductForm.php:58
 #, php-format
 msgid "Edit Product: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductForm.php:65
+#: ../src/PageView/Admin/ProductForm.php:64
 msgid "Create new Product"
 msgstr ""
 

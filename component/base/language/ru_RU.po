@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 12:05+0300\n"
-"PO-Revision-Date: 2016-08-11 12:05+0300\n"
+"POT-Creation-Date: 2016-08-29 17:13+0300\n"
+"PO-Revision-Date: 2016-08-29 17:13+0300\n"
 "Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
@@ -62,27 +62,27 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:113
+#: ../src/Form/Locale/Language.php:112
 #: ../src/PageView/Admin/LanguagesGrid.php:105
 msgid "Code"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:132
+#: ../src/Form/Locale/Language.php:131
 msgid "Locale"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:151
+#: ../src/Form/Locale/Language.php:150
 msgid "Territory"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:182 ../src/Form/UrlRewrite.php:97
+#: ../src/Form/Locale/Language.php:181 ../src/Form/UrlRewrite.php:96
 #: ../src/Service/ConfigurationEditor.php:271
 #: ../src/Service/ConfigurationEditor.php:279
 #: ../src/Service/ConfigurationEditor.php:284
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:196 ../src/Form/UrlRewrite.php:111
+#: ../src/Form/Locale/Language.php:195 ../src/Form/UrlRewrite.php:110
 msgid "Save & Continue Edit"
 msgstr ""
 
@@ -90,7 +90,7 @@ msgstr ""
 msgid "Request Path"
 msgstr ""
 
-#: ../src/Form/UrlRewrite.php:66 ../src/PageView/Admin/UrlRewritesGrid.php:97
+#: ../src/Form/UrlRewrite.php:65 ../src/PageView/Admin/UrlRewritesGrid.php:97
 msgid "Target Path"
 msgstr ""
 

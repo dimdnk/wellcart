@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-11 12:06+0300\n"
-"PO-Revision-Date: 2016-08-11 12:06+0300\n"
+"POT-Creation-Date: 2016-08-29 17:14+0300\n"
+"PO-Revision-Date: 2016-08-29 17:14+0300\n"
 "Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
@@ -16,50 +16,50 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Service/Setup.php:421 ../src/Service/Setup.php:473
+#: ../src/Service/Setup.php:443 ../src/Service/Setup.php:495
 msgid "On"
 msgstr ""
 
-#: ../src/Service/Setup.php:423 ../src/Service/Setup.php:477
-#: ../src/Service/Setup.php:481
+#: ../src/Service/Setup.php:445 ../src/Service/Setup.php:499
+#: ../src/Service/Setup.php:503
 msgid "Off"
 msgstr ""
 
-#: ../src/Service/Setup.php:431 ../src/Service/Setup.php:487
-#: ../src/Service/Setup.php:491 ../src/Service/Setup.php:495
-#: ../src/Service/Setup.php:499 ../src/Service/Setup.php:503
-#: ../src/Service/Setup.php:507 ../src/Service/Setup.php:511
-#: ../src/Service/Setup.php:515 ../src/Service/Setup.php:519
-#: ../src/Service/Setup.php:523 ../src/Service/Setup.php:527
-#: ../src/Service/Setup.php:531 ../src/Service/Setup.php:535
+#: ../src/Service/Setup.php:453 ../src/Service/Setup.php:509
+#: ../src/Service/Setup.php:513 ../src/Service/Setup.php:517
+#: ../src/Service/Setup.php:521 ../src/Service/Setup.php:525
+#: ../src/Service/Setup.php:529 ../src/Service/Setup.php:533
+#: ../src/Service/Setup.php:537 ../src/Service/Setup.php:541
+#: ../src/Service/Setup.php:545 ../src/Service/Setup.php:549
+#: ../src/Service/Setup.php:553 ../src/Service/Setup.php:557
 msgid "Loaded"
 msgstr ""
 
-#: ../src/Service/Setup.php:433
+#: ../src/Service/Setup.php:455
 msgid "Not Loaded"
 msgstr ""
 
-#: ../src/Service/Setup.php:440 ../src/Service/Setup.php:541
-#: ../src/Service/Setup.php:545 ../src/Service/Setup.php:549
-#: ../src/Service/Setup.php:553 ../src/Service/Setup.php:557
-#: ../src/Service/Setup.php:561 ../src/Service/Setup.php:565
-#: ../src/Service/Setup.php:569
+#: ../src/Service/Setup.php:462 ../src/Service/Setup.php:563
+#: ../src/Service/Setup.php:567 ../src/Service/Setup.php:571
+#: ../src/Service/Setup.php:575 ../src/Service/Setup.php:579
+#: ../src/Service/Setup.php:583 ../src/Service/Setup.php:587
+#: ../src/Service/Setup.php:591 ../src/Service/Setup.php:595
 msgid "Writable"
 msgstr ""
 
-#: ../src/Service/Setup.php:442
+#: ../src/Service/Setup.php:464
 msgid "Not Writable"
 msgstr ""
 
-#: ../src/Service/Setup.php:464
+#: ../src/Service/Setup.php:486
 msgid "PHP Version"
 msgstr ""
 
-#: ../src/Service/Setup.php:472
+#: ../src/Service/Setup.php:494
 msgid "File uploads"
 msgstr ""
 
-#: ../src/Service/Setup.php:476
+#: ../src/Service/Setup.php:498
 msgid "Session autostart"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgid "This email address will be your username to access Control Panel."
 msgstr ""
 
 #: ../src/Wizard/Step/AdminUserForm.php:49
-#: ../src/Wizard/Step/DbConfigurationForm.php:90
+#: ../src/Wizard/Step/DbConfigurationForm.php:91
 msgid "Password"
 msgstr ""
 
@@ -104,54 +104,54 @@ msgstr ""
 msgid "PostgreSQL"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:49
+#: ../src/Wizard/Step/DbConfigurationForm.php:50
 msgid "Server"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:58
+#: ../src/Wizard/Step/DbConfigurationForm.php:59
 msgid "Name and location of the server that hosts your store's database."
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:70
+#: ../src/Wizard/Step/DbConfigurationForm.php:71
 msgid "Username"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:79
-#: ../src/Wizard/Step/DbConfigurationForm.php:99
+#: ../src/Wizard/Step/DbConfigurationForm.php:80
+#: ../src/Wizard/Step/DbConfigurationForm.php:100
 msgid ""
 "Sign-in credentials for your store's database on the database server (does "
 "not need to be admin-level credentials)."
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:94
+#: ../src/Wizard/Step/DbConfigurationForm.php:95
 msgid "(not always necessary)"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:110
+#: ../src/Wizard/Step/DbConfigurationForm.php:111
 msgid "Port"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:118
+#: ../src/Wizard/Step/DbConfigurationForm.php:119
 msgid "The default port is 3306."
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:129
+#: ../src/Wizard/Step/DbConfigurationForm.php:130
 msgid "Database"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:137
+#: ../src/Wizard/Step/DbConfigurationForm.php:138
 msgid "Enter the name of your store's database."
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:150
+#: ../src/Wizard/Step/DbConfigurationForm.php:151
 msgid "Website Name"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:165
+#: ../src/Wizard/Step/DbConfigurationForm.php:166
 msgid "Website URL"
 msgstr ""
 
-#: ../src/Wizard/Step/DbConfigurationForm.php:167
+#: ../src/Wizard/Step/DbConfigurationForm.php:168
 msgid "Fully qualified URLs that end with '/' (slash) e.g. http://example.com/"
 msgstr ""
 
