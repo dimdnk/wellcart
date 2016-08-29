@@ -61,7 +61,6 @@ class ProductTemplateI18nFieldset extends Fieldset
                     ],
                 ],
                 'attributes' => [
-                    'autofocus' => 'autofocus',
                     'class'     => 'form-control catalog_product_template_name',
                 ],
             ],

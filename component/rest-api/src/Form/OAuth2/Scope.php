@@ -74,7 +74,6 @@ class Scope extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'api_scope_scope',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 700]

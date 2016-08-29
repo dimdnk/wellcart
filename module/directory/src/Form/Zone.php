@@ -56,7 +56,6 @@ class Zone extends AbstractForm
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
-                    'autofocus'    => 'autofocus',
                     'id'           => 'directory_zone_country',
                     'class'        => 'chosen-element',
                 ],
@@ -102,7 +101,6 @@ class Zone extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'directory_zone_name',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 600]

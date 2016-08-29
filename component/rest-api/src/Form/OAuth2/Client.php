@@ -68,7 +68,6 @@ class Client extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'api_client_client_id',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 700]

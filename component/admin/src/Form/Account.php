@@ -53,7 +53,6 @@ class Account extends AbstractForm
                 'attributes' => [
                     'id'           => 'admin_account_name',
                     'autocomplete' => 'off',
-                    'autofocus'    => 'autofocus',
                 ],
             ],
             ['priority' => 700]

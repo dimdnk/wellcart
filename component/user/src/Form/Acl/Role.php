@@ -75,7 +75,6 @@ class Role extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'user_acl_role_name',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 650]

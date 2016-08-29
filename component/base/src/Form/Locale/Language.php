@@ -98,7 +98,6 @@ class Language extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'base_locale_language_name',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 700]

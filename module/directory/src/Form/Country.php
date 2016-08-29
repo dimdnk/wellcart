@@ -75,7 +75,6 @@ class Country extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'directory_country_name',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 650]

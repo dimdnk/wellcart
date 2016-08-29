@@ -52,7 +52,6 @@ class Currency extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'directory_currency_title',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 700]

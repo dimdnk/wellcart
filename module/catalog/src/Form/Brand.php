@@ -54,7 +54,6 @@ class Brand extends AbstractForm
                 ],
                 'attributes' => [
                     'id'        => 'catalog_brand_name',
-                    'autofocus' => 'autofocus',
                 ],
             ],
             ['priority' => 700]

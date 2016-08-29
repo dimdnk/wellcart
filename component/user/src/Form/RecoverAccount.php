@@ -34,7 +34,6 @@ class RecoverAccount extends \WellCart\Form\Form
                 ],
                 'attributes' => [
                     'id'           => 'recover_account_email',
-                    'autofocus'    => 'autofocus',
                     'autocomplete' => 'off',
                     'required'     => 'required',
                 ],
