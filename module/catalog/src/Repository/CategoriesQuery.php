@@ -14,7 +14,6 @@ use WellCart\ORM\QueryBuilder;
 
 class CategoriesQuery extends QueryBuilder
 {
-
     /**
      * @return CategoriesQuery
      */
@@ -48,4 +47,39 @@ class CategoriesQuery extends QueryBuilder
         $this->setParameter('is_visible', 0);
         return $this;
     }
+
+    /**
+     *
+     * @return CategoryI18nQuery
+     */
+    public function excludeRoot()
+    {
+        $alias = $this->getRootAliases()[0];
+        $this->andWhere($this->expr()->andX($alias . '.id <> ' . 1));
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function findPreviousRecord($id)
+    {
+        $this->excludeRoot();
+        return parent::findPreviousRecord(
+            $id
+        );
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function findNextRecord($id)
+    {
+        $this->excludeRoot();
+        return parent::findNextRecord(
+            $id
+        );
+    }
+
+
 }

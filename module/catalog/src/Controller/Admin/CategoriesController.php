@@ -111,7 +111,6 @@ class CategoriesController extends AbstractActionController implements
             false,
             'findCategoryById'
         );
-
         if ($domainResponse) {
             return $this->handleForm($formPageView, $form, $domainResponse);
         }

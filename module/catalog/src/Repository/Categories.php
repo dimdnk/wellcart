@@ -39,6 +39,11 @@ class Categories extends NestedTreeRepository implements CategoryRepository
         return $optionList;
     }
 
+    public function findOneExcludeRoot($id)
+    {
+        return $this->finder()->excludeRoot()->find($id);
+    }
+
     /**
      * @return CategoriesQuery
      */

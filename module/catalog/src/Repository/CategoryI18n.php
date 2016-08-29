@@ -66,11 +66,13 @@ class CategoryI18n extends AbstractRepository implements CategoryI18nRepository
             compact('id')
         );
 
-        return $this->getEntityManager()
-            ->find(
-                'WellCart\Catalog\Spec\CategoryEntity',
-                (int)$id
+        $repository = $this->getEntityManager()
+            ->getRepository(
+                'WellCart\Catalog\Spec\CategoryEntity'
             );
+
+        return $repository
+            ->findOneExcludeRoot($id);
     }
 
     /**
