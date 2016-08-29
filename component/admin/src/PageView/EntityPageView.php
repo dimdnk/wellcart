@@ -130,7 +130,6 @@ class EntityPageView extends AbstractPageView
     }
 
 
-
     final public function getContainerClass()
     {
         return $this->getVariable('containerClass');

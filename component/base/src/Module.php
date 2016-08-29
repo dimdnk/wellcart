@@ -28,7 +28,6 @@ use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use WellCart\View\Helper\Date as DateViewHelper;
 use WellCart\View\Helper\Locale as LocaleViewHelper;
-use WellCart\View\Helper\ResizeImage as ResizeImageViewHelper;
 use Zend\Console\Adapter\AdapterInterface as ConsoleAdapter;
 use Zend\EventManager\EventInterface;
 use Zend\Form\Factory;

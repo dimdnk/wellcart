@@ -49,17 +49,6 @@ class CategoriesQuery extends QueryBuilder
     }
 
     /**
-     *
-     * @return CategoryI18nQuery
-     */
-    public function excludeRoot()
-    {
-        $alias = $this->getRootAliases()[0];
-        $this->andWhere($this->expr()->andX($alias . '.id <> ' . 1));
-        return $this;
-    }
-
-    /**
      * @inheritDoc
      */
     public function findPreviousRecord($id)
@@ -68,6 +57,17 @@ class CategoriesQuery extends QueryBuilder
         return parent::findPreviousRecord(
             $id
         );
+    }
+
+    /**
+     *
+     * @return CategoryI18nQuery
+     */
+    public function excludeRoot()
+    {
+        $alias = $this->getRootAliases()[0];
+        $this->andWhere($this->expr()->andX($alias . '.id <> ' . 1));
+        return $this;
     }
 
     /**

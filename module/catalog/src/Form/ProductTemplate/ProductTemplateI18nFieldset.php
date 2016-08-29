@@ -61,7 +61,7 @@ class ProductTemplateI18nFieldset extends Fieldset
                     ],
                 ],
                 'attributes' => [
-                    'class'     => 'form-control catalog_product_template_name',
+                    'class' => 'form-control catalog_product_template_name',
                 ],
             ],
             ['priority' => 700]

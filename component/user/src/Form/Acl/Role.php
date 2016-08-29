@@ -74,7 +74,7 @@ class Role extends AbstractForm
                     ],
                 ],
                 'attributes' => [
-                    'id'        => 'user_acl_role_name',
+                    'id' => 'user_acl_role_name',
                 ],
             ],
             ['priority' => 650]

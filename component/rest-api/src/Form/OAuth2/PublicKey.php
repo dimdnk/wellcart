@@ -71,7 +71,7 @@ class PublicKey extends AbstractForm
                     ],
                 ],
                 'attributes' => [
-                    'id'        => 'api_key_public_key',
+                    'id' => 'api_key_public_key',
                 ],
             ],
             ['priority' => 700]

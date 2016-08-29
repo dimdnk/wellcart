@@ -100,7 +100,7 @@ class Zone extends AbstractForm
                     ],
                 ],
                 'attributes' => [
-                    'id'        => 'directory_zone_name',
+                    'id' => 'directory_zone_name',
                 ],
             ],
             ['priority' => 600]

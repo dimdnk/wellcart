@@ -13,8 +13,6 @@ namespace WellCart\Admin\Setup\Data;
 use Doctrine\Common\Persistence\ObjectManager;
 use WellCart\Setup\DataFixture\AbstractFixture;
 use WellCart\Setup\DataFixture\PermissionsProviderInterface;
-use WellCart\User\Entity\Acl\Permission;
-use WellCart\Utility\Arr;
 
 /**
  * @codeCoverageIgnore

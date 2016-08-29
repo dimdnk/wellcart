@@ -24,7 +24,7 @@ class CurrenciesGrid extends Standard
 
     public function __construct(
         CurrencyRepository $repository,
-       $timeZone,
+        $timeZone,
         $variables = null,
         $options = null
     ) {

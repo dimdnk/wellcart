@@ -53,7 +53,7 @@ class Brand extends AbstractForm
                     ],
                 ],
                 'attributes' => [
-                    'id'        => 'catalog_brand_name',
+                    'id' => 'catalog_brand_name',
                 ],
             ],
             ['priority' => 700]

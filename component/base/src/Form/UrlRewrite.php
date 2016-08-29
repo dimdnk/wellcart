@@ -49,8 +49,8 @@ class UrlRewrite extends AbstractForm
                     ],
                 ],
                 'attributes' => [
-                    'id'        => 'base_url_rewrite_request_path',
-                    'required'  => 'required'
+                    'id'       => 'base_url_rewrite_request_path',
+                    'required' => 'required'
                 ],
             ],
             ['priority' => 700]

@@ -51,7 +51,7 @@ class Currency extends AbstractForm
                     ],
                 ],
                 'attributes' => [
-                    'id'        => 'directory_currency_title',
+                    'id' => 'directory_currency_title',
                 ],
             ],
             ['priority' => 700]

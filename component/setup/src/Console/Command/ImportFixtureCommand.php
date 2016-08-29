@@ -30,14 +30,14 @@ class ImportFixtureCommand extends ImportCommand
         }
 
         $fixtures = $loader->getFixtures();
-        if(empty($fixtures)) {
+        if (empty($fixtures)) {
             return;
         }
 
         $executor = new ORMExecutor($this->em, $purger);
         $executor->execute($fixtures, $input->getOption('append'));
 
-       $permissionsLoader = new PermissionsLoader($this->em);
-       $permissionsLoader->load($fixtures);
+        $permissionsLoader = new PermissionsLoader($this->em);
+        $permissionsLoader->load($fixtures);
     }
 }

@@ -145,7 +145,7 @@ class SetupPageVariables extends AbstractListenerAggregate
     /**
      * Add html body classes
      *
-     * @param BodyClass $bodyClass
+     * @param BodyClass  $bodyClass
      * @param RouteMatch $routeMatch
      */
     private function addHtmlBodyClasses(

@@ -325,7 +325,7 @@ return [
             'WellCart\Base\Controller\Console\Cache'                => 'WellCart\Base\Controller\Console\CacheController',
             'WellCart\Base\Controller\Console\Ember\ModelGenerator' => 'WellCart\Base\Controller\Console\Ember\ModelGeneratorController',
         ],
-        'factories' => array(
+        'factories'  => array(
             'TckImageResizer\Controller\Index' => 'WellCart\Base\Factory\Controller\ImageResizeControllerFactory',
         ),
     ],

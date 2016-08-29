@@ -39,11 +39,6 @@ class Categories extends NestedTreeRepository implements CategoryRepository
         return $optionList;
     }
 
-    public function findOneExcludeRoot($id)
-    {
-        return $this->finder()->excludeRoot()->find($id);
-    }
-
     /**
      * @return CategoriesQuery
      */
@@ -73,5 +68,10 @@ class Categories extends NestedTreeRepository implements CategoryRepository
             compact('queryBuilder')
         );
         return $queryBuilder;
+    }
+
+    public function findOneExcludeRoot($id)
+    {
+        return $this->finder()->excludeRoot()->find($id);
     }
 }
