@@ -96,38 +96,4 @@ return [
             ],
         ],
     ],
-    'wellcart-base:image-service-cache' => [
-        'type'    => 'Zend\Mvc\Router\Http\Regex',
-        'options' => [
-            'regex'    => '/media/(?<module>[a-zA-Z0-9_-]+)/(?<entity>[a-zA-Z0-9_-]+)/(?<filter_name>[a-zA-Z0-9_-]+)/(?<theme>[a-zA-Z0-9_-]+)_(?<width>[0-9]+)x(?<height>[0-9]+)/(?<image>[\s\S]+)',
-            'defaults' => [
-                'controller' => 'WellCart\Base\Controller\ImageService',
-                'action'     => 'image',
-            ],
-            'spec'     => '/media/%module%/%entity%/%filter_name%/%theme%_%width%x%height%/%image%',
-        ],
-    ],
-    'htimg'                             => [
-        'type'          => 'Literal',
-        'options'       => [
-            'route'    => '/htimg',
-            'defaults' => [
-                'controller' => 'WellCart\Base\Controller\Index',
-                'action'     => 'not-found'
-            ],
-        ],
-        'may_terminate' => true,
-        'child_routes'  => [
-            'display' => [
-                'type'    => 'Segment',
-                'options' => [
-                    'route'    => '/display/:filter[/]',
-                    'defaults' => [
-                        'controller' => 'WellCart\Base\Controller\Index',
-                        'action'     => 'not-found'
-                    ],
-                ],
-            ],
-        ]
-    ]
 ];

@@ -319,16 +319,6 @@ class Module implements
     {
         return [
             'factories' => [
-                'resizeImage' => function (HelperPluginManager $sm) {
-                    $locator = $sm->getServiceLocator();
-                    $theme = $locator->get('ZeThemeManager')->getTheme();
-                    return new ResizeImageViewHelper(
-                        $locator->get(
-                            'HtImgModule\Imagine\Filter\FilterManager'
-                        ),
-                        $theme
-                    );
-                },
                 'gridFilters' => function (HelperPluginManager $sm) {
                     $locator = $sm->getServiceLocator();
                     $builder = $locator

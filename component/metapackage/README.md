@@ -56,7 +56,7 @@ Third-party frameworks utilized in this framework:
     - [Wizard](https://github.com/neeckeloo/Wizard)
     - [StrokerForm](https://github.com/bramstroker/zf2-form)
     - [ConLayout](https://github.com/hummer2k/ConLayout)
-    - [HtImgModule](https://github.com/hrevert/HtImgModule)
+    - [TckImageResizer](https://github.com/tck/zf2-imageresizer)
     - [TwbBundle](https://github.com/neilime/zf2-twb-bundle)
     - [RdnRequireJS](https://github.com/radnan/rdn-require-js)
     - [BitWeb\CronModule](https://github.com/BitWeb/zf2-cron-module)

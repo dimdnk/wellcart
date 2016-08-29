@@ -127,12 +127,6 @@ return [
                 );
                 return $form;
             },
-        'HtImgModule\Service\CacheManager'               =>
-            function (ContainerInterface $services) {
-                /** @var \HtImgModule\Options\CacheOptionsInterface $options */
-                $options = $services->get('HtImg\ModuleOptions');
-                return new Service\MediaStorage\Cache\CacheManager($options);
-            },
         'WellCart\Base\EventListener\SetLayoutViewModel' =>
             function (
                 ContainerInterface $services

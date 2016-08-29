@@ -48,10 +48,6 @@ return [
             'Zend\Db\Adapter\Adapter'                                    => 'WellCart\Db\Factory\Adapter\MasterSlaveAdapterFactory',
             'ZeThemeManager'                                             => 'WellCart\Ui\Factory\Theme\ManagerFactory',
             'ZfcDatagrid\Datagrid'                                       => 'WellCart\Ui\Factory\Datagrid\DatagridFactory',
-
-            'HtImgModule\Imagine\Loader\LoaderPluginManager'             => 'WellCart\Stdlib\Factory\HtImg\Imagine\Loader\LoaderPluginManagerFactory',
-            'HtImg\ModuleOptions'                                        => 'WellCart\Base\Factory\Options\HtImgModuleOptionsFactory',
-
             'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContext'        => 'WellCart\Ui\Factory\Layout\Listener\AreaBasedOnThemeContextFactory',
             'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\Listener\ActionHandlesListenerFactory',
             'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Factory\Layout\Listener\LoadLayoutListenerFactory',
@@ -92,7 +88,6 @@ return [
             'StandardFeedModel'                                        => 'WellCart\View\Model\FeedModel',
             'StandardHalJsonModel'                                     => 'WellCart\View\Model\HalJsonModel',
             'StandardJsonModel'                                        => 'WellCart\View\Model\JsonModel',
-            'StandardImageModel'                                       => 'WellCart\View\Model\ImageModel',
             'WellCart\ORM\Repository\RepositoryFactory'                => 'WellCart\ORM\Repository\RepositoryFactory',
             'WellCart\ORM\Mapping\EntityListenerResolver'              => 'WellCart\ORM\Mapping\EntityListenerResolver',
         ],
@@ -129,7 +124,6 @@ return [
             'StandardFeedModel'                            => false,
             'StandardHalJsonModel'                         => false,
             'StandardJsonModel'                            => false,
-            'StandardImageModel'                           => false,
             'ZfcDatagrid\Datagrid'                         => false,
         ],
     ],
@@ -711,85 +705,6 @@ return [
         'wizards'                 => [],
     ],
     'wizard_steps'               => [],
-    'htimg'                      => [
-        /**
-         * Enable Cache
-         *
-         * Whether or not to cache image in public path,
-         * so that Apache(or whatever) can directly get image
-         * This can improve a lot of performance
-         *
-         * Default: true
-         * Accepted values: boolean
-         */
-        'enable_cache'          => true,
-        /**
-         * Image Source Path Stack
-         *
-         * Folders where to look for the requested file (similar to Zend Framework template path stack)
-         *
-         * Default: Empty array|[]
-         * Accepted values: array containing folders or directories
-         */
-        'img_source_path_stack' => [WELLCART_STORAGE_PATH . 'upload'
-                                    . DS => WELLCART_STORAGE_PATH
-            . 'upload' . DS],
-        /**
-         * Image Source Map
-         *
-         * Exact path to image (similar to Zend Framework template map)
-         *
-         * Default: Empty array|[]
-         * Accepted values: array containing key as image relative path and value as image real path
-         */
-        'img_source_map'        => [],
-        /**
-         * Imagine Driver
-         *
-         * Default: gd
-         * Accepted values: one of gd, imagick or gmagick
-         * It is registered as service which you can obtain throught ServiceLocator aware classes with:
-         * $imagine = $this->getServiceLocator()->get('HtImg\Imagine');
-         */
-        'driver'                => 'gd',
-        /**
-         * Filters which can be accessed through view helper, 'imgUrl' easily
-         */
-        'filters'               => [],
-        /**
-         * Web Root
-         *
-         * Default: public (For Zend Skeleton Application)
-         */
-        'web_root'              => WELLCART_PUBLIC_PATH,
-        /**
-         * Cache Path(Relative to web root)
-         *
-         * Default: htimg
-         */
-        'cache_path'            => 'media',
-        /**
-         * Filter Loaders
-         */
-        'filter_loaders'        => [],
-        /**
-         * Cache Expiry
-         *
-         * Interval in seconds after which a cached image will expire and new cache is to be created
-         *
-         * Default: 86400   (1 day)
-         * Accepted value: Integer
-         */
-        'cache_expiry'          => 86400,
-        /**
-         * Default Image Loader
-         *
-         * Image Loader determines how to load a image for a "filter"
-         * This option means the default image loader(for all filters)
-         * Please see the docs for creating a custom image loader
-         */
-        'default_image_loader'  => 'FileSystem',
-    ],
     'navigation'                 => [
         'backend_main_navigation' => include __DIR__
             . '/backend_main_navigation.php',

@@ -33,10 +33,7 @@ class FormProductImage extends FormFile
             $panel = sprintf(
                 '<div class="panel-body">%s</div>',
                 $image->thumbnail(
-                    $view->resizeImage(
-                        $fullPath,
-                        'catalog_product_thumbnail'
-                    )
+                    $view->resize($fullPath)->thumb(75, 75)
                 )
             );
         }

@@ -340,29 +340,6 @@ return [
             'catalogProductImage' => Catalog\Form\Element\ProductImage::class,
         ],
     ],
-    'htimg'                      => [
-        /**
-         * Filters which can be accessed through view helper, 'imgUrl' easily
-         */
-        'filters' => [
-            'catalog_brand_logo_thumbnail' => [
-                'type'    => 'thumbnail',
-                'options' => [
-                    'width'    => 75,
-                    'height'   => 75,
-                    'animated' => false,
-                ]
-            ],
-            'catalog_product_thumbnail'    => [
-                'type'    => 'thumbnail',
-                'options' => [
-                    'width'    => 75,
-                    'height'   => 75,
-                    'animated' => false,
-                ]
-            ],
-        ],
-    ],
 
     'command_bus'                => [
         'command_map' => [

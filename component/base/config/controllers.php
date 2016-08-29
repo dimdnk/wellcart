@@ -63,14 +63,6 @@ return [
                 $controller = new Controller\IndexController();
                 return $controller;
             },
-        'WellCart\Base\Controller\ImageService'      =>
-            function (ControllerManager $sm) {
-                $services = $sm->getServiceLocator();
-                $controller = new Controller\ImageServiceController(
-                    $services->get('HtImgModule\Service\ImageService')
-                );
-                return $controller;
-            },
         'WellCart\Base\Controller\Admin\Languages'   =>
             function (ControllerManager $sm) {
                 $services = $sm->getServiceLocator();

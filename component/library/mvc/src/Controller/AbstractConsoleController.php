@@ -24,7 +24,6 @@ use Zend\Mvc\MvcEvent;
  * @method \WellCart\Mvc\Controller\Plugin\CreateConsoleModel createConsoleModel($variables = null, $options = null)
  * @method \WellCart\Mvc\Controller\Plugin\CreateFeedModel createFeedModel($variables = null, $options = null)
  * @method \WellCart\Mvc\Controller\Plugin\CreateHalJsonModel createHalJsonModel($variables = null, $options = null)
- * @method \WellCart\Mvc\Controller\Plugin\CreateImageModel createImageModel($variables = null, $options = null)
  * @method \WellCart\Mvc\Controller\Plugin\CreateJsonModel createJsonModel($variables = null, $options = null)
  * @method \WellCart\Mvc\Controller\Plugin\InvokeAction invokeAction(MvcEvent $e)
  * @method \WellCart\Mvc\Controller\Plugin\Locale locale()

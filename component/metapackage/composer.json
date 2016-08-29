@@ -59,7 +59,7 @@
     "bitweb/zf2-cron-module": "2.0.*",
     "prolic/humus-amqp-module": "dev-master",
     "atukai/at-php-settings": "1.*",
-    "hrevert/ht-img-module": "0.4.*",
+    "tck/zf2-imageresizer": "1.*",
     "radnan/rdn-factory": "1.*",
     "radnan/rdn-require-js": "1.*",
     "acelaya/zf2-acmailer": "5.*",

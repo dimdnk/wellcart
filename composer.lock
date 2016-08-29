@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2eecf81dd8ed075452c314c18855a904",
-    "content-hash": "c60fa4f2f3d7e9a6be88b3905fdcdca2",
+    "hash": "769e9387a7c64e00a41e5192ff1226ff",
+    "content-hash": "38a2b28110effb1d5c06d3710f41493c",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -206,53 +206,6 @@
                 "oauth2"
             ],
             "time": "2016-06-09 22:27:08"
-        },
-        {
-            "name": "atans/doctrine-viewer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/atans/DoctrineViewer.git",
-                "reference": "6ff370d98609773c11e7841a3bace5f9e586dc0e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/atans/DoctrineViewer/zipball/6ff370d98609773c11e7841a3bace5f9e586dc0e",
-                "reference": "6ff370d98609773c11e7841a3bace5f9e586dc0e",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/doctrine-orm-module": "0.*",
-                "php": ">=5.3.3",
-                "zendframework/zendframework": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "DoctrineViewer": "src/"
-                },
-                "classmap": [
-                    "./Module.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Atans Chiu",
-                    "email": "atans.chiu@gmail.com",
-                    "homepage": "https://github.com/atans"
-                }
-            ],
-            "description": "A simple Doctrine viewer module for Zend Framework 2",
-            "homepage": "https://github.com/atans/DoctrineViewer",
-            "keywords": [
-                "doctrine",
-                "zf2"
-            ],
-            "time": "2014-09-04 04:48:06"
         },
         {
             "name": "atukai/at-php-settings",
@@ -2855,74 +2808,6 @@
             "time": "2013-12-12 15:42:53"
         },
         {
-            "name": "hrevert/ht-img-module",
-            "version": "0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hrevert/HtImgModule.git",
-                "reference": "5d69b441a70f7df54216b347e5fa514c3a0830a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hrevert/HtImgModule/zipball/5d69b441a70f7df54216b347e5fa514c3a0830a7",
-                "reference": "5d69b441a70f7df54216b347e5fa514c3a0830a7",
-                "shasum": ""
-            },
-            "require": {
-                "imagine/imagine": "0.6.*",
-                "php": ">=5.4",
-                "symfony/http-foundation": "~2.3",
-                "zendframework/zend-eventmanager": "~2.2",
-                "zendframework/zend-http": "~2.2",
-                "zendframework/zend-modulemanager": "~2.2",
-                "zendframework/zend-mvc": "~2.2",
-                "zendframework/zend-servicemanager": "~2.2",
-                "zendframework/zend-stdlib": "~2.2"
-            },
-            "require-dev": {
-                "ext-gd": "*",
-                "knplabs/gaufrette": "0.1.*",
-                "league/flysystem": "0.4.*",
-                "phine/test": "1.*",
-                "phpunit/phpunit": "4.1.*",
-                "zendframework/zend-escaper": "~2.2",
-                "zendframework/zend-filter": "~2.2",
-                "zendframework/zend-view": "~2.2"
-            },
-            "suggest": {
-                "knplabs/gaufrette": "To use this library to load image",
-                "league/flysystem": "To use this library to load image",
-                "zendframework/zend-view": "To use some view helpers provided this module"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "HtImgModule\\": "src/"
-                },
-                "classmap": [
-                    "./Module.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hrevert Technologies",
-                    "email": "info@hrevert.com"
-                }
-            ],
-            "description": "Image manipulation module for Zend Framework 2",
-            "homepage": "https://github.com/hrevert/HtImgModule",
-            "keywords": [
-                "ZendFramework",
-                "module",
-                "zf2"
-            ],
-            "time": "2015-05-27 02:11:34"
-        },
-        {
             "name": "hummer2k/conlayout",
             "version": "v3.2.0",
             "source": {
@@ -3101,48 +2986,6 @@
                 "image processing"
             ],
             "time": "2015-09-19 16:54:05"
-        },
-        {
-            "name": "ircmaxell/password-compat",
-            "version": "v1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ircmaxell/password_compat.git",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/password.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
-                    "homepage": "http://blog.ircmaxell.com"
-                }
-            ],
-            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
-            "homepage": "https://github.com/ircmaxell/password_compat",
-            "keywords": [
-                "hashing",
-                "password"
-            ],
-            "time": "2014-11-20 16:49:30"
         },
         {
             "name": "ivaynberg/select2",
@@ -4699,16 +4542,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.5.2",
+            "version": "5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "46ec2d1522ae8c9a12aca6b7650e0be78bbb0502"
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/46ec2d1522ae8c9a12aca6b7650e0be78bbb0502",
-                "reference": "46ec2d1522ae8c9a12aca6b7650e0be78bbb0502",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3e6e88e56c912133de6e99b87728cca7ed70c5f5",
+                "reference": "3e6e88e56c912133de6e99b87728cca7ed70c5f5",
                 "shasum": ""
             },
             "require": {
@@ -4773,20 +4616,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-08-18 11:10:44"
+            "time": "2016-08-26 07:11:44"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.2.4",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "4e83390f64e7ce04fcaec2ce95cd72823b431d19"
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/4e83390f64e7ce04fcaec2ce95cd72823b431d19",
-                "reference": "4e83390f64e7ce04fcaec2ce95cd72823b431d19",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
+                "reference": "46b249b43fd2ed8e127aa0fdb3cbcf56e9bc0e49",
                 "shasum": ""
             },
             "require": {
@@ -4832,7 +4675,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-08-17 09:33:51"
+            "time": "2016-08-26 05:51:59"
         },
         {
             "name": "prolic/humus-amqp",
@@ -7084,61 +6927,6 @@
             "time": "2016-06-29 05:41:56"
         },
         {
-            "name": "symfony/http-foundation",
-            "version": "v2.8.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "f20bea598906c990eebe3c70a63ca5ed18cdbc11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f20bea598906c990eebe3c70a63ca5ed18cdbc11",
-                "reference": "f20bea598906c990eebe3c70a63ca5ed18cdbc11",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "symfony/polyfill-mbstring": "~1.1",
-                "symfony/polyfill-php54": "~1.0",
-                "symfony/polyfill-php55": "~1.0"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~2.4|~3.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\HttpFoundation\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony HttpFoundation Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-07-30 07:20:35"
-        },
-        {
             "name": "symfony/options-resolver",
             "version": "v2.8.9",
             "source": {
@@ -7245,120 +7033,6 @@
             "keywords": [
                 "compatibility",
                 "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2016-05-18 14:26:46"
-        },
-        {
-            "name": "symfony/polyfill-php54",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php54.git",
-                "reference": "34d761992f6f2cc6092cc0e5e93f38b53ba5e4f1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/34d761992f6f2cc6092cc0e5e93f38b53ba5e4f1",
-                "reference": "34d761992f6f2cc6092cc0e5e93f38b53ba5e4f1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php54\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 5.4+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2016-05-18 14:26:46"
-        },
-        {
-            "name": "symfony/polyfill-php55",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php55.git",
-                "reference": "bf2ff9ad6be1a4772cb873e4eea94d70daa95c6d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/bf2ff9ad6be1a4772cb873e4eea94d70daa95c6d",
-                "reference": "bf2ff9ad6be1a4772cb873e4eea94d70daa95c6d",
-                "shasum": ""
-            },
-            "require": {
-                "ircmaxell/password-compat": "~1.0",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php55\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 5.5+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
                 "polyfill",
                 "portable",
                 "shim"
@@ -7528,6 +7202,76 @@
             "time": "2016-07-17 14:02:08"
         },
         {
+            "name": "tck/zf2-imageresizer",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tck/zf2-imageresizer.git",
+                "reference": "d3dd176ca555111aa6836157cdf0a12701334033"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tck/zf2-imageresizer/zipball/d3dd176ca555111aa6836157cdf0a12701334033",
+                "reference": "d3dd176ca555111aa6836157cdf0a12701334033",
+                "shasum": ""
+            },
+            "require": {
+                "imagine/imagine": "0.6.*",
+                "php": ">=5.4.0",
+                "zendframework/zend-cache": "~2.5",
+                "zendframework/zend-config": "~2.5",
+                "zendframework/zend-console": "~2.5",
+                "zendframework/zend-http": "~2.5",
+                "zendframework/zend-i18n": "~2.5",
+                "zendframework/zend-loader": "~2.5",
+                "zendframework/zend-log": "~2.5",
+                "zendframework/zend-modulemanager": "~2.5",
+                "zendframework/zend-mvc": "~2.5",
+                "zendframework/zend-view": "~2.5"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.*",
+                "nikic/php-parser": "<1.2.0",
+                "pdepend/pdepend": "2.*",
+                "phploc/phploc": "2.*",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "~4.3|~5",
+                "sebastian/phpcpd": "2.*",
+                "squizlabs/php_codesniffer": "1.*",
+                "theseer/phpdox": "0.7.*",
+                "zendframework/zend-serializer": "~2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "TckImageResizer": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Knab",
+                    "email": "mail@text-indent.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Image resizer and manipulation module for Zend Framework 2",
+            "homepage": "https://github.com/tck/zf2-imageresizer",
+            "keywords": [
+                "image",
+                "php",
+                "zend",
+                "zf2"
+            ],
+            "time": "2015-11-24 09:09:26"
+        },
+        {
             "name": "thadafinser/zfc-datagrid",
             "version": "v1.2.0",
             "source": {
@@ -7610,16 +7354,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.4.1",
+            "version": "4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "1fe6087b3b1194f5d4e1bd5e5d725262fe1fbbf0"
+                "reference": "351593db2412674e7be21db0d5f2e0c16bfe946d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/1fe6087b3b1194f5d4e1bd5e5d725262fe1fbbf0",
-                "reference": "1fe6087b3b1194f5d4e1bd5e5d725262fe1fbbf0",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/351593db2412674e7be21db0d5f2e0c16bfe946d",
+                "reference": "351593db2412674e7be21db0d5f2e0c16bfe946d",
                 "shasum": ""
             },
             "type": "component",
@@ -7652,7 +7396,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2016-07-26 09:51:16"
+            "time": "2016-08-25 13:51:28"
         },
         {
             "name": "twig/twig",
@@ -13711,7 +13455,6 @@
         "zendexperts/ze-theme": 20,
         "neilime/zf2-twb-bundle": 0,
         "soflomo/log": 20,
-        "atans/doctrine-viewer": 20,
         "swix/swix-em-config": 20,
         "zfcampus/zf-apigility": 20,
         "zfcampus/zf-apigility-documentation": 20,

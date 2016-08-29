@@ -22,8 +22,4 @@ return [
         'layout/mail/page-fixed-1column' => __DIR__
             . '/../view/layout/mail/page-fixed-1column.phtml',
     ],
-    'images'       => [
-        'filters' => [
-        ],
-    ],
 ];
