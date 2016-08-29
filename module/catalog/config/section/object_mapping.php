@@ -196,9 +196,7 @@ return [
                                         'options' => [
                                             'use_upload_name'        => true,
                                             'enable_file_dispersion' => true,
-                                            'target_directory'       =>
-                                                WELLCART_STORAGE_PATH
-                                                . 'upload/catalog/brand/',
+                                            'target_directory'       => WELLCART_UPLOAD_PATH,
                                             'randomize'              => true,
                                             'use_upload_extension'   => true,
                                         ],
@@ -542,9 +540,7 @@ return [
                                         'options' => [
                                             'use_upload_name'        => true,
                                             'enable_file_dispersion' => true,
-                                            'target_directory'       =>
-                                                WELLCART_STORAGE_PATH
-                                                . 'upload/catalog/products/',
+                                            'target_directory'       => WELLCART_UPLOAD_PATH,
                                             'randomize'              => true,
                                             'use_upload_extension'   => true,
                                         ],
