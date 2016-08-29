@@ -66,7 +66,7 @@ class GeoZonesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

@@ -102,7 +102,7 @@ class CategoriesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

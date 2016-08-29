@@ -65,7 +65,6 @@ class AccountsGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
     }
 
     /**

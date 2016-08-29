@@ -66,7 +66,7 @@ class BrandsGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

@@ -35,7 +35,7 @@ class PreferencesForm extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
         return parent::prepare($template, $values);
     }
 }

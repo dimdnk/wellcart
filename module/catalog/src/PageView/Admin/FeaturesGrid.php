@@ -101,7 +101,7 @@ class FeaturesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

@@ -66,7 +66,7 @@ class ZonesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

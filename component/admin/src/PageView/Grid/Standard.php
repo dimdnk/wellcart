@@ -146,7 +146,6 @@ abstract class Standard
         }
 
         $this->addLayoutHandle($this->layout, -1);
-        $this->fluidContainer();
         $scope = $this->scope();
         $route = $this->routeName();
 
@@ -204,8 +203,7 @@ abstract class Standard
         $vars = compact(
             'scope',
             'route',
-            'paginator',
-            'fluidContainer'
+            'paginator'
         );
 
         $gridViewModel = $this->grid->getResponse();

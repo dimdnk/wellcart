@@ -65,7 +65,7 @@ class ClientsGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

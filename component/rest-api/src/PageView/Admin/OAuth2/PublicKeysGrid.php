@@ -65,7 +65,6 @@ class PublicKeysGrid extends Standard
                     ],
                 ]
             );
-        $this->fluidContainer();
     }
 
     /**

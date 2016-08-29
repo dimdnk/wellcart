@@ -129,32 +129,11 @@ class EntityPageView extends AbstractPageView
         return $this;
     }
 
-    public function isFluidContainer():bool
-    {
-        return (bool)$this->getVariable('fluidContainer');
-    }
+
 
     final public function getContainerClass()
     {
         return $this->getVariable('containerClass');
-    }
-
-    /**
-     * @return EntityPageView
-     */
-    final protected function fluidContainer()
-    {
-        $this->setVariable('fluidContainer', true);
-        return $this;
-    }
-
-    /**
-     * @return EntityPageView
-     */
-    final protected function fixedContainer()
-    {
-        $this->setVariable('fluidContainer', false);
-        return $this;
     }
 
     /**

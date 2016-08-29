@@ -82,7 +82,6 @@ class NotificationsGrid extends Standard
                     ],
                 ]
             );
-        $this->fluidContainer();
     }
 
     /**

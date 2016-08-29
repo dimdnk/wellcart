@@ -97,7 +97,7 @@ class PagesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

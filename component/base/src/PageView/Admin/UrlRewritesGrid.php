@@ -66,7 +66,7 @@ class UrlRewritesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

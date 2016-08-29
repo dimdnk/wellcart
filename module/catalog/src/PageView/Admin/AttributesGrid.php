@@ -101,7 +101,7 @@ class AttributesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

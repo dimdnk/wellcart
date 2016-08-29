@@ -100,7 +100,7 @@ class ProductTemplatesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

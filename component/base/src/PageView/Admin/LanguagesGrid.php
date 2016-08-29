@@ -67,7 +67,7 @@ class LanguagesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+        
     }
 
     /**

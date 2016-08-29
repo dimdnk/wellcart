@@ -66,7 +66,7 @@ class CountriesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

@@ -36,7 +36,6 @@ class ProductForm extends Standard
             return $this;
         }
         $this->addLayoutHandle('catalog/products/form')
-            ->fluidContainer()
             ->setPageTitle(__('Products'))
             ->setBreadcrumbs(
                 [

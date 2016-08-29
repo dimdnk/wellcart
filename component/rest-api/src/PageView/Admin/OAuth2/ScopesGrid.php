@@ -66,7 +66,7 @@ class ScopesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

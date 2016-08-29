@@ -71,7 +71,7 @@ class CurrenciesGrid extends Standard
                     ],
                 ]
             );
-        $this->fixedContainer();
+
     }
 
     /**

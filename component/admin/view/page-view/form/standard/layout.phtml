@@ -18,7 +18,7 @@ echo $this->PageHeader;
 <div class="content">
     <div class="col-md-12 form-main-container">
         <div
-            class="container<?php if ($this->fluidContainer): ?>-fluid<?php endif ?><?php if ($this->containerClass): ?> <?php echo $this->containerClass ?><?php endif ?>">
+            class="container-fluid<?php if ($this->containerClass): ?> <?php echo $this->containerClass ?><?php endif ?>">
             <?php echo $this->PrePageContent ?>
             <div class="panel panel-flat">
                 <?php echo $this->form()->openTag($form); ?>
