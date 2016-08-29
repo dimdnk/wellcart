@@ -261,9 +261,6 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
      */
     protected function fileDispersion($finalTarget)
     {
-        if (strpos($finalTarget, DS . 'original_image' . DS) !== false) {
-            return $finalTarget;
-        }
         if ($this->isFileDispersionEnabled()) {
             $file = pathinfo($finalTarget, PATHINFO_BASENAME);
             $dispersionPath = $this->getDispersionPath($file);
@@ -297,7 +294,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     private function getDispersionPath($fileName)
     {
         $char = 0;
-        $dispertionPath = DS . 'original_image' . DS;
+        $dispertionPath = DS;
         while (($char < 2) && ($char < strlen($fileName))) {
             if (empty($dispertionPath)) {
                 $dispertionPath = DS
