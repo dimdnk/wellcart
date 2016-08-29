@@ -325,6 +325,9 @@ return [
             'WellCart\Base\Controller\Console\Cache'                => 'WellCart\Base\Controller\Console\CacheController',
             'WellCart\Base\Controller\Console\Ember\ModelGenerator' => 'WellCart\Base\Controller\Console\Ember\ModelGeneratorController',
         ],
+        'factories' => array(
+            'TckImageResizer\Controller\Index' => 'WellCart\Base\Factory\Controller\ImageResizeControllerFactory',
+        ),
     ],
     /**
      * =========================================================
@@ -340,6 +343,7 @@ return [
             'assetPath'             => 'WellCart\View\Helper\AssetPath',
             'mediaPath'             => 'WellCart\View\Helper\MediaPath',
             'themePath'             => 'WellCart\View\Helper\ThemePath',
+            'resizeImage'           => 'WellCart\View\Helper\ResizeImage',
             'headLink'              => 'WellCart\View\Helper\HeadLink',
             'headScript'            => 'WellCart\View\Helper\HeadScript',
             'inlineScript'          => 'WellCart\View\Helper\InlineScript',

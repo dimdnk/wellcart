@@ -41,7 +41,7 @@ class BrandForm extends Standard
             ->setBreadcrumbs(
                 [
                     'list' => [
-                        'label'  => __('Brand'),
+                        'label'  => __('Brands'),
                         'route'  => 'zfcadmin/catalog/brands',
                         'params' => [],
                     ],

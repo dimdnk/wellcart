@@ -15,7 +15,7 @@ if (!$entity->hasImage()) {
         <?php
         echo $this->plugin('image')
             ->thumbnail(
-                $this->resize($entity->getImageFullPath())->thumb(75, 75)
+                $this->resizeImage($entity->getImageFullPath())->thumb(75, 75)
             )
         ?>
     </div>

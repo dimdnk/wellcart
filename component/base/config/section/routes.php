@@ -6,11 +6,11 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'wellcart-base:url-rewrites'        => [
+    'wellcart-base:url-rewrites' => [
         'type'     => 'SystemUrlRewritesHandler',
         'priority' => 100000,
     ],
-    'assets'                            => [
+    'assets'                     => [
         'type'             => 'WellCart\Router\Http\Literal',
         'javascript_route' => true,
         'priority'         => -500,
@@ -22,7 +22,7 @@ return [
             ],
         ],
     ],
-    'wellcart-base:home'                => [
+    'wellcart-base:home'         => [
         'type'             => 'WellCart\Router\Http\Literal',
         'javascript_route' => true,
         'priority'         => -500,
@@ -34,7 +34,7 @@ return [
             ],
         ],
     ],
-    'zfcadmin'                          => [
+    'zfcadmin'                   => [
         'type'          => 'WellCart\Router\Http\Segment',
         'may_terminate' => true,
         'options'       => [
@@ -96,4 +96,29 @@ return [
             ],
         ],
     ],
+    'tckimageresizer'            => array(
+        'type'          => 'Literal',
+        'options'       => array(
+            'route'    => '/media',
+            'defaults' => array(
+                '__NAMESPACE__' => null,
+                'controller'    => 'TckImageResizer\Controller\Index',
+                'action'        => 'index',
+            ),
+        ),
+        'may_terminate' => true,
+        'child_routes'  => array(
+            'resize' => array(
+                'type'    => 'Zend\Mvc\Router\Http\Regex',
+                'options' => array(
+                    'regex'    => '/(?<file>.*?)\.\$(?<command>.*)\.(?<extension>[a-zA-Z]+)',
+                    'defaults' => array(
+                        'controller' => 'TckImageResizer\Controller\Index',
+                        'action'     => 'resize',
+                    ),
+                    'spec'     => '/media/%file%.$%command%.%extension%',
+                ),
+            ),
+        ),
+    ),
 ];
