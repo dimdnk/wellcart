@@ -112,7 +112,7 @@ class Module implements
     {
         return [
             'factories' => [
-                'catalogFeatureCombinationMultiCheckbox'            =>
+                'catalogFeatureCombinationMultiCheckbox'       =>
                     function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
                     ) {
                         $services = $sm->getServiceLocator();

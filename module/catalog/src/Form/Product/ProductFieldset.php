@@ -110,16 +110,16 @@ class ProductFieldset extends Fieldset
                 'name'       => 'status',
                 'type'       => 'Checkbox',
                 'options'    => [
-                    'label'            => __('Online'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8 col-md-offset-4',
-                    'value_options'    => [
+                    'label'              => __('Online'),
+                    'twb-layout'         => 'horizontal',
+                    'column-size'        => 'md-8 col-md-offset-4',
+                    'value_options'      => [
                         0 => __('Disable'),
                         1 => __('Enable'),
                     ],
-                    'use_hidden_element'  => true,
-                    'checked_value'       => 1,
-                    'unchecked_value'     => 0,
+                    'use_hidden_element' => true,
+                    'checked_value'      => 1,
+                    'unchecked_value'    => 0,
                 ],
                 'attributes' => [
                     'class'        => 'switchery-element',
@@ -165,8 +165,8 @@ class ProductFieldset extends Fieldset
 
                 ],
                 'attributes' => [
-                    'required'     => false,
-                    'id'           => 'catalog_product_features',
+                    'required' => false,
+                    'id'       => 'catalog_product_features',
                 ],
             ],
             ['priority' => 1040]

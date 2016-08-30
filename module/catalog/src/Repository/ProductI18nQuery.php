@@ -31,16 +31,16 @@ class ProductI18nQuery extends QueryBuilder
         return $this;
     }
 
-    public function withProduct()
+    public function withVariants()
     {
-        $this->innerJoin($this->getRootAliases()[0] . '.product', 'p');
+        $this->withProduct();
+        $this->innerJoin('p.variants', 'variants');
         return $this;
     }
 
-    public function withVariants()
+    public function withProduct()
     {
-       $this->withProduct();
-        $this->innerJoin('p.variants', 'variants');
+        $this->innerJoin($this->getRootAliases()[0] . '.product', 'p');
         return $this;
     }
 }

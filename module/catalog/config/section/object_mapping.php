@@ -714,10 +714,10 @@ return [
                                     'StringTrim' => ['name' => 'StringTrim'],
                                 ],
                                 'validators' => [
-                                    'Digits'   => [
+                                    'Digits'  => [
                                         'name' => 'Digits',
                                     ],
-                                    'Between'  => [
+                                    'Between' => [
                                         'name'    => 'Between',
                                         'options' => [
                                             'min' => 0,
