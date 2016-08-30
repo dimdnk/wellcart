@@ -864,16 +864,16 @@
         },
         {
             "name": "components/ember-data",
-            "version": "v2.8.0-beta.1",
+            "version": "v2.8.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/ember-data.git",
-                "reference": "737a54e2e8254cfd63bcd86e27734ef9443cc206"
+                "reference": "e2bf9924e31fac3c2dfd2a2c51477a7914c524b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/ember-data/zipball/737a54e2e8254cfd63bcd86e27734ef9443cc206",
-                "reference": "737a54e2e8254cfd63bcd86e27734ef9443cc206",
+                "url": "https://api.github.com/repos/components/ember-data/zipball/e2bf9924e31fac3c2dfd2a2c51477a7914c524b5",
+                "reference": "e2bf9924e31fac3c2dfd2a2c51477a7914c524b5",
                 "shasum": ""
             },
             "require": {
@@ -902,7 +902,7 @@
                 "MIT"
             ],
             "description": "A data persistence library for Ember.js.",
-            "time": "2016-07-25 21:19:29"
+            "time": "2016-08-29 12:41:44"
         },
         {
             "name": "components/font-awesome",
