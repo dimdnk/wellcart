@@ -73,7 +73,7 @@ class ProductsGrid extends Standard
     {
         parent::configureQueryBuilder($qb);
         $qb->filterByLanguage($this->language)
-            ->withProduct();
+            ->withVariants();
         return $this;
     }
 
@@ -127,9 +127,11 @@ class ProductsGrid extends Standard
         $col->setFilterable(true)->setFilter('text', 'like');
         $this->addColumn($col);
 
-        $col = new Datagrid\Column('p.price');
+        $col = new Datagrid\Column('variants.price');
         $col->setLabel(__('Price'));
         $col->setWidth(10);
+        $col->setSortable(true);
+        $col->setFilterable(true)->setFilter('rangeFilter', 'range');
         $col->addFormatter(new ProductsGrid\PriceFormatter);
         $this->addColumn($col);
 

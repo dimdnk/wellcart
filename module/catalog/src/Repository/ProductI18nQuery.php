@@ -36,4 +36,11 @@ class ProductI18nQuery extends QueryBuilder
         $this->innerJoin($this->getRootAliases()[0] . '.product', 'p');
         return $this;
     }
+
+    public function withVariants()
+    {
+       $this->withProduct();
+        $this->innerJoin('p.variants', 'variants');
+        return $this;
+    }
 }
