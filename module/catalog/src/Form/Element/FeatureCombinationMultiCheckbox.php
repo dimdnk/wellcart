@@ -15,6 +15,16 @@ use WellCart\Form\Element\MultiCheckbox;
 class FeatureCombinationMultiCheckbox extends MultiCheckbox
 {
     /**
+     * Seed attributes
+     *
+     * @var array
+     */
+    protected $attributes
+        = [
+            'type' => 'catalogFeatureCombinationMultiCheckbox',
+        ];
+
+    /**
      * @inheritDoc
      */
     public function setValue($value)

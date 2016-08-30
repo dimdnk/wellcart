@@ -108,21 +108,21 @@ class ProductFieldset extends Fieldset
         $this->add(
             [
                 'name'       => 'status',
-                'type'       => 'Select',
+                'type'       => 'Checkbox',
                 'options'    => [
-                    'label'            => __('Status'),
+                    'label'            => __('Online'),
                     'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'column-size'      => 'md-8 col-md-offset-4',
                     'value_options'    => [
                         0 => __('Disable'),
                         1 => __('Enable'),
                     ],
+                    'use_hidden_element'  => true,
+                    'checked_value'       => 1,
+                    'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'class'        => 'chosen-element',
+                    'class'        => 'switchery-element',
                     'autocomplete' => 'off',
                     'id'           => 'catalog_product_status',
                 ],
@@ -161,14 +161,11 @@ class ProductFieldset extends Fieldset
                     'disable_inarray_validator' => true,
                     'unselected_value'          => null,
                     'twb-layout'                => 'horizontal',
-                    'column-size'               => 'md-8 col-md-offset-1',
+                    'column-size'               => 'md-8',
 
                 ],
                 'attributes' => [
                     'required'     => false,
-                    'size'         => 15,
-                    'multiple'     => 'multiple',
-                    'autocomplete' => 'off',
                     'id'           => 'catalog_product_features',
                 ],
             ],
@@ -297,10 +294,10 @@ class ProductFieldset extends Fieldset
                     'columns'                => [
                         ['element_name' => 'product_id', 'width' => 4,],
                         ['element_name' => 'image', 'label' => __('Image'),
-                         'width'        => 48,],
+                         'width'        => 30,],
                         ['element_name' => 'description',
                          'label'        => __('Description'),
-                         'width'        => 48,],
+                         'width'        => 60,],
                     ],
                     'row_actions'            => [
                         ['element_name' => 'remove'],

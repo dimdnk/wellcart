@@ -710,15 +710,10 @@ return [
                             'type'                       => 'boolean',
                             'nullable'                   => false,
                             'input_filter_specification' => [
-                                'required'   => true,
                                 'filters'    => [
                                     'StringTrim' => ['name' => 'StringTrim'],
-                                    'Null'       => ['name' => 'Null'],
                                 ],
                                 'validators' => [
-                                    'NotEmpty' => [
-                                        'name' => 'NotEmpty',
-                                    ],
                                     'Digits'   => [
                                         'name' => 'Digits',
                                     ],

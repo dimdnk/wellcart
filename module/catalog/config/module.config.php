@@ -79,7 +79,7 @@ return [
                         'options'      => [
                             'route'    => 'catalog/',
                             'defaults' => [
-                                'controller' => Catalog\Controller\Admin\Products::class,
+                                'controller' => 'WellCart\Catalog\Controller\Admin\Products',
                                 'action'     => 'list',
                             ],
                         ],
