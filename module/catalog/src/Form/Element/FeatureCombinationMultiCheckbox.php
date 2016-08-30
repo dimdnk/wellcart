@@ -10,9 +10,9 @@ namespace WellCart\Catalog\Form\Element;
 
 use Doctrine\Common\Collections\Collection;
 use WellCart\Catalog\Entity\FeatureCombination;
-use WellCart\Form\Element\Select as SelectElement;
+use WellCart\Form\Element\MultiCheckbox;
 
-class FeatureCombinationSelect extends SelectElement
+class FeatureCombinationMultiCheckbox extends MultiCheckbox
 {
     /**
      * @inheritDoc

@@ -194,10 +194,12 @@ return [
     ],
     'form_element_configuration' => [
         'class_map' => [
-            'formCatalogProductImage' => Catalog\Form\View\Helper\FormProductImage::class,
+            'formCatalogProductImage'                    => Catalog\Form\View\Helper\FormProductImage::class,
+            'formCatalogFeatureCombinationMultiCheckbox' => Catalog\Form\View\Helper\FormCatalogFeatureCombinationMultiCheckbox::class,
         ],
         'type_map'  => [
-            'catalogProductImage' => 'formCatalogProductImage',
+            'catalogProductImage'                    => 'formCatalogProductImage',
+            'catalogFeatureCombinationMultiCheckbox' => 'formCatalogFeatureCombinationMultiCheckbox',
         ],
     ],
     'twbbundle'                  => [
@@ -315,7 +317,8 @@ return [
     ],
     'view_helpers'               => [
         'invokables' => [
-            'formCatalogProductImage' => Catalog\Form\View\Helper\FormProductImage::class,
+            'formCatalogProductImage'                    => Catalog\Form\View\Helper\FormProductImage::class,
+            'formCatalogFeatureCombinationMultiCheckbox' => Catalog\Form\View\Helper\FormCatalogFeatureCombinationMultiCheckbox::class,
         ],
     ],
 

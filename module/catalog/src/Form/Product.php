@@ -203,32 +203,12 @@ class Product extends AbstractForm
                  */
                 foreach ($images as $k => $image) {
                     $imageData = Arr::get($imagesData, $k . '.image');
-                    $uploadedImage = str_replace(
-                        '\\',
-                        '/',
-                        trim($imageData['tmp_name'])
-                    );
-                    if (empty($uploadedImage)) {
+                    if (empty($imageData['tmp_name'])) {
                         if (!$image->getFullPath()) {
                             $product->removeImage($image);
                         }
                         continue;
                     }
-                    list($width, $height) = getimagesize($uploadedImage);
-
-                    $image->setOriginalFilename($imageData['name'])
-                        ->setImageX($width)
-                        ->setImageY($height)
-                        ->setFilename(
-                            pathinfo($uploadedImage, PATHINFO_BASENAME)
-                        )
-                        ->setFullPath(
-                            str_replace(
-                                WELLCART_UPLOAD_PATH,
-                                '',
-                                $uploadedImage
-                            )
-                        );
                 }
             }
         }

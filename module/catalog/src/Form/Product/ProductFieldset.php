@@ -156,7 +156,7 @@ class ProductFieldset extends Fieldset
         $this->add(
             [
                 'name'       => 'features',
-                'type'       => 'catalogFeatureCombinationSelector',
+                'type'       => 'catalogFeatureCombinationMultiCheckbox',
                 'options'    => [
                     'disable_inarray_validator' => true,
                     'unselected_value'          => null,

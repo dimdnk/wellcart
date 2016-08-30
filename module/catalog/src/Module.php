@@ -112,7 +112,7 @@ class Module implements
     {
         return [
             'factories' => [
-                'catalogFeatureCombinationSelector'            =>
+                'catalogFeatureCombinationMultiCheckbox'            =>
                     function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
                     ) {
                         $services = $sm->getServiceLocator();
@@ -120,7 +120,7 @@ class Module implements
                             'WellCart\Catalog\Spec\FeatureRepository'
                         )
                             ->toGroupedOptionsList();
-                        return new \WellCart\Catalog\Form\Element\FeatureCombinationSelect(
+                        return new \WellCart\Catalog\Form\Element\FeatureCombinationMultiCheckbox(
                             null,
                             [
                                 'value_options'             => $options,
