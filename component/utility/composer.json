@@ -28,7 +28,6 @@
     "jbroadway/urlify": "1.*",
     "patchwork/utf8": "1.*",
     "raulfraile/ladybug": "1.*",
-    "cakephp/chronos": "1.*",
     "nesbot/carbon": "1.*",
     "josegonzalez/dotenv": "~2.0"
   },

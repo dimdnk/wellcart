@@ -180,7 +180,7 @@ class AttributesGrid extends Standard
                 ]
             )
         );
-        $this->addGroupAction($action);
+        // $this->addGroupAction($action);
 
 
         $action = new Datagrid\ToolbarButton();

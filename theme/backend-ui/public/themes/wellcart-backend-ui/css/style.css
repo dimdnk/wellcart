@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../assets/wellcart-admin/fonts/icomoon/styles.css";
-@import "../../../assets/wellcart-base/css/Roboto.css";
+@import "../../../assets/lib/web/fonts/Roboto.css";
+@import "../../../assets/lib/web/fonts/IcoMoon.css";
 
 body {
     position: relative;

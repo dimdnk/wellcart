@@ -71,8 +71,8 @@ class CurrenciesController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView   $formPageView
-     * @param EntityForm     $form
+     * @param FormPageView $formPageView
+     * @param EntityForm $form
      * @param CurrencyEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface
@@ -140,12 +140,12 @@ class CurrenciesController extends AbstractActionController implements
     {
         $params = $this->params();
         $action = $params->fromRoute('id');
-        $selectionType = (string)$params->fromPost('selection_type', 'none');
+        $selectionType = (string)$params->fromPost(
+            'selection_type', 'selected'
+        );
         $ids = (array)$params->fromPost('ids', []);
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllIds();
-        } elseif ($selectionType == 'none') {
-            $ids = [];
         }
         return $this->attemptToPerformGroupAction(
             $action,

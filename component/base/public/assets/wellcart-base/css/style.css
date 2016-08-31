@@ -2,12 +2,12 @@
 @import "../../lib/bootstrap/css/bootstrap.min.css";
 @import "../../lib/font-awesome/css/font-awesome.min.css";
 @import "../../lib/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css";
-@import "../js/plugin/daterangepicker/daterangepicker.css";
-@import "../js/plugin/icheck/skins/minimal/blue.css";
-@import "../js/plugin/bootstrap-switch/bootstrap-switch.css";
-@import "../js/plugin/switchery/switchery.css";
-@import "../js/plugin/nanoscroller/nanoscroller.css";
 @import "../../lib/chosen/css/chosen.min.css";
+@import "../../lib/web/daterangepicker/daterangepicker.css";
+@import "../../lib/web/icheck/blue.css";
+@import "../../lib/web/bootstrap-switch/bootstrap-switch.css";
+@import "../../lib/web/switchery/switchery.css";
+@import "../../lib/web/nanoscroller/nanoscroller.css";
 
 html {
     -ms-text-size-adjust: 100%;
