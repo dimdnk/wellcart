@@ -43,11 +43,9 @@
     "thadafinser/zfc-datagrid": "1.2.*",
     "snapshotpl/zf-snap-jquery": "0.5.*",
     "robloach/component-installer": "0.2.3",
-    "components/jquery": "~3.1.0",
+    "components/jquery": "^3.1.0",
     "components/jqueryui": "1.12.*",
     "components/jquery-cookie": "1.4.*",
-    "components/ember": "2.8.*",
-    "components/ember-data": "2.8.*",
     "eonasdan/bootstrap-datetimepicker": "4.17.*",
     "moment/moment": "2.*",
     "oro/moment-timezone": "0.3.*",
@@ -56,8 +54,7 @@
     "components/bootstrap": "3.3.*",
     "components/font-awesome": "4.6.*",
     "components/handlebars.js": "4.0.*",
-    "blueimp/jquery-file-upload": "9.12.*",
-    "gdarko/twitter-bootstrap-grid": "1.*"
+    "blueimp/jquery-file-upload": "9.12.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.5.0",

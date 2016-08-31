@@ -17,8 +17,6 @@ return [
             'jquery-ujs'             => 'assets/wellcart-base/js/lib/jquery-ujs',
             'jquery-cookie'          => 'assets/lib/jquery-cookie/jquery.cookie',
             'tinymce'                => 'assets/lib/tinymce/tinymce.min',
-            'ember'                  => 'assets/lib/ember/ember.min',
-            'ember-data'             => 'assets/lib/ember-data/ember-data.min',
             'moment'                 => 'assets/lib/moment/min/moment-with-locales.min',
             'bootstrap'              => 'assets/lib/bootstrap/js/bootstrap.min',
             'sluggable'              => 'assets/wellcart-base/js/lib/speakingurl',
@@ -51,14 +49,6 @@ return [
             ],
             'bootbox'          => [
                 'exports' => 'bootbox',
-            ],
-            'ember'            => [
-                'deps'    => ['jquery', 'handlebars'],
-                'exports' => 'Ember',
-            ],
-            'ember-data'       => [
-                'deps'    => ['ember'],
-                'exports' => 'DS',
             ],
             'icheck'           => [
                 'deps' => ['jquery'],

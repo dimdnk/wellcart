@@ -13,8 +13,6 @@ return [
      */
     'service_manager'      => [
         'invokables'         => [
-            'WellCart\ORM\Ember\Converter'     => 'WellCart\ORM\Ember\Converter',
-            'WellCart\ORM\Ember\Generator'     => 'WellCart\ORM\Ember\Generator',
             'WellCart\Setup\ItemView\HtmlHead' => 'WellCart\Setup\ItemView\HtmlHead',
             'WellCart\Setup\ItemView\Header'   => 'WellCart\Setup\ItemView\Header',
         ],

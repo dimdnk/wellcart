@@ -322,8 +322,7 @@ return [
     ],
     'controllers'                => [
         'invokables' => [
-            'WellCart\Base\Controller\Console\Cache'                => 'WellCart\Base\Controller\Console\CacheController',
-            'WellCart\Base\Controller\Console\Ember\ModelGenerator' => 'WellCart\Base\Controller\Console\Ember\ModelGeneratorController',
+            'WellCart\Base\Controller\Console\Cache'                => 'WellCart\Base\Controller\Console\CacheController'
         ],
         'factories'  => array(
             'TckImageResizer\Controller\Index' => 'WellCart\Base\Factory\Controller\ImageResizeControllerFactory',
@@ -405,15 +404,6 @@ return [
     'console'                    => [
         'router' => [
             'routes' => [
-                'wellcart:dev:generate-ember-models' => [
-                    'options' => [
-                        'route'    => 'wellcart:dev:generate-ember-models',
-                        'defaults' => [
-                            'controller' => 'WellCart\Base\Controller\Console\Ember\ModelGenerator',
-                            'action'     => 'generate',
-                        ]
-                    ]
-                ],
                 'wellcart:cache:flush'               => [
                     'options' => [
                         'route'    => 'wellcart:cache:flush',

@@ -428,8 +428,6 @@ class Module implements
         return [
             "Flushes cache storage:\n",
             'wellcart:cache:flush'               => '',
-            "Conversion doctrine models to EmberData models:\n",
-            'wellcart:dev:generate-ember-models' => '',
         ];
     }
 }
