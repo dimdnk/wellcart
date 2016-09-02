@@ -5,6 +5,9 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\RestApi;
+
 return [
     /**
      * =========================================================
@@ -190,7 +193,13 @@ return [
         ],
     ],
     'controllers'        => [
-        'invokables' => [//'WellCart\RestApi\Controller\Hello' => 'WellCart\RestApi\Controller\HelloController',
+        'invokables' => [
+            'WellCart\RestApi\Controller\Hello' => Controller\HelloController::class,
+        ],
+        'factories'  => [
+            'WellCart\RestApi\Controller\Admin\OAuth2\PublicKeys' => Factory\Controller\Admin\OAuth2\PublicKeysControllerFactory::class,
+            'WellCart\RestApi\Controller\Admin\OAuth2\Clients'    => Factory\Controller\Admin\OAuth2\ClientsControllerFactory::class,
+            'WellCart\RestApi\Controller\Admin\OAuth2\Scopes'     => Factory\Controller\Admin\OAuth2\ScopesControllerFactory::class,
         ],
     ],
     'zf-versioning'      => [
