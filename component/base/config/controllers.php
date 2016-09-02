@@ -57,31 +57,4 @@ return [
                 }
             },
     ],
-    'factories'    => [
-        'WellCart\Base\Controller\Index'             =>
-            function (ControllerManager $sm) {
-                $controller = new Controller\IndexController();
-                return $controller;
-            },
-        'WellCart\Base\Controller\Admin\Languages'   =>
-            function (ControllerManager $sm) {
-                $services = $sm->getServiceLocator();
-                $controller = new Controller\Admin\LanguagesController(
-                    $services->get(
-                        'WellCart\Base\Spec\LocaleLanguageRepository'
-                    )
-                );
-                return $controller;
-            },
-        'WellCart\Base\Controller\Admin\UrlRewrites' =>
-            function (ControllerManager $sm) {
-                $services = $sm->getServiceLocator();
-                $controller = new Controller\Admin\UrlRewritesController(
-                    $services->get(
-                        'WellCart\Base\Spec\UrlRewriteRepository'
-                    )
-                );
-                return $controller;
-            },
-    ],
 ];

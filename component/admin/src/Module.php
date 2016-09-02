@@ -26,7 +26,6 @@ use ZF\Apigility\Provider\ApigilityProviderInterface;
 class Module implements
     Feature\BootstrapListenerInterface,
     Feature\ConfigProviderInterface,
-    Feature\ControllerProviderInterface,
     Feature\ServiceProviderInterface,
     VersionProviderInterface,
     DataFixturesProviderInterface,
@@ -86,16 +85,6 @@ class Module implements
             );
         }
         return $config;
-    }
-
-    /**
-     * Controllers
-     *
-     * @return array
-     */
-    public function getControllerConfig()
-    {
-        return include __DIR__ . '/../config/controllers.php';
     }
 
     /**
