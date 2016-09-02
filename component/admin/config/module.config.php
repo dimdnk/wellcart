@@ -164,6 +164,18 @@ return [
     ],
     'event_manager'        => include __DIR__ . '/section/event_manager.php',
 
+    'controllers'          => [
+        'factories' => [
+            'WellCart\Admin\Controller\Login'               => Factory\Controller\LoginControllerFactory::class,
+            'WellCart\Admin\Controller\Logout'              => Factory\Controller\LogoutControllerFactory::class,
+            'WellCart\Admin\Controller\Dashboard'           => Factory\Controller\DashboardControllerFactory::class,
+            'WellCart\Admin\Controller\RecoverAccount'      => Factory\Controller\RecoverAccountControllerFactory::class,
+            'WellCart\Admin\Controller\Settings'            => Factory\Controller\SettingsControllerFactory::class,
+            'WellCart\Admin\Controller\Admin\Accounts'      => Factory\Controller\Admin\AccountsControllerFactory::class,
+            'WellCart\Admin\Controller\Admin\Notifications' => Factory\Controller\Admin\NotificationsControllerFactory::class,
+        ],
+    ],
+
     /**
      * =========================================================
      * Router configuration

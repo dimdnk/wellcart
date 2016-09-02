@@ -8,7 +8,7 @@
 namespace WellCart\CMS\Factory\Controller\Admin;
 
 use WellCart\CMS\Controller\Admin\PagesController;
-use WellCart\CMS\Spec\PageRepository;
+use WellCart\CMS\Spec\PageI18nRepository;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -18,7 +18,7 @@ class PagesControllerFactory implements FactoryInterface
     {
         $controller = new PagesController(
             $sm->getServiceLocator()
-                ->get(PageRepository::class)
+                ->get(PageI18nRepository::class)
         );
         return $controller;
     }
