@@ -5,6 +5,9 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\Directory;
+
 return [
     /**
      * =========================================================
@@ -14,28 +17,28 @@ return [
     'service_manager'      => [
         'invokables'         => [],
         'aliases'            => [
-            'wellcart_directory_db_adapter'                => 'Zend\Db\Adapter\Adapter',
-            'wellcart_directory_object_manager'            => 'Doctrine\ORM\EntityManager',
-            'wellcart_directory_doctrine_hydrator'         => 'doctrine_hydrator',
-            'WellCart\Directory\Spec\CountryRepository'    => 'WellCart\Directory\Repository\Countries',
-            'WellCart\Directory\Spec\CurrencyRepository'   => 'WellCart\Directory\Repository\Currencies',
-            'WellCart\Directory\Spec\GeoZoneMapRepository' => 'WellCart\Directory\Repository\GeoZoneMaps',
-            'WellCart\Directory\Spec\GeoZoneRepository'    => 'WellCart\Directory\Repository\GeoZones',
-            'WellCart\Directory\Spec\ZoneRepository'       => 'WellCart\Directory\Repository\Zones',
+            'wellcart_directory_db_adapter'        => 'Zend\Db\Adapter\Adapter',
+            'wellcart_directory_object_manager'    => 'Doctrine\ORM\EntityManager',
+            'wellcart_directory_doctrine_hydrator' => 'doctrine_hydrator',
+            Spec\CountryRepository::class          => Repository\Countries::class,
+            Spec\CurrencyRepository::class         => Repository\Currencies::class,
+            Spec\GeoZoneMapRepository::class       => Repository\GeoZoneMaps::class,
+            Spec\GeoZoneRepository::class          => Repository\GeoZones::class,
+            Spec\ZoneRepository::class             => Repository\Zones::class,
         ],
         'factories'          => [],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\Directory\PageView\Admin\CurrenciesGrid' => false,
-            'WellCart\Directory\PageView\Admin\CurrencyForm'   => false,
-            'WellCart\Directory\PageView\Admin\CountriesGrid'  => false,
-            'WellCart\Directory\PageView\Admin\CountryForm'    => false,
-            'WellCart\Directory\PageView\Admin\ZonesGrid'      => false,
-            'WellCart\Directory\PageView\Admin\ZoneForm'       => false,
-            'WellCart\Directory\PageView\Admin\GeoZonesGrid'   => false,
-            'WellCart\Directory\PageView\Admin\GeoZoneForm'    => false,
+            PageView\Admin\CurrenciesGrid::class => false,
+            PageView\Admin\CurrencyForm::class   => false,
+            PageView\Admin\CountriesGrid::class  => false,
+            PageView\Admin\CountryForm::class    => false,
+            PageView\Admin\ZonesGrid::class      => false,
+            PageView\Admin\ZoneForm::class       => false,
+            PageView\Admin\GeoZonesGrid::class   => false,
+            PageView\Admin\GeoZoneForm::class    => false,
         ],
     ],
 
@@ -166,16 +169,16 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    'WellCart\Directory\Spec\CountryEntity'    => 'WellCart\Directory\Entity\Country',
-                    'WellCart\Directory\Spec\CurrencyEntity'   => 'WellCart\Directory\Entity\Currency',
-                    'WellCart\Directory\Spec\GeoZoneEntity'    => 'WellCart\Directory\Entity\GeoZone',
-                    'WellCart\Directory\Spec\GeoZoneMapEntity' => 'WellCart\Directory\Entity\GeoZoneMap',
-                    'WellCart\Directory\Spec\ZoneEntity'       => 'WellCart\Directory\Entity\Zone',
-                    'Directory::Country'                       => 'WellCart\Directory\Entity\Country',
-                    'Directory::Currency'                      => 'WellCart\Directory\Entity\Currency',
-                    'Directory::GeoZone'                       => 'WellCart\Directory\Entity\GeoZone',
-                    'Directory::GeoZoneMap'                    => 'WellCart\Directory\Entity\GeoZoneMap',
-                    'Directory::Zone'                          => 'WellCart\Directory\Entity\Zone',
+                    Spec\CountryEntity::class    => Entity\Country::class,
+                    Spec\CurrencyEntity::class   => Entity\Currency::class,
+                    Spec\GeoZoneEntity::class    => Entity\GeoZone::class,
+                    Spec\GeoZoneMapEntity::class => Entity\GeoZoneMap::class,
+                    Spec\ZoneEntity::class       => Entity\Zone::class,
+                    'Directory::Country'         => Entity\Country::class,
+                    'Directory::Currency'        => Entity\Currency::class,
+                    'Directory::GeoZone'         => Entity\GeoZone::class,
+                    'Directory::GeoZoneMap'      => Entity\GeoZoneMap::class,
+                    'Directory::Zone'            => Entity\Zone::class,
                 ],
             ],
         ],
@@ -206,11 +209,6 @@ return [
                 'base_dir'    => __DIR__ . '/../language',
                 'pattern'     => '%s.mo',
             ],
-        ],
-    ],
-    'view_helpers'         => [
-        'invokables' => [
-            'formDirectoryGeoZoneMap' => 'WellCart\Directory\Form\View\Helper\FormGeoZoneMap',
         ],
     ],
 

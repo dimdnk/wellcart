@@ -5,6 +5,9 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\Admin;
+
 return [
     /**
      * =========================================================
@@ -13,43 +16,43 @@ return [
      */
     'service_manager'      => [
         'invokables'         => [
-            'WellCart\Admin\ItemView\PageHead'                   => 'WellCart\Admin\ItemView\PageHead',
-            'WellCart\Admin\ItemView\PageNavigator'              => 'WellCart\Admin\ItemView\PageNavigator',
+            ItemView\PageHead::class                   => ItemView\PageHead::class,
+            ItemView\PageNavigator::class              => ItemView\PageNavigator::class,
 
-            'zfcDatagrid.renderer.HtmlDataGrid'                  => 'WellCart\Admin\PageView\Grid\Renderer',
-            'WellCart\Admin\EventListener\SetupPageVariables'    => 'WellCart\Admin\EventListener\SetupPageVariables',
-            'WellCart\Admin\EventListener\RemoveConfigCacheFile' => 'WellCart\Admin\EventListener\RemoveConfigCacheFile',
-            'WellCart\Admin\ItemView\TopBranding'                => 'WellCart\Admin\ItemView\TopBranding',
-            'WellCart\Admin\ItemView\MainNavigationMenu'         => 'WellCart\Admin\ItemView\MainNavigationMenu',
-            'WellCart\Admin\ItemView\Account\WelcomeBox'         => 'WellCart\Admin\ItemView\Account\WelcomeBox',
+            'zfcDatagrid.renderer.HtmlDataGrid'        => PageView\Grid\Renderer::class,
+            EventListener\SetupPageVariables::class    => EventListener\SetupPageVariables::class,
+            EventListener\RemoveConfigCacheFile::class => EventListener\RemoveConfigCacheFile::class,
+            ItemView\TopBranding::class                => ItemView\TopBranding::class,
+            ItemView\MainNavigationMenu::class         => ItemView\MainNavigationMenu::class,
+            ItemView\Account\WelcomeBox::class         => ItemView\Account\WelcomeBox::class,
 
-            'WellCart\Admin\Form\RecoverAccount'                 => 'WellCart\Admin\Form\RecoverAccount',
+            Form\RecoverAccount::class                 => Form\RecoverAccount::class,
 
         ],
         'aliases'            => [
-            'wellcart-admin_db_adapter'                   => 'Zend\Db\Adapter\Adapter',
-            'wellcart_admin_object_manager'               => 'Doctrine\ORM\EntityManager',
-            'wellcart_admin_doctrine_hydrator'            => 'doctrine_hydrator',
+            'wellcart-admin_db_adapter'         => 'Zend\Db\Adapter\Adapter',
+            'wellcart_admin_object_manager'     => 'Doctrine\ORM\EntityManager',
+            'wellcart_admin_doctrine_hydrator'  => 'doctrine_hydrator',
 
-            'WellCart\Admin\Spec\AdministratorRepository' => 'WellCart\Admin\Repository\Administrators',
-            'WellCart\Admin\Spec\NotificationRepository'  => 'WellCart\Admin\Repository\Notifications',
-            'admin\notification'                          => 'WellCart\Admin\Service\Notification',
+            Spec\AdministratorRepository::class => Repository\Administrators::class,
+            Spec\NotificationRepository::class  => Repository\Notifications::class,
+            'admin\notification'                => Service\Notification::class,
         ],
         'factories'          => [
-            'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy'    => 'WellCart\Admin\Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory',
-            'WellCart\Admin\Command\Handler\PersistAdminAccountHandler' => 'WellCart\Admin\Factory\Command\Handler\PersistAdminAccountHandlerFactory',
-            'WellCart\Admin\EventListener\AdministratorEntityListener'  => 'WellCart\Admin\Factory\EventListener\AdministratorEntityListenerFactory',
-            'backend_main_navigation'                                   => 'WellCart\Admin\Factory\Navigation\Service\BackendMainMenuFactory',
+            Rbac\View\Strategy\UnauthorizedStrategy::class    => Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory::class,
+            Command\Handler\PersistAdminAccountHandler::class => Factory\Command\Handler\PersistAdminAccountHandlerFactory::class,
+            EventListener\AdministratorEntityListener::class  => Factory\EventListener\AdministratorEntityListenerFactory::class,
+            'backend_main_navigation'                         => Factory\Navigation\Service\BackendMainMenuFactory::class,
         ],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\Admin\ItemView\TopBranding'             => false,
-            'WellCart\Admin\ItemView\MainNavigationMenu'      => false,
-            'WellCart\Admin\PageView\Admin\AccountsGrid'      => false,
-            'WellCart\Admin\PageView\Admin\AccountForm'       => false,
-            'WellCart\Admin\PageView\Admin\NotificationsGrid' => false,
+            ItemView\TopBranding::class             => false,
+            ItemView\MainNavigationMenu::class      => false,
+            PageView\Admin\AccountsGrid::class      => false,
+            PageView\Admin\AccountForm::class       => false,
+            PageView\Admin\NotificationsGrid::class => false,
         ],
     ],
 
@@ -116,10 +119,10 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    'WellCart\Admin\Spec\AdministratorEntity' => 'WellCart\Admin\Entity\Administrator',
-                    'Admin::Administrator'                    => 'WellCart\Admin\Entity\Administrator',
-                    'WellCart\Admin\Spec\NotificationEntity'  => 'WellCart\Admin\Entity\Notification',
-                    'Admin::Notification'                     => 'WellCart\Admin\Entity\Notification',
+                    Spec\AdministratorEntity::class => Entity\Administrator::class,
+                    'Admin::Administrator'          => Entity\Administrator::class,
+                    Spec\NotificationEntity::class  => Entity\Notification::class,
+                    'Admin::Notification'           => Entity\Notification::class,
                 ]
             ]
         ],
@@ -127,7 +130,7 @@ return [
 
     'ze_theme'             => [
         'adapters' => [
-            'WellCart\Admin\Ui\Theme\AdminRouteAdapter' => 'WellCart\Admin\Ui\Theme\AdminRouteAdapter',
+            Ui\Theme\AdminRouteAdapter::class => Ui\Theme\AdminRouteAdapter::class,
         ],
     ],
     'zfcadmin'             => [
@@ -330,7 +333,7 @@ return [
         ],
     ],
     'listeners'            => [
-        'WellCart\Admin\EventListener\SetupPageVariables'        => 'WellCart\Admin\EventListener\SetupPageVariables',
+        EventListener\SetupPageVariables::class                  => EventListener\SetupPageVariables::class,
         'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy' => 'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy',
     ],
     'system_config_editor' => include __DIR__
@@ -371,7 +374,7 @@ return [
 
     'command_bus'          => [
         'command_map' => [
-            'WellCart\Admin\Command\PersistAdminAccount' => 'WellCart\Admin\Command\Handler\PersistAdminAccountHandler',
+            Command\PersistAdminAccount::class => Command\Handler\PersistAdminAccountHandler::class,
         ],
     ],
 ];

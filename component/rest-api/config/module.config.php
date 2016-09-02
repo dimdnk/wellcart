@@ -27,12 +27,12 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\RestApi\PageView\Admin\OAuth2\PublicKeysGrid' => false,
-            'WellCart\RestApi\PageView\Admin\OAuth2\PublicKeyForm'  => false,
-            'WellCart\RestApi\PageView\Admin\OAuth2\ClientsGrid'    => false,
-            'WellCart\RestApi\PageView\Admin\OAuth2\ClientForm'     => false,
-            'WellCart\RestApi\PageView\Admin\OAuth2\ScopesGrid'     => false,
-            'WellCart\RestApi\PageView\Admin\OAuth2\ScopeForm'      => false,
+           PageView\Admin\OAuth2\PublicKeysGrid::class => false,
+           PageView\Admin\OAuth2\PublicKeyForm::class  => false,
+           PageView\Admin\OAuth2\ClientsGrid::class    => false,
+           PageView\Admin\OAuth2\ClientForm::class     => false,
+           PageView\Admin\OAuth2\ScopesGrid::class     => false,
+           PageView\Admin\OAuth2\ScopeForm::class      => false,
         ],
     ],
 

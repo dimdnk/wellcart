@@ -5,6 +5,9 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\CMS;
+
 return [
     /**
      * =========================================================
@@ -14,19 +17,19 @@ return [
     'service_manager' => [
         'invokables'         => [],
         'aliases'            => [
-            'wellcart_cms_db_adapter'              => 'Zend\Db\Adapter\Adapter',
-            'wellcart_cms_object_manager'          => 'Doctrine\ORM\EntityManager',
-            'wellcart_cms_doctrine_hydrator'       => 'doctrine_hydrator',
-            'WellCart\CMS\Spec\PageRepository'     => 'WellCart\CMS\Repository\Pages',
-            'WellCart\CMS\Spec\PageI18nRepository' => 'WellCart\CMS\Repository\PageI18n',
+            'wellcart_cms_db_adapter'        => 'Zend\Db\Adapter\Adapter',
+            'wellcart_cms_object_manager'    => 'Doctrine\ORM\EntityManager',
+            'wellcart_cms_doctrine_hydrator' => 'doctrine_hydrator',
+            Spec\PageRepository::class       => Repository\Pages::class,
+            Spec\PageI18nRepository::class   => Repository\PageI18n::class,
         ],
         'factories'          => [],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\CMS\PageView\Admin\PagesGrid' => false,
-            'WellCart\CMS\PageView\Admin\PageForm'  => false,
+            PageView\Admin\PagesGrid::class => false,
+            PageView\Admin\PageForm::class  => false,
         ],
     ],
 
@@ -103,10 +106,10 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    'WellCart\CMS\Spec\PageEntity'     => 'WellCart\CMS\Entity\Page',
-                    'WellCart\CMS\Spec\PageI18nEntity' => 'WellCart\CMS\Entity\PageI18n',
-                    'CMS::Page'                        => 'WellCart\CMS\Entity\Page',
-                    'CMS::PageI18n'                    => 'WellCart\CMS\Entity\PageI18n',
+                    Spec\PageEntity::class     => Entity\Page::class,
+                    Spec\PageI18nEntity::class => Entity\PageI18n::class,
+                    'CMS::Page'                => Entity\Page::class,
+                    'CMS::PageI18n'            => Entity\PageI18n::class,
                 ],
             ],
         ],
