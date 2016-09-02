@@ -9,6 +9,28 @@
 namespace WellCart\User;
 
 return [
+    'wellcart'              => [
+        'user_account_options' => [
+            'max_login_attempts' => 5,
+            'password_reset'     => [
+                'email_contact'          => 'support',
+                'email_template'         => 'wellcart-user/password_reset',
+                'link_expiration_period' => 1,
+                'allow_for_admin'        => true,
+            ],
+            'registration'       => [
+                'send_welcome_email' => true,
+                'confirm_email'      => true,
+                'email_contact'      => 'general',
+                'email_template'     => [
+                    'welcome'            => 'wellcart-user/welcome',
+                    'email_confirmation' => 'wellcart-user/email_confirmation',
+                    'email_confirmed'    => 'wellcart-user/email_confirmed',
+                ],
+            ],
+        ],
+    ],
+
     /**
      * =========================================================
      * Service manager configuration
@@ -16,13 +38,13 @@ return [
      */
     'service_manager'       => [
         'aliases'            => [
-            'wellcart_user_db_adapter'                   => 'Zend\Db\Adapter\Adapter',
-            'wellcart_user_mapper'                       => 'zfcuser_user_mapper',
-            'wellcart_user_object_manager'               => 'Doctrine\ORM\EntityManager',
-            'wellcart_user_doctrine_hydrator'            => 'doctrine_hydrator',
-            'WellCart\User\Spec\AclPermissionRepository' => 'WellCart\User\Repository\Acl\Permissions',
-            'WellCart\User\Spec\AclRoleRepository'       => 'WellCart\User\Repository\Acl\Roles',
-            'WellCart\User\Spec\UserRepository'          => 'WellCart\User\Repository\Users',
+            'wellcart_user_db_adapter'          => 'Zend\Db\Adapter\Adapter',
+            'wellcart_user_mapper'              => 'zfcuser_user_mapper',
+            'wellcart_user_object_manager'      => 'Doctrine\ORM\EntityManager',
+            'wellcart_user_doctrine_hydrator'   => 'doctrine_hydrator',
+            Spec\AclPermissionRepository::class => Repository\Acl\Permissions::class,
+            Spec\AclRoleRepository::class       => Repository\Acl\Roles::class,
+            Spec\UserRepository::class          => Repository\Users::class,
         ],
         'invokables'         => [
             'ZfcRbac\Collector\RbacCollector'                                     => 'WellCart\User\DeveloperTools\Rbac\Collector\RbacCollector',
@@ -188,6 +210,17 @@ return [
             ],
         ],
     ],
+
+    'controllers'           => [
+        'factories' => [
+            'zfcuser'                                    => Factory\Controller\UserControllerFactory::class,
+            'WellCart\User\Controller\ConfirmEmail'      => Factory\Controller\ConfirmEmailControllerFactory::class,
+            'WellCart\User\Controller\RecoverAccount'    => Factory\Controller\RecoverAccountControllerFactory::class,
+            'WellCart\User\Controller\Admin\Accounts'    => Factory\Controller\Admin\AccountsControllerFactory::class,
+            'WellCart\User\Controller\Admin\Acl\Roles'   => Factory\Controller\Admin\Acl\RolesControllerFactory::class,
+            'WellCart\User\Controller\Admin\Preferences' => Factory\Controller\Admin\PreferencesControllerFactory::class,
+        ],
+    ],
     'navigation'            => [
         'backend_main_navigation' => include __DIR__
             . '/backend_main_navigation.php',
@@ -235,37 +268,20 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    'WellCart\User\Spec\UserEntity'          => 'WellCart\User\Entity\User',
-                    'WellCart\User\Spec\AclPermissionEntity' => 'WellCart\User\Entity\Acl\Permission',
-                    'WellCart\User\Spec\AclRoleEntity'       => 'WellCart\User\Entity\Acl\Role',
-                    'User::User'                             => 'WellCart\User\Entity\User',
-                    'User::Acl\AclPermission'                => 'WellCart\User\Entity\Acl\Permission',
-                    'User::Acl\Role'                         => 'WellCart\User\Entity\Acl\Role',
+                    Spec\UserEntity::class          => Entity\User::class,
+                    Spec\AclPermissionEntity::class => Entity\Acl\Permission::class,
+                    Spec\AclRoleEntity::class       => Entity\Acl\Role::class,
+                    'User::User'                    => Entity\User::class,
+                    'User::Acl\AclPermission'       => Entity\Acl\Permission::class,
+                    'User::Acl\Role'                => Entity\Acl\Role::class,
                 ]
             ]
         ],
     ],
     'zfcuser'               => include __DIR__ . '/section/zfcuser.php',
     'zfc_rbac'              => include __DIR__ . '/section/zfc_rbac.php',
-    'user_account_options'  => [
-        'max_login_attempts' => 5,
-        'password_reset'     => [
-            'email_contact'          => 'support',
-            'email_template'         => 'wellcart-user/password_reset',
-            'link_expiration_period' => 1,
-            'allow_for_admin'        => true,
-        ],
-        'registration'       => [
-            'send_welcome_email' => true,
-            'confirm_email'      => true,
-            'email_contact'      => 'general',
-            'email_template'     => [
-                'welcome'            => 'wellcart-user/welcome',
-                'email_confirmation' => 'wellcart-user/email_confirmation',
-                'email_confirmed'    => 'wellcart-user/email_confirmed',
-            ],
-        ],
-    ],
+
+
     'system_config_editor'  => include __DIR__
         . '/section/system_config_editor.php',
     /**
@@ -321,21 +337,23 @@ return [
     'object_mapping'        => include __DIR__ . '/section/object_mapping.php',
     'context_specific'      => [
         'frontend' => [
+            'wellcart' => [
+                'user_account_options' => [
+                    'registration' => [
+                        'send_welcome_email' => true,
+                        'confirm_email'      => true,
+                    ]
+                ],
+            ],
             'zfcuser'              => [
                 'enable_registration' => true,
-            ],
-            'user_account_options' => [
-                'registration' => [
-                    'send_welcome_email' => true,
-                    'confirm_email'      => true,
-                ]
             ],
         ],
     ],
 
     'command_bus'           => [
         'command_map' => [
-            'WellCart\User\Command\PersistUserAccount' => 'WellCart\User\Command\Handler\PersistUserAccountHandler',
+            Command\PersistUserAccount::class => Command\Handler\PersistUserAccountHandler::class,
         ],
     ],
 ];

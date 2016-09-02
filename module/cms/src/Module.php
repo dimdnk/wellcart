@@ -24,7 +24,6 @@ use ZF\Apigility\Provider\ApigilityProviderInterface;
 class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
-    Feature\ControllerProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
     ApigilityProviderInterface,
@@ -92,16 +91,6 @@ class Module implements
                 '20160706000000'
             ),
         ];
-    }
-
-    /**
-     * Controllers
-     *
-     * @return array
-     */
-    public function getControllerConfig()
-    {
-        return include __DIR__ . '/../config/controllers.php';
     }
 
     /**

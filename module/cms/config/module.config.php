@@ -33,6 +33,12 @@ return [
         ],
     ],
 
+    'controllers' => [
+        'factories' => [
+            'WellCart\CMS\Controller\Admin\Pages' => Factory\Controller\Admin\PagesControllerFactory::class,
+        ],
+    ],
+
     /**
      * =========================================================
      * Router configuration

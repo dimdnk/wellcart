@@ -24,7 +24,6 @@ class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
     Feature\BootstrapListenerInterface,
-    Feature\ControllerProviderInterface,
     Feature\FormElementProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
@@ -142,16 +141,6 @@ class Module implements
     public function getServiceConfig()
     {
         return include __DIR__ . '/../config/services.php';
-    }
-
-    /**
-     * Controllers
-     *
-     * @return array
-     */
-    public function getControllerConfig()
-    {
-        return include __DIR__ . '/../config/controllers.php';
     }
 
     /**

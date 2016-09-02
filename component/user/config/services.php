@@ -61,7 +61,7 @@ return [
                     $services->get('log_mail_service_errors'),
                     $services->get('acmailer.mailservice.default'),
                     $services->get('WellCart\User\Spec\UserRepository'),
-                    $options['user_account_options']['registration']
+                    $options['wellcart']['user_account_options']['registration']
                 );
                 return $form;
             },
@@ -75,7 +75,7 @@ return [
                     $services->get('WellCart\User\Spec\UserRepository'),
                     $services->get('WellCart\User\Form\RecoverAccount'),
                     $services->get('zfcuser_change_password_form'),
-                    $options['user_account_options']['password_reset']
+                    $options['wellcart']['user_account_options']['password_reset']
                 );
                 return $service;
             },

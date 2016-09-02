@@ -38,7 +38,7 @@ class RecoverAccountController extends AbstractActionController
         $this->service = $service;
         $this->isRecoverPossible = ($this->service->isRecoverPossible()
             && Config::get(
-                'user_account_options.password_reset.allow_for_admin',
+                'wellcart.user_account_options.password_reset.allow_for_admin',
                 true
             ));
     }

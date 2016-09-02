@@ -9,15 +9,29 @@
 namespace WellCart\Setup;
 
 return [
+    'wellcart'        => [
+        'website'              => [
+            'name' => 'WellCart',
+        ],
+        'email_communications' => [
+            'enabled' => false,
+        ],
+        'user_account_options' => [
+            'registration' => [
+                'send_welcome_email' => false,
+                'confirm_email'      => false,
+            ],
+        ],
+    ],
+
     /**
      * =========================================================
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'      => [
+    'service_manager' => [
         'invokables'         => [
-            'WellCart\Setup\ItemView\HtmlHead' => 'WellCart\Setup\ItemView\HtmlHead',
-            'WellCart\Setup\ItemView\Header'   => 'WellCart\Setup\ItemView\Header',
+            ItemView\Header::class => ItemView\Header::class,
         ],
         'factories'          => [],
         'abstract_factories' => [],
@@ -27,17 +41,10 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\Setup\ItemView\HtmlHead' => false,
-            'WellCart\Setup\ItemView\Header'   => false,
+            ItemView\Header::class => false,
         ],
     ],
-
-    'wellcart'             => [
-        'website' => [
-            'name' => 'WellCart',
-        ],
-    ],
-    'php_settings'         => [
+    'php_settings'    => [
         'log_errors'             => true,
         'display_errors'         => true,
         'display_startup_errors' => true,
@@ -47,21 +54,11 @@ return [
         'error_log'              => sys_get_temp_dir()
             . '/wellcart-setup-php-error.log',
     ],
-    'acmailer_options'     => [
-        'communications' => [
-            'enabled' => false,
-        ],
-    ],
-    'user_account_options' => [
-        'registration' => [
-            'send_welcome_email' => false,
-            'confirm_email'      => false,
-        ],
-    ],
+
     /**
      * Session configuration
      */
-    'session'              => [
+    'session'         => [
         'config'     => [
             'options' => [
                 'name'           => 'wellcart_setup_sid',
@@ -76,7 +73,7 @@ return [
             ],
         ],
     ],
-    'soflomo_log'          => [
+    'soflomo_log'     => [
         'writers' => [
             'WellCart\Log\Writer\Stream' => [
                 'enabled' => false,
@@ -89,7 +86,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'               => [
+    'router'          => [
         'routes' => [
             'wellcart:setup:install' => [
                 'type'             => 'WellCart\Router\Http\Literal',
@@ -105,10 +102,10 @@ return [
             ],
         ],
     ],
-    'controllers'          => [
+    'controllers'     => [
         'invokables' => [
-            'WellCart\Setup\Controller\Wizard'       => 'WellCart\Setup\Controller\WizardController',
-            'WellCart\Setup\Controller\ConsoleSetup' => 'WellCart\Setup\Controller\ConsoleSetupController',
+            'WellCart\Setup\Controller\Wizard'       => Controller\WizardController::class,
+            'WellCart\Setup\Controller\ConsoleSetup' => Controller\ConsoleSetupController::class,
         ],
     ],
     /**
@@ -116,7 +113,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'        => [
+    'asset_manager'   => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -129,7 +126,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'           => [
+    'translator'      => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',
@@ -145,7 +142,7 @@ return [
      * View manager configuration
      * =========================================================
      */
-    'view_manager'         => [
+    'view_manager'    => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'layout'                   => 'layout/setup-wizard',
@@ -154,11 +151,11 @@ return [
         ],
         'template_map'             => include 'template_map.php',
     ],
-    'ze_theme'             => [
+    'ze_theme'        => [
         'default_theme' => 'wellcart-setup-ui',
         'routes'        => [],
     ],
-    'wizard'               => [
+    'wizard'          => [
         /**
          * Default layout template of the wizard
          */
@@ -191,12 +188,8 @@ return [
             ],
         ],
     ],
-    'wizard_steps'         => [
-        'invokables' => [
-            'WellCart\Setup\Wizard\Step\LicenseStepForm' => 'WellCart\Setup\Wizard\Step\LicenseStepForm',
-        ],
-    ],
-    'console'              => [
+    'wizard_steps'    => [],
+    'console'         => [
         /**
          * =========================================================
          * Router configuration

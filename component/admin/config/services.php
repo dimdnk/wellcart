@@ -89,7 +89,7 @@ return [
                         'WellCart\Admin\Form\RecoverAccount'
                     ),
                     $services->get('zfcuser_change_password_form'),
-                    $options['user_account_options']['password_reset']
+                    $options['wellcart']['user_account_options']['password_reset']
                 );
                 return $service;
             },

@@ -119,7 +119,7 @@ class RecoverAccount
                 1,
                 abs(
                     (int)Config::get(
-                        'user_account_options.password_reset.link_expiration_period',
+                        'wellcart.user_account_options.password_reset.link_expiration_period',
                         1
                     )
                 )

@@ -65,7 +65,7 @@ class AccountPreferences extends AbstractForm
         $this->add(
             [
                 'type'       => 'baseEmailContactSelector',
-                'name'       => 'user_account_options.registration.email_contact',
+                'name'       => 'wellcart.user_account_options.registration.email_contact',
                 'options'    => [
                     'label'            => __('Email Sender'),
                     'twb-layout'       => 'horizontal',
@@ -77,7 +77,7 @@ class AccountPreferences extends AbstractForm
                 'attributes' => [
                     'autocomplete' => 'off',
                     'value'        => Config::get(
-                        'user_account_options.registration.email_contact'
+                        'wellcart.user_account_options.registration.email_contact'
                     ),
                 ],
             ],
@@ -86,7 +86,7 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'context_specific.frontend.user_account_options.registration.send_welcome_email',
+                'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
                 'options'    => [
                     'label'            => __('Send Welcome Email'),
                     'twb-layout'       => 'horizontal',
@@ -102,7 +102,7 @@ class AccountPreferences extends AbstractForm
                 'attributes' => [
                     'autocomplete' => 'off',
                     'value'        => (int)Config::get(
-                        'context_specific.frontend.user_account_options.registration.send_welcome_email',
+                        'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
                         1
                     ),
                 ],
@@ -113,7 +113,7 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'context_specific.frontend.user_account_options.registration.confirm_email',
+                'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
                 'options'    => [
                     'label'            => __('Require Emails Confirmation'),
                     'twb-layout'       => 'horizontal',
@@ -129,7 +129,7 @@ class AccountPreferences extends AbstractForm
                 'attributes' => [
                     'autocomplete' => 'off',
                     'value'        => (int)Config::get(
-                        'context_specific.frontend.user_account_options.registration.confirm_email',
+                        'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
                         1
                     ),
                 ],
@@ -188,7 +188,7 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'user_account_options.max_login_attempts',
+                'name'       => 'wellcart.user_account_options.max_login_attempts',
                 'options'    => [
                     'label'            => __('Max Login Attempts'),
                     'twb-layout'       => 'horizontal',
@@ -202,7 +202,7 @@ class AccountPreferences extends AbstractForm
                 ],
                 'attributes' => [
                     'value' => Config::get(
-                        'user_account_options.max_login_attempts'
+                        'wellcart.user_account_options.max_login_attempts'
                     ),
                 ],
                 'type'       => 'Text',
@@ -214,7 +214,7 @@ class AccountPreferences extends AbstractForm
         $this->add(
             [
                 'type'       => 'baseEmailContactSelector',
-                'name'       => 'user_account_options.password_reset.email_contact',
+                'name'       => 'wellcart.user_account_options.password_reset.email_contact',
                 'options'    => [
                     'label'            => __('Email Sender'),
                     'twb-layout'       => 'horizontal',
@@ -226,7 +226,7 @@ class AccountPreferences extends AbstractForm
                 'attributes' => [
                     'autocomplete' => 'off',
                     'value'        => Config::get(
-                        'user_account_options.password_reset.email_contact'
+                        'wellcart.user_account_options.password_reset.email_contact'
                     ),
                 ],
             ],
@@ -235,7 +235,7 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'user_account_options.password_reset.allow_for_admin',
+                'name'       => 'wellcart.user_account_options.password_reset.allow_for_admin',
                 'options'    => [
                     'label'            => __('Allow Admin Password Reset'),
                     'twb-layout'       => 'horizontal',
@@ -251,7 +251,7 @@ class AccountPreferences extends AbstractForm
                 'attributes' => [
                     'autocomplete' => 'off',
                     'value'        => (int)Config::get(
-                        'user_account_options.password_reset.allow_for_admin',
+                        'wellcart.user_account_options.password_reset.allow_for_admin',
                         1
                     ),
                 ],
@@ -262,7 +262,7 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'user_account_options.password_reset.link_expiration_period',
+                'name'       => 'wellcart.user_account_options.password_reset.link_expiration_period',
                 'options'    => [
                     'label'            => __('Reset Link Expiration Period'),
                     'twb-layout'       => 'horizontal',
@@ -274,7 +274,7 @@ class AccountPreferences extends AbstractForm
                 ],
                 'attributes' => [
                     'value' => Config::get(
-                        'user_account_options.password_reset.link_expiration_period'
+                        'wellcart.user_account_options.password_reset.link_expiration_period'
                     ),
                 ],
                 'type'       => 'Text',
@@ -312,7 +312,7 @@ class AccountPreferences extends AbstractForm
         $login = $this->getTab('login');
         $fields = [
             'zfcuser.login_form_timeout',
-            'user_account_options.max_login_attempts',
+            'wellcart.user_account_options.max_login_attempts',
         ];
         foreach ($fields as $field) {
             $login->add($field, $this->get($field));
@@ -323,9 +323,9 @@ class AccountPreferences extends AbstractForm
         $fields = [
             'context_specific.frontend.zfcuser.enable_registration',
             'zfcuser.user_form_timeout',
-            'user_account_options.registration.email_contact',
-            'context_specific.frontend.user_account_options.registration.send_welcome_email',
-            'context_specific.frontend.user_account_options.registration.confirm_email',
+            'wellcart.user_account_options.registration.email_contact',
+            'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
+            'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
         ];
         foreach ($fields as $field) {
             $registration->add($field, $this->get($field));
@@ -335,9 +335,9 @@ class AccountPreferences extends AbstractForm
         $this->addTab('password_options', __('Password Options'));
         $password = $this->getTab('password_options');
         $fields = [
-            'user_account_options.password_reset.email_contact',
-            'user_account_options.password_reset.allow_for_admin',
-            'user_account_options.password_reset.link_expiration_period',
+            'wellcart.user_account_options.password_reset.email_contact',
+            'wellcart.user_account_options.password_reset.allow_for_admin',
+            'wellcart.user_account_options.password_reset.link_expiration_period',
         ];
         foreach ($fields as $field) {
             $password->add($field, $this->get($field));
@@ -380,9 +380,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'context_specific.frontend.user_account_options.registration.send_welcome_email' =>
+            'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email' =>
                 [
-                    'name'       => 'context_specific.frontend.user_account_options.registration.send_welcome_email',
+                    'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
@@ -405,9 +405,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'context_specific.frontend.user_account_options.registration.confirm_email'      =>
+            'context_specific.frontend.wellcart.user_account_options.registration.confirm_email'      =>
                 [
-                    'name'       => 'context_specific.frontend.user_account_options.registration.confirm_email',
+                    'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
@@ -430,9 +430,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'user_account_options.password_reset.allow_for_admin'                            =>
+            'wellcart.user_account_options.password_reset.allow_for_admin'                            =>
                 [
-                    'name'       => 'user_account_options.password_reset.allow_for_admin',
+                    'name'       => 'wellcart.user_account_options.password_reset.allow_for_admin',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
@@ -455,9 +455,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'user_account_options.max_login_attempts'                                        =>
+            'wellcart.user_account_options.max_login_attempts'                                        =>
                 [
-                    'name'       => 'user_account_options.max_login_attempts',
+                    'name'       => 'wellcart.user_account_options.max_login_attempts',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
@@ -533,9 +533,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'user_account_options.password_reset.link_expiration_period'                     =>
+            'wellcart.user_account_options.password_reset.link_expiration_period'                     =>
                 [
-                    'name'       => 'user_account_options.password_reset.link_expiration_period',
+                    'name'       => 'wellcart.user_account_options.password_reset.link_expiration_period',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],

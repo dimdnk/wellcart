@@ -10,6 +10,15 @@ namespace WellCart\Admin;
 
 return [
     'backend' => [
+        'wellcart' => [
+            'user_account_options' => [
+                'registration' => [
+                    'send_welcome_email' => false,
+                    'confirm_email'      => false,
+                ],
+            ],
+        ],
+
         /**
          * Session configuration
          */
@@ -36,13 +45,6 @@ return [
             'enable_registration'  => false,
             'enable_username'      => false,
             'table_name'           => 'admin_users',
-        ],
-
-        'user_account_options' => [
-            'registration' => [
-                'send_welcome_email' => false,
-                'confirm_email'      => false,
-            ],
         ],
     ],
 ];
