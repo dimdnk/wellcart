@@ -42,13 +42,6 @@ class ModuleTest extends TestCase
         $this->assertInternalType('array', $this->object->getConfig());
     }
 
-    public function testGetControllerConfig()
-    {
-        $this->assertInternalType(
-            'array', $this->object->getControllerConfig()
-        );
-    }
-
     public function testGetServiceConfig()
     {
         $this->assertInternalType('array', $this->object->getServiceConfig());
