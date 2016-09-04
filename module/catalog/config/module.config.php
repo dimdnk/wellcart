@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-use WellCart\Catalog;
+namespace WellCart\Catalog;
 
 return [
     /**
@@ -16,51 +16,61 @@ return [
      */
     'service_manager'            => [
         'aliases'            => [
-            'wellcart_catalog_db_adapter'                     => 'Zend\Db\Adapter\Adapter',
-            'wellcart_catalog_object_manager'                 => 'Doctrine\ORM\EntityManager',
-            'wellcart_catalog_doctrine_hydrator'              => 'doctrine_hydrator',
-            Catalog\Spec\BrandRepository::class               => Catalog\Repository\Brands::class,
-            Catalog\Spec\CategoryRepository::class            => Catalog\Repository\Categories::class,
-            Catalog\Spec\CategoryI18nRepository::class        => Catalog\Repository\CategoryI18n::class,
-            Catalog\Spec\ProductTemplateRepository::class     => Catalog\Repository\ProductTemplates::class,
-            Catalog\Spec\ProductTemplateI18nRepository::class => Catalog\Repository\ProductTemplateI18n::class,
+            'wellcart_catalog_db_adapter'             => 'Zend\Db\Adapter\Adapter',
+            'wellcart_catalog_object_manager'         => 'Doctrine\ORM\EntityManager',
+            'wellcart_catalog_doctrine_hydrator'      => 'doctrine_hydrator',
+            Spec\BrandRepository::class               => Repository\Brands::class,
+            Spec\CategoryRepository::class            => Repository\Categories::class,
+            Spec\CategoryI18nRepository::class        => Repository\CategoryI18n::class,
+            Spec\ProductTemplateRepository::class     => Repository\ProductTemplates::class,
+            Spec\ProductTemplateI18nRepository::class => Repository\ProductTemplateI18n::class,
 
-            Catalog\Spec\AttributeRepository::class           => Catalog\Repository\Attributes::class,
-            Catalog\Spec\AttributeI18nRepository::class       => Catalog\Repository\AttributeI18n::class,
-            Catalog\Spec\AttributeValueRepository::class      => Catalog\Repository\AttributeValues::class,
-            Catalog\Spec\AttributeValueI18nRepository::class  => Catalog\Repository\AttributeValueI18n::class,
+            Spec\AttributeRepository::class           => Repository\Attributes::class,
+            Spec\AttributeI18nRepository::class       => Repository\AttributeI18n::class,
+            Spec\AttributeValueRepository::class      => Repository\AttributeValues::class,
+            Spec\AttributeValueI18nRepository::class  => Repository\AttributeValueI18n::class,
 
-            Catalog\Spec\FeatureRepository::class             => Catalog\Repository\Features::class,
-            Catalog\Spec\FeatureI18nRepository::class         => Catalog\Repository\FeatureI18n::class,
-            Catalog\Spec\FeatureValueRepository::class        => Catalog\Repository\FeatureValues::class,
-            Catalog\Spec\FeatureValueI18nRepository::class    => Catalog\Repository\FeatureValueI18n::class,
-            Catalog\Spec\ProductVariantRepository::class      => Catalog\Repository\ProductVariants::class,
-            Catalog\Spec\ProductImageRepository::class        => Catalog\Repository\ProductImages::class,
-            Catalog\Spec\ProductRepository::class             => Catalog\Repository\Products::class,
-            Catalog\Spec\ProductI18nRepository::class         => Catalog\Repository\ProductI18n::class,
+            Spec\FeatureRepository::class             => Repository\Features::class,
+            Spec\FeatureI18nRepository::class         => Repository\FeatureI18n::class,
+            Spec\FeatureValueRepository::class        => Repository\FeatureValues::class,
+            Spec\FeatureValueI18nRepository::class    => Repository\FeatureValueI18n::class,
+            Spec\ProductVariantRepository::class      => Repository\ProductVariants::class,
+            Spec\ProductImageRepository::class        => Repository\ProductImages::class,
+            Spec\ProductRepository::class             => Repository\Products::class,
+            Spec\ProductI18nRepository::class         => Repository\ProductI18n::class,
         ],
         'invokables'         => [
-            Catalog\Command\Handler\PersistProductHandler::class => Catalog\Command\Handler\PersistProductHandler::class,
-            Catalog\ItemView\Admin\BrandThumbnail::class         => Catalog\ItemView\Admin\BrandThumbnail::class
+            Command\Handler\PersistProductHandler::class => Command\Handler\PersistProductHandler::class,
+            ItemView\Admin\BrandThumbnail::class         => ItemView\Admin\BrandThumbnail::class
         ],
         'factories'          => [],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            Catalog\PageView\Admin\ProductsGrid::class         => false,
-            Catalog\PageView\Admin\ProductForm::class          => false,
-            Catalog\PageView\Admin\ProductTemplatesGrid::class => false,
-            Catalog\PageView\Admin\ProductTemplateForm::class  => false,
-            Catalog\PageView\Admin\AttributesGrid::class       => false,
-            Catalog\PageView\Admin\AttributeForm::class        => false,
-            Catalog\PageView\Admin\FeaturesGrid::class         => false,
-            Catalog\PageView\Admin\FeatureForm::class          => false,
-            Catalog\PageView\Admin\CategoriesGrid::class       => false,
-            Catalog\PageView\Admin\CategoryForm::class         => false,
-            Catalog\PageView\Admin\BrandsGrid::class           => false,
-            Catalog\PageView\Admin\BrandForm::class            => false,
-            Catalog\ItemView\Admin\BrandThumbnail::class       => false,
+            PageView\Admin\ProductsGrid::class         => false,
+            PageView\Admin\ProductForm::class          => false,
+            PageView\Admin\ProductTemplatesGrid::class => false,
+            PageView\Admin\ProductTemplateForm::class  => false,
+            PageView\Admin\AttributesGrid::class       => false,
+            PageView\Admin\AttributeForm::class        => false,
+            PageView\Admin\FeaturesGrid::class         => false,
+            PageView\Admin\FeatureForm::class          => false,
+            PageView\Admin\CategoriesGrid::class       => false,
+            PageView\Admin\CategoryForm::class         => false,
+            PageView\Admin\BrandsGrid::class           => false,
+            PageView\Admin\BrandForm::class            => false,
+            ItemView\Admin\BrandThumbnail::class       => false,
+        ],
+    ],
+
+    'controllers'                => [
+        'factories' => [
+            'WellCart\Catalog\Controller\Admin\Brands'     => Factory\Controller\Admin\BrandsControllerFactory::class,
+            'WellCart\Catalog\Controller\Admin\Products'   => Factory\Controller\Admin\ProductsControllerFactory::class,
+            'WellCart\Catalog\Controller\Admin\Categories' => Factory\Controller\Admin\CategoriesControllerFactory::class,
+            'WellCart\Catalog\Controller\Admin\Features'   => Factory\Controller\Admin\FeaturesControllerFactory::class,
+            'WellCart\Catalog\Controller\Admin\Attributes' => Factory\Controller\Admin\AttributesControllerFactory::class,
         ],
     ],
 
@@ -194,8 +204,8 @@ return [
     ],
     'form_element_configuration' => [
         'class_map' => [
-            'formCatalogProductImage'                    => Catalog\Form\View\Helper\FormProductImage::class,
-            'formCatalogFeatureCombinationMultiCheckbox' => Catalog\Form\View\Helper\FormCatalogFeatureCombinationMultiCheckbox::class,
+            'formCatalogProductImage'                    => Form\View\Helper\FormProductImage::class,
+            'formCatalogFeatureCombinationMultiCheckbox' => Form\View\Helper\FormCatalogFeatureCombinationMultiCheckbox::class,
         ],
         'type_map'  => [
             'catalogProductImage'                    => 'formCatalogProductImage',
@@ -233,47 +243,47 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    Catalog\Spec\BrandEntity::class                => Catalog\Entity\Brand::class,
-                    Catalog\Spec\CategoryEntity::class             => Catalog\Entity\Category::class,
-                    Catalog\Spec\CategoryI18nEntity::class         => Catalog\Entity\CategoryI18n::class,
-                    Catalog\Spec\AttributeEntity::class            => Catalog\Entity\Attribute::class,
-                    Catalog\Spec\AttributeI18nEntity::class        => Catalog\Entity\AttributeI18n::class,
+                    Spec\BrandEntity::class                => Entity\Brand::class,
+                    Spec\CategoryEntity::class             => Entity\Category::class,
+                    Spec\CategoryI18nEntity::class         => Entity\CategoryI18n::class,
+                    Spec\AttributeEntity::class            => Entity\Attribute::class,
+                    Spec\AttributeI18nEntity::class        => Entity\AttributeI18n::class,
 
-                    Catalog\Spec\AttributeValueEntity::class       => Catalog\Entity\AttributeValue::class,
-                    Catalog\Spec\AttributeValueI18nEntity::class   => Catalog\Entity\AttributeValueI18n::class,
-                    Catalog\Spec\ProductTemplateEntity::class      => Catalog\Entity\ProductTemplate::class,
-                    Catalog\Spec\ProductTemplateI18nEntity::class  => Catalog\Entity\ProductTemplateI18n::class,
+                    Spec\AttributeValueEntity::class       => Entity\AttributeValue::class,
+                    Spec\AttributeValueI18nEntity::class   => Entity\AttributeValueI18n::class,
+                    Spec\ProductTemplateEntity::class      => Entity\ProductTemplate::class,
+                    Spec\ProductTemplateI18nEntity::class  => Entity\ProductTemplateI18n::class,
 
-                    Catalog\Spec\FeatureEntity::class              => Catalog\Entity\Feature::class,
-                    Catalog\Spec\FeatureI18nEntity::class          => Catalog\Entity\FeatureI18n::class,
+                    Spec\FeatureEntity::class              => Entity\Feature::class,
+                    Spec\FeatureI18nEntity::class          => Entity\FeatureI18n::class,
 
-                    Catalog\Spec\FeatureValueEntity::class         => Catalog\Entity\FeatureValue::class,
-                    Catalog\Spec\FeatureValueI18nEntity::class     => Catalog\Entity\FeatureValueI18n::class,
+                    Spec\FeatureValueEntity::class         => Entity\FeatureValue::class,
+                    Spec\FeatureValueI18nEntity::class     => Entity\FeatureValueI18n::class,
 
-                    Catalog\Spec\ProductEntity::class              => Catalog\Entity\Product::class,
-                    Catalog\Spec\ProductI18nEntity::class          => Catalog\Entity\ProductI18n::class,
-                    Catalog\Spec\ProductVariantEntity::class       => Catalog\Entity\ProductVariant::class,
-                    Catalog\Spec\AttributeCombinationEntity::class => Catalog\Entity\AttributeCombination::class,
-                    Catalog\Spec\ProductImageEntity::class         => Catalog\Entity\ProductImage::class,
-                    'Catalog::Brand'                               => Catalog\Entity\Brand::class,
-                    'Catalog::Category'                            => Catalog\Entity\Category::class,
-                    'Catalog::CategoryI18n'                        => Catalog\Entity\CategoryI18n::class,
+                    Spec\ProductEntity::class              => Entity\Product::class,
+                    Spec\ProductI18nEntity::class          => Entity\ProductI18n::class,
+                    Spec\ProductVariantEntity::class       => Entity\ProductVariant::class,
+                    Spec\AttributeCombinationEntity::class => Entity\AttributeCombination::class,
+                    Spec\ProductImageEntity::class         => Entity\ProductImage::class,
+                    'Catalog::Brand'                       => Entity\Brand::class,
+                    'Catalog::Category'                    => Entity\Category::class,
+                    'Catalog::CategoryI18n'                => Entity\CategoryI18n::class,
 
 
-                    'Catalog::Attribute'                           => Catalog\Entity\Attribute::class,
-                    'Catalog::AttributeI18n'                       => Catalog\Entity\AttributeI18n::class,
-                    'Catalog::ProductTemplate'                     => Catalog\Entity\ProductTemplate::class,
-                    'Catalog::ProductTemplateI18n'                 => Catalog\Entity\ProductTemplateI18n::class,
+                    'Catalog::Attribute'                   => Entity\Attribute::class,
+                    'Catalog::AttributeI18n'               => Entity\AttributeI18n::class,
+                    'Catalog::ProductTemplate'             => Entity\ProductTemplate::class,
+                    'Catalog::ProductTemplateI18n'         => Entity\ProductTemplateI18n::class,
 
-                    'Catalog::Feature'                             => Catalog\Entity\Feature::class,
-                    'Catalog::FeatureI18n'                         => Catalog\Entity\FeatureI18n::class,
+                    'Catalog::Feature'                     => Entity\Feature::class,
+                    'Catalog::FeatureI18n'                 => Entity\FeatureI18n::class,
 
-                    'Catalog::FeatureValue'                        => Catalog\Entity\Feature::class,
-                    'Catalog::FeatureI18nValue'                    => Catalog\Entity\FeatureI18n::class,
+                    'Catalog::FeatureValue'                => Entity\Feature::class,
+                    'Catalog::FeatureI18nValue'            => Entity\FeatureI18n::class,
 
-                    'Catalog::Product'                             => Catalog\Entity\Product::class,
-                    'Catalog::ProductI18n'                         => Catalog\Entity\ProductI18n::class,
-                    'Catalog::ProductImage'                        => Catalog\Entity\ProductImage::class,
+                    'Catalog::Product'                     => Entity\Product::class,
+                    'Catalog::ProductI18n'                 => Entity\ProductI18n::class,
+                    'Catalog::ProductImage'                => Entity\ProductImage::class,
                 ],
             ],
         ]
@@ -317,8 +327,8 @@ return [
     ],
     'view_helpers'               => [
         'invokables' => [
-            'formCatalogProductImage'                    => Catalog\Form\View\Helper\FormProductImage::class,
-            'formCatalogFeatureCombinationMultiCheckbox' => Catalog\Form\View\Helper\FormCatalogFeatureCombinationMultiCheckbox::class,
+            'formCatalogProductImage'                    => Form\View\Helper\FormProductImage::class,
+            'formCatalogFeatureCombinationMultiCheckbox' => Form\View\Helper\FormCatalogFeatureCombinationMultiCheckbox::class,
         ],
     ],
 
@@ -337,16 +347,16 @@ return [
     ],
     'form_elements'              => [
         'factories'  => [
-            'catalogProductPrice' => Catalog\Factory\Form\Element\ProductPriceFactory::class,
+            'catalogProductPrice' => Factory\Form\Element\ProductPriceFactory::class,
         ],
         'invokables' => [
-            'catalogProductImage' => Catalog\Form\Element\ProductImage::class,
+            'catalogProductImage' => Form\Element\ProductImage::class,
         ],
     ],
 
     'command_bus'                => [
         'command_map' => [
-            Catalog\Command\PersistProduct::class => Catalog\Command\Handler\PersistProductHandler::class,
+            Command\PersistProduct::class => Command\Handler\PersistProductHandler::class,
         ],
     ],
 ];
