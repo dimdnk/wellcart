@@ -17,14 +17,12 @@ use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\Mvc\Application;
 use WellCart\Utility\Arr;
 use Zend\Console\Adapter\AdapterInterface;
-use Zend\Form\FormElementManager;
 use Zend\ModuleManager\Feature;
 use ZF\Apigility\Provider\ApigilityProviderInterface;
 
 class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
-    Feature\ControllerProviderInterface,
     Feature\FormElementProviderInterface,
     Feature\ConsoleUsageProviderInterface,
     VersionProviderInterface,
@@ -107,16 +105,6 @@ class Module implements
     }
 
     /**
-     * Controllers
-     *
-     * @return array
-     */
-    public function getControllerConfig()
-    {
-        return include __DIR__ . '/../config/controllers.php';
-    }
-
-    /**
      * Form elements
      *
      * @return array|\Zend\ServiceManager\Config
@@ -126,7 +114,7 @@ class Module implements
         return [
             'factories' => [
                 'directoryCountrySelector' =>
-                    function (FormElementManager $sm) {
+                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm) {
                         $countries = $sm->getServiceLocator()->get(
                             'WellCart\Directory\Spec\CountryRepository'
                         );
@@ -143,7 +131,7 @@ class Module implements
                         return $countrySelector;
                     },
                 'directoryZoneSelector'    =>
-                    function (FormElementManager $sm) {
+                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm) {
                         $countries = $sm->getServiceLocator()->get(
                             'WellCart\Directory\Spec\ZoneRepository'
                         );

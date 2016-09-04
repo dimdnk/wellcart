@@ -45,6 +45,18 @@ return [
     'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
 
+    'controllers'          => [
+        'invokables' => [
+            'WellCart\Directory\Controller\Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
+        ],
+        'factories'  => [
+            'WellCart\Directory\Controller\Admin\Currencies' => Factory\Controller\Admin\CurrenciesControllerFactory::class,
+            'WellCart\Directory\Controller\Admin\Countries'  => Factory\Controller\Admin\CountriesControllerFactory::class,
+            'WellCart\Directory\Controller\Admin\Zones'      => Factory\Controller\Admin\ZonesControllerFactory::class,
+            'WellCart\Directory\Controller\Admin\GeoZones'   => Factory\Controller\Admin\GeoZonesControllerFactory::class,
+        ],
+    ],
+
     /**
      * =========================================================
      * Router configuration
