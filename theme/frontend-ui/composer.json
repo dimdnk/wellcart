@@ -30,6 +30,7 @@
   },
   "config": {
     "bin-dir": "bin/",
+    "sort-packages": true,
     "preferred-install": "dist",
     "platform": {
       "ext-mongo": "1.6"

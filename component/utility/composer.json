@@ -71,6 +71,7 @@
   },
   "config": {
     "bin-dir": "bin/",
+    "sort-packages": true,
     "process-timeout": 4000,
     "preferred-install": "dist",
     "platform": {

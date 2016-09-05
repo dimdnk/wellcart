@@ -14,6 +14,7 @@
   "config": {
     "bin-dir": "bin/",
     "process-timeout": 4000,
+    "sort-packages": true,
     "preferred-install": "dist",
     "platform": {
       "ext-mongo": "1.6"

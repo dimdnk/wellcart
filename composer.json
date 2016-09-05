@@ -122,6 +122,7 @@
   },
   "config": {
     "bin-dir": "bin/",
+    "sort-packages": true,
     "process-timeout": 4000,
     "platform": {
       "ext-mongo": "1.6"
