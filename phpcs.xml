@@ -94,6 +94,12 @@
     <file>./module/directory/config</file>
     <file>./module/catalog/src</file>
     <file>./module/catalog/config</file>
+    
+        <file>./module/wellcart-module-blog/src</file>
+    <file>./module/wellcart-module-blog/config</file>
+        <file>./module/wellcart-module-samples/src</file>
+    <file>./module/wellcart-module-samples/config</file>
+    
     <file>./theme/frontend-ui/src</file>
     <file>./theme/frontend-ui/config</file>
     <file>./theme/backend-ui/src</file>

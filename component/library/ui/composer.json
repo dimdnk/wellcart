@@ -34,7 +34,7 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.0.0",
-    "rwoverdijk/assetmanager": "~1.6.0",
+    "rwoverdijk/assetmanager": "~1.7.0",
     "zendexperts/ze-theme": "1.0.*@dev",
     "hummer2k/conlayout": "^3.2",
     "hummer2k/convarnish": "^2.0",

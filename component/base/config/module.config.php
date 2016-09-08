@@ -39,7 +39,7 @@ return [
                 ],
             ],
         ],
-        'doctrine'             => ['global_cache_instance' => 'array',]
+            'doctrine'             => ['global_cache_instance' => 'array',]
     ],
 
     /**
@@ -330,13 +330,13 @@ return [
         'invokables' => [
             'WellCart\Base\Controller\Console\Cache' => Controller\Console\CacheController::class
         ],
-        'factories'  => array(
+        'factories'  => [
             'WellCart\Base\Controller\Index'             => Factory\Controller\IndexControllerFactory::class,
             'WellCart\Base\Controller\Admin\Languages'   => Factory\Controller\Admin\LanguagesControllerFactory::class,
             'WellCart\Base\Controller\Admin\UrlRewrites' => Factory\Controller\Admin\UrlRewritesControllerFactory::class,
 
             'TckImageResizer\Controller\Index'           => Factory\Controller\ImageResizeControllerFactory::class,
-        ),
+        ],
     ],
     /**
      * =========================================================

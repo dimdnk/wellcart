@@ -96,29 +96,29 @@ return [
             ],
         ],
     ],
-    'tckimageresizer'            => array(
+    'tckimageresizer'            => [
         'type'          => 'Literal',
-        'options'       => array(
+        'options'       => [
             'route'    => '/media',
-            'defaults' => array(
+            'defaults' => [
                 '__NAMESPACE__' => null,
                 'controller'    => 'TckImageResizer\Controller\Index',
                 'action'        => 'index',
-            ),
-        ),
+            ],
+        ],
         'may_terminate' => true,
-        'child_routes'  => array(
-            'resize' => array(
+        'child_routes'  => [
+            'resize' => [
                 'type'    => 'Zend\Mvc\Router\Http\Regex',
-                'options' => array(
+                'options' => [
                     'regex'    => '/(?<file>.*?)\.\$(?<command>.*)\.(?<extension>[a-zA-Z]+)',
-                    'defaults' => array(
+                    'defaults' => [
                         'controller' => 'TckImageResizer\Controller\Index',
                         'action'     => 'resize',
-                    ),
+                    ],
                     'spec'     => '/media/%file%.$%command%.%extension%',
-                ),
-            ),
-        ),
-    ),
+                ],
+            ],
+        ],
+    ],
 ];

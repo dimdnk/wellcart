@@ -702,7 +702,7 @@ return [
                     ],
                 ],
             ],
-            'manyToOne'       => [
+                'manyToOne'       => [
                 'geoZone' => [
                     'targetEntity' => 'WellCart\Directory\Entity\GeoZone',
                     'inversedBy'   => 'geoZoneMaps',
@@ -711,8 +711,8 @@ return [
                         'referencedColumnName' => 'geo_zone_id'
                     ],
                 ],
-            ],
-            'fields'          =>
+                ],
+                'fields'          =>
                 [
                     'countryId' =>
                         [
