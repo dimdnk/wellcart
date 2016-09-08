@@ -7,14 +7,13 @@
  */
 namespace WellCart\CMS\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\CMS\Controller\Admin\PagesController;
 use WellCart\CMS\Spec\PageI18nRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class PagesControllerFactory implements FactoryInterface
+class PagesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new PagesController(
             $sm->getServiceLocator()

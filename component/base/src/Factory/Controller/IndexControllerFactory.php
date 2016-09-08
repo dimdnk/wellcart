@@ -7,13 +7,12 @@
  */
 namespace WellCart\Base\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Base\Controller\IndexController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class IndexControllerFactory implements FactoryInterface
+class IndexControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         return new IndexController;
     }

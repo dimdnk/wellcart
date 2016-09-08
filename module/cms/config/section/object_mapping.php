@@ -33,7 +33,7 @@ return [
                     'fetch'         => "EAGER",
                 ],
             ],
-                'fields'          =>
+            'fields'          =>
                 [
                     'urlKey'    =>
                         [
@@ -157,7 +157,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'page' => [
                     'targetEntity' => 'WellCart\CMS\Entity\Page',
                     'inversedBy'   => 'translations',
@@ -166,8 +166,8 @@ return [
                         'referencedColumnName' => 'page_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'title'           =>
                         [

@@ -71,8 +71,8 @@ class LanguagesController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView         $formPageView
-     * @param EntityForm           $form
+     * @param FormPageView $formPageView
+     * @param EntityForm $form
      * @param LocaleLanguageEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface
@@ -147,7 +147,9 @@ class LanguagesController extends AbstractActionController implements
     {
         $params = $this->params();
         $action = $params->fromRoute('id');
-        $selectionType = (string)$params->fromPost('selection_type', 'selected');
+        $selectionType = (string)$params->fromPost(
+            'selection_type', 'selected'
+        );
         $ids = (array)$params->fromPost('ids', []);
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllIds();

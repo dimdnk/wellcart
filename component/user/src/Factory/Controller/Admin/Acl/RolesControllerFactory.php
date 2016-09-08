@@ -7,14 +7,13 @@
  */
 namespace WellCart\User\Factory\Controller\Admin\Acl;
 
+use Interop\Container\ContainerInterface;
 use WellCart\User\Controller\Admin\Acl\RolesController;
 use WellCart\User\Spec\AclRoleRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class RolesControllerFactory implements FactoryInterface
+class RolesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
         $controller = new RolesController(

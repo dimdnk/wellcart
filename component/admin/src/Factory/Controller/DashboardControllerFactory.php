@@ -7,13 +7,12 @@
  */
 namespace WellCart\Admin\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Admin\Controller\DashboardController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class DashboardControllerFactory implements FactoryInterface
+class DashboardControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         return new DashboardController;
     }

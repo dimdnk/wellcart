@@ -7,13 +7,12 @@
  */
 namespace WellCart\Base\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Base\Controller\ImageResizeController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class ImageResizeControllerFactory implements FactoryInterface
+class ImageResizeControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new ImageResizeController(
             $sm->getServiceLocator()

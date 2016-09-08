@@ -27,12 +27,12 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-           PageView\Admin\OAuth2\PublicKeysGrid::class => false,
-           PageView\Admin\OAuth2\PublicKeyForm::class  => false,
-           PageView\Admin\OAuth2\ClientsGrid::class    => false,
-           PageView\Admin\OAuth2\ClientForm::class     => false,
-           PageView\Admin\OAuth2\ScopesGrid::class     => false,
-           PageView\Admin\OAuth2\ScopeForm::class      => false,
+            PageView\Admin\OAuth2\PublicKeysGrid::class => false,
+            PageView\Admin\OAuth2\PublicKeyForm::class  => false,
+            PageView\Admin\OAuth2\ClientsGrid::class    => false,
+            PageView\Admin\OAuth2\ClientForm::class     => false,
+            PageView\Admin\OAuth2\ScopesGrid::class     => false,
+            PageView\Admin\OAuth2\ScopeForm::class      => false,
         ],
     ],
 

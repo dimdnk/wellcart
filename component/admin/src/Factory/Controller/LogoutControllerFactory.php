@@ -7,13 +7,12 @@
  */
 namespace WellCart\Admin\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Admin\Controller\LogoutController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class LogoutControllerFactory implements FactoryInterface
+class LogoutControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         return new LogoutController;
     }

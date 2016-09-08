@@ -7,13 +7,12 @@
  */
 namespace WellCart\RestApi\Factory\Controller\Admin\OAuth2;
 
+use Interop\Container\ContainerInterface;
 use WellCart\RestApi\Controller\Admin\OAuth2\PublicKeysController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class PublicKeysControllerFactory implements FactoryInterface
+class PublicKeysControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new PublicKeysController(
             $sm->getServiceLocator()

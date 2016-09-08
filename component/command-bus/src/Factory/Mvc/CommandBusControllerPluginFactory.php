@@ -11,11 +11,11 @@ declare(strict_types = 1);
 namespace WellCart\CommandBus\Factory\Mvc;
 
 use Interop\Container\ContainerInterface;
+use Interop\Container\ContainerInterface;
 use WellCart\CommandBus\Mvc\Controller\Plugin\CommandBus;
-use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
-class CommandBusControllerPluginFactory implements FactoryInterface
+class CommandBusControllerPluginFactory
 {
     /**
      * @param ContainerInterface $container
@@ -32,7 +32,7 @@ class CommandBusControllerPluginFactory implements FactoryInterface
      *
      * @return CommandBus
      */
-    public function createService(ServiceLocatorInterface $container)
+    public function __invoke(ContainerInterface $container)
     {
         $parentContainer = $container->getServiceLocator() ?: $container;
         return $this($parentContainer, CommandBus::class);

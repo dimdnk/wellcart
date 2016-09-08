@@ -7,14 +7,13 @@
  */
 namespace WellCart\Directory\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Directory\Controller\Admin\CurrenciesController;
 use WellCart\Directory\Spec\CurrencyRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class CurrenciesControllerFactory implements FactoryInterface
+class CurrenciesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new CurrenciesController(
             $sm->getServiceLocator()

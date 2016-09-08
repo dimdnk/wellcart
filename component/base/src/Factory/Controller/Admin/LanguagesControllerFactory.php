@@ -7,13 +7,12 @@
  */
 namespace WellCart\Base\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Base\Controller\Admin\LanguagesController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class LanguagesControllerFactory implements FactoryInterface
+class LanguagesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new LanguagesController(
             $sm->getServiceLocator()

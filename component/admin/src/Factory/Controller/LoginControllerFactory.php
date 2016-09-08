@@ -7,13 +7,12 @@
  */
 namespace WellCart\Admin\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Admin\Controller\LoginController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class LoginControllerFactory implements FactoryInterface
+class LoginControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         /* @var ControllerManager $sm */
         $serviceManager = $sm->getServiceLocator();

@@ -7,14 +7,13 @@
  */
 namespace WellCart\Directory\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Directory\Controller\Admin\GeoZonesController;
 use WellCart\Directory\Spec\GeoZoneRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class GeoZonesControllerFactory implements FactoryInterface
+class GeoZonesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new GeoZonesController(
             $sm->getServiceLocator()

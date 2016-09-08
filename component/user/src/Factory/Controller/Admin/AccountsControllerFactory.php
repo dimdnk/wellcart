@@ -7,14 +7,13 @@
  */
 namespace WellCart\User\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\User\Controller\Admin\AccountsController;
 use WellCart\User\Spec\UserRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class AccountsControllerFactory implements FactoryInterface
+class AccountsControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
         $controller = new AccountsController(

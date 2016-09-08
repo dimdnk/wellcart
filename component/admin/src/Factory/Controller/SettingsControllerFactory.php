@@ -7,13 +7,12 @@
  */
 namespace WellCart\Admin\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Admin\Controller\SettingsController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class SettingsControllerFactory implements FactoryInterface
+class SettingsControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         return new SettingsController(
             $sm->getServiceLocator()

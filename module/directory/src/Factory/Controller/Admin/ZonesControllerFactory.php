@@ -7,14 +7,13 @@
  */
 namespace WellCart\Directory\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Directory\Controller\Admin\ZonesController;
 use WellCart\Directory\Spec\ZoneRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class ZonesControllerFactory implements FactoryInterface
+class ZonesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new ZonesController(
             $sm->getServiceLocator()

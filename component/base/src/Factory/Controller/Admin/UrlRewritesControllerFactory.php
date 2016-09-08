@@ -7,14 +7,13 @@
  */
 namespace WellCart\Base\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Base\Controller\Admin\UrlRewritesController;
 use WellCart\Base\Spec\UrlRewriteRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class UrlRewritesControllerFactory implements FactoryInterface
+class UrlRewritesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new UrlRewritesController(
             $sm->getServiceLocator()

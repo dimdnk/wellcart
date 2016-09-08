@@ -7,14 +7,13 @@
  */
 namespace WellCart\Catalog\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Controller\Admin\CategoriesController;
 use WellCart\Catalog\Spec\CategoryI18nRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class CategoriesControllerFactory implements FactoryInterface
+class CategoriesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new CategoriesController(
             $sm->getServiceLocator()

@@ -7,14 +7,13 @@
  */
 namespace WellCart\User\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\User\Controller\ConfirmEmailController;
 use WellCart\User\Service\Registration\AccountEmailHandler;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class ConfirmEmailControllerFactory implements FactoryInterface
+class ConfirmEmailControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new ConfirmEmailController(
             $sm->getServiceLocator()

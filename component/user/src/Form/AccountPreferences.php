@@ -355,7 +355,7 @@ class AccountPreferences extends AbstractForm
     {
 
         $specification = [
-            'context_specific.frontend.zfcuser.enable_registration'                          =>
+            'context_specific.frontend.zfcuser.enable_registration'                                   =>
                 [
                     'name'       => 'context_specific.frontend.zfcuser.enable_registration',
                     'required'   => true,
@@ -481,7 +481,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'zfcuser.login_form_timeout'                                                     =>
+            'zfcuser.login_form_timeout'                                                              =>
                 [
                     'name'       => 'zfcuser.login_form_timeout',
                     'required'   => true,
@@ -507,7 +507,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'zfcuser.user_form_timeout'                                                      =>
+            'zfcuser.user_form_timeout'                                                               =>
                 [
                     'name'       => 'zfcuser.user_form_timeout',
                     'required'   => true,

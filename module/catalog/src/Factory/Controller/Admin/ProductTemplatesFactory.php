@@ -7,14 +7,13 @@
  */
 namespace WellCart\Catalog\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Controller\Admin\ProductTemplatesController;
 use WellCart\Catalog\Spec\ProductTemplateI18nRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class ProductTemplatesControllerFactory implements FactoryInterface
+class ProductTemplatesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new ProductTemplatesController(
             $sm->getServiceLocator()

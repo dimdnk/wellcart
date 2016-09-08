@@ -7,14 +7,13 @@
  */
 namespace WellCart\Admin\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Admin\Controller\Admin\NotificationsController;
 use WellCart\Admin\Spec\NotificationRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class NotificationsControllerFactory implements FactoryInterface
+class NotificationsControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
         return new NotificationsController(

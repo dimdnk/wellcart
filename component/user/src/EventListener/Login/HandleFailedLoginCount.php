@@ -41,7 +41,9 @@ class HandleFailedLoginCount
     public function __invoke(AuthenticationAdapterChainEvent $e)
     {
         $maxLoginAttempts = abs(
-            (int)Config::get('wellcart.user_account_options.max_login_attempts', 0)
+            (int)Config::get(
+                'wellcart.user_account_options.max_login_attempts', 0
+            )
         );
 
         $code = $e->getCode();

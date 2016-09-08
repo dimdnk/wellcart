@@ -7,14 +7,13 @@
  */
 namespace WellCart\Directory\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Directory\Controller\Admin\CountriesController;
 use WellCart\Directory\Spec\CountryRepository;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class CountriesControllerFactory implements FactoryInterface
+class CountriesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $controller = new CountriesController(
             $sm->getServiceLocator()

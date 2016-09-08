@@ -7,13 +7,12 @@
  */
 namespace WellCart\User\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\User\Controller\UserController;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class UserControllerFactory implements FactoryInterface
+class UserControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $serviceManager = $sm->getServiceLocator();
         $redirectCallback = $serviceManager->get(

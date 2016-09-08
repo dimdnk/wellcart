@@ -8,8 +8,6 @@
 
 namespace WellCart\User;
 
-use Zend\Mvc\Controller\ControllerManager;
-
 return [
 
 ];

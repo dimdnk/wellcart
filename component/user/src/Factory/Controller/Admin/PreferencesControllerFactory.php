@@ -7,15 +7,14 @@
  */
 namespace WellCart\User\Factory\Controller\Admin;
 
+use Interop\Container\ContainerInterface;
 use WellCart\User\Controller\Admin\PreferencesController;
 use WellCart\User\Form\AccountPreferences;
 use WellCart\User\PageView\Admin\PreferencesForm;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class PreferencesControllerFactory implements FactoryInterface
+class PreferencesControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
         $controller = new PreferencesController(

@@ -73,8 +73,8 @@ class ProductsController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView $formPageView
-     * @param EntityForm $form
+     * @param FormPageView  $formPageView
+     * @param EntityForm    $form
      * @param ProductEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface

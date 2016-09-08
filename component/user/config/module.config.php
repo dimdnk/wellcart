@@ -345,7 +345,7 @@ return [
                     ]
                 ],
             ],
-            'zfcuser'              => [
+            'zfcuser'  => [
                 'enable_registration' => true,
             ],
         ],

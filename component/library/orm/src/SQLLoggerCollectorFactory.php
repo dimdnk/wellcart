@@ -10,14 +10,13 @@ namespace WellCart\ORM;
 
 use DoctrineORMModule\Collector\SQLLoggerCollector;
 use DoctrineORMModule\Service\SQLLoggerCollectorFactory as AbstractSQLLoggerCollectorFactory;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
 class SQLLoggerCollectorFactory extends AbstractSQLLoggerCollectorFactory
 {
     /**
      * {@inheritDoc}
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke(ContainerInterface $serviceLocator)
     {
         /** @var $options \DoctrineORMModule\Options\SQLLoggerCollectorOptions */
         $options = $this->getOptions($serviceLocator);

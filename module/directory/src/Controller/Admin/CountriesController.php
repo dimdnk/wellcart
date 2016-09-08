@@ -69,8 +69,8 @@ class CountriesController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView $formPageView
-     * @param EntityForm $form
+     * @param FormPageView  $formPageView
+     * @param EntityForm    $form
      * @param CountryEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface

@@ -427,7 +427,7 @@ class Module implements
     {
         return [
             "Flushes cache storage:\n",
-            'wellcart:cache:flush'               => '',
+            'wellcart:cache:flush' => '',
         ];
     }
 }

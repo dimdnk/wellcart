@@ -114,7 +114,8 @@ class Module implements
         return [
             'factories' => [
                 'directoryCountrySelector' =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm) {
+                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
+                    ) {
                         $countries = $sm->getServiceLocator()->get(
                             'WellCart\Directory\Spec\CountryRepository'
                         );
@@ -131,7 +132,8 @@ class Module implements
                         return $countrySelector;
                     },
                 'directoryZoneSelector'    =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm) {
+                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
+                    ) {
                         $countries = $sm->getServiceLocator()->get(
                             'WellCart\Directory\Spec\ZoneRepository'
                         );

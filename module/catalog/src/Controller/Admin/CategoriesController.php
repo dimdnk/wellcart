@@ -72,8 +72,8 @@ class CategoriesController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView $formPageView
-     * @param EntityForm $form
+     * @param FormPageView   $formPageView
+     * @param EntityForm     $form
      * @param CategoryEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface

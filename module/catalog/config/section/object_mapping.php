@@ -35,7 +35,7 @@ return [
                     'fetch'         => "EAGER",
                 ],
             ],
-                'fields'          =>
+            'fields'          =>
                 [
                     'name'            =>
                         [
@@ -270,7 +270,7 @@ return [
                     'cascade'      => ['persist', 'merge', 'detach'],
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'translations' => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\ProductTemplateI18n',
                     'mappedBy'      => 'productTemplate',
@@ -283,8 +283,8 @@ return [
                     'mappedBy'     => 'productTemplate',
                     'cascade'      => ['persist', 'merge', 'detach'],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'isSystem'  =>
                         [
@@ -366,7 +366,7 @@ return [
                 ],
 
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'productTemplate' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\ProductTemplate',
                     'inversedBy'   => 'translations',
@@ -375,8 +375,8 @@ return [
                         'referencedColumnName' => 'product_template_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'name'              =>
                         [
@@ -444,7 +444,7 @@ return [
                     ],
                 ],
             ],
-                'fields'          =>
+            'fields'          =>
                 [
                     'fullPath'         =>
                         [
@@ -623,7 +623,7 @@ return [
                     ],
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'translations' => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\ProductI18n',
                     'mappedBy'      => 'product',
@@ -653,8 +653,8 @@ return [
                     'mappedBy'     => 'parent',
                     'cascade'      => ['persist', 'merge', 'detach'],
                 ]
-                ],
-                'manyToOne'       => [
+            ],
+            'manyToOne'       => [
                 'productTemplate' => [
                     'targetEntity'               => 'WellCart\Catalog\Entity\ProductTemplate',
                     'inversedBy'                 => 'products',
@@ -694,7 +694,7 @@ return [
                         'referencedColumnName' => 'brand_id',
                     ],
                 ],
-                ],
+            ],
             'fields'          =>
                 [
                     'parentId'  =>
@@ -847,7 +847,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'product' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Product',
                     'inversedBy'   => 'translations',
@@ -856,8 +856,8 @@ return [
                         'referencedColumnName' => 'product_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'productId'       =>
                         [
@@ -1059,7 +1059,7 @@ return [
                     ]
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'translations' => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\CategoryI18n',
                     'mappedBy'      => 'category',
@@ -1072,14 +1072,14 @@ return [
                     'cascade'      => ['persist', 'merge', 'detach'],
                     'orderBy'      => ['lft' => 'ASC']
                 ],
-                ],
-                'manyToMany'      => [
+            ],
+            'manyToMany'      => [
                 'products' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Product',
                     'mappedBy'     => 'categories',
                     'cascade'      => ['persist', 'merge', 'detach'],
                 ],
-                ],
+            ],
             'fields'          =>
                 [
                     'lft'       =>
@@ -1260,7 +1260,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'category' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Category',
                     'inversedBy'   => 'translations',
@@ -1269,8 +1269,8 @@ return [
                         'referencedColumnName' => 'category_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'categoryId'      =>
                         [
@@ -1456,7 +1456,7 @@ return [
                     ],
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'values'       => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\FeatureValue',
                     'mappedBy'      => 'feature',
@@ -1469,8 +1469,8 @@ return [
                     'orphanRemoval' => true,
                     'cascade'       => ['persist', 'merge', 'detach'],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'backendName' =>
                         [
@@ -1554,7 +1554,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'feature' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Feature',
                     'inversedBy'   => 'translations',
@@ -1563,8 +1563,8 @@ return [
                         'referencedColumnName' => 'feature_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'featureId' =>
                         [
@@ -1632,15 +1632,15 @@ return [
                     ],
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'translations' => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\FeatureValueI18n',
                     'mappedBy'      => 'featureValue',
                     'orphanRemoval' => true,
                     'cascade'       => ['persist', 'merge', 'detach'],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'sortOrder' =>
                         [
@@ -1705,7 +1705,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'featureValue' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\FeatureValue',
                     'inversedBy'   => 'translations',
@@ -1714,8 +1714,8 @@ return [
                         'referencedColumnName' => 'feature_value_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'name' =>
                         [
@@ -1790,7 +1790,7 @@ return [
                     ],
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'values'       => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\AttributeValue',
                     'mappedBy'      => 'attribute',
@@ -1803,8 +1803,8 @@ return [
                     'orphanRemoval' => true,
                     'cascade'       => ['persist', 'merge', 'detach'],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'backendName' =>
                         [
@@ -1888,7 +1888,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'attribute' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Attribute',
                     'inversedBy'   => 'translations',
@@ -1897,8 +1897,8 @@ return [
                         'referencedColumnName' => 'attribute_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'attributeId' =>
                         [
@@ -1966,15 +1966,15 @@ return [
                     ],
                 ],
             ],
-                'oneToMany'       => [
+            'oneToMany'       => [
                 'translations' => [
                     'targetEntity'  => 'WellCart\Catalog\Entity\AttributeValueI18n',
                     'mappedBy'      => 'attributeValue',
                     'orphanRemoval' => true,
                     'cascade'       => ['persist', 'merge', 'detach'],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'sortOrder' =>
                         [
@@ -2038,7 +2038,7 @@ return [
                     ],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'attributeValue' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\AttributeValue',
                     'inversedBy'   => 'translations',
@@ -2047,8 +2047,8 @@ return [
                         'referencedColumnName' => 'attribute_value_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'name' =>
                         [
@@ -2107,7 +2107,7 @@ return [
                     'cascade'       => ['persist', 'merge', 'detach'],
                 ],
             ],
-                'manyToOne'       => [
+            'manyToOne'       => [
                 'product' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Product',
                     'inversedBy'   => 'variants',
@@ -2116,8 +2116,8 @@ return [
                         'referencedColumnName' => 'product_id'
                     ],
                 ],
-                ],
-                'fields'          =>
+            ],
+            'fields'          =>
                 [
                     'quantity'  =>
                         [
@@ -2287,7 +2287,7 @@ return [
                     ],
                 ],
             ],
-                'fields'    =>
+            'fields'    =>
                 [
 
                 ],
@@ -2334,7 +2334,7 @@ return [
                     ],
                 ],
             ],
-                'fields'    =>
+            'fields'    =>
                 [
 
                 ],

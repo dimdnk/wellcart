@@ -71,8 +71,8 @@ class CurrenciesController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView $formPageView
-     * @param EntityForm $form
+     * @param FormPageView   $formPageView
+     * @param EntityForm     $form
      * @param CurrencyEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface

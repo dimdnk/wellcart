@@ -22,14 +22,14 @@ return [
         /**
          * Session configuration
          */
-        'session'              => [
+        'session'  => [
             'config' => [
                 'options' => [
                     'name' => 'wellcart_backend_sid',
                 ],
             ],
         ],
-        'doctrine'             => [
+        'doctrine' => [
             'authentication' => [
                 'orm_default' => [
                     'identity_class'      => 'WellCart\Admin\Entity\Administrator',
@@ -39,7 +39,7 @@ return [
             ],
         ],
 
-        'zfcuser'              => [
+        'zfcuser'  => [
             'user_entity_class'    => 'WellCart\Admin\Entity\Administrator',
             'auth_identity_fields' => ['email'],
             'enable_registration'  => false,

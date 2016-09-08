@@ -7,14 +7,13 @@
  */
 namespace WellCart\Admin\Factory\Controller;
 
+use Interop\Container\ContainerInterface;
 use WellCart\Admin\Controller\RecoverAccountController;
 use WellCart\Admin\Service\RecoverAccount;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 
-class RecoverAccountControllerFactory implements FactoryInterface
+class RecoverAccountControllerFactory
 {
-    public function createService(ServiceLocatorInterface $sm)
+    public function __invoke(ContainerInterface $sm)
     {
         return new RecoverAccountController(
             $sm->getServiceLocator()

@@ -36,7 +36,6 @@ class ModuleTest extends TestCase
     }
 
 
-
     public function testGetServiceConfig()
     {
         $this->assertInternalType('array', $this->object->getServiceConfig());
