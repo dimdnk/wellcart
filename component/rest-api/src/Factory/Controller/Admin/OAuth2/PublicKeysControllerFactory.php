@@ -12,7 +12,7 @@ use WellCart\RestApi\Controller\Admin\OAuth2\PublicKeysController;
 
 class PublicKeysControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): PublicKeysController
     {
         $controller = new PublicKeysController(
             $sm->getServiceLocator()

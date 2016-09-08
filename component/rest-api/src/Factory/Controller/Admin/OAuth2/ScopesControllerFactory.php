@@ -12,7 +12,7 @@ use WellCart\RestApi\Controller\Admin\OAuth2\ScopesController;
 
 class ScopesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): ScopesController
     {
         $controller = new ScopesController(
             $sm->getServiceLocator()

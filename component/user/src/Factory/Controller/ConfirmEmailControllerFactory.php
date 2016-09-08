@@ -13,7 +13,7 @@ use WellCart\User\Service\Registration\AccountEmailHandler;
 
 class ConfirmEmailControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): ConfirmEmailController
     {
         $controller = new ConfirmEmailController(
             $sm->getServiceLocator()

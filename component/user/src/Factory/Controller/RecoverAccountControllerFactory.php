@@ -13,7 +13,7 @@ use WellCart\User\Controller\RecoverAccountController;
 
 class RecoverAccountControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): RecoverAccountController
     {
         $controller = new RecoverAccountController(
             $sm->getServiceLocator()

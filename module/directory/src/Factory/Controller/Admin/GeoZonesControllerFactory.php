@@ -13,7 +13,7 @@ use WellCart\Directory\Spec\GeoZoneRepository;
 
 class GeoZonesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm):GeoZonesController
     {
         $controller = new GeoZonesController(
             $sm->getServiceLocator()

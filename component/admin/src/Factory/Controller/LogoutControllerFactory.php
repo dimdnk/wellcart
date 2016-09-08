@@ -12,7 +12,7 @@ use WellCart\Admin\Controller\LogoutController;
 
 class LogoutControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): LogoutController
     {
         return new LogoutController;
     }

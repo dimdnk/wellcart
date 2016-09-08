@@ -12,7 +12,7 @@ use WellCart\Admin\Controller\LoginController;
 
 class LoginControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): LoginController
     {
         /* @var ControllerManager $sm */
         $serviceManager = $sm->getServiceLocator();

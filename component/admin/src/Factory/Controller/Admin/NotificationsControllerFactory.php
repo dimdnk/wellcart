@@ -13,7 +13,7 @@ use WellCart\Admin\Spec\NotificationRepository;
 
 class NotificationsControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): NotificationsController
     {
         $services = $sm->getServiceLocator();
         return new NotificationsController(

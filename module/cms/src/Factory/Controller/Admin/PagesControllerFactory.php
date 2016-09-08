@@ -13,7 +13,7 @@ use WellCart\CMS\Spec\PageI18nRepository;
 
 class PagesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm):PagesController
     {
         $controller = new PagesController(
             $sm->getServiceLocator()

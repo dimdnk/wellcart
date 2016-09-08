@@ -13,7 +13,7 @@ use WellCart\Directory\Spec\ZoneRepository;
 
 class ZonesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm):ZonesController
     {
         $controller = new ZonesController(
             $sm->getServiceLocator()
