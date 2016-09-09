@@ -15,6 +15,7 @@ use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
+use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
 use WellCart\Utility\Arr;
 use Zend\Form\Factory as FormFactory;
@@ -51,18 +52,11 @@ class Module implements
     /**
      * Returns configuration to merge with application configuration
      *
-     * @return array
+     * @return ModuleConfiguration
      */
     public function getConfig()
     {
-        $config = include __DIR__ . '/../config/module.config.php';
-        if (application_context(Application::CONTEXT_API)) {
-            $config = Arr::merge(
-                $config,
-                include __DIR__ . '/../config/api.config.php'
-            );
-        }
-        return $config;
+        return new ModuleConfiguration([], true, __DIR__ . '/../config');
     }
 
     /**

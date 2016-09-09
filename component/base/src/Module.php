@@ -20,6 +20,7 @@ use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
+use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc;
 use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
@@ -174,18 +175,11 @@ class Module implements
     /**
      * Returns configuration to merge with application configuration
      *
-     * @return array
+     * @return ModuleConfiguration
      */
     public function getConfig()
     {
-        $config = include __DIR__ . '/../config/module.config.php';
-        if (application_context(Mvc\Application::CONTEXT_API)) {
-            $config = Arr::merge(
-                $config,
-                include __DIR__ . '/../config/api.config.php'
-            );
-        }
-        return $config;
+        return new ModuleConfiguration([], true, __DIR__ . '/../config');
     }
 
     /**

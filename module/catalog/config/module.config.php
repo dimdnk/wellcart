@@ -68,6 +68,7 @@ return [
         'factories' => [
             'WellCart\Catalog\Controller\Admin\Brands'     => Factory\Controller\Admin\BrandsControllerFactory::class,
             'WellCart\Catalog\Controller\Admin\Products'   => Factory\Controller\Admin\ProductsControllerFactory::class,
+            'WellCart\Catalog\Controller\Admin\ProductTemplates'   => Factory\Controller\Admin\ProductTemplatesControllerFactory::class,
             'WellCart\Catalog\Controller\Admin\Categories' => Factory\Controller\Admin\CategoriesControllerFactory::class,
             'WellCart\Catalog\Controller\Admin\Features'   => Factory\Controller\Admin\FeaturesControllerFactory::class,
             'WellCart\Catalog\Controller\Admin\Attributes' => Factory\Controller\Admin\AttributesControllerFactory::class,

@@ -12,6 +12,7 @@ namespace WellCart\CommandBus;
 
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
+use WellCart\ModuleManager\ModuleConfiguration;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 class Module implements
@@ -39,11 +40,11 @@ class Module implements
     /**
      * Returns configuration to merge with application configuration
      *
-     * @return array
+     * @return ModuleConfiguration
      */
     public function getConfig()
     {
-        return include __DIR__ . '/../config/module.config.php';
+        return new ModuleConfiguration([], true, __DIR__ . '/../config');
     }
 
     /**
