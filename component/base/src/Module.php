@@ -428,6 +428,8 @@ class Module implements
         return [
             "Flushes cache storage:\n",
             'wellcart:cache:flush' => '',
+            "Display registered routes list:\n",
+            'wellcart:route:list' => '',
         ];
     }
 }

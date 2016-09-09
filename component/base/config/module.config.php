@@ -58,6 +58,7 @@ return [
             'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\Listener\ActionHandlesListenerFactory',
             'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Factory\Layout\Listener\LoadLayoutListenerFactory',
             'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\Listener\PrepareActionViewModelListenerFactory',
+            Service\Route\Listing::class => Factory\Service\Route\ListingFactory::class,
 
         ],
         'abstract_factories' => [
@@ -328,7 +329,8 @@ return [
     ],
     'controllers'                => [
         'invokables' => [
-            'WellCart\Base\Controller\Console\Cache' => Controller\Console\CacheController::class
+            'WellCart\Base\Controller\Console\Cache' => Controller\Console\CacheController::class,
+            'WellCart\Base\Controller\Console\Route' => Controller\Console\RouteController::class,
         ],
         'factories'  => [
             'WellCart\Base\Controller\Index'             => Factory\Controller\IndexControllerFactory::class,
@@ -420,6 +422,15 @@ return [
                         'defaults' => [
                             'controller' => 'WellCart\Base\Controller\Console\Cache',
                             'action'     => 'flush',
+                        ]
+                    ]
+                ],
+                'wellcart:route:list' => [
+                    'options' => [
+                        'route'    => 'wellcart:route:list',
+                        'defaults' => [
+                            'controller' => 'WellCart\Base\Controller\Console\Route',
+                            'action'     => 'list',
                         ]
                     ]
                 ],
