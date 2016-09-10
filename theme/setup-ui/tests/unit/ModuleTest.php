@@ -9,6 +9,7 @@
 namespace WellCart\Theme\SetupUi;
 
 use PHPUnit_Framework_TestCase as TestCase;
+use WellCart\ModuleManager\ModuleConfiguration;
 
 class ModuleTest extends TestCase
 {
@@ -29,7 +30,7 @@ class ModuleTest extends TestCase
 
     public function testGetConfig()
     {
-        $this->assertInternalType('array', $this->object->getConfig());
+        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
     }
 
 

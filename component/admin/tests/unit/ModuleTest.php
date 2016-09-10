@@ -9,6 +9,7 @@
 namespace WellCart\Admin;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
 
 class ModuleTest extends TestCase
@@ -37,9 +38,9 @@ class ModuleTest extends TestCase
 
     public function testGetConfig()
     {
-        $this->assertInternalType('array', $this->object->getConfig());
+        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
         $_ENV['WELLCART_APPLICATION_CONTEXT'] = Application::CONTEXT_API;
-        $this->assertInternalType('array', $this->object->getConfig());
+        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
     }
 
     public function testGetServiceConfig()
