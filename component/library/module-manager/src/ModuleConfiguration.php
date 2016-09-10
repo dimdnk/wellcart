@@ -37,7 +37,7 @@ class ModuleConfiguration extends Config
         $allowModifications = true;
         parent::__construct($array, $allowModifications);
         if (null !== $dir) {
-            $this->dir = ltrim(str_replace('\\', '/', $dir), DS) . DS;
+            $this->dir = rtrim(str_replace('\\', '/', $dir), DS) . DS;
             $this->load();
         } else {
             $this->allowModifications = false;
