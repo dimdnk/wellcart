@@ -30,7 +30,7 @@ class ModuleTest extends TestCase
 
     public function testGetConfig()
     {
-        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
+        $this->assertInternalType('array', $this->object->getConfig());
     }
 
 

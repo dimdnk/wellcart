@@ -9,7 +9,6 @@
 namespace WellCart\Theme\BackendUi;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use WellCart\ModuleManager\ModuleConfiguration;
 
 class ModuleTest extends TestCase
 {
@@ -30,9 +29,8 @@ class ModuleTest extends TestCase
 
     public function testGetConfig()
     {
-        $this->assertInstanceOf(ModuleConfiguration::class, $this->object->getConfig());
+        $this->assertInternalType('array', $this->object->getConfig());
     }
-
 
     public function testGetAbsolutePath()
     {
