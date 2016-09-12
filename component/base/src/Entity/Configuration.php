@@ -39,6 +39,20 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     protected $configValue;
 
     /**
+     * Context
+     *
+     * @var string
+     */
+    protected $context;
+
+    /**
+     * Environment
+     *
+     * @var string
+     */
+    protected $environment;
+
+    /**
      * Created at
      *
      * @var \DateTimeInterface
@@ -147,4 +161,44 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
         $this->updatedAt = $updatedAt;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getContext()
+    {
+        return $this->context;
+    }
+
+    /**
+     * @param string $context
+     *
+     * @return : ConfigurationEntity
+     */
+    public function setContext($context): ConfigurationEntity
+    {
+        $this->context = $context;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEnvironment()
+    {
+        return $this->environment;
+    }
+
+    /**
+     * @param string $environment
+     *
+     * @return ConfigurationEntity
+     */
+    public function setEnvironment($environment): ConfigurationEntity
+    {
+        $this->environment = $environment;
+        return $this;
+    }
+
+
 }

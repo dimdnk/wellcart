@@ -58,6 +58,16 @@ class Install extends AbstractMigration
                 ['null' => true, 'limit' => 255, 'comment' => 'Config Value']
             )
             ->addColumn(
+                'context',
+                'string',
+                ['null' => true, 'limit' => 15, 'comment' => 'Context']
+            )
+            ->addColumn(
+                'environment',
+                'string',
+                ['null' => true, 'limit' => 15, 'comment' => 'Environment']
+            )            
+            ->addColumn(
                 'created_at',
                 'datetime',
                 ['null' => false, 'comment' => 'Created At']

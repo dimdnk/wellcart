@@ -94,6 +94,64 @@ return [
                                 ],
                             ],
                         ],
+                    'context'     =>
+                        [
+                            'column'                     => 'context',
+                            'type'                       => 'string',
+                            'length'                     => 15,
+                            'nullable'                   => true,
+                            'input_filter_specification' => [
+                                'required'   => true,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
+                                    'StripNewlines' => ['name' => 'StripNewlines'],
+                                    'Null'          => ['name' => 'Null'],
+                                ],
+                                'validators' => [
+                                    'NotEmpty'     => [
+                                        'name' => 'NotEmpty',
+                                    ],
+                                    'StringLength' => [
+                                        'name'    => 'StringLength',
+                                        'options' => [
+                                            'encoding' => 'UTF-8',
+                                            'min'      => 1,
+                                            'max'      => 15,
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
+                    'environment' =>
+                        [
+                            'column'                     => 'environment',
+                            'type'                       => 'string',
+                            'length'                     => 15,
+                            'nullable'                   => true,
+                            'input_filter_specification' => [
+                                'required'   => true,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
+                                    'StripNewlines' => ['name' => 'StripNewlines'],
+                                    'Null'          => ['name' => 'Null'],
+                                ],
+                                'validators' => [
+                                    'NotEmpty'     => [
+                                        'name' => 'NotEmpty',
+                                    ],
+                                    'StringLength' => [
+                                        'name'    => 'StringLength',
+                                        'options' => [
+                                            'encoding' => 'UTF-8',
+                                            'min'      => 1,
+                                            'max'      => 15,
+                                        ],
+                                    ],
+                                ],
+                            ],
+                        ],
                     'createdAt'   =>
                         [
                             'column'   => 'created_at',
