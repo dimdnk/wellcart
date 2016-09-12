@@ -13,19 +13,11 @@ namespace WellCart\Setup\Composer;
 
 class ScriptHandler
 {
-    /**
-     * Set permissions for directories
-     */
-    public static function setPermissions()
-    {
-        $prefix = '';
-        if (is_dir(getcwd() . '/tests')) {
-            $prefix = 'tests/';
-        }
-        $directories = [
-            'config/autoload',
+    const DIRS
+        = [
             'data',
             'data/cache',
+            'data/code',
             'data/logs',
             'data/db/migrations',
             'data/db/seeds',
@@ -35,7 +27,35 @@ class ScriptHandler
             'public/themes',
             'public/media',
         ];
-        foreach ($directories as $directory) {
+
+    /**
+     * Create project directories
+     */
+    public static function createProjectDirectories()
+    {
+        $prefix = '';
+        if (is_dir(getcwd() . '/tests')) {
+            $prefix = 'tests/';
+        }
+
+        foreach (self::DIRS as $directory) {
+            if (!is_dir($prefix . $directory)) {
+                mkdir($prefix . $directory, 0777, true);
+            }
+        }
+    }
+
+    /**
+     * Set permissions for directories
+     */
+    public static function setPermissions()
+    {
+        $prefix = '';
+        if (is_dir(getcwd() . '/tests')) {
+            $prefix = 'tests/';
+        }
+
+        foreach (self::DIRS as $directory) {
             chmod($prefix . $directory, 0777);
         }
     }
