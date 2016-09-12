@@ -37,7 +37,7 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'zfcuser.enable_registration',
                 'options'    => [
-                    'context' => Application::CONTEXT_FRONTEND,
+                    'context'          => Application::CONTEXT_FRONTEND,
                     'label'            => __('Enable Registration'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
@@ -90,7 +90,7 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.registration.send_welcome_email',
                 'options'    => [
-                    'context' => Application::CONTEXT_FRONTEND,
+                    'context'          => Application::CONTEXT_FRONTEND,
                     'label'            => __('Send Welcome Email'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
@@ -118,7 +118,7 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.registration.confirm_email',
                 'options'    => [
-                    'context' => Application::CONTEXT_FRONTEND,
+                    'context'          => Application::CONTEXT_FRONTEND,
                     'label'            => __('Require Emails Confirmation'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
@@ -359,7 +359,7 @@ class AccountPreferences extends AbstractForm
     {
 
         $specification = [
-            'zfcuser.enable_registration'                                   =>
+            'zfcuser.enable_registration'                                         =>
                 [
                     'name'       => 'zfcuser.enable_registration',
                     'required'   => true,
@@ -384,7 +384,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'wellcart.user_account_options.registration.send_welcome_email' =>
+            'wellcart.user_account_options.registration.send_welcome_email'       =>
                 [
                     'name'       => 'wellcart.user_account_options.registration.send_welcome_email',
                     'required'   => true,
@@ -409,7 +409,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'wellcart.user_account_options.registration.confirm_email'      =>
+            'wellcart.user_account_options.registration.confirm_email'            =>
                 [
                     'name'       => 'wellcart.user_account_options.registration.confirm_email',
                     'required'   => true,
@@ -434,7 +434,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'wellcart.user_account_options.password_reset.allow_for_admin'                            =>
+            'wellcart.user_account_options.password_reset.allow_for_admin'        =>
                 [
                     'name'       => 'wellcart.user_account_options.password_reset.allow_for_admin',
                     'required'   => true,
@@ -459,7 +459,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'wellcart.user_account_options.max_login_attempts'                                        =>
+            'wellcart.user_account_options.max_login_attempts'                    =>
                 [
                     'name'       => 'wellcart.user_account_options.max_login_attempts',
                     'required'   => true,
@@ -485,7 +485,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'zfcuser.login_form_timeout'                                                              =>
+            'zfcuser.login_form_timeout'                                          =>
                 [
                     'name'       => 'zfcuser.login_form_timeout',
                     'required'   => true,
@@ -511,7 +511,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'zfcuser.user_form_timeout'                                                               =>
+            'zfcuser.user_form_timeout'                                           =>
                 [
                     'name'       => 'zfcuser.user_form_timeout',
                     'required'   => true,
@@ -537,7 +537,7 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'wellcart.user_account_options.password_reset.link_expiration_period'                     =>
+            'wellcart.user_account_options.password_reset.link_expiration_period' =>
                 [
                     'name'       => 'wellcart.user_account_options.password_reset.link_expiration_period',
                     'required'   => true,

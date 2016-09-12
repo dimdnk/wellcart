@@ -21,7 +21,7 @@ class SystemConfigDbReader
     /**
      * SQL query
      */
-    const SQL = 'SELECT * FROM base_configuration';
+    const SQL = 'SELECT * FROM base_configuration WHERE context IS NULL';
 
     /**
      * Config
