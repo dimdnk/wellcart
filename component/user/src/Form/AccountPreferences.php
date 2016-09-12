@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\User\Form;
 
+use WellCart\Mvc\Application;
 use WellCart\Ui\Form\TabbedForm as AbstractForm;
 use WellCart\Utility\Config;
 use Zend\Form\Factory;
@@ -34,8 +35,9 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'context_specific.frontend.zfcuser.enable_registration',
+                'name'       => 'zfcuser.enable_registration',
                 'options'    => [
+                    'context' => Application::CONTEXT_FRONTEND,
                     'label'            => __('Enable Registration'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
@@ -86,8 +88,9 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
+                'name'       => 'wellcart.user_account_options.registration.send_welcome_email',
                 'options'    => [
+                    'context' => Application::CONTEXT_FRONTEND,
                     'label'            => __('Send Welcome Email'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
@@ -113,8 +116,9 @@ class AccountPreferences extends AbstractForm
 
         $this->add(
             [
-                'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
+                'name'       => 'wellcart.user_account_options.registration.confirm_email',
                 'options'    => [
+                    'context' => Application::CONTEXT_FRONTEND,
                     'label'            => __('Require Emails Confirmation'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
@@ -321,11 +325,11 @@ class AccountPreferences extends AbstractForm
         $this->addTab('registration', __('Registration'));
         $registration = $this->getTab('registration');
         $fields = [
-            'context_specific.frontend.zfcuser.enable_registration',
+            'zfcuser.enable_registration',
             'zfcuser.user_form_timeout',
             'wellcart.user_account_options.registration.email_contact',
-            'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
-            'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
+            'wellcart.user_account_options.registration.send_welcome_email',
+            'wellcart.user_account_options.registration.confirm_email',
         ];
         foreach ($fields as $field) {
             $registration->add($field, $this->get($field));
@@ -355,9 +359,9 @@ class AccountPreferences extends AbstractForm
     {
 
         $specification = [
-            'context_specific.frontend.zfcuser.enable_registration'                                   =>
+            'zfcuser.enable_registration'                                   =>
                 [
-                    'name'       => 'context_specific.frontend.zfcuser.enable_registration',
+                    'name'       => 'zfcuser.enable_registration',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
@@ -380,9 +384,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email' =>
+            'wellcart.user_account_options.registration.send_welcome_email' =>
                 [
-                    'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.send_welcome_email',
+                    'name'       => 'wellcart.user_account_options.registration.send_welcome_email',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
@@ -405,9 +409,9 @@ class AccountPreferences extends AbstractForm
                         ],
                     ],
                 ],
-            'context_specific.frontend.wellcart.user_account_options.registration.confirm_email'      =>
+            'wellcart.user_account_options.registration.confirm_email'      =>
                 [
-                    'name'       => 'context_specific.frontend.wellcart.user_account_options.registration.confirm_email',
+                    'name'       => 'wellcart.user_account_options.registration.confirm_email',
                     'required'   => true,
                     'filters'    => [
                         'StripTags'     => ['name' => 'StripTags'],
