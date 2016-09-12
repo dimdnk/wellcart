@@ -50,12 +50,28 @@ class ModuleConfiguration extends Config
         if ($this->isLoaded) {
             return;
         }
-        $files = ['module.config.php'];
-        if (application_context(Application::CONTEXT_API)) {
-            $files[] = 'api.config.php';
+
+        $context = application_context();
+        $commonPath = $this->dir . Application::CONTEXT_COMMON . DS
+            . '{{,*.}global,{,*.}local}.php';
+        $contextPath = $this->dir . $context . DS
+            . '{{,*.}global,{,*.}local}.php';
+
+        $files = array_merge(
+            [$this->dir . 'module.config.php'],
+            glob($commonPath, GLOB_BRACE)
+        );
+        if (
+        !application_context(Application::CONTEXT_COMMON)
+        ) {
+            $files = array_merge(
+                $files,
+                glob($contextPath, GLOB_BRACE)
+            );
         }
+
         foreach ($files as $file) {
-            $config = include $this->dir . $file;
+            $config = include $file;
             $this->merge(new static($config));
         }
         $this->allowModifications = false;
