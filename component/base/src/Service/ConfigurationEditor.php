@@ -16,6 +16,7 @@ use WellCart\Base\Exception;
 use WellCart\Base\Spec\ConfigurationRepository;
 use WellCart\Form\Form;
 use WellCart\Utility\Arr;
+use Zend\Hydrator\ClassMethods;
 use Zend\Stdlib\PriorityList;
 use ZfcBase\EventManager\EventProvider;
 
@@ -115,6 +116,7 @@ class ConfigurationEditor extends EventProvider
             'WellCart\Base\Spec\ConfigurationEntity'
         );
 
+
         $this->getEventManager()
             ->trigger(
                 __FUNCTION__ . '.pre',
@@ -130,8 +132,14 @@ class ConfigurationEditor extends EventProvider
             if ($configItem == null) {
                 $configItem = $repository->createEntity();
             }
-            $configItem->setConfigKey($key)
-                ->setConfigValue($value);
+
+            $configItem->setConfigKey($key);
+            if (!is_array($value)) {
+                $configItem->setConfigValue($value);
+            } else {
+                $hydrator = new ClassMethods();
+                $hydrator->hydrate($value, $configItem);
+            }
 
             $manager->persist($configItem);
         }

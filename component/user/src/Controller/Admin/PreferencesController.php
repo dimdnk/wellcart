@@ -74,6 +74,12 @@ class PreferencesController extends AbstractActionController
                 $form->setData($data);
                 if ($form->isValid()) {
                     $set = $form->getData();
+                    foreach($set as $key => $_val) {
+                        $context = $form->get($key)->getOption('context');
+                        if($context) {
+                            $set[$key] = ['config_value', 'context' => $context];
+                        }
+                    }
                     /**
                      * Save config values
                      */
