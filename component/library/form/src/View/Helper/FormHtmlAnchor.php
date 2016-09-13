@@ -41,7 +41,6 @@ class FormHtmlAnchor extends AbstractHelper
      */
     public function render(ElementInterface $oElement)
     {
-        //var_dump( $oElement->getTarget());exit;
         return
             sprintf(
                 self::$format,

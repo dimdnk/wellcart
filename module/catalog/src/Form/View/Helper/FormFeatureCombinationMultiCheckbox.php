@@ -14,7 +14,7 @@ use WellCart\Form\View\Helper\FormMultiCheckbox;
 use WellCart\Utility\Arr;
 use Zend\Form\Element\MultiCheckbox as MultiCheckboxElement;
 
-class FormCatalogFeatureCombinationMultiCheckbox extends FormMultiCheckbox
+class FormFeatureCombinationMultiCheckbox extends FormMultiCheckbox
 {
     /**
      * @inheritDoc

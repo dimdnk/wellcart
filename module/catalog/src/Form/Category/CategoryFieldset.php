@@ -38,7 +38,7 @@ class CategoryFieldset extends Fieldset
         $this->add(
             [
                 'name'       => 'parent',
-                'type'       => 'catalogCategorySelector',
+                'type'       => 'catalogCategoryMultiCheckbox',
                 'options'    => [
                     'label'            => __('Parent Category'),
                     'twb-layout'       => 'horizontal',

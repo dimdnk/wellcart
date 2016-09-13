@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Catalog;
 
+use WellCart\Catalog\Form\Element\CategoryMultiCheckbox;
 use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
@@ -112,7 +113,7 @@ class Module implements
                         );
                     },
 
-                'catalogCategorySelector'                      =>
+                'catalogCategoryMultiCheckbox'                      =>
                     function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
                     ) {
                         $services = $sm->getServiceLocator();
@@ -120,7 +121,7 @@ class Module implements
                             'WellCart\Catalog\Spec\CategoryRepository'
                         )
                             ->toOptionsList();
-                        return new \WellCart\Form\Element\Select(
+                        return new CategoryMultiCheckbox(
                             null,
                             [
                                 'value_options'             => $categories,
