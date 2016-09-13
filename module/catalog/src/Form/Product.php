@@ -162,6 +162,7 @@ class Product extends AbstractForm
         }
 
         $features = $this->getTab('features');
+        $features->add('add_feature', $items->get('add_feature'));
         $features->add('features', $items->get('features'));
 
         $categories = $this->getTab('categories');

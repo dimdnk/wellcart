@@ -29,6 +29,10 @@ class ToolbarButton
     /**
      * @var string
      */
+    protected $target = '';
+    /**
+     * @var string
+     */
     protected $link = '';
 
     /**
@@ -42,7 +46,7 @@ class ToolbarButton
     /**
      * @param string $label
      *
-     * @return Button
+     * @return ToolbarButton
      */
     public function setLabel($label)
     {
@@ -61,13 +65,33 @@ class ToolbarButton
     /**
      * @param string $class
      *
-     * @return Button
+     * @return ToolbarButton
      */
     public function setClass($class)
     {
         $this->class = $class;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getTarget()
+    {
+        return $this->target;
+    }
+
+    /**
+     * @param string $target
+     *
+     * @return ToolbarButton
+     */
+    public function setTarget($target)
+    {
+        $this->target = $target;
+        return $this;
+    }
+
 
     /**
      * @return string
@@ -80,7 +104,7 @@ class ToolbarButton
     /**
      * @param string $icon
      *
-     * @return Button
+     * @return ToolbarButton
      */
     public function setIcon(string $icon)
     {
@@ -99,7 +123,7 @@ class ToolbarButton
     /**
      * @param string $link
      *
-     * @return Button
+     * @return ToolbarButton
      */
     public function setLink(string $link)
     {
@@ -118,12 +142,27 @@ class ToolbarButton
     /**
      * @param string $name
      *
-     * @return Button
+     * @return ToolbarButton
      */
     public function setName(string $name)
     {
         $this->name = $name;
         return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    function __toString()
+    {
+        return sprintf(
+            '<a href="%s" class="%s" target="%s"><i class="%s"></i> %s</a>',
+            $this->getLink(),
+            $this->getClass(),
+            $this->getTarget(),
+            $this->getIcon(),
+            $this->getLabel()
+        );
     }
 
 

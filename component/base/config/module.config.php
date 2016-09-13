@@ -58,7 +58,7 @@ return [
             'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\Listener\ActionHandlesListenerFactory',
             'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Factory\Layout\Listener\LoadLayoutListenerFactory',
             'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\Listener\PrepareActionViewModelListenerFactory',
-            Service\Route\Listing::class => Factory\Service\Route\ListingFactory::class,
+            Service\Route\Listing::class                                 => Factory\Service\Route\ListingFactory::class,
 
         ],
         'abstract_factories' => [
@@ -372,6 +372,7 @@ return [
             'formErrors'            => 'WellCart\Form\View\Helper\FormErrors',
             'javaScriptEnvironment' => ViewHelper\JavaScriptEnvironment::class,
             'formRenderer'          => 'WellCart\Form\View\Helper\FormRenderer',
+            'formHtmlAnchor'        => 'WellCart\Form\View\Helper\FormHtmlAnchor',
             'formDateRange'         => 'WellCart\Form\View\Helper\FormDateRange',
             'formRangeFilter'       => 'WellCart\Form\View\Helper\FormRangeFilter',
             'formTabsRenderer'      => 'WellCart\Ui\Form\Helper\FormTabsRenderer',
@@ -425,7 +426,7 @@ return [
                         ]
                     ]
                 ],
-                'wellcart:route:list' => [
+                'wellcart:route:list'  => [
                     'options' => [
                         'route'    => 'wellcart:route:list',
                         'defaults' => [
@@ -549,6 +550,9 @@ return [
     ],
     'form_elements'              => [
         'aliases'    => [
+            'htmlAnchor'     => FormElement\HtmlAnchor::class,
+            'htmlanchor'     => FormElement\HtmlAnchor::class,
+            'HtmlAnchor'     => FormElement\HtmlAnchor::class,
             'button'         => FormElement\Button::class,
             'Button'         => FormElement\Button::class,
             'captcha'        => FormElement\Captcha::class,
@@ -629,7 +633,7 @@ return [
             'dateRange'                       => FormElement\DateRange::class,
             'rangeFilter'                     => FormElement\RangeFilter::class,
 
-
+            FormElement\HtmlAnchor::class     => FormElement\HtmlAnchor::class,
             FormElement\Button::class         => FormElement\Button::class,
             FormElement\Captcha::class        => FormElement\Captcha::class,
             FormElement\Checkbox::class       => FormElement\Checkbox::class,
@@ -664,10 +668,12 @@ return [
     ],
     'form_element_configuration' => [
         'class_map' => [
+            'formhtmlanchor'  => 'WellCart\Form\View\Helper\FormHtmlAnchor',
             'formdaterange'   => 'WellCart\Form\View\Helper\FormDateRange',
             'formrangefilter' => 'WellCart\Form\View\Helper\FormRangeFilter',
         ],
         'type_map'  => [
+            'htmlanchor'  => 'formhtmlanchor',
             'daterange'   => 'formdaterange',
             'rangefilter' => 'formrangefilter',
         ],

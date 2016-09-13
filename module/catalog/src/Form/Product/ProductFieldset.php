@@ -155,6 +155,31 @@ class ProductFieldset extends Fieldset
 
         $this->add(
             [
+                'name'       => 'add_feature',
+                'type'       => 'htmlAnchor',
+                'options'    => [
+                    'link'             => url_to_route(
+                        'zfcadmin/catalog/features',
+                        [
+                            'action' => 'create',
+                        ]
+                    ),
+                    'icon'             => 'fa fa-plus',
+                    'text'             => __('Add feature'),
+                    'class'             => 'btn btn-primary btn-sm',
+                    'target'             => '_blank',
+                    'twb-layout'       => 'horizontal',
+                    'column-size'      => 'md-12',
+                ],
+                'attributes' => [
+                    'id' => 'catalog_add_feature',
+                ],
+            ],
+            ['priority' => 1040]
+        );
+
+        $this->add(
+            [
                 'name'       => 'features',
                 'type'       => 'catalogFeatureCombinationMultiCheckbox',
                 'options'    => [
