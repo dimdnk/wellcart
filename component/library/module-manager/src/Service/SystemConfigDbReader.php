@@ -21,7 +21,7 @@ class SystemConfigDbReader
     /**
      * SQL query
      */
-    const SQL = 'SELECT * FROM base_configuration WHERE context IS NULL';
+    const SQL = 'SELECT * FROM base_configuration';
 
     /**
      * Config
@@ -89,7 +89,13 @@ class SystemConfigDbReader
         foreach ($rows as $row) {
             $key = Arr::get($row, 'config_key');
             $value = Arr::get($row, 'config_value');
+            $context = $row['context'];
+
             if ($key !== null) {
+                if ($context) {
+                    $key = 'context_specific.' . $context . '.' . $key;
+                }
+
                 if (Valid::digit($value)) {
                     $value = intval($value);
                 }
