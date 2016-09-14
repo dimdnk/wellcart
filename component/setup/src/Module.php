@@ -122,6 +122,15 @@ class Module implements
 
             "Publish module's private resource files by creating symlinks to them in the web-visible area:\n",
             'wellcart:setup:publish-assets' => '',
+
+            "Displays maintenance mode status:\n",
+            'maintenance:status' => '',
+
+            "Enables maintenance mode:\n",
+            'maintenance:enable' => '',
+
+            "Disables maintenance mode:\n",
+            'maintenance:disable' => '',
         ];
     }
 

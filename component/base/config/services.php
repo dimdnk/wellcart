@@ -32,6 +32,12 @@ use Zend\Validator\Csrf as CsrfValidator;
 
 return [
     'factories'    => [
+        Mvc\Application\MaintenanceMode::class           =>
+            function (ContainerInterface $services) {
+                return $services->get('Application')
+                    ->getMaintenanceMode();
+            },
+
         'WellCart\Base\PageView\Admin\LanguageForm'      =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\LanguageForm(

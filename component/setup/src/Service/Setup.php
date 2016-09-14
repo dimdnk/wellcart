@@ -124,8 +124,9 @@ class Setup
     protected function runInContext($context, callable $func)
     {
         $_ENV['WELLCART_APPLICATION_CONTEXT'] = $context;
+        $app = application();
         try {
-            $app = application();
+            $app->enableMaintenanceMode();
             $configPath = WELLCART_ROOT . 'config/application.config.php';
             if (!is_file($configPath)) {
                 $configPath = WELLCART_ROOT
@@ -150,6 +151,7 @@ class Setup
         } finally {
             $_ENV['WELLCART_APPLICATION_CONTEXT']
                 = Application::CONTEXT_SETUP;
+            $app->disableMaintenanceMode();
         }
     }
 

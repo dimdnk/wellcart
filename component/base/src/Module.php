@@ -25,13 +25,14 @@ use WellCart\Mvc;
 use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
 use WellCart\Ui\Datagrid\View\Helper\GridFilters as GridFiltersHelper;
-use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use WellCart\View\Helper\Date as DateViewHelper;
 use WellCart\View\Helper\Locale as LocaleViewHelper;
 use Zend\Console\Adapter\AdapterInterface as ConsoleAdapter;
+use Zend\Console\Console;
 use Zend\EventManager\EventInterface;
 use Zend\Form\Factory;
+use Zend\Http\Response;
 use Zend\ModuleManager\Feature;
 use Zend\ModuleManager\ModuleManagerInterface;
 use Zend\Mvc\MvcEvent;
@@ -90,6 +91,22 @@ class Module implements
          * Setup application helper
          */
         application($app);
+
+        if (!Console::isConsole() && $app->isMaintenance()) {
+            $e->stopPropagation(true);
+            $maintenance = Config::get('wellcart.maintenance');
+            $message = $maintenance['status_code'] . ' '
+                . $maintenance['message'];
+            if (!headers_sent()) {
+                header('HTTP/1.1 ' . $message);
+                header('Status: ' . $message);
+                header('Retry-After: 300');
+            }
+            exit(str_replace(
+                '%message%', $maintenance['message'],
+                file_get_contents($maintenance['template'])
+            ));
+        }
 
         $locale = Config::get('wellcart.localization.locale');
 
@@ -170,6 +187,8 @@ class Module implements
         $events = $manager->getEventManager();
         $configListener = new ConfigListener();
         $events->attach($configListener, -70);
+
+
     }
 
     /**
@@ -423,7 +442,7 @@ class Module implements
             "Flushes cache storage:\n",
             'wellcart:cache:flush' => '',
             "Display registered routes list:\n",
-            'wellcart:route:list' => '',
+            'wellcart:route:list'  => '',
         ];
     }
 }

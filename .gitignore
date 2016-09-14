@@ -10,6 +10,8 @@ Thumbs.db
 .project
 .settings
 composer.lock
+codeception.yml
+*.suite.yml
 /vendor
 /report
 /bin
@@ -18,5 +20,5 @@ apigility-ui
 clover.xml
 .env
 *.log
-codeception.yml
-*.suite.yml
+maintenance.flag
+tests/_output/*

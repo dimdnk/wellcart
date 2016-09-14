@@ -10,21 +10,23 @@ namespace WellCart\Mvc\Factory;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Mvc\Application;
+use Zend\Mvc\ApplicationInterface;
 
 class ApplicationFactory
 {
     /**
      * @param ContainerInterface $container
      *
-     * @return Application
+     * @return ApplicationInterface
      */
-    public function __invoke(ContainerInterface $container): Application
+    public function __invoke(ContainerInterface $container): ApplicationInterface
     {
-        $application = new Application(
-            $container->get('Config'), $container
+        return new Application(
+            $container->get('Config'), $container,
+            null, null, null,
+            $_ENV['WELLCART_APPLICATION_CONTEXT'],
+            $_ENV['WELLCART_APPLICATION_ENV'],
+            new Application\MaintenanceMode
         );
-        $application->setEnvironment($_ENV['WELLCART_APPLICATION_ENV']);
-        $application->setContext($_ENV['WELLCART_APPLICATION_CONTEXT']);
-        return $application;
     }
 }

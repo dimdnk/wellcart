@@ -1,19 +1,7 @@
-# Composer
-/vendor
-/bin
-*.phar
-composer.lock
-
-# PHPUnit
-/phpunit.xml
-/clover.xml
-/report
-/codeception.yml
-*.suite.yml
-# Coveralls
-/coveralls.json
-
 nbproject
+.vagrant
+Thumbs.db
+*.phar
 ._*
 .~lock.*
 .buildpath
@@ -21,6 +9,14 @@ nbproject
 .idea
 .project
 .settings
-.buildpath
+composer.lock
+/vendor
+/report
+/bin
+apigility-ui
 *~
-.vagrant
+clover.xml
+codeception.yml
+*.suite.yml
+maintenance.flag
+.env

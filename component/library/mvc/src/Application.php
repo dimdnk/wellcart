@@ -8,7 +8,12 @@
 
 namespace WellCart\Mvc;
 
+use WellCart\Mvc\Application\MaintenanceMode;
+use Zend\EventManager\EventManagerInterface;
 use Zend\Mvc\Application as AbstractApplication;
+use Zend\ServiceManager\ServiceManager;
+use Zend\Stdlib\RequestInterface;
+use Zend\Stdlib\ResponseInterface;
 
 class Application extends AbstractApplication
 {
@@ -47,22 +52,38 @@ class Application extends AbstractApplication
     protected $context = self::CONTEXT_COMMON;
 
     /**
+     * @var MaintenanceMode
+     */
+    protected $maintenanceMode;
+
+    /**
+     * @inheritDoc
+     */
+    public function __construct(
+        $configuration,
+        ServiceManager $serviceManager,
+        EventManagerInterface $events = null,
+        RequestInterface $request = null,
+        ResponseInterface $response = null,
+        $context = self::CONTEXT_GLOBAL,
+        $environment = self::ENV_PRODUCTION,
+        MaintenanceMode $maintenanceMode = null
+    ) {
+        $this->context = $context;
+        $this->environment = $environment;
+        $this->maintenanceMode
+            = ($maintenanceMode) ? $maintenanceMode : new MaintenanceMode();
+        parent::__construct(
+            $configuration, $serviceManager, $events, $request, $response
+        );
+    }
+
+    /**
      * @return string
      */
     public function getEnvironment()
     {
         return $this->environment;
-    }
-
-    /**
-     * @param string $environment
-     *
-     * @return Application
-     */
-    public function setEnvironment($environment)
-    {
-        $this->environment = $environment;
-        return $this;
     }
 
     /**
@@ -74,13 +95,34 @@ class Application extends AbstractApplication
     }
 
     /**
-     * @param string $context
-     *
-     * @return Application
+     * @return MaintenanceMode
      */
-    public function setContext($context)
+    public function getMaintenanceMode()
     {
-        $this->context = $context;
-        return $this;
+        return $this->maintenanceMode;
+    }
+
+    /**
+     * @return bool
+     */
+    public function enableMaintenanceMode():bool
+    {
+        return $this->maintenanceMode->enable();
+    }
+
+    /**
+     * @return bool
+     */
+    public function disableMaintenanceMode():bool
+    {
+        return $this->maintenanceMode->disable();
+    }
+
+    /**
+     * @return bool
+     */
+    public function isMaintenance():bool
+    {
+        return $this->maintenanceMode->isEnabled();
     }
 }

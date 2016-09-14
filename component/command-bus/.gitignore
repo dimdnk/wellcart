@@ -1,4 +1,5 @@
 nbproject
+.vagrant
 Thumbs.db
 *.phar
 ._*
@@ -8,12 +9,14 @@ Thumbs.db
 .idea
 .project
 .settings
-codeception.yml
-*.suite.yml
 composer.lock
 /vendor
 /report
 /bin
+apigility-ui
 *~
 clover.xml
+codeception.yml
+*.suite.yml
+maintenance.flag
 .env
