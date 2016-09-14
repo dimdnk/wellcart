@@ -30,7 +30,7 @@ class RouteController extends AbstractConsoleController implements
     {
         $console = $this->getConsole();
         try {
-           $console->writeLine($listing->asTable()->render());
+            $console->writeLine($listing->asTable()->render());
         } catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(

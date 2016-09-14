@@ -7,9 +7,9 @@
  * @license      http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 -->
-<ruleset name="WellCart coding standard"
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="WellCart coding standard"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
                      http://pmd.sf.net/ruleset_xml_schema.xsd"
          xsi:noNamespaceSchemaLocation="
@@ -94,12 +94,12 @@
     <file>./module/directory/config</file>
     <file>./module/catalog/src</file>
     <file>./module/catalog/config</file>
-    
-        <file>./module/wellcart-module-blog/src</file>
+
+    <file>./module/wellcart-module-blog/src</file>
     <file>./module/wellcart-module-blog/config</file>
-        <file>./module/wellcart-module-samples/src</file>
+    <file>./module/wellcart-module-samples/src</file>
     <file>./module/wellcart-module-samples/config</file>
-    
+
     <file>./theme/frontend-ui/src</file>
     <file>./theme/frontend-ui/config</file>
     <file>./theme/backend-ui/src</file>

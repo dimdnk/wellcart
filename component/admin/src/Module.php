@@ -18,7 +18,6 @@ use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
-use WellCart\Utility\Arr;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use Zend\Mvc\MvcEvent;

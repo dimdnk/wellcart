@@ -19,7 +19,8 @@ class ApplicationFactory
      *
      * @return ApplicationInterface
      */
-    public function __invoke(ContainerInterface $container): ApplicationInterface
+    public function __invoke(ContainerInterface $container
+    ): ApplicationInterface
     {
         return new Application(
             $container->get('Config'), $container,

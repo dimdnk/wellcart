@@ -38,19 +38,53 @@ class ToolbarButton
     /**
      * @return string
      */
-    public function getLabel():string
+    public function getName(): string
     {
-        return $this->label;
+        return $this->name;
     }
 
     /**
-     * @param string $label
+     * @param string $name
      *
      * @return ToolbarButton
      */
-    public function setLabel($label)
+    public function setName(string $name)
     {
-        $this->label = $label;
+        $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    function __toString()
+    {
+        return sprintf(
+            '<a href="%s" class="%s" target="%s"><i class="%s"></i> %s</a>',
+            $this->getLink(),
+            $this->getClass(),
+            $this->getTarget(),
+            $this->getIcon(),
+            $this->getLabel()
+        );
+    }
+
+    /**
+     * @return string
+     */
+    public function getLink():string
+    {
+        return $this->link;
+    }
+
+    /**
+     * @param string $link
+     *
+     * @return ToolbarButton
+     */
+    public function setLink(string $link)
+    {
+        $this->link = $link;
         return $this;
     }
 
@@ -92,7 +126,6 @@ class ToolbarButton
         return $this;
     }
 
-
     /**
      * @return string
      */
@@ -115,54 +148,20 @@ class ToolbarButton
     /**
      * @return string
      */
-    public function getLink():string
+    public function getLabel():string
     {
-        return $this->link;
+        return $this->label;
     }
 
     /**
-     * @param string $link
+     * @param string $label
      *
      * @return ToolbarButton
      */
-    public function setLink(string $link)
+    public function setLabel($label)
     {
-        $this->link = $link;
+        $this->label = $label;
         return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $name
-     *
-     * @return ToolbarButton
-     */
-    public function setName(string $name)
-    {
-        $this->name = $name;
-        return $this;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    function __toString()
-    {
-        return sprintf(
-            '<a href="%s" class="%s" target="%s"><i class="%s"></i> %s</a>',
-            $this->getLink(),
-            $this->getClass(),
-            $this->getTarget(),
-            $this->getIcon(),
-            $this->getLabel()
-        );
     }
 
 

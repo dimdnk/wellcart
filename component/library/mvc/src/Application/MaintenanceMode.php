@@ -16,13 +16,11 @@ class MaintenanceMode
     const FLAG_FILENAME = 'maintenance.flag';
 
     /**
-     * Checks whether mode is on
-     *
      * @return bool
      */
-    public function isEnabled()
+    public function enable(): bool
     {
-        return is_file(WELLCART_STORAGE_PATH . self::FLAG_FILENAME);
+        return $this->set(true);
     }
 
     /**
@@ -43,13 +41,14 @@ class MaintenanceMode
         return true;
     }
 
-
     /**
+     * Checks whether mode is on
+     *
      * @return bool
      */
-    public function enable(): bool
+    public function isEnabled()
     {
-        return $this->set(true);
+        return is_file(WELLCART_STORAGE_PATH . self::FLAG_FILENAME);
     }
 
     /**

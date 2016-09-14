@@ -9,7 +9,6 @@
 namespace WellCart\Theme\SetupUi;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use WellCart\ModuleManager\ModuleConfiguration;
 
 class ModuleTest extends TestCase
 {

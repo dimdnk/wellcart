@@ -11,7 +11,7 @@ require(['jquery', 'bootstrap', 'datetimepicker', 'daterangepicker', 'bootstrap-
     function ($, Bootstrap, datetimepicker, daterangepicker, bootstrapSwitch, nanoScroller, chosen) {
 
         var switcherEl = document.querySelector('.switchery-element');
-        if(switcherEl !== null) {
+        if (switcherEl !== null) {
             var switcherInit = new Switchery(switcherEl);
         }
 

@@ -62,7 +62,7 @@ return [
                     'themes/wellcart-backend-ui/css/authentication.css' => ['href' => 'themes/wellcart-backend-ui/css/authentication.css'],
                 ],
             ],
-            'blocks' => [
+            'blocks'  => [
                 'page.notifications.flash_notifications' => [
                     'capture_to' => 'notifications',
                     'parent'     => 'action.result',

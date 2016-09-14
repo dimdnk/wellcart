@@ -71,8 +71,8 @@ class LanguagesController extends AbstractActionController implements
     /**
      * Form Handler
      *
-     * @param FormPageView $formPageView
-     * @param EntityForm $form
+     * @param FormPageView         $formPageView
+     * @param EntityForm           $form
      * @param LocaleLanguageEntity $entity
      *
      * @return \WellCart\Ui\Container\PreparableContainerInterface

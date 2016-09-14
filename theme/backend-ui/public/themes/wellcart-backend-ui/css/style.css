@@ -6,8 +6,9 @@ body {
     position: relative;
     background-color: #f5f5f5;
     color: #333;
-    font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
+
 header .navbar {
     border-radius: 0px;
 }
@@ -21,6 +22,7 @@ header .navbar {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 a:hover,
 a:visited,
 a:focus,
@@ -28,6 +30,7 @@ a:active {
     text-decoration: none;
     color: #000;
 }
+
 .btn:active:focus,
 .btn:focus,
 .dropdown-menu > li > a,
@@ -872,7 +875,6 @@ h5.panel-title {
     padding-bottom: 8px;
 }
 
-
 .sidebar-user {
     padding: 20px;
 }
@@ -967,16 +969,17 @@ h5.panel-title {
     background-color: #2196F3;
     border-color: #2196F3;
 }
+
 .btn-toolbar-action:hover,
 .btn-toolbar-action:focus,
 .btn-toolbar-action:active,
 .btn-toolbar-action.active,
 .btn-toolbar-action:visited,
-.btn-toolbar-action.visited
-{
-    background-color: #0d8aee!important;
+.btn-toolbar-action.visited {
+    background-color: #0d8aee !important;
     border-color: #0c7cd5;
 }
+
 .btn-toolbar-action.disabled:hover,
 .btn-toolbar-action.disabled:focus,
 .btn-toolbar-action.disabled:active,
@@ -992,7 +995,6 @@ fieldset[disabled] .btn-toolbar-action.active {
     background-color: #2196F3;
     border-color: #2196F3;
 }
-
 
 .navigation > li ul {
     list-style: none;
@@ -1193,13 +1195,13 @@ fieldset[disabled] .btn-toolbar-action.active {
     color: #fff;
 }
 
-
 /**
 * Data Grid
 */
 .grid-main-container, .grid-footer {
     padding: 8px;
 }
+
 .table-datagrid {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;

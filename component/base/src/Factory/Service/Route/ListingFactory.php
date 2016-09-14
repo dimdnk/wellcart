@@ -15,9 +15,9 @@ class ListingFactory
     public function __invoke(ContainerInterface $sm): Listing
     {
         $config = $sm->get('config');
-       return new Listing(
-           $config['console']['router']['routes'],
-           $config['router']['routes']
-       );
+        return new Listing(
+            $config['console']['router']['routes'],
+            $config['router']['routes']
+        );
     }
 }

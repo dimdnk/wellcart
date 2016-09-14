@@ -7,6 +7,7 @@
  */
 
 namespace WellCart\Form\View\Helper;
+
 use Zend\Form\ElementInterface;
 use Zend\View\Helper\AbstractHelper;
 
@@ -23,6 +24,7 @@ class FormHtmlAnchor extends AbstractHelper
      * Proxies to {@link render()}.
      *
      * @param  ElementInterface|null $element
+     *
      * @return string|FormHtmlAnchor
      */
     public function __invoke(ElementInterface $element = null)
@@ -36,7 +38,9 @@ class FormHtmlAnchor extends AbstractHelper
 
     /**
      * @see \Zend\Form\View\Helper\AbstractHelper::render()
+     *
      * @param ElementInterface $oElement
+     *
      * @return string
      */
     public function render(ElementInterface $oElement)
@@ -48,6 +52,7 @@ class FormHtmlAnchor extends AbstractHelper
                 $oElement->getClass(),
                 $oElement->getTarget(),
                 $oElement->getIcon(),
-                $oElement->getText());
+                $oElement->getText()
+            );
     }
 }

@@ -66,7 +66,7 @@ class Install extends AbstractMigration
                 'environment',
                 'string',
                 ['null' => true, 'limit' => 15, 'comment' => 'Environment']
-            )            
+            )
             ->addColumn(
                 'created_at',
                 'datetime',
