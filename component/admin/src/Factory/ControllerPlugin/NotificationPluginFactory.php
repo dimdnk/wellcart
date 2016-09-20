@@ -16,8 +16,7 @@ class NotificationPluginFactory
         $requestedName,
         array $options = null): NotificationPlugin
     {
-        return new NotificationPlugin(
-            $sm->getServiceLocator()
+        return new NotificationPlugin($sm->getServiceLocator()
             ->get('admin\notification'));
     }
 }

@@ -176,12 +176,21 @@ return [
         ],
     ],
 
-    'controller_plugins'   => [
+    'controller_plugins' => [
         'aliases'   => [
             'admin_notification' => Mvc\Controller\Plugin\Notification::class,
         ],
         'factories' => [
             Mvc\Controller\Plugin\Notification::class => Factory\ControllerPlugin\NotificationPluginFactory::class,
+        ],
+    ],
+
+    'view_helpers'         => [
+        'aliases'   => [
+            'admin_notifications' => View\Helper\Notification::class,
+        ],
+        'factories' => [
+            View\Helper\Notification::class => Factory\ViewHelper\NotificationHelperFactory::class,
         ],
     ],
 

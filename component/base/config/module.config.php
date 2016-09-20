@@ -298,7 +298,7 @@ return [
         . '/section/zenddevelopertools.php',
     'view_helper_config' => [],
 
-    'con-layout'  => [
+    'con-layout'                 => [
         'enable_debug'                   => true,
         'default_area'                   => \WellCart\Mvc\Application::CONTEXT_GLOBAL,
         'prefer_route_match_controller'  => true,
@@ -333,7 +333,7 @@ return [
             ],
         ],
     ],
-    'controllers' => [
+    'controllers'                => [
         'invokables' => [
             'WellCart\Base\Controller\Console\Cache' => Controller\Console\CacheController::class,
             'WellCart\Base\Controller\Console\Route' => Controller\Console\RouteController::class,
@@ -346,16 +346,6 @@ return [
             'TckImageResizer\Controller\Index' => Factory\Controller\ImageResizeControllerFactory::class,
         ],
     ],
-
-    'controller_plugins'         => [
-        'aliases'   => [
-            'locale' => \WellCart\Mvc\Controller\Plugin\Locale::class,
-        ],
-        'factories' => [
-            \WellCart\Mvc\Controller\Plugin\Locale::class => \WellCart\Mvc\Factory\ControllerPlugin\LocalePluginFactory::class,
-        ],
-    ],
-
 
     /**
      * =========================================================
@@ -414,8 +404,12 @@ return [
         ],
     ],
     'controller_plugins'         => [
-        'aliases'    => [],
-        'factories'  => [],
+        'aliases'    => [
+            'locale' => \WellCart\Mvc\Controller\Plugin\Locale::class,
+        ],
+        'factories'  => [
+            \WellCart\Mvc\Controller\Plugin\Locale::class => \WellCart\Mvc\Factory\ControllerPlugin\LocalePluginFactory::class,
+        ],
         'invokables' => [
             'gridFilterBuilder'  => 'WellCart\Ui\Datagrid\Controller\Plugin\GridFilterBuilder',
             'redirect'           => 'WellCart\Mvc\Controller\Plugin\Redirect',

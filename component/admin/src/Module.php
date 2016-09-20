@@ -10,7 +10,6 @@ declare(strict_types = 1);
 
 namespace WellCart\Admin;
 
-use WellCart\Admin\View\Helper\Notification as NotificationHelper;
 use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
@@ -28,7 +27,6 @@ class Module implements
     VersionProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
-    Feature\ViewHelperProviderInterface,
     ApigilityProviderInterface,
     ModulePathProviderInterface
 {
@@ -123,27 +121,5 @@ class Module implements
     public function getAbsolutePath()
     {
         return str_replace('\\', DS, dirname(__DIR__)) . DS;
-    }
-
-    /**
-     * View helpers
-     *
-     * @return array
-     */
-    public function getViewHelperConfig()
-    {
-        return [
-            'factories' => [
-                'admin_notifications' => function ($sm) {
-                    $notification = $sm->getServiceLocator()->get(
-                        'admin\notification'
-                    );
-                    return new NotificationHelper(
-                        $notification->recentCount(),
-                        $notification->recentMessages(5)
-                    );
-                }
-            ],
-        ];
     }
 }

@@ -66,11 +66,4 @@ class ModuleTest extends TestCase
     {
         $this->assertTrue(is_dir($this->object->getAbsolutePath()));
     }
-
-    public function testGetViewHelperConfig()
-    {
-        $this->assertInternalType(
-            'array', $this->object->getViewHelperConfig()
-        );
-    }
 }

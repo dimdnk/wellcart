@@ -81,11 +81,4 @@ class ModuleTest extends TestCase
             'array', $this->object->getControllerPluginConfig()
         );
     }
-
-    public function testGetViewHelperConfig()
-    {
-        $this->assertInternalType(
-            'array', $this->object->getViewHelperConfig()
-        );
-    }
 }
