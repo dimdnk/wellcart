@@ -13,7 +13,9 @@ use WellCart\Base\Spec\UrlRewriteRepository;
 
 class UrlRewritesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): UrlRewritesController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): UrlRewritesController
     {
         $controller = new UrlRewritesController(
             $sm->getServiceLocator()

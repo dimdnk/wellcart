@@ -17,7 +17,8 @@ class SQLLoggerCollectorFactory extends AbstractSQLLoggerCollectorFactory
     /**
      * {@inheritDoc}
      */
-    public function __invoke(ContainerInterface $serviceLocator, $requestedName,
+    public function __invoke(ContainerInterface $serviceLocator,
+        $requestedName,
         array $options = null
     ) {
         /** @var $options \DoctrineORMModule\Options\SQLLoggerCollectorOptions */

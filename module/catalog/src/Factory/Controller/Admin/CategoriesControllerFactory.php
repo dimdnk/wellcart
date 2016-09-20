@@ -13,7 +13,9 @@ use WellCart\Catalog\Spec\CategoryI18nRepository;
 
 class CategoriesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm) :CategoriesController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null) :CategoriesController
     {
         $controller = new CategoriesController(
             $sm->getServiceLocator()

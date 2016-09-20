@@ -12,7 +12,9 @@ use WellCart\Base\Service\Route\Listing;
 
 class ListingFactory
 {
-    public function __invoke(ContainerInterface $sm): Listing
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): Listing
     {
         $config = $sm->get('config');
         return new Listing(

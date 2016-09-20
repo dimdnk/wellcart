@@ -13,7 +13,9 @@ use WellCart\Catalog\Spec\BrandRepository;
 
 class BrandsControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): BrandsController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): BrandsController
     {
         $controller = new BrandsController(
             $sm->getServiceLocator()

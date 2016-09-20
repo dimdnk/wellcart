@@ -12,7 +12,9 @@ use WellCart\Admin\Controller\SettingsController;
 
 class SettingsControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): SettingsController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): SettingsController
     {
         return new SettingsController(
             $sm->getServiceLocator()

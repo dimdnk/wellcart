@@ -12,7 +12,9 @@ use WellCart\User\Controller\UserController;
 
 class UserControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): UserController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): UserController
     {
         $serviceManager = $sm->getServiceLocator();
         $redirectCallback = $serviceManager->get(

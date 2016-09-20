@@ -12,7 +12,9 @@ use WellCart\RestApi\Controller\Admin\OAuth2\ClientsController;
 
 class ClientsControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): ClientsController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): ClientsController
     {
         $controller = new ClientsController(
             $sm->getServiceLocator()

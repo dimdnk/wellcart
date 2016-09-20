@@ -13,7 +13,9 @@ use WellCart\User\Spec\AclRoleRepository;
 
 class RolesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): RolesController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): RolesController
     {
         $services = $sm->getServiceLocator();
         $controller = new RolesController(

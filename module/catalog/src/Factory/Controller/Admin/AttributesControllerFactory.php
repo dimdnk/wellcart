@@ -13,7 +13,9 @@ use WellCart\Catalog\Spec\AttributeI18nRepository;
 
 class AttributesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm): AttributesController
+    public function __invoke(ContainerInterface $sm,
+        $requestedName,
+        array $options = null): AttributesController
     {
         $controller = new AttributesController(
             $sm->getServiceLocator()
