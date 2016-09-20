@@ -13,7 +13,6 @@ namespace WellCart\Base;
 use ConLayout\ModuleManager\Feature\BlockProviderInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Locale;
-use WellCart\Base\Entity\Locale\Language\DefaultLanguage;
 use WellCart\Form\Form;
 use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
@@ -22,7 +21,7 @@ use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc;
-use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
+
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
 use WellCart\Ui\Datagrid\View\Helper\GridFilters as GridFiltersHelper;
 use WellCart\Utility\Config;
@@ -325,7 +324,7 @@ class Module implements
     /**
      * View helper configuration
      *
-     * @return array|\Zend\ServiceManager\Config
+     * @return array
      */
     public function getViewHelperConfig()
     {
@@ -373,36 +372,11 @@ class Module implements
     /**
      * Controller plugins
      *
-     * @return array|\Zend\ServiceManager\Config
+     * @return array
      */
     public function getControllerPluginConfig()
     {
         return [
-            'factories'    => [
-                'locale' => function ($sm) {
-                    $services = $sm->getServiceLocator();
-                    $translator = $services->get('MvcTranslator');
-                    try {
-                        $languages = $services->get(
-                            'locale\active_languages_collection'
-                        );
-                        $defaultLanguage = $languages->current();
-                    } catch (\Throwable $e) {
-                        $languages
-                            = new \Doctrine\Common\Collections\ArrayCollection(
-                        );
-                        $defaultLanguage = new DefaultLanguage();
-                    }
-
-
-                    return new LocaleControllerPlugin(
-                        $languages,
-                        $defaultLanguage,
-                        $defaultLanguage,
-                        $translator
-                    );
-                }
-            ],
             'initializers' => [
                 'WellCart\ServiceManager\ServiceLocatorAwareInterface' =>
                     function ($service, $sm) {

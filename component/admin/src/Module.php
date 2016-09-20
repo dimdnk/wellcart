@@ -10,14 +10,12 @@ declare(strict_types = 1);
 
 namespace WellCart\Admin;
 
-use WellCart\Admin\Mvc\Controller\Plugin\Notification as NotificationPlugin;
 use WellCart\Admin\View\Helper\Notification as NotificationHelper;
 use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
-use WellCart\Mvc\Application;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use Zend\Mvc\MvcEvent;
@@ -30,7 +28,6 @@ class Module implements
     VersionProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
-    Feature\ControllerPluginProviderInterface,
     Feature\ViewHelperProviderInterface,
     ApigilityProviderInterface,
     ModulePathProviderInterface
@@ -126,24 +123,6 @@ class Module implements
     public function getAbsolutePath()
     {
         return str_replace('\\', DS, dirname(__DIR__)) . DS;
-    }
-
-    /**
-     * Controller plugins
-     *
-     * @return array
-     */
-    public function getControllerPluginConfig()
-    {
-        return [
-            'factories' => [
-                'admin_notification' => function ($sm) {
-                    return new NotificationPlugin(
-                        $sm->getServiceLocator()->get('admin\notification')
-                    );
-                }
-            ],
-        ];
     }
 
     /**

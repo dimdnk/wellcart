@@ -13,7 +13,7 @@ use WellCart\View\Helper as ViewHelper;
 use Zend\Http\Response;
 
 return [
-    'wellcart'                   => [
+    'wellcart'        => [
         'website'              => [
             'name' => 'Demo Application',
         ],
@@ -53,7 +53,7 @@ return [
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'            => [
+    'service_manager' => [
         'factories'          => [
             'Application'                                                => 'WellCart\Mvc\Factory\ApplicationFactory',
             'stroker_form.renderer'                                      => 'WellCart\Form\Factory\StrokerForm\RendererFactory',
@@ -141,7 +141,7 @@ return [
         ],
     ],
 
-    'db'                         => [
+    'db'            => [
         'driver'         => 'pdo_mysql',
         'username'       => 'root',
         'password'       => '',
@@ -155,22 +155,22 @@ return [
             'buffer_results' => true,
         ],
     ],
-    'listeners'                  => [
+    'listeners'     => [
         'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContext'        => 'WellCart\Ui\Layout\Listener\AreaBasedOnThemeContext',
         'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Layout\Listener\ActionHandlesListener',
         'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Layout\Listener\LoadLayoutListener',
         'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener',
 
-        EventListener\SetLayoutViewModel::class                      => EventListener\SetLayoutViewModel::class,
-        EventListener\SetupRouterBaseUrl::class                      => EventListener\SetupRouterBaseUrl::class,
-        EventListener\SetupPageVariables::class                      => EventListener\SetupPageVariables::class,
-        EventListener\InitTheme::class                               => EventListener\InitTheme::class,
-        EventListener\LogException::class                            => EventListener\LogException::class,
+        EventListener\SetLayoutViewModel::class => EventListener\SetLayoutViewModel::class,
+        EventListener\SetupRouterBaseUrl::class => EventListener\SetupRouterBaseUrl::class,
+        EventListener\SetupPageVariables::class => EventListener\SetupPageVariables::class,
+        EventListener\InitTheme::class          => EventListener\InitTheme::class,
+        EventListener\LogException::class       => EventListener\LogException::class,
     ],
-    'event_manager'              => include __DIR__
+    'event_manager' => include __DIR__
         . '/section/event_manager.php',
 
-    'input_filters'              => [
+    'input_filters'        => [
         'abstract_factories' => [
             'WellCart\InputFilter\InputFilterAbstractServiceFactory' => 'WellCart\InputFilter\InputFilterAbstractServiceFactory',
         ],
@@ -181,7 +181,7 @@ return [
      * Cache manager configuration
      * =========================================================
      */
-    'caches'                     => [
+    'caches'               => [
         'cache_base_transient'   =>
             [
                 'adapter' => [
@@ -229,22 +229,22 @@ return [
                 ],
             ],
     ],
-    'acmailer_options'           => include __DIR__
+    'acmailer_options'     => include __DIR__
         . '/section/acmailer_options.php',
-    'system_config_editor'       => include __DIR__
+    'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
 
     /**
      * Session configuration
      */
-    'session'                    => include __DIR__ . '/section/session.php',
+    'session'              => include __DIR__ . '/section/session.php',
 
     /**
      * =========================================================
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping'             => include __DIR__
+    'object_mapping'       => include __DIR__
         . '/section/object_mapping.php',
 
     /**
@@ -252,19 +252,19 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'                   => include __DIR__ . '/section/doctrine.php',
+    'doctrine'             => include __DIR__ . '/section/doctrine.php',
 
-    'doctrine_factories'         => [
+    'doctrine_factories' => [
         'sql_logger_collector' => 'WellCart\ORM\SQLLoggerCollectorFactory',
     ],
 
-    'doctrineviewer'             => [
+    'doctrineviewer'     => [
         /**
          *  Doctrine object manager name
          */
         'object_manager_name' => 'doctrine.entitymanager.orm_default',
     ],
-    'rdn_require_js'             => include __DIR__
+    'rdn_require_js'     => include __DIR__
         . '/section/rdn_require_js.php',
 
     /**
@@ -272,14 +272,14 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'                 => include __DIR__ . '/section/translator.php',
+    'translator'         => include __DIR__ . '/section/translator.php',
 
     /**
      * =========================================================
      * Router configuration
      * =========================================================
      */
-    'router'                     =>
+    'router'             =>
         [
             'router_class' => 'WellCart\Router\Http\TreeRouteStack',
             'base_path'    => '/',
@@ -292,13 +292,13 @@ return [
      * View manager configuration
      * =========================================================
      */
-    'view_manager'               => include __DIR__
+    'view_manager'       => include __DIR__
         . '/section/view_manager.php',
-    'zenddevelopertools'         => include __DIR__
+    'zenddevelopertools' => include __DIR__
         . '/section/zenddevelopertools.php',
-    'view_helper_config'         => [],
+    'view_helper_config' => [],
 
-    'con-layout'                 => [
+    'con-layout'  => [
         'enable_debug'                   => true,
         'default_area'                   => \WellCart\Mvc\Application::CONTEXT_GLOBAL,
         'prefer_route_match_controller'  => true,
@@ -333,7 +333,7 @@ return [
             ],
         ],
     ],
-    'controllers'                => [
+    'controllers' => [
         'invokables' => [
             'WellCart\Base\Controller\Console\Cache' => Controller\Console\CacheController::class,
             'WellCart\Base\Controller\Console\Route' => Controller\Console\RouteController::class,
@@ -343,9 +343,20 @@ return [
             'WellCart\Base\Controller\Admin\Languages'   => Factory\Controller\Admin\LanguagesControllerFactory::class,
             'WellCart\Base\Controller\Admin\UrlRewrites' => Factory\Controller\Admin\UrlRewritesControllerFactory::class,
 
-            'TckImageResizer\Controller\Index'           => Factory\Controller\ImageResizeControllerFactory::class,
+            'TckImageResizer\Controller\Index' => Factory\Controller\ImageResizeControllerFactory::class,
         ],
     ],
+
+    'controller_plugins'         => [
+        'aliases'   => [
+            'locale' => \WellCart\Mvc\Controller\Plugin\Locale::class,
+        ],
+        'factories' => [
+            \WellCart\Mvc\Controller\Plugin\Locale::class => \WellCart\Mvc\Factory\ControllerPlugin\LocalePluginFactory::class,
+        ],
+    ],
+
+
     /**
      * =========================================================
      * View helper manager configuration
@@ -629,15 +640,15 @@ return [
             'Week'           => FormElement\Week::class,
         ],
         'invokables' => [
-            'tableFieldsetCollection'         => 'WellCart\Ui\Form\Element\TableFieldsetCollection',
-            'static'                          => FormElement\StaticElement::class,
-            'yesNoSelector'                   => FormElement\YesNoSelector::class,
-            'localeSelector'                  => FormElement\LocaleSelector::class,
-            'baseEmailContactSelector'        => FormElement\EmailContactSelector::class,
-            'timezoneSelector'                => FormElement\TimezoneSelector::class,
-            'countrySelector'                 => FormElement\CountrySelector::class,
-            'dateRange'                       => FormElement\DateRange::class,
-            'rangeFilter'                     => FormElement\RangeFilter::class,
+            'tableFieldsetCollection'  => 'WellCart\Ui\Form\Element\TableFieldsetCollection',
+            'static'                   => FormElement\StaticElement::class,
+            'yesNoSelector'            => FormElement\YesNoSelector::class,
+            'localeSelector'           => FormElement\LocaleSelector::class,
+            'baseEmailContactSelector' => FormElement\EmailContactSelector::class,
+            'timezoneSelector'         => FormElement\TimezoneSelector::class,
+            'countrySelector'          => FormElement\CountrySelector::class,
+            'dateRange'                => FormElement\DateRange::class,
+            'rangeFilter'              => FormElement\RangeFilter::class,
 
             FormElement\HtmlAnchor::class     => FormElement\HtmlAnchor::class,
             FormElement\Button::class         => FormElement\Button::class,
@@ -741,7 +752,7 @@ return [
         'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json'
     ],
 
-    'design'                     => [
+    'design' => [
         'images' => [
             'filters'           => [],
             'image_resolvers'   => [],
@@ -750,7 +761,7 @@ return [
         ]
     ],
 
-    'slm_queue'                  => [
+    'slm_queue' => [
         'queue_manager' => [
             'factories' => [
                 'system' => 'SlmQueueDoctrine\Factory\DoctrineQueueFactory'

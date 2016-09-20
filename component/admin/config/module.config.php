@@ -14,10 +14,10 @@ return [
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'      => [
+    'service_manager' => [
         'invokables'         => [
-            ItemView\PageHead::class                   => ItemView\PageHead::class,
-            ItemView\PageNavigator::class              => ItemView\PageNavigator::class,
+            ItemView\PageHead::class      => ItemView\PageHead::class,
+            ItemView\PageNavigator::class => ItemView\PageNavigator::class,
 
             'zfcDatagrid.renderer.HtmlDataGrid'        => PageView\Grid\Renderer::class,
             EventListener\SetupPageVariables::class    => EventListener\SetupPageVariables::class,
@@ -26,13 +26,13 @@ return [
             ItemView\MainNavigationMenu::class         => ItemView\MainNavigationMenu::class,
             ItemView\Account\WelcomeBox::class         => ItemView\Account\WelcomeBox::class,
 
-            Form\RecoverAccount::class                 => Form\RecoverAccount::class,
+            Form\RecoverAccount::class => Form\RecoverAccount::class,
 
         ],
         'aliases'            => [
-            'wellcart-admin_db_adapter'         => 'Zend\Db\Adapter\Adapter',
-            'wellcart_admin_object_manager'     => 'Doctrine\ORM\EntityManager',
-            'wellcart_admin_doctrine_hydrator'  => 'doctrine_hydrator',
+            'wellcart-admin_db_adapter'        => 'Zend\Db\Adapter\Adapter',
+            'wellcart_admin_object_manager'    => 'Doctrine\ORM\EntityManager',
+            'wellcart_admin_doctrine_hydrator' => 'doctrine_hydrator',
 
             Spec\AdministratorRepository::class => Repository\Administrators::class,
             Spec\NotificationRepository::class  => Repository\Notifications::class,
@@ -61,7 +61,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'        => [
+    'asset_manager'   => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -74,7 +74,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'           => [
+    'translator'      => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',
@@ -85,22 +85,22 @@ return [
         ],
     ],
 
-    'context_specific'     => include __DIR__ . '/section/context_specific.php',
+    'context_specific' => include __DIR__ . '/section/context_specific.php',
 
     /**
      * =========================================================
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping'       => include __DIR__ . '/section/object_mapping.php',
-    'layout_updates'       => include __DIR__ . '/section/layout_updates.php',
+    'object_mapping'   => include __DIR__ . '/section/object_mapping.php',
+    'layout_updates'   => include __DIR__ . '/section/layout_updates.php',
 
     /**
      * =========================================================
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'             => [
+    'doctrine'         => [
         'driver'          => [
             'wellcart_admin_driver' => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -128,12 +128,12 @@ return [
         ],
     ],
 
-    'ze_theme'             => [
+    'ze_theme'      => [
         'adapters' => [
             Ui\Theme\AdminRouteAdapter::class => Ui\Theme\AdminRouteAdapter::class,
         ],
     ],
-    'zfcadmin'             => [
+    'zfcadmin'      => [
         'use_admin_layout'      => true,
         'admin_layout_template' => 'layout/page-fluid-2columns',
     ],
@@ -143,7 +143,7 @@ return [
      * View manager configuration
      * =========================================================
      */
-    'view_manager'         => [
+    'view_manager'  => [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
@@ -155,16 +155,16 @@ return [
     /**
      * Default ZfcRbac configuration for RBAC
      */
-    'zfc_rbac'             => [
+    'zfc_rbac'      => [
         'guards' => [
             'ZfcRbac\Guard\RouteGuard' => [
                 'zfcadmin*' => ['admin' => 'admin'],
             ]
         ],
     ],
-    'event_manager'        => include __DIR__ . '/section/event_manager.php',
+    'event_manager' => include __DIR__ . '/section/event_manager.php',
 
-    'controllers'          => [
+    'controllers' => [
         'factories' => [
             'WellCart\Admin\Controller\Login'               => Factory\Controller\LoginControllerFactory::class,
             'WellCart\Admin\Controller\Logout'              => Factory\Controller\LogoutControllerFactory::class,
@@ -173,6 +173,15 @@ return [
             'WellCart\Admin\Controller\Settings'            => Factory\Controller\SettingsControllerFactory::class,
             'WellCart\Admin\Controller\Admin\Accounts'      => Factory\Controller\Admin\AccountsControllerFactory::class,
             'WellCart\Admin\Controller\Admin\Notifications' => Factory\Controller\Admin\NotificationsControllerFactory::class,
+        ],
+    ],
+
+    'controller_plugins'   => [
+        'aliases'   => [
+            'admin_notification' => Mvc\Controller\Plugin\Notification::class,
+        ],
+        'factories' => [
+            Mvc\Controller\Plugin\Notification::class => Factory\ControllerPlugin\NotificationPluginFactory::class,
         ],
     ],
 
@@ -196,7 +205,7 @@ return [
                 ],
                 'may_terminate'    => true,
                 'child_routes'     => [
-                    'login'           => [
+                    'login' => [
                         'type'             => 'WellCart\Router\Http\Literal',
                         'javascript_route' => true,
                         'priority'         => -500,
@@ -250,7 +259,7 @@ return [
                     ],
 
 
-                    'admin'           => [
+                    'admin' => [
                         'type'         => 'WellCart\Router\Http\Literal',
                         'priority'     => -500,
                         'options'      => [
@@ -384,7 +393,7 @@ return [
         ]
     ],
 
-    'command_bus'          => [
+    'command_bus' => [
         'command_map' => [
             Command\PersistAdminAccount::class => Command\Handler\PersistAdminAccountHandler::class,
         ],
