@@ -23,7 +23,6 @@ use WellCart\Ui\Layout\LayoutManagerAwareInterface;
 use WellCart\View\Renderer\ViewRendererAwareInterface;
 use Zend\Console\Console;
 use Zend\Form\Factory as FormFactory;
-use Zend\ModuleManager\Feature;
 use Zend\Session\Container;
 use Zend\Session\SessionManager;
 use Zend\Session\Storage\ArrayStorage as BlackHoleSessionStorage;
@@ -32,13 +31,13 @@ use Zend\Validator\Csrf as CsrfValidator;
 
 return [
     'factories'    => [
-        Mvc\Application\MaintenanceMode::class           =>
+        Mvc\Application\MaintenanceMode::class =>
             function (ContainerInterface $services) {
                 return $services->get('Application')
                     ->getMaintenanceMode();
             },
 
-        'WellCart\Base\PageView\Admin\LanguageForm'      =>
+        'WellCart\Base\PageView\Admin\LanguageForm'    =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\LanguageForm(
                     $services->get(
@@ -46,7 +45,7 @@ return [
                     )
                 );
             },
-        'WellCart\Base\PageView\Admin\LanguagesGrid'     =>
+        'WellCart\Base\PageView\Admin\LanguagesGrid'   =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\LanguagesGrid(
                     $services->get(
@@ -54,7 +53,7 @@ return [
                     )
                 );
             },
-        'WellCart\Base\PageView\Admin\UrlRewriteForm'    =>
+        'WellCart\Base\PageView\Admin\UrlRewriteForm'  =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\UrlRewriteForm(
                     $services->get(
@@ -62,7 +61,7 @@ return [
                     )
                 );
             },
-        'WellCart\Base\PageView\Admin\UrlRewritesGrid'   =>
+        'WellCart\Base\PageView\Admin\UrlRewritesGrid' =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\UrlRewritesGrid(
                     $services->get(
@@ -216,13 +215,13 @@ return [
             },
 
 
-        'doctrine_hydrator'                              =>
+        'doctrine_hydrator'                  =>
             function (ContainerInterface $services) {
                 return new Hydrator\DoctrineObject(
                     $services->get('wellcart_base_object_manager')
                 );
             },
-        'locale\active_languages_collection'             =>
+        'locale\active_languages_collection' =>
             function (ContainerInterface $services) {
                 return $services->get(
                     'WellCart\Base\Spec\LocaleLanguageRepository'

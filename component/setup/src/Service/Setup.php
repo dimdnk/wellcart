@@ -251,6 +251,14 @@ class Setup
     }
 
     /**
+     * @return \Doctrine\ORM\EntityManager
+     */
+    protected function getEntityManager()
+    {
+        return $this->sm->get('Doctrine\ORM\EntityManager');
+    }
+
+    /**
      * Refresh superadmin permissions
      */
     public function refreshPermissions()
@@ -267,22 +275,6 @@ class Setup
         $superAdmin->setPermissions($permissions);
         $em->persist($superAdmin);
         $em->flush($superAdmin);
-    }
-
-    /**
-     * @return array
-     */
-    protected function getConfiguration()
-    {
-        return $this->sm->get('Configuration');
-    }
-
-    /**
-     * @return \Doctrine\ORM\EntityManager
-     */
-    protected function getEntityManager()
-    {
-        return $this->sm->get('Doctrine\ORM\EntityManager');
     }
 
     /**
@@ -430,6 +422,14 @@ class Setup
         } finally {
             ini_restore('max_execution_time');
         }
+    }
+
+    /**
+     * @return array
+     */
+    protected function getConfiguration()
+    {
+        return $this->sm->get('Configuration');
     }
 
     /**

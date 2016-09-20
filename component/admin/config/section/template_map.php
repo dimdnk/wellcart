@@ -41,6 +41,6 @@ return [
     'wellcart-admin/partial/navigation/top-toolbar'         => __DIR__
         . '/../../view/partial/navigation/top-toolbar.phtml',
 
-    'wellcart-admin/item-view/page-head'                    => __DIR__
+    'wellcart-admin/item-view/page-head' => __DIR__
         . '/../../view/item-view/page-head.phtml',
 ];

@@ -14,7 +14,7 @@ return [
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'      => [
+    'service_manager' => [
         'invokables'         => [],
         'aliases'            => [
             'wellcart_directory_db_adapter'        => 'Zend\Db\Adapter\Adapter',
@@ -45,7 +45,7 @@ return [
     'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
 
-    'controllers'          => [
+    'controllers'    => [
         'invokables' => [
             'WellCart\Directory\Controller\Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
         ],
@@ -62,7 +62,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'               => [
+    'router'         => [
         'routes' => [
             'zfcadmin' => [
                 'child_routes' => [
@@ -151,7 +151,7 @@ return [
             ],
         ],
     ],
-    'navigation'           => [
+    'navigation'     => [
         'backend_main_navigation' => include __DIR__
             . '/backend_main_navigation.php',
     ],
@@ -162,7 +162,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'             => [
+    'doctrine'       => [
         'driver'          => [
             'wellcart_directory_driver' => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -200,7 +200,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'        => [
+    'asset_manager'  => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -213,7 +213,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'           => [
+    'translator'     => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',
@@ -229,9 +229,9 @@ return [
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping'       => include __DIR__ . '/section/object_mapping.php',
+    'object_mapping' => include __DIR__ . '/section/object_mapping.php',
 
-    'console'              => [
+    'console' => [
         /**
          * =========================================================
          * Router configuration
@@ -252,7 +252,7 @@ return [
         ]
     ],
 
-    'cronModule'           => [
+    'cronModule'     => [
         'jobs' => [
             'wellcart:directory:update'
             => [
@@ -261,5 +261,5 @@ return [
             ],
         ]
     ],
-    'layout_updates'       => include __DIR__ . '/section/layout_updates.php',
+    'layout_updates' => include __DIR__ . '/section/layout_updates.php',
 ];

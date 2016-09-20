@@ -32,7 +32,7 @@ return [
         ],
     ],
 
-    'wellcart-user/accounts'         => [
+    'wellcart-user/accounts' => [
         'pages' => [
             'zfcadmin/admin/accounts' => [
                 'label'      => 'Administrators',

@@ -29,11 +29,11 @@ $navigation = $this->navigation();
             }
             ?>>
                 <a
-                    href="<?php echo $firstLevel->getHref() ?>"
+                        href="<?php echo $firstLevel->getHref() ?>"
                     <?php if ($firstLevel->getTarget() != ""): ?>
                         target="<?php echo $firstLevel->getTarget(); ?>"
                     <?php endif; ?>
-                    >
+                >
                     <?php if ($firstLevel->get("icon") !== ""): ?>
                         <i class="<?php echo $firstLevel->get(
                             "icon"
@@ -113,7 +113,7 @@ $navigation = $this->navigation();
                                             ?>"
                                         <?php endif; ?>
                                     <?php endif; ?>
-                                    >
+                                >
                                     <?php echo $secondLevel->getLabel() ?>
                                 </a>
 
@@ -157,7 +157,7 @@ $navigation = $this->navigation();
                                                             ?>"
                                                         <?php endif; ?>
                                                     <?php endif; ?>
-                                                    >
+                                                >
                                                     <?php if ($thirdLevel->get(
                                                             "icon"
                                                         )

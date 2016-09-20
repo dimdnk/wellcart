@@ -20,7 +20,7 @@ class RendererFactory
      *
      * @return Renderer
      */
-    public function __invoke(ContainerInterface $container) : Renderer
+    public function __invoke(ContainerInterface $container): Renderer
     {
         $renderer = new  Renderer();
         $pluginManager = new RulePluginManager();

@@ -9,7 +9,6 @@
 namespace WellCart\Db\Adapter\Driver\Pdo;
 
 use Zend\Db\Adapter\Driver\Pdo\Connection as PdoConnection;
-use Zend\Db\Adapter\Exception;
 
 class Connection extends PdoConnection
 {

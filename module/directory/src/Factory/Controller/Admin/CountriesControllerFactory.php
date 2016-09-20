@@ -15,7 +15,8 @@ class CountriesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null):CountriesController
+        array $options = null
+    ): CountriesController
     {
         $controller = new CountriesController(
             $sm->getServiceLocator()

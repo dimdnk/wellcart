@@ -24,7 +24,7 @@ interface ProductImageEntity
      * @return ProductEntity
      */
     public function setProduct(ProductEntity $product = null
-    ):ProductImageEntity;
+    ): ProductImageEntity;
 
     /**
      * @return int

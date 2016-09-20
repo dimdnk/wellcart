@@ -15,7 +15,8 @@ class AccountsControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): AccountsController
+        array $options = null
+    ): AccountsController
     {
         $services = $sm->getServiceLocator();
         $controller = new AccountsController(

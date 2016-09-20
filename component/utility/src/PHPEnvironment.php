@@ -27,9 +27,9 @@ abstract class PHPEnvironment
     {
         defined('REQUEST_MICROTIME')
         || define(
-        'REQUEST_MICROTIME', microtime(
-            true
-        )
+            'REQUEST_MICROTIME', microtime(
+                true
+            )
         );
         putenv('REQUEST_MICROTIME=' . REQUEST_MICROTIME);
 
@@ -55,7 +55,7 @@ abstract class PHPEnvironment
 
         defined('WELLCART_UPLOAD_PATH')
         || define(
-        'WELLCART_UPLOAD_PATH', WELLCART_STORAGE_PATH . 'upload' . DS
+            'WELLCART_UPLOAD_PATH', WELLCART_STORAGE_PATH . 'upload' . DS
         );
         putenv('WELLCART_UPLOAD_PATH=' . WELLCART_UPLOAD_PATH);
 
@@ -79,7 +79,7 @@ abstract class PHPEnvironment
          */
         if (!defined('WELLCART_VENDOR_PATH')) {
             define(
-            'WELLCART_VENDOR_PATH',
+                'WELLCART_VENDOR_PATH',
                 WELLCART_ROOT . 'vendor/'
             );
         }

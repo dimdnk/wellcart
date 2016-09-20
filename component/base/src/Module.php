@@ -20,8 +20,6 @@ use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
 use WellCart\ModuleManager\ModuleConfiguration;
-use WellCart\Mvc;
-
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
 use WellCart\Ui\Datagrid\View\Helper\GridFilters as GridFiltersHelper;
 use WellCart\Utility\Config;
@@ -31,7 +29,6 @@ use Zend\Console\Adapter\AdapterInterface as ConsoleAdapter;
 use Zend\Console\Console;
 use Zend\EventManager\EventInterface;
 use Zend\Form\Factory;
-use Zend\Http\Response;
 use Zend\ModuleManager\Feature;
 use Zend\ModuleManager\ModuleManagerInterface;
 use Zend\Mvc\MvcEvent;

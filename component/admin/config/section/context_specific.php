@@ -39,7 +39,7 @@ return [
             ],
         ],
 
-        'zfcuser'  => [
+        'zfcuser' => [
             'user_entity_class'    => 'WellCart\Admin\Entity\Administrator',
             'auth_identity_fields' => ['email'],
             'enable_registration'  => false,

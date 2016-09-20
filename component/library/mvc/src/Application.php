@@ -105,7 +105,7 @@ class Application extends AbstractApplication
     /**
      * @return bool
      */
-    public function enableMaintenanceMode():bool
+    public function enableMaintenanceMode(): bool
     {
         return $this->maintenanceMode->enable();
     }
@@ -113,7 +113,7 @@ class Application extends AbstractApplication
     /**
      * @return bool
      */
-    public function disableMaintenanceMode():bool
+    public function disableMaintenanceMode(): bool
     {
         return $this->maintenanceMode->disable();
     }
@@ -121,7 +121,7 @@ class Application extends AbstractApplication
     /**
      * @return bool
      */
-    public function isMaintenance():bool
+    public function isMaintenance(): bool
     {
         return $this->maintenanceMode->isEnabled();
     }

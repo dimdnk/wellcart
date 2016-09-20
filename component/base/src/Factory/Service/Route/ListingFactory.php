@@ -14,7 +14,8 @@ class ListingFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): Listing
+        array $options = null
+    ): Listing
     {
         $config = $sm->get('config');
         return new Listing(

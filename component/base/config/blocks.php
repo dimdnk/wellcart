@@ -19,7 +19,6 @@ use WellCart\Ui\Container\LayoutView\Root;
 use WellCart\Ui\Layout\LayoutManagerAwareInterface;
 use WellCart\View\Renderer\ViewRendererAwareInterface;
 use Zend\Console\Console;
-use Zend\ModuleManager\Feature;
 use Zend\Stdlib\InitializableInterface;
 
 return [

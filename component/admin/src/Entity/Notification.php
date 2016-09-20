@@ -88,7 +88,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setId($id):NotificationEntity
+    public function setId($id): NotificationEntity
     {
         $this->id = $id;
         return $this;
@@ -107,7 +107,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setIcon($icon):NotificationEntity
+    public function setIcon($icon): NotificationEntity
     {
         $this->icon = $icon;
         return $this;
@@ -126,7 +126,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setTitle($title):NotificationEntity
+    public function setTitle($title): NotificationEntity
     {
         $this->title = $title;
         return $this;
@@ -145,7 +145,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setBody($body):NotificationEntity
+    public function setBody($body): NotificationEntity
     {
         $this->body = $body;
         return $this;
@@ -154,7 +154,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     /**
      * @return boolean
      */
-    public function isRead():bool
+    public function isRead(): bool
     {
         return (bool)$this->isRead;
     }
@@ -164,7 +164,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setIsRead($isRead):NotificationEntity
+    public function setIsRead($isRead): NotificationEntity
     {
         $this->isRead = (bool)$isRead;
         return $this;
@@ -173,7 +173,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     /**
      * @return bool
      */
-    public function isDeleted():bool
+    public function isDeleted(): bool
     {
         return (bool)$this->isDeleted;
     }
@@ -183,7 +183,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setIsDeleted($isDeleted):NotificationEntity
+    public function setIsDeleted($isDeleted): NotificationEntity
     {
         $this->isDeleted = (bool)$isDeleted;
         return $this;
@@ -202,7 +202,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setCreatedAt($createdAt):NotificationEntity
+    public function setCreatedAt($createdAt): NotificationEntity
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -222,7 +222,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      * @return NotificationEntity
      */
     public function setUpdatedAt(DateTimeInterface $updatedAt = null
-    ):NotificationEntity
+    ): NotificationEntity
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -242,7 +242,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      * @return NotificationEntity
      */
     public function setDeletedAt(DateTimeInterface $deletedAt = null
-    ):NotificationEntity
+    ): NotificationEntity
     {
         $this->deletedAt = $deletedAt;
         return $this;

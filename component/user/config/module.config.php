@@ -9,7 +9,7 @@
 namespace WellCart\User;
 
 return [
-    'wellcart'              => [
+    'wellcart'        => [
         'user_account_options' => [
             'max_login_attempts' => 5,
             'password_reset'     => [
@@ -36,7 +36,7 @@ return [
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'       => [
+    'service_manager' => [
         'aliases'            => [
             'wellcart_user_db_adapter'          => 'Zend\Db\Adapter\Adapter',
             'wellcart_user_mapper'              => 'zfcuser_user_mapper',
@@ -47,9 +47,9 @@ return [
             Spec\UserRepository::class          => Repository\Users::class,
         ],
         'invokables'         => [
-            'ZfcRbac\Collector\RbacCollector'                                     => 'WellCart\User\DeveloperTools\Rbac\Collector\RbacCollector',
-            'WellCart\User\PageView\Admin\PreferencesForm'                        => 'WellCart\User\PageView\Admin\PreferencesForm',
-            'WellCart\User\Form\RecoverAccount'                                   => 'WellCart\User\Form\RecoverAccount',
+            'ZfcRbac\Collector\RbacCollector'              => 'WellCart\User\DeveloperTools\Rbac\Collector\RbacCollector',
+            'WellCart\User\PageView\Admin\PreferencesForm' => 'WellCart\User\PageView\Admin\PreferencesForm',
+            'WellCart\User\Form\RecoverAccount'            => 'WellCart\User\Form\RecoverAccount',
 
             'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter'  => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter',
             'WellCart\User\EventListener\Registration\AddRequiredFieldsToForm'    => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToForm',
@@ -78,8 +78,8 @@ return [
         ],
     ],
 
-    'event_manager'         => include __DIR__ . '/section/event_manager.php',
-    'listeners'             => [
+    'event_manager' => include __DIR__ . '/section/event_manager.php',
+    'listeners'     => [
         'WellCart\User\EventListener\UnauthorizedStrategy' => 'WellCart\User\EventListener\UnauthorizedStrategy',
     ],
 
@@ -88,7 +88,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'                => [
+    'router'        => [
         'routes' => [
             'zfcadmin'                   => [
                 'child_routes' => [
@@ -211,7 +211,7 @@ return [
         ],
     ],
 
-    'controllers'           => [
+    'controllers' => [
         'factories' => [
             'zfcuser'                                    => Factory\Controller\UserControllerFactory::class,
             'WellCart\User\Controller\ConfirmEmail'      => Factory\Controller\ConfirmEmailControllerFactory::class,
@@ -221,7 +221,7 @@ return [
             'WellCart\User\Controller\Admin\Preferences' => Factory\Controller\Admin\PreferencesControllerFactory::class,
         ],
     ],
-    'navigation'            => [
+    'navigation'  => [
         'backend_main_navigation' => include __DIR__
             . '/backend_main_navigation.php',
     ],
@@ -231,7 +231,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'              => [
+    'doctrine'    => [
         'eventmanager'    => [
             'orm_default' => [
                 'subscribers' => [],
@@ -278,18 +278,18 @@ return [
             ]
         ],
     ],
-    'zfcuser'               => include __DIR__ . '/section/zfcuser.php',
-    'zfc_rbac'              => include __DIR__ . '/section/zfc_rbac.php',
+    'zfcuser'     => include __DIR__ . '/section/zfcuser.php',
+    'zfc_rbac'    => include __DIR__ . '/section/zfc_rbac.php',
 
 
-    'system_config_editor'  => include __DIR__
+    'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
     /**
      * =========================================================
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'         => [
+    'asset_manager'        => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -351,7 +351,7 @@ return [
         ],
     ],
 
-    'command_bus'           => [
+    'command_bus' => [
         'command_map' => [
             Command\PersistUserAccount::class => Command\Handler\PersistUserAccountHandler::class,
         ],

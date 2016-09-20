@@ -9,8 +9,8 @@
 namespace WellCart\Mvc\Factory\ControllerPlugin;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
 use WellCart\Base\Entity\Locale\Language\DefaultLanguage;
+use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
 
 class LocalePluginFactory
 {
@@ -26,7 +26,8 @@ class LocalePluginFactory
         $requestedName,
         array $options = null
     ): LocaleControllerPlugin
-    {        $services = $sm->getServiceLocator();
+    {
+        $services = $sm->getServiceLocator();
         $translator = $services->get('MvcTranslator');
         try {
             $languages = $services->get(
@@ -35,8 +36,7 @@ class LocalePluginFactory
             $defaultLanguage = $languages->current();
         } catch (\Throwable $e) {
             $languages
-                = new \Doctrine\Common\Collections\ArrayCollection(
-            );
+                = new \Doctrine\Common\Collections\ArrayCollection();
             $defaultLanguage = new DefaultLanguage();
         }
 

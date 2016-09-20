@@ -74,9 +74,9 @@ return [
     ],
 
 
-    'WellCart\RestApi\Entity\OAuth2\Client'    => [
+    'WellCart\RestApi\Entity\OAuth2\Client' => [
         'formFields' => [
-            'user'            =>
+            'user'     =>
                 [
                     'input_filter_specification' => [
                         'required'   => true,
@@ -93,7 +93,7 @@ return [
                         ],
                     ],
                 ],
-            'clientId'        =>
+            'clientId' =>
                 [
                     'input_filter_specification' => [
                         'required'   => true,
@@ -131,7 +131,7 @@ return [
                     ],
                 ],
 
-            'newSecret'       =>
+            'newSecret' =>
                 [
                     'input_filter_specification' => [
                         'required'   => true,
@@ -179,7 +179,7 @@ return [
                     ],
                 ],
 
-            'redirectUri'     =>
+            'redirectUri' =>
                 [
                     'input_filter_specification' => [
                         'required'   => false,
@@ -211,7 +211,7 @@ return [
         ],
     ],
 
-    'WellCart\RestApi\Entity\OAuth2\Scope'     => [
+    'WellCart\RestApi\Entity\OAuth2\Scope' => [
         'fields' => [
             'isDefault' =>
                 [
@@ -275,7 +275,7 @@ return [
         ],
     ],
 
-    'WellCart\User\Entity\User'                =>
+    'WellCart\User\Entity\User' =>
         [
             'oneToMany' => [
                 'client'            => [

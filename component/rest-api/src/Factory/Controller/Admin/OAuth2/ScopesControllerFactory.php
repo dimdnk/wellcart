@@ -14,7 +14,8 @@ class ScopesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): ScopesController
+        array $options = null
+    ): ScopesController
     {
         $controller = new ScopesController(
             $sm->getServiceLocator()

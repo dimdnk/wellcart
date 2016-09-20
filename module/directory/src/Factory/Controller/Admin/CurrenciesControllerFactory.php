@@ -15,7 +15,8 @@ class CurrenciesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null):CurrenciesController
+        array $options = null
+    ): CurrenciesController
     {
         $controller = new CurrenciesController(
             $sm->getServiceLocator()

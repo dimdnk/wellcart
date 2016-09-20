@@ -15,7 +15,8 @@ class GeoZonesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null):GeoZonesController
+        array $options = null
+    ): GeoZonesController
     {
         $controller = new GeoZonesController(
             $sm->getServiceLocator()

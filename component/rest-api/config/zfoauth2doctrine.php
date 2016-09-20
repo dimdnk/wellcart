@@ -19,19 +19,19 @@ return [
         'bcrypt_cost'             => 14, # match zfcuser
         'auth_identity_fields'    => ['email'],
 
-        'mapping'                 => [
-            'User'              => [
+        'mapping' => [
+            'User' => [
                 'entity' => $userEntity,
             ],
 
-            'Client'            => [
+            'Client'      => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\Client',
             ],
-            'AccessToken'       => [
+            'AccessToken' => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\AccessToken',
             ],
 
-            'RefreshToken'      => [
+            'RefreshToken' => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\RefreshToken',
             ],
 
@@ -39,19 +39,19 @@ return [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\AuthorizationCode',
             ],
 
-            'Jwt'               => [
+            'Jwt' => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\Jwt',
             ],
 
-            'Jti'               => [
+            'Jti' => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\Jti',
             ],
 
-            'Scope'             => [
+            'Scope' => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\Scope',
             ],
 
-            'PublicKey'         => [
+            'PublicKey' => [
                 'entity' => 'WellCart\RestApi\Entity\OAuth2\PublicKey',
             ],
         ],

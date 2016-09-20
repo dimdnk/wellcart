@@ -145,28 +145,28 @@ return [
                     );
             },
 
-        'WellCart\Catalog\Repository\Attributes'               =>
+        'WellCart\Catalog\Repository\Attributes'         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\AttributeEntity'
                     );
             },
-        'WellCart\Catalog\Repository\AttributeI18n'            =>
+        'WellCart\Catalog\Repository\AttributeI18n'      =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\AttributeI18nEntity'
                     );
             },
-        'WellCart\Catalog\Repository\AttributeValues'          =>
+        'WellCart\Catalog\Repository\AttributeValues'    =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\AttributeValueEntity'
                     );
             },
-        'WellCart\Catalog\Repository\AttributeValueI18n'       =>
+        'WellCart\Catalog\Repository\AttributeValueI18n' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
@@ -174,56 +174,56 @@ return [
                     );
             },
 
-        'WellCart\Catalog\Repository\Features'                 =>
+        'WellCart\Catalog\Repository\Features'         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\FeatureEntity'
                     );
             },
-        'WellCart\Catalog\Repository\FeatureI18n'              =>
+        'WellCart\Catalog\Repository\FeatureI18n'      =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\FeatureI18nEntity'
                     );
             },
-        'WellCart\Catalog\Repository\FeatureValues'            =>
+        'WellCart\Catalog\Repository\FeatureValues'    =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\FeatureValueEntity'
                     );
             },
-        'WellCart\Catalog\Repository\FeatureValueI18n'         =>
+        'WellCart\Catalog\Repository\FeatureValueI18n' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\FeatureValueI18nEntity'
                     );
             },
-        'WellCart\Catalog\Repository\Categories'               =>
+        'WellCart\Catalog\Repository\Categories'       =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\CategoryEntity'
                     );
             },
-        'WellCart\Catalog\Repository\CategoryI18n'             =>
+        'WellCart\Catalog\Repository\CategoryI18n'     =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\CategoryI18nEntity'
                     );
             },
-        'WellCart\Catalog\Repository\Products'                 =>
+        'WellCart\Catalog\Repository\Products'         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\ProductEntity'
                     );
             },
-        'WellCart\Catalog\Form\Brand'                          =>
+        'WellCart\Catalog\Form\Brand'                  =>
             function (ContainerInterface $services) {
                 $form = new Form\Brand(
                     new FormFactory($services->get('FormElementManager')),
@@ -231,21 +231,21 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Catalog\Repository\Brands'                   =>
+        'WellCart\Catalog\Repository\Brands'           =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\BrandEntity'
                     );
             },
-        'WellCart\Catalog\Repository\ProductI18n'              =>
+        'WellCart\Catalog\Repository\ProductI18n'      =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         'WellCart\Catalog\Spec\ProductI18nEntity'
                     );
             },
-        'WellCart\Catalog\Form\Product'                        =>
+        'WellCart\Catalog\Form\Product'                =>
             function (ContainerInterface $services) {
                 $productPrototype = $services->get(
                     'WellCart\Catalog\Spec\ProductRepository'
@@ -275,7 +275,7 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Catalog\Form\Category'                       =>
+        'WellCart\Catalog\Form\Category'               =>
             function (ContainerInterface $services) {
                 $categoryPrototype = $services->get(
                     'WellCart\Catalog\Spec\CategoryRepository'
@@ -294,7 +294,7 @@ return [
                 return $form;
             },
 
-        'WellCart\Catalog\Form\ProductTemplate'                =>
+        'WellCart\Catalog\Form\ProductTemplate' =>
             function (ContainerInterface $services) {
                 $productTemplatePrototype = $services->get(
                     'WellCart\Catalog\Spec\ProductTemplateRepository'
@@ -313,7 +313,7 @@ return [
             },
 
 
-        'WellCart\Catalog\Form\Attribute'                      =>
+        'WellCart\Catalog\Form\Attribute' =>
             function (ContainerInterface $services) {
                 $attributePrototype = $services->get(
                     'WellCart\Catalog\Spec\AttributeRepository'
@@ -342,7 +342,7 @@ return [
                 return $form;
             },
 
-        'WellCart\Catalog\Form\Feature'                        =>
+        'WellCart\Catalog\Form\Feature'     =>
             function (ContainerInterface $services) {
                 $featurePrototype = $services->get(
                     'WellCart\Catalog\Spec\FeatureRepository'
@@ -370,13 +370,13 @@ return [
                 );
                 return $form;
             },
-        'wellcart_catalog_product_hydrator'                    =>
+        'wellcart_catalog_product_hydrator' =>
             function (ContainerInterface $services) {
                 return new Hydrator\ProductHydrator(
                     $services->get('wellcart_catalog_object_manager')
                 );
             },
-        'wellcart_catalog_brand_hydrator'                      =>
+        'wellcart_catalog_brand_hydrator'   =>
             function (ContainerInterface $services) {
                 return new Hydrator\BrandHydrator(
                     $services->get('wellcart_catalog_object_manager')

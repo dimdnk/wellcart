@@ -72,7 +72,7 @@ class ToolbarButton
     /**
      * @return string
      */
-    public function getLink():string
+    public function getLink(): string
     {
         return $this->link;
     }
@@ -91,7 +91,7 @@ class ToolbarButton
     /**
      * @return string
      */
-    public function getClass():string
+    public function getClass(): string
     {
         return $this->class;
     }
@@ -129,7 +129,7 @@ class ToolbarButton
     /**
      * @return string
      */
-    public function getIcon():string
+    public function getIcon(): string
     {
         return $this->icon;
     }
@@ -148,7 +148,7 @@ class ToolbarButton
     /**
      * @return string
      */
-    public function getLabel():string
+    public function getLabel(): string
     {
         return $this->label;
     }

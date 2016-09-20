@@ -26,12 +26,12 @@ return [
             ClassBasedNameResolver::class                                  => ClassBasedNameResolver::class,
         ],
         'factories'  => [
-            'command_bus'                              => 'WellCart\CommandBus\Factory\CommandBusFactory',
-            'command_bus.config'                       => 'WellCart\CommandBus\Factory\CommandBusConfigFactory',
-            'command_bus.callable_resolver'            => 'WellCart\CommandBus\Factory\CallableResolverFactory',
-            'command_bus.command_handler_map'          => 'WellCart\CommandBus\Factory\CommandHandlerMapFactory',
-            'command_bus.command_handler_resolver'     => 'WellCart\CommandBus\Factory\CommandHandlerResolverFactory',
-            'command_bus.logging_middleware'           => 'WellCart\CommandBus\Factory\LoggingMiddlewareFactory',
+            'command_bus'                          => 'WellCart\CommandBus\Factory\CommandBusFactory',
+            'command_bus.config'                   => 'WellCart\CommandBus\Factory\CommandBusConfigFactory',
+            'command_bus.callable_resolver'        => 'WellCart\CommandBus\Factory\CallableResolverFactory',
+            'command_bus.command_handler_map'      => 'WellCart\CommandBus\Factory\CommandHandlerMapFactory',
+            'command_bus.command_handler_resolver' => 'WellCart\CommandBus\Factory\CommandHandlerResolverFactory',
+            'command_bus.logging_middleware'       => 'WellCart\CommandBus\Factory\LoggingMiddlewareFactory',
 
             DelegatesToMessageHandlerMiddleware::class => 'WellCart\CommandBus\Factory\DelegatesToMessageHandlerMiddlewareFactory',
             WrapsMessageHandlingInTransaction::class   => 'WellCart\CommandBus\Factory\DoctrineWrapsMessageHandlingInTransactionFactory',
@@ -47,7 +47,7 @@ return [
         ],
     ],
 
-    'command_bus'        => [
+    'command_bus' => [
         'command_name_resolver_strategy' => ClassBasedNameResolver::class,
         'middlewares'                    => [
             FinishesHandlingMessage::class             => [

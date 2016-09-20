@@ -32,7 +32,7 @@ return [
          *
          * Default value is \Zend\Mail\Transport\Sendmail
          */
-        'mail_adapter'    => 'sendmail',
+        'mail_adapter' => 'sendmail',
 
         /************************
          * MESSAGE CONFIGURATION *

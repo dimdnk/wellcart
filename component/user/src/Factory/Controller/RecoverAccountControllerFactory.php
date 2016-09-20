@@ -15,7 +15,8 @@ class RecoverAccountControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): RecoverAccountController
+        array $options = null
+    ): RecoverAccountController
     {
         $controller = new RecoverAccountController(
             $sm->getServiceLocator()

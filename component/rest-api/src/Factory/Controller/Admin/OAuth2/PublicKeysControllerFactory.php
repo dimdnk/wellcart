@@ -14,7 +14,8 @@ class PublicKeysControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): PublicKeysController
+        array $options = null
+    ): PublicKeysController
     {
         $controller = new PublicKeysController(
             $sm->getServiceLocator()

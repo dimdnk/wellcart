@@ -39,17 +39,17 @@ return [
             './jquery.validate.min'  => 'assets/lib/web/validation/jquery.validate',
         ],
         'shim'    => [
-            'jquery'           => [
+            'jquery'     => [
                 'exports' => '$'
             ],
-            'underscore'       => [
+            'underscore' => [
                 'exports' => '_',
             ],
-            'backbone'         => [
+            'backbone'   => [
                 'deps'    => ['jquery', 'underscore'],
                 'exports' => 'Backbone',
             ],
-            'marionette'       => [
+            'marionette' => [
                 'deps'    => ['backbone', 'backbone.radio'],
                 'exports' => 'Marionette',
             ],

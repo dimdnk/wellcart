@@ -154,7 +154,7 @@ class AttributeFieldset extends Fieldset
                         $attributeValueI18nPrototype
                     ),
 
-                    'columns'                => [
+                    'columns'     => [
                         ['element_name' => 'translations',
                          'label'        => __('Name'),
                          'width'        => 78,],
@@ -162,7 +162,7 @@ class AttributeFieldset extends Fieldset
                          'label'        => __('Sort Order'),
                          'width'        => 18,],
                     ],
-                    'row_actions'            => [
+                    'row_actions' => [
                         ['element_name' => 'remove'],
                     ],
                 ],

@@ -14,7 +14,8 @@ class UserControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): UserController
+        array $options = null
+    ): UserController
     {
         $serviceManager = $sm->getServiceLocator();
         $redirectCallback = $serviceManager->get(

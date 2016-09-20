@@ -63,7 +63,7 @@ return [
             },
 
 
-        'WellCart\RestApi\Repository\OAuth2\AccessTokens'       =>
+        'WellCart\RestApi\Repository\OAuth2\AccessTokens' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
@@ -71,14 +71,14 @@ return [
                     );
             },
 
-        'WellCart\RestApi\Repository\OAuth2\PublicKeys'         =>
+        'WellCart\RestApi\Repository\OAuth2\PublicKeys' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
                         'WellCart\RestApi\Entity\OAuth2\PublicKey'
                     );
             },
-        'WellCart\RestApi\Form\OAuth2\PublicKey'                =>
+        'WellCart\RestApi\Form\OAuth2\PublicKey'        =>
             function (ContainerInterface $services) {
                 $form = new Form\OAuth2\PublicKey(
                     new FormFactory($services->get('FormElementManager')),
@@ -87,14 +87,14 @@ return [
                 return $form;
             },
 
-        'WellCart\RestApi\Repository\OAuth2\Clients'            =>
+        'WellCart\RestApi\Repository\OAuth2\Clients' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
                         'WellCart\RestApi\Entity\OAuth2\Client'
                     );
             },
-        'WellCart\RestApi\Form\OAuth2\Client'                   =>
+        'WellCart\RestApi\Form\OAuth2\Client'        =>
             function (ContainerInterface $services) {
 
                 $hydrator = new Hydrator\OAuth2\ClientHydrator(
@@ -107,14 +107,14 @@ return [
                 return $form;
             },
 
-        'WellCart\RestApi\Repository\OAuth2\Scopes'             =>
+        'WellCart\RestApi\Repository\OAuth2\Scopes' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
                         'WellCart\RestApi\Entity\OAuth2\Scope'
                     );
             },
-        'WellCart\RestApi\Form\OAuth2\Scope'                    =>
+        'WellCart\RestApi\Form\OAuth2\Scope'        =>
             function (ContainerInterface $services) {
                 $form = new Form\OAuth2\Scope(
                     new FormFactory($services->get('FormElementManager')),

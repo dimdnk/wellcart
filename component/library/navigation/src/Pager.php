@@ -44,7 +44,7 @@ class Pager extends AbstractOptions
     /**
      * @return mixed
      */
-    public function getPreviousUrl():string
+    public function getPreviousUrl(): string
     {
         return (string)$this->previousUrl;
     }
@@ -63,7 +63,7 @@ class Pager extends AbstractOptions
     /**
      * @return mixed
      */
-    public function getNextUrl():string
+    public function getNextUrl(): string
     {
         return (string)$this->nextUrl;
     }
@@ -82,7 +82,7 @@ class Pager extends AbstractOptions
     /**
      * @return mixed
      */
-    public function getPreviousLabel():string
+    public function getPreviousLabel(): string
     {
         return (string)$this->previousLabel;
     }
@@ -101,7 +101,7 @@ class Pager extends AbstractOptions
     /**
      * @return mixed
      */
-    public function getNextLabel():string
+    public function getNextLabel(): string
     {
         return (string)$this->nextLabel;
     }

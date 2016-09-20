@@ -75,7 +75,7 @@ return [
                 );
             },
 
-        'WellCart\Admin\Service\RecoverAccount'           =>
+        'WellCart\Admin\Service\RecoverAccount' =>
             function (ContainerInterface $services) {
                 $options = $services->get('Config');
                 $service = new Service\RecoverAccount(

@@ -8,7 +8,7 @@
 
 
 return [
-    'WellCart\Catalog\Entity\Brand'                =>
+    'WellCart\Catalog\Entity\Brand' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\Brands',
@@ -240,7 +240,7 @@ return [
         ],
 
 
-    'WellCart\Catalog\Entity\ProductTemplate'      =>
+    'WellCart\Catalog\Entity\ProductTemplate'     =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\ProductTemplates',
@@ -338,7 +338,7 @@ return [
                         ],
                 ],
         ],
-    'WellCart\Catalog\Entity\ProductTemplateI18n'  =>
+    'WellCart\Catalog\Entity\ProductTemplateI18n' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\ProductTemplateI18n',
@@ -416,7 +416,7 @@ return [
         ],
 
 
-    'WellCart\Catalog\Entity\ProductImage'         =>
+    'WellCart\Catalog\Entity\ProductImage' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\ProductImages',
@@ -583,7 +583,7 @@ return [
                     ],
             ],
         ],
-    'WellCart\Catalog\Entity\Product'              =>
+    'WellCart\Catalog\Entity\Product'      =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\Products',
@@ -697,7 +697,7 @@ return [
             ],
             'fields'          =>
                 [
-                    'parentId'  =>
+                    'parentId' =>
                         [
                             'column'   => 'parent_id',
                             'type'     => 'integer',
@@ -820,7 +820,7 @@ return [
                         ],
                 ],
         ],
-    'WellCart\Catalog\Entity\ProductI18n'          =>
+    'WellCart\Catalog\Entity\ProductI18n'  =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\ProductI18n',
@@ -1023,7 +1023,7 @@ return [
                         ],
                 ],
         ],
-    'WellCart\Catalog\Entity\Category'             =>
+    'WellCart\Catalog\Entity\Category'     =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\Categories',
@@ -1233,7 +1233,7 @@ return [
                         ],
                 ],
         ],
-    'WellCart\Catalog\Entity\CategoryI18n'         =>
+    'WellCart\Catalog\Entity\CategoryI18n' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\CategoryI18n',
@@ -1415,7 +1415,7 @@ return [
                 ],
         ],
 
-    'WellCart\Catalog\Entity\Feature'              =>
+    'WellCart\Catalog\Entity\Feature'     =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\Features',
@@ -1527,7 +1527,7 @@ return [
 
                 ],
         ],
-    'WellCart\Catalog\Entity\FeatureI18n'          =>
+    'WellCart\Catalog\Entity\FeatureI18n' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\FeatureI18n',
@@ -1604,7 +1604,7 @@ return [
         ],
 
 
-    'WellCart\Catalog\Entity\FeatureValue'         =>
+    'WellCart\Catalog\Entity\FeatureValue'     =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\FeatureValues',
@@ -1669,7 +1669,7 @@ return [
 
                 ],
         ],
-    'WellCart\Catalog\Entity\FeatureValueI18n'     =>
+    'WellCart\Catalog\Entity\FeatureValueI18n' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\FeatureValueI18n',
@@ -1688,10 +1688,10 @@ return [
                         ],
                 ],
             'oneToOne'        => [
-                'feature'  => [
+                'feature' => [
                     'targetEntity' => 'WellCart\Catalog\Entity\Feature',
 
-                    'joinColumn'   => [
+                    'joinColumn' => [
                         'name'                 => 'feature_id',
                         'referencedColumnName' => 'feature_id'
                     ],
@@ -1749,7 +1749,7 @@ return [
         ],
 
 
-    'WellCart\Catalog\Entity\Attribute'            =>
+    'WellCart\Catalog\Entity\Attribute'     =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\Attributes',
@@ -1861,7 +1861,7 @@ return [
 
                 ],
         ],
-    'WellCart\Catalog\Entity\AttributeI18n'        =>
+    'WellCart\Catalog\Entity\AttributeI18n' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\AttributeI18n',
@@ -1938,7 +1938,7 @@ return [
         ],
 
 
-    'WellCart\Catalog\Entity\AttributeValue'       =>
+    'WellCart\Catalog\Entity\AttributeValue'     =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\AttributeValues',
@@ -2003,7 +2003,7 @@ return [
 
                 ],
         ],
-    'WellCart\Catalog\Entity\AttributeValueI18n'   =>
+    'WellCart\Catalog\Entity\AttributeValueI18n' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\AttributeValueI18n',
@@ -2030,7 +2030,7 @@ return [
                     ],
                 ],
 
-                'language'  => [
+                'language' => [
                     'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
                     'joinColumn'   => [
                         'name'                 => 'language_id',
@@ -2081,7 +2081,7 @@ return [
                 ],
         ],
 
-    'WellCart\Catalog\Entity\ProductVariant'       =>
+    'WellCart\Catalog\Entity\ProductVariant' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Catalog\Repository\ProductVariants',
@@ -2293,7 +2293,7 @@ return [
                 ],
         ],
 
-    'WellCart\Catalog\Entity\FeatureCombination'   =>
+    'WellCart\Catalog\Entity\FeatureCombination' =>
         [
             'type'      => 'entity',
             'table'     => 'catalog_feature_combinations',

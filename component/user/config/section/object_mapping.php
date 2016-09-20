@@ -618,7 +618,7 @@ return [
                     ],
                 ],
 
-                'users'       => [
+                'users' => [
                     'targetEntity' => 'WellCart\User\Entity\User',
                     'mappedBy'     => 'roles',
                     'cascade'      => ['persist', 'merge', 'detach'],

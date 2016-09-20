@@ -14,7 +14,8 @@ class ImageResizeControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): ImageResizeController
+        array $options = null
+    ): ImageResizeController
     {
         $controller = new ImageResizeController(
             $sm->getServiceLocator()

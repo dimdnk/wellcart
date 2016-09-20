@@ -32,7 +32,7 @@ class Date extends AbstractHelper
      */
     public function __invoke($date,
         $tz = null, $format = null
-    ):string
+    ): string
     {
         if ($tz === null) {
             $tz = $this->getTimezone();

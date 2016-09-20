@@ -15,7 +15,6 @@ use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
-use WellCart\Mvc\Application;
 use Zend\Console\Adapter\AdapterInterface;
 use Zend\ModuleManager\Feature;
 use ZF\Apigility\Provider\ApigilityProviderInterface;

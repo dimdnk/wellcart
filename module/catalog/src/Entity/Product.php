@@ -509,7 +509,7 @@ class Product extends AbstractEntity
      * @return ProductEntity
      */
     public function addCategory(CategoryEntity $category
-    ) : ProductEntity
+    ): ProductEntity
     {
         if ($this->categories->contains($category)) {
             return $this;

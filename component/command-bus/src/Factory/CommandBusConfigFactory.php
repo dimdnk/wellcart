@@ -19,7 +19,7 @@ class CommandBusConfigFactory
      *
      * @return array
      */
-    public function __invoke(ContainerInterface $container):array
+    public function __invoke(ContainerInterface $container): array
     {
         $config = $container->get('Config');
 

@@ -14,7 +14,8 @@ class LogoutControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): LogoutController
+        array $options = null
+    ): LogoutController
     {
         return new LogoutController;
     }

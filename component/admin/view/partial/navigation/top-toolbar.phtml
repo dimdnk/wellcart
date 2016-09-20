@@ -25,9 +25,9 @@ $messages = $notifications->getMessages();
                'zfcadmin/admin/notifications'
            )
            ?>" <?php endif; ?> role="button"
-            >
+        >
             <span
-                class="label<?php if ($recentCount): ?> label-danger<?php endif ?> pull-left"><?php echo $recentCount ?></span>
+                    class="label<?php if ($recentCount): ?> label-danger<?php endif ?> pull-left"><?php echo $recentCount ?></span>
             <i class="fa fa-bell"></i>
         </a>
         <?php if ($recentCount): ?>

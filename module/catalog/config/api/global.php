@@ -7,7 +7,7 @@
  */
 
 return [
-    'router'                 => [
+    'router' => [
         'routes' => [
             'api' => [
                 'child_routes' => [
@@ -51,7 +51,7 @@ return [
         ],
     ],
     'zf-rest'                => [
-        'WellCart\Catalog\RestApi\V1\Brands\Controller'     => [
+        'WellCart\Catalog\RestApi\V1\Brands\Controller'   => [
             'listener'                   => 'WellCart\Catalog\RestApi\V1\Brands\BrandResource',
             'route_name'                 => 'api/catalog:brands',
             'route_identifier_name'      => 'id',
@@ -74,7 +74,7 @@ return [
             'collection_class'           => 'WellCart\Catalog\RestApi\V1\Brands\BrandCollection',
             'service_name'               => 'Brand',
         ],
-        'WellCart\Catalog\RestApi\V1\Products\Controller'   => [
+        'WellCart\Catalog\RestApi\V1\Products\Controller' => [
             'listener'                   => 'WellCart\Catalog\RestApi\V1\Products\ProductResource',
             'route_name'                 => 'api/catalog:products',
             'route_identifier_name'      => 'id',
@@ -156,25 +156,25 @@ return [
     ],
     'zf-hal'                 => [
         'metadata_map' => [
-            'WellCart\Catalog\Entity\Brand'                             => [
+            'WellCart\Catalog\Entity\Brand'                      => [
                 'route_identifier_name'  => 'id',
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/catalog:brands',
                 'hydrator'               => 'WellCart\Catalog\RestApi\V1\Brands\BrandHydrator',
             ],
-            'WellCart\Catalog\RestApi\V1\Brands\BrandCollection'        => [
+            'WellCart\Catalog\RestApi\V1\Brands\BrandCollection' => [
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/catalog:brands',
                 'is_collection'          => true,
             ],
 
-            'WellCart\Catalog\Entity\Product'                           => [
+            'WellCart\Catalog\Entity\Product'                        => [
                 'route_identifier_name'  => 'id',
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/catalog:products',
                 'hydrator'               => 'WellCart\Catalog\RestApi\V1\Products\ProductHydrator',
             ],
-            'WellCart\Catalog\RestApi\V1\Products\ProductCollection'    => [
+            'WellCart\Catalog\RestApi\V1\Products\ProductCollection' => [
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/catalog:products',
                 'is_collection'          => true,
@@ -196,11 +196,11 @@ return [
     ],
     'zf-apigility'           => [
         'doctrine-connected' => [
-            'WellCart\Catalog\RestApi\V1\Brands\BrandResource'        => [
+            'WellCart\Catalog\RestApi\V1\Brands\BrandResource'     => [
                 'object_manager' => 'doctrine.entitymanager.orm_default',
                 'hydrator'       => 'WellCart\Catalog\RestApi\V1\Brands\BrandHydrator',
             ],
-            'WellCart\Catalog\RestApi\V1\Products\ProductResource'    => [
+            'WellCart\Catalog\RestApi\V1\Products\ProductResource' => [
                 'object_manager' => 'doctrine.entitymanager.orm_default',
                 'hydrator'       => 'WellCart\Catalog\RestApi\V1\Products\ProductHydrator',
             ],

@@ -7,7 +7,7 @@
  */
 
 return [
-    'router'                 => [
+    'router' => [
         'routes' => [
             'api' => [
                 'child_routes' => [
@@ -51,7 +51,7 @@ return [
         ],
     ],
     'zf-rest'                => [
-        'WellCart\Base\RestApi\V1\Configuration\Controller'   => [
+        'WellCart\Base\RestApi\V1\Configuration\Controller' => [
             'listener'                   => 'WellCart\Base\RestApi\V1\Configuration\ConfigurationResource',
             'route_name'                 => 'api/base:configuration',
             'route_identifier_name'      => 'id',
@@ -76,7 +76,7 @@ return [
         ],
 
 
-        'WellCart\Base\RestApi\V1\UrlRewrites\Controller'     => [
+        'WellCart\Base\RestApi\V1\UrlRewrites\Controller' => [
             'listener'                   => 'WellCart\Base\RestApi\V1\UrlRewrites\UrlRewriteResource',
             'route_name'                 => 'api/base:url-rewrites',
             'route_identifier_name'      => 'id',
@@ -158,13 +158,13 @@ return [
     ],
     'zf-hal'                 => [
         'metadata_map' => [
-            'WellCart\Base\Entity\Configuration'                                => [
+            'WellCart\Base\Entity\Configuration'                             => [
                 'route_identifier_name'  => 'id',
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/base:configuration',
                 'hydrator'               => 'WellCart\Base\RestApi\V1\Configuration\ConfigurationHydrator',
             ],
-            'WellCart\Base\RestApi\V1\Configuration\ConfigurationCollection'    => [
+            'WellCart\Base\RestApi\V1\Configuration\ConfigurationCollection' => [
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/base:configuration',
                 'is_collection'          => true,
@@ -182,13 +182,13 @@ return [
                 'is_collection'          => true,
             ],
 
-            'WellCart\Base\Entity\UrlRewrite'                                   => [
+            'WellCart\Base\Entity\UrlRewrite'                           => [
                 'route_identifier_name'  => 'id',
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/base:url-rewrites',
                 'hydrator'               => 'WellCart\Base\RestApi\V1\UrlRewrites\UrlRewriteHydrator',
             ],
-            'WellCart\Base\RestApi\V1\UrlRewrites\UrlRewriteCollection'         => [
+            'WellCart\Base\RestApi\V1\UrlRewrites\UrlRewriteCollection' => [
                 'entity_identifier_name' => 'id',
                 'route_name'             => 'api/base:url-rewrites',
                 'is_collection'          => true,

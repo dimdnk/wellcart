@@ -14,7 +14,7 @@ return [
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'            => [
+    'service_manager' => [
         'aliases'            => [
             'wellcart_catalog_db_adapter'             => 'Zend\Db\Adapter\Adapter',
             'wellcart_catalog_object_manager'         => 'Doctrine\ORM\EntityManager',
@@ -25,19 +25,19 @@ return [
             Spec\ProductTemplateRepository::class     => Repository\ProductTemplates::class,
             Spec\ProductTemplateI18nRepository::class => Repository\ProductTemplateI18n::class,
 
-            Spec\AttributeRepository::class           => Repository\Attributes::class,
-            Spec\AttributeI18nRepository::class       => Repository\AttributeI18n::class,
-            Spec\AttributeValueRepository::class      => Repository\AttributeValues::class,
-            Spec\AttributeValueI18nRepository::class  => Repository\AttributeValueI18n::class,
+            Spec\AttributeRepository::class          => Repository\Attributes::class,
+            Spec\AttributeI18nRepository::class      => Repository\AttributeI18n::class,
+            Spec\AttributeValueRepository::class     => Repository\AttributeValues::class,
+            Spec\AttributeValueI18nRepository::class => Repository\AttributeValueI18n::class,
 
-            Spec\FeatureRepository::class             => Repository\Features::class,
-            Spec\FeatureI18nRepository::class         => Repository\FeatureI18n::class,
-            Spec\FeatureValueRepository::class        => Repository\FeatureValues::class,
-            Spec\FeatureValueI18nRepository::class    => Repository\FeatureValueI18n::class,
-            Spec\ProductVariantRepository::class      => Repository\ProductVariants::class,
-            Spec\ProductImageRepository::class        => Repository\ProductImages::class,
-            Spec\ProductRepository::class             => Repository\Products::class,
-            Spec\ProductI18nRepository::class         => Repository\ProductI18n::class,
+            Spec\FeatureRepository::class          => Repository\Features::class,
+            Spec\FeatureI18nRepository::class      => Repository\FeatureI18n::class,
+            Spec\FeatureValueRepository::class     => Repository\FeatureValues::class,
+            Spec\FeatureValueI18nRepository::class => Repository\FeatureValueI18n::class,
+            Spec\ProductVariantRepository::class   => Repository\ProductVariants::class,
+            Spec\ProductImageRepository::class     => Repository\ProductImages::class,
+            Spec\ProductRepository::class          => Repository\Products::class,
+            Spec\ProductI18nRepository::class      => Repository\ProductI18n::class,
         ],
         'invokables'         => [
             Command\Handler\PersistProductHandler::class => Command\Handler\PersistProductHandler::class,
@@ -95,7 +95,7 @@ return [
                             ],
                         ],
                         'child_routes' => [
-                            'products'          => [
+                            'products'   => [
                                 'type'             => \WellCart\Router\Http\Segment::class,
                                 'javascript_route' => true,
                                 'priority'         => -500,
@@ -113,7 +113,7 @@ return [
                                     ],
                                 ],
                             ],
-                            'categories'        => [
+                            'categories' => [
                                 'type'             => 'WellCart\Router\Http\Segment',
                                 'javascript_route' => true,
                                 'priority'         => -500,
@@ -130,7 +130,7 @@ return [
                                     ],
                                 ],
                             ],
-                            'features'          => [
+                            'features'   => [
                                 'type'             => 'WellCart\Router\Http\Segment',
                                 'javascript_route' => true,
                                 'options'          => [
@@ -164,7 +164,7 @@ return [
                                 ],
                             ],
 
-                            'attributes'        => [
+                            'attributes' => [
                                 'type'             => 'WellCart\Router\Http\Segment',
                                 'javascript_route' => true,
                                 'options'          => [
@@ -181,7 +181,7 @@ return [
                                 ],
                             ],
 
-                            'brands'            => [
+                            'brands' => [
                                 'type'             => 'WellCart\Router\Http\Segment',
                                 'javascript_route' => true,
                                 'options'          => [
@@ -246,22 +246,22 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    Spec\BrandEntity::class                => Entity\Brand::class,
-                    Spec\CategoryEntity::class             => Entity\Category::class,
-                    Spec\CategoryI18nEntity::class         => Entity\CategoryI18n::class,
-                    Spec\AttributeEntity::class            => Entity\Attribute::class,
-                    Spec\AttributeI18nEntity::class        => Entity\AttributeI18n::class,
+                    Spec\BrandEntity::class         => Entity\Brand::class,
+                    Spec\CategoryEntity::class      => Entity\Category::class,
+                    Spec\CategoryI18nEntity::class  => Entity\CategoryI18n::class,
+                    Spec\AttributeEntity::class     => Entity\Attribute::class,
+                    Spec\AttributeI18nEntity::class => Entity\AttributeI18n::class,
 
-                    Spec\AttributeValueEntity::class       => Entity\AttributeValue::class,
-                    Spec\AttributeValueI18nEntity::class   => Entity\AttributeValueI18n::class,
-                    Spec\ProductTemplateEntity::class      => Entity\ProductTemplate::class,
-                    Spec\ProductTemplateI18nEntity::class  => Entity\ProductTemplateI18n::class,
+                    Spec\AttributeValueEntity::class      => Entity\AttributeValue::class,
+                    Spec\AttributeValueI18nEntity::class  => Entity\AttributeValueI18n::class,
+                    Spec\ProductTemplateEntity::class     => Entity\ProductTemplate::class,
+                    Spec\ProductTemplateI18nEntity::class => Entity\ProductTemplateI18n::class,
 
-                    Spec\FeatureEntity::class              => Entity\Feature::class,
-                    Spec\FeatureI18nEntity::class          => Entity\FeatureI18n::class,
+                    Spec\FeatureEntity::class     => Entity\Feature::class,
+                    Spec\FeatureI18nEntity::class => Entity\FeatureI18n::class,
 
-                    Spec\FeatureValueEntity::class         => Entity\FeatureValue::class,
-                    Spec\FeatureValueI18nEntity::class     => Entity\FeatureValueI18n::class,
+                    Spec\FeatureValueEntity::class     => Entity\FeatureValue::class,
+                    Spec\FeatureValueI18nEntity::class => Entity\FeatureValueI18n::class,
 
                     Spec\ProductEntity::class              => Entity\Product::class,
                     Spec\ProductI18nEntity::class          => Entity\ProductI18n::class,
@@ -273,20 +273,20 @@ return [
                     'Catalog::CategoryI18n'                => Entity\CategoryI18n::class,
 
 
-                    'Catalog::Attribute'                   => Entity\Attribute::class,
-                    'Catalog::AttributeI18n'               => Entity\AttributeI18n::class,
-                    'Catalog::ProductTemplate'             => Entity\ProductTemplate::class,
-                    'Catalog::ProductTemplateI18n'         => Entity\ProductTemplateI18n::class,
+                    'Catalog::Attribute'           => Entity\Attribute::class,
+                    'Catalog::AttributeI18n'       => Entity\AttributeI18n::class,
+                    'Catalog::ProductTemplate'     => Entity\ProductTemplate::class,
+                    'Catalog::ProductTemplateI18n' => Entity\ProductTemplateI18n::class,
 
-                    'Catalog::Feature'                     => Entity\Feature::class,
-                    'Catalog::FeatureI18n'                 => Entity\FeatureI18n::class,
+                    'Catalog::Feature'     => Entity\Feature::class,
+                    'Catalog::FeatureI18n' => Entity\FeatureI18n::class,
 
-                    'Catalog::FeatureValue'                => Entity\Feature::class,
-                    'Catalog::FeatureI18nValue'            => Entity\FeatureI18n::class,
+                    'Catalog::FeatureValue'     => Entity\Feature::class,
+                    'Catalog::FeatureI18nValue' => Entity\FeatureI18n::class,
 
-                    'Catalog::Product'                     => Entity\Product::class,
-                    'Catalog::ProductI18n'                 => Entity\ProductI18n::class,
-                    'Catalog::ProductImage'                => Entity\ProductImage::class,
+                    'Catalog::Product'      => Entity\Product::class,
+                    'Catalog::ProductI18n'  => Entity\ProductI18n::class,
+                    'Catalog::ProductImage' => Entity\ProductImage::class,
                 ],
             ],
         ]
@@ -358,7 +358,7 @@ return [
         ],
     ],
 
-    'command_bus'                => [
+    'command_bus' => [
         'command_map' => [
             Command\PersistProduct::class => Command\Handler\PersistProductHandler::class,
         ],

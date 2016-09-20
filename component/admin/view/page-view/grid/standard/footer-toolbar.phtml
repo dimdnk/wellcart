@@ -32,17 +32,17 @@
         switch (type) {
             case 'all':
                 master.prop('indeterminate', false)
-                    .prop('checked', true)
+                        .prop('checked', true)
                 checkboxes.prop('checked', true);
                 break;
             case 'selected':
                 master.prop('checked', true)
-                    .prop('indeterminate', true);
+                        .prop('indeterminate', true);
                 checkboxes.prop('checked', true);
                 break;
             case 'none':
                 master.prop('checked', false)
-                    .prop('indeterminate', false);
+                        .prop('indeterminate', false);
                 checkboxes.prop('checked', false);
                 break;
         }

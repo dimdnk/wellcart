@@ -15,7 +15,8 @@ class PagesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null):PagesController
+        array $options = null
+    ): PagesController
     {
         $controller = new PagesController(
             $sm->getServiceLocator()

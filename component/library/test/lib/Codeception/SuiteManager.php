@@ -75,6 +75,23 @@ class SuiteManager
         $this->suite = $this->createSuite($name);
     }
 
+    protected function createSuite($name)
+    {
+        $suite = new Suite();
+        $suite->setBaseName(
+            preg_replace('~\s.+$~', '', $name)
+        ); // replace everything after space (env name)
+        if ($this->settings['namespace']) {
+            $name = $this->settings['namespace'] . ".$name";
+        }
+        $suite->setName($name);
+        if (isset($this->settings['backup_globals'])) {
+            $suite->setBackupGlobals((bool)$this->settings['backup_globals']);
+        }
+        $suite->setModules($this->moduleContainer->all());
+        return $suite;
+    }
+
     public function initialize()
     {
         $this->dispatcher->dispatch(
@@ -132,53 +149,33 @@ class SuiteManager
         }
     }
 
-    protected function createSuite($name)
-    {
-        $suite = new Suite();
-        $suite->setBaseName(
-            preg_replace('~\s.+$~', '', $name)
-        ); // replace everything after space (env name)
-        if ($this->settings['namespace']) {
-            $name = $this->settings['namespace'] . ".$name";
-        }
-        $suite->setName($name);
-        if (isset($this->settings['backup_globals'])) {
-            $suite->setBackupGlobals((bool)$this->settings['backup_globals']);
-        }
-        $suite->setModules($this->moduleContainer->all());
-        return $suite;
-    }
-
-
-    public function run(PHPUnit\Runner $runner,
-        \PHPUnit_Framework_TestResult $result, $options
-    ) {
-        $runner->prepareSuite($this->suite, $options);
-        $this->dispatcher->dispatch(
-            Events::SUITE_BEFORE,
-            new Event\SuiteEvent($this->suite, $result, $this->settings)
-        );
-        $runner->doEnhancedRun($this->suite, $result, $options);
-        $this->dispatcher->dispatch(
-            Events::SUITE_AFTER,
-            new Event\SuiteEvent($this->suite, $result, $this->settings)
-        );
-    }
-
     /**
-     * @return \Codeception\Suite
+     * @param $t
+     *
+     * @throws Exception\InjectionException
      */
-    public function getSuite()
+    protected function configureTest($t)
     {
-        return $this->suite;
-    }
-
-    /**
-     * @return ModuleContainer
-     */
-    public function getModuleContainer()
-    {
-        return $this->moduleContainer;
+        if (!$t instanceof TestInterface) {
+            return;
+        }
+        $t->getMetadata()->setServices(
+            [
+                'di'         => clone($this->di),
+                'dispatcher' => $this->dispatcher,
+                'modules'    => $this->moduleContainer
+            ]
+        );
+        $t->getMetadata()->setCurrent(
+            [
+                'actor'   => $this->getActor(),
+                'env'     => $this->env,
+                'modules' => $this->moduleContainer->all()
+            ]
+        );
+        if ($t instanceof ScenarioDriven) {
+            $t->preload();
+        }
     }
 
     protected function getActor()
@@ -233,32 +230,34 @@ class SuiteManager
         return false;
     }
 
+    public function run(PHPUnit\Runner $runner,
+        \PHPUnit_Framework_TestResult $result, $options
+    ) {
+        $runner->prepareSuite($this->suite, $options);
+        $this->dispatcher->dispatch(
+            Events::SUITE_BEFORE,
+            new Event\SuiteEvent($this->suite, $result, $this->settings)
+        );
+        $runner->doEnhancedRun($this->suite, $result, $options);
+        $this->dispatcher->dispatch(
+            Events::SUITE_AFTER,
+            new Event\SuiteEvent($this->suite, $result, $this->settings)
+        );
+    }
+
     /**
-     * @param $t
-     *
-     * @throws Exception\InjectionException
+     * @return \Codeception\Suite
      */
-    protected function configureTest($t)
+    public function getSuite()
     {
-        if (!$t instanceof TestInterface) {
-            return;
-        }
-        $t->getMetadata()->setServices(
-            [
-                'di'         => clone($this->di),
-                'dispatcher' => $this->dispatcher,
-                'modules'    => $this->moduleContainer
-            ]
-        );
-        $t->getMetadata()->setCurrent(
-            [
-                'actor'   => $this->getActor(),
-                'env'     => $this->env,
-                'modules' => $this->moduleContainer->all()
-            ]
-        );
-        if ($t instanceof ScenarioDriven) {
-            $t->preload();
-        }
+        return $this->suite;
+    }
+
+    /**
+     * @return ModuleContainer
+     */
+    public function getModuleContainer()
+    {
+        return $this->moduleContainer;
     }
 }

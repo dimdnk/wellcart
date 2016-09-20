@@ -16,11 +16,11 @@ $next = $pager->getNextUrl();
     <div class="col-md-9 page-breadcrumb">
         <ol class="breadcrumb">
             <li><i class="fa fa-dashboard"></i> &nbsp; &nbsp; <a
-                    href="<?php
-                    echo $this->url(
-                        'zfcadmin'
-                    )
-                    ?>"><?php
+                        href="<?php
+                        echo $this->url(
+                            'zfcadmin'
+                        )
+                        ?>"><?php
                     echo $this->__(
                         'Dashboard'
                     )
@@ -42,13 +42,13 @@ $next = $pager->getNextUrl();
                 <li class="previous<?php if (!$previous): ?> disabled<?php endif ?>">
                     <a href="<?php if (!$previous): ?>#<?php else: ?><?php echo $previous ?><?php endif ?>"
                        title="<?php echo $pager->getPreviousLabel() ?>"><span
-                            aria-hidden="true">&larr;</span> <?php echo __(
+                                aria-hidden="true">&larr;</span> <?php echo __(
                             'Previous'
                         ) ?></a></li>
                 <li class="next<?php if (!$next): ?> disabled<?php endif ?>"><a
-                        href="<?php if (!$next): ?>#<?php else: ?><?php echo $next ?><?php endif ?>"
-                        title="<?php echo $pager->getNextLabel(
-                        ) ?>"><?php echo __(
+                            href="<?php if (!$next): ?>#<?php else: ?><?php echo $next ?><?php endif ?>"
+                            title="<?php echo $pager->getNextLabel(
+                            ) ?>"><?php echo __(
                             'Next'
                         ) ?> <span aria-hidden="true">&rarr;</span></a></li>
             </ul>

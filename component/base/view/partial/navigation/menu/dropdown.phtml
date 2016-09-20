@@ -26,12 +26,12 @@ $container = $this->container;
             }
             ?>>
                 <a
-                    class="nav-header"
-                    href="<?php echo $page->getHref() ?>"
+                        class="nav-header"
+                        href="<?php echo $page->getHref() ?>"
                     <?php if ($page->getTarget() != ""): ?>
                         target="<?php echo $page->getTarget(); ?>"
                     <?php endif; ?>
-                    >
+                >
                     <?php if ($page->get("icon") !== ""): ?>
                         <span class="<?php echo $page->get(
                             "icon"
@@ -102,7 +102,7 @@ $container = $this->container;
                                             ?>"
                                         <?php endif; ?>
                                     <?php endif; ?>
-                                    >
+                                >
                                     <?php if ($child->get("icon") !== ""): ?>
                                         <span class="<?php
                                         echo $child->get(
@@ -140,8 +140,8 @@ $container = $this->container;
                                             }
                                             ?>>
                                                 <a
-                                                    href="<?php echo $sub->getHref(
-                                                    ) ?>"
+                                                        href="<?php echo $sub->getHref(
+                                                        ) ?>"
                                                     <?php if ($sub->getTarget()
                                                         != ""
                                                     ): ?>

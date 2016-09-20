@@ -7,7 +7,7 @@
  */
 
 return [
-    'router'                 => [
+    'router' => [
         'routes' => [
             'api' => [
                 'child_routes' => [

@@ -14,7 +14,8 @@ class IndexControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): IndexController
+        array $options = null
+    ): IndexController
     {
         return new IndexController;
     }

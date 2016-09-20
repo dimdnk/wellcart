@@ -11,7 +11,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'                 => [
+    'router' => [
         'routes' => [
             'api' => [
                 'child_routes' => [

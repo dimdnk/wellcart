@@ -14,31 +14,31 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'WellCart\User\PageView\Admin\AccountForm'                       =>
+        'WellCart\User\PageView\Admin\AccountForm'                   =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\AccountForm(
                     $services->get('WellCart\User\Spec\UserRepository')
                 );
             },
-        'WellCart\User\PageView\Admin\AccountsGrid'                      =>
+        'WellCart\User\PageView\Admin\AccountsGrid'                  =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\AccountsGrid(
                     $services->get('WellCart\User\Spec\UserRepository')
                 );
             },
-        'WellCart\User\PageView\Admin\RolesGrid'                         =>
+        'WellCart\User\PageView\Admin\RolesGrid'                     =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\RolesGrid(
                     $services->get('WellCart\User\Spec\AclRoleRepository')
                 );
             },
-        'WellCart\User\PageView\Admin\RoleForm'                          =>
+        'WellCart\User\PageView\Admin\RoleForm'                      =>
             function (ContainerInterface $services) {
                 return new PageView\Admin\RoleForm(
                     $services->get('WellCart\User\Spec\AclRoleRepository')
                 );
             },
-        'WellCart\User\EventListener\Registration\WelcomeEmail'          =>
+        'WellCart\User\EventListener\Registration\WelcomeEmail'      =>
             function (ContainerInterface $services) {
                 return new EventListener\Registration\WelcomeEmail(
                     $services->get(
@@ -46,7 +46,7 @@ return [
                     )
                 );
             },
-        'WellCart\User\EventListener\Registration\EmailConfirmation'     =>
+        'WellCart\User\EventListener\Registration\EmailConfirmation' =>
             function (ContainerInterface $services) {
                 return new EventListener\Registration\EmailConfirmation(
                     $services->get(
@@ -54,7 +54,7 @@ return [
                     )
                 );
             },
-        'WellCart\User\Service\Registration\AccountEmailHandler'         =>
+        'WellCart\User\Service\Registration\AccountEmailHandler'     =>
             function (ContainerInterface $services) {
                 $options = $services->get('Config');
                 $form = new Service\Registration\AccountEmailHandler(
@@ -65,7 +65,7 @@ return [
                 );
                 return $form;
             },
-        'WellCart\User\Service\RecoverAccount'                           =>
+        'WellCart\User\Service\RecoverAccount'                       =>
             function (ContainerInterface $services) {
                 $options = $services->get('Config');
                 $service = new Service\RecoverAccount(
@@ -79,7 +79,7 @@ return [
                 );
                 return $service;
             },
-        'WellCart\User\Form\Account'                                     =>
+        'WellCart\User\Form\Account'                                 =>
             function (ContainerInterface $services) {
                 $form = new Form\Account(
                     new FormFactory($services->get('FormElementManager')),
@@ -87,7 +87,7 @@ return [
                 );
                 return $form;
             },
-        'WellCart\User\Form\Acl\Role'                                    =>
+        'WellCart\User\Form\Acl\Role'                                =>
             function (ContainerInterface $services) {
                 $form = new Form\Acl\Role(
                     new FormFactory($services->get('FormElementManager')),
@@ -95,35 +95,35 @@ return [
                 );
                 return $form;
             },
-        'WellCart\User\Form\AccountPreferences'                          =>
+        'WellCart\User\Form\AccountPreferences'                      =>
             function (ContainerInterface $services) {
                 $form = new Form\AccountPreferences(
                     new FormFactory($services->get('FormElementManager'))
                 );
                 return $form;
             },
-        'WellCart\User\Repository\Users'                                 =>
+        'WellCart\User\Repository\Users'                             =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
                         'WellCart\User\Spec\UserEntity'
                     );
             },
-        'WellCart\User\Repository\Acl\Roles'                             =>
+        'WellCart\User\Repository\Acl\Roles'                         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
                         'WellCart\User\Spec\AclRoleEntity'
                     );
             },
-        'WellCart\User\Repository\Acl\Permissions'                       =>
+        'WellCart\User\Repository\Acl\Permissions'                   =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
                         'WellCart\User\Spec\AclPermissionEntity'
                     );
             },
-        'zfcuser_user_mapper'                                            =>
+        'zfcuser_user_mapper'                                        =>
             function (ContainerInterface $services) {
                 return new ORM\Mapper\User(
                     $services->get('wellcart_user_object_manager'),
@@ -131,7 +131,7 @@ return [
                 );
             },
 
-        'Zend\Authentication\AuthenticationService'                      =>
+        'Zend\Authentication\AuthenticationService' =>
             function (ContainerInterface $serviceManager) {
                 $auth = $serviceManager->get(
                     'doctrine.authenticationservice.orm_default'

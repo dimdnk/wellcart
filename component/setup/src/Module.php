@@ -118,13 +118,13 @@ class Module implements
             ['--website-name', 'Website Name.'],
 
             "Upgrades the WellCart application, DB data, and schema:\n",
-            'wellcart:setup:upgrade' => '',
+            'wellcart:setup:upgrade'                                                                                                                                                                                                                                                                                                                                             => '',
 
             "Publish module's private resource files by creating symlinks to them in the web-visible area:\n",
-            'wellcart:setup:publish-assets' => '',
+            'wellcart:setup:publish-assets'                                                                                                                                                                                                                                                                                                                                      => '',
 
-            'maintenance:status' => 'Displays maintenance mode status',
-            'maintenance:enable' => 'Enables maintenance mode',
+            'maintenance:status'  => 'Displays maintenance mode status',
+            'maintenance:enable'  => 'Enables maintenance mode',
             'maintenance:disable' => 'Disables maintenance mode',
         ];
     }

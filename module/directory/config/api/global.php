@@ -351,7 +351,7 @@ return [
             ],
         ],
         'authorization'  => [
-            'WellCart\Directory\RestApi\V1\Countries\Controller'   => [
+            'WellCart\Directory\RestApi\V1\Countries\Controller' => [
                 'collection' => [
                     'GET'    => true,
                     'POST'   => true,
@@ -368,7 +368,7 @@ return [
                 ],
             ],
 
-            'WellCart\Directory\RestApi\V1\Currencies\Controller'  => [
+            'WellCart\Directory\RestApi\V1\Currencies\Controller' => [
                 'collection' => [
                     'GET'    => true,
                     'POST'   => true,
@@ -385,7 +385,7 @@ return [
                 ],
             ],
 
-            'WellCart\Directory\RestApi\V1\GeoZones\Controller'    => [
+            'WellCart\Directory\RestApi\V1\GeoZones\Controller' => [
                 'collection' => [
                     'GET'    => true,
                     'POST'   => true,
@@ -419,7 +419,7 @@ return [
                 ],
             ],
 
-            'WellCart\Directory\RestApi\V1\Zones\Controller'       => [
+            'WellCart\Directory\RestApi\V1\Zones\Controller' => [
                 'collection' => [
                     'GET'    => true,
                     'POST'   => true,

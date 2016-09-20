@@ -6,7 +6,6 @@
 namespace Gedmo\Blameable\Mapping\Driver;
 
 use Doctrine\Common\Persistence\Mapping\MappingException;
-use Gedmo\Mapping\Driver;
 use WellCart\Utility\Config;
 
 /**

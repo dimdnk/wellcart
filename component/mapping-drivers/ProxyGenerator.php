@@ -38,21 +38,6 @@ class ProxyGenerator
      * to be decorated since the identifier is known.
      */
     const PATTERN_MATCH_ID_METHOD = '((public\s+)?(function\s+%s\s*\(\)\s*)\s*(?::\s*\\\\?[a-z_\x7f-\xff][\w\x7f-\xff]*(?:\\\\[a-z_\x7f-\xff][\w\x7f-\xff]*)*\s*)?{\s*return\s*\$this->%s;\s*})i';
-
-    /**
-     * The namespace that contains all proxy classes.
-     *
-     * @var string
-     */
-    private $proxyNamespace;
-
-    /**
-     * The directory that contains all proxy classes.
-     *
-     * @var string
-     */
-    private $proxyDirectory;
-
     /**
      * Map of callables used to fill in placeholders set in the template.
      *
@@ -63,7 +48,6 @@ class ProxyGenerator
             'baseProxyInterface'   => Proxy::class,
             'additionalProperties' => '',
         ];
-
     /**
      * Template used as a blueprint to generate proxies.
      *
@@ -201,6 +185,18 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
     <methods>
 }
 ';
+    /**
+     * The namespace that contains all proxy classes.
+     *
+     * @var string
+     */
+    private $proxyNamespace;
+    /**
+     * The directory that contains all proxy classes.
+     *
+     * @var string
+     */
+    private $proxyDirectory;
 
     /**
      * Initializes a new instance of the <tt>ProxyFactory</tt> class that is
@@ -322,6 +318,23 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
     }
 
     /**
+     * Generates the proxy namespace.
+     *
+     * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
+     *
+     * @return string
+     */
+    private function generateNamespace(ClassMetadata $class)
+    {
+        $proxyClassName = ClassUtils::generateProxyClassName(
+            $class->getName(), $this->proxyNamespace
+        );
+        $parts = explode('\\', strrev($proxyClassName), 2);
+
+        return strrev($parts[1]);
+    }
+
+    /**
      * Generates the proxy short class name to be used in the template.
      *
      * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
@@ -339,20 +352,22 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
     }
 
     /**
-     * Generates the proxy namespace.
+     * Generates the Proxy file name.
      *
-     * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
+     * @param string $className
+     * @param string $baseDirectory Optional base directory for proxy file name generation.
+     *                              If not specified, the directory configured on the Configuration of the
+     *                              EntityManager will be used by this factory.
      *
      * @return string
      */
-    private function generateNamespace(ClassMetadata $class)
+    public function getProxyFileName($className, $baseDirectory = null)
     {
-        $proxyClassName = ClassUtils::generateProxyClassName(
-            $class->getName(), $this->proxyNamespace
-        );
-        $parts = explode('\\', strrev($proxyClassName), 2);
+        $baseDirectory = $baseDirectory ?: $this->proxyDirectory;
 
-        return strrev($parts[1]);
+        return rtrim($baseDirectory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR
+        . Proxy::MARKER
+        . str_replace('\\', '', $className) . '.php';
     }
 
     /**
@@ -386,6 +401,36 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
         }
 
         return implode(', ', $values);
+    }
+
+    /**
+     * Generates the list of public properties to be lazy loaded, with their default values.
+     *
+     * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
+     *
+     * @return mixed[]
+     */
+    private function getLazyLoadedPublicProperties(ClassMetadata $class)
+    {
+        $defaultProperties = $class->getReflectionClass()->getDefaultProperties(
+        );
+        $properties = [];
+
+        foreach (
+            $class->getReflectionClass()->getProperties(
+                \ReflectionProperty::IS_PUBLIC
+            ) as $property
+        ) {
+            $name = $property->getName();
+
+            if (($class->hasField($name) || $class->hasAssociation($name))
+                && !$class->isIdentifier($name)
+            ) {
+                $properties[$name] = $defaultProperties[$name];
+            }
+        }
+
+        return $properties;
     }
 
     /**
@@ -879,104 +924,6 @@ EOT;
     }
 
     /**
-     * Generates the Proxy file name.
-     *
-     * @param string $className
-     * @param string $baseDirectory Optional base directory for proxy file name generation.
-     *                              If not specified, the directory configured on the Configuration of the
-     *                              EntityManager will be used by this factory.
-     *
-     * @return string
-     */
-    public function getProxyFileName($className, $baseDirectory = null)
-    {
-        $baseDirectory = $baseDirectory ?: $this->proxyDirectory;
-
-        return rtrim($baseDirectory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR
-        . Proxy::MARKER
-        . str_replace('\\', '', $className) . '.php';
-    }
-
-    /**
-     * Checks if the method is a short identifier getter.
-     *
-     * What does this mean? For proxy objects the identifier is already known,
-     * however accessing the getter for this identifier usually triggers the
-     * lazy loading, leading to a query that may not be necessary if only the
-     * ID is interesting for the userland code (for example in views that
-     * generate links to the entity, but do not display anything else).
-     *
-     * @param \ReflectionMethod                                  $method
-     * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
-     *
-     * @return boolean
-     */
-    private function isShortIdentifierGetter($method, ClassMetadata $class)
-    {
-        $identifier = lcfirst(substr($method->getName(), 3));
-        $startLine = $method->getStartLine();
-        $endLine = $method->getEndLine();
-        $cheapCheck = (
-            $method->getNumberOfParameters() == 0
-            && substr($method->getName(), 0, 3) == 'get'
-            && in_array($identifier, $class->getIdentifier(), true)
-            && $class->hasField($identifier)
-            && (($endLine - $startLine) <= 4)
-        );
-
-        if ($cheapCheck) {
-            $code = file($method->getDeclaringClass()->getFileName());
-            $code = trim(
-                implode(
-                    ' ', array_slice(
-                        $code, $startLine - 1, $endLine - $startLine + 1
-                    )
-                )
-            );
-
-            $pattern = sprintf(
-                self::PATTERN_MATCH_ID_METHOD, $method->getName(), $identifier
-            );
-
-            if (preg_match($pattern, $code)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    /**
-     * Generates the list of public properties to be lazy loaded, with their default values.
-     *
-     * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
-     *
-     * @return mixed[]
-     */
-    private function getLazyLoadedPublicProperties(ClassMetadata $class)
-    {
-        $defaultProperties = $class->getReflectionClass()->getDefaultProperties(
-        );
-        $properties = [];
-
-        foreach (
-            $class->getReflectionClass()->getProperties(
-                \ReflectionProperty::IS_PUBLIC
-            ) as $property
-        ) {
-            $name = $property->getName();
-
-            if (($class->hasField($name) || $class->hasAssociation($name))
-                && !$class->isIdentifier($name)
-            ) {
-                $properties[$name] = $defaultProperties[$name];
-            }
-        }
-
-        return $properties;
-    }
-
-    /**
      * @param ClassMetadata          $class
      * @param \ReflectionMethod      $method
      * @param \ReflectionParameter[] $parameters
@@ -1067,6 +1014,88 @@ EOT;
     }
 
     /**
+     * @Param \ReflectionMethod $method
+     *
+     * @return string
+     */
+    private function getMethodReturnType(\ReflectionMethod $method)
+    {
+        if (!(method_exists($method, 'hasReturnType')
+            && $method->hasReturnType())
+        ) {
+            return '';
+        }
+
+        $returnType = $method->getReturnType();
+
+        if ($returnType->isBuiltin()) {
+            return ': ' . $returnType;
+        }
+
+        $nameLower = strtolower((string)$returnType);
+
+        if ('self' === $nameLower) {
+            return ': \\' . $method->getDeclaringClass()->getName();
+        }
+
+        if ('parent' === $nameLower) {
+            return ': \\' . $method->getDeclaringClass()->getParentClass()
+                ->getName();
+        }
+
+        return ': \\' . (string)$returnType;
+    }
+
+    /**
+     * Checks if the method is a short identifier getter.
+     *
+     * What does this mean? For proxy objects the identifier is already known,
+     * however accessing the getter for this identifier usually triggers the
+     * lazy loading, leading to a query that may not be necessary if only the
+     * ID is interesting for the userland code (for example in views that
+     * generate links to the entity, but do not display anything else).
+     *
+     * @param \ReflectionMethod                                  $method
+     * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
+     *
+     * @return boolean
+     */
+    private function isShortIdentifierGetter($method, ClassMetadata $class)
+    {
+        $identifier = lcfirst(substr($method->getName(), 3));
+        $startLine = $method->getStartLine();
+        $endLine = $method->getEndLine();
+        $cheapCheck = (
+            $method->getNumberOfParameters() == 0
+            && substr($method->getName(), 0, 3) == 'get'
+            && in_array($identifier, $class->getIdentifier(), true)
+            && $class->hasField($identifier)
+            && (($endLine - $startLine) <= 4)
+        );
+
+        if ($cheapCheck) {
+            $code = file($method->getDeclaringClass()->getFileName());
+            $code = trim(
+                implode(
+                    ' ', array_slice(
+                        $code, $startLine - 1, $endLine - $startLine + 1
+                    )
+                )
+            );
+
+            $pattern = sprintf(
+                self::PATTERN_MATCH_ID_METHOD, $method->getName(), $identifier
+            );
+
+            if (preg_match($pattern, $code)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * @param \ReflectionParameter[] $parameters
      *
      * @return string[]
@@ -1104,38 +1133,5 @@ EOT;
             },
             $parameters
         );
-    }
-
-    /**
-     * @Param \ReflectionMethod $method
-     *
-     * @return string
-     */
-    private function getMethodReturnType(\ReflectionMethod $method)
-    {
-        if (!(method_exists($method, 'hasReturnType')
-            && $method->hasReturnType())
-        ) {
-            return '';
-        }
-
-        $returnType = $method->getReturnType();
-
-        if ($returnType->isBuiltin()) {
-            return ': ' . $returnType;
-        }
-
-        $nameLower = strtolower((string)$returnType);
-
-        if ('self' === $nameLower) {
-            return ': \\' . $method->getDeclaringClass()->getName();
-        }
-
-        if ('parent' === $nameLower) {
-            return ': \\' . $method->getDeclaringClass()->getParentClass()
-                ->getName();
-        }
-
-        return ': \\' . (string)$returnType;
     }
 }

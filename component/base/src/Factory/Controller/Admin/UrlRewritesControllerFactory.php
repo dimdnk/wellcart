@@ -15,7 +15,8 @@ class UrlRewritesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): UrlRewritesController
+        array $options = null
+    ): UrlRewritesController
     {
         $controller = new UrlRewritesController(
             $sm->getServiceLocator()

@@ -16,7 +16,6 @@ use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
-use WellCart\Mvc\Application;
 use Zend\ModuleManager\Feature;
 use ZF\Apigility\Provider\ApigilityProviderInterface;
 
@@ -95,7 +94,7 @@ class Module implements
     {
         return [
             'factories' => [
-                'catalogFeatureCombinationMultiCheckbox'       =>
+                'catalogFeatureCombinationMultiCheckbox' =>
                     function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
                     ) {
                         $services = $sm->getServiceLocator();

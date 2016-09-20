@@ -10,7 +10,6 @@ declare(strict_types = 1);
 
 namespace WellCart\Admin\Factory\Navigation\Service;
 
-use Zend\Navigation\Exception;
 use Zend\Navigation\Service\DefaultNavigationFactory;
 
 class BackendMainMenuFactory extends DefaultNavigationFactory

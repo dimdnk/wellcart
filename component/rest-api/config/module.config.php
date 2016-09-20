@@ -15,7 +15,7 @@ return [
      * =========================================================
      */
     'service_manager'    => [
-        'invokables'         => [],
+        'invokables' => [],
 
         'aliases'            => [
             'wellcart_api_db_adapter'        => 'Zend\Db\Adapter\Adapter',

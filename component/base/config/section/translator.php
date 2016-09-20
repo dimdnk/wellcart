@@ -6,11 +6,11 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'locale'                    =>
+    'locale'                =>
         ['default_locale'  => 'en_US',
          'fallback_locale' => 'en_US'
         ],
-    'event_manager_enabled'     => false,
+    'event_manager_enabled' => false,
     /**
      * 'cache'                     => array(
      * 'adapter' => array(

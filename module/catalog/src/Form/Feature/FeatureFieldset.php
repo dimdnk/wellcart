@@ -153,7 +153,7 @@ class FeatureFieldset extends Fieldset
                         $featureValueI18nPrototype
                     ),
 
-                    'columns'                => [
+                    'columns'     => [
                         ['element_name' => 'translations',
                          'label'        => __('Name'),
                          'width'        => 48,],
@@ -161,7 +161,7 @@ class FeatureFieldset extends Fieldset
                          'label'        => __('Sort Order'),
                          'width'        => 48,],
                     ],
-                    'row_actions'            => [
+                    'row_actions' => [
                         ['element_name' => 'remove'],
                     ],
                 ],

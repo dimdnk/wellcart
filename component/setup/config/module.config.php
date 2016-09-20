@@ -198,7 +198,7 @@ return [
          */
         'router' => [
             'routes' => [
-                'maintenance:status'            => [
+                'maintenance:status' => [
                     'options' => [
                         'route'    => 'maintenance:status',
                         'defaults' => [
@@ -208,7 +208,7 @@ return [
                     ],
                 ],
 
-                'maintenance:enable'            => [
+                'maintenance:enable' => [
                     'options' => [
                         'route'    => 'maintenance:enable',
                         'defaults' => [
@@ -218,7 +218,7 @@ return [
                     ],
                 ],
 
-                'maintenance:disable'           => [
+                'maintenance:disable' => [
                     'options' => [
                         'route'    => 'maintenance:disable',
                         'defaults' => [

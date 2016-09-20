@@ -14,7 +14,8 @@ class DashboardControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): DashboardController
+        array $options = null
+    ): DashboardController
     {
         return new DashboardController;
     }

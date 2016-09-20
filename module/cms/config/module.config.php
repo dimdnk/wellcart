@@ -33,7 +33,7 @@ return [
         ],
     ],
 
-    'controllers'     => [
+    'controllers'    => [
         'factories' => [
             'WellCart\CMS\Controller\Admin\Pages' => Factory\Controller\Admin\PagesControllerFactory::class,
         ],
@@ -44,7 +44,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'          => [
+    'router'         => [
         'routes' => [
             'zfcadmin' => [
                 'child_routes' => [
@@ -82,7 +82,7 @@ return [
             ],
         ],
     ],
-    'navigation'      => [
+    'navigation'     => [
         'backend_main_navigation' => include __DIR__
             . '/backend_main_navigation.php',
     ],
@@ -93,7 +93,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'        => [
+    'doctrine'       => [
         'driver'          => [
             'wellcart_cms_driver' => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -125,7 +125,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'   => [
+    'asset_manager'  => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -138,7 +138,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'      => [
+    'translator'     => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',
@@ -154,7 +154,7 @@ return [
      * View manager configuration
      * =========================================================
      */
-    'view_manager'    => [
+    'view_manager'   => [
         'template_map' => include __DIR__ . '/section/template_map.php',
     ],
 
@@ -163,6 +163,6 @@ return [
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping'  => include __DIR__ . '/section/object_mapping.php',
-    'layout_updates'  => include __DIR__ . '/section/layout_updates.php',
+    'object_mapping' => include __DIR__ . '/section/object_mapping.php',
+    'layout_updates' => include __DIR__ . '/section/layout_updates.php',
 ];

@@ -16,7 +16,8 @@ class PreferencesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): PreferencesController
+        array $options = null
+    ): PreferencesController
     {
         $services = $sm->getServiceLocator();
         $controller = new PreferencesController(

@@ -15,7 +15,8 @@ class ProductsControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): ProductsController
+        array $options = null
+    ): ProductsController
     {
         $controller = new ProductsController(
             $sm->getServiceLocator()

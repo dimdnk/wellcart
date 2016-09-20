@@ -30,7 +30,7 @@ interface NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setId($id):NotificationEntity;
+    public function setId($id): NotificationEntity;
 
     /**
      * @return string
@@ -42,7 +42,7 @@ interface NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setIcon($icon):NotificationEntity;
+    public function setIcon($icon): NotificationEntity;
 
     /**
      * @return string
@@ -54,7 +54,7 @@ interface NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setTitle($title):NotificationEntity;
+    public function setTitle($title): NotificationEntity;
 
     /**
      * @return string
@@ -66,31 +66,31 @@ interface NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setBody($body):NotificationEntity;
+    public function setBody($body): NotificationEntity;
 
     /**
      * @return boolean
      */
-    public function isRead():bool;
+    public function isRead(): bool;
 
     /**
      * @param boolean $isRead
      *
      * @return NotificationEntity
      */
-    public function setIsRead($isRead):NotificationEntity;
+    public function setIsRead($isRead): NotificationEntity;
 
     /**
      * @return boolean
      */
-    public function isDeleted():bool;
+    public function isDeleted(): bool;
 
     /**
      * @param boolean $isDeleted
      *
      * @return NotificationEntity
      */
-    public function setIsDeleted($isDeleted):NotificationEntity;
+    public function setIsDeleted($isDeleted): NotificationEntity;
 
     /**
      * @return \DateTimeInterface
@@ -102,7 +102,7 @@ interface NotificationEntity
      *
      * @return NotificationEntity
      */
-    public function setCreatedAt($createdAt):NotificationEntity;
+    public function setCreatedAt($createdAt): NotificationEntity;
 
     /**
      * @return \DateTimeInterface
@@ -115,7 +115,7 @@ interface NotificationEntity
      * @return NotificationEntity
      */
     public function setUpdatedAt(DateTimeInterface $updatedAt = null
-    ):NotificationEntity;
+    ): NotificationEntity;
 
     /**
      * @return \DateTimeInterface
@@ -128,5 +128,5 @@ interface NotificationEntity
      * @return NotificationEntity
      */
     public function setDeletedAt(DateTimeInterface $deletedAt = null
-    ):NotificationEntity;
+    ): NotificationEntity;
 }

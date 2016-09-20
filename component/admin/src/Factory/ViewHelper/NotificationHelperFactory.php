@@ -14,8 +14,8 @@ class NotificationHelperFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null)
-    {
+        array $options = null
+    ) {
         $notification = $sm->getServiceLocator()->get(
             'admin\notification'
         );

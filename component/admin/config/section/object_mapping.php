@@ -335,7 +335,7 @@ return [
                 ],
         ],
 
-    'WellCart\Admin\Entity\Notification'  =>
+    'WellCart\Admin\Entity\Notification' =>
         [
             'type'            => 'entity',
             'repositoryClass' => 'WellCart\Admin\Repository\Notifications',
@@ -530,7 +530,7 @@ return [
             ],
         ],
 
-    'WellCart\User\Entity\Acl\Role'       =>
+    'WellCart\User\Entity\Acl\Role' =>
         [
             'type'            => 'entity',
             'entityListeners' => [

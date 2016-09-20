@@ -40,6 +40,38 @@ class Features extends AbstractRepository implements FeatureRepository
     }
 
     /**
+     * @return FeaturesQuery
+     */
+    public function finder()
+    {
+        $finder = $this->createQueryBuilder('FeatureEntity');
+        $this->getEventManager()->trigger(
+            __FUNCTION__,
+            $this,
+            compact('finder')
+        );
+        return $finder;
+    }
+
+    /**
+     * @return FeaturesQuery
+     */
+    public function createQueryBuilder($alias, $indexBy = null)
+    {
+        $queryBuilder = (new FeaturesQuery($this->_em))
+            ->select($alias)
+            ->from($this->_entityName, $alias, $indexBy);
+
+
+        $this->getEventManager()->trigger(
+            __FUNCTION__,
+            $this,
+            compact('queryBuilder')
+        );
+        return $queryBuilder;
+    }
+
+    /**
      * Retrieve options list
      *
      * @return array
@@ -72,38 +104,5 @@ class Features extends AbstractRepository implements FeatureRepository
             compact('optionList')
         );
         return $optionList;
-    }
-
-
-    /**
-     * @return FeaturesQuery
-     */
-    public function finder()
-    {
-        $finder = $this->createQueryBuilder('FeatureEntity');
-        $this->getEventManager()->trigger(
-            __FUNCTION__,
-            $this,
-            compact('finder')
-        );
-        return $finder;
-    }
-
-    /**
-     * @return FeaturesQuery
-     */
-    public function createQueryBuilder($alias, $indexBy = null)
-    {
-        $queryBuilder = (new FeaturesQuery($this->_em))
-            ->select($alias)
-            ->from($this->_entityName, $alias, $indexBy);
-
-
-        $this->getEventManager()->trigger(
-            __FUNCTION__,
-            $this,
-            compact('queryBuilder')
-        );
-        return $queryBuilder;
     }
 }

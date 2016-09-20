@@ -14,7 +14,8 @@ class LoginControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): LoginController
+        array $options = null
+    ): LoginController
     {
         /* @var ControllerManager $sm */
         $serviceManager = $sm->getServiceLocator();

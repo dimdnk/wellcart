@@ -14,9 +14,12 @@ class NotificationPluginFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): NotificationPlugin
+        array $options = null
+    ): NotificationPlugin
     {
-        return new NotificationPlugin($sm->getServiceLocator()
-            ->get('admin\notification'));
+        return new NotificationPlugin(
+            $sm->getServiceLocator()
+                ->get('admin\notification')
+        );
     }
 }

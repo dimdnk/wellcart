@@ -15,7 +15,8 @@ class ZonesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null):ZonesController
+        array $options = null
+    ): ZonesController
     {
         $controller = new ZonesController(
             $sm->getServiceLocator()

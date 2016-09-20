@@ -15,7 +15,8 @@ class FeaturesControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null):FeaturesController
+        array $options = null
+    ): FeaturesController
     {
         $controller = new FeaturesController(
             $sm->getServiceLocator()

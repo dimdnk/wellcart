@@ -14,7 +14,8 @@ class SettingsControllerFactory
 {
     public function __invoke(ContainerInterface $sm,
         $requestedName,
-        array $options = null): SettingsController
+        array $options = null
+    ): SettingsController
     {
         return new SettingsController(
             $sm->getServiceLocator()
