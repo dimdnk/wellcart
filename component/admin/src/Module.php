@@ -93,7 +93,7 @@ class Module implements
     /**
      * Retrieve array of migration classes
      *
-     * @return \WellCart\SchemaMigration\AbstractMigration[]
+     * @return \WellCart\Setup\SchemaMigration\AbstractMigration[]
      */
     public function getMigrations(): array
     {
@@ -107,7 +107,7 @@ class Module implements
     /**
      * Retrieve array of data fixture classes
      *
-     * @return \Doctrine\Common\DataFixtures\OrderedFixtureInterface[]
+     * @return \WellCart\Setup\DataFixture\AbstractFixture[]
      */
     public function getDataFixtures(): array
     {
