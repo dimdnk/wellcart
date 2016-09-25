@@ -12,6 +12,9 @@ Thumbs.db
 composer.lock
 codeception.yml
 *.suite.yml
+/public/assets
+/public/media
+/public/themes
 /vendor
 /report
 /bin

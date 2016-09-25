@@ -23,6 +23,7 @@ class ScriptHandler
             'data/db/seeds',
             'data/sessions',
             'data/upload',
+            'public',
             'public/assets',
             'public/themes',
             'public/media',
