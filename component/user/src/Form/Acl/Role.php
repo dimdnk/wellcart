@@ -101,7 +101,7 @@ class Role extends AbstractForm
         $this->add(
             [
                 'name'       => 'permissions',
-                'type'       => 'userAclPermissionsMultiCheckboxSelector',
+                'type'       => 'userPermissionsMultiCheckboxSelector',
                 'options'    => [
                     'label'            => __('Permissions'),
                     'twb-layout'       => 'horizontal',

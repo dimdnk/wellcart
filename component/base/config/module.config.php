@@ -9,6 +9,7 @@
 namespace WellCart\Base;
 
 use WellCart\Form\Element as FormElement;
+use WellCart\View\Factory\Helper\MessengerFactory;
 use WellCart\View\Helper as ViewHelper;
 use Zend\Http\Response;
 
@@ -353,9 +354,18 @@ return [
      * =========================================================
      */
     'view_helpers'               => [
+        'aliases'    => [
+            'gridFilters' => \WellCart\Ui\Datagrid\View\Helper\GridFilters::class,
+            'locale'      => \WellCart\View\Helper\Locale::class,
+            'date'        => \WellCart\View\Helper\Date::class,
+        ],
         'factories'  => [
-            'messenger'   => ViewHelper\Service\MessengerFactory::class,
+            'messenger' => MessengerFactory::class,
             'formElement' => 'WellCart\Form\View\Helper\Service\FormElementFactory',
+
+            \WellCart\Ui\Datagrid\View\Helper\GridFilters::class => \WellCart\Ui\Factory\Datagrid\ViewHelper\GridFiltersFactory::class,
+            \WellCart\View\Helper\Locale::class => \WellCart\View\Factory\Helper\LocaleFactory::class,
+            \WellCart\View\Helper\Date::class => \WellCart\View\Factory\Helper\DateFactory::class
         ],
         'invokables' => [
             'assetPath'             => ViewHelper\AssetPath::class,
@@ -560,7 +570,11 @@ return [
         ],
     ],
     'form_elements'              => [
-        'aliases'    => [
+        'factories' => [
+            'localeLanguageSelector' => Factory\FormElement\LocaleLanguageSelectorFactory::class,
+            'translatableCollection' => Factory\FormElement\TranslatableCollectionFactory::class,
+        ],
+        'aliases'   => [
             'htmlAnchor'     => FormElement\HtmlAnchor::class,
             'htmlanchor'     => FormElement\HtmlAnchor::class,
             'HtmlAnchor'     => FormElement\HtmlAnchor::class,

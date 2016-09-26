@@ -78,6 +78,14 @@ return [
         ],
     ],
 
+    'form_elements'   => [
+        'factories' => [
+            'userRolesMultiCheckboxSelector'       => Factory\FormElement\RolesMultiCheckboxSelectorFactory::class,
+            'userPermissionsMultiCheckboxSelector' => Factory\FormElement\PermissionsMultiCheckboxSelectorFactory::class,
+            'userAccountsSelector'                 => Factory\FormElement\AccountsSelectorFactory::class,
+        ],
+    ],
+
     'event_manager' => include __DIR__ . '/section/event_manager.php',
     'listeners'     => [
         'WellCart\User\EventListener\UnauthorizedStrategy' => 'WellCart\User\EventListener\UnauthorizedStrategy',

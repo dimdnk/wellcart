@@ -12,9 +12,7 @@ use WellCart\Admin\Controller\LoginController;
 
 class LoginControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): LoginController
     {
         /* @var ControllerManager $sm */

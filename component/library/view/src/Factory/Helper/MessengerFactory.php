@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\View\Helper\Service;
+namespace WellCart\View\Factory\Helper;
 
 use Interop\Container\ContainerInterface;
 use WellCart\View\Helper\Messenger;
@@ -19,7 +19,8 @@ class MessengerFactory
      *
      * @return Messenger
      */
-    public function __invoke(ContainerInterface $container): Messenger
+    public function __invoke(ContainerInterface $container
+    ): Messenger
     {
         $container = $container->getServiceLocator();
         $helper = new Messenger();

@@ -22,7 +22,6 @@ use ZF\Apigility\Provider\ApigilityProviderInterface;
 class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
-    Feature\FormElementProviderInterface,
     Feature\ConsoleUsageProviderInterface,
     VersionProviderInterface,
     DataFixturesProviderInterface,
@@ -94,49 +93,6 @@ class Module implements
     public function getServiceConfig()
     {
         return include __DIR__ . '/../config/services.php';
-    }
-
-    /**
-     * Form elements
-     *
-     * @return array|\Zend\ServiceManager\Config
-     */
-    public function getFormElementConfig()
-    {
-        return [
-            'factories' => [
-                'directoryCountrySelector' =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
-                    ) {
-                        $countries = $sm->getServiceLocator()->get(
-                            'WellCart\Directory\Spec\CountryRepository'
-                        );
-
-                        $options = $countries->toOptionsList();
-                        $countrySelector = new Form\Element\CountrySelector(
-                            null,
-                            [],
-                            $options
-                        );
-
-                        $value = current(array_keys($options));
-                        $countrySelector->setValue($value);
-                        return $countrySelector;
-                    },
-                'directoryZoneSelector'    =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
-                    ) {
-                        $countries = $sm->getServiceLocator()->get(
-                            'WellCart\Directory\Spec\ZoneRepository'
-                        );
-                        return new Form\Element\ZoneSelector(
-                            null,
-                            [],
-                            $countries
-                        );
-                    },
-            ],
-        ];
     }
 
     /**

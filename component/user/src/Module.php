@@ -23,7 +23,6 @@ class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
     Feature\BootstrapListenerInterface,
-    Feature\FormElementProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
     ApigilityProviderInterface,
@@ -133,62 +132,6 @@ class Module implements
     public function getServiceConfig()
     {
         return include __DIR__ . '/../config/services.php';
-    }
-
-    /**
-     * Form elements
-     *
-     * @return array|\Zend\ServiceManager\Config
-     */
-    public function getFormElementConfig()
-    {
-        return [
-            'factories' => [
-                'userRolesMultiCheckboxSelector'          =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
-                    ) {
-                        $services = $sm->getServiceLocator();
-                        $roles = $services->get(
-                            'WellCart\User\Spec\AclRoleRepository'
-                        )
-                            ->toOptionsList();
-                        return new \WellCart\Form\Element\MultiCheckbox(
-                            null,
-                            ['value_options' => $roles]
-                        );
-                    },
-                'userAclPermissionsMultiCheckboxSelector' =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
-                    ) {
-                        $services = $sm->getServiceLocator();
-                        $permissions = $services->get(
-                            'WellCart\User\Spec\AclPermissionRepository'
-                        )
-                            ->toOptionsList();
-                        return new \WellCart\Form\Element\MultiCheckbox(
-                            null,
-                            ['value_options' => $permissions]
-                        );
-                    },
-                'userAccountsSelector'                    =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
-                    ) {
-                        $services = $sm->getServiceLocator();
-                        $users = $services->get(
-                            'WellCart\User\Spec\UserRepository'
-                        )
-                            ->toOptionsList();
-                        return new \WellCart\Form\Element\Select(
-                            null,
-                            ['value_options' => $users,
-                             'empty_option'  => __(
-                                 '- Select user account -'
-                             ),
-                            ]
-                        );
-                    },
-            ]
-        ];
     }
 
     /**

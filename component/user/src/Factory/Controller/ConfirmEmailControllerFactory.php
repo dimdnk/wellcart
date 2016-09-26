@@ -13,9 +13,7 @@ use WellCart\User\Service\Registration\AccountEmailHandler;
 
 class ConfirmEmailControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): ConfirmEmailController
     {
         $controller = new ConfirmEmailController(

@@ -12,9 +12,9 @@ return [
      * Template map
      */
     'template_map' => [
-        'layout/page-fixed-1column'      => __DIR__
+        'layout/page-fixed-1column' => __DIR__
             . '/../view/layout/page-fixed-1column.phtml',
-        'layout/page-fluid-1column'      => __DIR__
+        'layout/page-fluid-1column' => __DIR__
             . '/../view/layout/page-fluid-1column.phtml',
 
         'layout/empty'                   => __DIR__

@@ -14,9 +14,7 @@ use WellCart\User\PageView\Admin\PreferencesForm;
 
 class PreferencesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): PreferencesController
     {
         $services = $sm->getServiceLocator();

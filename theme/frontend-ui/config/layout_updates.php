@@ -24,8 +24,8 @@ return [
                 ],
             ],
 
-            'blocks'  => [
-                'base:WellCart\Base\ItemView\HtmlHead'           => [
+            'blocks' => [
+                'base:WellCart\Base\ItemView\HtmlHead' => [
                     'capture_to' => 'HtmlHead',
                     'class'      => 'WellCart\Base\ItemView\HtmlHead',
                     'options'    => [
@@ -33,7 +33,7 @@ return [
                     ]
                 ],
 
-                'base:WellCart\Base\ItemView\HtmlNotices'        => [
+                'base:WellCart\Base\ItemView\HtmlNotices' => [
                     'capture_to' => 'PostBodyStart',
                     'class'      => 'WellCart\Base\ItemView\HtmlNotices',
                     'options'    => [
@@ -42,7 +42,7 @@ return [
                 ],
 
 
-                'base:WellCart\Base\ItemView\Notifications'      => [
+                'base:WellCart\Base\ItemView\Notifications' => [
                     'capture_to' => 'PrePageContent',
                     'class'      => 'WellCart\Base\ItemView\Notifications',
                     'options'    => [
@@ -59,7 +59,7 @@ return [
                 ],
 
 
-                'base:WellCart\Base\ItemView\HtmlFooter'         => [
+                'base:WellCart\Base\ItemView\HtmlFooter' => [
                     'capture_to' => 'PreBodyEnd',
                     'class'      => 'WellCart\Base\ItemView\HtmlFooter',
                     'options'    => [

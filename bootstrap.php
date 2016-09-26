@@ -95,7 +95,7 @@ HTML;
     || define('WELLCART_STORAGE_PATH', WELLCART_ROOT . 'data/');
     defined('WELLCART_PUBLIC_PATH')
     || define(
-    'WELLCART_PUBLIC_PATH', WELLCART_ROOT . 'public/'
+        'WELLCART_PUBLIC_PATH', WELLCART_ROOT . 'public/'
     );
     defined('WELLCART_MEDIA_PATH')
     || define('WELLCART_MEDIA_PATH', WELLCART_PUBLIC_PATH . 'media/');

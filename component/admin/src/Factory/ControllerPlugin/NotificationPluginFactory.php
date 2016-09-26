@@ -12,9 +12,7 @@ use WellCart\Admin\Mvc\Controller\Plugin\Notification as NotificationPlugin;
 
 class NotificationPluginFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): NotificationPlugin
     {
         return new NotificationPlugin(

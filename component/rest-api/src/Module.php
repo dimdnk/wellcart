@@ -101,34 +101,4 @@ class Module implements
             ),
         ];
     }
-
-    /**
-     * Form elements
-     *
-     * @return array|\Zend\ServiceManager\Config
-     */
-    public function getFormElementConfig()
-    {
-        return [
-            'factories' => [
-                'apiClientSelector' =>
-                    function (\Zend\Form\FormElementManager\FormElementManagerV2Polyfill $sm
-                    ) {
-                        $services = $sm->getServiceLocator();
-                        $clients = $services->get(
-                            'WellCart\RestApi\Repository\OAuth2\Clients'
-                        )
-                            ->toOptionsList();
-                        return new \WellCart\Form\Element\Select(
-                            null,
-                            ['value_options' => $clients,
-                             'empty_option'  => __(
-                                 '- Select client -'
-                             ),
-                            ]
-                        );
-                    },
-            ]
-        ];
-    }
 }

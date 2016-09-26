@@ -19,7 +19,7 @@ return [
             ],
             'blocks'  => [
 
-                'backend:WellCart\Admin\ItemView\TopBranding'        => [
+                'backend:WellCart\Admin\ItemView\TopBranding' => [
                     'capture_to' => 'PageHeader',
                     'class'      => 'WellCart\Admin\ItemView\TopBranding',
                     'options'    => [
@@ -44,7 +44,7 @@ return [
                 ],
 
 
-                'backend:WellCart\Base\ItemView\Copyright'           => [
+                'backend:WellCart\Base\ItemView\Copyright' => [
                     'capture_to' => 'PageFooter',
                     'class'      => 'WellCart\Base\ItemView\Copyright',
                     'options'    => [

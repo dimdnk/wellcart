@@ -12,9 +12,7 @@ use WellCart\Base\Controller\Admin\LanguagesController;
 
 class LanguagesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): LanguagesController
     {
         $controller = new LanguagesController(

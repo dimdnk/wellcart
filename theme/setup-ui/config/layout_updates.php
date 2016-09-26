@@ -14,7 +14,7 @@ return [
                 ],
             ],
             'blocks'  => [
-                'setup:WellCart\Setup\ItemView\Header'   => [
+                'setup:WellCart\Setup\ItemView\Header' => [
                     'capture_to' => 'PageHeader',
                     'class'      => 'WellCart\Setup\ItemView\Header',
                     'options'    => [

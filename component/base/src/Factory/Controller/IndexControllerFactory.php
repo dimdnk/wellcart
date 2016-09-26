@@ -12,9 +12,7 @@ use WellCart\Base\Controller\IndexController;
 
 class IndexControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): IndexController
     {
         return new IndexController;

@@ -12,9 +12,7 @@ use WellCart\Admin\Controller\SettingsController;
 
 class SettingsControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): SettingsController
     {
         return new SettingsController(

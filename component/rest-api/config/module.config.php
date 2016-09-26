@@ -14,7 +14,7 @@ return [
      * Service manager configuration
      * =========================================================
      */
-    'service_manager'    => [
+    'service_manager' => [
         'invokables' => [],
 
         'aliases'            => [
@@ -41,7 +41,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'           => [
+    'doctrine'        => [
         'driver'          => [
             'wellcart_api_driver' => [
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
@@ -72,7 +72,7 @@ return [
             ],
         ],
     ],
-    'navigation'         => [
+    'navigation'      => [
         'backend_main_navigation' => include __DIR__
             . '/backend_main_navigation.php',
     ],
@@ -81,7 +81,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'         => [
+    'translator'      => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',
@@ -97,7 +97,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'             => [
+    'router'          => [
         'routes' => [
             'oauth'    => [
                 'type'          => 'Zend\Mvc\Router\Http\Literal',
@@ -192,7 +192,7 @@ return [
             ],
         ],
     ],
-    'controllers'        => [
+    'controllers'     => [
         'invokables' => [
             'WellCart\RestApi\Controller\Hello' => Controller\HelloController::class,
         ],
@@ -202,6 +202,13 @@ return [
             'WellCart\RestApi\Controller\Admin\OAuth2\Scopes'     => Factory\Controller\Admin\OAuth2\ScopesControllerFactory::class,
         ],
     ],
+
+    'form_elements' => [
+        'factories' => [
+            'apiClientSelector' => Factory\FormElement\ApiClientSelectorFactory::class,
+        ],
+    ],
+
     'zf-versioning'      => [
         'uri' => [],
     ],

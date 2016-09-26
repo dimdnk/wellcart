@@ -45,7 +45,7 @@ return [
     'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
 
-    'controllers'    => [
+    'controllers' => [
         'invokables' => [
             'WellCart\Directory\Controller\Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
         ],
@@ -54,6 +54,17 @@ return [
             'WellCart\Directory\Controller\Admin\Countries'  => Factory\Controller\Admin\CountriesControllerFactory::class,
             'WellCart\Directory\Controller\Admin\Zones'      => Factory\Controller\Admin\ZonesControllerFactory::class,
             'WellCart\Directory\Controller\Admin\GeoZones'   => Factory\Controller\Admin\GeoZonesControllerFactory::class,
+        ],
+    ],
+
+    'form_elements'   => [
+        'aliases'   => [
+            'directoryCountrySelector' => Form\Element\CountrySelector::class,
+            'directoryZoneSelector'    => Form\Element\ZoneSelector::class,
+        ],
+        'factories' => [
+            Form\Element\CountrySelector::class => Factory\FormElement\CountrySelectorFactory::class,
+            Form\Element\ZoneSelector::class    => Factory\FormElement\ZoneSelectorFactory::class,
         ],
     ],
 

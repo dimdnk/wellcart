@@ -16,15 +16,11 @@ class LocalePluginFactory
 {
     /**
      * @param ContainerInterface $sm
-     * @param                    $requestedName
-     * @param array|null         $options
      *
      * @return LocaleControllerPlugin
      */
     public function __invoke(
-        ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+        ContainerInterface $sm
     ): LocaleControllerPlugin
     {
         $services = $sm->getServiceLocator();

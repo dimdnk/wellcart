@@ -13,9 +13,7 @@ use WellCart\User\Spec\UserRepository;
 
 class AccountsControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): AccountsController
     {
         $services = $sm->getServiceLocator();

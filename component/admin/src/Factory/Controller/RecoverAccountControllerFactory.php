@@ -13,9 +13,7 @@ use WellCart\Admin\Service\RecoverAccount;
 
 class RecoverAccountControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ): RecoverAccountController
     {
         return new RecoverAccountController(
