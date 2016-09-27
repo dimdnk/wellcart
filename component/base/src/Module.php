@@ -19,6 +19,7 @@ use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
 use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\Mvc\Application;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
 use WellCart\Utility\Config;
 use Zend\Console\Adapter\AdapterInterface as ConsoleAdapter;
@@ -81,7 +82,11 @@ class Module implements
          */
         application($app);
 
-        if (!Console::isConsole() && $app->isMaintenance()) {
+        if ($app->isMaintenance()
+            && !Console::isConsole()
+            && (application_context(Application::CONTEXT_FRONTEND)
+                || application_context(Application::CONTEXT_SETUP))
+        ) {
             $e->stopPropagation(true);
             $maintenance = Config::get('wellcart.maintenance');
             $message = $maintenance['status_code'] . ' '

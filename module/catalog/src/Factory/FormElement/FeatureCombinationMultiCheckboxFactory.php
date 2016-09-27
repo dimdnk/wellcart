@@ -9,23 +9,19 @@
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Catalog\Form\Element\CategoryMultiCheckbox;
 
-class CategoryMultiCheckboxFactory
+class FeatureCombinationMultiCheckboxFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ) {
+    public function __invoke(ContainerInterface $sm) {
         $services = $sm->getServiceLocator();
-        $categories = $services->get(
-            'WellCart\Catalog\Spec\CategoryRepository'
+        $options = $services->get(
+            'WellCart\Catalog\Spec\FeatureRepository'
         )
-            ->toOptionsList();
-        return new CategoryMultiCheckbox(
+            ->toGroupedOptionsList();
+        return new \WellCart\Catalog\Form\Element\FeatureCombinationMultiCheckbox(
             null,
             [
-                'value_options'             => $categories,
+                'value_options'             => $options,
                 'disable_inarray_validator' => true,
             ]
         );

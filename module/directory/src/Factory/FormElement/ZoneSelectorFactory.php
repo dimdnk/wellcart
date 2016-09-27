@@ -13,10 +13,7 @@ use WellCart\Directory\Form\Element\ZoneSelector;
 
 class ZoneSelectorFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ) {
+    public function __invoke(ContainerInterface $sm) {
         $zones = $sm->getServiceLocator()->get(
             'WellCart\Directory\Spec\ZoneRepository'
         );

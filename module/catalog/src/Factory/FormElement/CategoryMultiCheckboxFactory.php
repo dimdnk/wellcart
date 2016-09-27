@@ -9,23 +9,21 @@
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Catalog\Form\Element\CategoryMultiCheckbox;
 
-class BrandSelectorFactory
+class CategoryMultiCheckboxFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
+    public function __invoke(ContainerInterface $sm
     ) {
         $services = $sm->getServiceLocator();
-        $brands = $services->get(
-            'WellCart\Catalog\Spec\BrandRepository'
+        $categories = $services->get(
+            'WellCart\Catalog\Spec\CategoryRepository'
         )
             ->toOptionsList();
-        return new \WellCart\Form\Element\Select(
+        return new CategoryMultiCheckbox(
             null,
             [
-                'empty_option'              => '',
-                'value_options'             => $brands,
+                'value_options'             => $categories,
                 'disable_inarray_validator' => true,
             ]
         );

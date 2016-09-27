@@ -13,10 +13,7 @@ use WellCart\Directory\Form\Element\CountrySelector;
 
 class CountrySelectorFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ) {
+    public function __invoke(ContainerInterface $sm) {
         $countries = $sm->getServiceLocator()->get(
             'WellCart\Directory\Spec\CountryRepository'
         );

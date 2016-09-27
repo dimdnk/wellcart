@@ -13,10 +13,7 @@ use WellCart\Directory\Spec\CurrencyRepository;
 
 class CurrenciesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ): CurrenciesController
+    public function __invoke(ContainerInterface $sm): CurrenciesController
     {
         $controller = new CurrenciesController(
             $sm->getServiceLocator()

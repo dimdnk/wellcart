@@ -13,10 +13,7 @@ use WellCart\Directory\Spec\CountryRepository;
 
 class CountriesControllerFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ): CountriesController
+    public function __invoke(ContainerInterface $sm): CountriesController
     {
         $controller = new CountriesController(
             $sm->getServiceLocator()

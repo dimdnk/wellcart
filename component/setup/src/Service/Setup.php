@@ -613,7 +613,7 @@ class Setup
         $data['passwordVerify'] = $data['password'];
         try {
             $this->runInContext(
-                'backend',
+                Application::CONTEXT_BACKEND,
                 function () use ($data) {
                     $userService = $this->getUserService();
                     $em = $this->getEntityManager();

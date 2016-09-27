@@ -12,10 +12,7 @@ use Interop\Container\ContainerInterface;
 
 class AttributesMultiCheckboxSelectorFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ) {
+    public function __invoke(ContainerInterface $sm) {
         $services = $sm->getServiceLocator();
         $values = $services->get(
             'WellCart\Catalog\Spec\AttributeRepository'

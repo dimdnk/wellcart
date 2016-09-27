@@ -203,24 +203,6 @@ return [
             ],
         ],
     ],
-
-    'form_elements'   => [
-        'aliases'   => [
-            'catalogFeatureCombinationMultiCheckbox' => Form\Element\FeatureCombinationMultiCheckbox::class,
-            'catalogCategoryMultiCheckbox'           => Form\Element\CategoryMultiCheckbox::class,
-        ],
-        'factories' => [
-            Form\Element\FeatureCombinationMultiCheckbox::class => Factory\FormElement\FeatureCombinationMultiCheckboxFactory::class,
-            Form\Element\CategoryMultiCheckbox::class           => Factory\FormElement\CategoryMultiCheckboxFactory::class,
-            'catalogProductTemplateSelector'                    => Factory\FormElement\ProductTemplateSelectorFactory::class,
-            'catalogBrandSelector'                              => Factory\FormElement\BrandSelectorFactory::class,
-            'catalogAttributesMultiCheckboxSelector'            => Factory\FormElement\AttributesMultiCheckboxSelectorFactory::class,
-            'catalogFeaturesMultiCheckboxSelector'              => Factory\FormElement\FeaturesMultiCheckboxSelectorFactory::class,
-            'catalogProductTemplatesMultiCheckboxSelector'      => Factory\FormElement\ProductTemplatesMultiCheckboxSelectorFactory::class,
-            'catalogProductTemplatesSelector'                   => Factory\FormElement\ProductTemplatesSelectorFactory::class,
-        ],
-    ],
-
     'form_element_configuration' => [
         'class_map' => [
             'formCatalogProductImage'                    => Form\View\Helper\FormProductImage::class,
@@ -368,8 +350,20 @@ return [
             . '/backend_main_navigation.php',
     ],
     'form_elements'              => [
+        'aliases'   => [
+            'catalogFeatureCombinationMultiCheckbox' => Form\Element\FeatureCombinationMultiCheckbox::class,
+            'catalogCategoryMultiCheckbox'           => Form\Element\CategoryMultiCheckbox::class,
+        ],
         'factories'  => [
             'catalogProductPrice' => Factory\Form\Element\ProductPriceFactory::class,
+            Form\Element\FeatureCombinationMultiCheckbox::class => Factory\FormElement\FeatureCombinationMultiCheckboxFactory::class,
+            Form\Element\CategoryMultiCheckbox::class           => Factory\FormElement\CategoryMultiCheckboxFactory::class,
+            'catalogProductTemplateSelector'                    => Factory\FormElement\ProductTemplateSelectorFactory::class,
+            'catalogBrandSelector'                              => Factory\FormElement\BrandSelectorFactory::class,
+            'catalogAttributesMultiCheckboxSelector'            => Factory\FormElement\AttributesMultiCheckboxSelectorFactory::class,
+            'catalogFeaturesMultiCheckboxSelector'              => Factory\FormElement\FeaturesMultiCheckboxSelectorFactory::class,
+            'catalogProductTemplatesMultiCheckboxSelector'      => Factory\FormElement\ProductTemplatesMultiCheckboxSelectorFactory::class,
+            'catalogProductTemplatesSelector'                   => Factory\FormElement\ProductTemplatesSelectorFactory::class,
         ],
         'invokables' => [
             'catalogProductImage' => Form\Element\ProductImage::class,

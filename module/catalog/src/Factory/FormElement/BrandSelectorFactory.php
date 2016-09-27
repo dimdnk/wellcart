@@ -10,20 +10,21 @@ namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 
-class ProductTemplateSelectorFactory
+class BrandSelectorFactory
 {
-    public function __invoke(ContainerInterface $sm,
-        $requestedName,
-        array $options = null
-    ) {
+    public function __invoke(ContainerInterface $sm) {
         $services = $sm->getServiceLocator();
-        $groups = $services->get(
-            'WellCart\Catalog\Spec\ProductTemplateRepository'
+        $brands = $services->get(
+            'WellCart\Catalog\Spec\BrandRepository'
         )
             ->toOptionsList();
         return new \WellCart\Form\Element\Select(
             null,
-            ['value_options' => $groups]
+            [
+                'empty_option'              => '',
+                'value_options'             => $brands,
+                'disable_inarray_validator' => true,
+            ]
         );
     }
 }
