@@ -65,13 +65,21 @@ return [
     ],
 
     'controllers' => [
+        'aliases'            => [
+            'Catalog::Admin\Brands'           => Controller\Admin\BrandsController::class,
+            'Catalog::Admin\Products'         => Controller\Admin\ProductsController::class,
+            'Catalog::Admin\ProductTemplates' => Controller\Admin\ProductTemplatesController::class,
+            'Catalog::Admin\Categories'       => Controller\Admin\CategoriesController::class,
+            'Catalog::Admin\Features'         => Controller\Admin\FeaturesController::class,
+            'Catalog::Admin\Attributes'       => Controller\Admin\AttributesController::class,
+        ],
         'factories' => [
-            'WellCart\Catalog\Controller\Admin\Brands'           => Factory\Controller\Admin\BrandsControllerFactory::class,
-            'WellCart\Catalog\Controller\Admin\Products'         => Factory\Controller\Admin\ProductsControllerFactory::class,
-            'WellCart\Catalog\Controller\Admin\ProductTemplates' => Factory\Controller\Admin\ProductTemplatesControllerFactory::class,
-            'WellCart\Catalog\Controller\Admin\Categories'       => Factory\Controller\Admin\CategoriesControllerFactory::class,
-            'WellCart\Catalog\Controller\Admin\Features'         => Factory\Controller\Admin\FeaturesControllerFactory::class,
-            'WellCart\Catalog\Controller\Admin\Attributes'       => Factory\Controller\Admin\AttributesControllerFactory::class,
+            Controller\Admin\BrandsController::class          => Factory\Controller\Admin\BrandsControllerFactory::class,
+            Controller\Admin\ProductsController::class         => Factory\Controller\Admin\ProductsControllerFactory::class,
+            Controller\Admin\ProductTemplatesController::class => Factory\Controller\Admin\ProductTemplatesControllerFactory::class,
+            Controller\Admin\CategoriesController::class      => Factory\Controller\Admin\CategoriesControllerFactory::class,
+            Controller\Admin\FeaturesController::class         => Factory\Controller\Admin\FeaturesControllerFactory::class,
+            Controller\Admin\AttributesController::class       => Factory\Controller\Admin\AttributesControllerFactory::class,
         ],
     ],
 
@@ -90,7 +98,7 @@ return [
                         'options'      => [
                             'route'    => 'catalog/',
                             'defaults' => [
-                                'controller' => 'WellCart\Catalog\Controller\Admin\Products',
+                                'controller' => 'Catalog::Admin\Products',
                                 'action'     => 'list',
                             ],
                         ],
@@ -108,7 +116,7 @@ return [
                                         'template'   => '([0-9]+)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Catalog\Controller\Admin\Products',
+                                        'controller' => 'Catalog::Admin\Products',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -125,7 +133,7 @@ return [
                                         'id'         => '([0-9]+|deleteCategories)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Catalog\Controller\Admin\Categories',
+                                        'controller' => 'Catalog::Admin\Categories',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -141,7 +149,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Catalog\Controller\Admin\Features',
+                                        'controller' => 'Catalog::Admin\Features',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -158,7 +166,7 @@ return [
                                         'id'         => '([0-9]+|deleteProductTemplates)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Catalog\Controller\Admin\ProductTemplates',
+                                        'controller' => 'Catalog::Admin\ProductTemplates',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -175,7 +183,7 @@ return [
                                         'id'         => '([0-9]+|deleteAttributes)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Catalog\Controller\Admin\Attributes',
+                                        'controller' => 'Catalog::Admin\Attributes',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -192,7 +200,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Catalog\Controller\Admin\Brands',
+                                        'controller' => 'Catalog::Admin\Brands',
                                         'action'     => 'list',
                                     ],
                                 ],

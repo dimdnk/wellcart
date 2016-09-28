@@ -46,14 +46,21 @@ return [
         . '/section/system_config_editor.php',
 
     'controllers' => [
+        'aliases'    => [
+            'Directory::Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
+            'Directory::Admin\Currencies'            => Controller\Admin\CurrenciesController::class,
+            'Directory::Admin\Countries'             => Controller\Admin\CountriesController::class,
+            'Directory::Admin\Zones'                 => Controller\Admin\ZonesController::class,
+            'Directory::Admin\GeoZones'              => Controller\Admin\GeoZonesController::class,
+        ],
         'invokables' => [
-            'WellCart\Directory\Controller\Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
+            Controller\Console\UpdateCurrencyRatesController::class => Controller\Console\UpdateCurrencyRatesController::class,
         ],
         'factories'  => [
-            'WellCart\Directory\Controller\Admin\Currencies' => Factory\Controller\Admin\CurrenciesControllerFactory::class,
-            'WellCart\Directory\Controller\Admin\Countries'  => Factory\Controller\Admin\CountriesControllerFactory::class,
-            'WellCart\Directory\Controller\Admin\Zones'      => Factory\Controller\Admin\ZonesControllerFactory::class,
-            'WellCart\Directory\Controller\Admin\GeoZones'   => Factory\Controller\Admin\GeoZonesControllerFactory::class,
+            Controller\Admin\CurrenciesController::class => Factory\Controller\Admin\CurrenciesControllerFactory::class,
+            Controller\Admin\CountriesController::class  => Factory\Controller\Admin\CountriesControllerFactory::class,
+            Controller\Admin\ZonesController::class      => Factory\Controller\Admin\ZonesControllerFactory::class,
+            Controller\Admin\GeoZonesController::class   => Factory\Controller\Admin\GeoZonesControllerFactory::class,
         ],
     ],
 
@@ -83,7 +90,7 @@ return [
                         'options'      => [
                             'route'    => 'directory/',
                             'defaults' => [
-                                'controller' => 'WellCart\Directory\Controller\Admin\Countries',
+                                'controller' => 'Directory::Admin\Countries',
                                 'action'     => 'list',
                             ],
                         ],
@@ -100,7 +107,7 @@ return [
                                         'id'         => '([0-9]+|delete|update_rates)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Directory\Controller\Admin\Currencies',
+                                        'controller' => 'Directory::Admin\Currencies',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -117,7 +124,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Directory\Controller\Admin\Countries',
+                                        'controller' => 'Directory::Admin\Countries',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -134,7 +141,7 @@ return [
                                         //'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Directory\Controller\Admin\Zones',
+                                        'controller' => 'Directory::Admin\Zones',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -151,7 +158,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Directory\Controller\Admin\GeoZones',
+                                        'controller' => 'Directory::Admin\GeoZones',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -254,7 +261,7 @@ return [
                     'options' => [
                         'route'    => 'wellcart:directory:update-currency-rates',
                         'defaults' => [
-                            'controller' => 'WellCart\Directory\Controller\Console\UpdateCurrencyRates',
+                            'controller' => 'Directory::Console\UpdateCurrencyRates',
                             'action'     => 'handle',
                         ]
                     ]

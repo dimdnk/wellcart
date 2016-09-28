@@ -17,7 +17,7 @@ return [
         'options'          => [
             'route'    => '/assets/',
             'defaults' => [
-                'controller' => 'WellCart\Base\Controller\Index',
+                'controller' => 'Base::Index',
                 'action'     => 'index',
             ],
         ],
@@ -29,7 +29,7 @@ return [
         'options'          => [
             'route'    => '/',
             'defaults' => [
-                'controller' => 'WellCart\Base\Controller\Index',
+                'controller' => 'Base::Index',
                 'action'     => 'index',
             ],
         ],
@@ -40,7 +40,7 @@ return [
         'options'       => [
             'route'    => '/admin[/]',
             'defaults' => [
-                'controller' => 'WellCart\Base\Controller\Index',
+                'controller' => 'Base::Index',
                 'action'     => 'not-found',
             ],
         ],
@@ -51,7 +51,7 @@ return [
                 'options'      => [
                     'route'    => 'base/',
                     'defaults' => [
-                        'controller' => 'WellCart\Base\Controller\Admin\Languages',
+                        'controller' => 'Base::Admin\Languages',
                         'action'     => 'list',
                     ],
                 ],
@@ -68,7 +68,7 @@ return [
                                 'id'         => '([0-9]+|delete)',
                             ],
                             'defaults'    => [
-                                'controller' => 'WellCart\Base\Controller\Admin\Languages',
+                                'controller' => 'Base::Admin\Languages',
                                 'action'     => 'list',
                                 'id'         => null,
                             ],
@@ -86,7 +86,7 @@ return [
                                 'id'         => '([0-9]+|delete)',
                             ],
                             'defaults'    => [
-                                'controller' => 'WellCart\Base\Controller\Admin\UrlRewrites',
+                                'controller' => 'Base::Admin\UrlRewrites',
                                 'action'     => 'list',
                                 'id'         => null,
                             ],

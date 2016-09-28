@@ -106,7 +106,7 @@ return [
                         'options'      => [
                             'route'    => 'user/',
                             'defaults' => [
-                                'controller' => 'WellCart\User\Controller\Admin\Accounts',
+                                'controller' => 'User::Admin\Accounts',
                                 'action'     => 'list',
                             ],
                         ],
@@ -123,7 +123,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\User\Controller\Admin\Accounts',
+                                        'controller' => 'User::Admin\Accounts',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -140,7 +140,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\User\Controller\Admin\Acl\Roles',
+                                        'controller' => 'User::Admin\Acl\Roles',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -153,7 +153,7 @@ return [
                                     'route'       => 'preferences[/]',
                                     'constraints' => [],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\User\Controller\Admin\Preferences',
+                                        'controller' => 'User::Admin\Preferences',
                                         'action'     => 'update',
                                     ],
                                 ],
@@ -169,7 +169,7 @@ return [
                 'options'          => [
                     'route'    => '/account/confirm/:token',
                     'defaults' => [
-                        'controller' => 'WellCart\User\Controller\ConfirmEmail',
+                        'controller' => 'User::ConfirmEmail',
                         'action'     => 'confirm',
                         'token'      => false,
                     ],
@@ -182,7 +182,7 @@ return [
                 'options'          => [
                     'route'    => '/account/recover',
                     'defaults' => [
-                        'controller' => 'WellCart\User\Controller\RecoverAccount',
+                        'controller' => 'User::RecoverAccount',
                         'action'     => 'initiate',
                     ],
                 ],
@@ -195,7 +195,7 @@ return [
                         'options'          => [
                             'route'    => '/initiate',
                             'defaults' => [
-                                'controller' => 'WellCart\User\Controller\RecoverAccount',
+                                'controller' => 'User::RecoverAccount',
                                 'action'     => 'initiate',
                             ],
                         ],
@@ -208,7 +208,7 @@ return [
                         'options'          => [
                             'route'    => '/reset/:token',
                             'defaults' => [
-                                'controller' => 'WellCart\User\Controller\RecoverAccount',
+                                'controller' => 'User::RecoverAccount',
                                 'action'     => 'reset',
                                 'token'      => '',
                             ],
@@ -220,13 +220,20 @@ return [
     ],
 
     'controllers' => [
+        'aliases'   => [
+            'User::ConfirmEmail'      => Controller\ConfirmEmailController::class,
+            'User::RecoverAccount'    => Controller\RecoverAccountController::class,
+            'User::Admin\Accounts'    => Controller\Admin\AccountsController::class,
+            'User::Admin\Acl\Roles'   => Controller\Admin\Acl\RolesController::class,
+            'User::Admin\Preferences' => Controller\Admin\PreferencesController::class,
+        ],
         'factories' => [
-            'zfcuser'                                    => Factory\Controller\UserControllerFactory::class,
-            'WellCart\User\Controller\ConfirmEmail'      => Factory\Controller\ConfirmEmailControllerFactory::class,
-            'WellCart\User\Controller\RecoverAccount'    => Factory\Controller\RecoverAccountControllerFactory::class,
-            'WellCart\User\Controller\Admin\Accounts'    => Factory\Controller\Admin\AccountsControllerFactory::class,
-            'WellCart\User\Controller\Admin\Acl\Roles'   => Factory\Controller\Admin\Acl\RolesControllerFactory::class,
-            'WellCart\User\Controller\Admin\Preferences' => Factory\Controller\Admin\PreferencesControllerFactory::class,
+            'zfcuser'                                     => Factory\Controller\UserControllerFactory::class,
+            Controller\ConfirmEmailController::class      => Factory\Controller\ConfirmEmailControllerFactory::class,
+            Controller\RecoverAccountController::class    => Factory\Controller\RecoverAccountControllerFactory::class,
+            Controller\Admin\AccountsController::class    => Factory\Controller\Admin\AccountsControllerFactory::class,
+            Controller\Admin\Acl\RolesController::class   => Factory\Controller\Admin\Acl\RolesControllerFactory::class,
+            Controller\Admin\PreferencesController::class => Factory\Controller\Admin\PreferencesControllerFactory::class,
         ],
     ],
     'navigation'  => [

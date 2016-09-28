@@ -335,14 +335,22 @@ return [
         ],
     ],
     'controllers'                => [
+        'aliases' => [
+            'Base::Console\Cache'     => Controller\Console\CacheController::class,
+            'Base::Console\Route'     => Controller\Console\RouteController::class,
+            'Base::Index'             => Controller\IndexController::class,
+            'Base::Admin\Languages'   => Controller\Admin\LanguagesController::class,
+            'Base::Admin\UrlRewrites' => Controller\Admin\UrlRewritesController::class,
+        ],
+
         'invokables' => [
-            'WellCart\Base\Controller\Console\Cache' => Controller\Console\CacheController::class,
-            'WellCart\Base\Controller\Console\Route' => Controller\Console\RouteController::class,
+            Controller\Console\CacheController::class => Controller\Console\CacheController::class,
+            Controller\Console\RouteController::class => Controller\Console\RouteController::class,
         ],
         'factories'  => [
-            'WellCart\Base\Controller\Index'             => Factory\Controller\IndexControllerFactory::class,
-            'WellCart\Base\Controller\Admin\Languages'   => Factory\Controller\Admin\LanguagesControllerFactory::class,
-            'WellCart\Base\Controller\Admin\UrlRewrites' => Factory\Controller\Admin\UrlRewritesControllerFactory::class,
+            Controller\IndexController::class             => Factory\Controller\IndexControllerFactory::class,
+            Controller\Admin\LanguagesController::class   => Factory\Controller\Admin\LanguagesControllerFactory::class,
+            Controller\Admin\UrlRewritesController::class => Factory\Controller\Admin\UrlRewritesControllerFactory::class,
 
             'TckImageResizer\Controller\Index' => Factory\Controller\ImageResizeControllerFactory::class,
         ],
@@ -442,7 +450,7 @@ return [
                     'options' => [
                         'route'    => 'wellcart:cache:flush',
                         'defaults' => [
-                            'controller' => 'WellCart\Base\Controller\Console\Cache',
+                            'controller' => 'Base::Console\Cache',
                             'action'     => 'flush',
                         ]
                     ]
@@ -451,7 +459,7 @@ return [
                     'options' => [
                         'route'    => 'wellcart:route:list',
                         'defaults' => [
-                            'controller' => 'WellCart\Base\Controller\Console\Route',
+                            'controller' => 'Base::Console\Route',
                             'action'     => 'list',
                         ]
                     ]

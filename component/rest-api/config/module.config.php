@@ -116,7 +116,7 @@ return [
                 'options'       => [
                     'route'    => '/api[/]',
                     'defaults' => [
-                        'controller' => 'WellCart\RestApi\Controller\Hello',
+                        'controller' => 'RestApi::Hello',
                     ],
                 ],
                 'child_routes'  => [],
@@ -130,7 +130,7 @@ return [
                         'options'      => [
                             'route'    => 'api/',
                             'defaults' => [
-                                'controller' => 'WellCart\RestApi\Controller\Admin\OAuth2\Clients',
+                                'controller' => 'RestApi::Admin\OAuth2\Clients',
                                 'action'     => 'list',
                             ],
                         ],
@@ -147,7 +147,7 @@ return [
                                         'id'         => '([0-9]+|deleteClients|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\RestApi\Controller\Admin\OAuth2\Clients',
+                                        'controller' => 'RestApi::Admin\OAuth2\Clients',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -164,7 +164,7 @@ return [
                                         'id'         => '([0-9]+|deleteScopes|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\RestApi\Controller\Admin\OAuth2\Scopes',
+                                        'controller' => 'RestApi::Admin\OAuth2\Scopes',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -181,7 +181,7 @@ return [
                                         'id'         => '([0-9]+|deleteKeys|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\RestApi\Controller\Admin\OAuth2\PublicKeys',
+                                        'controller' => 'RestApi::Admin\OAuth2\PublicKeys',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -193,13 +193,19 @@ return [
         ],
     ],
     'controllers'     => [
+        'aliases' => [
+            'RestApi::Hello' => Controller\HelloController::class,
+            'RestApi::Admin\OAuth2\PublicKeys' => Controller\Admin\OAuth2\PublicKeysController::class,
+            'RestApi::Admin\OAuth2\Clients'    => Controller\Admin\OAuth2\ClientsController::class,
+            'RestApi::Admin\OAuth2\Scopes'     => Controller\Admin\OAuth2\ScopesController::class,
+        ],
         'invokables' => [
-            'WellCart\RestApi\Controller\Hello' => Controller\HelloController::class,
+            Controller\HelloController::class => Controller\HelloController::class,
         ],
         'factories'  => [
-            'WellCart\RestApi\Controller\Admin\OAuth2\PublicKeys' => Factory\Controller\Admin\OAuth2\PublicKeysControllerFactory::class,
-            'WellCart\RestApi\Controller\Admin\OAuth2\Clients'    => Factory\Controller\Admin\OAuth2\ClientsControllerFactory::class,
-            'WellCart\RestApi\Controller\Admin\OAuth2\Scopes'     => Factory\Controller\Admin\OAuth2\ScopesControllerFactory::class,
+            Controller\Admin\OAuth2\PublicKeysController::class => Factory\Controller\Admin\OAuth2\PublicKeysControllerFactory::class,
+            Controller\Admin\OAuth2\ClientsController::class    => Factory\Controller\Admin\OAuth2\ClientsControllerFactory::class,
+            Controller\Admin\OAuth2\ScopesController::class     => Factory\Controller\Admin\OAuth2\ScopesControllerFactory::class,
         ],
     ],
 

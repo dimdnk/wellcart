@@ -165,14 +165,23 @@ return [
     'event_manager' => include __DIR__ . '/section/event_manager.php',
 
     'controllers' => [
+        'aliases'   => [
+            'Admin::Login'               => Controller\LoginController::class,
+            'Admin::Logout'              => Controller\LogoutController::class,
+            'Admin::Dashboard'           => Controller\DashboardController::class,
+            'Admin::RecoverAccount'      => Controller\RecoverAccountController::class,
+            'Admin::Settings'            => Controller\SettingsController::class,
+            'Admin::Admin\Accounts'      => Controller\Admin\AccountsController::class,
+            'Admin::Admin\Notifications' => Controller\Admin\NotificationsController::class,
+        ],
         'factories' => [
-            'WellCart\Admin\Controller\Login'               => Factory\Controller\LoginControllerFactory::class,
-            'WellCart\Admin\Controller\Logout'              => Factory\Controller\LogoutControllerFactory::class,
-            'WellCart\Admin\Controller\Dashboard'           => Factory\Controller\DashboardControllerFactory::class,
-            'WellCart\Admin\Controller\RecoverAccount'      => Factory\Controller\RecoverAccountControllerFactory::class,
-            'WellCart\Admin\Controller\Settings'            => Factory\Controller\SettingsControllerFactory::class,
-            'WellCart\Admin\Controller\Admin\Accounts'      => Factory\Controller\Admin\AccountsControllerFactory::class,
-            'WellCart\Admin\Controller\Admin\Notifications' => Factory\Controller\Admin\NotificationsControllerFactory::class,
+            Controller\LoginController::class               => Factory\Controller\LoginControllerFactory::class,
+            Controller\LogoutController::class              => Factory\Controller\LogoutControllerFactory::class,
+            Controller\DashboardController::class           => Factory\Controller\DashboardControllerFactory::class,
+            Controller\RecoverAccountController::class      => Factory\Controller\RecoverAccountControllerFactory::class,
+            Controller\SettingsController::class            => Factory\Controller\SettingsControllerFactory::class,
+            Controller\Admin\AccountsController::class      => Factory\Controller\Admin\AccountsControllerFactory::class,
+            Controller\Admin\NotificationsController::class => Factory\Controller\Admin\NotificationsControllerFactory::class,
         ],
     ],
 
@@ -208,7 +217,7 @@ return [
                 'options'          => [
                     'route'    => '/admin[/]',
                     'defaults' => [
-                        'controller' => 'WellCart\Admin\Controller\Dashboard',
+                        'controller' => 'Admin::Dashboard',
                         'action'     => 'index',
                     ],
                 ],
@@ -221,7 +230,7 @@ return [
                         'options'          => [
                             'route'    => 'login',
                             'defaults' => [
-                                'controller' => 'WellCart\Admin\Controller\Login',
+                                'controller' => 'Admin::Login',
                                 'action'     => 'login',
                             ],
                         ],
@@ -235,7 +244,7 @@ return [
                         'options'          => [
                             'route'    => 'logout',
                             'defaults' => [
-                                'controller' => 'WellCart\Admin\Controller\Logout',
+                                'controller' => 'Admin::Logout',
                                 'action'     => 'logout',
                             ],
                         ],
@@ -248,7 +257,7 @@ return [
                         'options'          => [
                             'route'    => 'settings',
                             'defaults' => [
-                                'controller' => 'WellCart\Admin\Controller\Settings',
+                                'controller' => 'Admin::Settings',
                                 'action'     => 'update',
                             ],
                         ],
@@ -274,7 +283,7 @@ return [
                         'options'      => [
                             'route'    => 'admin/',
                             'defaults' => [
-                                'controller' => 'WellCart\Admin\Controller\Admin\Accounts',
+                                'controller' => 'Admin::Admin\Accounts',
                                 'action'     => 'list',
                             ],
                         ],
@@ -291,7 +300,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Admin\Controller\Admin\Accounts',
+                                        'controller' => 'Admin::Admin\Accounts',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -308,7 +317,7 @@ return [
                                         'id'         => '([0-9]+|delete|mark-as-read)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\Admin\Controller\Admin\Notifications',
+                                        'controller' => 'Admin::Admin\Notifications',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -326,7 +335,7 @@ return [
                 'options'          => [
                     'route'    => '/admin/recover',
                     'defaults' => [
-                        'controller' => 'WellCart\Admin\Controller\RecoverAccount',
+                        'controller' => 'Admin::RecoverAccount',
                         'action'     => 'initiate',
                     ],
                 ],
@@ -339,7 +348,7 @@ return [
                         'options'          => [
                             'route'    => '/initiate',
                             'defaults' => [
-                                'controller' => 'WellCart\Admin\Controller\RecoverAccount',
+                                'controller' => 'Admin::RecoverAccount',
                                 'action'     => 'initiate',
                             ],
                         ],
@@ -352,7 +361,7 @@ return [
                         'options'          => [
                             'route'    => '/reset/:token',
                             'defaults' => [
-                                'controller' => 'WellCart\Admin\Controller\RecoverAccount',
+                                'controller' => 'Admin::RecoverAccount',
                                 'action'     => 'reset',
                                 'token'      => '',
                             ],

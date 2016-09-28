@@ -34,8 +34,11 @@ return [
     ],
 
     'controllers'    => [
+        'aliases'            => [
+            'CMS::Admin\Pages'          => Controller\Admin\PagesController::class,
+        ], 
         'factories' => [
-            'WellCart\CMS\Controller\Admin\Pages' => Factory\Controller\Admin\PagesControllerFactory::class,
+            Controller\Admin\PagesController::class => Factory\Controller\Admin\PagesControllerFactory::class,
         ],
     ],
 
@@ -54,7 +57,7 @@ return [
                         'options'      => [
                             'route'    => 'cms/',
                             'defaults' => [
-                                'controller' => 'WellCart\CMS\Controller\Admin\Pages',
+                                'controller' => 'CMS::Admin\Pages',
                                 'action'     => 'list',
                             ],
                         ],
@@ -71,7 +74,7 @@ return [
                                         'id'         => '([0-9]+|deletePages|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'WellCart\CMS\Controller\Admin\Pages',
+                                        'controller' => 'CMS::Admin\Pages',
                                         'action'     => 'list',
                                     ],
                                 ],
