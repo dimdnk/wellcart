@@ -100,7 +100,7 @@ class UnauthorizedStrategy extends Strategy implements
         $layout->setTemplate('layout/empty');
 
         $result = $forward->dispatch(
-            'WellCart\Admin\Controller\Login',
+            'Admin::Login',
             ['action' => 'login']
         );
 
