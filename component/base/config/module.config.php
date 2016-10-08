@@ -65,6 +65,9 @@ return [
             'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\Listener\ActionHandlesListenerFactory',
             'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Factory\Layout\Listener\LoadLayoutListenerFactory',
             'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\Listener\PrepareActionViewModelListenerFactory',
+                        'Router'                         => 'Zend\Mvc\Service\RouterFactory',
+            'RoutePluginManager'             => 'Zend\Mvc\Service\RoutePluginManagerFactory',
+                        'HttpRouter'                     => 'Zend\Mvc\Service\HttpRouterFactory',
             Service\Route\Listing::class                                 => Factory\Service\Route\ListingFactory::class,
 
         ],

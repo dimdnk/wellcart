@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "836a20949e630edcba2cdb5d923164a7",
-    "content-hash": "07b1c3f96a7278fa7ba91cbc375020b6",
+    "hash": "5edd49114c4f78ed271bea0170464c2c",
+    "content-hash": "a3752028169713a63b3bd850191f756b",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -3566,36 +3566,36 @@
         },
         {
             "name": "neilime/zf2-twb-bundle",
-            "version": "3.0.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neilime/zf2-twb-bundle.git",
-                "reference": "386fbcaf2ea8d0a03f6919b1b0fc63335c1f90ea"
+                "reference": "e0044de153e2e5914e09374e986ff400a54d4b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neilime/zf2-twb-bundle/zipball/386fbcaf2ea8d0a03f6919b1b0fc63335c1f90ea",
-                "reference": "386fbcaf2ea8d0a03f6919b1b0fc63335c1f90ea",
+                "url": "https://api.github.com/repos/neilime/zf2-twb-bundle/zipball/e0044de153e2e5914e09374e986ff400a54d4b67",
+                "reference": "e0044de153e2e5914e09374e986ff400a54d4b67",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "zendframework/zend-config": "^2.3",
-                "zendframework/zend-escaper": "^2.3",
-                "zendframework/zend-form": "^2.3",
-                "zendframework/zend-i18n": "^2.3",
-                "zendframework/zend-loader": "^2.3",
-                "zendframework/zend-log": "^2.3",
-                "zendframework/zend-modulemanager": "^2.3",
-                "zendframework/zend-mvc": "^2.3 || ^3.0",
-                "zendframework/zend-serializer": "^2.3",
-                "zendframework/zend-servicemanager": "^2.3 || ^3.1",
-                "zendframework/zend-stdlib": "^2.3 || ^3.1",
-                "zendframework/zend-view": "^2.3"
+                "zendframework/zend-config": "~2.3",
+                "zendframework/zend-escaper": "~2.3",
+                "zendframework/zend-form": "~2.3",
+                "zendframework/zend-i18n": "~2.3",
+                "zendframework/zend-loader": "~2.3",
+                "zendframework/zend-log": "~2.3",
+                "zendframework/zend-modulemanager": "~2.3",
+                "zendframework/zend-mvc": "~2.3",
+                "zendframework/zend-serializer": "~2.3",
+                "zendframework/zend-servicemanager": "~2.3",
+                "zendframework/zend-stdlib": "~2.3",
+                "zendframework/zend-view": "~2.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8",
-                "satooshi/php-coveralls": "^0.7"
+                "phpunit/phpunit": "~4.8",
+                "satooshi/php-coveralls": "~0.7"
             },
             "suggest": {
                 "neilime/zf2-assets-bundle": "Bundling & caching Twitter Bootstrap assets",
@@ -3633,7 +3633,7 @@
                 "twitter bootstrap",
                 "zend framework 2"
             ],
-            "time": "2016-10-06 15:14:52"
+            "time": "2016-06-15 11:27:54"
         },
         {
             "name": "nesbot/carbon",
@@ -9829,6 +9829,64 @@
             "time": "2016-05-10 21:44:39"
         },
         {
+            "name": "zendframework/zend-router",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-router.git",
+                "reference": "5a4666ced887d2a9e920e8aaa604b3cc39648b1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-router/zipball/5a4666ced887d2a9e920e8aaa604b3cc39648b1a",
+                "reference": "5a4666ced887d2a9e920e8aaa604b3cc39648b1a",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.1",
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-http": "^2.5",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7.5 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5",
+                "sebastian/version": "^1.0.4",
+                "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-i18n": "^2.6"
+            },
+            "suggest": {
+                "zendframework/zend-i18n": "^2.6, if defining translatable HTTP path segments"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev",
+                    "dev-develop": "3.1-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Router",
+                    "config-provider": "Zend\\Router\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-router",
+            "keywords": [
+                "mvc",
+                "routing",
+                "zf2"
+            ],
+            "time": "2016-04-18 17:04:31"
+        },
+        {
             "name": "zendframework/zend-serializer",
             "version": "2.8.0",
             "source": {
@@ -12564,16 +12622,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.1",
+            "version": "6.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427"
+                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/3f808fba627f2c5b69e2501217bf31af349c1427",
-                "reference": "3f808fba627f2c5b69e2501217bf31af349c1427",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
+                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
                 "shasum": ""
             },
             "require": {
@@ -12622,7 +12680,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-07-15 17:22:37"
+            "time": "2016-10-08 15:01:37"
         },
         {
             "name": "guzzlehttp/promises",
