@@ -16,11 +16,11 @@ codeception.yml
 /public/media
 /public/themes
 /vendor
-/report
+/build
 /bin
 apigility-ui
 *~
-clover.xml
+report.xml
 .env
 *.log
 maintenance.flag

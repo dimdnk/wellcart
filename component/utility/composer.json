@@ -28,7 +28,8 @@
     "patchwork/utf8": "1.*",
     "raulfraile/ladybug": "1.*",
     "nesbot/carbon": "1.*",
-    "josegonzalez/dotenv": "~2.0"
+    "josegonzalez/dotenv": "~2.0",
+    "crazycodr/standard-exceptions": "^2.1.0"
   },
   "suggest": {
     "halilim/xml-iterator": "dev-master",

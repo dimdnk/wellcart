@@ -10,11 +10,11 @@ Thumbs.db
 .settings
 composer.lock
 /vendor
-/report
+/build
 /public
 /bin
 apigility-ui
 *~
-clover.xml
+report.xml
 .env
 .vagrant

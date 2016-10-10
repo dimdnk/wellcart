@@ -41,7 +41,7 @@ script: bin/phpunit
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover report/clover.xml
+  - php ocular.phar code-coverage:upload --format=php-clover build/report.xml
   - bin/coveralls
 
 matrix:

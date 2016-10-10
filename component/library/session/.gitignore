@@ -11,8 +11,8 @@ Thumbs.db
 .buildpath
 composer.lock
 /vendor
-/report
+/build
 /bin
 *~
-clover.xml
+report.xml
 .env

@@ -8,4 +8,4 @@ codeception.yml
 maintenance.flag
 *.suite.yml
 installed.php
-/report
+/build
