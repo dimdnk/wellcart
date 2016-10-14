@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-user",
   "description": "User management functionality (authentication, authorization across all modules, admin user interface)",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",

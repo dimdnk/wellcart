@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-base",
   "description": "This is a suite of common classes used across several modules. Extends some MVC, Form, View, Validator & Doctrine ORM functionality.",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",

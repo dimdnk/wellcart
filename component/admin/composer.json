@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-admin",
   "description": "Common infrastructure and assets for other modules to be defined and used in their administration user interface.",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",

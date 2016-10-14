@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-setup",
   "description": "Setup application provides concrete implementation of a module context and setup DB/schema resources.",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",

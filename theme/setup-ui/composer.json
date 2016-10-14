@@ -1,6 +1,7 @@
 {
   "name": "wellcart/theme-setup-ui",
   "description": "WellCart Setup Wizard Design Theme",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "authors": [

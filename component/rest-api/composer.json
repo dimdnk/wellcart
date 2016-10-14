@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-rest-api",
   "description": "The framework based on Apigility for the application to expose REST web services.",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",
