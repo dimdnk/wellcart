@@ -1,6 +1,7 @@
 {
   "name": "wellcart/component-command-bus",
   "description": "SimpleBus library integration into Zend Framework",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
   "type": "library",
