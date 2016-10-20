@@ -7494,12 +7494,12 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/wellcart/web-components.git",
-                "reference": "396beab4e586e6f4debb3b4dc7520032cbf47b9a"
+                "reference": "26964f201e181ddc83cd33ff99210d8b2c1d9fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/wellcart/web-components/get/396beab4e586e6f4debb3b4dc7520032cbf47b9a.zip",
-                "reference": "396beab4e586e6f4debb3b4dc7520032cbf47b9a",
+                "url": "https://bitbucket.org/wellcart/web-components/get/26964f201e181ddc83cd33ff99210d8b2c1d9fab.zip",
+                "reference": "26964f201e181ddc83cd33ff99210d8b2c1d9fab",
                 "shasum": ""
             },
             "require": {
@@ -7554,7 +7554,7 @@
                 }
             ],
             "homepage": "http://wellcart.org/",
-            "time": "2016-08-31 16:03:34"
+            "time": "2016-10-19 09:26:40"
         },
         {
             "name": "zendexperts/ze-theme",
