@@ -7252,16 +7252,16 @@
         },
         {
             "name": "thadafinser/zfc-datagrid",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ThaDafinser/ZfcDatagrid.git",
-                "reference": "939817c00f0deb4156d2701282d5797141a8a398"
+                "reference": "42cd9778dc1c1c9f4298244a6ef93c8698745b6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/939817c00f0deb4156d2701282d5797141a8a398",
-                "reference": "939817c00f0deb4156d2701282d5797141a8a398",
+                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/42cd9778dc1c1c9f4298244a6ef93c8698745b6c",
+                "reference": "42cd9778dc1c1c9f4298244a6ef93c8698745b6c",
                 "shasum": ""
             },
             "require": {
@@ -7279,7 +7279,7 @@
                 "doctrine/dbal": ">=2.5,<2.7",
                 "doctrine/doctrine-orm-module": "^0.9",
                 "doctrine/orm": ">=2.5,<2.7",
-                "fabpot/php-cs-fixer": "^1.11",
+                "friendsofphp/php-cs-fixer": "^1.11",
                 "phpunit/phpunit": "^4.8|^5.2",
                 "zendframework/zend-console": "~2.5",
                 "zendframework/zend-db": "~2.5",
@@ -7329,7 +7329,7 @@
                 "zf2",
                 "zfc-datagrid"
             ],
-            "time": "2016-04-21 14:12:10"
+            "time": "2016-10-18 09:13:26"
         },
         {
             "name": "tinymce/tinymce",
