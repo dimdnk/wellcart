@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Admin;
 
+use WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy;
 use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
@@ -59,9 +60,7 @@ class Module implements
     {
         $target = $e->getTarget();
         $target->getEventManager()->attach(
-            $target->getServiceManager()->get(
-                'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy'
-            )
+            $target->getServiceManager()->get(UnauthorizedStrategy::class)
         );
     }
 
