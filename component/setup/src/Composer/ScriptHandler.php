@@ -27,6 +27,7 @@ class ScriptHandler
             'public/assets',
             'public/themes',
             'public/media',
+            'config/autoload',
         ];
 
     /**
