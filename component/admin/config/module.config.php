@@ -156,6 +156,11 @@ return [
    * Default ZfcRbac configuration for RBAC
    */
   'zfc_rbac'      => [
+    'guard_manager' => [
+      'factories' => [
+        Rbac\Guard\RouteGuard::class => Factory\Rbac\Guard\RouteGuardFactory::class
+      ],
+    ],
     'guards' => [
       Rbac\Guard\RouteGuard::class => [
         'zfcadmin*' => ['admin' => 'admin'],

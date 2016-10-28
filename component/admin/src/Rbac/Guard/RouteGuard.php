@@ -12,16 +12,10 @@ namespace WellCart\Admin\Rbac\Guard;
 
 use Zend\Mvc\MvcEvent;
 use ZfcRbac\Exception\UnauthorizedException;
-use ZfcRbac\Service\RoleService;
 
 class RouteGuard
   extends \ZfcRbac\Guard\RouteGuard
 {
-  public function __construct(RoleService $roleService, array $rules)
-  {
-    parent::__construct($roleService, $rules);
-  }
-
   /**
    * @private
    * @param  MvcEvent $event
@@ -32,13 +26,11 @@ class RouteGuard
     if ($this->isGranted($event)) {
       return;
     }
-
     $event->setError(self::GUARD_UNAUTHORIZED);
     $event->setParam('exception', new UnauthorizedException(
       'You are not authorized to access this resource',
       403
     ));
-
     $event->stopPropagation(true);
     $application  = $event->getApplication();
     $eventManager = $application->getEventManager();
