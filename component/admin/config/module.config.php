@@ -161,10 +161,8 @@ return [
         Rbac\Guard\RouteGuard::class => Factory\Rbac\Guard\RouteGuardFactory::class
       ],
     ],
-    'guards' => [
-      Rbac\Guard\RouteGuard::class => [
-        'zfcadmin*' => ['admin' => 'admin'],
-      ]
+    'guards'        => [
+      Rbac\Guard\RouteGuard::class => [],
     ],
   ],
   'event_manager' => include __DIR__ . '/section/event_manager.php',
