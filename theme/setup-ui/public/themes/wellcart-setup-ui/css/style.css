@@ -112,8 +112,6 @@ ol.wizard-sidebar li:first-child {
 }
 
 .btn-next {
-    background-color: #f34580;
-    border-color: #f34580;
     color: #fff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     background-color: #f23273;
