@@ -10,6 +10,7 @@ namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Form\Element\CategoryMultiCheckbox;
+use WellCart\Catalog\Spec\CategoryRepository;
 
 class CategoryMultiCheckboxFactory
 {
@@ -17,7 +18,7 @@ class CategoryMultiCheckboxFactory
     ) {
         $services = $sm->getServiceLocator();
         $categories = $services->get(
-            'WellCart\Catalog\Spec\CategoryRepository'
+            CategoryRepository::class
         )
             ->toOptionsList();
         return new CategoryMultiCheckbox(

@@ -9,13 +9,14 @@
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Catalog\Spec\ProductTemplateRepository;
 
 class ProductTemplatesMultiCheckboxSelectorFactory
 {
     public function __invoke(ContainerInterface $sm) {
         $services = $sm->getServiceLocator();
         $values = $services->get(
-            'WellCart\Catalog\Spec\ProductTemplateRepository'
+            ProductTemplateRepository::class
         )
             ->toOptionsList();
         return new \WellCart\Form\Element\MultiCheckbox(

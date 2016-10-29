@@ -9,13 +9,14 @@
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Catalog\Spec\BrandRepository;
 
 class BrandSelectorFactory
 {
     public function __invoke(ContainerInterface $sm) {
         $services = $sm->getServiceLocator();
         $brands = $services->get(
-            'WellCart\Catalog\Spec\BrandRepository'
+            BrandRepository::class
         )
             ->toOptionsList();
         return new \WellCart\Form\Element\Select(
