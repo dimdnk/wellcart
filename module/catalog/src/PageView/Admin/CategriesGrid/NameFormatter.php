@@ -31,9 +31,13 @@ class NameFormatter extends AbstractFormatter
     {
         $row = $this->getRowData();
         $category = $row['category'];
+        $lvl = (int)$category['lvl'] - 1;
+        if($lvl < 0) {
+            $lvl = 0;
+        }
         return sprintf(
             '%s %s',
-            str_repeat('-', (int)$category['lvl'] - 1),
+            str_repeat('-', $lvl),
             e($row[$column->getUniqueId()])
         );
     }
