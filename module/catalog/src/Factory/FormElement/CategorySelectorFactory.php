@@ -9,10 +9,10 @@
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Catalog\Form\Element\CategoryMultiCheckbox;
 use WellCart\Catalog\Spec\CategoryRepository;
+use WellCart\Form\Element\Select;
 
-class CategoryMultiCheckboxFactory
+class CategorySelectorFactory
 {
     public function __invoke(ContainerInterface $sm
     ) {
@@ -21,7 +21,7 @@ class CategoryMultiCheckboxFactory
             CategoryRepository::class
         )
             ->toOptionsList();
-        return new CategoryMultiCheckbox(
+        return new Select(
             null,
             [
                 'value_options'             => $categories,

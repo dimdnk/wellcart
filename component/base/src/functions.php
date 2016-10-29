@@ -146,7 +146,7 @@ if (!function_exists('ddump')) {
 }
 
 if (!function_exists('format_price')) {
-    function format_price($number)
+    function format_price($number, $withSymbol = true)
     {
         $number = doubleval($number);
         $locale = localeconv();
@@ -158,8 +158,9 @@ if (!function_exists('format_price')) {
                 ->get('directory\primary_currency')
                 ->getSymbol();
         }
-
-
+        if(!$withSymbol) {
+            $symbol = '';
+        }
         return $symbol . number_format(
             $number,
             2,

@@ -37,4 +37,12 @@ class ProductPrice extends Text
             $options
         );
     }
+
+    public function setValue($value)
+    {
+        parent::setValue(doubleval($value));
+        return $this;
+    }
+
+
 }

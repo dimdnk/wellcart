@@ -215,12 +215,10 @@ return [
         'class_map' => [
             'formCatalogProductImage'                    => Form\View\Helper\FormProductImage::class,
             'formCatalogFeatureCombinationMultiCheckbox' => Form\View\Helper\FormFeatureCombinationMultiCheckbox::class,
-            'formCatalogCategoryMultiCheckbox'           => Form\View\Helper\FormCategoryMultiCheckbox::class,
         ],
         'type_map'  => [
             'catalogProductImage'                    => 'formCatalogProductImage',
             'catalogFeatureCombinationMultiCheckbox' => 'formCatalogFeatureCombinationMultiCheckbox',
-            'catalogCategoryMultiCheckbox'           => 'formCatalogCategoryMultiCheckbox',
         ],
     ],
     'twbbundle'                  => [
@@ -340,7 +338,6 @@ return [
         'invokables' => [
             'formCatalogProductImage'                    => Form\View\Helper\FormProductImage::class,
             'formCatalogFeatureCombinationMultiCheckbox' => Form\View\Helper\FormFeatureCombinationMultiCheckbox::class,
-            'formCatalogCategoryMultiCheckbox'           => Form\View\Helper\FormCategoryMultiCheckbox::class,
         ],
     ],
 
@@ -360,12 +357,11 @@ return [
     'form_elements'              => [
         'aliases'   => [
             'catalogFeatureCombinationMultiCheckbox' => Form\Element\FeatureCombinationMultiCheckbox::class,
-            'catalogCategoryMultiCheckbox'           => Form\Element\CategoryMultiCheckbox::class,
         ],
         'factories'  => [
             'catalogProductPrice' => Factory\Form\Element\ProductPriceFactory::class,
             Form\Element\FeatureCombinationMultiCheckbox::class => Factory\FormElement\FeatureCombinationMultiCheckboxFactory::class,
-            Form\Element\CategoryMultiCheckbox::class           => Factory\FormElement\CategoryMultiCheckboxFactory::class,
+            'catalogCategorySelector' => Factory\FormElement\CategorySelectorFactory::class,
             'catalogProductTemplateSelector'                    => Factory\FormElement\ProductTemplateSelectorFactory::class,
             'catalogBrandSelector'                              => Factory\FormElement\BrandSelectorFactory::class,
             'catalogAttributesMultiCheckboxSelector'            => Factory\FormElement\AttributesMultiCheckboxSelectorFactory::class,

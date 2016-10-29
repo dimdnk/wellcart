@@ -201,15 +201,15 @@ class ProductFieldset extends Fieldset
         $this->add(
             [
                 'name'       => 'categories',
-                'type'       => 'catalogCategoryMultiCheckbox',
+                'type'       => 'catalogCategorySelector',
                 'options'    => [
                     'disable_inarray_validator' => true,
                     'unselected_value'          => null,
-
                 ],
                 'attributes' => [
                     'required'     => false,
                     'autocomplete' => 'off',
+                    'multiple' => true,
                     'id'           => 'catalog_product_categories',
                 ],
             ],

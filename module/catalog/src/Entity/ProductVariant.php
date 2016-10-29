@@ -170,7 +170,7 @@ class ProductVariant
      */
     public function setPrice($price): ProductVariantEntity
     {
-        $this->price = $price;
+        $this->price = doubleval($price);
         return $this;
     }
 
