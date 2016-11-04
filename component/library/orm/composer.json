@@ -35,7 +35,7 @@
     "php": "^7.0.0",
     "gedmo/doctrine-extensions": "2.4.*",
     "beberlei/DoctrineExtensions": "1.*",
-    "doctrine/doctrine-module": "1.2.*",
+    "doctrine/doctrine-module": "^1.2.0",
     "doctrine/doctrine-mongo-odm-module": "0.11.*",
     "hounddog/doctrine-data-fixture-module": "0.*",
     "oro/doctrine-extensions": "^1.0.0"

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "626c8a0eb8a8a9fcd09ae1aa1eec4b58",
-    "content-hash": "0ef024da8d70f127305ffebd89496657",
+    "hash": "32a155a7e1891f3336717e7c6412aeee",
+    "content-hash": "c4aa536e3dada82322bf65c1aea240fd",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -107,39 +107,43 @@
         },
         {
             "name": "api-skeletons/zf-oauth2-doctrine",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/API-Skeletons/zf-oauth2-doctrine.git",
-                "reference": "d09ea21f73b4b596bac2aad0dce03d4450e97140"
+                "reference": "f1aaa2872e571445234a4a8c1a910d20dc26ea2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/API-Skeletons/zf-oauth2-doctrine/zipball/d09ea21f73b4b596bac2aad0dce03d4450e97140",
-                "reference": "d09ea21f73b4b596bac2aad0dce03d4450e97140",
+                "url": "https://api.github.com/repos/API-Skeletons/zf-oauth2-doctrine/zipball/f1aaa2872e571445234a4a8c1a910d20dc26ea2f",
+                "reference": "f1aaa2872e571445234a4a8c1a910d20dc26ea2f",
                 "shasum": ""
             },
             "require": {
                 "doctrine/doctrine-module": "~0.8 || ^1.0",
-                "doctrine/doctrine-orm-module": "*",
-                "php": ">=5.5",
+                "doctrine/doctrine-orm-module": "~0.8 || ^1.0",
+                "doctrine/orm": "^2.4.5",
+                "php": "^5.5 || ^7.0",
                 "zendframework/zend-config": "^2.4",
                 "zendframework/zend-i18n": "^2.4",
                 "zendframework/zend-modulemanager": "^2.4",
+                "zendframework/zend-mvc": "^2.4 || ^3.0.3",
+                "zendframework/zend-servicemanager": "^2.4 || ^3.0",
                 "zfcampus/zf-mvc-auth": "^1.3",
                 "zfcampus/zf-oauth2": "^1.3"
             },
             "require-dev": {
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "~4",
-                "satooshi/php-coveralls": "0.6.*",
-                "squizlabs/php_codesniffer": "~2",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^4.8.8 || ^5.2",
+                "satooshi/php-coveralls": "^1.0",
+                "squizlabs/php_codesniffer": "^2.7",
                 "zendframework/zend-authentication": "^2.4",
+                "zendframework/zend-eventmanager": "^2.4 || ^3.0",
                 "zendframework/zend-form": "^2.4",
                 "zendframework/zend-loader": "^2.4",
                 "zendframework/zend-log": "^2.4",
                 "zendframework/zend-serializer": "^2.4",
-                "zendframework/zend-test": "^2.4"
+                "zendframework/zend-test": "^2.4 || ^3.0"
             },
             "suggest": {
                 "bushbaby/zf-oauth2-doctrine-mutatetablenames": "Allows configuration of the table names that this module uses"
@@ -147,12 +151,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "ZF\\OAuth2\\Doctrine\\": "src/",
-                    "ZFTest\\OAuth2\\Doctrine\\": "test/"
-                },
-                "classmap": [
-                    "Module.php"
-                ]
+                    "ZF\\OAuth2\\Doctrine\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -164,7 +164,7 @@
                 "doctrine",
                 "oauth2"
             ],
-            "time": "2016-07-01 21:00:01"
+            "time": "2016-10-25 19:29:46"
         },
         {
             "name": "api-skeletons/zf-oauth2-doctrine-console",
@@ -5900,19 +5900,27 @@
         },
         {
             "name": "sebastian/version",
-            "version": "1.0.6",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/version.git",
-                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6"
+                "reference": "c829badbd8fdf16a0bad8aa7fa7971c029f1b9c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
-                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
+                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/c829badbd8fdf16a0bad8aa7fa7971c029f1b9c5",
+                "reference": "c829badbd8fdf16a0bad8aa7fa7971c029f1b9c5",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.6"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -5931,7 +5939,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2015-06-21 13:59:46"
+            "time": "2016-02-04 12:56:52"
         },
         {
             "name": "seld/jsonlint",
@@ -7245,35 +7253,33 @@
         },
         {
             "name": "thadafinser/zfc-datagrid",
-            "version": "v1.2.1",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ThaDafinser/ZfcDatagrid.git",
-                "reference": "42cd9778dc1c1c9f4298244a6ef93c8698745b6c"
+                "reference": "67e643ccec279c227b8f67a996dff1c62a842e7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/42cd9778dc1c1c9f4298244a6ef93c8698745b6c",
-                "reference": "42cd9778dc1c1c9f4298244a6ef93c8698745b6c",
+                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/67e643ccec279c227b8f67a996dff1c62a842e7f",
+                "reference": "67e643ccec279c227b8f67a996dff1c62a842e7f",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.5|~7.0",
+                "php": "~5.6|~7.0",
                 "zendframework/zend-cache": "~2.5",
                 "zendframework/zend-http": "~2.5",
                 "zendframework/zend-modulemanager": "~2.5",
-                "zendframework/zend-mvc": "~2.7",
+                "zendframework/zend-mvc": "~2.7|~3.0",
                 "zendframework/zend-paginator": "~2.5",
-                "zendframework/zend-servicemanager": "~2.7",
+                "zendframework/zend-servicemanager": "~2.7|~3.0",
                 "zendframework/zend-session": "~2.5",
                 "zendframework/zend-view": "~2.5"
             },
             "require-dev": {
-                "doctrine/dbal": ">=2.5,<2.7",
-                "doctrine/doctrine-orm-module": "^0.9",
-                "doctrine/orm": ">=2.5,<2.7",
+                "doctrine/doctrine-orm-module": "^1.1.0",
                 "friendsofphp/php-cs-fixer": "^1.11",
-                "phpunit/phpunit": "^4.8|^5.2",
+                "phpunit/phpunit": "^5.6.1",
                 "zendframework/zend-console": "~2.5",
                 "zendframework/zend-db": "~2.5",
                 "zendframework/zend-i18n": "~2.5",
@@ -7281,9 +7287,7 @@
                 "zendframework/zend-text": "~2.5"
             },
             "suggest": {
-                "doctrine/dbal": ">=2.5,<2.7",
-                "doctrine/doctrine-orm-module": "^0.9",
-                "doctrine/orm": ">=2.5,<2.7",
+                "doctrine/doctrine-orm-module": "for doctrine support",
                 "ext-intl": "*",
                 "phpoffice/phpexcel": "^1.8",
                 "tecnickcom/tcpdf": "^6.2",
@@ -7292,9 +7296,8 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "ZfcDatagrid\\": "src/",
-                    "ZfcDatagridTest\\": "tests/"
+                "psr-4": {
+                    "ZfcDatagrid\\": "src/ZfcDatagrid"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7322,7 +7325,7 @@
                 "zf2",
                 "zfc-datagrid"
             ],
-            "time": "2016-10-18 09:13:26"
+            "time": "2016-10-21 08:41:58"
         },
         {
             "name": "tinymce/tinymce",
@@ -10285,47 +10288,45 @@
         },
         {
             "name": "zendframework/zend-test",
-            "version": "2.6.1",
+            "version": "2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-test.git",
-                "reference": "0e2d81410af33c092a2916e77cbdfa3b6dc1bf1b"
+                "reference": "e9c0a570d5519a85a4b15a58c30fbc04a33c45f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-test/zipball/0e2d81410af33c092a2916e77cbdfa3b6dc1bf1b",
-                "reference": "0e2d81410af33c092a2916e77cbdfa3b6dc1bf1b",
+                "url": "https://api.github.com/repos/zendframework/zend-test/zipball/e9c0a570d5519a85a4b15a58c30fbc04a33c45f5",
+                "reference": "e9c0a570d5519a85a4b15a58c30fbc04a33c45f5",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0",
-                "phpunit/phpunit": "^4.0 || ^5.0",
-                "sebastian/version": "^1.0.4",
-                "zendframework/zend-console": "^2.6",
-                "zendframework/zend-dom": "^2.6",
-                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
-                "zendframework/zend-http": "^2.5.4",
-                "zendframework/zend-mvc": "^2.7.1",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0",
-                "zendframework/zend-uri": "^2.5",
-                "zendframework/zend-view": "^2.6.3"
+                "php": ">=5.5",
+                "phpunit/phpunit": "~4.0|~5.0",
+                "zendframework/zend-console": "~2.5",
+                "zendframework/zend-dom": "~2.5",
+                "zendframework/zend-eventmanager": "~2.5",
+                "zendframework/zend-http": "~2.5",
+                "zendframework/zend-mvc": "~2.5",
+                "zendframework/zend-servicemanager": "~2.5",
+                "zendframework/zend-stdlib": "~2.5",
+                "zendframework/zend-uri": "~2.5",
+                "zendframework/zend-view": "~2.5"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "1.7.*",
                 "mikey179/vfsstream": "~1.2",
-                "symfony/finder": "^2.2",
-                "zendframework/zend-i18n": "^2.6",
-                "zendframework/zend-log": "^2.7.1",
-                "zendframework/zend-modulemanager": "^2.7.1",
-                "zendframework/zend-serializer": "^2.6.1",
-                "zendframework/zend-session": "^2.6.2"
+                "zendframework/zend-i18n": "~2.5",
+                "zendframework/zend-log": "~2.5",
+                "zendframework/zend-modulemanager": "~2.5",
+                "zendframework/zend-serializer": "~2.5",
+                "zendframework/zend-session": "~2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev",
-                    "dev-develop": "2.7-dev"
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
                 }
             },
             "autoload": {
@@ -10342,7 +10343,7 @@
                 "test",
                 "zf2"
             ],
-            "time": "2016-03-02 20:15:27"
+            "time": "2016-03-01 20:28:49"
         },
         {
             "name": "zendframework/zend-text",
