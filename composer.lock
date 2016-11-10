@@ -3426,16 +3426,16 @@
         },
         {
             "name": "moment/moment",
-            "version": "2.15.2",
+            "version": "2.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moment/moment.git",
-                "reference": "dc1e659b34365c98896e73e2e858f9efa4b3d5dc"
+                "reference": "73f3c91174406b24fe66f19600958a6f43f2acd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment/zipball/dc1e659b34365c98896e73e2e858f9efa4b3d5dc",
-                "reference": "dc1e659b34365c98896e73e2e858f9efa4b3d5dc",
+                "url": "https://api.github.com/repos/moment/moment/zipball/73f3c91174406b24fe66f19600958a6f43f2acd8",
+                "reference": "73f3c91174406b24fe66f19600958a6f43f2acd8",
                 "shasum": ""
             },
             "require": {
@@ -3476,7 +3476,7 @@
                 "time",
                 "validate"
             ],
-            "time": "2016-10-24 06:42:14"
+            "time": "2016-11-10 06:48:26"
         },
         {
             "name": "myclabs/deep-copy",
@@ -7253,16 +7253,16 @@
         },
         {
             "name": "thadafinser/zfc-datagrid",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ThaDafinser/ZfcDatagrid.git",
-                "reference": "67e643ccec279c227b8f67a996dff1c62a842e7f"
+                "reference": "64d436a3341f0db1cf55b8721eca39547eaab28f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/67e643ccec279c227b8f67a996dff1c62a842e7f",
-                "reference": "67e643ccec279c227b8f67a996dff1c62a842e7f",
+                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/64d436a3341f0db1cf55b8721eca39547eaab28f",
+                "reference": "64d436a3341f0db1cf55b8721eca39547eaab28f",
                 "shasum": ""
             },
             "require": {
@@ -7325,7 +7325,7 @@
                 "zf2",
                 "zfc-datagrid"
             ],
-            "time": "2016-10-21 08:41:58"
+            "time": "2016-11-09 13:44:18"
         },
         {
             "name": "tinymce/tinymce",
