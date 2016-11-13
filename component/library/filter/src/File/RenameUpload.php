@@ -75,6 +75,105 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     }
 
     /**
+     * Retrieve target directory path
+     *
+     * @return string
+     */
+    public function getTargetDirectory()
+    {
+        return $this->targetDirectory;
+    }
+
+    /**
+     * Set target directory path
+     *
+     * @param string $targetDirectory
+     *
+     * @return RenameUpload
+     */
+    public function setTargetDirectory($targetDirectory)
+    {
+        $this->targetDirectory = $targetDirectory;
+        return $this;
+    }
+
+    /**
+     * Is allow create folders
+     *
+     * @return boolean
+     */
+    public function isAllowCreateFolders()
+    {
+        return $this->allowCreateFolders;
+    }
+
+    /**
+     * Allow create folders
+     *
+     * @param boolean $allowCreateFolders
+     *
+     * @return RenameUpload
+     */
+    public function setAllowCreateFolders($allowCreateFolders)
+    {
+        $this->allowCreateFolders = (bool)$allowCreateFolders;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isCaseInsensitiveFilename()
+    {
+        return $this->caseInsensitiveFilename;
+    }
+
+    /**
+     * Set case insensitive filenames
+     *
+     * @param boolean $caseInsensitiveFilename
+     *
+     * @return RenameUpload
+     */
+    public function setCaseInsensitiveFilename($caseInsensitiveFilename)
+    {
+        $this->caseInsensitiveFilename = (bool)$caseInsensitiveFilename;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isTransliterateFilename()
+    {
+        return $this->transliterateFilename;
+    }
+
+    /**
+     * @param boolean $transliterateFilename
+     *
+     * @return RenameUpload
+     */
+    public function setTransliterateFilename($transliterateFilename)
+    {
+        $this->transliterateFilename = (bool)$transliterateFilename;
+        if ($transliterateFilename) {
+            $this->setCaseInsensitiveFilename(true);
+        }
+        return $this;
+    }
+
+    /**
+     * Is  file dispersion enabled
+     *
+     * @return boolean
+     */
+    public function isFileDispersionEnabled()
+    {
+        return $this->enableFileDispersion;
+    }
+
+    /**
      * @inheritdoc
      */
     protected function getFinalTarget($uploadData)
@@ -123,52 +222,6 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     }
 
     /**
-     * Retrieve target directory path
-     *
-     * @return string
-     */
-    public function getTargetDirectory()
-    {
-        return $this->targetDirectory;
-    }
-
-    /**
-     * Set target directory path
-     *
-     * @param string $targetDirectory
-     *
-     * @return RenameUpload
-     */
-    public function setTargetDirectory($targetDirectory)
-    {
-        $this->targetDirectory = $targetDirectory;
-        return $this;
-    }
-
-    /**
-     * Is allow create folders
-     *
-     * @return boolean
-     */
-    public function isAllowCreateFolders()
-    {
-        return $this->allowCreateFolders;
-    }
-
-    /**
-     * Allow create folders
-     *
-     * @param boolean $allowCreateFolders
-     *
-     * @return RenameUpload
-     */
-    public function setAllowCreateFolders($allowCreateFolders)
-    {
-        $this->allowCreateFolders = (bool)$allowCreateFolders;
-        return $this;
-    }
-
-    /**
      * Fix case-insensitive filename
      *
      * @param $finalTarget
@@ -186,27 +239,6 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
             );
         }
         return $finalTarget;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isCaseInsensitiveFilename()
-    {
-        return $this->caseInsensitiveFilename;
-    }
-
-    /**
-     * Set case insensitive filenames
-     *
-     * @param boolean $caseInsensitiveFilename
-     *
-     * @return RenameUpload
-     */
-    public function setCaseInsensitiveFilename($caseInsensitiveFilename)
-    {
-        $this->caseInsensitiveFilename = (bool)$caseInsensitiveFilename;
-        return $this;
     }
 
     /**
@@ -231,28 +263,6 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     }
 
     /**
-     * @return boolean
-     */
-    public function isTransliterateFilename()
-    {
-        return $this->transliterateFilename;
-    }
-
-    /**
-     * @param boolean $transliterateFilename
-     *
-     * @return RenameUpload
-     */
-    public function setTransliterateFilename($transliterateFilename)
-    {
-        $this->transliterateFilename = (bool)$transliterateFilename;
-        if ($transliterateFilename) {
-            $this->setCaseInsensitiveFilename(true);
-        }
-        return $this;
-    }
-
-    /**
      * Process file dispersion
      *
      * @param $finalTarget
@@ -272,16 +282,6 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
         }
 
         return $finalTarget;
-    }
-
-    /**
-     * Is  file dispersion enabled
-     *
-     * @return boolean
-     */
-    public function isFileDispersionEnabled()
-    {
-        return $this->enableFileDispersion;
     }
 
     /**

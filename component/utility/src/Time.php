@@ -234,8 +234,8 @@ class Time extends Carbon
             $time['seconds'] = 0;
         }
         return (($time['year'] - 1980) << 25) | ($time['mon'] << 21)
-        | ($time['mday'] << 16) | ($time['hours'] << 11)
-        | ($time['minutes'] << 5) | ($time['seconds'] >> 1);
+            | ($time['mday'] << 16) | ($time['hours'] << 11)
+            | ($time['minutes'] << 5) | ($time['seconds'] >> 1);
     }
 
     /**

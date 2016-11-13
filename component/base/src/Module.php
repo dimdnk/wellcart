@@ -96,10 +96,12 @@ class Module implements
                 header('Status: ' . $message);
                 header('Retry-After: 300');
             }
-            exit(str_replace(
+            exit(
+            str_replace(
                 '%message%', $maintenance['message'],
                 file_get_contents($maintenance['template'])
-            ));
+            )
+            );
         }
 
         $locale = Config::get('wellcart.localization.locale');

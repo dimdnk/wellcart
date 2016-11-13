@@ -155,8 +155,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
      * @return CurrencyEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): CurrencyEntity
-    {
+    ): CurrencyEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -175,8 +174,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
      * @return CurrencyEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): CurrencyEntity
-    {
+    ): CurrencyEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }
@@ -233,8 +231,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
      * @return CurrencyEntity
      */
     public function setDecimalsSeparator($decimalsSeparator
-    ): CurrencyEntity
-    {
+    ): CurrencyEntity {
         $this->decimalsSeparator = $decimalsSeparator;
         return $this;
     }
@@ -340,8 +337,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
      * @return CurrencyEntity
      */
     public function setThousandsSeparator($thousandsSeparator
-    ): CurrencyEntity
-    {
+    ): CurrencyEntity {
         $this->thousandsSeparator = $thousandsSeparator;
         return $this;
     }

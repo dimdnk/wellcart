@@ -49,8 +49,7 @@ class InvokeAction extends AbstractPlugin
     }
 
     protected function getActionDependencies(Controller $controller, $method
-    ): array
-    {
+    ): array {
         $dependencies = [];
         $class = new ReflectionClass($controller);
         $method = $class->getMethod($method);

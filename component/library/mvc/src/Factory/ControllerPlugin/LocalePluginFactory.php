@@ -21,8 +21,7 @@ class LocalePluginFactory
      */
     public function __invoke(
         ContainerInterface $sm
-    ): LocaleControllerPlugin
-    {
+    ): LocaleControllerPlugin {
         $services = $sm->getServiceLocator();
         $translator = $services->get('MvcTranslator');
         try {

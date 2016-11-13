@@ -56,16 +56,6 @@ class Attribute extends AbstractEntity implements
     protected $productTemplates;
 
     /**
-     * Perform a deep clone
-     *
-     * @return AttributeEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
-    }
-
-    /**
      * Object constructor
      *
      */
@@ -74,6 +64,16 @@ class Attribute extends AbstractEntity implements
         $this->translations = new ArrayCollection();
         $this->values = new ArrayCollection();
         $this->productTemplates = new ArrayCollection();
+    }
+
+    /**
+     * Perform a deep clone
+     *
+     * @return AttributeEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
     }
 
     /**
@@ -90,8 +90,7 @@ class Attribute extends AbstractEntity implements
      * @return AttributeEntity
      */
     public function setTranslations(Collection $translations
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -102,8 +101,7 @@ class Attribute extends AbstractEntity implements
      * @return AttributeEntity
      */
     public function addTranslations(Collection $translations
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
@@ -116,8 +114,7 @@ class Attribute extends AbstractEntity implements
      * @return AttributeEntity
      */
     public function addTranslation(AttributeI18nEntity $translation
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -133,8 +130,7 @@ class Attribute extends AbstractEntity implements
      * @return AttributeEntity
      */
     public function removeTranslations(Collection $translations
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -149,8 +145,7 @@ class Attribute extends AbstractEntity implements
      * @return AttributeEntity
      */
     public function removeTranslation(AttributeI18nEntity $translation
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         $translation->setAttribute(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -207,8 +202,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function setValues(Collection $values
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         $this->values = $values;
         return $this;
     }
@@ -217,8 +211,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function addValues(Collection $values
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         foreach ($values as $value) {
             $this->addValue($value);
         }
@@ -229,8 +222,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function addValue(AttributeValueEntity $value
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         if ($this->values->contains($value)) {
             return $this;
         }
@@ -244,8 +236,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeValues(Collection $values
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         foreach ($values as $value) {
             $this->removeValue($value);
         }
@@ -256,8 +247,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeValue(AttributeValueEntity $value
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         $value->setAttribute(null);
         $this->values->removeElement($value);
         return $this;
@@ -286,8 +276,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function addProductTemplates(Collection $productTemplates
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         foreach ($productTemplates as $productTemplate) {
             $this->addProductTemplate($productTemplate);
         }
@@ -298,8 +287,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function addProductTemplate(ProductTemplateEntity $productTemplate
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         if ($this->productTemplates->contains($productTemplate)) {
             return $this;
         }
@@ -312,8 +300,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeProductTemplates(Collection $productTemplates
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         foreach ($productTemplates as $productTemplate) {
             $this->removeProductTemplate($productTemplate);
         }
@@ -324,8 +311,7 @@ class Attribute extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeProductTemplate(ProductTemplateEntity $productTemplate
-    ): AttributeEntity
-    {
+    ): AttributeEntity {
         $this->productTemplates->removeElement($productTemplate);
         return $this;
     }

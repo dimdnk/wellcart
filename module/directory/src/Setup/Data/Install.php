@@ -35,6 +35,41 @@ class Install
         $this->loadCountries($manager);
     }
 
+    public function getPermissionsDefinition(): array
+    {
+        return [
+            ['name' => 'directory/currencies/group-action-handler',],
+            ['name' => 'directory/currencies/list',],
+            ['name' => 'directory/currencies/view',],
+            ['name' => 'directory/currencies/create',],
+            ['name' => 'directory/currencies/update',],
+            ['name' => 'directory/currencies/delete',],
+
+            ['name' => 'directory/countries/group-action-handler',],
+            ['name' => 'directory/countries/list',],
+            ['name' => 'directory/countries/view',],
+            ['name' => 'directory/countries/create',],
+            ['name' => 'directory/countries/update',],
+            ['name' => 'directory/countries/delete',],
+
+            ['name' => 'directory/zones/group-action-handler',],
+            ['name' => 'directory/zones/list',],
+            ['name' => 'directory/zones/view',],
+            ['name' => 'directory/zones/create',],
+            ['name' => 'directory/zones/update',],
+            ['name' => 'directory/zones/delete',],
+            ['name' => 'directory/zones/get-zone-options',],
+
+            ['name' => 'directory/geo-zones/group-action-handler',],
+            ['name' => 'directory/geo-zones/list',],
+            ['name' => 'directory/geo-zones/view',],
+            ['name' => 'directory/geo-zones/create',],
+            ['name' => 'directory/geo-zones/update',],
+            ['name' => 'directory/geo-zones/delete',],
+
+        ];
+    }
+
     private function loadCurrencies(ObjectManager $manager)
     {
         $currency = new Currency();
@@ -87,40 +122,5 @@ class Install
             $manager->flush();
             $manager->clear();
         }
-    }
-
-    public function getPermissionsDefinition(): array
-    {
-        return [
-            ['name' => 'directory/currencies/group-action-handler',],
-            ['name' => 'directory/currencies/list',],
-            ['name' => 'directory/currencies/view',],
-            ['name' => 'directory/currencies/create',],
-            ['name' => 'directory/currencies/update',],
-            ['name' => 'directory/currencies/delete',],
-
-            ['name' => 'directory/countries/group-action-handler',],
-            ['name' => 'directory/countries/list',],
-            ['name' => 'directory/countries/view',],
-            ['name' => 'directory/countries/create',],
-            ['name' => 'directory/countries/update',],
-            ['name' => 'directory/countries/delete',],
-
-            ['name' => 'directory/zones/group-action-handler',],
-            ['name' => 'directory/zones/list',],
-            ['name' => 'directory/zones/view',],
-            ['name' => 'directory/zones/create',],
-            ['name' => 'directory/zones/update',],
-            ['name' => 'directory/zones/delete',],
-            ['name' => 'directory/zones/get-zone-options',],
-
-            ['name' => 'directory/geo-zones/group-action-handler',],
-            ['name' => 'directory/geo-zones/list',],
-            ['name' => 'directory/geo-zones/view',],
-            ['name' => 'directory/geo-zones/create',],
-            ['name' => 'directory/geo-zones/update',],
-            ['name' => 'directory/geo-zones/delete',],
-
-        ];
     }
 }

@@ -20,8 +20,7 @@ class ApplicationFactory
      * @return ApplicationInterface
      */
     public function __invoke(ContainerInterface $container
-    ): ApplicationInterface
-    {
+    ): ApplicationInterface {
         return new Application(
             $container->get('Config'), $container,
             null, null, null,

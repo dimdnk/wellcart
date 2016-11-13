@@ -22,9 +22,10 @@ class CommandBusControllerPluginFactory
      */
     public function __invoke(ContainerInterface $container): CommandBus
     {
-        return new CommandBus($container
-          ->getServiceLocator()
-          ->get('command_bus')
+        return new CommandBus(
+            $container
+                ->getServiceLocator()
+                ->get('command_bus')
         );
     }
 }

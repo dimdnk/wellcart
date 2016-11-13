@@ -77,8 +77,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
      * @inheritdoc
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): UrlRewriteEntity
-    {
+    ): UrlRewriteEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -112,8 +111,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
      * @inheritdoc
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): UrlRewriteEntity
-    {
+    ): UrlRewriteEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

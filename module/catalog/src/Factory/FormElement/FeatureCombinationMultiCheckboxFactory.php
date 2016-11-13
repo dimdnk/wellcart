@@ -13,7 +13,8 @@ use WellCart\Catalog\Spec\FeatureRepository;
 
 class FeatureCombinationMultiCheckboxFactory
 {
-    public function __invoke(ContainerInterface $sm) {
+    public function __invoke(ContainerInterface $sm)
+    {
         $services = $sm->getServiceLocator();
         $options = $services->get(
             FeatureRepository::class

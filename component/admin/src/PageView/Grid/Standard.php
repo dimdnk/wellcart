@@ -253,6 +253,51 @@ abstract class Standard
     }
 
     /**
+     * @inheritdoc
+     */
+    final public function setId($id)
+    {
+        if ($this->grid !== null) {
+            $this->grid->setId($id);
+        }
+        parent::setId($id);
+    }
+
+    /**
+     * @param $column
+     *
+     * @return Standard
+     */
+    public function addColumn($column)
+    {
+        $this->columns->insert($column->getUniqueId(), $column);
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDefaultOrder()
+    {
+        return $this->defaultOrder;
+    }
+
+    /**
+     * @param        $sortBy
+     * @param string $sortOrder
+     *
+     * @return GridFilterBuilder
+     */
+    public function setDefaultOrder($sortBy, $sortOrder = 'asc')
+    {
+        $this->defaultOrder = [
+            'sortBy'    => $sortBy,
+            'sortOrder' => $sortOrder,
+        ];
+        return $this;
+    }
+
+    /**
      * Current grid scope
      *
      * @return string
@@ -299,28 +344,6 @@ abstract class Standard
     }
 
     /**
-     * @inheritdoc
-     */
-    final public function setId($id)
-    {
-        if ($this->grid !== null) {
-            $this->grid->setId($id);
-        }
-        parent::setId($id);
-    }
-
-    /**
-     * @param $column
-     *
-     * @return Standard
-     */
-    public function addColumn($column)
-    {
-        $this->columns->insert($column->getUniqueId(), $column);
-        return $this;
-    }
-
-    /**
      * Configure Data Grid
      *
      * @return void
@@ -335,29 +358,6 @@ abstract class Standard
     protected function configureQueryBuilder(QueryBuilder $qb)
     {
         $qb->setCacheable(true);
-    }
-
-    /**
-     * @return array
-     */
-    public function getDefaultOrder()
-    {
-        return $this->defaultOrder;
-    }
-
-    /**
-     * @param        $sortBy
-     * @param string $sortOrder
-     *
-     * @return GridFilterBuilder
-     */
-    public function setDefaultOrder($sortBy, $sortOrder = 'asc')
-    {
-        $this->defaultOrder = [
-            'sortBy'    => $sortBy,
-            'sortOrder' => $sortOrder,
-        ];
-        return $this;
     }
 
     /**

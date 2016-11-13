@@ -40,6 +40,14 @@ class AttributeCombination
     protected $variant;
 
     /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+    }
+
+    /**
      * Perform a deep clone
      *
      * @return AttributeCombinationEntity
@@ -48,15 +56,6 @@ class AttributeCombination
     {
         $this->__construct();
     }
-
-    /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-    }
-
 
     /**
      * @return int
@@ -91,8 +90,7 @@ class AttributeCombination
      * @return AttributeCombinationEntity
      */
     public function setAttribute(AttributeEntity $attribute
-    ): AttributeCombinationEntity
-    {
+    ): AttributeCombinationEntity {
         $this->attribute = $attribute;
         return $this;
     }
@@ -111,8 +109,7 @@ class AttributeCombination
      * @return AttributeCombinationEntity
      */
     public function setAttributeValue(AttributeValueEntity $attributeValue
-    ): AttributeCombinationEntity
-    {
+    ): AttributeCombinationEntity {
         $this->attributeValue = $attributeValue;
         return $this;
     }
@@ -131,8 +128,7 @@ class AttributeCombination
      * @return AttributeCombinationEntity
      */
     public function setVariant(ProductVariantEntity $variant
-    ): AttributeCombinationEntity
-    {
+    ): AttributeCombinationEntity {
         $this->variant = $variant;
         return $this;
     }

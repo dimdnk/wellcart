@@ -56,16 +56,6 @@ class Feature extends AbstractEntity implements
     protected $backendName;
 
     /**
-     * Perform a deep clone
-     *
-     * @return FeatureEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
-    }
-
-    /**
      * Object constructor
      *
      */
@@ -74,6 +64,16 @@ class Feature extends AbstractEntity implements
         $this->translations = new ArrayCollection();
         $this->values = new ArrayCollection();
         $this->productTemplates = new ArrayCollection();
+    }
+
+    /**
+     * Perform a deep clone
+     *
+     * @return FeatureEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
     }
 
     /**
@@ -90,8 +90,7 @@ class Feature extends AbstractEntity implements
      * @return FeatureEntity
      */
     public function setTranslations(Collection $translations
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -102,8 +101,7 @@ class Feature extends AbstractEntity implements
      * @return FeatureEntity
      */
     public function addTranslations(Collection $translations
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
@@ -116,8 +114,7 @@ class Feature extends AbstractEntity implements
      * @return FeatureEntity
      */
     public function addTranslation(FeatureI18nEntity $translation
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -133,8 +130,7 @@ class Feature extends AbstractEntity implements
      * @return FeatureEntity
      */
     public function removeTranslations(Collection $translations
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -149,8 +145,7 @@ class Feature extends AbstractEntity implements
      * @return FeatureEntity
      */
     public function removeTranslation(FeatureI18nEntity $translation
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         $translation->setFeature(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -207,8 +202,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function setValues(Collection $values
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         $this->values = $values;
         return $this;
     }
@@ -217,8 +211,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function addValues(Collection $values
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         foreach ($values as $value) {
             $this->addValue($value);
         }
@@ -229,8 +222,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function addValue(FeatureValueEntity $value
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         if ($this->values->contains($value)) {
             return $this;
         }
@@ -244,8 +236,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeValues(Collection $values
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         foreach ($values as $value) {
             $this->removeValue($value);
         }
@@ -256,8 +247,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeValue(FeatureValueEntity $value
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         $value->setFeature(null);
         $this->values->removeElement($value);
         return $this;
@@ -286,8 +276,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function addProductTemplates(Collection $productTemplates
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         foreach ($productTemplates as $productTemplate) {
             $this->addProductTemplate($productTemplate);
         }
@@ -298,8 +287,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function addProductTemplate(ProductTemplateEntity $productTemplate
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         if ($this->productTemplates->contains($productTemplate)) {
             return $this;
         }
@@ -311,8 +299,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeProductTemplates(Collection $productTemplates
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         foreach ($productTemplates as $productTemplate) {
             $this->removeProductTemplate($productTemplate);
         }
@@ -323,8 +310,7 @@ class Feature extends AbstractEntity implements
      * @inheritDoc
      */
     public function removeProductTemplate(ProductTemplateEntity $productTemplate
-    ): FeatureEntity
-    {
+    ): FeatureEntity {
         $this->productTemplates->removeElement($productTemplate);
         return $this;
     }

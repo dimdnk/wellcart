@@ -45,6 +45,15 @@ class FeatureValue extends AbstractEntity implements
     protected $feature;
 
     /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->translations = new ArrayCollection();
+    }
+
+    /**
      * Perform a deep clone
      *
      * @return FeatureValueEntity
@@ -52,15 +61,6 @@ class FeatureValue extends AbstractEntity implements
     public function __clone()
     {
         $this->__construct();
-    }
-
-    /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->translations = new ArrayCollection();
     }
 
     /**
@@ -77,8 +77,7 @@ class FeatureValue extends AbstractEntity implements
      * @return FeatureValueEntity
      */
     public function setTranslations(Collection $translations
-    ): FeatureValueEntity
-    {
+    ): FeatureValueEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -89,8 +88,7 @@ class FeatureValue extends AbstractEntity implements
      * @return FeatureValueEntity
      */
     public function addTranslations(Collection $translations
-    ): FeatureValueEntity
-    {
+    ): FeatureValueEntity {
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
@@ -103,8 +101,7 @@ class FeatureValue extends AbstractEntity implements
      * @return FeatureValueEntity
      */
     public function addTranslation(FeatureValueI18nEntity $translation
-    ): FeatureValueEntity
-    {
+    ): FeatureValueEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -120,8 +117,7 @@ class FeatureValue extends AbstractEntity implements
      * @return FeatureValueEntity
      */
     public function removeTranslations(Collection $translations
-    ): FeatureValueEntity
-    {
+    ): FeatureValueEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -136,8 +132,7 @@ class FeatureValue extends AbstractEntity implements
      * @return FeatureValueEntity
      */
     public function removeTranslation(FeatureValueI18nEntity $translation
-    ): FeatureValueEntity
-    {
+    ): FeatureValueEntity {
         $translation->setFeatureValue(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -196,8 +191,7 @@ class FeatureValue extends AbstractEntity implements
      * @return FeatureValueEntity
      */
     public function setFeature(FeatureEntity $feature = null
-    ): FeatureValueEntity
-    {
+    ): FeatureValueEntity {
         $this->feature = $feature;
         return $this;
     }

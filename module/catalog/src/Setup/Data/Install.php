@@ -36,51 +36,6 @@ class Install
         $this->createRootCategory($manager);
     }
 
-    private function createProductTemplate(ObjectManager $manager)
-    {
-        $language = $manager->find(
-            'WellCart\Base\Entity\Locale\Language',
-            1
-        );
-
-        $template = new ProductTemplate();
-        $template->setIsSystem(true);
-        $translation = new ProductTemplateI18n();
-        $translation
-            ->setLanguage($language)
-            ->setName('Default')
-            ->setProductTemplate($template);
-
-        $template->addTranslation($translation);
-
-        $manager->persist($template);
-        $manager->flush();
-    }
-
-    private function createRootCategory(ObjectManager $manager)
-    {
-        $language = $manager->find(
-            'WellCart\Base\Entity\Locale\Language',
-            1
-        );
-
-        $category = new Category();
-        $category->setIsVisible(1)
-            ->setUrlKey('root');
-
-        $translation = new CategoryI18n();
-        $translation
-            ->setLanguage($language)
-            ->setName('Root Category')
-            ->setDescription('Root Category')
-            ->setCategory($category);
-
-        $category->addTranslation($translation);
-
-        $manager->persist($category);
-        $manager->flush();
-    }
-
     public function getPermissionsDefinition(): array
     {
         return [
@@ -128,5 +83,50 @@ class Install
             ['name' => 'catalog/product-templates/update',],
             ['name' => 'catalog/product-templates/delete',],
         ];
+    }
+
+    private function createProductTemplate(ObjectManager $manager)
+    {
+        $language = $manager->find(
+            'WellCart\Base\Entity\Locale\Language',
+            1
+        );
+
+        $template = new ProductTemplate();
+        $template->setIsSystem(true);
+        $translation = new ProductTemplateI18n();
+        $translation
+            ->setLanguage($language)
+            ->setName('Default')
+            ->setProductTemplate($template);
+
+        $template->addTranslation($translation);
+
+        $manager->persist($template);
+        $manager->flush();
+    }
+
+    private function createRootCategory(ObjectManager $manager)
+    {
+        $language = $manager->find(
+            'WellCart\Base\Entity\Locale\Language',
+            1
+        );
+
+        $category = new Category();
+        $category->setIsVisible(1)
+            ->setUrlKey('root');
+
+        $translation = new CategoryI18n();
+        $translation
+            ->setLanguage($language)
+            ->setName('Root Category')
+            ->setDescription('Root Category')
+            ->setCategory($category);
+
+        $category->addTranslation($translation);
+
+        $manager->persist($category);
+        $manager->flush();
     }
 }

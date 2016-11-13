@@ -108,8 +108,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      * @return CategoryI18nEntity
      */
     public function setCategory(CategoryEntity $category = null
-    ): CategoryI18nEntity
-    {
+    ): CategoryI18nEntity {
         $categoryId = null;
         if ($category) {
             $categoryId = $category->getId();
@@ -134,8 +133,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      * @return CategoryI18nEntity
      */
     public function setLanguage(LocaleLanguageEntity $language = null
-    ): CategoryI18nEntity
-    {
+    ): CategoryI18nEntity {
         $languageId = null;
         if ($language) {
             $languageId = $language->getId();
@@ -179,8 +177,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      * @return CategoryI18nEntity
      */
     public function setDescription($description
-    ): CategoryI18nEntity
-    {
+    ): CategoryI18nEntity {
         $this->description = $description;
         return $this;
     }
@@ -199,8 +196,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      * @return CategoryI18nEntity
      */
     public function setMetaDescription($metaDescription
-    ): CategoryI18nEntity
-    {
+    ): CategoryI18nEntity {
         $this->metaDescription = $metaDescription;
         return $this;
     }
@@ -219,8 +215,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      * @return CategoryI18nEntity
      */
     public function setMetaKeywords($metaKeywords
-    ): CategoryI18nEntity
-    {
+    ): CategoryI18nEntity {
         $this->metaKeywords = $metaKeywords;
         return $this;
     }
@@ -277,8 +272,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      * @return CategoryI18nEntity
      */
     public function setCategoryId($categoryId
-    ): CategoryI18nEntity
-    {
+    ): CategoryI18nEntity {
         $this->categoryId = $categoryId;
         return $this;
     }

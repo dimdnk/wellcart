@@ -100,16 +100,6 @@ class Category extends AbstractEntity
     protected $updatedAt;
 
     /**
-     * Perform a deep clone
-     *
-     * @return CategoryEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
-    }
-
-    /**
      * Object constructor
      *
      */
@@ -119,6 +109,16 @@ class Category extends AbstractEntity
         $this->translations = new ArrayCollection();
         $this->products = new ArrayCollection();
         $this->children = new ArrayCollection();
+    }
+
+    /**
+     * Perform a deep clone
+     *
+     * @return CategoryEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
     }
 
     /**
@@ -154,8 +154,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function setTranslations(Collection $translations
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -166,8 +165,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function addTranslations(Collection $translations
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
@@ -180,8 +178,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function addTranslation(CategoryI18nEntity $translation
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -197,8 +194,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function removeTranslations(Collection $translations
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -213,8 +209,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function removeTranslation(CategoryI18nEntity $translation
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         $translation->setCategory(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -372,8 +367,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function addChild(CategoryEntity $child
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         if ($this->children->contains($child)) {
             return $this;
         }
@@ -389,8 +383,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function removeChildren(Collection $children
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         foreach ($children as $child) {
             $this->removeChild($child);
         }
@@ -403,8 +396,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function removeChild(CategoryEntity $child
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         $child->setParent(null);
         $this->children->removeElement($child);
         return $this;
@@ -513,8 +505,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function addProduct(ProductEntity $product
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         if ($this->products->contains($product)) {
             return $this;
         }
@@ -530,8 +521,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function removeProducts(Collection $products
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         foreach ($products as $product) {
             $this->removeProduct($product);
         }
@@ -544,8 +534,7 @@ class Category extends AbstractEntity
      * @return CategoryEntity
      */
     public function removeProduct(ProductEntity $product
-    ): CategoryEntity
-    {
+    ): CategoryEntity {
         $product->getCategories()->removeElement($this);
         $this->products->removeElement($product);
         return $this;

@@ -21,8 +21,7 @@ class ActionHandlesListenerFactory
      * @return ActionHandlesListener
      */
     public function __invoke(ContainerInterface $container
-    ): ActionHandlesListener
-    {
+    ): ActionHandlesListener {
         /* @var $moduleOptions ModuleOptions */
         $moduleOptions = $container->get(ModuleOptions::class);
         $updater = $container->get(LayoutUpdaterInterface::class);

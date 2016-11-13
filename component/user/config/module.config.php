@@ -78,7 +78,7 @@ return [
         ],
     ],
 
-    'form_elements'   => [
+    'form_elements' => [
         'factories' => [
             'userRolesMultiCheckboxSelector'       => Factory\FormElement\RolesMultiCheckboxSelectorFactory::class,
             'userPermissionsMultiCheckboxSelector' => Factory\FormElement\PermissionsMultiCheckboxSelectorFactory::class,

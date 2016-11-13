@@ -20,8 +20,7 @@ class MessengerFactory
      * @return Messenger
      */
     public function __invoke(ContainerInterface $container
-    ): Messenger
-    {
+    ): Messenger {
         $container = $container->getServiceLocator();
         $helper = new Messenger();
         $controllerPluginManager = $container->get(

@@ -96,6 +96,125 @@ class AccountEmailHandler
     }
 
     /**
+     * Confirm user email address?
+     *
+     * @return bool
+     */
+    public function isConfirmEmail(): bool
+    {
+        return (
+            ($this->isEnabled()) && ($this->options['confirm_email'])
+        );
+    }
+
+    /**
+     * Send welcome email
+     *
+     * @param UserEntity $user
+     *
+     * @return \AcMailer\Result\ResultInterface
+     */
+    public function sendWelcomeEmail(
+        UserEntity $user
+    ) {
+        $mailSubject = sprintf(
+            __('Welcome to %s'),
+            Config::get('wellcart.website.name', 'Demo Application')
+        );
+
+        return $this->send(
+            __FUNCTION__,
+            'welcome',
+            $mailSubject,
+            $user
+        );
+    }
+
+    /**
+     * @return Users
+     */
+    public function getRepository()
+    {
+        return $this->repository;
+    }
+
+    /**
+     * Confirm email
+     *
+     * @param UserEntity $user
+     *
+     * @return bool
+     */
+    public function confirmEmail(UserEntity $user)
+    {
+        $this->getEventManager()->trigger(
+            __FUNCTION__ . '.pre',
+            $this,
+            compact('user')
+        );
+
+        $user->setEmailConfirmationToken(null);
+        $this->getRepository()->add($user);
+
+        $mailSubject = sprintf(
+            __('Welcome to %s'),
+            Config::get('wellcart.website.name', 'Demo Application')
+        );
+
+        return $this->send(
+            __FUNCTION__,
+            'email_confirmed',
+            $mailSubject,
+            $user
+        );
+    }
+
+    /**
+     * Send email with link for address confirmation
+     *
+     * @param UserEntity $user
+     *
+     * @return \AcMailer\Result\ResultInterface
+     */
+    public function sendConfirmationEmail(UserEntity $user)
+    {
+        $token = $this->generateToken();
+        $user->setEmailConfirmationToken($token);
+        $url = url_to_route('user-account-confirm-email', ['token' => $token]);
+
+        $mailSubject = sprintf(
+            __('Please confirm your %s account'),
+            Config::get('wellcart.website.name', 'Demo Application')
+        );
+
+        return $this->send(
+            __FUNCTION__,
+            'email_confirmation',
+            $mailSubject,
+            $user,
+            $url
+        );
+    }
+
+    /**
+     * Is valid token
+     *
+     * @param $token
+     *
+     * @return bool
+     */
+    public function isValidToken($token): bool
+    {
+        $this->getEventManager()->trigger(
+            __FUNCTION__ . '.pre',
+            $this,
+            compact('token')
+        );
+
+        return $this->repository->isEmailConfirmationTokenExists($token);
+    }
+
+    /**
      * Determine is mailing possible
      *
      * @return bool
@@ -131,41 +250,6 @@ class AccountEmailHandler
             'wellcart.email_communications.contacts.'
             . $this->options['email_contact'],
             false
-        );
-    }
-
-    /**
-     * Confirm user email address?
-     *
-     * @return bool
-     */
-    public function isConfirmEmail(): bool
-    {
-        return (
-            ($this->isEnabled()) && ($this->options['confirm_email'])
-        );
-    }
-
-    /**
-     * Send welcome email
-     *
-     * @param UserEntity $user
-     *
-     * @return \AcMailer\Result\ResultInterface
-     */
-    public function sendWelcomeEmail(
-        UserEntity $user
-    ) {
-        $mailSubject = sprintf(
-            __('Welcome to %s'),
-            Config::get('wellcart.website.name', 'Demo Application')
-        );
-
-        return $this->send(
-            __FUNCTION__,
-            'welcome',
-            $mailSubject,
-            $user
         );
     }
 
@@ -257,72 +341,6 @@ class AccountEmailHandler
     }
 
     /**
-     * @return Users
-     */
-    public function getRepository()
-    {
-        return $this->repository;
-    }
-
-    /**
-     * Confirm email
-     *
-     * @param UserEntity $user
-     *
-     * @return bool
-     */
-    public function confirmEmail(UserEntity $user)
-    {
-        $this->getEventManager()->trigger(
-            __FUNCTION__ . '.pre',
-            $this,
-            compact('user')
-        );
-
-        $user->setEmailConfirmationToken(null);
-        $this->getRepository()->add($user);
-
-        $mailSubject = sprintf(
-            __('Welcome to %s'),
-            Config::get('wellcart.website.name', 'Demo Application')
-        );
-
-        return $this->send(
-            __FUNCTION__,
-            'email_confirmed',
-            $mailSubject,
-            $user
-        );
-    }
-
-    /**
-     * Send email with link for address confirmation
-     *
-     * @param UserEntity $user
-     *
-     * @return \AcMailer\Result\ResultInterface
-     */
-    public function sendConfirmationEmail(UserEntity $user)
-    {
-        $token = $this->generateToken();
-        $user->setEmailConfirmationToken($token);
-        $url = url_to_route('user-account-confirm-email', ['token' => $token]);
-
-        $mailSubject = sprintf(
-            __('Please confirm your %s account'),
-            Config::get('wellcart.website.name', 'Demo Application')
-        );
-
-        return $this->send(
-            __FUNCTION__,
-            'email_confirmation',
-            $mailSubject,
-            $user,
-            $url
-        );
-    }
-
-    /**
      * Generate unique token
      *
      * @return string
@@ -330,23 +348,5 @@ class AccountEmailHandler
     protected function generateToken()
     {
         return md5(uniqid(microtime() . Str::random(Str::NUMERIC), true));
-    }
-
-    /**
-     * Is valid token
-     *
-     * @param $token
-     *
-     * @return bool
-     */
-    public function isValidToken($token): bool
-    {
-        $this->getEventManager()->trigger(
-            __FUNCTION__ . '.pre',
-            $this,
-            compact('token')
-        );
-
-        return $this->repository->isEmailConfirmationTokenExists($token);
     }
 }

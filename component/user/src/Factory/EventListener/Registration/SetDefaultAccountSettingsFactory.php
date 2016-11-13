@@ -19,8 +19,7 @@ class SetDefaultAccountSettingsFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): SetDefaultAccountSettings
-    {
+    ): SetDefaultAccountSettings {
         return new SetDefaultAccountSettings(
             $container->get(AclRoleRepository::class),
             $container->get(LocaleLanguageRepository::class)

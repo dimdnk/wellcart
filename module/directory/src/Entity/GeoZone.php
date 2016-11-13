@@ -78,8 +78,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
      * @return GeoZoneEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): GeoZoneEntity
-    {
+    ): GeoZoneEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -98,8 +97,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
      * @return GeoZoneEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): GeoZoneEntity
-    {
+    ): GeoZoneEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }
@@ -186,8 +184,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
      * @return GeoZoneEntity
      */
     public function addGeoZoneMaps(Collection $geoZoneMaps
-    ): GeoZoneEntity
-    {
+    ): GeoZoneEntity {
         foreach ($geoZoneMaps as $geoZoneMap) {
             $this->addGeoZoneMap($geoZoneMap);
         }
@@ -200,8 +197,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
      * @return GeoZoneEntity
      */
     public function addGeoZoneMap(GeoZoneMapEntity $geoZoneMap
-    ): GeoZoneEntity
-    {
+    ): GeoZoneEntity {
         if ($this->geoZoneMaps->contains($geoZoneMap)) {
             return $this;
         }
@@ -216,8 +212,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
      * @return GeoZoneEntity
      */
     public function removeGeoZoneMaps(Collection $geoZoneMaps
-    ): GeoZoneEntity
-    {
+    ): GeoZoneEntity {
         foreach ($geoZoneMaps as $geoZoneMap) {
             $this->removeGeoZoneMap($geoZoneMap);
         }
@@ -232,8 +227,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
      * @return GeoZoneEntity
      */
     public function removeGeoZoneMap(GeoZoneMapEntity $geoZoneMap
-    ): GeoZoneEntity
-    {
+    ): GeoZoneEntity {
         //$geoZoneMap->setGeoZone(null);
         $this->geoZoneMaps->removeElement($geoZoneMap);
         return $this;

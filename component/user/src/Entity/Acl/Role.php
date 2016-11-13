@@ -88,6 +88,17 @@ class Role extends AbstractRole implements AclRoleEntity
     protected $updatedAt;
 
     /**
+     * Object constructor
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->users = new ArrayCollection;
+        $this->permissions = new ArrayCollection;
+        $this->children = new ArrayCollection();
+    }
+
+    /**
      * @param int $index
      *
      * @return AclRoleEntity
@@ -106,17 +117,6 @@ class Role extends AbstractRole implements AclRoleEntity
     public function __clone()
     {
         $this->__construct();
-    }
-
-    /**
-     * Object constructor
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->users = new ArrayCollection;
-        $this->permissions = new ArrayCollection;
-        $this->children = new ArrayCollection();
     }
 
     /**
@@ -260,8 +260,7 @@ class Role extends AbstractRole implements AclRoleEntity
      * @return AclRoleEntity
      */
     public function removeUser(UserEntity $user
-    ): AclRoleEntity
-    {
+    ): AclRoleEntity {
         $this->users->removeElement($user);
         return $this;
     }
@@ -272,8 +271,7 @@ class Role extends AbstractRole implements AclRoleEntity
      * @return AclRoleEntity
      */
     public function addPermissions(Collection $permissions
-    ): AclRoleEntity
-    {
+    ): AclRoleEntity {
         foreach ($permissions as $permission) {
             $this->addPermission($permission);
         }
@@ -302,8 +300,7 @@ class Role extends AbstractRole implements AclRoleEntity
      * @return AclRoleEntity
      */
     public function removePermissions(Collection $permissions
-    ): AclRoleEntity
-    {
+    ): AclRoleEntity {
         foreach ($permissions as $permission) {
             $this->removePermission($permission);
         }
@@ -316,8 +313,7 @@ class Role extends AbstractRole implements AclRoleEntity
      * @return AclRoleEntity
      */
     public function removePermission(AclPermissionEntity $permission
-    ): AclRoleEntity
-    {
+    ): AclRoleEntity {
         $this->permissions->removeElement($permission);
         return $this;
     }
@@ -355,8 +351,7 @@ class Role extends AbstractRole implements AclRoleEntity
      * @return AclRoleEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): AclRoleEntity
-    {
+    ): AclRoleEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -461,8 +456,7 @@ class Role extends AbstractRole implements AclRoleEntity
      * @return AclRoleEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): AclRoleEntity
-    {
+    ): AclRoleEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

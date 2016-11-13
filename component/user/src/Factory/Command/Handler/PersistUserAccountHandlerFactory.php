@@ -17,8 +17,7 @@ class PersistUserAccountHandlerFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): PersistUserAccountHandler
-    {
+    ): PersistUserAccountHandler {
         return new PersistUserAccountHandler(
             $container->get('zfcuser_user_service')
         );

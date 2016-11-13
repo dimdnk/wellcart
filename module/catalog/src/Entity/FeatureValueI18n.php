@@ -84,8 +84,7 @@ class FeatureValueI18n extends AbstractEntity implements FeatureValueI18nEntity
      * @return FeatureValueI18nEntity
      */
     public function setLanguage(LocaleLanguageEntity $language = null
-    ): FeatureValueI18nEntity
-    {
+    ): FeatureValueI18nEntity {
         $this->language = $language;
         return $this;
     }
@@ -142,8 +141,7 @@ class FeatureValueI18n extends AbstractEntity implements FeatureValueI18nEntity
      * @return FeatureValueI18nEntity
      */
     public function setFeature(FeatureEntity $feature = null
-    ): FeatureValueI18nEntity
-    {
+    ): FeatureValueI18nEntity {
         $this->feature = $feature;
         return $this;
     }

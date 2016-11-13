@@ -20,8 +20,7 @@ class LoadLayoutListenerFactory
      * @return LoadLayoutListener
      */
     public function __invoke(ContainerInterface $container
-    ): LoadLayoutListener
-    {
+    ): LoadLayoutListener {
         return new LoadLayoutListener($container->get(LayoutInterface::class));
     }
 }

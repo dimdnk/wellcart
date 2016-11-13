@@ -58,13 +58,22 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     protected $updatedAt;
 
     /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->translations = new ArrayCollection();
+    }
+
+    /**
      * @param Collection|PageI18nEntity[] $translations
      *
      * @return PageEntity
      */
     public function addTranslations(Collection $translations
-    ): PageEntity
-    {
+    ): PageEntity {
         foreach ($translations as $translation) {
             if ($this->translations->contains($translation)) {
                 continue;
@@ -82,8 +91,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
      * @return PageEntity
      */
     public function addTranslation(PageI18nEntity $translation
-    ): PageEntity
-    {
+    ): PageEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -99,8 +107,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
      * @return PageEntity
      */
     public function removeTranslations(Collection $translations
-    ): PageEntity
-    {
+    ): PageEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -113,8 +120,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
      * @return PageEntity
      */
     public function removeTranslation(PageI18nEntity $translation
-    ): PageEntity
-    {
+    ): PageEntity {
         $translation->setPage(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -166,16 +172,6 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     }
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->translations = new ArrayCollection();
-    }
-
-    /**
      * @return Collection|PageI18nEntity[]
      */
     public function getTranslations(): Collection
@@ -189,8 +185,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
      * @return PageEntity
      */
     public function setTranslations(Collection $translations
-    ): PageEntity
-    {
+    ): PageEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -209,8 +204,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
      * @return PageEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): PageEntity
-    {
+    ): PageEntity {
         $this->createdAt = $createdAt;
         return $this;
     }

@@ -85,8 +85,7 @@ class AttributeValueI18n extends AbstractEntity
      * @return AttributeValueI18nEntity
      */
     public function setLanguage(LocaleLanguageEntity $language = null
-    ): AttributeValueI18nEntity
-    {
+    ): AttributeValueI18nEntity {
         $this->language = $language;
         return $this;
     }
@@ -143,8 +142,7 @@ class AttributeValueI18n extends AbstractEntity
      * @return AttributeValueI18nEntity
      */
     public function setAttribute(AttributeEntity $attribute = null
-    ): AttributeValueI18nEntity
-    {
+    ): AttributeValueI18nEntity {
         $this->attribute = $attribute;
         return $this;
     }

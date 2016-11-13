@@ -13,7 +13,8 @@ use WellCart\Catalog\Spec\BrandRepository;
 
 class BrandSelectorFactory
 {
-    public function __invoke(ContainerInterface $sm) {
+    public function __invoke(ContainerInterface $sm)
+    {
         $services = $sm->getServiceLocator();
         $brands = $services->get(
             BrandRepository::class

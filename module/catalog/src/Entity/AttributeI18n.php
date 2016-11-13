@@ -79,8 +79,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
      * @return AttributeI18nEntity
      */
     public function setLanguage(LocaleLanguageEntity $language = null
-    ): AttributeI18nEntity
-    {
+    ): AttributeI18nEntity {
         $this->language = $language;
         return $this;
     }

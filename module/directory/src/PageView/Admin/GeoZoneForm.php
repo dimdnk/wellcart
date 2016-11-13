@@ -41,6 +41,19 @@ class GeoZoneForm extends Standard
         return parent::prepare($template, $values);
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function setEntity(Entity $entity)
+    {
+        if (!$entity instanceof GeoZoneEntity) {
+            throw new Exception\InvalidArgumentException(
+                'Object must implement interface WellCart\Directory\Spec\GeoZoneEntity'
+            );
+        }
+        return parent::setEntity($entity);
+    }
+
     private function configure()
     {
         $this->setPageTitle(__('Geo Zones'))
@@ -66,18 +79,5 @@ class GeoZoneForm extends Standard
                 sprintf(__('Create Geo Zone %s'), e($entity->getName()))
             );
         }
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function setEntity(Entity $entity)
-    {
-        if (!$entity instanceof GeoZoneEntity) {
-            throw new Exception\InvalidArgumentException(
-                'Object must implement interface WellCart\Directory\Spec\GeoZoneEntity'
-            );
-        }
-        return parent::setEntity($entity);
     }
 }

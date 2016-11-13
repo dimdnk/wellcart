@@ -24,19 +24,6 @@ class ScopeEntityListener
         $this->ensureDefaultScope($scope, $args);
     }
 
-    protected function ensureDefaultScope(
-        ScopeEntity $scope,
-        LifecycleEventArgs $args
-    ) {
-        /**
-         * @var $repository ScopeRepository
-         */
-        $repository = $args->getObjectManager()->getRepository(
-            'WellCart\RestApi\Entity\OAuth2\Scope'
-        );
-        $repository->ensureDefaultScope($scope);
-    }
-
     public function postUpdate(
         ScopeEntity $scope,
         LifecycleEventArgs $args
@@ -52,5 +39,18 @@ class ScopeEntityListener
                 'Default scope cannot be removed.'
             );
         }
+    }
+
+    protected function ensureDefaultScope(
+        ScopeEntity $scope,
+        LifecycleEventArgs $args
+    ) {
+        /**
+         * @var $repository ScopeRepository
+         */
+        $repository = $args->getObjectManager()->getRepository(
+            'WellCart\RestApi\Entity\OAuth2\Scope'
+        );
+        $repository->ensureDefaultScope($scope);
     }
 }

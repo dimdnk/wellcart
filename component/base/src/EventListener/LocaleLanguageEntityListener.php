@@ -43,19 +43,6 @@ class LocaleLanguageEntityListener
         $this->ensureDefaultLanguage($language, $args);
     }
 
-    protected function ensureDefaultLanguage(
-        LocaleLanguageEntity $language,
-        LifecycleEventArgs $args
-    ) {
-        /**
-         * @var $repository LocaleLanguageRepository
-         */
-        $repository = $args->getObjectManager()->getRepository(
-            'WellCart\Base\Spec\LocaleLanguageEntity'
-        );
-        $repository->ensureDefaultLanguage($language);
-    }
-
     public function postUpdate(
         LocaleLanguageEntity $language,
         LifecycleEventArgs $args
@@ -71,5 +58,18 @@ class LocaleLanguageEntityListener
                 'Default language cannot be removed.'
             );
         }
+    }
+
+    protected function ensureDefaultLanguage(
+        LocaleLanguageEntity $language,
+        LifecycleEventArgs $args
+    ) {
+        /**
+         * @var $repository LocaleLanguageRepository
+         */
+        $repository = $args->getObjectManager()->getRepository(
+            'WellCart\Base\Spec\LocaleLanguageEntity'
+        );
+        $repository->ensureDefaultLanguage($language);
     }
 }

@@ -97,8 +97,7 @@ class Job extends AbstractEntity implements JobQueueEntity
      * @inheritdoc
      */
     public function setCreatedAt(\DateTimeInterface $createdAt = null
-    ): JobQueueEntity
-    {
+    ): JobQueueEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -217,8 +216,7 @@ class Job extends AbstractEntity implements JobQueueEntity
      * @inheritdoc
      */
     public function setScheduledAt(\DateTimeInterface $scheduledAt = null
-    ): JobQueueEntity
-    {
+    ): JobQueueEntity {
         $this->scheduledAt = $scheduledAt;
         return $this;
     }
@@ -235,8 +233,7 @@ class Job extends AbstractEntity implements JobQueueEntity
      * @inheritdoc
      */
     public function setExecutedAt(\DateTimeInterface $executedAt = null
-    ): JobQueueEntity
-    {
+    ): JobQueueEntity {
         $this->executedAt = $executedAt;
         return $this;
     }
@@ -253,8 +250,7 @@ class Job extends AbstractEntity implements JobQueueEntity
      * @inheritdoc
      */
     public function setFinishedAt(\DateTimeInterface $finishedAt = null
-    ): JobQueueEntity
-    {
+    ): JobQueueEntity {
         $this->finishedAt = $finishedAt;
         return $this;
     }

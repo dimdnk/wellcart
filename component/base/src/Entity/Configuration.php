@@ -86,8 +86,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
      * @inheritdoc
      */
     public function setConfigKey(string $configKey
-    ): ConfigurationEntity
-    {
+    ): ConfigurationEntity {
         $this->configKey = $configKey;
         return $this;
     }
@@ -121,8 +120,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
      * @inheritdoc
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): ConfigurationEntity
-    {
+    ): ConfigurationEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -156,8 +154,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
      * @inheritdoc
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): ConfigurationEntity
-    {
+    ): ConfigurationEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

@@ -121,10 +121,12 @@ final class ErrorHandler
             $template = __DIR__ . '/Resources/Maintenance.html';
         }
         $template = file_get_contents($template);
-        exit(str_replace(
+        exit(
+        str_replace(
             array('{exception}', '{reason}'), array($textMessage, $reason),
             $template
-        ));
+        )
+        );
     }
 
     /**

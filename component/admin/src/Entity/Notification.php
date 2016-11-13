@@ -222,8 +222,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      * @return NotificationEntity
      */
     public function setUpdatedAt(DateTimeInterface $updatedAt = null
-    ): NotificationEntity
-    {
+    ): NotificationEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }
@@ -242,8 +241,7 @@ class Notification extends AbstractEntity implements NotificationEntity
      * @return NotificationEntity
      */
     public function setDeletedAt(DateTimeInterface $deletedAt = null
-    ): NotificationEntity
-    {
+    ): NotificationEntity {
         $this->deletedAt = $deletedAt;
         return $this;
     }

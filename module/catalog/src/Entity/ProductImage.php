@@ -101,8 +101,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
      * @return ProductImageEntity
      */
     public function setProduct(ProductEntity $product = null
-    ): ProductImageEntity
-    {
+    ): ProductImageEntity {
         $this->product = $product;
         return $this;
     }
@@ -178,8 +177,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
      * @return ProductImageEntity
      */
     public function setOriginalFilename($originalFilename
-    ): ProductImageEntity
-    {
+    ): ProductImageEntity {
         $this->originalFilename = $originalFilename;
         return $this;
     }
@@ -274,8 +272,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
      * @return ProductImageEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): ProductImageEntity
-    {
+    ): ProductImageEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -294,8 +291,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
      * @return ProductImageEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): ProductImageEntity
-    {
+    ): ProductImageEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

@@ -183,6 +183,79 @@ class RecoverAccount
     }
 
     /**
+     * @return Users
+     */
+    public function getRepository()
+    {
+        return $this->repository;
+    }
+
+    /**
+     * Determine is recover possible
+     *
+     * @return bool
+     */
+    public function isRecoverPossible(): bool
+    {
+        return (
+            $this->isEmailCommunicationsEnabled() && $this->getEmailContact()
+        );
+    }
+
+    /**
+     * @return RecoverAccountForm
+     */
+    public function getRecoverAccountForm()
+    {
+        return $this->recoverAccountForm;
+    }
+
+    /**
+     * Is valid reset password token
+     *
+     * @param $token
+     *
+     * @return bool
+     */
+    public function isValidToken($token): bool
+    {
+        $this->getEventManager()->trigger(
+            __FUNCTION__ . '.pre',
+            $this,
+            compact('token')
+        );
+
+        return $this->repository->isPasswordTokenExists($token);
+    }
+
+    /**
+     * Update user password
+     *
+     * @param UserEntity          $user
+     * @param                     $password
+     *
+     * @return bool
+     */
+    public function resetPassword(UserEntity $user, $password)
+    {
+        $user->setPasswordResetToken(null);
+        $this->getEventManager()->trigger(
+            __FUNCTION__ . '.pre',
+            $this,
+            compact('user', 'password')
+        );
+
+        $result = $this->userService->updatePassword($user, $password);
+
+        $this->getEventManager()->trigger(
+            __FUNCTION__ . '.post',
+            $this,
+            compact('user', 'password', 'result')
+        );
+        return $result;
+    }
+
+    /**
      * Generate unique token for reset password confirmation link
      *
      * @return string
@@ -293,26 +366,6 @@ class RecoverAccount
     }
 
     /**
-     * @return Users
-     */
-    public function getRepository()
-    {
-        return $this->repository;
-    }
-
-    /**
-     * Determine is recover possible
-     *
-     * @return bool
-     */
-    public function isRecoverPossible(): bool
-    {
-        return (
-            $this->isEmailCommunicationsEnabled() && $this->getEmailContact()
-        );
-    }
-
-    /**
      * Determine email communications state
      *
      * @return bool
@@ -323,58 +376,5 @@ class RecoverAccount
             'wellcart.email_communications.enabled',
             true
         );
-    }
-
-    /**
-     * @return RecoverAccountForm
-     */
-    public function getRecoverAccountForm()
-    {
-        return $this->recoverAccountForm;
-    }
-
-    /**
-     * Is valid reset password token
-     *
-     * @param $token
-     *
-     * @return bool
-     */
-    public function isValidToken($token): bool
-    {
-        $this->getEventManager()->trigger(
-            __FUNCTION__ . '.pre',
-            $this,
-            compact('token')
-        );
-
-        return $this->repository->isPasswordTokenExists($token);
-    }
-
-    /**
-     * Update user password
-     *
-     * @param UserEntity          $user
-     * @param                     $password
-     *
-     * @return bool
-     */
-    public function resetPassword(UserEntity $user, $password)
-    {
-        $user->setPasswordResetToken(null);
-        $this->getEventManager()->trigger(
-            __FUNCTION__ . '.pre',
-            $this,
-            compact('user', 'password')
-        );
-
-        $result = $this->userService->updatePassword($user, $password);
-
-        $this->getEventManager()->trigger(
-            __FUNCTION__ . '.post',
-            $this,
-            compact('user', 'password', 'result')
-        );
-        return $result;
     }
 }

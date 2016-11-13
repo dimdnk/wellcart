@@ -34,9 +34,9 @@ return [
     ],
 
     'controllers'    => [
-        'aliases'            => [
-            'CMS::Admin\Pages'          => Controller\Admin\PagesController::class,
-        ], 
+        'aliases'   => [
+            'CMS::Admin\Pages' => Controller\Admin\PagesController::class,
+        ],
         'factories' => [
             Controller\Admin\PagesController::class => Factory\Controller\Admin\PagesControllerFactory::class,
         ],

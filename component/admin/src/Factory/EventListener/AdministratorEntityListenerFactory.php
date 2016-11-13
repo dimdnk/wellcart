@@ -18,8 +18,7 @@ class AdministratorEntityListenerFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): AdministratorEntityListener
-    {
+    ): AdministratorEntityListener {
         return new AdministratorEntityListener(
             $container->get(AuthenticationService::class)
         );

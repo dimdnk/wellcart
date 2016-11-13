@@ -76,17 +76,6 @@ class ProductVariant
      */
     protected $combinations;
 
-
-    /**
-     * Perform a deep clone
-     *
-     * @return ProductVariantEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
-    }
-
     /**
      * Object constructor
      *
@@ -97,6 +86,15 @@ class ProductVariant
         $this->combinations = new ArrayCollection();
     }
 
+    /**
+     * Perform a deep clone
+     *
+     * @return ProductVariantEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
+    }
 
     /**
      * @return int
@@ -188,8 +186,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -217,8 +214,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function setProduct(ProductEntity $product = null
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         $this->product = $product;
         return $this;
     }
@@ -256,8 +252,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function setCombinations(Collection $combinations
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         $this->combinations = $combinations;
         return $this;
     }
@@ -268,8 +263,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function addCombinations(Collection $combinations
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         foreach ($combinations as $combination) {
             $this->addCombination($combination);
         }
@@ -282,8 +276,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function addCombination(AttributeCombinationEntity $combination
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         if ($this->combinations->contains($combination)) {
             return $this;
         }
@@ -298,8 +291,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function removeCombinations(Collection $combinations
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         foreach ($combinations as $combination) {
             $this->removeCombination($combination);
         }
@@ -314,8 +306,7 @@ class ProductVariant
      * @return ProductVariantEntity
      */
     public function removeCombination(AttributeCombinationEntity $combination
-    ): ProductVariantEntity
-    {
+    ): ProductVariantEntity {
         $this->combinations->removeElement($combination);
         return $this;
     }

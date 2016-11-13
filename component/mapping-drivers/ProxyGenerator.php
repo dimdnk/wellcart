@@ -318,6 +318,25 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
     }
 
     /**
+     * Generates the Proxy file name.
+     *
+     * @param string $className
+     * @param string $baseDirectory Optional base directory for proxy file name generation.
+     *                              If not specified, the directory configured on the Configuration of the
+     *                              EntityManager will be used by this factory.
+     *
+     * @return string
+     */
+    public function getProxyFileName($className, $baseDirectory = null)
+    {
+        $baseDirectory = $baseDirectory ?: $this->proxyDirectory;
+
+        return rtrim($baseDirectory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR
+            . Proxy::MARKER
+            . str_replace('\\', '', $className) . '.php';
+    }
+
+    /**
      * Generates the proxy namespace.
      *
      * @param \Doctrine\Common\Persistence\Mapping\ClassMetadata $class
@@ -349,25 +368,6 @@ class <proxyShortClassName> extends \<className> implements \<baseProxyInterface
         $parts = explode('\\', strrev($proxyClassName), 2);
 
         return strrev($parts[0]);
-    }
-
-    /**
-     * Generates the Proxy file name.
-     *
-     * @param string $className
-     * @param string $baseDirectory Optional base directory for proxy file name generation.
-     *                              If not specified, the directory configured on the Configuration of the
-     *                              EntityManager will be used by this factory.
-     *
-     * @return string
-     */
-    public function getProxyFileName($className, $baseDirectory = null)
-    {
-        $baseDirectory = $baseDirectory ?: $this->proxyDirectory;
-
-        return rtrim($baseDirectory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR
-        . Proxy::MARKER
-        . str_replace('\\', '', $className) . '.php';
     }
 
     /**
@@ -861,9 +861,11 @@ EOT;
 
             if (
                 $method->isConstructor()
-                || isset($skippedMethods[strtolower(
+                || isset(
+                    $skippedMethods[strtolower(
                         $name
-                    )])
+                    )]
+                )
                 || isset($methodNames[$name])
                 || $method->isFinal()
                 || $method->isStatic()
@@ -1040,7 +1042,7 @@ EOT;
 
         if ('parent' === $nameLower) {
             return ': \\' . $method->getDeclaringClass()->getParentClass()
-                ->getName();
+                    ->getName();
         }
 
         return ': \\' . (string)$returnType;

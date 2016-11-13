@@ -45,6 +45,15 @@ class AttributeValue extends AbstractEntity implements
     protected $attribute;
 
     /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->translations = new ArrayCollection();
+    }
+
+    /**
      * Perform a deep clone
      *
      * @return AttributeValueEntity
@@ -52,15 +61,6 @@ class AttributeValue extends AbstractEntity implements
     public function __clone()
     {
         $this->__construct();
-    }
-
-    /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->translations = new ArrayCollection();
     }
 
     /**
@@ -77,8 +77,7 @@ class AttributeValue extends AbstractEntity implements
      * @return AttributeValueEntity
      */
     public function setTranslations(Collection $translations
-    ): AttributeValueEntity
-    {
+    ): AttributeValueEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -89,8 +88,7 @@ class AttributeValue extends AbstractEntity implements
      * @return AttributeValueEntity
      */
     public function addTranslations(Collection $translations
-    ): AttributeValueEntity
-    {
+    ): AttributeValueEntity {
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
@@ -103,8 +101,7 @@ class AttributeValue extends AbstractEntity implements
      * @return AttributeValueEntity
      */
     public function addTranslation(AttributeValueI18nEntity $translation
-    ): AttributeValueEntity
-    {
+    ): AttributeValueEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -120,8 +117,7 @@ class AttributeValue extends AbstractEntity implements
      * @return AttributeValueEntity
      */
     public function removeTranslations(Collection $translations
-    ): AttributeValueEntity
-    {
+    ): AttributeValueEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -136,8 +132,7 @@ class AttributeValue extends AbstractEntity implements
      * @return AttributeValueEntity
      */
     public function removeTranslation(AttributeValueI18nEntity $translation
-    ): AttributeValueEntity
-    {
+    ): AttributeValueEntity {
         $translation->setAttributeValue(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -196,8 +191,7 @@ class AttributeValue extends AbstractEntity implements
      * @return AttributeValueEntity
      */
     public function setAttribute(AttributeEntity $attribute = null
-    ): AttributeValueEntity
-    {
+    ): AttributeValueEntity {
         $this->attribute = $attribute;
         return $this;
     }

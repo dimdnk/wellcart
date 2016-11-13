@@ -114,8 +114,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
      * @inheritdoc
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): LocaleLanguageEntity
-    {
+    ): LocaleLanguageEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -149,8 +148,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
      * @inheritdoc
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): LocaleLanguageEntity
-    {
+    ): LocaleLanguageEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

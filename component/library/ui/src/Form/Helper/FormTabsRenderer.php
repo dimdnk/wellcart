@@ -149,8 +149,8 @@ class FormTabsRenderer extends AbstractHtmlElement
         $tag = 'ul';
 
         return '<' . $tag . $attribs . ' role="tablist">' . PHP_EOL . $list
-        . '</' . $tag . '>'
-        . PHP_EOL;
+            . '</' . $tag . '>'
+            . PHP_EOL;
     }
 
 

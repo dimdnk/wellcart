@@ -22,8 +22,7 @@ class CommandHandlerResolverFactory
      * @return NameBasedMessageHandlerResolver
      */
     public function __invoke(ContainerInterface $container
-    ): NameBasedMessageHandlerResolver
-    {
+    ): NameBasedMessageHandlerResolver {
         $commandBusConfig = $container->get('command_bus.config');
         $commandNameResolverStrategy
             = $commandBusConfig['command_name_resolver_strategy'];

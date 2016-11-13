@@ -120,8 +120,7 @@ class Zone extends AbstractEntity implements ZoneEntity
      * @return ZoneEntity
      */
     public function setCountry(CountryEntity $country
-    ): ZoneEntity
-    {
+    ): ZoneEntity {
         $this->country = $country;
         $this->setCountryId($country->getId());
         return $this;
@@ -217,8 +216,7 @@ class Zone extends AbstractEntity implements ZoneEntity
      * @return ZoneEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): ZoneEntity
-    {
+    ): ZoneEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -237,8 +235,7 @@ class Zone extends AbstractEntity implements ZoneEntity
      * @return ZoneEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): ZoneEntity
-    {
+    ): ZoneEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

@@ -64,7 +64,7 @@ return [
         ],
     ],
 
-    'form_elements'   => [
+    'form_elements'  => [
         'aliases'   => [
             'directoryCountrySelector' => Form\Element\CountrySelector::class,
             'directoryZoneSelector'    => Form\Element\ZoneSelector::class,

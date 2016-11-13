@@ -13,7 +13,8 @@ use WellCart\Catalog\Spec\FeatureRepository;
 
 class FeaturesMultiCheckboxSelectorFactory
 {
-    public function __invoke(ContainerInterface $sm) {
+    public function __invoke(ContainerInterface $sm)
+    {
         $services = $sm->getServiceLocator();
         $values = $services->get(
             FeatureRepository::class

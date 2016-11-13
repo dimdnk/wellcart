@@ -158,14 +158,14 @@ if (!function_exists('format_price')) {
                 ->get('directory\primary_currency')
                 ->getSymbol();
         }
-        if(!$withSymbol) {
+        if (!$withSymbol) {
             $symbol = '';
         }
         return $symbol . number_format(
-            $number,
-            2,
-            $locale['decimal_point'],
-            $locale['thousands_sep']
-        );
+                $number,
+                2,
+                $locale['decimal_point'],
+                $locale['thousands_sep']
+            );
     }
 }

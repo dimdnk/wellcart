@@ -80,121 +80,6 @@ class Setup
     }
 
     /**
-     * Create database config
-     *
-     * @param array $data
-     */
-    protected function createDatabaseConfig($file, array $data)
-    {
-        $driver = Arr::get($data, 'driver', 'pdo_mysql');
-        $driver = ($driver == 'pdo_pgsql') ? 'pdo_pgsql' : 'pdo_mysql';
-        $params = [
-            'driver'   => $driver,
-            'username' => Arr::get($data, 'username', 'root'),
-            'password' => Arr::get($data, 'password'),
-            'port'     => (int)Arr::get($data, 'port', 3306),
-            'host'     => Arr::get($data, 'host', 'localhost'),
-            'database' => Arr::get($data, 'database', 'wellcart'),
-        ];
-        $params = [
-            'db' => [
-                'adapters' => [
-                    'Zend\Db\Adapter\Adapter'  => $params,
-                    'DbDefaultSlaveConnection' => $params,
-                ],
-            ],
-        ];
-
-
-        file_put_contents(
-            $file,
-            "<?php\n return " . var_export_short($params, true) . ";"
-        );
-
-        chmod($file, 0666);
-    }
-
-    /**
-     * Run callback on mimic of installed system
-     *
-     * @param callable $func
-     *
-     * @throws Throwable
-     */
-    protected function runInContext($context, callable $func)
-    {
-        $_ENV['WELLCART_APPLICATION_CONTEXT'] = $context;
-        $app = application();
-        try {
-            $app->enableMaintenanceMode();
-            $configPath = WELLCART_ROOT . 'config/application.config.php';
-            if (!is_file($configPath)) {
-                $configPath = WELLCART_ROOT
-                    . 'config/application.config.php.dist';
-            }
-            application(
-                Application::init(
-                    Config::application(
-                        include $configPath
-                    )
-                )
-            );
-            $this->sm = application()->getServiceManager();
-
-            $result = $func();
-
-            application($app);
-            $this->sm = $app->getServiceManager();
-            return $result;
-        } catch (Throwable $e) {
-            throw $e;
-        } finally {
-            $_ENV['WELLCART_APPLICATION_CONTEXT']
-                = Application::CONTEXT_SETUP;
-            $app->disableMaintenanceMode();
-        }
-    }
-
-    /**
-     * Checks Database Connection
-     */
-    protected function checkDatabaseConnection()
-    {
-        /**
-         * @var $adapter \Zend\Db\Adapter\Adapter
-         */
-        $adapter = $this->getDb();
-        $mysqlVersion = $adapter->query(
-            'SELECT VERSION() AS m_version',
-            'execute'
-        )->current()['m_version'];
-        if ($mysqlVersion) {
-            if (preg_match('/^([0-9\.]+)/', $mysqlVersion, $matches)) {
-                if (isset($matches[1]) && !empty($matches[1])) {
-                    if (version_compare(
-                            $matches[1],
-                            self::MYSQL_VERSION_REQUIRED
-                        ) < 0
-                    ) {
-                        throw new RuntimeException(
-                            'WellCart Engine supports only MySQL version '
-                            . self::MYSQL_VERSION_REQUIRED . ' or later.'
-                        );
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * @return \Zend\Db\Adapter\AdapterInterface
-     */
-    protected function getDb()
-    {
-        return $this->sm->get('Zend\Db\Adapter\Adapter');
-    }
-
-    /**
      * Run database migrations
      *
      */
@@ -250,14 +135,6 @@ class Setup
     }
 
     /**
-     * @return \Doctrine\ORM\EntityManager
-     */
-    protected function getEntityManager()
-    {
-        return $this->sm->get('Doctrine\ORM\EntityManager');
-    }
-
-    /**
      * Refresh superadmin permissions
      */
     public function refreshPermissions()
@@ -299,14 +176,6 @@ class Setup
             }
         );
 
-    }
-
-    /**
-     * @return ConfigurationEditor
-     */
-    protected function getConfigurationEditor()
-    {
-        return $this->sm->get('system_configuration_editor');
     }
 
     /**
@@ -421,14 +290,6 @@ class Setup
         } finally {
             ini_restore('max_execution_time');
         }
-    }
-
-    /**
-     * @return array
-     */
-    protected function getConfiguration()
-    {
-        return $this->sm->get('Configuration');
     }
 
     /**
@@ -649,6 +510,145 @@ class Setup
             throw $e;
         }
         return true;
+    }
+
+    /**
+     * Create database config
+     *
+     * @param array $data
+     */
+    protected function createDatabaseConfig($file, array $data)
+    {
+        $driver = Arr::get($data, 'driver', 'pdo_mysql');
+        $driver = ($driver == 'pdo_pgsql') ? 'pdo_pgsql' : 'pdo_mysql';
+        $params = [
+            'driver'   => $driver,
+            'username' => Arr::get($data, 'username', 'root'),
+            'password' => Arr::get($data, 'password'),
+            'port'     => (int)Arr::get($data, 'port', 3306),
+            'host'     => Arr::get($data, 'host', 'localhost'),
+            'database' => Arr::get($data, 'database', 'wellcart'),
+        ];
+        $params = [
+            'db' => [
+                'adapters' => [
+                    'Zend\Db\Adapter\Adapter'  => $params,
+                    'DbDefaultSlaveConnection' => $params,
+                ],
+            ],
+        ];
+
+
+        file_put_contents(
+            $file,
+            "<?php\n return " . var_export_short($params, true) . ";"
+        );
+
+        chmod($file, 0666);
+    }
+
+    /**
+     * Run callback on mimic of installed system
+     *
+     * @param callable $func
+     *
+     * @throws Throwable
+     */
+    protected function runInContext($context, callable $func)
+    {
+        $_ENV['WELLCART_APPLICATION_CONTEXT'] = $context;
+        $app = application();
+        try {
+            $app->enableMaintenanceMode();
+            $configPath = WELLCART_ROOT . 'config/application.config.php';
+            if (!is_file($configPath)) {
+                $configPath = WELLCART_ROOT
+                    . 'config/application.config.php.dist';
+            }
+            application(
+                Application::init(
+                    Config::application(
+                        include $configPath
+                    )
+                )
+            );
+            $this->sm = application()->getServiceManager();
+
+            $result = $func();
+
+            application($app);
+            $this->sm = $app->getServiceManager();
+            return $result;
+        } catch (Throwable $e) {
+            throw $e;
+        } finally {
+            $_ENV['WELLCART_APPLICATION_CONTEXT']
+                = Application::CONTEXT_SETUP;
+            $app->disableMaintenanceMode();
+        }
+    }
+
+    /**
+     * Checks Database Connection
+     */
+    protected function checkDatabaseConnection()
+    {
+        /**
+         * @var $adapter \Zend\Db\Adapter\Adapter
+         */
+        $adapter = $this->getDb();
+        $mysqlVersion = $adapter->query(
+            'SELECT VERSION() AS m_version',
+            'execute'
+        )->current()['m_version'];
+        if ($mysqlVersion) {
+            if (preg_match('/^([0-9\.]+)/', $mysqlVersion, $matches)) {
+                if (isset($matches[1]) && !empty($matches[1])) {
+                    if (version_compare(
+                            $matches[1],
+                            self::MYSQL_VERSION_REQUIRED
+                        ) < 0
+                    ) {
+                        throw new RuntimeException(
+                            'WellCart Engine supports only MySQL version '
+                            . self::MYSQL_VERSION_REQUIRED . ' or later.'
+                        );
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * @return \Zend\Db\Adapter\AdapterInterface
+     */
+    protected function getDb()
+    {
+        return $this->sm->get('Zend\Db\Adapter\Adapter');
+    }
+
+    /**
+     * @return \Doctrine\ORM\EntityManager
+     */
+    protected function getEntityManager()
+    {
+        return $this->sm->get('Doctrine\ORM\EntityManager');
+    }
+
+    /**
+     * @return ConfigurationEditor
+     */
+    protected function getConfigurationEditor()
+    {
+        return $this->sm->get('system_configuration_editor');
+    }
+
+    /**
+     * @return array
+     */
+    protected function getConfiguration()
+    {
+        return $this->sm->get('Configuration');
     }
 
     /**

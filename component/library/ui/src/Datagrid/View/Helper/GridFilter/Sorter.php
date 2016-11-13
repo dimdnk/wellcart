@@ -109,7 +109,7 @@ class Sorter
         }
         $url = $this->urlPlugin->fromRoute(null, [], [], true) . $querySuffix;
         return '<a href="' . $url . '">' . $label . ' &nbsp; ' . $chevron
-        . '</a>';
+            . '</a>';
     }
 
     /**

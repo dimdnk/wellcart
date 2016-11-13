@@ -80,8 +80,7 @@ class ProductTemplateI18n extends AbstractEntity
      * @return ProductTemplateI18nEntity
      */
     public function setLanguage(LocaleLanguageEntity $language = null
-    ): ProductTemplateI18nEntity
-    {
+    ): ProductTemplateI18nEntity {
         $this->language = $language;
         return $this;
     }
@@ -138,8 +137,7 @@ class ProductTemplateI18n extends AbstractEntity
      * @return ProductTemplateI18n
      */
     public function setProductTemplateId($productTemplateId
-    ): ProductTemplateI18nEntity
-    {
+    ): ProductTemplateI18nEntity {
         $this->productTemplateId = $productTemplateId;
         return $this;
     }

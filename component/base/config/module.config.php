@@ -65,9 +65,9 @@ return [
             'WellCart\Ui\Layout\Listener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\Listener\ActionHandlesListenerFactory',
             'WellCart\Ui\Layout\Listener\LoadLayoutListener'             => 'WellCart\Ui\Factory\Layout\Listener\LoadLayoutListenerFactory',
             'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\Listener\PrepareActionViewModelListenerFactory',
-                        'Router'                         => 'Zend\Mvc\Service\RouterFactory',
-            'RoutePluginManager'             => 'Zend\Mvc\Service\RoutePluginManagerFactory',
-                        'HttpRouter'                     => 'Zend\Mvc\Service\HttpRouterFactory',
+            'Router'                                                     => 'Zend\Mvc\Service\RouterFactory',
+            'RoutePluginManager'                                         => 'Zend\Mvc\Service\RoutePluginManagerFactory',
+            'HttpRouter'                                                 => 'Zend\Mvc\Service\HttpRouterFactory',
             Service\Route\Listing::class                                 => Factory\Service\Route\ListingFactory::class,
 
         ],
@@ -371,12 +371,12 @@ return [
             'date'        => \WellCart\View\Helper\Date::class,
         ],
         'factories'  => [
-            'messenger' => MessengerFactory::class,
+            'messenger'   => MessengerFactory::class,
             'formElement' => 'WellCart\Form\View\Helper\Service\FormElementFactory',
 
             \WellCart\Ui\Datagrid\View\Helper\GridFilters::class => \WellCart\Ui\Factory\Datagrid\ViewHelper\GridFiltersFactory::class,
-            \WellCart\View\Helper\Locale::class => \WellCart\View\Factory\Helper\LocaleFactory::class,
-            \WellCart\View\Helper\Date::class => \WellCart\View\Factory\Helper\DateFactory::class
+            \WellCart\View\Helper\Locale::class                  => \WellCart\View\Factory\Helper\LocaleFactory::class,
+            \WellCart\View\Helper\Date::class                    => \WellCart\View\Factory\Helper\DateFactory::class
         ],
         'invokables' => [
             'assetPath'             => ViewHelper\AssetPath::class,
@@ -581,11 +581,11 @@ return [
         ],
     ],
     'form_elements'              => [
-        'factories' => [
+        'factories'  => [
             'localeLanguageSelector' => Factory\FormElement\LocaleLanguageSelectorFactory::class,
             'translatableCollection' => Factory\FormElement\TranslatableCollectionFactory::class,
         ],
-        'aliases'   => [
+        'aliases'    => [
             'htmlAnchor'     => FormElement\HtmlAnchor::class,
             'htmlanchor'     => FormElement\HtmlAnchor::class,
             'HtmlAnchor'     => FormElement\HtmlAnchor::class,

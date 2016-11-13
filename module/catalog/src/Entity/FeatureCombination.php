@@ -40,6 +40,14 @@ class FeatureCombination
     protected $product;
 
     /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+    }
+
+    /**
      * Perform a deep clone
      *
      * @return FeatureCombinationEntity
@@ -48,15 +56,6 @@ class FeatureCombination
     {
         $this->__construct();
     }
-
-    /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-    }
-
 
     /**
      * @return int
@@ -91,8 +90,7 @@ class FeatureCombination
      * @return FeatureCombinationEntity
      */
     public function setFeature(FeatureEntity $feature
-    ): FeatureCombinationEntity
-    {
+    ): FeatureCombinationEntity {
         $this->feature = $feature;
         return $this;
     }
@@ -111,8 +109,7 @@ class FeatureCombination
      * @return FeatureCombinationEntity
      */
     public function setFeatureValue(FeatureValueEntity $featureValue = null
-    ): FeatureCombinationEntity
-    {
+    ): FeatureCombinationEntity {
         $this->featureValue = $featureValue;
         return $this;
     }
@@ -131,8 +128,7 @@ class FeatureCombination
      * @return FeatureCombinationEntity
      */
     public function setProduct(ProductEntity $product = null
-    ): FeatureCombinationEntity
-    {
+    ): FeatureCombinationEntity {
         $this->product = $product;
         return $this;
     }

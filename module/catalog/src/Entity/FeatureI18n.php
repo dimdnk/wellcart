@@ -79,8 +79,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
      * @return FeatureI18nEntity
      */
     public function setLanguage(LocaleLanguageEntity $language = null
-    ): FeatureI18nEntity
-    {
+    ): FeatureI18nEntity {
         $this->language = $language;
         return $this;
     }

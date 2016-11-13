@@ -19,8 +19,7 @@ class AreaBasedOnThemeContextFactory
      * @return AreaBasedOnThemeContext
      */
     public function __invoke(ContainerInterface $container
-    ): AreaBasedOnThemeContext
-    {
+    ): AreaBasedOnThemeContext {
         return new AreaBasedOnThemeContext(
             $container->get('ConLayout\Updater\LayoutUpdaterInterface'),
             $container->get('ZeThemeManager')

@@ -82,8 +82,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
      * @return AclPermissionEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): AclPermissionEntity
-    {
+    ): AclPermissionEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -159,8 +158,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
      * @return AclPermissionEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): AclPermissionEntity
-    {
+    ): AclPermissionEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

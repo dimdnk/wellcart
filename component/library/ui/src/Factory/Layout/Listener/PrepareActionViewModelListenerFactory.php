@@ -20,8 +20,7 @@ class PrepareActionViewModelListenerFactory
      * @return PrepareActionViewModelListener
      */
     public function __invoke(ContainerInterface $container
-    ): PrepareActionViewModelListener
-    {
+    ): PrepareActionViewModelListener {
         return new PrepareActionViewModelListener(
             $container->get(BlockPoolInterface::class)
         );

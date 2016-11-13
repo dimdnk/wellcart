@@ -18,8 +18,7 @@ class UserEntityListenerFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): UserEntityListener
-    {
+    ): UserEntityListener {
         return new UserEntityListener(
             $container->get(AuthenticationService::class)
         );

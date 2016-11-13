@@ -13,7 +13,8 @@ use WellCart\Catalog\Spec\ProductTemplateRepository;
 
 class ProductTemplatesSelectorFactory
 {
-    public function __invoke(ContainerInterface $sm) {
+    public function __invoke(ContainerInterface $sm)
+    {
         $services = $sm->getServiceLocator();
         $values = $services->get(
             ProductTemplateRepository::class

@@ -209,7 +209,7 @@ class ProductFieldset extends Fieldset
                 'attributes' => [
                     'required'     => false,
                     'autocomplete' => 'off',
-                    'multiple' => true,
+                    'multiple'     => true,
                     'id'           => 'catalog_product_categories',
                 ],
             ],

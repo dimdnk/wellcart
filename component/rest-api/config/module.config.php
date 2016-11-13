@@ -193,8 +193,8 @@ return [
         ],
     ],
     'controllers'     => [
-        'aliases' => [
-            'RestApi::Hello' => Controller\HelloController::class,
+        'aliases'    => [
+            'RestApi::Hello'                   => Controller\HelloController::class,
             'RestApi::Admin\OAuth2\PublicKeys' => Controller\Admin\OAuth2\PublicKeysController::class,
             'RestApi::Admin\OAuth2\Clients'    => Controller\Admin\OAuth2\ClientsController::class,
             'RestApi::Admin\OAuth2\Scopes'     => Controller\Admin\OAuth2\ScopesController::class,

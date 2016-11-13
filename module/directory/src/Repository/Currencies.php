@@ -122,8 +122,7 @@ class Currencies extends AbstractRepository implements CurrencyRepository
         CurrencyEntity $currency,
         $primaryCode = null,
         $flush = true
-    ): CurrencyEntity
-    {
+    ): CurrencyEntity {
 
 
         if ($primaryCode === null) {

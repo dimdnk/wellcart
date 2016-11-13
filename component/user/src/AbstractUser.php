@@ -103,6 +103,17 @@ class AbstractUser extends AbstractEntity implements
     protected $updatedAt;
 
     /**
+     * Object constructor
+     *
+     * @return UserEntity
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->roles = new ArrayCollection;
+    }
+
+    /**
      * @return int
      */
     public function getFailedLoginCount()
@@ -129,17 +140,6 @@ class AbstractUser extends AbstractEntity implements
     public function __clone()
     {
         $this->__construct();
-    }
-
-    /**
-     * Object constructor
-     *
-     * @return UserEntity
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->roles = new ArrayCollection;
     }
 
     /**
@@ -371,8 +371,7 @@ class AbstractUser extends AbstractEntity implements
      * @return UserEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt = null
-    ): UserEntity
-    {
+    ): UserEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -391,8 +390,7 @@ class AbstractUser extends AbstractEntity implements
      * @return UserEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): UserEntity
-    {
+    ): UserEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }
@@ -458,8 +456,7 @@ class AbstractUser extends AbstractEntity implements
      * @return UserEntity
      */
     public function removeRole(AclRoleEntity $role
-    ): UserEntity
-    {
+    ): UserEntity {
         $role->getUsers()->removeElement($this);
         $this->roles->removeElement($role);
         return $this;
@@ -479,8 +476,7 @@ class AbstractUser extends AbstractEntity implements
      * @return UserEntity
      */
     public function setPasswordResetToken($passwordResetToken
-    ): UserEntity
-    {
+    ): UserEntity {
         $this->passwordResetToken = $passwordResetToken;
         return $this;
     }
@@ -499,8 +495,7 @@ class AbstractUser extends AbstractEntity implements
      * @return UserEntity
      */
     public function setEmailConfirmationToken($emailConfirmationToken
-    ): UserEntity
-    {
+    ): UserEntity {
         $this->emailConfirmationToken = $emailConfirmationToken;
         return $this;
     }

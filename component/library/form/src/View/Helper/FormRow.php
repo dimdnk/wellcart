@@ -143,8 +143,8 @@ class FormRow extends \Zend\Form\View\Helper\FormRow
         }
 
         return sprintf(
-            self::$formGroupFormat, $sRowClass, $sElementContent
-        ) . PHP_EOL;
+                self::$formGroupFormat, $sRowClass, $sElementContent
+            ) . PHP_EOL;
     }
 
     /**

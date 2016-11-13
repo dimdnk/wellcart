@@ -18,8 +18,7 @@ class HandleFailedLoginCountFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): HandleFailedLoginCount
-    {
+    ): HandleFailedLoginCount {
         return new HandleFailedLoginCount(
             $container->get(UserRepository::class)
         );

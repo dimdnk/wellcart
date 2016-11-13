@@ -129,53 +129,6 @@ class Product extends AbstractForm
     }
 
     /**
-     * Prepare tabs
-     */
-    protected function prepareTabs()
-    {
-        $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
-        $this->addTab('general', __('General'));
-        $this->addTab('features', __('Features'));
-        $this->addTab('categories', __('Categories'));
-        $this->addTab('images', __('Images'));
-        $items = $this->get('product');
-
-        $general = $this->getTab('general')
-            ->setOption('layout', '2columns');
-        $fields = [
-            'translations'    => 'left',
-            'status'          => 'right',
-            'brand'           => 'right',
-            'url_key'         => 'right',
-            // 'product_template' => 'right',
-            'add_new_variant' => 'right',
-            'variants'        => 'right',
-        ];
-        foreach ($fields as $field => $tabPosition) {
-            if ($items->has($field)) {
-                $general->add(
-                    $field,
-                    $items->get($field)
-                        ->setOption('tab', 'general-' . $tabPosition)
-                );
-            }
-        }
-
-        $features = $this->getTab('features');
-        $features->add('add_feature', $items->get('add_feature'));
-        $features->add('features', $items->get('features'));
-
-        $categories = $this->getTab('categories');
-        $categories->add('categories', $items->get('categories'));
-
-        $images = $this->getTab('images');
-        $images->add('add_new_image', $items->get('add_new_image'));
-        $images->add('images', $items->get('images'));
-
-        $this->getEventManager()->trigger(__FUNCTION__ . '.post', $this);
-    }
-
-    /**
      * @inheritdoc
      */
     public function getData($flag = FormInterface::VALUES_NORMALIZED)
@@ -241,5 +194,52 @@ class Product extends AbstractForm
             );
         }
         return parent::setObject($object);
+    }
+
+    /**
+     * Prepare tabs
+     */
+    protected function prepareTabs()
+    {
+        $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+        $this->addTab('general', __('General'));
+        $this->addTab('features', __('Features'));
+        $this->addTab('categories', __('Categories'));
+        $this->addTab('images', __('Images'));
+        $items = $this->get('product');
+
+        $general = $this->getTab('general')
+            ->setOption('layout', '2columns');
+        $fields = [
+            'translations'    => 'left',
+            'status'          => 'right',
+            'brand'           => 'right',
+            'url_key'         => 'right',
+            // 'product_template' => 'right',
+            'add_new_variant' => 'right',
+            'variants'        => 'right',
+        ];
+        foreach ($fields as $field => $tabPosition) {
+            if ($items->has($field)) {
+                $general->add(
+                    $field,
+                    $items->get($field)
+                        ->setOption('tab', 'general-' . $tabPosition)
+                );
+            }
+        }
+
+        $features = $this->getTab('features');
+        $features->add('add_feature', $items->get('add_feature'));
+        $features->add('features', $items->get('features'));
+
+        $categories = $this->getTab('categories');
+        $categories->add('categories', $items->get('categories'));
+
+        $images = $this->getTab('images');
+        $images->add('add_new_image', $items->get('add_new_image'));
+        $images->add('images', $items->get('images'));
+
+        $this->getEventManager()->trigger(__FUNCTION__ . '.post', $this);
     }
 }

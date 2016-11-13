@@ -64,8 +64,8 @@ return [
         ],
     ],
 
-    'controllers' => [
-        'aliases'            => [
+    'controllers'                => [
+        'aliases'   => [
             'Catalog::Admin\Brands'           => Controller\Admin\BrandsController::class,
             'Catalog::Admin\Products'         => Controller\Admin\ProductsController::class,
             'Catalog::Admin\ProductTemplates' => Controller\Admin\ProductTemplatesController::class,
@@ -74,10 +74,10 @@ return [
             'Catalog::Admin\Attributes'       => Controller\Admin\AttributesController::class,
         ],
         'factories' => [
-            Controller\Admin\BrandsController::class          => Factory\Controller\Admin\BrandsControllerFactory::class,
+            Controller\Admin\BrandsController::class           => Factory\Controller\Admin\BrandsControllerFactory::class,
             Controller\Admin\ProductsController::class         => Factory\Controller\Admin\ProductsControllerFactory::class,
             Controller\Admin\ProductTemplatesController::class => Factory\Controller\Admin\ProductTemplatesControllerFactory::class,
-            Controller\Admin\CategoriesController::class      => Factory\Controller\Admin\CategoriesControllerFactory::class,
+            Controller\Admin\CategoriesController::class       => Factory\Controller\Admin\CategoriesControllerFactory::class,
             Controller\Admin\FeaturesController::class         => Factory\Controller\Admin\FeaturesControllerFactory::class,
             Controller\Admin\AttributesController::class       => Factory\Controller\Admin\AttributesControllerFactory::class,
         ],
@@ -88,7 +88,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'      => [
+    'router'                     => [
         'routes' => [
             'zfcadmin' => [
                 'child_routes' => [
@@ -355,13 +355,13 @@ return [
             . '/backend_main_navigation.php',
     ],
     'form_elements'              => [
-        'aliases'   => [
+        'aliases'    => [
             'catalogFeatureCombinationMultiCheckbox' => Form\Element\FeatureCombinationMultiCheckbox::class,
         ],
         'factories'  => [
-            'catalogProductPrice' => Factory\Form\Element\ProductPriceFactory::class,
+            'catalogProductPrice'                               => Factory\Form\Element\ProductPriceFactory::class,
             Form\Element\FeatureCombinationMultiCheckbox::class => Factory\FormElement\FeatureCombinationMultiCheckboxFactory::class,
-            'catalogCategorySelector' => Factory\FormElement\CategorySelectorFactory::class,
+            'catalogCategorySelector'                           => Factory\FormElement\CategorySelectorFactory::class,
             'catalogProductTemplateSelector'                    => Factory\FormElement\ProductTemplateSelectorFactory::class,
             'catalogBrandSelector'                              => Factory\FormElement\BrandSelectorFactory::class,
             'catalogAttributesMultiCheckboxSelector'            => Factory\FormElement\AttributesMultiCheckboxSelectorFactory::class,

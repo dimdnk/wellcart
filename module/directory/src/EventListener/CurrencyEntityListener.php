@@ -45,19 +45,6 @@ class CurrencyEntityListener
         $this->ensurePrimaryCurrency($currency, $args);
     }
 
-    protected function ensurePrimaryCurrency(
-        CurrencyEntity $currency,
-        LifecycleEventArgs $args
-    ) {
-        /**
-         * @var $repository CurrencyRepository
-         */
-        $repository = $args->getObjectManager()->getRepository(
-            'WellCart\Directory\Spec\CurrencyEntity'
-        );
-        $repository->ensurePrimaryCurrency($currency);
-    }
-
     public function postUpdate(
         CurrencyEntity $currency,
         LifecycleEventArgs $args
@@ -73,5 +60,18 @@ class CurrencyEntityListener
                 'Primary currency cannot be removed.'
             );
         }
+    }
+
+    protected function ensurePrimaryCurrency(
+        CurrencyEntity $currency,
+        LifecycleEventArgs $args
+    ) {
+        /**
+         * @var $repository CurrencyRepository
+         */
+        $repository = $args->getObjectManager()->getRepository(
+            'WellCart\Directory\Spec\CurrencyEntity'
+        );
+        $repository->ensurePrimaryCurrency($currency);
     }
 }

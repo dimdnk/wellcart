@@ -18,8 +18,7 @@ class PersistAdminAccountHandlerFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): PersistAdminAccountHandler
-    {
+    ): PersistAdminAccountHandler {
         return new PersistAdminAccountHandler(
             $container->get('zfcuser_user_service'),
             $container->get(AclRoleRepository::class)->findDefaultRole()

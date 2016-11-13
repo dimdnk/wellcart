@@ -32,7 +32,7 @@ class NameFormatter extends AbstractFormatter
         $row = $this->getRowData();
         $category = $row['category'];
         $lvl = (int)$category['lvl'] - 1;
-        if($lvl < 0) {
+        if ($lvl < 0) {
             $lvl = 0;
         }
         return sprintf(

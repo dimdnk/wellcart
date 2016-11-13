@@ -149,8 +149,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
      * @return GeoZoneMapEntity
      */
     public function setCountry(CountryEntity $country
-    ): GeoZoneMapEntity
-    {
+    ): GeoZoneMapEntity {
         $this->country = $country;
         return $this;
     }
@@ -169,8 +168,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
      * @return GeoZoneMapEntity
      */
     public function setZone(ZoneEntity $zone
-    ): GeoZoneMapEntity
-    {
+    ): GeoZoneMapEntity {
         $this->zone = $zone;
         return $this;
     }
@@ -189,8 +187,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
      * @return GeoZoneMapEntity
      */
     public function setGeoZone(GeoZoneEntity $geoZone
-    ): GeoZoneMapEntity
-    {
+    ): GeoZoneMapEntity {
         $this->geoZone = $geoZone;
         return $this;
     }
@@ -209,8 +206,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
      * @return GeoZoneMapEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): GeoZoneMapEntity
-    {
+    ): GeoZoneMapEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -229,8 +225,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
      * @return GeoZoneMapEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): GeoZoneMapEntity
-    {
+    ): GeoZoneMapEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

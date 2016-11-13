@@ -219,8 +219,7 @@ class Brand extends AbstractEntity implements BrandEntity
      * @return BrandEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): BrandEntity
-    {
+    ): BrandEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -239,8 +238,7 @@ class Brand extends AbstractEntity implements BrandEntity
      * @return BrandEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): BrandEntity
-    {
+    ): BrandEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }

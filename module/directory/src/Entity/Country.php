@@ -213,8 +213,7 @@ class Country extends AbstractEntity implements CountryEntity
      * @return CountryEntity
      */
     public function setPostcodeRequired($postcodeRequired
-    ): CountryEntity
-    {
+    ): CountryEntity {
         $this->postcodeRequired = (bool)$postcodeRequired;
         return $this;
     }

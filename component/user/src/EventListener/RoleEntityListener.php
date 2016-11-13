@@ -25,19 +25,6 @@ class RoleEntityListener
         $this->ensureDefaultRole($role, $args);
     }
 
-    protected function ensureDefaultRole(
-        AclRoleEntity $role,
-        LifecycleEventArgs $args
-    ) {
-        /**
-         * @var $repository AclRoleRepository
-         */
-        $repository = $args->getObjectManager()->getRepository(
-            'WellCart\User\Spec\AclRoleEntity'
-        );
-        $repository->ensureDefaultRole($role);
-    }
-
     public function postUpdate(
         AclRoleEntity $role,
         LifecycleEventArgs $args
@@ -52,5 +39,18 @@ class RoleEntityListener
                 'Default role cannot be deleted.'
             );
         }
+    }
+
+    protected function ensureDefaultRole(
+        AclRoleEntity $role,
+        LifecycleEventArgs $args
+    ) {
+        /**
+         * @var $repository AclRoleRepository
+         */
+        $repository = $args->getObjectManager()->getRepository(
+            'WellCart\User\Spec\AclRoleEntity'
+        );
+        $repository->ensureDefaultRole($role);
     }
 }
