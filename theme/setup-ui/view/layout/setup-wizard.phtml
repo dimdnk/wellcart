@@ -37,14 +37,15 @@ $this->headTitle(__('Installation Wizard'), 'PREPEND');
                     <?php if ($stepsCount > 0): ?>
                         <?php foreach ($steps as $step): ?>
                             <li
-                                class="wizard<?php
-                                if ($step->isComplete()
-                                ):
-                                    ?>-completed<?php endif ?>
+                                    class="wizard<?php
+                                    if ($step->isComplete()
+                                    ):
+                                        ?>-completed<?php endif ?>
                                         <?php
-                                if ($step->getName() == $currentStep->getName()
-                                ):
-                                    ?>wizard-active<?php endif ?>">
+                                    if ($step->getName()
+                                        == $currentStep->getName()
+                                    ):
+                                        ?>wizard-active<?php endif ?>">
                                 <?php echo $step->getTitle() ?>
                             </li>
                         <?php endforeach ?>
