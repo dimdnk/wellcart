@@ -201,9 +201,8 @@ class Setup
     public function updateDatabaseSchema()
     {
         $command = new SchemaMigrationCommand();
-        $input = new IgnoreValidationArrayInput(
-            ['--configuration' => Config::get('schema-migration.phinx-config')]
-        );
+        $command->ignoreValidationErrors();
+        $input = new IgnoreValidationArrayInput([]);
         $output = new NullOutput();
         $command->run($input, $output);
     }
