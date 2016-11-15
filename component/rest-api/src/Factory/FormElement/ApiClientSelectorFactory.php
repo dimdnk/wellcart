@@ -18,7 +18,8 @@ class ApiClientSelectorFactory
      * @return \WellCart\Form\Element\Select
      */
     public function __invoke(ContainerInterface $sm
-    ): \WellCart\Form\Element\Select {
+    ): \WellCart\Form\Element\Select
+    {
         $services = $sm->getServiceLocator();
         $clients = $services->get(
             'WellCart\RestApi\Repository\OAuth2\Clients'

@@ -13,7 +13,8 @@ use WellCart\Admin\Controller\DashboardController;
 class DashboardControllerFactory
 {
     public function __invoke(ContainerInterface $sm
-    ): DashboardController {
+    ): DashboardController
+    {
         return new DashboardController;
     }
 }

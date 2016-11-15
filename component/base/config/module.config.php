@@ -46,7 +46,7 @@ return [
                 ],
             ],
         ],
-        'doctrine'             => ['global_cache_instance' => 'array',]
+            'doctrine'             => ['global_cache_instance' => 'array',]
     ],
 
     /**

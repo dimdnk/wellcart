@@ -13,7 +13,8 @@ use Interop\Container\ContainerInterface;
 class AccountsSelectorFactory
 {
     public function __invoke(ContainerInterface $sm
-    ) {
+    )
+    {
         $services = $sm->getServiceLocator();
         $users = $services->get(
             'WellCart\User\Spec\UserRepository'

@@ -13,7 +13,8 @@ use WellCart\Base\Controller\ImageResizeController;
 class ImageResizeControllerFactory
 {
     public function __invoke(ContainerInterface $sm
-    ): ImageResizeController {
+    ): ImageResizeController
+    {
         $controller = new ImageResizeController(
             $sm->getServiceLocator()
                 ->get('TckImageResizer\Service\ImageProcessing'),

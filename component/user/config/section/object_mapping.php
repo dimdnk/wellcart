@@ -470,7 +470,7 @@ return [
                     'cascade'      => ['persist', 'merge', 'detach'],
                 ],
             ],
-            'fields'          =>
+                'fields'          =>
                 [
                     'name'        =>
                         [
