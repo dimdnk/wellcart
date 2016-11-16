@@ -270,7 +270,9 @@ class Setup
                         $destination = $assetsPath . $filename;
                         if ($src != $destination) {
                             if (is_dir($src) && !is_dir($destination)) {
-                                symlink($src, $destination);
+                                if(!@symlink($src, $destination)) {
+                                    copy_directory($src, $destination);
+                                }
                                 $result[$src] = $destination;
                             }
                         }

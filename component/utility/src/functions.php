@@ -91,8 +91,8 @@ if (!function_exists('get_file_size')) {
     {
         $units = array('Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB');
         return @
-            round($size / pow(1024, ($i = floor(log($size, 1024)))), 2) . ' '
-            . $units[$i];
+        round($size / pow(1024, ($i = floor(log($size, 1024)))), 2) . ' '
+        . $units[$i];
     }
 }
 
@@ -130,6 +130,26 @@ if (!function_exists('remove_directory')) {
         } elseif (is_file($target)) {
             unlink($target);
         }
+    }
+}
+
+if (!function_exists('copy_directory')) {
+    function copy_directory($src, $destination)
+    {
+        $dir = opendir($src);
+        @mkdir($destination, true);
+        while (false !== ($file = readdir($dir))) {
+            if (($file != '.') && ($file != '..')) {
+                if (is_dir($src . '/' . $file)) {
+                    copy_directory(
+                        $src . '/' . $file, $destination . '/' . $file
+                    );
+                } else {
+                    copy($src . '/' . $file, $destination . '/' . $file);
+                }
+            }
+        }
+        closedir($dir);
     }
 }
 

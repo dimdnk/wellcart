@@ -9,10 +9,6 @@ Options +FollowSymLinks
 AddDefaultCharset UTF-8
 
 <IfModule mod_php7.c>
-    php_flag register_globals Off
-    php_flag magic_quotes_gpc Off
-    php_flag magic_quotes_runtime Off
-    php_flag magic_quotes_sybase Off
     php_value session.auto_start 0
     php_value output_buffering 0
     php_value session.use_trans_sid 0
@@ -63,8 +59,6 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-
-
     RewriteCond %{QUERY_STRING} \.\.\/    [NC,OR]
     RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
     RewriteCond %{QUERY_STRING} ftp\:     [NC,OR]

@@ -7,9 +7,9 @@ wellcart:
     - mariaDB
   command: /usr/sbin/apache2ctl -D FOREGROUND
   volumes:
-   - .:/var/www/html
+   - .:/var/www/html/wellcart
 mariaDB:
   image: mariadb
   environment:
     MYSQL_DATABASE: root
-    MYSQL_ROOT_PASSWORD: root
+    MYSQL_ROOT_PASSWORD:
