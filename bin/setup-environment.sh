@@ -73,4 +73,4 @@ bin/wellcart wellcart:setup --db-host=localhost --db-name=wellcart --db-username
 
 service apache2 restart
 
-echo "Instance ready to use..."
+echo "Instance ready to use, go to http://localhost:8080/"
