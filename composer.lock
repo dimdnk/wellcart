@@ -551,16 +551,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.12.6",
+            "version": "v9.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "ae2e0e7637da6c8f94d37655b5429b74faf37b3a"
+                "reference": "47572698d781eff2ec7127484d8291f951808d61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/ae2e0e7637da6c8f94d37655b5429b74faf37b3a",
-                "reference": "ae2e0e7637da6c8f94d37655b5429b74faf37b3a",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/47572698d781eff2ec7127484d8291f951808d61",
+                "reference": "47572698d781eff2ec7127484d8291f951808d61",
                 "shasum": ""
             },
             "type": "library",
@@ -597,7 +597,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2016-10-18 06:01:31"
+            "time": "2016-11-03 09:01:26"
         },
         {
             "name": "bshaffer/oauth2-server-php",
@@ -761,16 +761,16 @@
         },
         {
             "name": "components/font-awesome",
-            "version": "4.6.3",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/font-awesome.git",
-                "reference": "daa3ef598620217085dcb13ad11149e89a20a925"
+                "reference": "885308b939369d147bec93174722786bc2c4eedd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/font-awesome/zipball/daa3ef598620217085dcb13ad11149e89a20a925",
-                "reference": "daa3ef598620217085dcb13ad11149e89a20a925",
+                "url": "https://api.github.com/repos/components/font-awesome/zipball/885308b939369d147bec93174722786bc2c4eedd",
+                "reference": "885308b939369d147bec93174722786bc2c4eedd",
                 "shasum": ""
             },
             "type": "component",
@@ -792,7 +792,7 @@
                 "OFL-1.1"
             ],
             "description": "The iconic font designed for use with Twitter Bootstrap.",
-            "time": "2016-05-18 10:46:59"
+            "time": "2016-10-25 10:56:23"
         },
         {
             "name": "components/handlebars.js",
@@ -7442,18 +7442,18 @@
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/wellcart/web-components.git",
-                "reference": "26964f201e181ddc83cd33ff99210d8b2c1d9fab"
+                "reference": "848b2479188ed9a000bfe1fb9fe26dc0ed800737"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/wellcart/web-components/get/26964f201e181ddc83cd33ff99210d8b2c1d9fab.zip",
-                "reference": "26964f201e181ddc83cd33ff99210d8b2c1d9fab",
+                "url": "https://bitbucket.org/wellcart/web-components/get/848b2479188ed9a000bfe1fb9fe26dc0ed800737.zip",
+                "reference": "848b2479188ed9a000bfe1fb9fe26dc0ed800737",
                 "shasum": ""
             },
             "require": {
-                "blueimp/jquery-file-upload": "9.12.*",
+                "blueimp/jquery-file-upload": "^9.14.0",
                 "components/bootstrap": "3.3.*",
-                "components/font-awesome": "4.6.*",
+                "components/font-awesome": "4.7.*",
                 "components/handlebars.js": "4.0.*",
                 "components/jquery": "^3.1.0",
                 "components/jquery-cookie": "1.4.*",
@@ -7466,7 +7466,7 @@
                 "oro/moment-timezone": "0.3.*",
                 "php": "^7.0.0",
                 "robloach/component-installer": "0.2.3",
-                "tinymce/tinymce": "4.4.*"
+                "tinymce/tinymce": "^4.4.0"
             },
             "type": "component",
             "extra": {
@@ -7502,7 +7502,7 @@
                 }
             ],
             "homepage": "http://wellcart.org/",
-            "time": "2016-10-19 09:26:40"
+            "time": "2016-11-18 17:02:38"
         },
         {
             "name": "zendexperts/ze-theme",

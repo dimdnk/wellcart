@@ -13,10 +13,6 @@ return [
             'wellcart'               => 'assets/wellcart-base/js/wellcart',
             'handlebars'             => 'assets/lib/handlebars/handlebars.runtime',
             'underscore'             => 'assets/lib/underscore/underscore-min',
-            'backbone'               => 'assets/lib/web/backbone',
-            'backbone.radio'         => 'assets/lib/web/backbone.radio',
-            'backbone.marionette'    => 'assets/lib/web/backbone.marionette',
-            'marionette'             => 'assets/lib/web/backbone.marionette',
             'jquery'                 => 'assets/lib/jquery/jquery.min',
             'jquery-ui'              => 'assets/lib/jquery-ui/jquery-ui.min',
             'jquery-ujs'             => 'assets/lib/web/jquery-ujs',
@@ -45,15 +41,6 @@ return [
             'underscore' => [
                 'exports' => '_',
             ],
-            'backbone'   => [
-                'deps'    => ['jquery', 'underscore'],
-                'exports' => 'Backbone',
-            ],
-            'marionette' => [
-                'deps'    => ['backbone', 'backbone.radio'],
-                'exports' => 'Marionette',
-            ],
-
             'jquery-ui'        => [
                 'deps' => ['jquery'],
             ],
