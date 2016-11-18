@@ -508,23 +508,6 @@ return [
             . 'error.log',
         'session.save_path'       => WELLCART_STORAGE_PATH . 'sessions' . DS,
     ],
-    'soflomo_log'                => [
-        'writers' => [
-            'firephp'                    => [
-                'enabled' => true,
-            ],
-            'chromephp'                  => [
-                'enabled' => false,
-            ],
-            'WellCart\Log\Writer\Stream' => [
-                'enabled' => true,
-                'stream'  => WELLCART_STORAGE_PATH . 'logs/application.log',
-            ],
-            'stream'                     => [
-                'enabled' => false,
-            ],
-        ],
-    ],
     'log'                        => [
         'log_base'                => [
             'writers' => [

@@ -63,7 +63,6 @@
     "radnan/rdn-require-js": "1.*",
     "acelaya/zf2-acmailer": "5.*",
     "radnan/rdn-csv": "1.*",
-    "soflomo/log": "dev-master",
     "swix/swix-em-config": "dev-master",
     "firephp/firephp-core": "0.4.*",
     "leafo/scssphp": "^0.6.5",

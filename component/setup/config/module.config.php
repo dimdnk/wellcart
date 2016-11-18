@@ -73,13 +73,6 @@ return [
             ],
         ],
     ],
-    'soflomo_log'     => [
-        'writers' => [
-            'WellCart\Log\Writer\Stream' => [
-                'enabled' => false,
-            ],
-        ],
-    ],
 
     /**
      * =========================================================

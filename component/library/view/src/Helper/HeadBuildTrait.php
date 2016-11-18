@@ -104,7 +104,7 @@ trait HeadBuildTrait
         }
         $path = $this->manifestFile = Config::get(
             'headbuild.manifest_file',
-            'build/rev-manifest.json'
+            WELLCART_ASSETS_PATH . 'revision-manifest.json'
         );
         return $path;
     }

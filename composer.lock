@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "32a155a7e1891f3336717e7c6412aeee",
-    "content-hash": "c4aa536e3dada82322bf65c1aea240fd",
+    "hash": "48a155baf8d6c3470042bc54581b28e9",
+    "content-hash": "4d3a2ccc1faa60f2bae31a583fcac4f7",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -4430,16 +4430,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.6.3",
+            "version": "5.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a9de0dbafeb6b1391b391fbb034734cb0af9f67c"
+                "reference": "4ddb822f1de421b4cadb47570a525fd7d9359493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a9de0dbafeb6b1391b391fbb034734cb0af9f67c",
-                "reference": "a9de0dbafeb6b1391b391fbb034734cb0af9f67c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4ddb822f1de421b4cadb47570a525fd7d9359493",
+                "reference": "4ddb822f1de421b4cadb47570a525fd7d9359493",
                 "shasum": ""
             },
             "require": {
@@ -4467,7 +4467,9 @@
                 "symfony/yaml": "~2.1|~3.0"
             },
             "conflict": {
-                "phpdocumentor/reflection-docblock": "3.0.2"
+                "phpdocumentor/reflection-docblock": "3.0.2",
+                "sebastian/object-enumerator": "1.0.1",
+                "sebastian/recursion-context": "1.0.3 || 1.0.4"
             },
             "require-dev": {
                 "ext-pdo": "*"
@@ -4508,7 +4510,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-11-14 06:39:40"
+            "time": "2016-11-18 09:50:51"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5759,21 +5761,21 @@
         },
         {
             "name": "sebastian/object-enumerator",
-            "version": "1.0.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/object-enumerator.git",
-                "reference": "12dc92be4c9b1286fd37c15d54f7c9d8524f29e0"
+                "reference": "d4ca2fb70344987502567bc50081c03e6192fb26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/object-enumerator/zipball/12dc92be4c9b1286fd37c15d54f7c9d8524f29e0",
-                "reference": "12dc92be4c9b1286fd37c15d54f7c9d8524f29e0",
+                "url": "https://api.github.com/repos/sebastianbergmann/object-enumerator/zipball/d4ca2fb70344987502567bc50081c03e6192fb26",
+                "reference": "d4ca2fb70344987502567bc50081c03e6192fb26",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6",
-                "sebastian/recursion-context": "~1.0.4"
+                "sebastian/recursion-context": "~1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~5"
@@ -5801,20 +5803,20 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2016-11-16 07:17:31"
+            "time": "2016-01-28 13:25:10"
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "1.0.4",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "938df7a6478e72795e5f8266cff24d06e3136f2e"
+                "reference": "913401df809e99e4f47b27cdd781f4a258d58791"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/938df7a6478e72795e5f8266cff24d06e3136f2e",
-                "reference": "938df7a6478e72795e5f8266cff24d06e3136f2e",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/913401df809e99e4f47b27cdd781f4a258d58791",
+                "reference": "913401df809e99e4f47b27cdd781f4a258d58791",
                 "shasum": ""
             },
             "require": {
@@ -5854,7 +5856,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-15 06:55:36"
+            "time": "2015-11-11 19:50:13"
         },
         {
             "name": "sebastian/resource-operations",
@@ -6334,56 +6336,6 @@
                 "zf2"
             ],
             "time": "2014-05-15 19:03:43"
-        },
-        {
-            "name": "soflomo/log",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Soflomo/Log.git",
-                "reference": "051b9347c23f92dac3e1995ac50911beeb352ba9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Soflomo/Log/zipball/051b9347c23f92dac3e1995ac50911beeb352ba9",
-                "reference": "051b9347c23f92dac3e1995ac50911beeb352ba9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3.",
-                "zendframework/zendframework": "2.*"
-            },
-            "suggest": {
-                "chromephp/chromephp": "To enable logging with Chrome-PHP",
-                "firephp/firephp-core": "To enable logging with Fire-PHP"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Soflomo\\Log": "src/"
-                },
-                "classmap": [
-                    "./Module.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jurian Sluiman",
-                    "email": "jurian@soflomo.com",
-                    "homepage": "http://soflomo.com"
-                }
-            ],
-            "description": "Small module to help with logging aware classes",
-            "homepage": "https://github.com/Soflomo/Log",
-            "keywords": [
-                "log",
-                "zf2"
-            ],
-            "time": "2013-02-01 14:33:57"
         },
         {
             "name": "soflomo/purifier",
@@ -13577,7 +13529,6 @@
     "stability-flags": {
         "zendexperts/ze-theme": 20,
         "neilime/zf2-twb-bundle": 0,
-        "soflomo/log": 20,
         "swix/swix-em-config": 20,
         "zfcampus/zf-apigility": 20,
         "zfcampus/zf-apigility-documentation": 20,

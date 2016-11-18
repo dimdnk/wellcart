@@ -17,7 +17,6 @@
   ],
   "keywords": [
     "Zend Framework",
-    "eCommerce",
     "Open-source"
   ],
   "minimum-stability": "dev",
@@ -78,7 +77,6 @@
     "stroker/form": "^1.0.0",
     "radnan/rdn-csv": "1.*",
     "snapshotpl/zf-snap-jquery": "0.5.*",
-    "soflomo/log": "dev-master",
     "soflomo/purifier": "1.0.*",
     "swix/swix-em-config": "dev-master",
     "hounddog/doctrine-data-fixture-module": "0.*",
@@ -186,7 +184,6 @@
             "-72929": "TckImageResizer",
             "-72928": "RdnCsv",
             "-72927": "Wizard",
-            "-72926": "Soflomo\\Log",
             "-72925": "Soflomo\\Purifier",
             "-72924": "DoctrineModule",
             "-72923": "DoctrineMongoODMModule",
@@ -273,7 +270,6 @@
             "-72915": "StrokerForm",
             "-72913": "WellCart\\CommandBus",
             "-72912": "Wizard",
-            "-72911": "Soflomo\\Log",
             "-72750": "WellCart\\RestApi",
             "-72900": "WellCart\\Base",
             "-72938": "ZendDeveloperTools",

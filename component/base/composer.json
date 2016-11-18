@@ -73,7 +73,6 @@
             "-72929": "TckImageResizer",
             "-72928": "RdnCsv",
             "-72927": "Wizard",
-            "-72926": "Soflomo\\Log",
             "-72925": "Soflomo\\Purifier",
             "-72924": "DoctrineModule",
             "-72923": "DoctrineMongoODMModule",
@@ -107,7 +106,6 @@
             "-72915": "StrokerForm",
             "-72913": "WellCart\\CommandBus",
             "-72912": "Wizard",
-            "-72911": "Soflomo\\Log",
             "-72900": "WellCart\\Base"
           }
         }
