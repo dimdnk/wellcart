@@ -24,4 +24,5 @@ report.xml
 .env
 *.log
 maintenance.flag
+Maintenance.html
 tests/_output/*

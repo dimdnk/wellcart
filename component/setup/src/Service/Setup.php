@@ -20,6 +20,8 @@ use WellCart\Mvc\Application;
 use WellCart\SchemaMigration\Console\Command\Migrate as SchemaMigrationCommand;
 use WellCart\Setup\Console\Command;
 use WellCart\Setup\Exception\RuntimeException;
+use WellCart\User\Spec\AclPermissionEntity;
+use WellCart\User\Spec\AclRoleEntity;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use Zend\ServiceManager\ServiceManager;
@@ -141,12 +143,12 @@ class Setup
     {
         $em = $this->getEntityManager();
         $roles = $em->getRepository(
-            'WellCart\User\Spec\AclRoleEntity'
+            AclRoleEntity::class
         );
 
         $superAdmin = $roles->findOneBy(['name' => 'superadmin']);
         $permissions = $em->getRepository(
-            'WellCart\User\Spec\AclPermissionEntity'
+            AclPermissionEntity::class
         )->findAll();
         $superAdmin->setPermissions($permissions);
         $em->persist($superAdmin);
