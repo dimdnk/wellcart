@@ -11,5 +11,5 @@ wellcart:
 mariaDB:
   image: mariadb
   environment:
-    MYSQL_DATABASE: root
+    MYSQL_DATABASE: wellcart
     MYSQL_ROOT_PASSWORD:
