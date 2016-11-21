@@ -81,7 +81,7 @@ return [
      */
     'router'          => [
         'routes' => [
-            'wellcart:setup:install' => [
+            'setup:install' => [
                 'type'             => 'WellCart\Router\Http\Literal',
                 'javascript_route' => true,
                 'priority'         => -500,
@@ -160,7 +160,7 @@ return [
          */
         'default_layout_template' => 'wellcart-setup/step',
         'wizards'                 => [
-            'wellcart:setup' => [
+            'setup' => [
                 'redirect_url' => '/',
                 'steps'        => [
                     'WellCart\Setup\Wizard\Step\License'         => [
@@ -226,9 +226,9 @@ return [
                     ],
                 ],
 
-                'wellcart::setup'               => [
+                'setup'               => [
                     'options' => [
-                        'route'    => 'wellcart:setup [--db-driver=<db-driver>] [--db-host=<db-host>] [--db-port=<db-port>] --db-name=<db-name> --db-username=<db-username> [--db-password=<db-password>] --admin-email=<admin-email> --admin-password=<admin-password> --admin-first-name=<admin-first-name> --admin-last-name=<admin-last-name> --base-path=<base-path> [--website-name=<website-name>]',
+                        'route'    => 'setup [--db-driver=<db-driver>] [--db-host=<db-host>] [--db-port=<db-port>] --db-name=<db-name> --db-username=<db-username> [--db-password=<db-password>] --admin-email=<admin-email> --admin-password=<admin-password> --admin-first-name=<admin-first-name> --admin-last-name=<admin-last-name> --base-path=<base-path> [--website-name=<website-name>]',
                         'defaults' => [
                             'controller'  => 'Setup::ConsoleSetup',
                             'action'      => 'handle',
@@ -240,18 +240,18 @@ return [
                         ]
                     ]
                 ],
-                'wellcart:setup:upgrade'        => [
+                'setup:upgrade'        => [
                     'options' => [
-                        'route'    => 'wellcart:setup:upgrade',
+                        'route'    => 'setup:upgrade',
                         'defaults' => [
                             'controller' => 'Setup::ConsoleSetup',
                             'action'     => 'upgrade',
                         ]
                     ]
                 ],
-                'wellcart:setup:publish-assets' => [
+                'setup:publish-assets' => [
                     'options' => [
-                        'route'    => 'wellcart:setup:publish-assets',
+                        'route'    => 'setup:publish-assets',
                         'defaults' => [
                             'controller' => 'Setup::ConsoleSetup',
                             'action'     => 'publish-assets',

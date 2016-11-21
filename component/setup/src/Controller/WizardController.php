@@ -30,7 +30,7 @@ class WizardController extends AbstractActionController implements
     public function processAction(SetupService $setup, WizardFactory $wizard)
     {
         /* @var $wizard \Wizard\WizardInterface */
-        $wizard = $wizard->create('wellcart:setup');
+        $wizard = $wizard->create('setup');
         $currentStep = $wizard->getCurrentStep();
         $currentStep->setSetupService($setup);
 

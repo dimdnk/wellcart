@@ -69,7 +69,7 @@ cd /var/www/html/wellcart/
 
 composer install
 chmod 0777 bin/wellcart
-bin/wellcart wellcart:setup --db-host=localhost --db-name=wellcart --db-username=wellcart --db-password=t00r --admin-email=dev@example.com --admin-password=qa123123 --admin-first-name=Developer --admin-last-name=Account --base-path=http://localhost:8080/ --website-name=Development
+bin/wellcart setup --db-host=localhost --db-name=wellcart --db-username=wellcart --db-password=t00r --admin-email=dev@example.com --admin-password=qa123123 --admin-first-name=Developer --admin-last-name=Account --base-path=http://localhost:8080/ --website-name=Development
 
 service apache2 restart
 
