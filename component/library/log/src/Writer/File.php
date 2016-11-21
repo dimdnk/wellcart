@@ -30,6 +30,6 @@ class File extends Stream
     protected function doWrite(array $event)
     {
         $line = $this->formatter->format($event) . $this->logSeparator;
-        file_put_contents($this->streamOrUrl, $line, FILE_APPEND);
+        @file_put_contents($this->streamOrUrl, $line, FILE_APPEND);
     }
 }
