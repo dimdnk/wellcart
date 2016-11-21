@@ -509,6 +509,24 @@ return [
         'session.save_path'       => WELLCART_STORAGE_PATH . 'sessions' . DS,
     ],
     'log'                        => [
+        'logger'                => [
+            'writers' => [
+                [
+                    'name'     => 'WellCart\Log\Writer\File',
+                    'priority' => 1000,
+                    'options'  => [
+                        'stream' => sys_get_temp_dir() . '/wellcart.log',
+                    ],
+                ],
+                [
+                    'name'     => 'WellCart\Log\Writer\File',
+                    'priority' => 1000,
+                    'options'  => [
+                        'stream' => WELLCART_STORAGE_PATH . 'logs/application.log',
+                    ],
+                ],
+            ],
+        ],
         'log_base'                => [
             'writers' => [
                 [
