@@ -263,7 +263,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
      */
     public function isPrimary(): bool
     {
-        return $this->isPrimary;
+        return boolval($this->isPrimary);
     }
 
     /**
