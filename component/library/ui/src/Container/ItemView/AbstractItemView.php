@@ -122,11 +122,11 @@ class AbstractItemView extends ViewModel
     }
 
     /**
-     * @return boolean
+     * @return bool
      */
-    public function isPrepared()
+    public function isPrepared(): bool
     {
-        return $this->isPrepared;
+        return boolval($this->isPrepared);
     }
 
     /**

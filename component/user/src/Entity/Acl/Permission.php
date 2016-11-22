@@ -111,7 +111,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
      */
     public function isSystem(): bool
     {
-        return $this->isSystem;
+        return boolval($this->isSystem);
     }
 
     /**

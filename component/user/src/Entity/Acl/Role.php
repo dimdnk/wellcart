@@ -380,7 +380,7 @@ class Role extends AbstractRole implements AclRoleEntity
      */
     public function isDefault(): bool
     {
-        return $this->isDefault;
+        return boolval($this->isDefault);
     }
 
     /**
@@ -428,7 +428,7 @@ class Role extends AbstractRole implements AclRoleEntity
      */
     public function isSystem(): bool
     {
-        return $this->isSystem;
+        return boolval($this->isSystem);
     }
 
     /**

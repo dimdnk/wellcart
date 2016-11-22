@@ -175,7 +175,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
      */
     public function isActive(): bool
     {
-        return $this->isActive;
+        return boolval($this->isActive);
     }
 
     /**
@@ -192,7 +192,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
      */
     public function isDefault(): bool
     {
-        return $this->isDefault;
+        return boolval($this->isDefault);
     }
 
     /**
@@ -277,7 +277,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
      */
     public function isSystem(): bool
     {
-        return $this->isSystem;
+        return boolval($this->isSystem);
     }
 
     /**

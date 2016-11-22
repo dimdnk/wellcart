@@ -123,7 +123,7 @@ class Scope extends AbstractEntity implements Entity
      */
     public function isDefault()
     {
-        return $this->isDefault;
+        return boolval($this->isDefault);
     }
 
     /**
