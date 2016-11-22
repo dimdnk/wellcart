@@ -333,9 +333,9 @@ class Module implements
     {
         return [
             "Flushes cache storage:\n",
-            'wellcart:cache:flush' => '',
+            'cache:flush' => '',
             "Display registered routes list:\n",
-            'wellcart:route:list'  => '',
+            'route:list'  => '',
         ];
     }
 }

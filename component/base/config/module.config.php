@@ -449,18 +449,18 @@ return [
     'console'                    => [
         'router' => [
             'routes' => [
-                'wellcart:cache:flush' => [
+                'cache:flush' => [
                     'options' => [
-                        'route'    => 'wellcart:cache:flush',
+                        'route'    => 'cache:flush',
                         'defaults' => [
                             'controller' => 'Base::Console\Cache',
                             'action'     => 'flush',
                         ]
                     ]
                 ],
-                'wellcart:route:list'  => [
+                'route:list'  => [
                     'options' => [
-                        'route'    => 'wellcart:route:list',
+                        'route'    => 'route:list',
                         'defaults' => [
                             'controller' => 'Base::Console\Route',
                             'action'     => 'list',

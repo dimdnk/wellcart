@@ -112,7 +112,7 @@ class Module implements
     {
         return [
             "Directory enables the management of countries and regions associated data like the country code and currency rates. Also, enables conversion of prices to a specified currency format.:\n",
-            'wellcart:directory:update-currency-rates' => 'Import currency rates from Yahoo Finance service.',
+            'directory:update-currency-rates' => 'Import currency rates from Yahoo Finance service.',
         ];
     }
 }

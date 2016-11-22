@@ -257,9 +257,9 @@ return [
          */
         'router' => [
             'routes' => [
-                'wellcart:directory:update-currency-rates' => [
+                'directory:update-currency-rates' => [
                     'options' => [
-                        'route'    => 'wellcart:directory:update-currency-rates',
+                        'route'    => 'directory:update-currency-rates',
                         'defaults' => [
                             'controller' => 'Directory::Console\UpdateCurrencyRates',
                             'action'     => 'handle',
@@ -272,9 +272,9 @@ return [
 
     'cronModule'     => [
         'jobs' => [
-            'wellcart:directory:update'
+            'directory:update'
             => [
-                'command'  => 'wellcart wellcart:directory:update-currency-rates',
+                'command'  => 'wellcart directory:update-currency-rates',
                 'schedule' => '*/30 * * * *'
             ],
         ]
