@@ -5,61 +5,65 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\User;
+use ZfcUser\Authentication\Adapter\AdapterChain as AuthAdapterChain;
+
 return [
     'aggregates' => [],
     'listeners'  => [
-        'WellCart\User\EventListener\Login\EmailNotConfirmed'                 => [
-            'id'       => 'ZfcUser\Authentication\Adapter\AdapterChain',
+        EventListener\Login\EmailNotConfirmed::class                 => [
+            'id'       => AuthAdapterChain::class,
             'event'    => 'authenticate',
-            'listener' => 'WellCart\User\EventListener\Login\EmailNotConfirmed',
+            'listener' => EventListener\Login\EmailNotConfirmed::class,
             'priority' => -50000,
         ],
-        'WellCart\User\EventListener\Login\HandleFailedLoginCount'            => [
-            'id'       => 'ZfcUser\Authentication\Adapter\AdapterChain',
+        EventListener\Login\HandleFailedLoginCount::class            => [
+            'id'       => AuthAdapterChain::class,
             'event'    => 'authenticate',
-            'listener' => 'WellCart\User\EventListener\Login\HandleFailedLoginCount',
+            'listener' => EventListener\Login\HandleFailedLoginCount::class,
             'priority' => -50000,
         ],
-        'WellCart\User\EventListener\Login\IdentityReview'                    => [
-            'id'       => 'ZfcUser\Authentication\Adapter\AdapterChain',
+        EventListener\Login\IdentityReview::class                    => [
+            'id'       => AuthAdapterChain::class,
             'event'    => 'authenticate',
-            'listener' => 'WellCart\User\EventListener\Login\IdentityReview',
+            'listener' => EventListener\Login\IdentityReview::class,
             'priority' => -100000,
         ],
-        'WellCart\User\EventListener\Registration\AddRequiredFieldsToForm'    => [
+        EventListener\Registration\AddRequiredFieldsToForm::class    => [
             'id'       => 'ZfcUser\Form\Register',
             'event'    => 'init',
-            'listener' => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToForm',
+            'listener' => EventListener\Registration\AddRequiredFieldsToForm::class,
             'priority' => -300,
         ],
-        'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter'  => [
+        EventListener\Registration\AddRequiredFieldsToFilter::class  => [
             'id'       => 'ZfcUser\Form\RegisterFilter',
             'event'    => 'init',
-            'listener' => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter',
+            'listener' => EventListener\Registration\AddRequiredFieldsToFilter::class,
             'priority' => -300,
         ],
-        'WellCart\User\EventListener\Registration\SetDefaultAccountSettings'  => [
-            'id'       => 'WellCart\User\Service\User',
+        EventListener\Registration\SetDefaultAccountSettings::class  => [
+            'id'       => Service\User::class,
             'event'    => 'register',
-            'listener' => 'WellCart\User\EventListener\Registration\SetDefaultAccountSettings',
+            'listener' => EventListener\Registration\SetDefaultAccountSettings::class,
             'priority' => -350,
         ],
-        'WellCart\User\EventListener\Registration\WelcomeEmail'               => [
-            'id'       => 'WellCart\User\Service\User',
+        EventListener\Registration\WelcomeEmail::class               => [
+            'id'       => Service\User::class,
             'event'    => 'register',
-            'listener' => 'WellCart\User\EventListener\Registration\WelcomeEmail',
+            'listener' => EventListener\Registration\WelcomeEmail::class,
             'priority' => -300,
         ],
-        'WellCart\User\EventListener\Registration\EmailConfirmation'          => [
-            'id'       => 'WellCart\User\Service\User',
+        EventListener\Registration\EmailConfirmation::class          => [
+            'id'       => Service\User::class,
             'event'    => 'register',
-            'listener' => 'WellCart\User\EventListener\Registration\EmailConfirmation',
+            'listener' => EventListener\Registration\EmailConfirmation::class,
             'priority' => -400,
         ],
-        'WellCart\User\EventListener\Registration\BindRequiredFieldsToEntity' => [
-            'id'       => 'WellCart\User\Service\User',
+        EventListener\Registration\BindRequiredFieldsToEntity::class => [
+            'id'       => Service\User::class,
             'event'    => 'register',
-            'listener' => 'WellCart\User\EventListener\Registration\BindRequiredFieldsToEntity',
+            'listener' => EventListener\Registration\BindRequiredFieldsToEntity::class,
             'priority' => -500,
         ],
     ],

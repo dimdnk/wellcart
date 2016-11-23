@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Ui\Layout\Listener;
+namespace WellCart\Ui\Layout\EventListener;
 
 use ConLayout\Block\BlockPoolInterface;
 use ConLayout\Layout\LayoutInterface;

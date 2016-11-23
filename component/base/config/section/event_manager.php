@@ -5,25 +5,30 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\Base;
+use ConLayout\Block\Factory\BlockFactory;
+use WellCart\Base\Service\ConfigurationEditor;
+
 return [
     'aggregates' => [],
     'listeners'  => [
-        'WellCart\Base\EventListener\DoctrineGlobalCacheChanger'   => [
-            'id'       => 'WellCart\Base\Service\ConfigurationEditor',
+        EventListener\DoctrineGlobalCacheChanger::class   => [
+            'id'       => ConfigurationEditor::class,
             'event'    => 'saveConfigSet.pre',
-            'listener' => 'WellCart\Base\EventListener\DoctrineGlobalCacheChanger',
+            'listener' => EventListener\DoctrineGlobalCacheChanger::class,
             'priority' => -100,
         ],
-        'WellCart\Base\EventListener\NormalizeViewManagerBasePath' => [
-            'id'       => 'WellCart\Base\Service\ConfigurationEditor',
+        EventListener\NormalizeViewManagerBasePath::class => [
+            'id'       => ConfigurationEditor::class,
             'event'    => 'saveConfigSet.pre',
-            'listener' => 'WellCart\Base\EventListener\NormalizeViewManagerBasePath',
+            'listener' => EventListener\NormalizeViewManagerBasePath::class,
             'priority' => -100,
         ],
-        'WellCart\Base\EventListener\PrepareLayoutItemView'        => [
-            'id'       => 'ConLayout\Block\Factory\BlockFactory',
+        EventListener\PrepareLayoutItemView::class        => [
+            'id'       => BlockFactory::class,
             'event'    => 'createBlock.post',
-            'listener' => 'WellCart\Base\EventListener\PrepareLayoutItemView',
+            'listener' => EventListener\PrepareLayoutItemView::class,
             'priority' => -100,
         ],
     ],

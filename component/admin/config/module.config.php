@@ -375,8 +375,8 @@ return [
         ],
     ],
     'listeners'            => [
-        EventListener\SetupPageVariables::class                  => EventListener\SetupPageVariables::class,
-        'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy' => 'WellCart\Admin\Rbac\View\Strategy\UnauthorizedStrategy',
+        EventListener\SetupPageVariables::class        => EventListener\SetupPageVariables::class,
+        Rbac\View\Strategy\UnauthorizedStrategy::class => Rbac\View\Strategy\UnauthorizedStrategy::class,
     ],
     'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
