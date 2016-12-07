@@ -205,8 +205,8 @@ class Module implements
     public function getMigrations(): array
     {
         return [
-            '20161001000000' => new Setup\Schema\Install(
-                '20161001000000'
+            '20161201000000' => new Setup\Schema\Install(
+                '20161201000000'
             ),
         ];
     }
@@ -219,8 +219,8 @@ class Module implements
     public function getDataFixtures(): array
     {
         return [
-            '20161001000000' => new Setup\Data\Install(
-                '20161001000000'
+            '20161201000000' => new Setup\Data\Install(
+                '20161201000000'
             ),
         ];
     }
