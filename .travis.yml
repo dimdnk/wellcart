@@ -25,7 +25,7 @@ services:
 addons:
   apt:
     sources:
-    - trusty-pgdg-9.
+    - trusty-pgdg-9.5
     packages:
     - mysql-server-5.6
     - mysql-client-core-5.6
