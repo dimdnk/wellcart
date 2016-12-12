@@ -28,13 +28,14 @@ class Product extends AbstractForm
     /**
      * Form constructor
      *
-     * @param Factory              $factory
-     * @param ObjectHydrator       $hydrator
-     * @param ProductEntity        $productPrototype
-     * @param ProductI18nEntity    $productTranslationPrototype
-     * @param ProductVariantEntity $productVariantPrototype
-     * @param ProductImageEntity   $productImagePrototype
-     */
+     * @param Factory                  $factory
+     * @param ObjectHydrator           $hydrator
+     * @param ProductEntity            $productPrototype
+     * @param ProductI18nEntity        $productTranslationPrototype
+     * @param ProductVariantEntity     $productVariantPrototype
+     * @param FeatureCombinationEntity $productFeatureCombinationPrototype
+     * @param ProductImageEntity       $productImagePrototype
+   */
     public function __construct(
         Factory $factory,
         ObjectHydrator $hydrator,
