@@ -98,7 +98,7 @@ class LanguageTest extends TestCase
     public function testIsActive()
     {
         $this->assertFalse($this->object->isActive());
-        $this->object->setIsActive('test');
+        $this->object->setIsActive(true);
         $this->assertTrue($this->object->isActive());
     }
 
@@ -113,7 +113,7 @@ class LanguageTest extends TestCase
     public function testIsDefault()
     {
         $this->assertFalse($this->object->isDefault());
-        $this->object->setIsDefault('test');
+        $this->object->setIsDefault(true);
         $this->assertTrue($this->object->isDefault());
     }
 
@@ -188,7 +188,7 @@ class LanguageTest extends TestCase
     public function testIsSystem()
     {
         $this->assertFalse($this->object->isSystem());
-        $this->object->setIsSystem('test');
+        $this->object->setIsSystem(true);
         $this->assertTrue($this->object->isSystem());
     }
 
