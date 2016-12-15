@@ -5,6 +5,7 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
 declare(strict_types = 1);
 
 namespace WellCart\Base\Entity\Locale;
@@ -29,7 +30,7 @@ class LanguageTest extends TestCase
     {
         $this->object->setCreatedAt(new DateTime);
         $this->assertInstanceOf(
-            'DateTimeInterface',
+            \DateTimeInterface::class,
             $this->object->getCreatedAt()
         );
     }
@@ -37,7 +38,7 @@ class LanguageTest extends TestCase
     public function testSetCreatedAt()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setCreatedAt(new DateTime)
         );
     }
@@ -52,7 +53,7 @@ class LanguageTest extends TestCase
     public function testSetId()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setId(1)
         );
     }
@@ -62,7 +63,7 @@ class LanguageTest extends TestCase
         $this->assertNull($this->object->getUpdatedAt());
         $this->object->setUpdatedAt(new DateTime);
         $this->assertInstanceOf(
-            'DateTimeInterface',
+            \DateTimeInterface::class,
             $this->object->getUpdatedAt()
         );
     }
@@ -70,12 +71,12 @@ class LanguageTest extends TestCase
     public function testSetUpdatedAt()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setUpdatedAt(null)
         );
 
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setUpdatedAt(new DateTime)
         );
     }
@@ -90,7 +91,7 @@ class LanguageTest extends TestCase
     public function testSetCode()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setCode(null)
         );
     }
@@ -98,14 +99,14 @@ class LanguageTest extends TestCase
     public function testIsActive()
     {
         $this->assertFalse($this->object->isActive());
-        $this->object->setIsActive('test');
+        $this->object->setIsActive(true);
         $this->assertTrue($this->object->isActive());
     }
 
     public function testSetIsActive()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setIsActive(true)
         );
     }
@@ -113,14 +114,14 @@ class LanguageTest extends TestCase
     public function testIsDefault()
     {
         $this->assertFalse($this->object->isDefault());
-        $this->object->setIsDefault('test');
+        $this->object->setIsDefault(true);
         $this->assertTrue($this->object->isDefault());
     }
 
     public function testSetIsDefault()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setIsDefault(true)
         );
     }
@@ -135,7 +136,7 @@ class LanguageTest extends TestCase
     public function testSetLocale()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setLocale('en_US')
         );
     }
@@ -150,7 +151,7 @@ class LanguageTest extends TestCase
     public function testSetName()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setName('English')
         );
     }
@@ -165,7 +166,7 @@ class LanguageTest extends TestCase
     public function testSetSortOrder()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setSortOrder(1)
         );
     }
@@ -180,7 +181,7 @@ class LanguageTest extends TestCase
     public function testSetTerritory()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setTerritory('en')
         );
     }
@@ -188,14 +189,14 @@ class LanguageTest extends TestCase
     public function testIsSystem()
     {
         $this->assertFalse($this->object->isSystem());
-        $this->object->setIsSystem('test');
+        $this->object->setIsSystem(true);
         $this->assertTrue($this->object->isSystem());
     }
 
     public function testSetIsSystem()
     {
         $this->assertInstanceOf(
-            'WellCart\Base\Entity\Locale\Language',
+            Language::class,
             $this->object->setIsSystem(true)
         );
     }
