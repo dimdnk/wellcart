@@ -2441,16 +2441,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.24",
+            "version": "v2.4.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "a7f7243a19f79a99ac83a3570444d8795f665eef"
+                "reference": "9ac9111dfa7e4b89f8961f29bb64a385c31d5ed8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/a7f7243a19f79a99ac83a3570444d8795f665eef",
-                "reference": "a7f7243a19f79a99ac83a3570444d8795f665eef",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/9ac9111dfa7e4b89f8961f29bb64a385c31d5ed8",
+                "reference": "9ac9111dfa7e4b89f8961f29bb64a385c31d5ed8",
                 "shasum": ""
             },
             "require": {
@@ -2516,7 +2516,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-10-11 18:03:37"
+            "time": "2016-12-14 20:12:38"
         },
         {
             "name": "herrera-io/json",
@@ -5902,19 +5902,27 @@
         },
         {
             "name": "sebastian/version",
-            "version": "1.0.6",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/version.git",
-                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6"
+                "reference": "99732be0ddb3361e16ad77b68ba41efc8e979019"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
-                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
+                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/99732be0ddb3361e16ad77b68ba41efc8e979019",
+                "reference": "99732be0ddb3361e16ad77b68ba41efc8e979019",
                 "shasum": ""
             },
+            "require": {
+                "php": ">=5.6"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -5933,7 +5941,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2015-06-21 13:59:46"
+            "time": "2016-10-03 07:35:21"
         },
         {
             "name": "seld/jsonlint",
@@ -7678,16 +7686,16 @@
         },
         {
             "name": "zendframework/zend-cache",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-cache.git",
-                "reference": "2c68def8f96ce842d2f2a9a69e2f3508c2f5312d"
+                "reference": "c98331b96d3b9d9b24cf32d02660602edb34d039"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-cache/zipball/2c68def8f96ce842d2f2a9a69e2f3508c2f5312d",
-                "reference": "2c68def8f96ce842d2f2a9a69e2f3508c2f5312d",
+                "url": "https://api.github.com/repos/zendframework/zend-cache/zipball/c98331b96d3b9d9b24cf32d02660602edb34d039",
+                "reference": "c98331b96d3b9d9b24cf32d02660602edb34d039",
                 "shasum": ""
             },
             "require": {
@@ -7697,9 +7705,9 @@
                 "zendframework/zend-stdlib": "^2.7 || ^3.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
                 "phpbench/phpbench": "^0.10.0",
-                "phpunit/phpunit": "^4.5",
+                "phpunit/phpunit": "^4.8",
+                "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-serializer": "^2.6",
                 "zendframework/zend-session": "^2.6.2"
             },
@@ -7743,7 +7751,7 @@
                 "cache",
                 "zf2"
             ],
-            "time": "2016-05-12 21:47:55"
+            "time": "2016-12-16 11:35:47"
         },
         {
             "name": "zendframework/zend-captcha",
@@ -10246,47 +10254,45 @@
         },
         {
             "name": "zendframework/zend-test",
-            "version": "2.6.1",
+            "version": "2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-test.git",
-                "reference": "0e2d81410af33c092a2916e77cbdfa3b6dc1bf1b"
+                "reference": "e9c0a570d5519a85a4b15a58c30fbc04a33c45f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-test/zipball/0e2d81410af33c092a2916e77cbdfa3b6dc1bf1b",
-                "reference": "0e2d81410af33c092a2916e77cbdfa3b6dc1bf1b",
+                "url": "https://api.github.com/repos/zendframework/zend-test/zipball/e9c0a570d5519a85a4b15a58c30fbc04a33c45f5",
+                "reference": "e9c0a570d5519a85a4b15a58c30fbc04a33c45f5",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0",
-                "phpunit/phpunit": "^4.0 || ^5.0",
-                "sebastian/version": "^1.0.4",
-                "zendframework/zend-console": "^2.6",
-                "zendframework/zend-dom": "^2.6",
-                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
-                "zendframework/zend-http": "^2.5.4",
-                "zendframework/zend-mvc": "^2.7.1",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0",
-                "zendframework/zend-uri": "^2.5",
-                "zendframework/zend-view": "^2.6.3"
+                "php": ">=5.5",
+                "phpunit/phpunit": "~4.0|~5.0",
+                "zendframework/zend-console": "~2.5",
+                "zendframework/zend-dom": "~2.5",
+                "zendframework/zend-eventmanager": "~2.5",
+                "zendframework/zend-http": "~2.5",
+                "zendframework/zend-mvc": "~2.5",
+                "zendframework/zend-servicemanager": "~2.5",
+                "zendframework/zend-stdlib": "~2.5",
+                "zendframework/zend-uri": "~2.5",
+                "zendframework/zend-view": "~2.5"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "1.7.*",
                 "mikey179/vfsstream": "~1.2",
-                "symfony/finder": "^2.2",
-                "zendframework/zend-i18n": "^2.6",
-                "zendframework/zend-log": "^2.7.1",
-                "zendframework/zend-modulemanager": "^2.7.1",
-                "zendframework/zend-serializer": "^2.6.1",
-                "zendframework/zend-session": "^2.6.2"
+                "zendframework/zend-i18n": "~2.5",
+                "zendframework/zend-log": "~2.5",
+                "zendframework/zend-modulemanager": "~2.5",
+                "zendframework/zend-serializer": "~2.5",
+                "zendframework/zend-session": "~2.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev",
-                    "dev-develop": "2.7-dev"
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
                 }
             },
             "autoload": {
@@ -10303,7 +10309,7 @@
                 "test",
                 "zf2"
             ],
-            "time": "2016-03-02 20:15:27"
+            "time": "2016-03-01 20:28:49"
         },
         {
             "name": "zendframework/zend-text",
