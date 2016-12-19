@@ -81,7 +81,7 @@ return [
      */
     'router'          => [
         'routes' => [
-            'setup:install' => [
+            'setup' => [
                 'type'             => 'WellCart\Router\Http\Literal',
                 'javascript_route' => true,
                 'priority'         => -500,

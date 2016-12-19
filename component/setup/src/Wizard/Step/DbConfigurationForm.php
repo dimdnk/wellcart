@@ -171,7 +171,7 @@ class DbConfigurationForm extends Form implements InputFilterProviderInterface
                 'attributes' => [
                     'autocomplete' => 'off',
                     'value'        => url_to_route(
-                        'setup:install',
+                        'setup',
                         [],
                         ['force_canonical' => true]
                     ),
