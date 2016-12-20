@@ -39,7 +39,6 @@ return [
                     'zfcadmin/admin/accounts' => [
                         'label'      => 'Administrators',
                         'route'      => 'zfcadmin/admin/accounts',
-                        'controller' => 'WellCart\Admin\Controller\Admin\Accounts',
                         'action'     => 'list',
                         'order'      => -600,
                         'permission' => 'admin/accounts/list',
