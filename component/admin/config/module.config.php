@@ -380,10 +380,7 @@ return [
     ],
     'system_config_editor' => include __DIR__
         . '/section/system_config_editor.php',
-    'navigation'           => [
-        'backend_main_navigation' => include __DIR__
-            . '/backend_main_navigation.php',
-    ],
+
     'ZfcDatagrid'          => [
         'renderer' => [
             'HtmlDataGrid' => [

@@ -350,10 +350,6 @@ return [
         . '/section/object_mapping.php',
     'layout_updates'             => include __DIR__
         . '/section/layout_updates.php',
-    'navigation'                 => [
-        'backend_main_navigation' => include __DIR__
-            . '/backend_main_navigation.php',
-    ],
     'form_elements'              => [
         'aliases'    => [
             'catalogFeatureCombinationMultiCheckbox' => Form\Element\FeatureCombinationMultiCheckbox::class,

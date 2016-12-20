@@ -763,10 +763,7 @@ return [
         'wizards'                 => [],
     ],
     'wizard_steps'               => [],
-    'navigation'                 => [
-        'backend_main_navigation' => include __DIR__
-            . '/backend_main_navigation.php',
-    ],
+
     'headbuild'                  => [
         'public_path'   => WELLCART_PUBLIC_PATH,
         'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json'

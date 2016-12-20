@@ -72,10 +72,6 @@ return [
             ],
         ],
     ],
-    'navigation'      => [
-        'backend_main_navigation' => include __DIR__
-            . '/backend_main_navigation.php',
-    ],
     /**
      * =========================================================
      * Translator configuration
