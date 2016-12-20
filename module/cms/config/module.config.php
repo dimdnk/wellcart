@@ -154,7 +154,7 @@ return [
      * =========================================================
      */
     'view_manager'   => [
-        'template_map' => include __DIR__ . '/section/template_map.php',
+        'template_map' => include __DIR__ . '/section/view_manager.global.php',
     ],
 
     /**
@@ -162,6 +162,6 @@ return [
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping' => include __DIR__ . '/section/object_mapping.php',
-    'layout_updates' => include __DIR__ . '/section/layout_updates.php',
+    'object_mapping' => include __DIR__ . '/section/object_mapping.global.php',
+    'layout_updates' => include __DIR__ . '/section/layout_updates.global.php',
 ];

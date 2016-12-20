@@ -214,7 +214,7 @@ return [
     'zf-versioning'      => [
         'uri' => [],
     ],
-    'object_mapping'     => include __DIR__ . '/object_mapping.php',
+    'object_mapping'     => include __DIR__ . '/object_mapping.global.php',
     'zf-oauth2-doctrine' => include __DIR__ . '/zfoauth2doctrine.php',
     'zf-mvc-auth'        => [
         'authentication' => [

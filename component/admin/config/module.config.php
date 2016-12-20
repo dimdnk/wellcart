@@ -92,8 +92,8 @@ return [
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping'   => include __DIR__ . '/section/object_mapping.php',
-    'layout_updates'   => include __DIR__ . '/section/layout_updates.php',
+    'object_mapping'   => include __DIR__ . '/section/object_mapping.global.php',
+    'layout_updates'   => include __DIR__ . '/section/layout_updates.global.php',
 
     /**
      * =========================================================
@@ -150,7 +150,7 @@ return [
         /**
          * Template map
          */
-        'template_map'        => include __DIR__ . '/section/template_map.php',
+        'template_map'        => include __DIR__ . '/section/view_manager.global.php',
     ],
     /**
      * Default ZfcRbac configuration for RBAC
@@ -165,7 +165,7 @@ return [
             Rbac\Guard\RouteGuard::class => [],
         ],
     ],
-    'event_manager' => include __DIR__ . '/section/event_manager.php',
+    'event_manager' => include __DIR__ . '/section/event_manager.global.php',
 
     'controllers' => [
         'aliases'   => [
@@ -379,7 +379,7 @@ return [
         Rbac\View\Strategy\UnauthorizedStrategy::class => Rbac\View\Strategy\UnauthorizedStrategy::class,
     ],
     'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.php',
+        . '/section/system_config_editor.global.php',
 
     'ZfcDatagrid'          => [
         'renderer' => [

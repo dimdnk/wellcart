@@ -172,7 +172,7 @@ return [
         EventListener\LogException::class       => EventListener\LogException::class,
     ],
     'event_manager' => include __DIR__
-        . '/section/event_manager.php',
+        . '/section/event_manager.global.php',
 
     'input_filters'        => [
         'abstract_factories' => [
@@ -236,7 +236,7 @@ return [
     'acmailer_options'     => include __DIR__
         . '/section/acmailer_options.php',
     'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.php',
+        . '/section/system_config_editor.global.php',
 
     /**
      * Session configuration
@@ -249,7 +249,7 @@ return [
      * =========================================================
      */
     'object_mapping'       => include __DIR__
-        . '/section/object_mapping.php',
+        . '/section/object_mapping.global.php',
 
     /**
      * =========================================================

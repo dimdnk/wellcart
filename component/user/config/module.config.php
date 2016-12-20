@@ -86,7 +86,7 @@ return [
         ],
     ],
 
-    'event_manager' => include __DIR__ . '/section/event_manager.php',
+    'event_manager' => include __DIR__ . '/section/event_manager.global.php',
     'listeners'     => [
         'WellCart\User\EventListener\UnauthorizedStrategy' => 'WellCart\User\EventListener\UnauthorizedStrategy',
     ],
@@ -293,7 +293,7 @@ return [
 
 
     'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.php',
+        . '/section/system_config_editor.global.php',
     /**
      * =========================================================
      * Static assets configuration
@@ -335,7 +335,7 @@ return [
      * =========================================================
      */
     'view_manager'          => [
-        'template_map' => include __DIR__ . '/section/template_map.php',
+        'template_map' => include __DIR__ . '/section/view_manager.global.php',
 
     ],
 
@@ -344,7 +344,7 @@ return [
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping'        => include __DIR__ . '/section/object_mapping.php',
+    'object_mapping'        => include __DIR__ . '/section/object_mapping.global.php',
     'context_specific'      => [
         'frontend' => [
             'wellcart' => [

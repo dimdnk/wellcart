@@ -43,7 +43,7 @@ return [
     ],
 
     'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.php',
+        . '/section/system_config_editor.global.php',
 
     'controllers' => [
         'aliases'    => [
@@ -242,7 +242,7 @@ return [
      * Object mapping configuration
      * =========================================================
      */
-    'object_mapping' => include __DIR__ . '/section/object_mapping.php',
+    'object_mapping' => include __DIR__ . '/section/object_mapping.global.php',
 
     'console' => [
         /**
@@ -274,5 +274,5 @@ return [
             ],
         ]
     ],
-    'layout_updates' => include __DIR__ . '/section/layout_updates.php',
+    'layout_updates' => include __DIR__ . '/section/layout_updates.global.php',
 ];

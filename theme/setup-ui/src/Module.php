@@ -92,7 +92,7 @@ class Module implements
                 ],
             ],
             'layout_updates' => include __DIR__
-                . '/../config/layout_updates.php',
+                . '/../config/layout_updates.global.php',
         ];
     }
 
