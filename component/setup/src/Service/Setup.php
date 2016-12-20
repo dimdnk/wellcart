@@ -465,14 +465,14 @@ class Setup
     }
 
     /**
-     * Create Admin Account
+     * Create Backend Account
      *
      * @param array $data
      *
      * @return bool
      * @throws Throwable
      */
-    public function createAdminAccount(array $data)
+    public function createBackendAccount(array $data)
     {
         $data['passwordVerify'] = $data['password'];
         try {
@@ -485,7 +485,7 @@ class Setup
                     if (!$result) {
                         throw new \InvalidArgumentException(
                             sprintf(
-                                'Admin user registration failed: %s',
+                                'Backend user registration failed: %s',
                                 json_encode(
                                     $userService->getRegisterForm()
                                         ->getMessages()

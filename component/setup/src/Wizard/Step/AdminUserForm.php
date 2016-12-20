@@ -13,7 +13,7 @@ namespace WellCart\Setup\Wizard\Step;
 use WellCart\Form\Form;
 use Zend\InputFilter\InputFilterProviderInterface;
 
-class AdminUserForm extends Form implements
+class BackendUserForm extends Form implements
     InputFilterProviderInterface
 {
 

@@ -27,12 +27,12 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            PageView\Admin\OAuth2\PublicKeysGrid::class => false,
-            PageView\Admin\OAuth2\PublicKeyForm::class  => false,
-            PageView\Admin\OAuth2\ClientsGrid::class    => false,
-            PageView\Admin\OAuth2\ClientForm::class     => false,
-            PageView\Admin\OAuth2\ScopesGrid::class     => false,
-            PageView\Admin\OAuth2\ScopeForm::class      => false,
+            PageView\Backend\OAuth2\PublicKeysGrid::class => false,
+            PageView\Backend\OAuth2\PublicKeyForm::class  => false,
+            PageView\Backend\OAuth2\ClientsGrid::class    => false,
+            PageView\Backend\OAuth2\ClientForm::class     => false,
+            PageView\Backend\OAuth2\ScopesGrid::class     => false,
+            PageView\Backend\OAuth2\ScopeForm::class      => false,
         ],
     ],
 
@@ -126,7 +126,7 @@ return [
                         'options'      => [
                             'route'    => 'api/',
                             'defaults' => [
-                                'controller' => 'RestApi::Admin\OAuth2\Clients',
+                                'controller' => 'RestApi::Backend\OAuth2\Clients',
                                 'action'     => 'list',
                             ],
                         ],
@@ -143,7 +143,7 @@ return [
                                         'id'         => '([0-9]+|deleteClients|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'RestApi::Admin\OAuth2\Clients',
+                                        'controller' => 'RestApi::Backend\OAuth2\Clients',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -160,7 +160,7 @@ return [
                                         'id'         => '([0-9]+|deleteScopes|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'RestApi::Admin\OAuth2\Scopes',
+                                        'controller' => 'RestApi::Backend\OAuth2\Scopes',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -177,7 +177,7 @@ return [
                                         'id'         => '([0-9]+|deleteKeys|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'RestApi::Admin\OAuth2\PublicKeys',
+                                        'controller' => 'RestApi::Backend\OAuth2\PublicKeys',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -191,17 +191,17 @@ return [
     'controllers'     => [
         'aliases'    => [
             'RestApi::Hello'                   => Controller\HelloController::class,
-            'RestApi::Admin\OAuth2\PublicKeys' => Controller\Admin\OAuth2\PublicKeysController::class,
-            'RestApi::Admin\OAuth2\Clients'    => Controller\Admin\OAuth2\ClientsController::class,
-            'RestApi::Admin\OAuth2\Scopes'     => Controller\Admin\OAuth2\ScopesController::class,
+            'RestApi::Backend\OAuth2\PublicKeys' => Controller\Backend\OAuth2\PublicKeysController::class,
+            'RestApi::Backend\OAuth2\Clients'    => Controller\Backend\OAuth2\ClientsController::class,
+            'RestApi::Backend\OAuth2\Scopes'     => Controller\Backend\OAuth2\ScopesController::class,
         ],
         'invokables' => [
             Controller\HelloController::class => Controller\HelloController::class,
         ],
         'factories'  => [
-            Controller\Admin\OAuth2\PublicKeysController::class => Factory\Controller\Admin\OAuth2\PublicKeysControllerFactory::class,
-            Controller\Admin\OAuth2\ClientsController::class    => Factory\Controller\Admin\OAuth2\ClientsControllerFactory::class,
-            Controller\Admin\OAuth2\ScopesController::class     => Factory\Controller\Admin\OAuth2\ScopesControllerFactory::class,
+            Controller\Backend\OAuth2\PublicKeysController::class => Factory\Controller\Backend\OAuth2\PublicKeysControllerFactory::class,
+            Controller\Backend\OAuth2\ClientsController::class    => Factory\Controller\Backend\OAuth2\ClientsControllerFactory::class,
+            Controller\Backend\OAuth2\ScopesController::class     => Factory\Controller\Backend\OAuth2\ScopesControllerFactory::class,
         ],
     ],
 

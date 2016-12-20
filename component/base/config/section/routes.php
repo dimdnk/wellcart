@@ -51,7 +51,7 @@ return [
                 'options'      => [
                     'route'    => 'base/',
                     'defaults' => [
-                        'controller' => 'Base::Admin\Languages',
+                        'controller' => 'Base::Backend\Languages',
                         'action'     => 'list',
                     ],
                 ],
@@ -68,7 +68,7 @@ return [
                                 'id'         => '([0-9]+|delete)',
                             ],
                             'defaults'    => [
-                                'controller' => 'Base::Admin\Languages',
+                                'controller' => 'Base::Backend\Languages',
                                 'action'     => 'list',
                                 'id'         => null,
                             ],
@@ -86,7 +86,7 @@ return [
                                 'id'         => '([0-9]+|delete)',
                             ],
                             'defaults'    => [
-                                'controller' => 'Base::Admin\UrlRewrites',
+                                'controller' => 'Base::Backend\UrlRewrites',
                                 'action'     => 'list',
                                 'id'         => null,
                             ],

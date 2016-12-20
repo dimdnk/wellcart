@@ -31,14 +31,14 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            PageView\Admin\CurrenciesGrid::class => false,
-            PageView\Admin\CurrencyForm::class   => false,
-            PageView\Admin\CountriesGrid::class  => false,
-            PageView\Admin\CountryForm::class    => false,
-            PageView\Admin\ZonesGrid::class      => false,
-            PageView\Admin\ZoneForm::class       => false,
-            PageView\Admin\GeoZonesGrid::class   => false,
-            PageView\Admin\GeoZoneForm::class    => false,
+            PageView\Backend\CurrenciesGrid::class => false,
+            PageView\Backend\CurrencyForm::class   => false,
+            PageView\Backend\CountriesGrid::class  => false,
+            PageView\Backend\CountryForm::class    => false,
+            PageView\Backend\ZonesGrid::class      => false,
+            PageView\Backend\ZoneForm::class       => false,
+            PageView\Backend\GeoZonesGrid::class   => false,
+            PageView\Backend\GeoZoneForm::class    => false,
         ],
     ],
 
@@ -48,19 +48,19 @@ return [
     'controllers' => [
         'aliases'    => [
             'Directory::Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
-            'Directory::Admin\Currencies'            => Controller\Admin\CurrenciesController::class,
-            'Directory::Admin\Countries'             => Controller\Admin\CountriesController::class,
-            'Directory::Admin\Zones'                 => Controller\Admin\ZonesController::class,
-            'Directory::Admin\GeoZones'              => Controller\Admin\GeoZonesController::class,
+            'Directory::Backend\Currencies'            => Controller\Backend\CurrenciesController::class,
+            'Directory::Backend\Countries'             => Controller\Backend\CountriesController::class,
+            'Directory::Backend\Zones'                 => Controller\Backend\ZonesController::class,
+            'Directory::Backend\GeoZones'              => Controller\Backend\GeoZonesController::class,
         ],
         'invokables' => [
             Controller\Console\UpdateCurrencyRatesController::class => Controller\Console\UpdateCurrencyRatesController::class,
         ],
         'factories'  => [
-            Controller\Admin\CurrenciesController::class => Factory\Controller\Admin\CurrenciesControllerFactory::class,
-            Controller\Admin\CountriesController::class  => Factory\Controller\Admin\CountriesControllerFactory::class,
-            Controller\Admin\ZonesController::class      => Factory\Controller\Admin\ZonesControllerFactory::class,
-            Controller\Admin\GeoZonesController::class   => Factory\Controller\Admin\GeoZonesControllerFactory::class,
+            Controller\Backend\CurrenciesController::class => Factory\Controller\Backend\CurrenciesControllerFactory::class,
+            Controller\Backend\CountriesController::class  => Factory\Controller\Backend\CountriesControllerFactory::class,
+            Controller\Backend\ZonesController::class      => Factory\Controller\Backend\ZonesControllerFactory::class,
+            Controller\Backend\GeoZonesController::class   => Factory\Controller\Backend\GeoZonesControllerFactory::class,
         ],
     ],
 
@@ -90,7 +90,7 @@ return [
                         'options'      => [
                             'route'    => 'directory/',
                             'defaults' => [
-                                'controller' => 'Directory::Admin\Countries',
+                                'controller' => 'Directory::Backend\Countries',
                                 'action'     => 'list',
                             ],
                         ],
@@ -107,7 +107,7 @@ return [
                                         'id'         => '([0-9]+|delete|update_rates)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'Directory::Admin\Currencies',
+                                        'controller' => 'Directory::Backend\Currencies',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -124,7 +124,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'Directory::Admin\Countries',
+                                        'controller' => 'Directory::Backend\Countries',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -141,7 +141,7 @@ return [
                                         //'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'Directory::Admin\Zones',
+                                        'controller' => 'Directory::Backend\Zones',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -158,7 +158,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'Directory::Admin\GeoZones',
+                                        'controller' => 'Directory::Backend\GeoZones',
                                         'action'     => 'list',
                                     ],
                                 ],

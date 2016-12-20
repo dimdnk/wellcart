@@ -14,27 +14,27 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'WellCart\User\PageView\Admin\AccountForm'                   =>
+        'WellCart\User\PageView\Backend\AccountForm'                   =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\AccountForm(
+                return new PageView\Backend\AccountForm(
                     $services->get('WellCart\User\Spec\UserRepository')
                 );
             },
-        'WellCart\User\PageView\Admin\AccountsGrid'                  =>
+        'WellCart\User\PageView\Backend\AccountsGrid'                  =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\AccountsGrid(
+                return new PageView\Backend\AccountsGrid(
                     $services->get('WellCart\User\Spec\UserRepository')
                 );
             },
-        'WellCart\User\PageView\Admin\RolesGrid'                     =>
+        'WellCart\User\PageView\Backend\RolesGrid'                     =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\RolesGrid(
+                return new PageView\Backend\RolesGrid(
                     $services->get('WellCart\User\Spec\AclRoleRepository')
                 );
             },
-        'WellCart\User\PageView\Admin\RoleForm'                      =>
+        'WellCart\User\PageView\Backend\RoleForm'                      =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\RoleForm(
+                return new PageView\Backend\RoleForm(
                     $services->get('WellCart\User\Spec\AclRoleRepository')
                 );
             },

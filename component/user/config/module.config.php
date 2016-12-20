@@ -48,7 +48,7 @@ return [
         ],
         'invokables'         => [
             'ZfcRbac\Collector\RbacCollector'              => 'WellCart\User\DeveloperTools\Rbac\Collector\RbacCollector',
-            'WellCart\User\PageView\Admin\PreferencesForm' => 'WellCart\User\PageView\Admin\PreferencesForm',
+            'WellCart\User\PageView\Backend\PreferencesForm' => 'WellCart\User\PageView\Backend\PreferencesForm',
             'WellCart\User\Form\RecoverAccount'            => 'WellCart\User\Form\RecoverAccount',
 
             'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter'  => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter',
@@ -70,11 +70,11 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\User\PageView\Admin\AccountsGrid'    => false,
-            'WellCart\User\PageView\Admin\AccountForm'     => false,
-            'WellCart\User\PageView\Admin\RolesGrid'       => false,
-            'WellCart\User\PageView\Admin\RoleForm'        => false,
-            'WellCart\User\PageView\Admin\PreferencesForm' => false,
+            'WellCart\User\PageView\Backend\AccountsGrid'    => false,
+            'WellCart\User\PageView\Backend\AccountForm'     => false,
+            'WellCart\User\PageView\Backend\RolesGrid'       => false,
+            'WellCart\User\PageView\Backend\RoleForm'        => false,
+            'WellCart\User\PageView\Backend\PreferencesForm' => false,
         ],
     ],
 
@@ -106,7 +106,7 @@ return [
                         'options'      => [
                             'route'    => 'user/',
                             'defaults' => [
-                                'controller' => 'User::Admin\Accounts',
+                                'controller' => 'User::Backend\Accounts',
                                 'action'     => 'list',
                             ],
                         ],
@@ -123,7 +123,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'User::Admin\Accounts',
+                                        'controller' => 'User::Backend\Accounts',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -140,7 +140,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'User::Admin\Acl\Roles',
+                                        'controller' => 'User::Backend\Acl\Roles',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -153,7 +153,7 @@ return [
                                     'route'       => 'preferences[/]',
                                     'constraints' => [],
                                     'defaults'    => [
-                                        'controller' => 'User::Admin\Preferences',
+                                        'controller' => 'User::Backend\Preferences',
                                         'action'     => 'update',
                                     ],
                                 ],
@@ -223,17 +223,17 @@ return [
         'aliases'   => [
             'User::ConfirmEmail'      => Controller\ConfirmEmailController::class,
             'User::RecoverAccount'    => Controller\RecoverAccountController::class,
-            'User::Admin\Accounts'    => Controller\Admin\AccountsController::class,
-            'User::Admin\Acl\Roles'   => Controller\Admin\Acl\RolesController::class,
-            'User::Admin\Preferences' => Controller\Admin\PreferencesController::class,
+            'User::Backend\Accounts'    => Controller\Backend\AccountsController::class,
+            'User::Backend\Acl\Roles'   => Controller\Backend\Acl\RolesController::class,
+            'User::Backend\Preferences' => Controller\Backend\PreferencesController::class,
         ],
         'factories' => [
             'zfcuser'                                     => Factory\Controller\UserControllerFactory::class,
             Controller\ConfirmEmailController::class      => Factory\Controller\ConfirmEmailControllerFactory::class,
             Controller\RecoverAccountController::class    => Factory\Controller\RecoverAccountControllerFactory::class,
-            Controller\Admin\AccountsController::class    => Factory\Controller\Admin\AccountsControllerFactory::class,
-            Controller\Admin\Acl\RolesController::class   => Factory\Controller\Admin\Acl\RolesControllerFactory::class,
-            Controller\Admin\PreferencesController::class => Factory\Controller\Admin\PreferencesControllerFactory::class,
+            Controller\Backend\AccountsController::class    => Factory\Controller\Backend\AccountsControllerFactory::class,
+            Controller\Backend\Acl\RolesController::class   => Factory\Controller\Backend\Acl\RolesControllerFactory::class,
+            Controller\Backend\PreferencesController::class => Factory\Controller\Backend\PreferencesControllerFactory::class,
         ],
     ],
     /**

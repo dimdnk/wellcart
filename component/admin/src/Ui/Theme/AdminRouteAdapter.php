@@ -13,7 +13,7 @@ namespace WellCart\Admin\Ui\Theme;
 use WellCart\Mvc\Application;
 use ZeTheme\Adapter\Route;
 
-class AdminRouteAdapter extends Route
+class BackendRouteAdapter extends Route
 {
 
     /**

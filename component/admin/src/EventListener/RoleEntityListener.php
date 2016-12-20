@@ -28,7 +28,7 @@ class RoleEntityListener
         $name = Arr::get($changeSet, 'name.0');
         if ($name === 'admin' || $name === 'superadmin') {
             throw new UnprocessableEntityException(
-                'Admin role name used for control panel access & cannot be changed.'
+                'Backend role name used for control panel access & cannot be changed.'
             );
         }
     }
@@ -39,7 +39,7 @@ class RoleEntityListener
             || $role->getName() == 'superadmin'
         ) {
             throw new UnprocessableEntityException(
-                'Admin role cannot be deleted.'
+                'Backend role cannot be deleted.'
             );
         }
     }

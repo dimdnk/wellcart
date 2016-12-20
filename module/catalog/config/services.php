@@ -14,105 +14,105 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'WellCart\Catalog\PageView\Admin\ProductForm'          =>
+        'WellCart\Catalog\PageView\Backend\ProductForm'          =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\ProductForm(
+                return new PageView\Backend\ProductForm(
                     $services->get(
                         'WellCart\Catalog\Spec\ProductRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\ProductsGrid'         =>
+        'WellCart\Catalog\PageView\Backend\ProductsGrid'         =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\ProductsGrid(
+                return new PageView\Backend\ProductsGrid(
                     $services->get(
                         'WellCart\Catalog\Spec\ProductI18nRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\ProductTemplateForm'  =>
+        'WellCart\Catalog\PageView\Backend\ProductTemplateForm'  =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\ProductTemplateForm(
+                return new PageView\Backend\ProductTemplateForm(
                     $services->get(
                         'WellCart\Catalog\Spec\ProductTemplateRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\ProductTemplatesGrid' =>
+        'WellCart\Catalog\PageView\Backend\ProductTemplatesGrid' =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\ProductTemplatesGrid(
+                return new PageView\Backend\ProductTemplatesGrid(
                     $services->get(
                         'WellCart\Catalog\Spec\ProductTemplateI18nRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\AttributeForm'        =>
+        'WellCart\Catalog\PageView\Backend\AttributeForm'        =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\AttributeForm(
+                return new PageView\Backend\AttributeForm(
                     $services->get('WellCart\Catalog\Spec\AttributeRepository')
                 );
             },
-        'WellCart\Catalog\PageView\Admin\AttributesGrid'       =>
+        'WellCart\Catalog\PageView\Backend\AttributesGrid'       =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\AttributesGrid(
+                return new PageView\Backend\AttributesGrid(
                     $services->get(
                         'WellCart\Catalog\Spec\AttributeI18nRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\FeatureForm'          =>
+        'WellCart\Catalog\PageView\Backend\FeatureForm'          =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\FeatureForm(
+                return new PageView\Backend\FeatureForm(
                     $services->get(
                         'WellCart\Catalog\Spec\FeatureRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\FeaturesGrid'         =>
+        'WellCart\Catalog\PageView\Backend\FeaturesGrid'         =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\FeaturesGrid(
+                return new PageView\Backend\FeaturesGrid(
                     $services->get(
                         'WellCart\Catalog\Spec\FeatureI18nRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\CategoryForm'         =>
+        'WellCart\Catalog\PageView\Backend\CategoryForm'         =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\CategoryForm(
+                return new PageView\Backend\CategoryForm(
                     $services->get(
                         'WellCart\Catalog\Spec\CategoryRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\CategoriesGrid'       =>
+        'WellCart\Catalog\PageView\Backend\CategoriesGrid'       =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\CategoriesGrid(
+                return new PageView\Backend\CategoriesGrid(
                     $services->get(
                         'WellCart\Catalog\Spec\CategoryI18nRepository'
                     )
                 );
             },
-        'WellCart\Catalog\PageView\Admin\BrandForm'            =>
+        'WellCart\Catalog\PageView\Backend\BrandForm'            =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\BrandForm(
+                return new PageView\Backend\BrandForm(
                     $services->get('WellCart\Catalog\Spec\BrandRepository')
                 );
             },
-        'WellCart\Catalog\PageView\Admin\BrandsGrid'           =>
+        'WellCart\Catalog\PageView\Backend\BrandsGrid'           =>
             function (ContainerInterface $services
             ) {
-                return new PageView\Admin\BrandsGrid(
+                return new PageView\Backend\BrandsGrid(
                     $services->get('WellCart\Catalog\Spec\BrandRepository')
                 );
             },

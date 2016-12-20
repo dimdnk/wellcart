@@ -102,7 +102,7 @@ class SetupPageVariables extends AbstractListenerAggregate
         );
         array_unshift($rjsModules, "assets/wellcart-admin/js/application");
         array_unique($rjsModules);
-        $jsEnv->set('WellCartAdmin', ['Modules' => $rjsModules]);
+        $jsEnv->set('WellCartBackend', ['Modules' => $rjsModules]);
 
         // Getting the headTitle helper from the view helper manager
         $headTitleHelper = $viewHelperManager->get('headTitle');

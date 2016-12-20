@@ -12,13 +12,13 @@ namespace WellCart\Admin\Command\Handler;
 
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
-use WellCart\Admin\Command\PersistAdminAccount;
+use WellCart\Admin\Command\PersistBackendAccount;
 use WellCart\User\Service\User as UserService;
 use WellCart\User\Spec\AclRoleEntity;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Str;
 
-class PersistAdminAccountHandler
+class PersistBackendAccountHandler
     implements ObjectManagerAwareInterface
 {
     use ProvidesObjectManager;
@@ -48,11 +48,11 @@ class PersistAdminAccountHandler
 
 
     /**
-     * @param PersistAdminAccount $command
+     * @param PersistBackendAccount $command
      *
      * @return \WellCart\Admin\Spec\AdministratorEntity
      */
-    public function handle(PersistAdminAccount $command)
+    public function handle(PersistBackendAccount $command)
     {
         $user = $command->getAdministrator();
         $data = $command->getData();
@@ -90,7 +90,7 @@ class PersistAdminAccountHandler
                 $er = trim($er, ', ');
                 throw new \DomainException(
                     sprintf(
-                        'Admin user registration failed. %s',
+                        'Backend user registration failed. %s',
                         $er
                     )
                 );

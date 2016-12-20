@@ -322,7 +322,7 @@ abstract class Standard
         $grid = $this->getServiceLocator()->get('ZfcDatagrid\Datagrid');
 
         $this->setId('standard_admin_grid');
-        $grid->setTitle('Standard Admin Grid');
+        $grid->setTitle('Standard Backend Grid');
         $grid->setRendererName('HtmlDataGrid');
         $grid->setToolbarTemplate(
             'wellcart-admin/page-view/grid/standard/header-toolbar'

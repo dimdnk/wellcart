@@ -175,8 +175,8 @@ return [
                         'title'         => 'Configuration',
                         'view_template' => 'wellcart-setup/step/db-configuration',
                     ],
-                    'WellCart\Setup\Wizard\Step\AdminUser'       => [
-                        'title'         => 'Admin User',
+                    'WellCart\Setup\Wizard\Step\BackendUser'       => [
+                        'title'         => 'Backend User',
                         'view_template' => 'wellcart-setup/step/admin-user',
                     ],
                     'WellCart\Setup\Wizard\Step\Complete'        => [

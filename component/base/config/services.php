@@ -37,33 +37,33 @@ return [
                     ->getMaintenanceMode();
             },
 
-        'WellCart\Base\PageView\Admin\LanguageForm'    =>
+        'WellCart\Base\PageView\Backend\LanguageForm'    =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\LanguageForm(
+                return new PageView\Backend\LanguageForm(
                     $services->get(
                         'WellCart\Base\Spec\LocaleLanguageRepository'
                     )
                 );
             },
-        'WellCart\Base\PageView\Admin\LanguagesGrid'   =>
+        'WellCart\Base\PageView\Backend\LanguagesGrid'   =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\LanguagesGrid(
+                return new PageView\Backend\LanguagesGrid(
                     $services->get(
                         'WellCart\Base\Spec\LocaleLanguageRepository'
                     )
                 );
             },
-        'WellCart\Base\PageView\Admin\UrlRewriteForm'  =>
+        'WellCart\Base\PageView\Backend\UrlRewriteForm'  =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\UrlRewriteForm(
+                return new PageView\Backend\UrlRewriteForm(
                     $services->get(
                         'WellCart\Base\Spec\UrlRewriteRepository'
                     )
                 );
             },
-        'WellCart\Base\PageView\Admin\UrlRewritesGrid' =>
+        'WellCart\Base\PageView\Backend\UrlRewritesGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\UrlRewritesGrid(
+                return new PageView\Backend\UrlRewritesGrid(
                     $services->get(
                         'WellCart\Base\Spec\UrlRewriteRepository'
                     )

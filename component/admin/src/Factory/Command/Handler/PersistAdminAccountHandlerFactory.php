@@ -11,15 +11,15 @@ declare(strict_types = 1);
 namespace WellCart\Admin\Factory\Command\Handler;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Admin\Command\Handler\PersistAdminAccountHandler;
+use WellCart\Admin\Command\Handler\PersistBackendAccountHandler;
 use WellCart\User\Spec\AclRoleRepository;
 
-class PersistAdminAccountHandlerFactory
+class PersistBackendAccountHandlerFactory
 {
     public function __invoke(
         ContainerInterface $container
-    ): PersistAdminAccountHandler {
-        return new PersistAdminAccountHandler(
+    ): PersistBackendAccountHandler {
+        return new PersistBackendAccountHandler(
             $container->get('zfcuser_user_service'),
             $container->get(AclRoleRepository::class)->findDefaultRole()
         );

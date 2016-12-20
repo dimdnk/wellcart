@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Setup\Wizard\Step;
 
-class AdminUser extends AbstractStep
+class BackendUser extends AbstractStep
 {
 
     /**
@@ -18,7 +18,7 @@ class AdminUser extends AbstractStep
      */
     public function init()
     {
-        $this->setForm(new AdminUserForm());
+        $this->setForm(new BackendUserForm());
     }
 
     /**
@@ -30,7 +30,7 @@ class AdminUser extends AbstractStep
         $form->setData($data);
         if ($form->isValid()) {
             $data = $form->getData();
-            return $this->getSetup()->createAdminAccount($data);
+            return $this->getSetup()->createBackendAccount($data);
         }
         return false;
     }

@@ -28,17 +28,17 @@ return [
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            PageView\Admin\PagesGrid::class => false,
-            PageView\Admin\PageForm::class  => false,
+            PageView\Backend\PagesGrid::class => false,
+            PageView\Backend\PageForm::class  => false,
         ],
     ],
 
     'controllers'    => [
         'aliases'   => [
-            'CMS::Admin\Pages' => Controller\Admin\PagesController::class,
+            'CMS::Backend\Pages' => Controller\Backend\PagesController::class,
         ],
         'factories' => [
-            Controller\Admin\PagesController::class => Factory\Controller\Admin\PagesControllerFactory::class,
+            Controller\Backend\PagesController::class => Factory\Controller\Backend\PagesControllerFactory::class,
         ],
     ],
 
@@ -57,7 +57,7 @@ return [
                         'options'      => [
                             'route'    => 'cms/',
                             'defaults' => [
-                                'controller' => 'CMS::Admin\Pages',
+                                'controller' => 'CMS::Backend\Pages',
                                 'action'     => 'list',
                             ],
                         ],
@@ -74,7 +74,7 @@ return [
                                         'id'         => '([0-9]+|deletePages|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'CMS::Admin\Pages',
+                                        'controller' => 'CMS::Backend\Pages',
                                         'action'     => 'list',
                                     ],
                                 ],

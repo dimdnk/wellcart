@@ -94,17 +94,17 @@ class Module implements
     {
         return [
             'factories' => [
-                'WellCart\CMS\PageView\Admin\PageForm'  =>
+                'WellCart\CMS\PageView\Backend\PageForm'  =>
                     function (ContainerInterface $sm) {
-                        return new PageView\Admin\PageForm(
+                        return new PageView\Backend\PageForm(
                             $sm->get(
                                 'WellCart\CMS\Spec\PageRepository'
                             )
                         );
                     },
-                'WellCart\CMS\PageView\Admin\PagesGrid' =>
+                'WellCart\CMS\PageView\Backend\PagesGrid' =>
                     function (ContainerInterface $sm) {
-                        return new PageView\Admin\PagesGrid(
+                        return new PageView\Backend\PagesGrid(
                             $sm->get(
                                 'WellCart\CMS\Spec\PageI18nRepository'
                             )

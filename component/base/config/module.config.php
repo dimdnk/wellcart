@@ -127,10 +127,10 @@ return [
             ItemView\FlashNotifications::class    => false,
             ItemView\HtmlFooter::class            => false,
             ItemView\Copyright::class             => false,
-            PageView\Admin\LanguagesGrid::class   => false,
-            PageView\Admin\LanguageForm::class    => false,
-            PageView\Admin\UrlRewritesGrid::class => false,
-            PageView\Admin\UrlRewriteForm::class  => false,
+            PageView\Backend\LanguagesGrid::class   => false,
+            PageView\Backend\LanguageForm::class    => false,
+            PageView\Backend\UrlRewritesGrid::class => false,
+            PageView\Backend\UrlRewriteForm::class  => false,
             ItemView\Text::class                  => false,
             'StandardItemView'                    => false,
             'StandardPageView'                    => false,
@@ -342,8 +342,8 @@ return [
             'Base::Console\Cache'     => Controller\Console\CacheController::class,
             'Base::Console\Route'     => Controller\Console\RouteController::class,
             'Base::Index'             => Controller\IndexController::class,
-            'Base::Admin\Languages'   => Controller\Admin\LanguagesController::class,
-            'Base::Admin\UrlRewrites' => Controller\Admin\UrlRewritesController::class,
+            'Base::Backend\Languages'   => Controller\Backend\LanguagesController::class,
+            'Base::Backend\UrlRewrites' => Controller\Backend\UrlRewritesController::class,
         ],
 
         'invokables' => [
@@ -352,8 +352,8 @@ return [
         ],
         'factories'  => [
             Controller\IndexController::class             => Factory\Controller\IndexControllerFactory::class,
-            Controller\Admin\LanguagesController::class   => Factory\Controller\Admin\LanguagesControllerFactory::class,
-            Controller\Admin\UrlRewritesController::class => Factory\Controller\Admin\UrlRewritesControllerFactory::class,
+            Controller\Backend\LanguagesController::class   => Factory\Controller\Backend\LanguagesControllerFactory::class,
+            Controller\Backend\UrlRewritesController::class => Factory\Controller\Backend\UrlRewritesControllerFactory::class,
 
             'TckImageResizer\Controller\Index' => Factory\Controller\ImageResizeControllerFactory::class,
         ],

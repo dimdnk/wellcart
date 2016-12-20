@@ -9,8 +9,8 @@
 namespace WellCart\Admin;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Admin\PageView\Admin\AccountForm;
-use WellCart\Admin\PageView\Admin\AccountsGrid;
+use WellCart\Admin\PageView\Backend\AccountForm;
+use WellCart\Admin\PageView\Backend\AccountsGrid;
 use WellCart\Admin\Service\Notification;
 use Zend\Form\Factory as FormFactory;
 
@@ -50,7 +50,7 @@ return [
                     )
                 );
             },
-        'WellCart\Admin\PageView\Admin\AccountsGrid'      =>
+        'WellCart\Admin\PageView\Backend\AccountsGrid'      =>
             function (ContainerInterface $services) {
                 return new AccountsGrid(
                     $services->get(
@@ -58,7 +58,7 @@ return [
                     )
                 );
             },
-        'WellCart\Admin\PageView\Admin\AccountForm'       =>
+        'WellCart\Admin\PageView\Backend\AccountForm'       =>
             function (ContainerInterface $services) {
                 return new AccountForm(
                     $services->get(
@@ -66,9 +66,9 @@ return [
                     )
                 );
             },
-        'WellCart\Admin\PageView\Admin\NotificationsGrid' =>
+        'WellCart\Admin\PageView\Backend\NotificationsGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\NotificationsGrid(
+                return new PageView\Backend\NotificationsGrid(
                     $services->get(
                         'WellCart\Admin\Spec\NotificationRepository'
                     )

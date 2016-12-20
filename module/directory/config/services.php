@@ -14,9 +14,9 @@ use Zend\Form\Factory as FormFactory;
 return [
     'factories' => [
 
-        'WellCart\Directory\PageView\Admin\CurrenciesGrid' =>
+        'WellCart\Directory\PageView\Backend\CurrenciesGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\CurrenciesGrid(
+                return new PageView\Backend\CurrenciesGrid(
                     $services->get(
                         'WellCart\Directory\Spec\CurrencyRepository'
                     ),
@@ -27,51 +27,51 @@ return [
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\CurrencyForm' =>
+        'WellCart\Directory\PageView\Backend\CurrencyForm' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\CurrencyForm(
+                return new PageView\Backend\CurrencyForm(
                     $services->get('WellCart\Directory\Spec\CurrencyRepository')
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\CountriesGrid' =>
+        'WellCart\Directory\PageView\Backend\CountriesGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\CountriesGrid(
+                return new PageView\Backend\CountriesGrid(
                     $services->get('WellCart\Directory\Spec\CountryRepository')
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\CountryForm' =>
+        'WellCart\Directory\PageView\Backend\CountryForm' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\CountryForm(
+                return new PageView\Backend\CountryForm(
                     $services->get('WellCart\Directory\Spec\CountryRepository')
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\ZonesGrid' =>
+        'WellCart\Directory\PageView\Backend\ZonesGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\ZonesGrid(
+                return new PageView\Backend\ZonesGrid(
                     $services->get('WellCart\Directory\Spec\ZoneRepository')
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\ZoneForm' =>
+        'WellCart\Directory\PageView\Backend\ZoneForm' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\ZoneForm(
+                return new PageView\Backend\ZoneForm(
                     $services->get('WellCart\Directory\Spec\ZoneRepository')
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\GeoZonesGrid' =>
+        'WellCart\Directory\PageView\Backend\GeoZonesGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\GeoZonesGrid(
+                return new PageView\Backend\GeoZonesGrid(
                     $services->get('WellCart\Directory\Spec\GeoZoneRepository')
                 );
             },
 
-        'WellCart\Directory\PageView\Admin\GeoZoneForm' =>
+        'WellCart\Directory\PageView\Backend\GeoZoneForm' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\GeoZoneForm(
+                return new PageView\Backend\GeoZoneForm(
                     $services->get('WellCart\Directory\Spec\GeoZoneRepository')
                 );
             },

@@ -6,6 +6,6 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'wellcart-catalog/item-view/admin/brand/thumbnail' => __DIR__
-        . '/../../view/item-view/admin/brand/thumbnail.phtml',
+    'wellcart-catalog/item-view/backend/brand/thumbnail' => __DIR__
+        . '/../../view/item-view/backend/brand/thumbnail.phtml',
 ];

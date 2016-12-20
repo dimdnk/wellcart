@@ -48,7 +48,7 @@ class ConsoleSetupController extends AbstractConsoleController implements
         $adminParams = [
             'email'      => Arr::get($params, 'admin-email'),
             'password'   => Arr::get($params, 'admin-password'),
-            'first_name' => Arr::get($params, 'admin-first-name', 'Admin'),
+            'first_name' => Arr::get($params, 'admin-first-name', 'Backend'),
             'last_name'  => Arr::get($params, 'admin-last-name', 'Account'),
         ];
 
@@ -75,7 +75,7 @@ class ConsoleSetupController extends AbstractConsoleController implements
                 " * Create admin account",
                 Color::GREEN
             );
-            $setupService->createAdminAccount($adminParams);
+            $setupService->createBackendAccount($adminParams);
 
             $console->writeLine(
                 " * Finalize installation",

@@ -19,7 +19,7 @@ return [
                 'brand.image.thumbnail' => [
                     'capture_to' => 'formPreRenderer',
                     'parent'     => 'action.result',
-                    'class'      => 'WellCart\Catalog\ItemView\Admin\BrandThumbnail',
+                    'class'      => 'WellCart\Catalog\ItemView\Backend\BrandThumbnail',
                 ],
             ]
         ],

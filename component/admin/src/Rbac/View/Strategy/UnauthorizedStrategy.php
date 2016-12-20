@@ -100,7 +100,7 @@ class UnauthorizedStrategy extends Strategy implements
         $layout->setTemplate('layout/empty');
 
         $result = $forward->dispatch(
-            'Admin::Login',
+            'Backend::Login',
             ['action' => 'login']
         );
 

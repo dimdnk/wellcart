@@ -13,49 +13,49 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'WellCart\RestApi\PageView\Admin\OAuth2\PublicKeysGrid' =>
+        'WellCart\RestApi\PageView\Backend\OAuth2\PublicKeysGrid' =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\OAuth2\PublicKeysGrid(
+                return new PageView\Backend\OAuth2\PublicKeysGrid(
                     $services->get(
                         'WellCart\RestApi\Repository\OAuth2\PublicKeys'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Admin\OAuth2\PublicKeyForm'  =>
+        'WellCart\RestApi\PageView\Backend\OAuth2\PublicKeyForm'  =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\OAuth2\PublicKeyForm(
+                return new PageView\Backend\OAuth2\PublicKeyForm(
                     $services->get(
                         'WellCart\RestApi\Repository\OAuth2\PublicKeys'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Admin\OAuth2\ClientForm'     =>
+        'WellCart\RestApi\PageView\Backend\OAuth2\ClientForm'     =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\OAuth2\ClientForm(
+                return new PageView\Backend\OAuth2\ClientForm(
                     $services->get(
                         'WellCart\RestApi\Repository\OAuth2\Clients'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Admin\OAuth2\ScopeForm'      =>
+        'WellCart\RestApi\PageView\Backend\OAuth2\ScopeForm'      =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\OAuth2\ScopeForm(
+                return new PageView\Backend\OAuth2\ScopeForm(
                     $services->get(
                         'WellCart\RestApi\Repository\OAuth2\Scopes'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Admin\OAuth2\ClientsGrid'    =>
+        'WellCart\RestApi\PageView\Backend\OAuth2\ClientsGrid'    =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\OAuth2\ClientsGrid(
+                return new PageView\Backend\OAuth2\ClientsGrid(
                     $services->get(
                         'WellCart\RestApi\Repository\OAuth2\Clients'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Admin\OAuth2\ScopesGrid'     =>
+        'WellCart\RestApi\PageView\Backend\OAuth2\ScopesGrid'     =>
             function (ContainerInterface $services) {
-                return new PageView\Admin\OAuth2\ScopesGrid(
+                return new PageView\Backend\OAuth2\ScopesGrid(
                     $services->get(
                         'WellCart\RestApi\Repository\OAuth2\Scopes'
                     )

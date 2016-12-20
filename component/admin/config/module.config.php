@@ -40,7 +40,7 @@ return [
         ],
         'factories'          => [
             Rbac\View\Strategy\UnauthorizedStrategy::class    => Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory::class,
-            Command\Handler\PersistAdminAccountHandler::class => Factory\Command\Handler\PersistAdminAccountHandlerFactory::class,
+            Command\Handler\PersistBackendAccountHandler::class => Factory\Command\Handler\PersistBackendAccountHandlerFactory::class,
             EventListener\AdministratorEntityListener::class  => Factory\EventListener\AdministratorEntityListenerFactory::class,
             'backend_main_navigation'                         => Factory\Navigation\Service\BackendMainMenuFactory::class,
         ],
@@ -50,9 +50,9 @@ return [
         'shared'             => [
             ItemView\TopBranding::class             => false,
             ItemView\MainNavigationMenu::class      => false,
-            PageView\Admin\AccountsGrid::class      => false,
-            PageView\Admin\AccountForm::class       => false,
-            PageView\Admin\NotificationsGrid::class => false,
+            PageView\Backend\AccountsGrid::class      => false,
+            PageView\Backend\AccountForm::class       => false,
+            PageView\Backend\NotificationsGrid::class => false,
         ],
     ],
 
@@ -120,9 +120,9 @@ return [
             'orm_default' => [
                 'resolvers' => [
                     Spec\AdministratorEntity::class => Entity\Administrator::class,
-                    'Admin::Administrator'          => Entity\Administrator::class,
+                    'Backend::Administrator'          => Entity\Administrator::class,
                     Spec\NotificationEntity::class  => Entity\Notification::class,
-                    'Admin::Notification'           => Entity\Notification::class,
+                    'Backend::Notification'           => Entity\Notification::class,
                 ]
             ]
         ],
@@ -130,7 +130,7 @@ return [
 
     'ze_theme'      => [
         'adapters' => [
-            Ui\Theme\AdminRouteAdapter::class => Ui\Theme\AdminRouteAdapter::class,
+            Ui\Theme\BackendRouteAdapter::class => Ui\Theme\BackendRouteAdapter::class,
         ],
     ],
     'zfcadmin'      => [
@@ -169,13 +169,13 @@ return [
 
     'controllers' => [
         'aliases'   => [
-            'Admin::Login'               => Controller\LoginController::class,
-            'Admin::Logout'              => Controller\LogoutController::class,
-            'Admin::Dashboard'           => Controller\DashboardController::class,
-            'Admin::RecoverAccount'      => Controller\RecoverAccountController::class,
-            'Admin::Settings'            => Controller\SettingsController::class,
-            'Admin::Admin\Accounts'      => Controller\Admin\AccountsController::class,
-            'Admin::Admin\Notifications' => Controller\Admin\NotificationsController::class,
+            'Backend::Login'               => Controller\LoginController::class,
+            'Backend::Logout'              => Controller\LogoutController::class,
+            'Backend::Dashboard'           => Controller\DashboardController::class,
+            'Backend::RecoverAccount'      => Controller\RecoverAccountController::class,
+            'Backend::Settings'            => Controller\SettingsController::class,
+            'Backend::Backend\Accounts'      => Controller\Backend\AccountsController::class,
+            'Backend::Backend\Notifications' => Controller\Backend\NotificationsController::class,
         ],
         'factories' => [
             Controller\LoginController::class               => Factory\Controller\LoginControllerFactory::class,
@@ -183,8 +183,8 @@ return [
             Controller\DashboardController::class           => Factory\Controller\DashboardControllerFactory::class,
             Controller\RecoverAccountController::class      => Factory\Controller\RecoverAccountControllerFactory::class,
             Controller\SettingsController::class            => Factory\Controller\SettingsControllerFactory::class,
-            Controller\Admin\AccountsController::class      => Factory\Controller\Admin\AccountsControllerFactory::class,
-            Controller\Admin\NotificationsController::class => Factory\Controller\Admin\NotificationsControllerFactory::class,
+            Controller\Backend\AccountsController::class      => Factory\Controller\Backend\AccountsControllerFactory::class,
+            Controller\Backend\NotificationsController::class => Factory\Controller\Backend\NotificationsControllerFactory::class,
         ],
     ],
 
@@ -220,7 +220,7 @@ return [
                 'options'          => [
                     'route'    => '/admin[/]',
                     'defaults' => [
-                        'controller' => 'Admin::Dashboard',
+                        'controller' => 'Backend::Dashboard',
                         'action'     => 'index',
                     ],
                 ],
@@ -233,7 +233,7 @@ return [
                         'options'          => [
                             'route'    => 'login',
                             'defaults' => [
-                                'controller' => 'Admin::Login',
+                                'controller' => 'Backend::Login',
                                 'action'     => 'login',
                             ],
                         ],
@@ -247,7 +247,7 @@ return [
                         'options'          => [
                             'route'    => 'logout',
                             'defaults' => [
-                                'controller' => 'Admin::Logout',
+                                'controller' => 'Backend::Logout',
                                 'action'     => 'logout',
                             ],
                         ],
@@ -260,7 +260,7 @@ return [
                         'options'          => [
                             'route'    => 'settings',
                             'defaults' => [
-                                'controller' => 'Admin::Settings',
+                                'controller' => 'Backend::Settings',
                                 'action'     => 'update',
                             ],
                         ],
@@ -286,7 +286,7 @@ return [
                         'options'      => [
                             'route'    => 'admin/',
                             'defaults' => [
-                                'controller' => 'Admin::Admin\Accounts',
+                                'controller' => 'Backend::Backend\Accounts',
                                 'action'     => 'list',
                             ],
                         ],
@@ -303,7 +303,7 @@ return [
                                         'id'         => '([0-9]+|delete)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'Admin::Admin\Accounts',
+                                        'controller' => 'Backend::Backend\Accounts',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -320,7 +320,7 @@ return [
                                         'id'         => '([0-9]+|delete|mark-as-read)',
                                     ],
                                     'defaults'    => [
-                                        'controller' => 'Admin::Admin\Notifications',
+                                        'controller' => 'Backend::Backend\Notifications',
                                         'action'     => 'list',
                                     ],
                                 ],
@@ -338,7 +338,7 @@ return [
                 'options'          => [
                     'route'    => '/admin/recover',
                     'defaults' => [
-                        'controller' => 'Admin::RecoverAccount',
+                        'controller' => 'Backend::RecoverAccount',
                         'action'     => 'initiate',
                     ],
                 ],
@@ -351,7 +351,7 @@ return [
                         'options'          => [
                             'route'    => '/initiate',
                             'defaults' => [
-                                'controller' => 'Admin::RecoverAccount',
+                                'controller' => 'Backend::RecoverAccount',
                                 'action'     => 'initiate',
                             ],
                         ],
@@ -364,7 +364,7 @@ return [
                         'options'          => [
                             'route'    => '/reset/:token',
                             'defaults' => [
-                                'controller' => 'Admin::RecoverAccount',
+                                'controller' => 'Backend::RecoverAccount',
                                 'action'     => 'reset',
                                 'token'      => '',
                             ],
@@ -413,7 +413,7 @@ return [
 
     'command_bus' => [
         'command_map' => [
-            Command\PersistAdminAccount::class => Command\Handler\PersistAdminAccountHandler::class,
+            Command\PersistBackendAccount::class => Command\Handler\PersistBackendAccountHandler::class,
         ],
     ],
 ];
