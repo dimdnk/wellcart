@@ -9,28 +9,6 @@
 namespace WellCart\User;
 
 return [
-    'wellcart'        => [
-        'user_account_options' => [
-            'max_login_attempts' => 5,
-            'password_reset'     => [
-                'email_contact'          => 'support',
-                'email_template'         => 'wellcart-user/password_reset',
-                'link_expiration_period' => 1,
-                'allow_for_admin'        => true,
-            ],
-            'registration'       => [
-                'send_welcome_email' => true,
-                'confirm_email'      => true,
-                'email_contact'      => 'general',
-                'email_template'     => [
-                    'welcome'            => 'wellcart-user/welcome',
-                    'email_confirmation' => 'wellcart-user/email_confirmation',
-                    'email_confirmed'    => 'wellcart-user/email_confirmed',
-                ],
-            ],
-        ],
-    ],
-
     /**
      * =========================================================
      * Service manager configuration
@@ -345,22 +323,6 @@ return [
      * =========================================================
      */
     'object_mapping'        => include __DIR__ . '/section/object_mapping.global.php',
-    'context_specific'      => [
-        'frontend' => [
-            'wellcart' => [
-                'user_account_options' => [
-                    'registration' => [
-                        'send_welcome_email' => true,
-                        'confirm_email'      => true,
-                    ]
-                ],
-            ],
-            'zfcuser'  => [
-                'enable_registration' => true,
-            ],
-        ],
-    ],
-
     'command_bus' => [
         'command_map' => [
             Command\PersistUserAccount::class => Command\Handler\PersistUserAccountHandler::class,

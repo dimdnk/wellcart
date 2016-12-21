@@ -9,7 +9,6 @@
 namespace WellCart\Admin;
 
 return [
-    'backend' => [
         'wellcart' => [
             'user_account_options' => [
                 'registration' => [
@@ -46,5 +45,4 @@ return [
             'enable_username'      => false,
             'table_name'           => 'admin_users',
         ],
-    ],
 ];

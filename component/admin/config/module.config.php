@@ -85,8 +85,6 @@ return [
         ],
     ],
 
-    'context_specific' => include __DIR__ . '/section/context_specific.php',
-
     /**
      * =========================================================
      * Object mapping configuration
