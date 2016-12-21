@@ -47,7 +47,7 @@ return [
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
                 'cache' => 'array',
                 'paths' => [
-                    __DIR__ => __DIR__ . '/mapping/',
+                    __DIR__ => __DIR__ . '/common/mapping/',
                 ],
             ],
             // default metadata driver, aggregates all other drivers into a single one.
@@ -209,31 +209,5 @@ return [
         'factories' => [
             'apiClientSelector' => Factory\FormElement\ApiClientSelectorFactory::class,
         ],
-    ],
-
-    'zf-versioning'      => [
-        'uri' => [],
-    ],
-    'zf-oauth2-doctrine' => include __DIR__ . '/zfoauth2doctrine.php',
-    'zf-mvc-auth'        => [
-        'authentication' => [
-            'adapters' => [
-                'oauth2_doctrine' => [
-                    'adapter' => 'ZF\\MvcAuth\\Authentication\\OAuth2Adapter',
-                    'storage' => [
-                        'storage' => 'oauth2.doctrineadapter.default',
-                        'route'   => '/api/oauth',
-                    ],
-                ],
-            ],
-        ],
-    ],
-    'zf-oauth2'          => [
-        'allow_implicit'  => true,
-        // default (set to true when you need to support browser-based or mobile apps)
-        'access_lifetime' => 3600,
-        // default (set a value in seconds for access tokens lifetime)
-        'enforce_state'   => true,  // default
-        'storage'         => 'oauth2.doctrineadapter.default',
     ],
 ];

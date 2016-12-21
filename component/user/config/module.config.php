@@ -64,7 +64,6 @@ return [
         ],
     ],
 
-    'event_manager' => include __DIR__ . '/section/event_manager.global.php',
     'listeners'     => [
         'WellCart\User\EventListener\UnauthorizedStrategy' => 'WellCart\User\EventListener\UnauthorizedStrategy',
     ],
@@ -236,7 +235,7 @@ return [
         'driver'          => [
             'wellcart_user_xml_driver' => [
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
-                'paths' => __DIR__ . '/mapping/'
+                'paths' => __DIR__ . '/common/mapping/'
             ],
             'wellcart_user_driver'     => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -266,12 +265,7 @@ return [
             ]
         ],
     ],
-    'zfcuser'     => include __DIR__ . '/section/zfcuser.php',
-    'zfc_rbac'    => include __DIR__ . '/section/zfc_rbac.php',
 
-
-    'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.global.php',
     /**
      * =========================================================
      * Static assets configuration
@@ -305,16 +299,6 @@ return [
                 'pattern'     => '%s.mo',
             ],
         ],
-    ],
-
-    /**
-     * =========================================================
-     * View manager configuration
-     * =========================================================
-     */
-    'view_manager'          => [
-        'template_map' => include __DIR__ . '/section/view_manager.global.php',
-
     ],
     'command_bus' => [
         'command_map' => [
