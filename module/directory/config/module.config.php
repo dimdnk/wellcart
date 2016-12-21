@@ -42,8 +42,6 @@ return [
         ],
     ],
 
-    'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.global.php',
 
     'controllers' => [
         'aliases'    => [
@@ -236,14 +234,6 @@ return [
             ],
         ],
     ],
-
-    /**
-     * =========================================================
-     * Object mapping configuration
-     * =========================================================
-     */
-    'object_mapping' => include __DIR__ . '/section/object_mapping.global.php',
-
     'console' => [
         /**
          * =========================================================
@@ -267,12 +257,11 @@ return [
 
     'cronModule'     => [
         'jobs' => [
-            'directory:update'
+            'directory:update-currency-rates'
             => [
                 'command'  => 'wellcart directory:update-currency-rates',
                 'schedule' => '*/30 * * * *'
             ],
         ]
     ],
-    'layout_updates' => include __DIR__ . '/section/layout_updates.global.php',
 ];

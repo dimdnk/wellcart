@@ -92,7 +92,7 @@ class Install
 
     private function loadCountries(ObjectManager $manager)
     {
-        $rows = include __DIR__ . '/../../../config/resources/countries.php';
+        $rows = include __DIR__ . '/../../../config/common/resources/countries.php';
         $date = new \DateTime();
         foreach ($rows as $row) {
             $country = new Country();
