@@ -674,16 +674,6 @@ return [
         'public_path'   => WELLCART_PUBLIC_PATH,
         'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json'
     ],
-
-    'design' => [
-        'images' => [
-            'filters'           => [],
-            'image_resolvers'   => [],
-            'resolvers_manager' => [],
-            'loaders'           => [],
-        ]
-    ],
-
     'slm_queue' => [
         'queue_manager' => [
             'factories' => [

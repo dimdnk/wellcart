@@ -528,5 +528,5 @@ msgid "Sign Up"
 msgstr ""
 
 #: ../view/template/register.phtml:13
-msgid "Registration is disabled"
+msgid "Registration disabled"
 msgstr ""
