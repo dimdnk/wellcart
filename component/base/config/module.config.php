@@ -171,9 +171,6 @@ return [
         EventListener\InitTheme::class          => EventListener\InitTheme::class,
         EventListener\LogException::class       => EventListener\LogException::class,
     ],
-    'event_manager' => include __DIR__
-        . '/section/event_manager.global.php',
-
     'input_filters'        => [
         'abstract_factories' => [
             'WellCart\InputFilter\InputFilterAbstractServiceFactory' => 'WellCart\InputFilter\InputFilterAbstractServiceFactory',
@@ -233,23 +230,6 @@ return [
                 ],
             ],
     ],
-    'acmailer_options'     => include __DIR__
-        . '/section/acmailer_options.php',
-    'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.global.php',
-
-    /**
-     * Session configuration
-     */
-    'session'              => include __DIR__ . '/section/session.php',
-
-    /**
-     * =========================================================
-     * Doctrine configuration
-     * =========================================================
-     */
-    'doctrine'             => include __DIR__ . '/section/doctrine.php',
-
     'doctrine_factories' => [
         'sql_logger_collector' => 'WellCart\ORM\SQLLoggerCollectorFactory',
     ],
@@ -260,8 +240,6 @@ return [
          */
         'object_manager_name' => 'doctrine.entitymanager.orm_default',
     ],
-    'rdn_require_js'     => include __DIR__
-        . '/section/rdn_require_js.php',
 
     /**
      * =========================================================
@@ -282,14 +260,6 @@ return [
             'routes'       => include __DIR__ . '/section/routes.php',
         ],
 
-
-    /**
-     * =========================================================
-     * View manager configuration
-     * =========================================================
-     */
-    'view_manager'       => include __DIR__
-        . '/section/view_manager.php',
     'zenddevelopertools' => include __DIR__
         . '/section/zenddevelopertools.php',
     'view_helper_config' => [],

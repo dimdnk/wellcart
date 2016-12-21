@@ -85,8 +85,6 @@ return [
         ],
     ],
 
-    'layout_updates'   => include __DIR__ . '/section/layout_updates.global.php',
-
     /**
      * =========================================================
      * Doctrine configuration
@@ -130,20 +128,7 @@ return [
         'admin_layout_template' => 'layout/page-fluid-2columns',
     ],
 
-    /**
-     * =========================================================
-     * View manager configuration
-     * =========================================================
-     */
-    'view_manager'  => [
-        'template_path_stack' => [
-            __DIR__ . '/../view',
-        ],
-        /**
-         * Template map
-         */
-        'template_map'        => include __DIR__ . '/section/view_manager.global.php',
-    ],
+
     /**
      * Default ZfcRbac configuration for RBAC
      */
@@ -157,7 +142,6 @@ return [
             Rbac\Guard\RouteGuard::class => [],
         ],
     ],
-    'event_manager' => include __DIR__ . '/section/event_manager.global.php',
 
     'controllers' => [
         'aliases'   => [
@@ -370,8 +354,6 @@ return [
         EventListener\SetupPageVariables::class        => EventListener\SetupPageVariables::class,
         Rbac\View\Strategy\UnauthorizedStrategy::class => Rbac\View\Strategy\UnauthorizedStrategy::class,
     ],
-    'system_config_editor' => include __DIR__
-        . '/section/system_config_editor.global.php',
 
     'ZfcDatagrid'          => [
         'renderer' => [

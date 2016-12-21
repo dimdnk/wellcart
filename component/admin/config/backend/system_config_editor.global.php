@@ -6,9 +6,11 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'tab' => [
-        'advanced' => [
-            'fieldset' => [
+    'system_config_editor' => [
+        'tab' => [
+            'advanced' => [
+                'fieldset' => [
+                ],
             ],
         ],
     ],
