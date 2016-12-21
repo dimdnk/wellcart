@@ -11,44 +11,9 @@ namespace WellCart\Base;
 use WellCart\Form\Element as FormElement;
 use WellCart\View\Factory\Helper\MessengerFactory;
 use WellCart\View\Helper as ViewHelper;
-use Zend\Http\Response;
+
 
 return [
-    'wellcart'        => [
-        'website'              => [
-            'name' => 'Demo Application',
-        ],
-        'maintenance'          => [
-            'message'     => 'Service Temporarily Unavailable',
-            'status_code' => Response::STATUS_CODE_503,
-            'template'    => __DIR__ . '/../data/Maintenance.html',
-        ],
-        'localization'         =>
-            [
-                'country_code' => 'GB',
-                'timezone'     => 'Etc/GMT',
-                'locale'       => 'en_US',
-            ],
-        'email_communications' => [
-            'enabled'  => true,
-            'contacts' => [
-                'general'               => [
-                    'name'  => 'Default Website Owner',
-                    'email' => 'owner@example.com',
-                ],
-                'support'               => [
-                    'name'  => 'Default Website Customer Support',
-                    'email' => 'support@example.com',
-                ],
-                'website_administrator' => [
-                    'name'  => 'Default Website Administrator',
-                    'email' => 'admin@example.com',
-                ],
-            ],
-        ],
-            'doctrine'             => ['global_cache_instance' => 'array',]
-    ],
-
     /**
      * =========================================================
      * Service manager configuration
@@ -241,27 +206,6 @@ return [
         'object_manager_name' => 'doctrine.entitymanager.orm_default',
     ],
 
-    /**
-     * =========================================================
-     * Translator configuration
-     * =========================================================
-     */
-    'translator'         => include __DIR__ . '/section/translator.php',
-
-    /**
-     * =========================================================
-     * Router configuration
-     * =========================================================
-     */
-    'router'             =>
-        [
-            'router_class' => 'WellCart\Router\Http\TreeRouteStack',
-            'base_path'    => '/',
-            'routes'       => include __DIR__ . '/section/routes.php',
-        ],
-
-    'zenddevelopertools' => include __DIR__
-        . '/section/zenddevelopertools.php',
     'view_helper_config' => [],
 
     'con-layout'                 => [
