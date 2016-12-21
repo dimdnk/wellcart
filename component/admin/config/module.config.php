@@ -85,12 +85,6 @@ return [
         ],
     ],
 
-    /**
-     * =========================================================
-     * Object mapping configuration
-     * =========================================================
-     */
-    'object_mapping'   => include __DIR__ . '/section/object_mapping.global.php',
     'layout_updates'   => include __DIR__ . '/section/layout_updates.global.php',
 
     /**

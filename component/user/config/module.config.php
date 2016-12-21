@@ -316,13 +316,6 @@ return [
         'template_map' => include __DIR__ . '/section/view_manager.global.php',
 
     ],
-
-    /**
-     * =========================================================
-     * Object mapping configuration
-     * =========================================================
-     */
-    'object_mapping'        => include __DIR__ . '/section/object_mapping.global.php',
     'command_bus' => [
         'command_map' => [
             Command\PersistUserAccount::class => Command\Handler\PersistUserAccountHandler::class,
