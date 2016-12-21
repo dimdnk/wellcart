@@ -12,13 +12,13 @@ namespace WellCart\Admin\Command\Handler;
 
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
-use WellCart\Admin\Command\PersistBackendAccount;
+use WellCart\Admin\Command\PersistAdminAccount;
 use WellCart\User\Service\User as UserService;
 use WellCart\User\Spec\AclRoleEntity;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Str;
 
-class PersistBackendAccountHandler
+class PersistAdminAccountHandler
     implements ObjectManagerAwareInterface
 {
     use ProvidesObjectManager;
@@ -48,11 +48,11 @@ class PersistBackendAccountHandler
 
 
     /**
-     * @param PersistBackendAccount $command
+     * @param PersistAdminAccount $command
      *
      * @return \WellCart\Admin\Spec\AdministratorEntity
      */
-    public function handle(PersistBackendAccount $command)
+    public function handle(PersistAdminAccount $command)
     {
         $user = $command->getAdministrator();
         $data = $command->getData();

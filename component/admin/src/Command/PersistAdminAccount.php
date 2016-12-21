@@ -12,7 +12,7 @@ namespace WellCart\Admin\Command;
 
 use WellCart\Admin\Spec\AdministratorEntity;
 
-final class PersistBackendAccount
+final class PersistAdminAccount
 {
     /**
      * @var AdministratorEntity

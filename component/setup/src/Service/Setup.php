@@ -472,7 +472,7 @@ class Setup
      * @return bool
      * @throws Throwable
      */
-    public function createBackendAccount(array $data)
+    public function createAdminAccount(array $data)
     {
         $data['passwordVerify'] = $data['password'];
         try {

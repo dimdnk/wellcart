@@ -108,7 +108,7 @@ class AccountsController extends AbstractActionController implements
             if ($form->isValid()) {
                 $entity = $form->getData();
                 $entity->setId($id);
-                $command = new Command\PersistBackendAccount($entity, $postData);
+                $command = new Command\PersistAdminAccount($entity, $postData);
                 return $this->attemptToPersistEntity(
                     $command,
                     __('Backend profile successfully created.'),

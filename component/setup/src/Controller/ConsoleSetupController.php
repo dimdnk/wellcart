@@ -75,7 +75,7 @@ class ConsoleSetupController extends AbstractConsoleController implements
                 " * Create admin account",
                 Color::GREEN
             );
-            $setupService->createBackendAccount($adminParams);
+            $setupService->createAdminAccount($adminParams);
 
             $console->writeLine(
                 " * Finalize installation",

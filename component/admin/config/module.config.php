@@ -40,7 +40,7 @@ return [
         ],
         'factories'          => [
             Rbac\View\Strategy\UnauthorizedStrategy::class    => Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory::class,
-            Command\Handler\PersistBackendAccountHandler::class => Factory\Command\Handler\PersistBackendAccountHandlerFactory::class,
+            Command\Handler\PersistAdminAccountHandler::class => Factory\Command\Handler\PersistAdminAccountHandlerFactory::class,
             EventListener\AdministratorEntityListener::class  => Factory\EventListener\AdministratorEntityListenerFactory::class,
             'backend_main_navigation'                         => Factory\Navigation\Service\BackendMainMenuFactory::class,
         ],
@@ -387,7 +387,7 @@ return [
 
     'command_bus' => [
         'command_map' => [
-            Command\PersistBackendAccount::class => Command\Handler\PersistBackendAccountHandler::class,
+            Command\PersistAdminAccount::class => Command\Handler\PersistAdminAccountHandler::class,
         ],
     ],
 ];
