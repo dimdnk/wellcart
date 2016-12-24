@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Catalog\PageView\Backend;
 
-use WellCart\Admin\PageView\Form\Standard;
+use WellCart\Backend\PageView\Form\Standard;
 use WellCart\Catalog\Exception;
 use WellCart\Catalog\Spec\AttributeEntity;
 use WellCart\Catalog\Spec\AttributeRepository;

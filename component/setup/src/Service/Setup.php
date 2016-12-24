@@ -495,7 +495,7 @@ class Setup
                     }
 
                     /**
-                     * @var $admin \WellCart\Admin\Spec\AdministratorEntity
+                     * @var $admin \WellCart\Backend\Spec\AdministratorEntity
                      */
                     $admin = $result;
                     $roles = $em->getRepository(

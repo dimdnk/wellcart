@@ -198,7 +198,7 @@
             "-72850": "ZfcRbac",
             "-72820": "WellCart\\User",
             "-72810": "ZfcAdmin",
-            "-72800": "WellCart\\Admin",
+            "-72800": "WellCart\\Backend",
             "-72750": "WellCart\\RestApi",
             "20": "WellCart\\CMS",
             "29": "NetglueMoney",
@@ -286,7 +286,7 @@
   "autoload": {
     "psr-4": {
       "WellCart\\Base\\": "component/base/src/",
-      "WellCart\\Admin\\": "component/admin/src/",
+      "WellCart\\Backend\\": "component/backend/src/",
       "WellCart\\Setup\\": "component/setup/src/",
       "WellCart\\User\\": "component/user/src/",
       "WellCart\\RestApi\\": "component/rest-api/src/",

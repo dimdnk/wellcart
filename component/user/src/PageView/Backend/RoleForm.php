@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\User\PageView\Backend;
 
-use WellCart\Admin\PageView\Form\Standard;
+use WellCart\Backend\PageView\Form\Standard;
 use WellCart\ORM\Entity;
 use WellCart\User\Exception;
 use WellCart\User\Spec\AclRoleEntity;

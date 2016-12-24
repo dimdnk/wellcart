@@ -27,7 +27,7 @@
         <env name="WELLCART_APPLICATION_ENV" value="testing"/>
     </php>
     <testsuites>
-        <testsuite name="WellCart Setup Module Test Suite">
+        <testsuite name="WellCart Setup Component Test Suite">
             <directory suffix="Test.php">./unit/</directory>
         </testsuite>
     </testsuites>

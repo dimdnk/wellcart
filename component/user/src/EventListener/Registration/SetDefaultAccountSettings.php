@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\User\EventListener\Registration;
 
-use WellCart\Admin\Spec\AdministratorEntity;
+use WellCart\Backend\Spec\AdministratorEntity;
 use WellCart\Base\Spec\LocaleLanguageEntity as LanguageEntity;
 use WellCart\User\Spec\AclRoleRepository;
 use Zend\EventManager\EventInterface;

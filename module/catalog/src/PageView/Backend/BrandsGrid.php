@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Catalog\PageView\Backend;
 
-use WellCart\Admin\PageView\Grid\Standard;
+use WellCart\Backend\PageView\Grid\Standard;
 use WellCart\Catalog\Exception;
 use WellCart\Catalog\Spec\BrandRepository;
 use WellCart\ORM\Repository;

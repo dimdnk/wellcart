@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Directory\PageView\Backend;
 
-use WellCart\Admin\PageView\Form\Standard;
+use WellCart\Backend\PageView\Form\Standard;
 use WellCart\Directory\Exception;
 use WellCart\Directory\Spec\ZoneEntity;
 use WellCart\Directory\Spec\ZoneRepository;

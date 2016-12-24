@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\RestApi\PageView\Backend\OAuth2;
 
-use WellCart\Admin\PageView\Form\Standard;
+use WellCart\Backend\PageView\Form\Standard;
 use WellCart\ORM\Entity;
 use WellCart\RestApi\Entity\OAuth2\Scope as ScopeEntity;
 use WellCart\RestApi\Exception;

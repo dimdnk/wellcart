@@ -9,7 +9,7 @@
 return [
     'navigation' => [
         'backend_main_navigation' => [
-            'wellcart-admin/system-settings' => [
+            'wellcart-backend/system-settings' => [
                 'pages' => [
                     'zfcadmin/api/oauth2-clients'     => [
                         'label'      => 'OAuth2 Clients',

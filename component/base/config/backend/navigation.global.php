@@ -9,9 +9,9 @@
 return [
     'navigation' => [
         'backend_main_navigation' => [
-            'wellcart-admin/system-settings' => [
+            'wellcart-backend/system-settings' => [
                 'pages' => [
-                    'wellcart-admin/system-settings' => [
+                    'wellcart-backend/system-settings' => [
                         'label'      => 'System Settings',
                         'route'      => 'zfcadmin/system-settings/sections',
                         'params'     => ['section' => 'general'],

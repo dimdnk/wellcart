@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\CMS\PageView\Backend;
 
-use WellCart\Admin\PageView\Grid\Standard;
+use WellCart\Backend\PageView\Grid\Standard;
 use WellCart\Base\Spec\LocaleLanguageEntity;
 use WellCart\CMS\Exception;
 use WellCart\CMS\Repository\PageI18nQuery;

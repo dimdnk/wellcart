@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\User\Factory\Controller;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Admin\Service\RecoverAccount;
+use WellCart\Backend\Service\RecoverAccount;
 use WellCart\User\Controller\RecoverAccountController;
 
 class RecoverAccountControllerFactory

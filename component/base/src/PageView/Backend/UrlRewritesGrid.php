@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\PageView\Backend;
 
-use WellCart\Admin\PageView\Grid\Standard;
+use WellCart\Backend\PageView\Grid\Standard;
 use WellCart\Base\Exception;
 use WellCart\Base\Spec\UrlRewriteRepository;
 use WellCart\ORM\Repository;

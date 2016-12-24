@@ -13,31 +13,31 @@ return [
                     'wellcart-backend-ui/style.css' => ['href' => 'themes/wellcart-backend-ui/css/style.css'],
                 ],
                 'requireJS' => [
-                    'wellcart-admin/js/helpers'   => ['dependencies' => ['assets/wellcart-admin/js/helpers']],
-                    'wellcart-admin/js/bootstrap' => ['dependencies' => ['assets/wellcart-admin/js/bootstrap']],
+                    'wellcart-backend/js/helpers'   => ['dependencies' => ['assets/wellcart-backend/js/helpers']],
+                    'wellcart-backend/js/bootstrap' => ['dependencies' => ['assets/wellcart-backend/js/bootstrap']],
                 ]
             ],
             'blocks'  => [
 
-                'backend:WellCart\Admin\ItemView\TopBranding' => [
+                'backend:WellCart\Backend\ItemView\TopBranding' => [
                     'capture_to' => 'PageHeader',
-                    'class'      => 'WellCart\Admin\ItemView\TopBranding',
+                    'class'      => 'WellCart\Backend\ItemView\TopBranding',
                     'options'    => [
                         'order' => -950
                     ]
                 ],
 
-                'backend:WellCart\Admin\ItemView\Account\WelcomeBox' => [
+                'backend:WellCart\Backend\ItemView\Account\WelcomeBox' => [
                     'capture_to' => 'LeftSidebar',
-                    'class'      => 'WellCart\Admin\ItemView\Account\WelcomeBox',
+                    'class'      => 'WellCart\Backend\ItemView\Account\WelcomeBox',
                     'options'    => [
                         'order' => -950
                     ]
                 ],
 
-                'backend:WellCart\Admin\ItemView\MainNavigationMenu' => [
+                'backend:WellCart\Backend\ItemView\MainNavigationMenu' => [
                     'capture_to' => 'LeftSidebar',
-                    'class'      => 'WellCart\Admin\ItemView\MainNavigationMenu',
+                    'class'      => 'WellCart\Backend\ItemView\MainNavigationMenu',
                     'options'    => [
                         'order' => -950
                     ]

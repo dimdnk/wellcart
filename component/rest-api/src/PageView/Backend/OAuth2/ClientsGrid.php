@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\RestApi\PageView\Backend\OAuth2;
 
-use WellCart\Admin\PageView\Grid\Standard;
+use WellCart\Backend\PageView\Grid\Standard;
 use WellCart\ORM\Repository;
 use WellCart\RestApi\Exception;
 use WellCart\RestApi\Repository\OAuth2\Clients as ClientRepository;
