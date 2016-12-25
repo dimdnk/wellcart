@@ -9,7 +9,7 @@ return
     [
         'layout_updates' =>
             [
-                'backend/wellcart-backend-ui' => [
+                'backend/theme/wellcart-backend-ui' => [
                     'cms/pages/form' => [
                         'helpers' => [
                             'requireJS' => [

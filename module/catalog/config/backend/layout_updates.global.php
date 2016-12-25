@@ -8,7 +8,7 @@
 return
     [
         'layout_updates' => [
-            'backend/wellcart-backend-ui' => [
+            'backend/theme/wellcart-backend-ui' => [
                 'catalog/products/form' => [
                     'helpers' => [
                         'requireJS' => [

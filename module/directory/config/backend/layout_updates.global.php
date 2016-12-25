@@ -7,7 +7,7 @@
  */
 return [
     'layout_updates' => [
-        'backend/wellcart-backend-ui' => [
+        'backend/theme/wellcart-backend-ui' => [
             'directory/geo-zones/form' => [
                 'helpers' => [
                     'requireJS' => [

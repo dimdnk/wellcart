@@ -43,6 +43,7 @@ class AreaBasedOnThemeContext implements
         $area = $this->layoutUpdater->getArea();
         if (strpos($area, DS) === false) {
             $area = application_context() . '/' .
+                'theme/' .
                 $this->themeManager->getTheme();
             $this->layoutUpdater->setArea($area);
         }
