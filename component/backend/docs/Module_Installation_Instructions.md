@@ -9,12 +9,12 @@ or just run the following command:
     curl -s https://getcomposer.org/installer | php
 ```
 
-- Clone https://github.com/wellcart/component-admin.git WellCart Backend with:
+- Clone https://github.com/wellcart/component-admin.git WellCart Backend Component with:
 
 ```bash
     git clone https://github.com/wellcart/component-admin.git
 ```
-- Install WellCart Backend dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
+- Install WellCart Backend Component dependencies with composer. If installation process seems too slow you can use "--prefer-dist" option.
 
 ```bash
     php composer.phar install

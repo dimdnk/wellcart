@@ -93,7 +93,7 @@ return [
                         'view_template' => 'wellcart-setup/step/db-configuration',
                     ],
                     'WellCart\Setup\Wizard\Step\AdminUser'       => [
-                        'title'         => 'Backend User',
+                        'title'         => 'Admin User',
                         'view_template' => 'wellcart-setup/step/admin-user',
                     ],
                     'WellCart\Setup\Wizard\Step\Complete'        => [

@@ -465,7 +465,7 @@ class Setup
     }
 
     /**
-     * Create Backend Account
+     * Create Admin Account
      *
      * @param array $data
      *
@@ -485,7 +485,7 @@ class Setup
                     if (!$result) {
                         throw new \InvalidArgumentException(
                             sprintf(
-                                'Backend user registration failed: %s',
+                                'Admin user registration failed: %s',
                                 json_encode(
                                     $userService->getRegisterForm()
                                         ->getMessages()

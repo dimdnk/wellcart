@@ -241,7 +241,7 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.password_reset.allow_for_admin',
                 'options'    => [
-                    'label'            => __('Allow Backend Password Reset'),
+                    'label'            => __('Allow Admin Password Reset'),
                     'twb-layout'       => 'horizontal',
                     'column-size'      => 'md-9',
                     'label_attributes' => [

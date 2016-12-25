@@ -90,7 +90,7 @@ class PersistAdminAccountHandler
                 $er = trim($er, ', ');
                 throw new \DomainException(
                     sprintf(
-                        'Backend user registration failed. %s',
+                        'Admin user registration failed. %s',
                         $er
                     )
                 );

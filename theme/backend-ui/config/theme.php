@@ -7,7 +7,7 @@
  */
 
 return [
-    'description'  => 'WellCart Backend Foundation Design Theme',
+    'description'  => 'WellCart Backend UI Design Theme',
     'version'      => '0.1.0',
     'parent'       => 'wellcart-frontend-ui',
     /**

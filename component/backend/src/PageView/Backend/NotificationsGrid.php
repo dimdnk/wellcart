@@ -72,7 +72,7 @@ class NotificationsGrid extends Standard
     protected function configurePage()
     {
         $this->addLayoutHandle('admin/notifications/grid');
-        $this->setPageTitle(__('Backend Notifications'))
+        $this->setPageTitle(__('Admin Notifications'))
             ->setBreadcrumbs(
                 [
                     'list' => [

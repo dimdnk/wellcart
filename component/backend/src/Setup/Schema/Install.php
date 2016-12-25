@@ -142,7 +142,7 @@ class Install extends AbstractMigration
         $this->table(
             'admin_notifications',
             [
-                'comment'     => 'Backend Notifications',
+                'comment'     => 'Admin Notifications',
                 'id'          => 'notification_id',
                 'primary_key' => ['notification_id']]
         )

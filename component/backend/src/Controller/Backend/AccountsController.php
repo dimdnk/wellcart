@@ -111,8 +111,8 @@ class AccountsController extends AbstractActionController implements
                 $command = new Command\PersistAdminAccount($entity, $postData);
                 return $this->attemptToPersistEntity(
                     $command,
-                    __('Backend profile successfully created.'),
-                    __('Backend profile successfully modified.'),
+                    __('Admin profile successfully created.'),
+                    __('Admin profile successfully modified.'),
                     'zfcadmin/admin/accounts'
                 );
             }
@@ -159,7 +159,7 @@ class AccountsController extends AbstractActionController implements
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
-                __('Backend was deleted successfully.'),
+                __('Admin was deleted successfully.'),
                 'zfcadmin/admin/accounts'
             );
         }
