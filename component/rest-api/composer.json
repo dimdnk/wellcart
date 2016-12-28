@@ -89,7 +89,7 @@
     "wellcart/component-base": "0.1.*",
     "wellcart/component-setup": "0.1.*",
     "wellcart/component-user": "0.1.*",
-    "wellcart/component-admin": "0.1.*",
+    "wellcart/component-backend": "0.1.*",
     "zfcampus/zf-apigility": "1.*@dev",
     "zfcampus/zf-apigility-documentation": "~1.0-dev",
     "zfcampus/zf-apigility-documentation-swagger": "~1.0-dev",

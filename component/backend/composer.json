@@ -1,6 +1,6 @@
 {
-  "name": "wellcart/component-admin",
-  "description": "Common infrastructure and assets for other modules to be defined and used in their administration user interface.",
+  "name": "wellcart/component-backend",
+  "description": "Common infrastructure and assets for other modules to be defined and used in their backend user interface.",
   "version": "0.1.0",
   "license": "BSD-3-Clause",
   "homepage": "http://wellcart.org/",
@@ -13,7 +13,7 @@
     },
     {
       "name": "WellCart Backend Component Contributors",
-      "homepage": "https://github.com/wellcart/component-admin/contributors"
+      "homepage": "https://github.com/wellcart/component-backend/contributors"
     }
   ],
   "config": {

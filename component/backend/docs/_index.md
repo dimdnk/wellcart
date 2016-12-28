@@ -3,8 +3,8 @@ Admin Module from WellCart
 
 This is the admin module for WellCart.
 
-- File issues at https://github.com/wellcart/component-admin/issues
-- Create pull requests against https://github.com/wellcart/component-admin
+- File issues at https://github.com/wellcart/component-backend/issues
+- Create pull requests against https://github.com/wellcart/component-backend
 
 LICENSE
 -------

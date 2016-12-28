@@ -1,9 +1,9 @@
 WellCart Platform Admin Module
 ==============================
 
-[![Latest Stable Version](https://poser.pugx.org/wellcart/component-admin/v/stable.png)](https://packagist.org/packages/wellcart/component-admin)
-[![Build Status](https://travis-ci.org/wellcart/component-admin.svg)](https://travis-ci.org/wellcart/component-admin)
-[![Dependency Status](https://www.versioneye.com/php/wellcart:component-admin/dev-master/badge.png)](https://www.versioneye.com/php/wellcart:component-admin/dev-master)
+[![Latest Stable Version](https://poser.pugx.org/wellcart/component-backend/v/stable.png)](https://packagist.org/packages/wellcart/component-backend)
+[![Build Status](https://travis-ci.org/wellcart/component-backend.svg)](https://travis-ci.org/wellcart/component-backend)
+[![Dependency Status](https://www.versioneye.com/php/wellcart:component-backend/dev-master/badge.png)](https://www.versioneye.com/php/wellcart:component-backend/dev-master)
 
 This is the admin module for WellCart Platform. Сontains common infrastructure and assets for other modules to be defined and used in their
 administration user interface (UI). It does not contain anything specific to other modules. Among many things it
