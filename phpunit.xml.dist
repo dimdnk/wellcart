@@ -32,7 +32,7 @@
             <directory suffix="Test.php">./component/command-bus/tests/unit/</directory>
             <directory suffix="Test.php">./component/schema-migration/tests/unit/</directory>
             <directory suffix="Test.php">./component/setup/tests/unit/</directory>
-            <directory suffix="Test.php">./component/admin/tests/unit/</directory>
+            <directory suffix="Test.php">./component/backend/tests/unit/</directory>
             <directory suffix="Test.php">./component/rest-api/tests/unit/</directory>
 
             <directory suffix="Test.php">./component/user/tests/unit/</directory>
@@ -51,7 +51,7 @@
             <directory suffix=".php">./component/command-bus/src/</directory>
             <directory suffix=".php">./component/schema-migration/src/</directory>
             <directory suffix=".php">./component/setup/src/</directory>
-            <directory suffix=".php">./component/admin/src/</directory>
+            <directory suffix=".php">./component/backend/src/</directory>
             <directory suffix=".php">./component/rest-api/src/</directory>
 
             <directory suffix=".php">./component/user/src/</directory>

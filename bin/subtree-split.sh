@@ -86,7 +86,7 @@ split 'component/schema-migration' component-schema-migration
 split 'component/command-bus' component-command-bus
 split 'component/setup' component-setup
 split 'component/user' component-user
-split 'component/admin' component-backend
+split 'component/backend' component-backend
 split 'component/rest-api' component-rest-api
 split 'theme/frontend-ui' theme-frontend-ui
 split 'theme/setup-ui' theme-setup-ui

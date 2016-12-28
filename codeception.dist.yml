@@ -10,7 +10,7 @@ include:
  - component/command-bus/tests
  - component/schema-migration/tests
  - component/setup/tests
- - component/admin/tests
+ - component/backend/tests
  - component/rest-api/tests
  - component/user/tests
  - module/cms/tests

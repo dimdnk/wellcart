@@ -75,9 +75,9 @@
     <file>./component/rest-api/tests/unit</file>
     <file>./component/rest-api/src</file>
     <file>./component/rest-api/config</file>
-    <file>./component/admin/src</file>
-    <file>./component/admin/config</file>
-    <file>./component/admin/tests/unit</file>
+    <file>./component/backend/src</file>
+    <file>./component/backend/config</file>
+    <file>./component/backend/tests/unit</file>
 
 
     <file>./module/cms/tests/unit</file>
