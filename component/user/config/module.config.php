@@ -41,7 +41,7 @@ return [
             'WellCart\User\EventListener\Login\HandleFailedLoginCount'           => 'WellCart\User\Factory\EventListener\Login\HandleFailedLoginCountFactory',
             'WellCart\User\EventListener\Login\IdentityReview'                   => 'WellCart\User\Factory\EventListener\Login\IdentityReviewFactory',
             'WellCart\User\EventListener\Registration\SetDefaultAccountSettings' => 'WellCart\User\Factory\EventListener\Registration\SetDefaultAccountSettingsFactory',
-            'WellCart\User\EventListener\UserEntityListener'                     => 'WellCart\User\Factory\EventListener\UserEntityListenerFactory',
+            'WellCart\User\EventListener\Entity\UserEntityListener'              => 'WellCart\User\Factory\EventListener\Entity\UserEntityListenerFactory',
             'zfcuser_user_service'                                               => 'WellCart\User\Factory\Service\UserFactory',
         ],
         'abstract_factories' => [],

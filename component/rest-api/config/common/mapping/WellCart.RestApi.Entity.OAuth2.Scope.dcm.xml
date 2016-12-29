@@ -5,7 +5,7 @@
     <entity name="WellCart\RestApi\Entity\OAuth2\Scope" table="oauth2_scopes"
             repository-class="WellCart\RestApi\Repository\OAuth2\Scopes">
         <entity-listeners>
-            <entity-listener class="WellCart\RestApi\EventListener\ScopeEntityListener"/>
+            <entity-listener class="WellCart\RestApi\EventListener\Entity\ScopeEntityListener"/>
         </entity-listeners>
 
         <id name="id" type="integer">

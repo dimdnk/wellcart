@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\RestApi\EventListener;
+namespace WellCart\RestApi\EventListener\Entity;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use WellCart\RestApi\Entity\OAuth2\Scope as ScopeEntity;

@@ -125,7 +125,7 @@ return [
                 'repositoryClass' => 'WellCart\User\Repository\Users',
                 'table' => 'users',
                 'entityListeners' => [
-                    'WellCart\User\EventListener\UserEntityListener' => [
+                    'WellCart\User\EventListener\Entity\UserEntityListener' => [
                         'preRemove' => ['preRemove' => 'preRemove'],
                         'preUpdate' => ['preUpdate' => 'preUpdate'],
                     ],
@@ -587,7 +587,7 @@ return [
             [
                 'type' => 'entity',
                 'entityListeners' => [
-                    'WellCart\User\EventListener\RoleEntityListener' => [
+                    'WellCart\User\EventListener\Entity\RoleEntityListener' => [
                         'postPersist' => ['postPersist' => 'postPersist'],
                         'postUpdate' => ['postUpdate' => 'postUpdate'],
                         'preRemove' => ['preRemove' => 'preRemove'],
