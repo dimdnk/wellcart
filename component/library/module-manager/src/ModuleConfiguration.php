@@ -22,24 +22,19 @@ class ModuleConfiguration extends Config
     protected $isLoaded = false;
 
     /**
-     *
      * Object constructor.
      *
-     * @param array      $array
-     * @param bool|false $allowModifications
-     * @param string     $dir
+     * @param string|array $dirOrArray
      */
-    public function __construct(
-        array $array,
-        $allowModifications = false,
-        string $dir = null
-    ) {
+  public function __construct($dirOrArray)
+  {
         $allowModifications = true;
-        parent::__construct($array, $allowModifications);
-        if (null !== $dir) {
-            $this->dir = rtrim(str_replace('\\', '/', $dir), DS) . DS;
+        if (is_string($dirOrArray)) {
+            parent::__construct([], $allowModifications);
+            $this->dir = rtrim(str_replace('\\', '/', $dirOrArray), DS) . DS;
             $this->load();
         } else {
+            parent::__construct($dirOrArray, $allowModifications);
             $this->allowModifications = false;
             $this->isLoaded = true;
         }

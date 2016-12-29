@@ -71,7 +71,7 @@ class Module implements
      */
     public function getConfig()
     {
-        return new ModuleConfiguration([], true, __DIR__ . '/../config');
+        return new ModuleConfiguration(__DIR__ . '/../config');
     }
 
     /**

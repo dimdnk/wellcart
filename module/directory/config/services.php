@@ -14,11 +14,11 @@ use Zend\Form\Factory as FormFactory;
 return [
     'factories' => [
 
-        'WellCart\Directory\PageView\Backend\CurrenciesGrid' =>
+        PageView\Backend\CurrenciesGrid::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\CurrenciesGrid(
                     $services->get(
-                        'WellCart\Directory\Spec\CurrencyRepository'
+                        Spec\CurrencyRepository::class
                     ),
                     $services
                         ->get('Zend\Authentication\AuthenticationService')
@@ -27,63 +27,63 @@ return [
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\CurrencyForm' =>
+        PageView\Backend\CurrencyForm::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\CurrencyForm(
-                    $services->get('WellCart\Directory\Spec\CurrencyRepository')
+                    $services->get(Spec\CurrencyRepository::class)
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\CountriesGrid' =>
+        PageView\Backend\CountriesGrid::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\CountriesGrid(
-                    $services->get('WellCart\Directory\Spec\CountryRepository')
+                    $services->get(Spec\CountryRepository::class)
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\CountryForm' =>
+        PageView\Backend\CountryForm::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\CountryForm(
-                    $services->get('WellCart\Directory\Spec\CountryRepository')
+                    $services->get(Spec\CountryRepository::class)
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\ZonesGrid' =>
+        PageView\Backend\ZonesGrid::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\ZonesGrid(
-                    $services->get('WellCart\Directory\Spec\ZoneRepository')
+                    $services->get(Spec\ZoneRepository::class)
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\ZoneForm' =>
+        PageView\Backend\ZoneForm::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\ZoneForm(
-                    $services->get('WellCart\Directory\Spec\ZoneRepository')
+                    $services->get(Spec\ZoneRepository::class)
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\GeoZonesGrid' =>
+        PageView\Backend\GeoZonesGrid::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\GeoZonesGrid(
-                    $services->get('WellCart\Directory\Spec\GeoZoneRepository')
+                    $services->get(Spec\GeoZoneRepository::class)
                 );
             },
 
-        'WellCart\Directory\PageView\Backend\GeoZoneForm' =>
+        PageView\Backend\GeoZoneForm::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\GeoZoneForm(
-                    $services->get('WellCart\Directory\Spec\GeoZoneRepository')
+                    $services->get(Spec\GeoZoneRepository::class)
                 );
             },
 
-        'WellCart\Directory\Repository\Currencies'  =>
+        Repository\Currencies::class  =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_directory_object_manager')
                     ->getRepository(
-                        'WellCart\Directory\Spec\CurrencyEntity'
+                        Spec\CurrencyEntity::class
                     );
             },
-        'WellCart\Directory\Form\Currency'          =>
+        Form\Currency::class          =>
             function (ContainerInterface $services) {
                 $form = new Form\Currency(
                     new FormFactory($services->get('FormElementManager')),
@@ -91,14 +91,14 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Directory\Repository\Countries'   =>
+        Repository\Countries::class   =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_directory_object_manager')
                     ->getRepository(
-                        'WellCart\Directory\Spec\CountryEntity'
+                        Spec\CountryEntity::class
                     );
             },
-        'WellCart\Directory\Form\Country'           =>
+        Form\Country::class           =>
             function (ContainerInterface $services) {
                 $form = new Form\Country(
                     new FormFactory($services->get('FormElementManager')),
@@ -106,48 +106,48 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Directory\Repository\Zones'       =>
+        Repository\Zones::class       =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_directory_object_manager')
                     ->getRepository(
-                        'WellCart\Directory\Spec\ZoneEntity'
+                        Spec\ZoneEntity::class
                     );
             },
-        'WellCart\Directory\Form\Zone'              =>
+        Form\Zone::class              =>
             function (ContainerInterface $services) {
                 $form = new Form\Zone(
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_directory_doctrine_hydrator'),
                     $services->get(
-                        'WellCart\Directory\Repository\Countries'
+                        Repository\Countries::class
                     )
                         ->toOptionsList()
                 );
                 return $form;
             },
-        'WellCart\Directory\Repository\GeoZones'    =>
+        Repository\GeoZones::class    =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_directory_object_manager')
                     ->getRepository(
-                        'WellCart\Directory\Spec\GeoZoneEntity'
+                        Spec\GeoZoneEntity::class
                     );
             },
-        'WellCart\Directory\Repository\GeoZoneMaps' =>
+        Repository\GeoZoneMaps::class =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_directory_object_manager')
                     ->getRepository(
-                        'WellCart\Directory\Spec\GeoZoneMapEntity'
+                        Spec\GeoZoneMapEntity::class
                     );
             },
-        'WellCart\Directory\Form\GeoZone'           =>
+        Form\GeoZone::class           =>
             function (ContainerInterface $services) {
                 $geoZonePrototype = $services->get(
-                    'WellCart\Directory\Spec\GeoZoneRepository'
+                    Spec\GeoZoneRepository::class
                 )->createEntity();
 
 
                 $geoZoneMapPrototype = $services->get(
-                    'WellCart\Directory\Spec\GeoZoneMapRepository'
+                    Spec\GeoZoneMapRepository::class
                 )->createEntity();
 
                 $form = new Form\GeoZone(
@@ -167,7 +167,7 @@ return [
         'directory\primary_currency'                =>
             function (ContainerInterface $services) {
                 return $services->get(
-                    'WellCart\Directory\Spec\CurrencyRepository'
+                    Spec\CurrencyRepository::class
                 )
                     ->findPrimaryCurrency();
             },

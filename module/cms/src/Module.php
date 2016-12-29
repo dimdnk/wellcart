@@ -54,7 +54,7 @@ class Module implements
      */
     public function getConfig()
     {
-        return new ModuleConfiguration([], true, __DIR__ . '/../config');
+        return new ModuleConfiguration(__DIR__ . '/../config');
     }
 
     /**
@@ -94,45 +94,45 @@ class Module implements
     {
         return [
             'factories' => [
-                'WellCart\CMS\PageView\Backend\PageForm'  =>
+                PageView\Backend\PageForm::class  =>
                     function (ContainerInterface $sm) {
                         return new PageView\Backend\PageForm(
                             $sm->get(
-                                'WellCart\CMS\Spec\PageRepository'
+                                Spec\PageRepository::class
                             )
                         );
                     },
-                'WellCart\CMS\PageView\Backend\PagesGrid' =>
+                PageView\Backend\PagesGrid::class =>
                     function (ContainerInterface $sm) {
                         return new PageView\Backend\PagesGrid(
                             $sm->get(
-                                'WellCart\CMS\Spec\PageI18nRepository'
+                                Spec\PageI18nRepository::class
                             )
                         );
                     },
-                'WellCart\CMS\Repository\Pages'         =>
+                Repository\Pages::class         =>
                     function (ContainerInterface $sm) {
                         return $sm->get('wellcart_cms_object_manager')
                             ->getRepository(
-                                'WellCart\CMS\Spec\PageEntity'
+                                Spec\PageEntity::class
                             );
                     },
-                'WellCart\CMS\Repository\PageI18n'      =>
+                Repository\PageI18n::class      =>
                     function (ContainerInterface $sm) {
                         return $sm->get('wellcart_cms_object_manager')
                             ->getRepository(
-                                'WellCart\CMS\Spec\PageI18nEntity'
+                                Spec\PageI18nEntity::class
                             );
                     },
-                'WellCart\CMS\Form\Page'                =>
+                Form\Page::class                =>
                     function (ContainerInterface $sm) {
                         $pagePrototype = $sm->get(
-                            'WellCart\CMS\Spec\PageRepository'
+                            Spec\PageRepository::class
                         )->createEntity();
 
 
                         $pageTranslationPrototype = $sm->get(
-                            'WellCart\CMS\Spec\PageI18nRepository'
+                            Spec\PageI18nRepository::class
                         )->createEntity();
 
                         $form = new Form\Page(
