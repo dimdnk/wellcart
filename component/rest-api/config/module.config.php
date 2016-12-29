@@ -60,14 +60,14 @@ return [
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    'Api::OAuth2\AccessToken'       => 'WellCart\RestApi\Entity\OAuth2\AccessToken',
-                    'Api::OAuth2\AuthorizationCode' => 'WellCart\RestApi\Entity\OAuth2\AuthorizationCode',
-                    'Api::OAuth2\Client'            => 'WellCart\RestApi\Entity\OAuth2\Client',
-                    'Api::OAuth2\Jti'               => 'WellCart\RestApi\Entity\OAuth2\Jti',
-                    'Api::OAuth2\Jwt'               => 'WellCart\RestApi\Entity\OAuth2\Jwt',
-                    'Api::OAuth2\PublicKey'         => 'WellCart\RestApi\Entity\OAuth2\PublicKey',
-                    'Api::OAuth2\RefreshToken'      => 'WellCart\RestApi\Entity\OAuth2\RefreshToken',
-                    'Api::OAuth2\Scope'             => 'WellCart\RestApi\Entity\OAuth2\Scope',
+                    'Api::OAuth2\AccessToken'       => Entity\OAuth2\AccessToken::class,
+                    'Api::OAuth2\AuthorizationCode' => Entity\OAuth2\AuthorizationCode::class,
+                    'Api::OAuth2\Client'            => Entity\OAuth2\Client::class,
+                    'Api::OAuth2\Jti'               => Entity\OAuth2\Jti::class,
+                    'Api::OAuth2\Jwt'               => Entity\OAuth2\Jwt::class,
+                    'Api::OAuth2\PublicKey'         => Entity\OAuth2\PublicKey::class,
+                    'Api::OAuth2\RefreshToken'      => Entity\OAuth2\RefreshToken::class,
+                    'Api::OAuth2\Scope'             => Entity\OAuth2\Scope::class,
                 ],
             ],
         ],

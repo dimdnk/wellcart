@@ -49,7 +49,7 @@ class ScopeEntityListener
          * @var $repository ScopeRepository
          */
         $repository = $args->getObjectManager()->getRepository(
-            'WellCart\RestApi\Entity\OAuth2\Scope'
+            Entity\OAuth2\Scope'
         );
         $repository->ensureDefaultScope($scope);
     }

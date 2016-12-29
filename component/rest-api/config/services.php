@@ -13,72 +13,72 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'WellCart\RestApi\PageView\Backend\OAuth2\PublicKeysGrid' =>
+        PageView\Backend\OAuth2\PublicKeysGrid' =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\OAuth2\PublicKeysGrid(
                     $services->get(
-                        'WellCart\RestApi\Repository\OAuth2\PublicKeys'
+                        Repository\OAuth2\PublicKeys'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Backend\OAuth2\PublicKeyForm'  =>
+        PageView\Backend\OAuth2\PublicKeyForm'  =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\OAuth2\PublicKeyForm(
                     $services->get(
-                        'WellCart\RestApi\Repository\OAuth2\PublicKeys'
+                        Repository\OAuth2\PublicKeys'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Backend\OAuth2\ClientForm'     =>
+        PageView\Backend\OAuth2\ClientForm'     =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\OAuth2\ClientForm(
                     $services->get(
-                        'WellCart\RestApi\Repository\OAuth2\Clients'
+                        Repository\OAuth2\Clients'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Backend\OAuth2\ScopeForm'      =>
+        PageView\Backend\OAuth2\ScopeForm'      =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\OAuth2\ScopeForm(
                     $services->get(
-                        'WellCart\RestApi\Repository\OAuth2\Scopes'
+                        Repository\OAuth2\Scopes'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Backend\OAuth2\ClientsGrid'    =>
+        PageView\Backend\OAuth2\ClientsGrid'    =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\OAuth2\ClientsGrid(
                     $services->get(
-                        'WellCart\RestApi\Repository\OAuth2\Clients'
+                        Repository\OAuth2\Clients'
                     )
                 );
             },
-        'WellCart\RestApi\PageView\Backend\OAuth2\ScopesGrid'     =>
+        PageView\Backend\OAuth2\ScopesGrid'     =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\OAuth2\ScopesGrid(
                     $services->get(
-                        'WellCart\RestApi\Repository\OAuth2\Scopes'
+                        Repository\OAuth2\Scopes'
                     )
                 );
             },
 
 
-        'WellCart\RestApi\Repository\OAuth2\AccessTokens' =>
+        Repository\OAuth2\AccessTokens' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
-                        'WellCart\RestApi\Entity\OAuth2\AccessToken'
+                        Entity\OAuth2\AccessToken'
                     );
             },
 
-        'WellCart\RestApi\Repository\OAuth2\PublicKeys' =>
+        Repository\OAuth2\PublicKeys' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
-                        'WellCart\RestApi\Entity\OAuth2\PublicKey'
+                        Entity\OAuth2\PublicKey'
                     );
             },
-        'WellCart\RestApi\Form\OAuth2\PublicKey'        =>
+        Form\OAuth2\PublicKey'        =>
             function (ContainerInterface $services) {
                 $form = new Form\OAuth2\PublicKey(
                     new FormFactory($services->get('FormElementManager')),
@@ -87,14 +87,14 @@ return [
                 return $form;
             },
 
-        'WellCart\RestApi\Repository\OAuth2\Clients' =>
+        Repository\OAuth2\Clients' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
-                        'WellCart\RestApi\Entity\OAuth2\Client'
+                        Entity\OAuth2\Client'
                     );
             },
-        'WellCart\RestApi\Form\OAuth2\Client'        =>
+        Form\OAuth2\Client'        =>
             function (ContainerInterface $services) {
 
                 $hydrator = new Hydrator\OAuth2\ClientHydrator(
@@ -107,14 +107,14 @@ return [
                 return $form;
             },
 
-        'WellCart\RestApi\Repository\OAuth2\Scopes' =>
+        Repository\OAuth2\Scopes' =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_api_object_manager')
                     ->getRepository(
-                        'WellCart\RestApi\Entity\OAuth2\Scope'
+                        Entity\OAuth2\Scope'
                     );
             },
-        'WellCart\RestApi\Form\OAuth2\Scope'        =>
+        Form\OAuth2\Scope'        =>
             function (ContainerInterface $services) {
                 $form = new Form\OAuth2\Scope(
                     new FormFactory($services->get('FormElementManager')),

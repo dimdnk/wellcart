@@ -7,7 +7,7 @@
  */
 return [
     'object_mapping' => [
-        'WellCart\RestApi\Entity\OAuth2\PublicKey' => [
+        Entity\OAuth2\PublicKey' => [
             'formFields' => [
                 'client' => [
                     'input_filter_specification' => [
@@ -75,7 +75,7 @@ return [
         ],
 
 
-        'WellCart\RestApi\Entity\OAuth2\Client' => [
+        Entity\OAuth2\Client' => [
             'formFields' => [
                 'user' =>
                     [
@@ -121,7 +121,7 @@ return [
                                 [
                                     'name' => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
-                                        'entity_class' => 'WellCart\RestApi\Entity\OAuth2\Client',
+                                        'entity_class' => Entity\OAuth2\Client',
                                         'fields' => ['client_id'],
                                         'messages' => [
                                             'objectFound' => 'Client ID already exists!'
@@ -212,7 +212,7 @@ return [
             ],
         ],
 
-        'WellCart\RestApi\Entity\OAuth2\Scope' => [
+        Entity\OAuth2\Scope' => [
             'fields' => [
                 'isDefault' =>
                     [
@@ -263,7 +263,7 @@ return [
                                 [
                                     'name' => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
-                                        'entity_class' => 'WellCart\RestApi\Entity\OAuth2\Scope',
+                                        'entity_class' => Entity\OAuth2\Scope',
                                         'fields' => ['scope'],
                                         'messages' => [
                                             'objectFound' => 'Scope already exists!'
@@ -280,7 +280,7 @@ return [
             [
                 'oneToMany' => [
                     'client' => [
-                        'targetEntity' => 'WellCart\RestApi\Entity\OAuth2\Client',
+                        'targetEntity' => Entity\OAuth2\Client',
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_client_id',
@@ -288,7 +288,7 @@ return [
                         ],
                     ],
                     'accessToken' => [
-                        'targetEntity' => 'WellCart\RestApi\Entity\OAuth2\AccessToken',
+                        'targetEntity' => Entity\OAuth2\AccessToken',
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_access_token_id',
@@ -296,7 +296,7 @@ return [
                         ],
                     ],
                     'authorizationCode' => [
-                        'targetEntity' => 'WellCart\RestApi\Entity\OAuth2\AuthorizationCode',
+                        'targetEntity' => Entity\OAuth2\AuthorizationCode',
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_authorization_code_id',
@@ -304,7 +304,7 @@ return [
                         ],
                     ],
                     'refreshToken' => [
-                        'targetEntity' => 'WellCart\RestApi\Entity\OAuth2\RefreshToken',
+                        'targetEntity' => Entity\OAuth2\RefreshToken',
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_refresh_token_id',

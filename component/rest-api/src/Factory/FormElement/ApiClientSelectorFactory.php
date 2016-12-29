@@ -23,7 +23,7 @@ class ApiClientSelectorFactory
     {
         $services = $sm->getServiceLocator();
         $clients = $services->get(
-            'WellCart\RestApi\Repository\OAuth2\Clients'
+            Repository\OAuth2\Clients'
         )
             ->toOptionsList();
         return new \WellCart\Form\Element\Select(

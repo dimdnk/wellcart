@@ -5,7 +5,7 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
-
+namespace WellCart\CommandBus;
 use SimpleBus\Message\Bus\Middleware\FinishesHandlingMessageBeforeHandlingNext as FinishesHandlingMessage;
 use SimpleBus\Message\Handler\DelegatesToMessageHandlerMiddleware;
 use SimpleBus\Message\Name\ClassBasedNameResolver;
@@ -26,15 +26,15 @@ return [
             ClassBasedNameResolver::class                                  => ClassBasedNameResolver::class,
         ],
         'factories'  => [
-            'command_bus'                          => 'WellCart\CommandBus\Factory\CommandBusFactory',
-            'command_bus.config'                   => 'WellCart\CommandBus\Factory\CommandBusConfigFactory',
-            'command_bus.callable_resolver'        => 'WellCart\CommandBus\Factory\CallableResolverFactory',
-            'command_bus.command_handler_map'      => 'WellCart\CommandBus\Factory\CommandHandlerMapFactory',
-            'command_bus.command_handler_resolver' => 'WellCart\CommandBus\Factory\CommandHandlerResolverFactory',
-            'command_bus.logging_middleware'       => 'WellCart\CommandBus\Factory\LoggingMiddlewareFactory',
+            'command_bus'                          => Factory\CommandBusFactory::class,
+            'command_bus.config'                   => Factory\CommandBusConfigFactory::class,
+            'command_bus.callable_resolver'        => Factory\CallableResolverFactory::class,
+            'command_bus.command_handler_map'      => Factory\CommandHandlerMapFactory::class,
+            'command_bus.command_handler_resolver' => Factory\CommandHandlerResolverFactory::class,
+            'command_bus.logging_middleware'       => Factory\LoggingMiddlewareFactory::class,
 
-            DelegatesToMessageHandlerMiddleware::class => 'WellCart\CommandBus\Factory\DelegatesToMessageHandlerMiddlewareFactory',
-            WrapsMessageHandlingInTransaction::class   => 'WellCart\CommandBus\Factory\DoctrineWrapsMessageHandlingInTransactionFactory',
+            DelegatesToMessageHandlerMiddleware::class => Factory\DelegatesToMessageHandlerMiddlewareFactory::class,
+            WrapsMessageHandlingInTransaction::class   => Factory\DoctrineWrapsMessageHandlingInTransactionFactory::class,
         ],
         'aliases'    => [
             'command_bus.doctrine.wraps_message_handling_in_transaction_middleware' => WrapsMessageHandlingInTransaction::class,
@@ -43,7 +43,7 @@ return [
     ],
     'controller_plugins' => [
         'factories' => [
-            'command_bus' => 'WellCart\CommandBus\Factory\Mvc\CommandBusControllerPluginFactory',
+            'command_bus' => Factory\Mvc\CommandBusControllerPluginFactory::class,
         ],
     ],
 
@@ -61,7 +61,7 @@ return [
             ],
         ],
         'command_map'                    => [
-            Closure::class       => ClosureHandler::class,
+            \Closure::class       => ClosureHandler::class,
             PersistEntity::class => PersistEntityHandler::class,
         ],
     ],

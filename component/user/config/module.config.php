@@ -25,34 +25,34 @@ return [
             Spec\UserRepository::class          => Repository\Users::class,
         ],
         'invokables'         => [
-            'ZfcRbac\Collector\RbacCollector'              => 'WellCart\User\DeveloperTools\Rbac\Collector\RbacCollector',
-            'WellCart\User\PageView\Backend\PreferencesForm' => 'WellCart\User\PageView\Backend\PreferencesForm',
-            'WellCart\User\Form\RecoverAccount'            => 'WellCart\User\Form\RecoverAccount',
+            'ZfcRbac\Collector\RbacCollector'              => DeveloperTools\Rbac\Collector\RbacCollector::class,
+            PageView\Backend\PreferencesForm::class => PageView\Backend\PreferencesForm::class,
+            Form\RecoverAccount::class            => Form\RecoverAccount::class,
 
-            'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter'  => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToFilter',
-            'WellCart\User\EventListener\Registration\AddRequiredFieldsToForm'    => 'WellCart\User\EventListener\Registration\AddRequiredFieldsToForm',
-            'WellCart\User\EventListener\Registration\BindRequiredFieldsToEntity' => 'WellCart\User\EventListener\Registration\BindRequiredFieldsToEntity',
-            'WellCart\User\EventListener\UnauthorizedStrategy'                    => 'WellCart\User\EventListener\UnauthorizedStrategy',
+            EventListener\Registration\AddRequiredFieldsToFilter::class  => EventListener\Registration\AddRequiredFieldsToFilter::class,
+            EventListener\Registration\AddRequiredFieldsToForm::class    => EventListener\Registration\AddRequiredFieldsToForm::class,
+            EventListener\Registration\BindRequiredFieldsToEntity::class => EventListener\Registration\BindRequiredFieldsToEntity::class,
+            EventListener\UnauthorizedStrategy::class                    => EventListener\UnauthorizedStrategy::class,
 
         ],
         'factories'          => [
-            'WellCart\User\Command\Handler\PersistUserAccountHandler'            => 'WellCart\User\Factory\Command\Handler\PersistUserAccountHandlerFactory',
-            'WellCart\User\EventListener\Login\EmailNotConfirmed'                => 'WellCart\User\Factory\EventListener\Login\EmailNotConfirmedFactory',
-            'WellCart\User\EventListener\Login\HandleFailedLoginCount'           => 'WellCart\User\Factory\EventListener\Login\HandleFailedLoginCountFactory',
-            'WellCart\User\EventListener\Login\IdentityReview'                   => 'WellCart\User\Factory\EventListener\Login\IdentityReviewFactory',
-            'WellCart\User\EventListener\Registration\SetDefaultAccountSettings' => 'WellCart\User\Factory\EventListener\Registration\SetDefaultAccountSettingsFactory',
-            'WellCart\User\EventListener\Entity\UserEntityListener'              => 'WellCart\User\Factory\EventListener\Entity\UserEntityListenerFactory',
-            'zfcuser_user_service'                                               => 'WellCart\User\Factory\Service\UserFactory',
+            Command\Handler\PersistUserAccountHandler::class            => Factory\Command\Handler\PersistUserAccountHandlerFactory::class,
+            EventListener\Login\EmailNotConfirmed::class                => Factory\EventListener\Login\EmailNotConfirmedFactory::class,
+            EventListener\Login\HandleFailedLoginCount::class           => Factory\EventListener\Login\HandleFailedLoginCountFactory::class,
+            EventListener\Login\IdentityReview::class                   => Factory\EventListener\Login\IdentityReviewFactory::class,
+            EventListener\Registration\SetDefaultAccountSettings::class => Factory\EventListener\Registration\SetDefaultAccountSettingsFactory::class,
+            EventListener\Entity\UserEntityListener::class              => Factory\EventListener\Entity\UserEntityListenerFactory::class,
+            'zfcuser_user_service'                                               => Factory\Service\UserFactory::class,
         ],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            'WellCart\User\PageView\Backend\AccountsGrid'    => false,
-            'WellCart\User\PageView\Backend\AccountForm'     => false,
-            'WellCart\User\PageView\Backend\RolesGrid'       => false,
-            'WellCart\User\PageView\Backend\RoleForm'        => false,
-            'WellCart\User\PageView\Backend\PreferencesForm' => false,
+            PageView\Backend\AccountsGrid::class    => false,
+            PageView\Backend\AccountForm::class     => false,
+            PageView\Backend\RolesGrid::class       => false,
+            PageView\Backend\RoleForm::class        => false,
+            PageView\Backend\PreferencesForm::class => false,
         ],
     ],
 
@@ -65,7 +65,7 @@ return [
     ],
 
     'listeners'     => [
-        'WellCart\User\EventListener\UnauthorizedStrategy' => 'WellCart\User\EventListener\UnauthorizedStrategy',
+        EventListener\UnauthorizedStrategy::class => EventListener\UnauthorizedStrategy::class,
     ],
 
     /**
@@ -227,7 +227,7 @@ return [
         'authentication'  => [
             'orm_default' => [
                 'object_manager'      => 'Doctrine\ORM\EntityManager',
-                'identity_class'      => 'WellCart\User\Entity\User',
+                'identity_class'      => Entity\User::class,
                 'identity_property'   => 'email',
                 'credential_property' => 'password',
             ],

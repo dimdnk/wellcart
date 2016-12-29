@@ -14,72 +14,72 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'WellCart\User\PageView\Backend\AccountForm'                   =>
+        PageView\Backend\AccountForm::class                   =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\AccountForm(
-                    $services->get('WellCart\User\Spec\UserRepository')
+                    $services->get(Spec\UserRepository::class)
                 );
             },
-        'WellCart\User\PageView\Backend\AccountsGrid'                  =>
+        PageView\Backend\AccountsGrid::class                  =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\AccountsGrid(
-                    $services->get('WellCart\User\Spec\UserRepository')
+                    $services->get(Spec\UserRepository::class)
                 );
             },
-        'WellCart\User\PageView\Backend\RolesGrid'                     =>
+        PageView\Backend\RolesGrid::class                     =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\RolesGrid(
-                    $services->get('WellCart\User\Spec\AclRoleRepository')
+                    $services->get(Spec\AclRoleRepository::class)
                 );
             },
-        'WellCart\User\PageView\Backend\RoleForm'                      =>
+        PageView\Backend\RoleForm::class                      =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\RoleForm(
-                    $services->get('WellCart\User\Spec\AclRoleRepository')
+                    $services->get(Spec\AclRoleRepository::class)
                 );
             },
-        'WellCart\User\EventListener\Registration\WelcomeEmail'      =>
+        EventListener\Registration\WelcomeEmail::class      =>
             function (ContainerInterface $services) {
                 return new EventListener\Registration\WelcomeEmail(
                     $services->get(
-                        'WellCart\User\Service\Registration\AccountEmailHandler'
+                        Service\Registration\AccountEmailHandler::class
                     )
                 );
             },
-        'WellCart\User\EventListener\Registration\EmailConfirmation' =>
+        EventListener\Registration\EmailConfirmation::class =>
             function (ContainerInterface $services) {
                 return new EventListener\Registration\EmailConfirmation(
                     $services->get(
-                        'WellCart\User\Service\Registration\AccountEmailHandler'
+                        Service\Registration\AccountEmailHandler::class
                     )
                 );
             },
-        'WellCart\User\Service\Registration\AccountEmailHandler'     =>
+        Service\Registration\AccountEmailHandler::class     =>
             function (ContainerInterface $services) {
                 $options = $services->get('Config');
                 $form = new Service\Registration\AccountEmailHandler(
                     $services->get('log_mail_service_errors'),
                     $services->get('acmailer.mailservice.default'),
-                    $services->get('WellCart\User\Spec\UserRepository'),
+                    $services->get(Spec\UserRepository::class),
                     $options['wellcart']['user_account_options']['registration']
                 );
                 return $form;
             },
-        'WellCart\User\Service\RecoverAccount'                       =>
+        Service\RecoverAccount::class                       =>
             function (ContainerInterface $services) {
                 $options = $services->get('Config');
                 $service = new Service\RecoverAccount(
                     $services->get('log_mail_service_errors'),
                     $services->get('acmailer.mailservice.default'),
                     $services->get('zfcuser_user_service'),
-                    $services->get('WellCart\User\Spec\UserRepository'),
-                    $services->get('WellCart\User\Form\RecoverAccount'),
+                    $services->get(Spec\UserRepository::class),
+                    $services->get(Form\RecoverAccount::class),
                     $services->get('zfcuser_change_password_form'),
                     $options['wellcart']['user_account_options']['password_reset']
                 );
                 return $service;
             },
-        'WellCart\User\Form\Account'                                 =>
+        Form\Account::class                                 =>
             function (ContainerInterface $services) {
                 $form = new Form\Account(
                     new FormFactory($services->get('FormElementManager')),
@@ -87,7 +87,7 @@ return [
                 );
                 return $form;
             },
-        'WellCart\User\Form\Acl\Role'                                =>
+        Form\Acl\Role::class                                =>
             function (ContainerInterface $services) {
                 $form = new Form\Acl\Role(
                     new FormFactory($services->get('FormElementManager')),
@@ -95,32 +95,32 @@ return [
                 );
                 return $form;
             },
-        'WellCart\User\Form\AccountPreferences'                      =>
+        Form\AccountPreferences::class                      =>
             function (ContainerInterface $services) {
                 $form = new Form\AccountPreferences(
                     new FormFactory($services->get('FormElementManager'))
                 );
                 return $form;
             },
-        'WellCart\User\Repository\Users'                             =>
+        Repository\Users::class                            =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
-                        'WellCart\User\Spec\UserEntity'
+                        Spec\UserEntity::class
                     );
             },
-        'WellCart\User\Repository\Acl\Roles'                         =>
+        Repository\Acl\Roles::class                         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
-                        'WellCart\User\Spec\AclRoleEntity'
+                        Spec\AclRoleEntity::class
                     );
             },
-        'WellCart\User\Repository\Acl\Permissions'                   =>
+        Repository\Acl\Permissions::class                   =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
-                        'WellCart\User\Spec\AclPermissionEntity'
+                        Spec\AclPermissionEntity::class
                     );
             },
         'zfcuser_user_mapper'                                        =>
@@ -139,7 +139,7 @@ return [
                 return $auth;
             },
 
-        'WellCart\User\EventListener\Navigation\PageAuthorizationByRbac' =>
+        EventListener\Navigation\PageAuthorizationByRbac::class =>
             function (ContainerInterface $serviceManager) {
                 $authorizationService = $serviceManager->get(
                     'ZfcRbac\Service\AuthorizationService'

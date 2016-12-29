@@ -37,35 +37,35 @@ return [
                     ->getMaintenanceMode();
             },
 
-        'WellCart\Base\PageView\Backend\LanguageForm'    =>
+        PageView\Backend\LanguageForm::class    =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\LanguageForm(
                     $services->get(
-                        'WellCart\Base\Spec\LocaleLanguageRepository'
+                        Spec\LocaleLanguageRepository::class
                     )
                 );
             },
-        'WellCart\Base\PageView\Backend\LanguagesGrid'   =>
+        PageView\Backend\LanguagesGrid::class   =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\LanguagesGrid(
                     $services->get(
-                        'WellCart\Base\Spec\LocaleLanguageRepository'
+                        Spec\LocaleLanguageRepository::class
                     )
                 );
             },
-        'WellCart\Base\PageView\Backend\UrlRewriteForm'  =>
+        PageView\Backend\UrlRewriteForm::class  =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\UrlRewriteForm(
                     $services->get(
-                        'WellCart\Base\Spec\UrlRewriteRepository'
+                        Spec\UrlRewriteRepository::class
                     )
                 );
             },
-        'WellCart\Base\PageView\Backend\UrlRewritesGrid' =>
+        PageView\Backend\UrlRewritesGrid::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\UrlRewritesGrid(
                     $services->get(
-                        'WellCart\Base\Spec\UrlRewriteRepository'
+                        Spec\UrlRewriteRepository::class
                     )
                 );
             },
@@ -88,35 +88,35 @@ return [
                 );
                 return $editor;
             },
-        'WellCart\Base\Repository\Configuration'         =>
+        Repository\Configuration::class         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
-                        'WellCart\Base\Spec\ConfigurationEntity'
+                        Spec\ConfigurationEntity::class
                     );
             },
-        'WellCart\Base\Repository\UrlRewrites'           =>
+        Repository\UrlRewrites::class           =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
-                        'WellCart\Base\Spec\UrlRewriteEntity'
+                        Spec\UrlRewriteEntity::class
                     );
             },
-        'WellCart\Base\Repository\Locale\Languages'      =>
+        Repository\Locale\Languages::class      =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
-                        'WellCart\Base\Spec\LocaleLanguageEntity'
+                        Spec\LocaleLanguageEntity::class
                     );
             },
-        'WellCart\Base\Repository\Queue\Jobs'            =>
+        Repository\Queue\Jobs::class            =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
-                        'WellCart\Base\Spec\JobQueueEntity'
+                        Spec\JobQueueEntity::class
                     );
             },
-        'WellCart\Base\Form\Locale\Language'             =>
+        Form\Locale\Language::class             =>
             function (ContainerInterface $services) {
                 $form = new Form\Locale\Language(
                     new FormFactory($services->get('FormElementManager')),
@@ -124,7 +124,7 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Base\Form\UrlRewrite'                  =>
+        Form\UrlRewrite::class                  =>
             function (ContainerInterface $services) {
                 $form = new Form\UrlRewrite(
                     new FormFactory($services->get('FormElementManager')),
@@ -132,7 +132,7 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Base\EventListener\Ui\SetLayoutViewModel' =>
+        EventListener\Ui\SetLayoutViewModel::class =>
             function (
                 ContainerInterface $services
             ) {
@@ -224,7 +224,7 @@ return [
         'locale\active_languages_collection' =>
             function (ContainerInterface $services) {
                 return $services->get(
-                    'WellCart\Base\Spec\LocaleLanguageRepository'
+                    Spec\LocaleLanguageRepository::class
                 )
                     ->finder()
                     ->active()

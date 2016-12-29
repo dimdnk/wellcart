@@ -16,8 +16,8 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'system_config_editor_navigation'                 => 'WellCart\Backend\Factory\Navigation\Service\SystemConfigEditorFactory',
-        'WellCart\Backend\Form\Account'                     =>
+        'system_config_editor_navigation'                 => Factory\Navigation\Service\SystemConfigEditorFactory::class,
+        Form\Account::class                     =>
             function (ContainerInterface $services) {
                 $form = new Form\Account(
                     new FormFactory($services->get('FormElementManager')),
@@ -25,57 +25,57 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Backend\Repository\Administrators'
+        Repository\Administrators::class
                                                           =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_admin_object_manager')
                     ->getRepository(
-                        'WellCart\Backend\Spec\AdministratorEntity'
+                        Spec\AdministratorEntity::class
                     );
             },
-        'WellCart\Backend\Repository\Notifications'
+        Repository\Notifications::class
                                                           =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_admin_object_manager')
                     ->getRepository(
-                        'WellCart\Backend\Spec\NotificationEntity'
+                        Spec\NotificationEntity::class
                     );
             },
-        'WellCart\Backend\Service\Notification'
+        Service\Notification::class
                                                           =>
             function (ContainerInterface $services) {
                 return new Notification(
                     $services->get(
-                        'WellCart\Backend\Repository\Notifications'
+                        Repository\Notifications::class
                     )
                 );
             },
-        'WellCart\Backend\PageView\Backend\AccountsGrid'      =>
+        PageView\Backend\AccountsGrid::class      =>
             function (ContainerInterface $services) {
                 return new AccountsGrid(
                     $services->get(
-                        'WellCart\Backend\Spec\AdministratorRepository'
+                        Spec\AdministratorRepository::class
                     )
                 );
             },
-        'WellCart\Backend\PageView\Backend\AccountForm'       =>
+        PageView\Backend\AccountForm::class       =>
             function (ContainerInterface $services) {
                 return new AccountForm(
                     $services->get(
-                        'WellCart\Backend\Spec\AdministratorRepository'
+                        Spec\AdministratorRepository::class
                     )
                 );
             },
-        'WellCart\Backend\PageView\Backend\NotificationsGrid' =>
+        PageView\Backend\NotificationsGrid::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\NotificationsGrid(
                     $services->get(
-                        'WellCart\Backend\Spec\NotificationRepository'
+                        Spec\NotificationRepository::class
                     )
                 );
             },
 
-        'WellCart\Backend\Service\RecoverAccount' =>
+        Service\RecoverAccount::class =>
             function (ContainerInterface $services) {
                 $options = $services->get('Config');
                 $service = new Service\RecoverAccount(
@@ -83,10 +83,10 @@ return [
                     $services->get('acmailer.mailservice.default'),
                     $services->get('zfcuser_user_service'),
                     $services->get(
-                        'WellCart\Backend\Spec\AdministratorRepository'
+                        Spec\AdministratorRepository::class
                     ),
                     $services->get(
-                        'WellCart\Backend\Form\RecoverAccount'
+                        Form\RecoverAccount::class
                     ),
                     $services->get('zfcuser_change_password_form'),
                     $options['wellcart']['user_account_options']['password_reset']

@@ -23,11 +23,11 @@ use Zend\Stdlib\InitializableInterface;
 
 return [
     'factories'    => [
-        'WellCart\Base\ItemView\Text'     =>
+        ItemView\Text::class     =>
             function (BlockManager $sm) {
                 return new ItemView\Text();
             },
-        'WellCart\Base\ItemView\HtmlHead' =>
+        ItemView\HtmlHead::class =>
             function (BlockManager $sm) {
                 return new ItemView\HtmlHead(
                     [],
@@ -38,8 +38,8 @@ return [
             },
     ],
     'shared'       => [
-        'WellCart\Base\ItemView\Text'     => false,
-        'WellCart\Base\ItemView\HtmlHead' => false,
+        ItemView\Text::class     => false,
+        ItemView\HtmlHead::class => false,
     ],
     'initializers' => [
         'Zend\Log\LoggerAwareInterface'

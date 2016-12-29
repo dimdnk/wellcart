@@ -32,34 +32,34 @@ return [
                 ],
 
                 'Client' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\Client',
+                    'entity' => Entity\OAuth2\Client::class,
                 ],
                 'AccessToken' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\AccessToken',
+                    'entity' => Entity\OAuth2\AccessToken::class,
                 ],
 
                 'RefreshToken' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\RefreshToken',
+                    'entity' => Entity\OAuth2\RefreshToken::class,
                 ],
 
                 'AuthorizationCode' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\AuthorizationCode',
+                    'entity' => Entity\OAuth2\AuthorizationCode::class,
                 ],
 
                 'Jwt' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\Jwt',
+                    'entity' => Entity\OAuth2\Jwt::class,
                 ],
 
                 'Jti' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\Jti',
+                    'entity' => Entity\OAuth2\Jti::class,
                 ],
 
                 'Scope' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\Scope',
+                    'entity' => Entity\OAuth2\Scope::class,
                 ],
 
                 'PublicKey' => [
-                    'entity' => 'WellCart\RestApi\Entity\OAuth2\PublicKey',
+                    'entity' => Entity\OAuth2\PublicKey::class,
                 ],
             ],
         ],
