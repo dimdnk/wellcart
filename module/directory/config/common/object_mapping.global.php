@@ -214,7 +214,7 @@ return [
             [
                 'type' => 'entity',
                 'entityListeners' => [
-                    'WellCart\Directory\EventListener\CurrencyEntityListener' => [
+                    'WellCart\Directory\EventListener\Entity\CurrencyEntityListener' => [
                         'prePersist' => ['prePersist' => 'prePersist'],
                         'preUpdate' => ['prePersist' => 'preUpdate'],
                         'postPersist' => ['postPersist' => 'postPersist'],
