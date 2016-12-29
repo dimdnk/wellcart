@@ -5,9 +5,12 @@
  * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\RestApi;
+
 return [
     'object_mapping' => [
-        Entity\OAuth2\PublicKey' => [
+        Entity\OAuth2\PublicKey::class => [
             'formFields' => [
                 'client' => [
                     'input_filter_specification' => [
@@ -75,7 +78,7 @@ return [
         ],
 
 
-        Entity\OAuth2\Client' => [
+        Entity\OAuth2\Client::class => [
             'formFields' => [
                 'user' =>
                     [
@@ -121,7 +124,7 @@ return [
                                 [
                                     'name' => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
-                                        'entity_class' => Entity\OAuth2\Client',
+                                        'entity_class' => Entity\OAuth2\Client::class,
                                         'fields' => ['client_id'],
                                         'messages' => [
                                             'objectFound' => 'Client ID already exists!'
@@ -212,7 +215,7 @@ return [
             ],
         ],
 
-        Entity\OAuth2\Scope' => [
+        Entity\OAuth2\Scope::class => [
             'fields' => [
                 'isDefault' =>
                     [
@@ -263,7 +266,7 @@ return [
                                 [
                                     'name' => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
-                                        'entity_class' => Entity\OAuth2\Scope',
+                                        'entity_class' => Entity\OAuth2\Scope::class,
                                         'fields' => ['scope'],
                                         'messages' => [
                                             'objectFound' => 'Scope already exists!'
@@ -280,7 +283,7 @@ return [
             [
                 'oneToMany' => [
                     'client' => [
-                        'targetEntity' => Entity\OAuth2\Client',
+                        'targetEntity' => Entity\OAuth2\Client::class,
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_client_id',
@@ -288,7 +291,7 @@ return [
                         ],
                     ],
                     'accessToken' => [
-                        'targetEntity' => Entity\OAuth2\AccessToken',
+                        'targetEntity' => Entity\OAuth2\AccessToken::class,
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_access_token_id',
@@ -296,7 +299,7 @@ return [
                         ],
                     ],
                     'authorizationCode' => [
-                        'targetEntity' => Entity\OAuth2\AuthorizationCode',
+                        'targetEntity' => Entity\OAuth2\AuthorizationCode::class,
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_authorization_code_id',
@@ -304,7 +307,7 @@ return [
                         ],
                     ],
                     'refreshToken' => [
-                        'targetEntity' => Entity\OAuth2\RefreshToken',
+                        'targetEntity' => Entity\OAuth2\RefreshToken::class,
                         'mappedBy' => 'user',
                         'joinColumn' => [
                             'name' => 'oauth_refresh_token_id',
