@@ -132,11 +132,11 @@ return [
                 );
                 return $form;
             },
-        'WellCart\Base\EventListener\SetLayoutViewModel' =>
+        'WellCart\Base\EventListener\Ui\SetLayoutViewModel' =>
             function (
                 ContainerInterface $services
             ) {
-                return new EventListener\SetLayoutViewModel(
+                return new EventListener\Ui\SetLayoutViewModel(
                     $services->get('RootView')
                 );
             },

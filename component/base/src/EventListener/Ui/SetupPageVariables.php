@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\EventListener;
+namespace WellCart\Base\EventListener\Ui;
 
 use ConLayout\View\Helper\BodyClass;
 use WellCart\Utility\Arr;

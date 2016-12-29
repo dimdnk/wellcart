@@ -16,22 +16,22 @@ return
         'event_manager' => [
             'aggregates' => [],
             'listeners' => [
-                EventListener\DoctrineGlobalCacheChanger::class => [
+                EventListener\Config\DoctrineGlobalCacheChanger::class => [
                     'id' => ConfigurationEditor::class,
                     'event' => 'saveConfigSet.pre',
-                    'listener' => EventListener\DoctrineGlobalCacheChanger::class,
+                    'listener' => EventListener\Config\DoctrineGlobalCacheChanger::class,
                     'priority' => -100,
                 ],
-                EventListener\NormalizeViewManagerBasePath::class => [
+                EventListener\Config\Mvc\View\NormalizeViewManagerBasePath::class => [
                     'id' => ConfigurationEditor::class,
                     'event' => 'saveConfigSet.pre',
-                    'listener' => EventListener\NormalizeViewManagerBasePath::class,
+                    'listener' => EventListener\Config\Mvc\View\NormalizeViewManagerBasePath::class,
                     'priority' => -100,
                 ],
-                EventListener\PrepareLayoutItemView::class => [
+                EventListener\Ui\PrepareLayoutItemView::class => [
                     'id' => BlockFactory::class,
                     'event' => 'createBlock.post',
-                    'listener' => EventListener\PrepareLayoutItemView::class,
+                    'listener' => EventListener\Ui\PrepareLayoutItemView::class,
                     'priority' => -100,
                 ],
             ],

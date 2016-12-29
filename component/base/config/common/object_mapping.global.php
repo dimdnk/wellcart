@@ -330,7 +330,7 @@ return [
             [
                 'type' => 'entity',
                 'entityListeners' => [
-                    'WellCart\Base\EventListener\LocaleLanguageEntityListener' => [
+                    'WellCart\Base\EventListener\Entity\LocaleLanguageEntityListener' => [
                         'prePersist' => ['prePersist' => 'prePersist'],
                         'preUpdate' => ['prePersist' => 'preUpdate'],
                         'postPersist' => ['postPersist' => 'postPersist'],

@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\EventListener;
+namespace WellCart\Base\EventListener\Config;
 
 use WellCart\Utility\Config;
 use Zend\EventManager\EventInterface;

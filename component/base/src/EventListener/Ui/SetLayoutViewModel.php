@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\EventListener;
+namespace WellCart\Base\EventListener\Ui;
 
 use WellCart\Ui\Container\LayoutView\Root;
 use Zend\EventManager\AbstractListenerAggregate;

@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\EventListener;
+namespace WellCart\Base\EventListener\Log;
 
 use WellCart\Mvc\Application;
 use Zend\EventManager\AbstractListenerAggregate;
