@@ -20,8 +20,8 @@ return [
             ItemView\PageNavigator::class => ItemView\PageNavigator::class,
 
             'zfcDatagrid.renderer.HtmlDataGrid'        => PageView\Grid\Renderer::class,
-            EventListener\SetupPageVariables::class    => EventListener\SetupPageVariables::class,
-            EventListener\RemoveConfigCacheFile::class => EventListener\RemoveConfigCacheFile::class,
+            EventListener\Ui\SetupPageVariables::class    => EventListener\Ui\SetupPageVariables::class,
+            EventListener\Config\RemoveConfigCacheFile::class => EventListener\Config\RemoveConfigCacheFile::class,
             ItemView\TopBranding::class                => ItemView\TopBranding::class,
             ItemView\MainNavigationMenu::class         => ItemView\MainNavigationMenu::class,
             ItemView\Account\WelcomeBox::class         => ItemView\Account\WelcomeBox::class,
@@ -41,7 +41,7 @@ return [
         'factories'          => [
             Rbac\View\Strategy\UnauthorizedStrategy::class    => Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory::class,
             Command\Handler\PersistAdminAccountHandler::class => Factory\Command\Handler\PersistAdminAccountHandlerFactory::class,
-            EventListener\AdministratorEntityListener::class  => Factory\EventListener\AdministratorEntityListenerFactory::class,
+            EventListener\Entity\AdministratorEntityListener::class  => Factory\EventListener\Entity\AdministratorEntityListenerFactory::class,
             'backend_main_navigation'                         => Factory\Navigation\Service\BackendMainMenuFactory::class,
         ],
         'abstract_factories' => [],
@@ -351,7 +351,7 @@ return [
         ],
     ],
     'listeners'            => [
-        EventListener\SetupPageVariables::class        => EventListener\SetupPageVariables::class,
+        EventListener\Ui\SetupPageVariables::class        => EventListener\Ui\SetupPageVariables::class,
         Rbac\View\Strategy\UnauthorizedStrategy::class => Rbac\View\Strategy\UnauthorizedStrategy::class,
     ],
 

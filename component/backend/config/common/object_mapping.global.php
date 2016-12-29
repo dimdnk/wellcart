@@ -13,7 +13,7 @@ return [
                 'repositoryClass' => 'WellCart\Backend\Repository\Administrators',
                 'table' => 'admin_users',
                 'entityListeners' => [
-                    'WellCart\Backend\EventListener\AdministratorEntityListener' => [
+                    'WellCart\Backend\EventListener\Entity\AdministratorEntityListener' => [
                         'preRemove' => ['preRemove' => 'preRemove'],
                         'preUpdate' => ['preUpdate' => 'preUpdate'],
                         'postUpdate' => ['postUpdate' => 'postUpdate'],
@@ -342,7 +342,7 @@ return [
                 'repositoryClass' => 'WellCart\Backend\Repository\Notifications',
                 'table' => 'admin_notifications',
                 'entityListeners' => [
-                    'WellCart\Backend\EventListener\NotificationEntityListener' => [
+                    'WellCart\Backend\EventListener\Entity\NotificationEntityListener' => [
                         'preRemove' => ['preRemove' => 'preRemove'],
                     ],
                 ],
@@ -535,7 +535,7 @@ return [
             [
                 'type' => 'entity',
                 'entityListeners' => [
-                    'WellCart\Backend\EventListener\RoleEntityListener' => [
+                    'WellCart\Backend\EventListener\Entity\RoleEntityListener' => [
                         'preUpdate' => ['preUpdate' => 'preUpdate'],
                         'preRemove' => ['preRemove' => 'preRemove'],
                     ],

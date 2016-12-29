@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Backend\EventListener;
+namespace WellCart\Backend\EventListener\Ui;
 
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;

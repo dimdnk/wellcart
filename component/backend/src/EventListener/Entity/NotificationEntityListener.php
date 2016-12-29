@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Backend\EventListener;
+namespace WellCart\Backend\EventListener\Entity;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use WellCart\Backend\Spec\NotificationEntity;

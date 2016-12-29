@@ -8,10 +8,10 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Backend\Factory\EventListener;
+namespace WellCart\Backend\Factory\EventListener\Entity;
 
 use Interop\Container\ContainerInterface;
-use WellCart\Backend\EventListener\AdministratorEntityListener;
+use WellCart\Backend\EventListener\Entity\AdministratorEntityListener;
 use Zend\Authentication\AuthenticationService;
 
 class AdministratorEntityListenerFactory

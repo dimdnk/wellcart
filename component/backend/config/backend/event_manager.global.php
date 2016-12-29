@@ -14,10 +14,10 @@ return [
     'event_manager' => [
         'aggregates' => [],
         'listeners' => [
-            EventListener\RemoveConfigCacheFile::class => [
+            EventListener\Config\RemoveConfigCacheFile::class => [
                 'id' => ConfigurationEditor::class,
                 'event' => 'saveConfigSet.post',
-                'listener' => EventListener\RemoveConfigCacheFile::class,
+                'listener' => EventListener\Config\RemoveConfigCacheFile::class,
                 'priority' => -100,
             ],
         ],
