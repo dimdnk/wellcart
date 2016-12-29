@@ -49,7 +49,7 @@ class ScopeEntityListener
          * @var $repository ScopeRepository
          */
         $repository = $args->getObjectManager()->getRepository(
-            Entity\OAuth2\Scope'
+          ScopeEntity::class
         );
         $repository->ensureDefaultScope($scope);
     }

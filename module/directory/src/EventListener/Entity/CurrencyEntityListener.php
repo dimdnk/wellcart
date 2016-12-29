@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Directory\EventListener;
+namespace WellCart\Directory\EventListener\Entity;
 
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use WellCart\Directory\Exception\UnprocessableEntityException;
