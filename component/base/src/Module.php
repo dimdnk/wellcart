@@ -13,8 +13,8 @@ namespace WellCart\Base;
 use ConLayout\ModuleManager\Feature\BlockProviderInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Locale;
-use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
-use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
+use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
+use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
@@ -42,8 +42,8 @@ class Module implements
     Feature\ControllerProviderInterface,
     Feature\InitProviderInterface,
     Feature\FormElementProviderInterface,
-    DataFixturesProviderInterface,
-    MigrationsProviderInterface,
+    SetupDataFixturesProviderInterface,
+    SetupMigrationsProviderInterface,
     VersionProviderInterface,
     ModulePathProviderInterface,
     BlockProviderInterface
@@ -202,7 +202,7 @@ class Module implements
      *
      * @return \WellCart\Setup\SchemaMigration\AbstractMigration[]
      */
-    public function getMigrations(): array
+    public function getSetupMigrations(): array
     {
         return [
             '20161201000000' => new Setup\Schema\Install(
@@ -216,7 +216,7 @@ class Module implements
      *
      * @return \WellCart\Setup\DataFixture\AbstractFixture[]
      */
-    public function getDataFixtures(): array
+    public function getSetupDataFixtures(): array
     {
         return [
             '20161201000000' => new Setup\Data\Install(

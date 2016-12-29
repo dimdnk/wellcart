@@ -45,14 +45,14 @@ class ModuleTest extends TestCase
         $this->assertInternalType('array', $this->object->getServiceConfig());
     }
 
-    public function testGetMigrations()
+    public function testGetSetupMigrations()
     {
-        $this->assertInternalType('array', $this->object->getMigrations());
+        $this->assertInternalType('array', $this->object->getSetupMigrations());
     }
 
-    public function testGetDataFixtures()
+    public function testGetSetupDataFixtures()
     {
-        $this->assertInternalType('array', $this->object->getDataFixtures());
+        $this->assertInternalType('array', $this->object->getSetupDataFixtures());
     }
 
     public function testGetAbsolutePath()

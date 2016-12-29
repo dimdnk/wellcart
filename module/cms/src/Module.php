@@ -11,8 +11,8 @@ declare(strict_types = 1);
 namespace WellCart\CMS;
 
 use Interop\Container\ContainerInterface;
-use WellCart\ModuleManager\Feature\DataFixturesProviderInterface;
-use WellCart\ModuleManager\Feature\MigrationsProviderInterface;
+use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
+use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
@@ -23,8 +23,8 @@ use ZF\Apigility\Provider\ApigilityProviderInterface;
 class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
-    DataFixturesProviderInterface,
-    MigrationsProviderInterface,
+    SetupDataFixturesProviderInterface,
+    SetupMigrationsProviderInterface,
     ApigilityProviderInterface,
     VersionProviderInterface,
     ModulePathProviderInterface
@@ -62,7 +62,7 @@ class Module implements
      *
      * @return \WellCart\Setup\SchemaMigration\AbstractMigration[]
      */
-    public function getMigrations(): array
+    public function getSetupMigrations(): array
     {
         return [
             '20161206000000' => new Setup\Schema\Install(
@@ -76,7 +76,7 @@ class Module implements
      *
      * @return \WellCart\Setup\DataFixture\AbstractFixture[]
      */
-    public function getDataFixtures(): array
+    public function getSetupDataFixtures(): array
     {
         return [
             '20161206000000' => new Setup\Data\Install(

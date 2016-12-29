@@ -8,13 +8,13 @@
 
 namespace WellCart\ModuleManager\Feature;
 
-interface MigrationsProviderInterface
+interface SetupMigrationsProviderInterface
 {
     /**
      * Retrieve array of migration classes
      *
      * @return \WellCart\SchemaMigration\AbstractMigration[]
      */
-    public function getMigrations(): array;
+    public function getSetupMigrations(): array;
 
 }

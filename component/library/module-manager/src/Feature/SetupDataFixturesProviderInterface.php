@@ -8,13 +8,13 @@
 
 namespace WellCart\ModuleManager\Feature;
 
-interface DataFixturesProviderInterface
+interface SetupDataFixturesProviderInterface
 {
     /**
      * Retrieve array of data fixture classes
      *
      * @return \Doctrine\Common\DataFixtures\OrderedFixtureInterface[]
      */
-    public function getDataFixtures(): array;
+    public function getSetupDataFixtures(): array;
 
 }
