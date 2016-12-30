@@ -2,7 +2,7 @@
 /**
  * WellCart Platform
  *
- * @copyright  Copyright (c) 2016 WellCart Development Team    http://wellcart.org/
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
@@ -205,8 +205,8 @@ class Module implements
     public function getSetupMigrations(): array
     {
         return [
-            '20161201000000' => new Setup\Schema\Install(
-                '20161201000000'
+            '20170101000000' => new Setup\Schema\Install(
+                '20170101000000'
             ),
         ];
     }
@@ -219,8 +219,8 @@ class Module implements
     public function getSetupDataFixtures(): array
     {
         return [
-            '20161201000000' => new Setup\Data\Install(
-                '20161201000000'
+            '20170101000000' => new Setup\Data\Install(
+                '20170101000000'
             ),
         ];
     }

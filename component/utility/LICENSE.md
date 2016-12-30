@@ -4,7 +4,7 @@ This license is a legal agreement between you and the WellCart Team
 for the use of WellCart Platform (the "Software"). By obtaining the Software
 you agree to comply with the terms and conditions of this license.
 
-Copyright (c) 2016 WellCart Team
+Copyright (c) 2017 WellCart Team
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,

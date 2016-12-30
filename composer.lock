@@ -65,7 +65,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-06-04T17:27:26+00:00"
+            "time": "2017-06-04T17:27:26+00:00"
         },
         {
             "name": "api-skeletons/zf-doctrine-module-zend-hydrator",
@@ -102,7 +102,7 @@
                 }
             ],
             "description": "Corrects DoctrineModule classes to use zend-hydrator",
-            "time": "2016-06-12T20:55:02+00:00"
+            "time": "2017-06-12T20:55:02+00:00"
         },
         {
             "name": "api-skeletons/zf-oauth2-doctrine",
@@ -163,7 +163,7 @@
                 "doctrine",
                 "oauth2"
             ],
-            "time": "2016-10-25T19:29:46+00:00"
+            "time": "2017-10-25T19:29:46+00:00"
         },
         {
             "name": "api-skeletons/zf-oauth2-doctrine-console",
@@ -204,7 +204,7 @@
                 "doctrine",
                 "oauth2"
             ],
-            "time": "2016-06-09T22:27:08+00:00"
+            "time": "2017-06-09T22:27:08+00:00"
         },
         {
             "name": "atukai/at-php-settings",
@@ -311,7 +311,7 @@
                 "doctrine",
                 "orm"
             ],
-            "time": "2016-12-06T02:57:23+00:00"
+            "time": "2017-12-06T02:57:23+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -366,7 +366,7 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2016-12-05T11:33:17+00:00"
+            "time": "2017-12-05T11:33:17+00:00"
         },
         {
             "name": "behat/transliterator",
@@ -500,7 +500,7 @@
             ],
             "description": "BitWeb ZF2 module for cron.",
             "homepage": "http://bitweb.ee/",
-            "time": "2016-01-14T13:15:30+00:00"
+            "time": "2017-01-14T13:15:30+00:00"
         },
         {
             "name": "bjyoungblood/bjy-profiler",
@@ -596,7 +596,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2016-12-21T05:40:37+00:00"
+            "time": "2017-12-21T05:40:37+00:00"
         },
         {
             "name": "bshaffer/oauth2-server-php",
@@ -756,7 +756,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2016-07-26T05:59:20+00:00"
+            "time": "2017-07-26T05:59:20+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -791,7 +791,7 @@
                 "OFL-1.1"
             ],
             "description": "The iconic font designed for use with Twitter Bootstrap.",
-            "time": "2016-10-25T10:56:23+00:00"
+            "time": "2017-10-25T10:56:23+00:00"
         },
         {
             "name": "components/handlebars.js",
@@ -882,7 +882,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2016-09-23T06:06:29+00:00"
+            "time": "2017-09-23T06:06:29+00:00"
         },
         {
             "name": "components/jquery-cookie",
@@ -1013,7 +1013,7 @@
                 }
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-            "time": "2016-09-16T05:47:55+00:00"
+            "time": "2017-09-16T05:47:55+00:00"
         },
         {
             "name": "components/underscore",
@@ -1135,7 +1135,7 @@
                 }
             ],
             "description": "Cronjobs",
-            "time": "2016-03-24T20:53:55+00:00"
+            "time": "2017-03-24T20:53:55+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1203,7 +1203,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2016-10-24T11:45:47+00:00"
+            "time": "2017-10-24T11:45:47+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1273,7 +1273,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-10-29T11:16:17+00:00"
+            "time": "2017-10-29T11:16:17+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -1412,7 +1412,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2016-12-03T08:15:01+00:00"
+            "time": "2017-12-03T08:15:01+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -1537,7 +1537,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-12-04T05:53:43+00:00"
+            "time": "2017-12-04T05:53:43+00:00"
         },
         {
             "name": "doctrine/doctrine-module",
@@ -1629,7 +1629,7 @@
                 "module",
                 "zf"
             ],
-            "time": "2016-10-03T19:40:55+00:00"
+            "time": "2017-10-03T19:40:55+00:00"
         },
         {
             "name": "doctrine/doctrine-mongo-odm-module",
@@ -1714,7 +1714,7 @@
                 "odm",
                 "zf"
             ],
-            "time": "2016-10-03T21:02:25+00:00"
+            "time": "2017-10-03T21:02:25+00:00"
         },
         {
             "name": "doctrine/doctrine-orm-module",
@@ -1800,7 +1800,7 @@
                 "orm",
                 "zf2"
             ],
-            "time": "2016-07-03T15:07:24+00:00"
+            "time": "2017-07-03T15:07:24+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -2052,7 +2052,7 @@
                 "mongodb",
                 "persistence"
             ],
-            "time": "2016-11-22T19:01:59+00:00"
+            "time": "2017-11-22T19:01:59+00:00"
         },
         {
             "name": "doctrine/mongodb-odm",
@@ -2136,7 +2136,7 @@
                 "odm",
                 "persistence"
             ],
-            "time": "2016-10-07T09:18:05+00:00"
+            "time": "2017-10-07T09:18:05+00:00"
         },
         {
             "name": "doctrine/orm",
@@ -2212,7 +2212,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2016-12-18T15:42:34+00:00"
+            "time": "2017-12-18T15:42:34+00:00"
         },
         {
             "name": "drmonty/chosen",
@@ -2265,7 +2265,7 @@
                 "select",
                 "ui"
             ],
-            "time": "2016-06-23T06:51:35+00:00"
+            "time": "2017-06-23T06:51:35+00:00"
         },
         {
             "name": "eonasdan/bootstrap-datetimepicker",
@@ -2352,7 +2352,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2016-07-16T12:58:58+00:00"
+            "time": "2017-07-16T12:58:58+00:00"
         },
         {
             "name": "firephp/firephp-core",
@@ -2436,7 +2436,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2016-04-29T12:21:54+00:00"
+            "time": "2017-04-29T12:21:54+00:00"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -2515,7 +2515,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-12-21T13:46:54+00:00"
+            "time": "2017-12-21T13:46:54+00:00"
         },
         {
             "name": "herrera-io/json",
@@ -2748,7 +2748,7 @@
                 "layout",
                 "zf2"
             ],
-            "time": "2016-04-20T20:36:27+00:00"
+            "time": "2017-04-20T20:36:27+00:00"
         },
         {
             "name": "hummer2k/convarnish",
@@ -2809,7 +2809,7 @@
                 "varnish",
                 "zf2"
             ],
-            "time": "2016-03-26T11:17:01+00:00"
+            "time": "2017-03-26T11:17:01+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -2907,7 +2907,7 @@
             ],
             "description": "Select2 is a jQuery based replacement for select boxes.",
             "homepage": "https://select2.github.io/",
-            "time": "2016-05-27T01:16:06+00:00"
+            "time": "2017-05-27T01:16:06+00:00"
         },
         {
             "name": "jbroadway/urlify",
@@ -2961,7 +2961,7 @@
                 "url",
                 "urlify"
             ],
-            "time": "2016-09-14T14:22:45+00:00"
+            "time": "2017-09-14T14:22:45+00:00"
         },
         {
             "name": "josegonzalez/dotenv",
@@ -3013,7 +3013,7 @@
                 "dotenv",
                 "php"
             ],
-            "time": "2016-01-07T16:07:20+00:00"
+            "time": "2017-01-07T16:07:20+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -3079,7 +3079,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2016-01-25T15:43:01+00:00"
+            "time": "2017-01-25T15:43:01+00:00"
         },
         {
             "name": "kherge/version",
@@ -3198,7 +3198,7 @@
                 "compression",
                 "minification"
             ],
-            "time": "2016-11-11T18:43:20+00:00"
+            "time": "2017-11-11T18:43:20+00:00"
         },
         {
             "name": "leafo/scssphp",
@@ -3251,7 +3251,7 @@
                 "scss",
                 "stylesheet"
             ],
-            "time": "2016-09-11T01:34:11+00:00"
+            "time": "2017-09-11T01:34:11+00:00"
         },
         {
             "name": "m1/env",
@@ -3309,7 +3309,7 @@
                 "parser",
                 "support"
             ],
-            "time": "2016-10-06T19:31:28+00:00"
+            "time": "2017-10-06T19:31:28+00:00"
         },
         {
             "name": "marc-mabe/php-enum",
@@ -3371,7 +3371,7 @@
                 "type-hint",
                 "typehint"
             ],
-            "time": "2016-12-21T13:13:11+00:00"
+            "time": "2017-12-21T13:13:11+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -3422,7 +3422,7 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2016-10-29T18:58:20+00:00"
+            "time": "2017-10-29T18:58:20+00:00"
         },
         {
             "name": "moment/moment",
@@ -3476,7 +3476,7 @@
                 "time",
                 "validate"
             ],
-            "time": "2016-12-04T05:41:33+00:00"
+            "time": "2017-12-04T05:41:33+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3518,7 +3518,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2016-10-31T17:19:45+00:00"
+            "time": "2017-10-31T17:19:45+00:00"
         },
         {
             "name": "neeckeloo/wizard",
@@ -3648,7 +3648,7 @@
                 "twitter bootstrap",
                 "zend framework 2"
             ],
-            "time": "2016-06-15T11:27:54+00:00"
+            "time": "2017-06-15T11:27:54+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -3800,7 +3800,7 @@
                 "postgresql",
                 "type"
             ],
-            "time": "2016-11-11T15:11:11+00:00"
+            "time": "2017-11-11T15:11:11+00:00"
         },
         {
             "name": "oro/moment-timezone",
@@ -3913,7 +3913,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2016-05-18T13:57:10+00:00"
+            "time": "2017-05-18T13:57:10+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -4012,7 +4012,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30T07:12:33+00:00"
+            "time": "2017-09-30T07:12:33+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -4059,7 +4059,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25T06:54:22+00:00"
+            "time": "2017-11-25T06:54:22+00:00"
         },
         {
             "name": "phpro/zf-doctrine-hydration-module",
@@ -4120,7 +4120,7 @@
                 "hydrator",
                 "zf2"
             ],
-            "time": "2016-10-05T06:33:09+00:00"
+            "time": "2017-10-05T06:33:09+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -4183,7 +4183,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2016-11-21T14:58:47+00:00"
+            "time": "2017-11-21T14:58:47+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4246,7 +4246,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-20T15:22:42+00:00"
+            "time": "2017-12-20T15:22:42+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4293,7 +4293,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03T07:40:28+00:00"
+            "time": "2017-10-03T07:40:28+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -4378,7 +4378,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2016-05-12T18:03:57+00:00"
+            "time": "2017-05-12T18:03:57+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -4427,7 +4427,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2016-11-15T14:06:22+00:00"
+            "time": "2017-11-15T14:06:22+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -4509,7 +4509,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-28T07:18:51+00:00"
+            "time": "2017-12-28T07:18:51+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4568,7 +4568,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-12-08T20:27:08+00:00"
+            "time": "2017-12-08T20:27:08+00:00"
         },
         {
             "name": "prolic/humus-amqp",
@@ -4647,7 +4647,7 @@
                 "rabbit",
                 "rabbitmq"
             ],
-            "time": "2016-11-01T09:07:42+00:00"
+            "time": "2017-11-01T09:07:42+00:00"
         },
         {
             "name": "prolic/humus-amqp-module",
@@ -4707,7 +4707,7 @@
                 "rabbitmq",
                 "zf2"
             ],
-            "time": "2016-08-14T07:57:46+00:00"
+            "time": "2017-08-14T07:57:46+00:00"
         },
         {
             "name": "psr/http-message",
@@ -4757,7 +4757,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2017-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -4804,7 +4804,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2017-10-10T12:19:37+00:00"
         },
         {
             "name": "ptachoire/cssembed",
@@ -5295,7 +5295,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2016-10-27T10:16:12+00:00"
+            "time": "2017-10-27T10:16:12+00:00"
         },
         {
             "name": "rwoverdijk/assetmanager",
@@ -5362,7 +5362,7 @@
                 "zend framework 2",
                 "zf2"
             ],
-            "time": "2016-08-23T11:24:22+00:00"
+            "time": "2017-08-23T11:24:22+00:00"
         },
         {
             "name": "sandrokeil/interop-config",
@@ -5427,7 +5427,7 @@
                 "service",
                 "standard"
             ],
-            "time": "2016-03-05T18:11:53+00:00"
+            "time": "2017-03-05T18:11:53+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -5472,7 +5472,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2016-02-13T06:45:14+00:00"
+            "time": "2017-02-13T06:45:14+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -5536,7 +5536,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19T09:18:40+00:00"
+            "time": "2017-11-19T09:18:40+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -5638,7 +5638,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2016-11-26T07:53:53+00:00"
+            "time": "2017-11-26T07:53:53+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -5705,7 +5705,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2016-11-19T08:54:04+00:00"
+            "time": "2017-11-19T08:54:04+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -5802,7 +5802,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2016-11-19T07:35:10+00:00"
+            "time": "2017-11-19T07:35:10+00:00"
         },
         {
             "name": "sebastian/recursion-context",
@@ -5855,7 +5855,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-19T07:33:16+00:00"
+            "time": "2017-11-19T07:33:16+00:00"
         },
         {
             "name": "sebastian/resource-operations",
@@ -5978,7 +5978,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2016-11-14T17:59:58+00:00"
+            "time": "2017-11-14T17:59:58+00:00"
         },
         {
             "name": "simple-bus/asynchronous",
@@ -6030,7 +6030,7 @@
                 "event bus",
                 "messaging"
             ],
-            "time": "2016-04-06T15:11:31+00:00"
+            "time": "2017-04-06T15:11:31+00:00"
         },
         {
             "name": "simple-bus/message-bus",
@@ -6080,7 +6080,7 @@
                 "message",
                 "message bus"
             ],
-            "time": "2016-02-12T08:35:53+00:00"
+            "time": "2017-02-12T08:35:53+00:00"
         },
         {
             "name": "simple-bus/serialization",
@@ -6204,7 +6204,7 @@
                 "queue",
                 "zf2"
             ],
-            "time": "2016-06-23T08:59:27+00:00"
+            "time": "2017-06-23T08:59:27+00:00"
         },
         {
             "name": "slm/queue-doctrine",
@@ -6274,7 +6274,7 @@
                 "queue",
                 "zf2"
             ],
-            "time": "2016-06-23T11:35:18+00:00"
+            "time": "2017-06-23T11:35:18+00:00"
         },
         {
             "name": "snapshotpl/zf-snap-jquery",
@@ -6405,7 +6405,7 @@
                 "purify",
                 "zf2"
             ],
-            "time": "2016-03-10T20:32:46+00:00"
+            "time": "2017-03-10T20:32:46+00:00"
         },
         {
             "name": "stroker/form",
@@ -6471,7 +6471,7 @@
                 "validation",
                 "zend framework 2"
             ],
-            "time": "2016-09-16T06:40:21+00:00"
+            "time": "2017-09-16T06:40:21+00:00"
         },
         {
             "name": "swix/swix-em-config",
@@ -6518,7 +6518,7 @@
                 "event manager",
                 "zf2"
             ],
-            "time": "2016-04-18T20:05:20+00:00"
+            "time": "2017-04-18T20:05:20+00:00"
         },
         {
             "name": "symfony/config",
@@ -6574,7 +6574,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-09T07:45:17+00:00"
+            "time": "2017-12-09T07:45:17+00:00"
         },
         {
             "name": "symfony/console",
@@ -6637,7 +6637,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-11T14:34:22+00:00"
+            "time": "2017-12-11T14:34:22+00:00"
         },
         {
             "name": "symfony/debug",
@@ -6694,7 +6694,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-16T22:18:16+00:00"
+            "time": "2017-11-16T22:18:16+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -6757,7 +6757,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-08T15:27:33+00:00"
+            "time": "2017-12-08T15:27:33+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -6806,7 +6806,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-24T00:46:43+00:00"
+            "time": "2017-11-24T00:46:43+00:00"
         },
         {
             "name": "symfony/finder",
@@ -6855,7 +6855,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-13T09:39:43+00:00"
+            "time": "2017-12-13T09:39:43+00:00"
         },
         {
             "name": "symfony/options-resolver",
@@ -6909,7 +6909,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2016-10-18T04:28:30+00:00"
+            "time": "2017-10-18T04:28:30+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -6968,7 +6968,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-11-14T01:06:16+00:00"
         },
         {
             "name": "symfony/process",
@@ -7017,7 +7017,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-24T10:40:28+00:00"
+            "time": "2017-11-24T10:40:28+00:00"
         },
         {
             "name": "symfony/translation",
@@ -7081,7 +7081,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-30T14:40:17+00:00"
+            "time": "2017-11-30T14:40:17+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -7136,7 +7136,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-10T10:07:06+00:00"
+            "time": "2017-12-10T10:07:06+00:00"
         },
         {
             "name": "tck/zf2-imageresizer",
@@ -7282,7 +7282,7 @@
                 "zf2",
                 "zfc-datagrid"
             ],
-            "time": "2016-11-11T07:38:34+00:00"
+            "time": "2017-11-11T07:38:34+00:00"
         },
         {
             "name": "tinymce/tinymce",
@@ -7328,7 +7328,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2016-12-07T07:02:09+00:00"
+            "time": "2017-12-07T07:02:09+00:00"
         },
         {
             "name": "twig/twig",
@@ -7389,7 +7389,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-23T11:06:22+00:00"
+            "time": "2017-12-23T11:06:22+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -7439,7 +7439,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23T20:04:58+00:00"
+            "time": "2017-11-23T20:04:58+00:00"
         },
         {
             "name": "wellcart/web",
@@ -7507,7 +7507,7 @@
                 }
             ],
             "homepage": "http://wellcart.org/",
-            "time": "2016-11-18T17:02:38+00:00"
+            "time": "2017-11-18T17:02:38+00:00"
         },
         {
             "name": "zendexperts/ze-theme",
@@ -7620,7 +7620,7 @@
                 "Authentication",
                 "zf2"
             ],
-            "time": "2016-02-28T15:02:34+00:00"
+            "time": "2017-02-28T15:02:34+00:00"
         },
         {
             "name": "zendframework/zend-barcode",
@@ -7673,7 +7673,7 @@
                 "barcode",
                 "zf2"
             ],
-            "time": "2016-02-17T21:15:38+00:00"
+            "time": "2017-02-17T21:15:38+00:00"
         },
         {
             "name": "zendframework/zend-cache",
@@ -7742,7 +7742,7 @@
                 "cache",
                 "zf2"
             ],
-            "time": "2016-12-16T11:35:47+00:00"
+            "time": "2017-12-16T11:35:47+00:00"
         },
         {
             "name": "zendframework/zend-captcha",
@@ -7799,7 +7799,7 @@
                 "captcha",
                 "zf2"
             ],
-            "time": "2016-06-21T17:32:09+00:00"
+            "time": "2017-06-21T17:32:09+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -7851,7 +7851,7 @@
                 "code",
                 "zf2"
             ],
-            "time": "2016-04-20T17:26:42+00:00"
+            "time": "2017-04-20T17:26:42+00:00"
         },
         {
             "name": "zendframework/zend-config",
@@ -7907,7 +7907,7 @@
                 "config",
                 "zf2"
             ],
-            "time": "2016-02-04T23:01:10+00:00"
+            "time": "2017-02-04T23:01:10+00:00"
         },
         {
             "name": "zendframework/zend-console",
@@ -7959,7 +7959,7 @@
                 "console",
                 "zf2"
             ],
-            "time": "2016-02-09T17:15:12+00:00"
+            "time": "2017-02-09T17:15:12+00:00"
         },
         {
             "name": "zendframework/zend-crypt",
@@ -8009,7 +8009,7 @@
                 "crypt",
                 "zf2"
             ],
-            "time": "2016-02-03T23:46:30+00:00"
+            "time": "2017-02-03T23:46:30+00:00"
         },
         {
             "name": "zendframework/zend-db",
@@ -8066,7 +8066,7 @@
                 "db",
                 "zf2"
             ],
-            "time": "2016-08-09T19:28:55+00:00"
+            "time": "2017-08-09T19:28:55+00:00"
         },
         {
             "name": "zendframework/zend-debug",
@@ -8192,7 +8192,7 @@
                 "module",
                 "zf2"
             ],
-            "time": "2016-09-08T13:53:58+00:00"
+            "time": "2017-09-08T13:53:58+00:00"
         },
         {
             "name": "zendframework/zend-di",
@@ -8239,7 +8239,7 @@
                 "di",
                 "zf2"
             ],
-            "time": "2016-04-25T20:58:11+00:00"
+            "time": "2017-04-25T20:58:11+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -8289,7 +8289,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-10-11T13:25:21+00:00"
+            "time": "2017-10-11T13:25:21+00:00"
         },
         {
             "name": "zendframework/zend-dom",
@@ -8378,7 +8378,7 @@
                 "escaper",
                 "zf2"
             ],
-            "time": "2016-06-30T19:48:38+00:00"
+            "time": "2017-06-30T19:48:38+00:00"
         },
         {
             "name": "zendframework/zend-eventmanager",
@@ -8425,7 +8425,7 @@
                 "eventmanager",
                 "zf2"
             ],
-            "time": "2016-02-18T20:49:05+00:00"
+            "time": "2017-02-18T20:49:05+00:00"
         },
         {
             "name": "zendframework/zend-feed",
@@ -8486,7 +8486,7 @@
                 "feed",
                 "zf2"
             ],
-            "time": "2016-02-11T18:54:29+00:00"
+            "time": "2017-02-11T18:54:29+00:00"
         },
         {
             "name": "zendframework/zend-file",
@@ -8542,7 +8542,7 @@
                 "file",
                 "zf2"
             ],
-            "time": "2016-04-28T19:21:43+00:00"
+            "time": "2017-04-28T19:21:43+00:00"
         },
         {
             "name": "zendframework/zend-filter",
@@ -8602,7 +8602,7 @@
                 "filter",
                 "zf2"
             ],
-            "time": "2016-04-18T18:32:43+00:00"
+            "time": "2017-04-18T18:32:43+00:00"
         },
         {
             "name": "zendframework/zend-form",
@@ -8679,7 +8679,7 @@
                 "form",
                 "zf2"
             ],
-            "time": "2016-09-22T15:56:15+00:00"
+            "time": "2017-09-22T15:56:15+00:00"
         },
         {
             "name": "zendframework/zend-http",
@@ -8729,7 +8729,7 @@
                 "http",
                 "zf2"
             ],
-            "time": "2016-08-08T15:01:54+00:00"
+            "time": "2017-08-08T15:01:54+00:00"
         },
         {
             "name": "zendframework/zend-hydrator",
@@ -8787,7 +8787,7 @@
                 "hydrator",
                 "zf2"
             ],
-            "time": "2016-02-18T22:38:26+00:00"
+            "time": "2017-02-18T22:38:26+00:00"
         },
         {
             "name": "zendframework/zend-i18n",
@@ -8854,7 +8854,7 @@
                 "i18n",
                 "zf2"
             ],
-            "time": "2016-06-07T21:08:30+00:00"
+            "time": "2017-06-07T21:08:30+00:00"
         },
         {
             "name": "zendframework/zend-i18n-resources",
@@ -8944,7 +8944,7 @@
                 "inputfilter",
                 "zf2"
             ],
-            "time": "2016-08-18T18:40:34+00:00"
+            "time": "2017-08-18T18:40:34+00:00"
         },
         {
             "name": "zendframework/zend-json",
@@ -8999,7 +8999,7 @@
                 "json",
                 "zf2"
             ],
-            "time": "2016-02-04T21:20:26+00:00"
+            "time": "2017-02-04T21:20:26+00:00"
         },
         {
             "name": "zendframework/zend-loader",
@@ -9114,7 +9114,7 @@
                 "logging",
                 "zf2"
             ],
-            "time": "2016-08-11T13:44:10+00:00"
+            "time": "2017-08-11T13:44:10+00:00"
         },
         {
             "name": "zendframework/zend-mail",
@@ -9174,7 +9174,7 @@
                 "mail",
                 "zf2"
             ],
-            "time": "2016-12-19T22:46:35+00:00"
+            "time": "2017-12-19T22:46:35+00:00"
         },
         {
             "name": "zendframework/zend-math",
@@ -9224,7 +9224,7 @@
                 "math",
                 "zf2"
             ],
-            "time": "2016-04-07T16:29:53+00:00"
+            "time": "2017-04-07T16:29:53+00:00"
         },
         {
             "name": "zendframework/zend-memory",
@@ -9272,7 +9272,7 @@
                 "memory",
                 "zf2"
             ],
-            "time": "2016-05-11T14:49:42+00:00"
+            "time": "2017-05-11T14:49:42+00:00"
         },
         {
             "name": "zendframework/zend-mime",
@@ -9321,7 +9321,7 @@
                 "mime",
                 "zf2"
             ],
-            "time": "2016-04-20T21:02:01+00:00"
+            "time": "2017-04-20T21:02:01+00:00"
         },
         {
             "name": "zendframework/zend-modulemanager",
@@ -9380,7 +9380,7 @@
                 "modulemanager",
                 "zf2"
             ],
-            "time": "2016-05-16T21:21:11+00:00"
+            "time": "2017-05-16T21:21:11+00:00"
         },
         {
             "name": "zendframework/zend-mvc",
@@ -9471,7 +9471,7 @@
                 "mvc",
                 "zf2"
             ],
-            "time": "2016-06-13T16:52:36+00:00"
+            "time": "2017-06-13T16:52:36+00:00"
         },
         {
             "name": "zendframework/zend-navigation",
@@ -9539,7 +9539,7 @@
                 "navigation",
                 "zf2"
             ],
-            "time": "2016-06-12T14:12:33+00:00"
+            "time": "2017-06-12T14:12:33+00:00"
         },
         {
             "name": "zendframework/zend-paginator",
@@ -9603,7 +9603,7 @@
                 "paginator",
                 "zf2"
             ],
-            "time": "2016-04-11T21:18:13+00:00"
+            "time": "2017-04-11T21:18:13+00:00"
         },
         {
             "name": "zendframework/zend-permissions-acl",
@@ -9652,7 +9652,7 @@
                 "acl",
                 "zf2"
             ],
-            "time": "2016-02-03T21:46:45+00:00"
+            "time": "2017-02-03T21:46:45+00:00"
         },
         {
             "name": "zendframework/zend-permissions-rbac",
@@ -9749,7 +9749,7 @@
                 "progressbar",
                 "zf2"
             ],
-            "time": "2016-03-01T23:11:07+00:00"
+            "time": "2017-03-01T23:11:07+00:00"
         },
         {
             "name": "zendframework/zend-psr7bridge",
@@ -9798,7 +9798,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-05-10T21:44:39+00:00"
+            "time": "2017-05-10T21:44:39+00:00"
         },
         {
             "name": "zendframework/zend-router",
@@ -9858,7 +9858,7 @@
                 "mvc",
                 "zf2"
             ],
-            "time": "2016-03-08T18:18:41+00:00"
+            "time": "2017-03-08T18:18:41+00:00"
         },
         {
             "name": "zendframework/zend-serializer",
@@ -9915,7 +9915,7 @@
                 "serializer",
                 "zf2"
             ],
-            "time": "2016-06-21T17:01:55+00:00"
+            "time": "2017-06-21T17:01:55+00:00"
         },
         {
             "name": "zendframework/zend-server",
@@ -9961,7 +9961,7 @@
                 "server",
                 "zf2"
             ],
-            "time": "2016-06-20T22:27:55+00:00"
+            "time": "2017-06-20T22:27:55+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
@@ -10013,7 +10013,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2016-12-19T19:14:29+00:00"
+            "time": "2017-12-19T19:14:29+00:00"
         },
         {
             "name": "zendframework/zend-session",
@@ -10079,7 +10079,7 @@
                 "session",
                 "zf2"
             ],
-            "time": "2016-07-05T18:32:50+00:00"
+            "time": "2017-07-05T18:32:50+00:00"
         },
         {
             "name": "zendframework/zend-soap",
@@ -10131,7 +10131,7 @@
                 "soap",
                 "zf2"
             ],
-            "time": "2016-04-21T16:06:27+00:00"
+            "time": "2017-04-21T16:06:27+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -10190,7 +10190,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2016-04-12T21:17:31+00:00"
+            "time": "2017-04-12T21:17:31+00:00"
         },
         {
             "name": "zendframework/zend-tag",
@@ -10241,7 +10241,7 @@
                 "tag",
                 "zf2"
             ],
-            "time": "2016-02-04T14:32:00+00:00"
+            "time": "2017-02-04T14:32:00+00:00"
         },
         {
             "name": "zendframework/zend-test",
@@ -10302,7 +10302,7 @@
                 "test",
                 "zf2"
             ],
-            "time": "2016-03-02T20:15:27+00:00"
+            "time": "2017-03-02T20:15:27+00:00"
         },
         {
             "name": "zendframework/zend-text",
@@ -10349,7 +10349,7 @@
                 "text",
                 "zf2"
             ],
-            "time": "2016-02-08T19:03:52+00:00"
+            "time": "2017-02-08T19:03:52+00:00"
         },
         {
             "name": "zendframework/zend-uri",
@@ -10396,7 +10396,7 @@
                 "uri",
                 "zf2"
             ],
-            "time": "2016-02-17T22:38:51+00:00"
+            "time": "2017-02-17T22:38:51+00:00"
         },
         {
             "name": "zendframework/zend-validator",
@@ -10467,7 +10467,7 @@
                 "validator",
                 "zf2"
             ],
-            "time": "2016-06-23T13:44:31+00:00"
+            "time": "2017-06-23T13:44:31+00:00"
         },
         {
             "name": "zendframework/zend-version",
@@ -10604,7 +10604,7 @@
                 "view",
                 "zf2"
             ],
-            "time": "2016-06-30T22:28:07+00:00"
+            "time": "2017-06-30T22:28:07+00:00"
         },
         {
             "name": "zendframework/zend-xmlrpc",
@@ -10656,7 +10656,7 @@
                 "xmlrpc",
                 "zf2"
             ],
-            "time": "2016-06-21T16:38:47+00:00"
+            "time": "2017-06-21T16:38:47+00:00"
         },
         {
             "name": "zendframework/zendframework",
@@ -10751,7 +10751,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2016-01-27T18:00:44+00:00"
+            "time": "2017-01-27T18:00:44+00:00"
         },
         {
             "name": "zendframework/zendxml",
@@ -10796,7 +10796,7 @@
                 "xml",
                 "zf2"
             ],
-            "time": "2016-02-04T21:02:08+00:00"
+            "time": "2017-02-04T21:02:08+00:00"
         },
         {
             "name": "zf-commons/zfc-admin",
@@ -10988,7 +10988,7 @@
                 "rbac",
                 "zf2"
             ],
-            "time": "2016-10-26T14:05:28+00:00"
+            "time": "2017-10-26T14:05:28+00:00"
         },
         {
             "name": "zf-commons/zfc-twig",
@@ -11037,7 +11037,7 @@
                 "twig",
                 "zf2"
             ],
-            "time": "2016-04-16T16:37:14+00:00"
+            "time": "2017-04-16T16:37:14+00:00"
         },
         {
             "name": "zf-commons/zfc-user",
@@ -11114,7 +11114,7 @@
             "keywords": [
                 "zf2"
             ],
-            "time": "2016-05-07T11:21:34+00:00"
+            "time": "2017-05-07T11:21:34+00:00"
         },
         {
             "name": "zf-commons/zfc-user-doctrine-orm",
@@ -11227,7 +11227,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-10-11T20:38:29+00:00"
+            "time": "2017-10-11T20:38:29+00:00"
         },
         {
             "name": "zfcampus/zf-apigility",
@@ -11300,7 +11300,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2016-07-28T13:47:39+00:00"
+            "time": "2017-07-28T13:47:39+00:00"
         },
         {
             "name": "zfcampus/zf-apigility-doctrine",
@@ -11375,7 +11375,7 @@
                 "framework",
                 "zf"
             ],
-            "time": "2016-10-17T14:35:27+00:00"
+            "time": "2017-10-17T14:35:27+00:00"
         },
         {
             "name": "zfcampus/zf-apigility-documentation",
@@ -11436,7 +11436,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-10-11T18:32:18+00:00"
+            "time": "2017-10-11T18:32:18+00:00"
         },
         {
             "name": "zfcampus/zf-apigility-documentation-swagger",
@@ -11497,7 +11497,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-10-11T18:13:02+00:00"
+            "time": "2017-10-11T18:13:02+00:00"
         },
         {
             "name": "zfcampus/zf-apigility-provider",
@@ -11543,7 +11543,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2016-07-13T18:03:54+00:00"
+            "time": "2017-07-13T18:03:54+00:00"
         },
         {
             "name": "zfcampus/zf-configuration",
@@ -11598,7 +11598,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-08-13T15:17:08+00:00"
+            "time": "2017-08-13T15:17:08+00:00"
         },
         {
             "name": "zfcampus/zf-console",
@@ -11652,7 +11652,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-07-11T20:33:55+00:00"
+            "time": "2017-07-11T20:33:55+00:00"
         },
         {
             "name": "zfcampus/zf-content-negotiation",
@@ -11716,7 +11716,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-10-11T21:39:26+00:00"
+            "time": "2017-10-11T21:39:26+00:00"
         },
         {
             "name": "zfcampus/zf-content-validation",
@@ -11777,7 +11777,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-08-18T20:33:08+00:00"
+            "time": "2017-08-18T20:33:08+00:00"
         },
         {
             "name": "zfcampus/zf-deploy",
@@ -11829,7 +11829,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-07-12T17:31:21+00:00"
+            "time": "2017-07-12T17:31:21+00:00"
         },
         {
             "name": "zfcampus/zf-doctrine-querybuilder",
@@ -11903,7 +11903,7 @@
                 "zend",
                 "zf"
             ],
-            "time": "2016-11-14T18:11:31+00:00"
+            "time": "2017-11-14T18:11:31+00:00"
         },
         {
             "name": "zfcampus/zf-hal",
@@ -11964,7 +11964,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-07-28T14:13:49+00:00"
+            "time": "2017-07-28T14:13:49+00:00"
         },
         {
             "name": "zfcampus/zf-mvc-auth",
@@ -12024,7 +12024,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-09-30T15:49:02+00:00"
+            "time": "2017-09-30T15:49:02+00:00"
         },
         {
             "name": "zfcampus/zf-oauth2",
@@ -12091,7 +12091,7 @@
                 "oauth2",
                 "zf2"
             ],
-            "time": "2016-07-10T23:11:53+00:00"
+            "time": "2017-07-10T23:11:53+00:00"
         },
         {
             "name": "zfcampus/zf-rest",
@@ -12157,7 +12157,7 @@
                 "zf2",
                 "zf3"
             ],
-            "time": "2016-10-11T21:16:15+00:00"
+            "time": "2017-10-11T21:16:15+00:00"
         },
         {
             "name": "zfcampus/zf-rpc",
@@ -12215,7 +12215,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-10-11T19:47:59+00:00"
+            "time": "2017-10-11T19:47:59+00:00"
         },
         {
             "name": "zfcampus/zf-versioning",
@@ -12271,7 +12271,7 @@
                 "zend",
                 "zf2"
             ],
-            "time": "2016-07-13T20:03:22+00:00"
+            "time": "2017-07-13T20:03:22+00:00"
         },
         {
             "name": "zfr/rbac",
@@ -12382,7 +12382,7 @@
                 "gherkin",
                 "parser"
             ],
-            "time": "2016-10-30T11:50:56+00:00"
+            "time": "2017-10-30T11:50:56+00:00"
         },
         {
             "name": "codeception/codeception",
@@ -12474,7 +12474,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2016-12-05T04:12:24+00:00"
+            "time": "2017-12-05T04:12:24+00:00"
         },
         {
             "name": "facebook/webdriver",
@@ -12521,7 +12521,7 @@
                 "selenium",
                 "webdriver"
             ],
-            "time": "2016-10-14T15:16:51+00:00"
+            "time": "2017-10-14T15:16:51+00:00"
         },
         {
             "name": "guzzle/guzzle",
@@ -12676,7 +12676,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-10-08T15:01:37+00:00"
+            "time": "2017-10-08T15:01:37+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -12727,7 +12727,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20T10:07:11+00:00"
+            "time": "2017-12-20T10:07:11+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -12785,7 +12785,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-06-24T23:00:38+00:00"
+            "time": "2017-06-24T23:00:38+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -12825,7 +12825,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2016-11-23T20:25:02+00:00"
+            "time": "2017-11-23T20:25:02+00:00"
         },
         {
             "name": "phploc/phploc",
@@ -12878,7 +12878,7 @@
             ],
             "description": "A tool for quickly measuring the size of a PHP project.",
             "homepage": "https://github.com/sebastianbergmann/phploc",
-            "time": "2016-04-25T08:11:21+00:00"
+            "time": "2017-04-25T08:11:21+00:00"
         },
         {
             "name": "phpmd/phpmd",
@@ -12943,7 +12943,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2016-11-23T20:33:32+00:00"
+            "time": "2017-11-23T20:33:32+00:00"
         },
         {
             "name": "satooshi/php-coveralls",
@@ -13001,7 +13001,7 @@
                 "github",
                 "test"
             ],
-            "time": "2016-01-20T17:35:46+00:00"
+            "time": "2017-01-20T17:35:46+00:00"
         },
         {
             "name": "sebastian/finder-facade",
@@ -13040,7 +13040,7 @@
             ],
             "description": "FinderFacade is a convenience wrapper for Symfony's Finder component.",
             "homepage": "https://github.com/sebastianbergmann/finder-facade",
-            "time": "2016-02-17T07:02:23+00:00"
+            "time": "2017-02-17T07:02:23+00:00"
         },
         {
             "name": "sebastian/git",
@@ -13085,7 +13085,7 @@
             "keywords": [
                 "git"
             ],
-            "time": "2016-06-15T09:30:19+00:00"
+            "time": "2017-06-15T09:30:19+00:00"
         },
         {
             "name": "sebastian/phpcpd",
@@ -13136,7 +13136,7 @@
             ],
             "description": "Copy/Paste Detector (CPD) for PHP code.",
             "homepage": "https://github.com/sebastianbergmann/phpcpd",
-            "time": "2016-04-17T19:32:49+00:00"
+            "time": "2017-04-17T19:32:49+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -13214,7 +13214,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-11-30T04:02:31+00:00"
+            "time": "2017-11-30T04:02:31+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -13271,7 +13271,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-13T13:35:11+00:00"
+            "time": "2017-10-13T13:35:11+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -13324,7 +13324,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-03T08:11:03+00:00"
+            "time": "2017-11-03T08:11:03+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -13380,7 +13380,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-10T14:24:53+00:00"
+            "time": "2017-12-10T14:24:53+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -13440,7 +13440,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-13T06:29:04+00:00"
+            "time": "2017-10-13T06:29:04+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -13489,7 +13489,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-29T05:43:10+00:00"
+            "time": "2017-06-29T05:43:10+00:00"
         },
         {
             "name": "theseer/fdomdocument",

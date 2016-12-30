@@ -26,23 +26,23 @@ The ```now``` method allow you to create a Time instance where the time is set t
 
 The ```createFromFormat``` method allows you to create a Time instance from a time string. The difference between Mako's Time class and PHP's DateTime class is  that the optional second parameter can be either a valid timez one string or a DateTimeZone instance.
 
-    $time = Time::createFromFormat('Y-m-d', '2016-03-28');
+    $time = Time::createFromFormat('Y-m-d', '2017-03-28');
 
-    $time = Time::createFromFormat('Y-m-d', '2016-03-28', 'Europe/Paris');
+    $time = Time::createFromFormat('Y-m-d', '2017-03-28', 'Europe/Paris');
 
-    $time = Time::createFromFormat('Y-m-d', '2016-03-28', new DateTimeZone('Europe/Paris'));
+    $time = Time::createFromFormat('Y-m-d', '2017-03-28', new DateTimeZone('Europe/Paris'));
 
 The ```createFromDate``` method allows you to create a Time instance using a date. Only the first parameter (year) is required. It'll use the current month and day if not specified. There's also an optional fourth parameter that accepts a valid time zone string or a DateTimeZone instance.
 
-    $time = Time::createFromDate(2016);
+    $time = Time::createFromDate(2017);
 
-    $time = Time::createFromDate(2016, 4);
+    $time = Time::createFromDate(2017, 4);
 
-    $time = Time::createFromDate(2016, 4, 28);
+    $time = Time::createFromDate(2017, 4, 28);
 
-    $time = Time::createFromDate(2016, 4, 28, 'Europe/Paris');
+    $time = Time::createFromDate(2017, 4, 28, 'Europe/Paris');
 
-    $time = Time::createFromDate(2016, 4, 28, new DateTimeZone('Europe/Paris'));
+    $time = Time::createFromDate(2017, 4, 28, new DateTimeZone('Europe/Paris'));
 
 The ```createFromTimestamp``` method allows you to create a Time instance using a UNIX timestamp. There's an optional second parameter that accepts a valid time zone string or a DateTimeZone instance.
 
