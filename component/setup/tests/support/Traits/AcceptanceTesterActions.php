@@ -29,6 +29,11 @@ trait AcceptanceTesterActions
     }
 
     /**
+     * @return \Codeception\Scenario
+     */
+    abstract protected function getScenario();
+
+    /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
      * Authenticates user for HTTP_AUTH
@@ -2574,9 +2579,4 @@ trait AcceptanceTesterActions
             new \Codeception\Step\Action('moveBack', func_get_args())
         );
     }
-
-    /**
-     * @return \Codeception\Scenario
-     */
-    abstract protected function getScenario();
 }

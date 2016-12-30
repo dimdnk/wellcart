@@ -16,8 +16,7 @@ use WellCart\Form\Element\Select;
 class CategorySelectorFactory
 {
     public function __invoke(ContainerInterface $sm
-    )
-    {
+    ) {
         $services = $sm->getServiceLocator();
         $categories = $services->get(
             CategoryRepository::class

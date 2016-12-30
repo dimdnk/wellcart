@@ -77,16 +77,6 @@ class SystemConfigDbReader
     }
 
     /**
-     * Retrieve config object
-     *
-     * @return Config
-     */
-    public function getConfig()
-    {
-        return $this->config;
-    }
-
-    /**
      * Build config object
      *
      * @param array $rows
@@ -125,5 +115,15 @@ class SystemConfigDbReader
             }
         }
         return new Config($config);
+    }
+
+    /**
+     * Retrieve config object
+     *
+     * @return Config
+     */
+    public function getConfig()
+    {
+        return $this->config;
     }
 }

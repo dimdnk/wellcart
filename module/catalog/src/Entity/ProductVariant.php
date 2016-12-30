@@ -77,16 +77,6 @@ class ProductVariant
     protected $combinations;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->combinations = new ArrayCollection();
-    }
-
-    /**
      * Perform a deep clone
      *
      * @return ProductVariantEntity
@@ -94,6 +84,16 @@ class ProductVariant
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->combinations = new ArrayCollection();
     }
 
     /**

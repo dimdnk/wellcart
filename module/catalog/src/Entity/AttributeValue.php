@@ -45,15 +45,6 @@ class AttributeValue extends AbstractEntity implements
     protected $attribute;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->translations = new ArrayCollection();
-    }
-
-    /**
      * Perform a deep clone
      *
      * @return AttributeValueEntity
@@ -61,6 +52,15 @@ class AttributeValue extends AbstractEntity implements
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->translations = new ArrayCollection();
     }
 
     /**

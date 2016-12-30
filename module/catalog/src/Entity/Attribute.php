@@ -56,6 +56,16 @@ class Attribute extends AbstractEntity implements
     protected $productTemplates;
 
     /**
+     * Perform a deep clone
+     *
+     * @return AttributeEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
+    }
+
+    /**
      * Object constructor
      *
      */
@@ -64,16 +74,6 @@ class Attribute extends AbstractEntity implements
         $this->translations = new ArrayCollection();
         $this->values = new ArrayCollection();
         $this->productTemplates = new ArrayCollection();
-    }
-
-    /**
-     * Perform a deep clone
-     *
-     * @return AttributeEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
     }
 
     /**

@@ -100,6 +100,16 @@ class Category extends AbstractEntity
     protected $updatedAt;
 
     /**
+     * Perform a deep clone
+     *
+     * @return CategoryEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
+    }
+
+    /**
      * Object constructor
      *
      */
@@ -109,16 +119,6 @@ class Category extends AbstractEntity
         $this->translations = new ArrayCollection();
         $this->products = new ArrayCollection();
         $this->children = new ArrayCollection();
-    }
-
-    /**
-     * Perform a deep clone
-     *
-     * @return CategoryEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
     }
 
     /**

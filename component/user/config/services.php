@@ -14,25 +14,25 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        PageView\Backend\AccountForm::class                   =>
+        PageView\Backend\AccountForm::class                 =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\AccountForm(
                     $services->get(Spec\UserRepository::class)
                 );
             },
-        PageView\Backend\AccountsGrid::class                  =>
+        PageView\Backend\AccountsGrid::class                =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\AccountsGrid(
                     $services->get(Spec\UserRepository::class)
                 );
             },
-        PageView\Backend\RolesGrid::class                     =>
+        PageView\Backend\RolesGrid::class                   =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\RolesGrid(
                     $services->get(Spec\AclRoleRepository::class)
                 );
             },
-        PageView\Backend\RoleForm::class                      =>
+        PageView\Backend\RoleForm::class                    =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\RoleForm(
                     $services->get(Spec\AclRoleRepository::class)
@@ -102,7 +102,7 @@ return [
                 );
                 return $form;
             },
-        Repository\Users::class                            =>
+        Repository\Users::class                             =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_user_object_manager')
                     ->getRepository(
@@ -123,7 +123,7 @@ return [
                         Spec\AclPermissionEntity::class
                     );
             },
-        'zfcuser_user_mapper'                                        =>
+        'zfcuser_user_mapper'                               =>
             function (ContainerInterface $services) {
                 return new ORM\Mapper\User(
                     $services->get('wellcart_user_object_manager'),

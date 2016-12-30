@@ -24,7 +24,8 @@ use WellCart\ORM\TranslatableEntity;
 use WellCart\Stdlib\Collection\ArrayCollection;
 use WellCart\Utility\Time;
 
-class Product extends AbstractEntity implements TranslatableEntity, ProductEntity
+class Product extends AbstractEntity
+    implements TranslatableEntity, ProductEntity
 {
 
     /**
@@ -121,22 +122,6 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
     protected $updatedAt;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->translations = new ArrayCollection();
-        $this->images = new ArrayCollection();
-
-        $this->categories = new ArrayCollection();
-        $this->children = new ArrayCollection();
-        $this->variants = new ArrayCollection();
-        $this->features = new ArrayCollection();
-    }
-
-    /**
      * @return int
      */
     public function getBrandId()
@@ -169,8 +154,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function setBrand(BrandEntity $brand = null
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->brand = $brand;
         return $this;
     }
@@ -187,8 +171,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @inheritdoc
      */
     public function setProductTemplate(ProductTemplateEntity $template
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->productTemplate = $template;
         return $this;
     }
@@ -201,6 +184,22 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->translations = new ArrayCollection();
+        $this->images = new ArrayCollection();
+
+        $this->categories = new ArrayCollection();
+        $this->children = new ArrayCollection();
+        $this->variants = new ArrayCollection();
+        $this->features = new ArrayCollection();
     }
 
     /**
@@ -236,8 +235,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function setTranslations(Collection $translations
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->translations = $translations;
         return $this;
     }
@@ -348,8 +346,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function setCreatedAt(\DateTimeInterface $createdAt
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->createdAt = $createdAt;
         return $this;
     }
@@ -360,8 +357,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addTranslations(Collection $translations
-    ): ProductEntity
-    {
+    ): ProductEntity {
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
@@ -374,8 +370,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addTranslation(ProductI18nEntity $translation
-    ): ProductEntity
-    {
+    ): ProductEntity {
         if ($this->translations->contains($translation)) {
             return $this;
         }
@@ -391,8 +386,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeTranslations(Collection $translations
-    ): ProductEntity
-    {
+    ): ProductEntity {
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
@@ -405,8 +399,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeTranslation(ProductI18nEntity $translation
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $translation->setProduct(null);
         $this->translations->removeElement($translation);
         return $this;
@@ -431,8 +424,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addChild(ProductEntity $child
-    ): ProductEntity
-    {
+    ): ProductEntity {
         if ($this->children->contains($child)) {
             return $this;
         }
@@ -461,8 +453,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeChild(ProductEntity $child
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $child->setParent(null);
         $this->children->removeElement($child);
         return $this;
@@ -482,8 +473,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->updatedAt = $updatedAt;
         return $this;
     }
@@ -494,8 +484,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addCategories(Collection $categories
-    ): ProductEntity
-    {
+    ): ProductEntity {
         foreach ($categories as $category) {
             $this->addCategory($category);
         }
@@ -508,8 +497,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addCategory(CategoryEntity $category
-    ): ProductEntity
-    {
+    ): ProductEntity {
         if ($this->categories->contains($category)) {
             return $this;
         }
@@ -523,8 +511,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeCategories(Collection $categories
-    ): ProductEntity
-    {
+    ): ProductEntity {
         foreach ($categories as $category) {
             $this->removeCategory($category);
         }
@@ -537,8 +524,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeCategory(CategoryEntity $category
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->categories->removeElement($category);
         return $this;
     }
@@ -557,8 +543,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function setParent(ProductEntity $parent = null
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $parentId = null;
         if ($parent) {
             $parentId = $parent->getId();
@@ -607,8 +592,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addImage(ProductImageEntity $image
-    ): ProductEntity
-    {
+    ): ProductEntity {
         if ($this->images->contains($image)) {
             return $this;
         }
@@ -638,8 +622,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeImage(ProductImageEntity $image
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $image->setProduct(null);
         $this->images->removeElement($image);
         return $this;
@@ -668,8 +651,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function setCategories(Collection $categories
-    ): ProductEntity
-    {
+    ): ProductEntity {
         $this->categories = $categories;
         return $this;
     }
@@ -705,7 +687,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
     /**
      * @return Collection|ProductVariantEntity[]
      */
-    public function getVariants(): Collection 
+    public function getVariants(): Collection
     {
         return $this->variants;
     }
@@ -715,7 +697,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      *
      * @return ProductEntity
      */
-    public function setVariants(Collection $variants): ProductEntity 
+    public function setVariants(Collection $variants): ProductEntity
     {
         $this->variants = $variants;
         return $this;
@@ -726,7 +708,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      *
      * @return ProductEntity
      */
-    public function addVariants(Collection $variants): ProductEntity 
+    public function addVariants(Collection $variants): ProductEntity
     {
         foreach ($variants as $variant) {
             $this->addVariant($variant);
@@ -740,8 +722,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function addVariant(ProductVariantEntity $variant
-    ): ProductEntity 
-    {
+    ): ProductEntity {
         if ($this->variants->contains($variant)) {
             return $this;
         }
@@ -755,7 +736,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      *
      * @return ProductEntity
      */
-    public function removeVariants(Collection $variants): ProductEntity 
+    public function removeVariants(Collection $variants): ProductEntity
     {
         foreach ($variants as $variant) {
             $this->removeVariant($variant);
@@ -771,8 +752,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      * @return ProductEntity
      */
     public function removeVariant(ProductVariantEntity $variant
-    ): ProductEntity 
-    {
+    ): ProductEntity {
         $variant->setProduct(null);
         $this->variants->removeElement($variant);
         return $this;
@@ -782,7 +762,7 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
     /**
      * @return Collection|FeatureCombinationEntity[]
      */
-    public function getFeatures(): Collection 
+    public function getFeatures(): Collection
     {
         return $this->features;
     }
@@ -792,7 +772,8 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      *
      * @return ProductEntity
      */
-    public function setFeatures(Collection $features): ProductEntity {
+    public function setFeatures(Collection $features): ProductEntity
+    {
         $this->features = $features;
         return $this;
     }
@@ -802,7 +783,8 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      *
      * @return ProductEntity
      */
-    public function addFeatures(Collection $features): ProductEntity {
+    public function addFeatures(Collection $features): ProductEntity
+    {
         foreach ($features as $feature) {
             $this->addFeature($feature);
         }
@@ -829,7 +811,8 @@ class Product extends AbstractEntity implements TranslatableEntity, ProductEntit
      *
      * @return ProductEntity
      */
-    public function removeFeatures(Collection $features): ProductEntity {
+    public function removeFeatures(Collection $features): ProductEntity
+    {
         foreach ($features as $feature) {
             $this->removeFeature($feature);
         }

@@ -24,24 +24,6 @@ class MaintenanceMode
     }
 
     /**
-     * Checks whether mode is on
-     *
-     * @return bool
-     */
-    public function isEnabled()
-    {
-        return is_file(WELLCART_STORAGE_PATH . self::FLAG_FILENAME);
-    }
-
-    /**
-     * @return bool
-     */
-    public function disable(): bool
-    {
-        return $this->set(false);
-    }
-
-    /**
      * Sets maintenance mode "on" or "off"
      *
      * @param bool $isEnabled
@@ -57,5 +39,23 @@ class MaintenanceMode
             return unlink(WELLCART_STORAGE_PATH . self::FLAG_FILENAME);
         }
         return true;
+    }
+
+    /**
+     * Checks whether mode is on
+     *
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return is_file(WELLCART_STORAGE_PATH . self::FLAG_FILENAME);
+    }
+
+    /**
+     * @return bool
+     */
+    public function disable(): bool
+    {
+        return $this->set(false);
     }
 }

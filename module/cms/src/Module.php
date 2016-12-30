@@ -11,9 +11,9 @@ declare(strict_types = 1);
 namespace WellCart\CMS;
 
 use Interop\Container\ContainerInterface;
+use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
-use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
 use Zend\Form\Factory as FormFactory;
@@ -110,21 +110,21 @@ class Module implements
                             )
                         );
                     },
-                Repository\Pages::class         =>
+                Repository\Pages::class           =>
                     function (ContainerInterface $sm) {
                         return $sm->get('wellcart_cms_object_manager')
                             ->getRepository(
                                 Spec\PageEntity::class
                             );
                     },
-                Repository\PageI18n::class      =>
+                Repository\PageI18n::class        =>
                     function (ContainerInterface $sm) {
                         return $sm->get('wellcart_cms_object_manager')
                             ->getRepository(
                                 Spec\PageI18nEntity::class
                             );
                     },
-                Form\Page::class                =>
+                Form\Page::class                  =>
                     function (ContainerInterface $sm) {
                         $pagePrototype = $sm->get(
                             Spec\PageRepository::class

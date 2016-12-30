@@ -18,14 +18,14 @@ return [
                         'order'      => 9500,
                         'permission' => 'admin/system-settings/general/view',
                     ],
-                    'zfcadmin/base/languages'        => [
+                    'zfcadmin/base/languages'          => [
                         'label'      => 'Languages',
                         'route'      => 'zfcadmin/base/languages',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'base/languages/list',
                     ],
-                    'zfcadmin/base/url-rewrites'     => [
+                    'zfcadmin/base/url-rewrites'       => [
                         'label'      => 'URL Rewrites',
                         'route'      => 'zfcadmin/base/url-rewrites',
                         'action'     => 'list',

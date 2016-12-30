@@ -46,10 +46,10 @@ return [
     'controllers' => [
         'aliases'    => [
             'Directory::Console\UpdateCurrencyRates' => Controller\Console\UpdateCurrencyRatesController::class,
-            'Directory::Backend\Currencies'            => Controller\Backend\CurrenciesController::class,
-            'Directory::Backend\Countries'             => Controller\Backend\CountriesController::class,
-            'Directory::Backend\Zones'                 => Controller\Backend\ZonesController::class,
-            'Directory::Backend\GeoZones'              => Controller\Backend\GeoZonesController::class,
+            'Directory::Backend\Currencies'          => Controller\Backend\CurrenciesController::class,
+            'Directory::Backend\Countries'           => Controller\Backend\CountriesController::class,
+            'Directory::Backend\Zones'               => Controller\Backend\ZonesController::class,
+            'Directory::Backend\GeoZones'            => Controller\Backend\GeoZonesController::class,
         ],
         'invokables' => [
             Controller\Console\UpdateCurrencyRatesController::class => Controller\Console\UpdateCurrencyRatesController::class,
@@ -62,7 +62,7 @@ return [
         ],
     ],
 
-    'form_elements'  => [
+    'form_elements' => [
         'aliases'   => [
             'directoryCountrySelector' => Form\Element\CountrySelector::class,
             'directoryZoneSelector'    => Form\Element\ZoneSelector::class,
@@ -77,7 +77,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'  => [
+    'asset_manager' => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -90,7 +90,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'     => [
+    'translator'    => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',
@@ -100,7 +100,7 @@ return [
             ],
         ],
     ],
-    'console' => [
+    'console'       => [
         /**
          * =========================================================
          * Router configuration
@@ -121,7 +121,7 @@ return [
         ]
     ],
 
-    'cronModule'     => [
+    'cronModule' => [
         'jobs' => [
             'directory:update-currency-rates'
             => [

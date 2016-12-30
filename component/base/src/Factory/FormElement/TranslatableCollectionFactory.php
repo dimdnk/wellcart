@@ -20,8 +20,7 @@ class TranslatableCollectionFactory
      * @return \WellCart\Form\Element\TranslatableCollection
      */
     public function __invoke(ContainerInterface $sm
-    ): \WellCart\Form\Element\TranslatableCollection
-    {
+    ): \WellCart\Form\Element\TranslatableCollection {
         $services = $sm->getServiceLocator();
         $languages = $services->get(
             'locale\active_languages_collection'

@@ -35,6 +35,61 @@ class Install
         $this->loadCountries($manager);
     }
 
+    private function loadCurrencies(ObjectManager $manager)
+    {
+        $currency = new Currency();
+        $currency
+            ->setTitle('US Dollars')
+            ->setCode('USD')
+            ->setSymbol('$')
+            ->setSymbolPosition(Currency::POSITION_LEFT)
+            ->setExchangeRate(1.00)
+            ->setDecimals(2)
+            ->setDecimalsSeparator('.')
+            ->setThousandsSeparator(',')
+            ->setStatus(Currency::STATUS_ENABLED)
+            ->setIsPrimary(true);
+
+        $manager->persist($currency);
+        $manager->flush();
+        $manager->clear();
+    }
+
+    private function loadCountries(ObjectManager $manager)
+    {
+        $rows = include __DIR__
+            . '/../../../config/common/resources/countries.php';
+        $date = new \DateTime();
+        foreach ($rows as $row) {
+            $country = new Country();
+            $country
+                ->setName($row['name'])
+                ->setIsoCode2($row['iso_code_2'])
+                ->setIsoCode3($row['iso_code_3'])
+                ->setAddressFormat($row['address_format'])
+                ->setPostcodeRequired($row['postcode_required'])
+                ->setStatus($row['status'])
+                ->setCreatedAt($date);
+
+            if (!empty($row['zones'])) {
+                $zones = $row['zones'];
+                foreach ($zones as $zone) {
+                    $object = new Zone();
+                    $object->setCountry($country)
+                        ->setName($zone['name'])
+                        ->setCode($zone['code'])
+                        ->setStatus((int)$zone['status'])
+                        ->setCreatedAt($date);
+                    $manager->persist($object);
+                }
+            }
+
+            $manager->persist($country);
+            $manager->flush();
+            $manager->clear();
+        }
+    }
+
     public function getPermissionsDefinition(): array
     {
         return [
@@ -68,59 +123,5 @@ class Install
             ['name' => 'directory/geo-zones/delete',],
 
         ];
-    }
-
-    private function loadCurrencies(ObjectManager $manager)
-    {
-        $currency = new Currency();
-        $currency
-            ->setTitle('US Dollars')
-            ->setCode('USD')
-            ->setSymbol('$')
-            ->setSymbolPosition(Currency::POSITION_LEFT)
-            ->setExchangeRate(1.00)
-            ->setDecimals(2)
-            ->setDecimalsSeparator('.')
-            ->setThousandsSeparator(',')
-            ->setStatus(Currency::STATUS_ENABLED)
-            ->setIsPrimary(true);
-
-        $manager->persist($currency);
-        $manager->flush();
-        $manager->clear();
-    }
-
-    private function loadCountries(ObjectManager $manager)
-    {
-        $rows = include __DIR__ . '/../../../config/common/resources/countries.php';
-        $date = new \DateTime();
-        foreach ($rows as $row) {
-            $country = new Country();
-            $country
-                ->setName($row['name'])
-                ->setIsoCode2($row['iso_code_2'])
-                ->setIsoCode3($row['iso_code_3'])
-                ->setAddressFormat($row['address_format'])
-                ->setPostcodeRequired($row['postcode_required'])
-                ->setStatus($row['status'])
-                ->setCreatedAt($date);
-
-            if (!empty($row['zones'])) {
-                $zones = $row['zones'];
-                foreach ($zones as $zone) {
-                    $object = new Zone();
-                    $object->setCountry($country)
-                        ->setName($zone['name'])
-                        ->setCode($zone['code'])
-                        ->setStatus((int)$zone['status'])
-                        ->setCreatedAt($date);
-                    $manager->persist($object);
-                }
-            }
-
-            $manager->persist($country);
-            $manager->flush();
-            $manager->clear();
-        }
     }
 }

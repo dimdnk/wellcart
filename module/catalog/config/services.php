@@ -116,28 +116,28 @@ return [
                     $services->get(Spec\BrandRepository::class)
                 );
             },
-        Repository\ProductVariants::class          =>
+        Repository\ProductVariants::class            =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         Spec\ProductVariantEntity::class
                     );
             },
-        Repository\ProductImages::class            =>
+        Repository\ProductImages::class              =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         Spec\ProductImageEntity::class
                     );
             },
-        Repository\ProductTemplates::class         =>
+        Repository\ProductTemplates::class           =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
                         Spec\ProductTemplateEntity::class
                     );
             },
-        Repository\ProductTemplateI18n::class      =>
+        Repository\ProductTemplateI18n::class        =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
@@ -216,7 +216,7 @@ return [
                         Spec\CategoryI18nEntity::class
                     );
             },
-        Repository\Products::class        =>
+        Repository\Products::class         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_catalog_object_manager')
                     ->getRepository(
@@ -342,7 +342,7 @@ return [
                 return $form;
             },
 
-        Form\Feature::class     =>
+        Form\Feature::class                 =>
             function (ContainerInterface $services) {
                 $featurePrototype = $services->get(
                     Spec\FeatureRepository::class

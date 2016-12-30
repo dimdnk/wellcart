@@ -9,81 +9,81 @@ return [
     'rdn_require_js' =>
         [
             'library' => '/assets/lib/web/require.js',
-            'config' => [
+            'config'  => [
                 'baseUrl' => '/',
-                'paths' => [
-                    'wellcart' => 'assets/wellcart-base/js/wellcart',
-                    'handlebars' => 'assets/lib/handlebars/handlebars.runtime',
-                    'underscore' => 'assets/lib/underscore/underscore-min',
-                    'jquery' => 'assets/lib/jquery/jquery.min',
-                    'jquery-ui' => 'assets/lib/jquery-ui/jquery-ui.min',
-                    'jquery-ujs' => 'assets/lib/web/jquery-ujs',
-                    'jquery-cookie' => 'assets/lib/jquery-cookie/jquery.cookie',
-                    'tinymce' => 'assets/lib/tinymce/tinymce.min',
-                    'moment' => 'assets/lib/moment/min/moment-with-locales.min',
-                    'bootstrap' => 'assets/lib/bootstrap/js/bootstrap.min',
-                    'sluggable' => 'assets/lib/web/speakingurl',
-                    'FastClick' => 'assets/lib/web/fastclick',
-                    'datetimepicker' => 'assets/lib/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
-                    'daterangepicker' => 'assets/lib/web/daterangepicker/daterangepicker',
-                    'bootbox' => 'assets/lib/web/bootbox',
-                    'icheck' => 'assets/lib/web/icheck/icheck',
-                    'bootstrap-switch' => 'assets/lib/web/bootstrap-switch/bootstrap-switch',
-                    'switchery' => 'assets/lib/web/switchery/switchery',
-                    'nanoscroller' => 'assets/lib/web/nanoscroller/nanoscroller',
-                    'chosen' => 'assets/lib/chosen/js/chosen.jquery.min',
-                    'jquery.validate.min' => 'assets/lib/web/validation/jquery.validate',
+                'paths'   => [
+                    'wellcart'               => 'assets/wellcart-base/js/wellcart',
+                    'handlebars'             => 'assets/lib/handlebars/handlebars.runtime',
+                    'underscore'             => 'assets/lib/underscore/underscore-min',
+                    'jquery'                 => 'assets/lib/jquery/jquery.min',
+                    'jquery-ui'              => 'assets/lib/jquery-ui/jquery-ui.min',
+                    'jquery-ujs'             => 'assets/lib/web/jquery-ujs',
+                    'jquery-cookie'          => 'assets/lib/jquery-cookie/jquery.cookie',
+                    'tinymce'                => 'assets/lib/tinymce/tinymce.min',
+                    'moment'                 => 'assets/lib/moment/min/moment-with-locales.min',
+                    'bootstrap'              => 'assets/lib/bootstrap/js/bootstrap.min',
+                    'sluggable'              => 'assets/lib/web/speakingurl',
+                    'FastClick'              => 'assets/lib/web/fastclick',
+                    'datetimepicker'         => 'assets/lib/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
+                    'daterangepicker'        => 'assets/lib/web/daterangepicker/daterangepicker',
+                    'bootbox'                => 'assets/lib/web/bootbox',
+                    'icheck'                 => 'assets/lib/web/icheck/icheck',
+                    'bootstrap-switch'       => 'assets/lib/web/bootstrap-switch/bootstrap-switch',
+                    'switchery'              => 'assets/lib/web/switchery/switchery',
+                    'nanoscroller'           => 'assets/lib/web/nanoscroller/nanoscroller',
+                    'chosen'                 => 'assets/lib/chosen/js/chosen.jquery.min',
+                    'jquery.validate.min'    => 'assets/lib/web/validation/jquery.validate',
                     '../jquery.validate.min' => 'assets/lib/web/validation/jquery.validate',
-                    './jquery.validate.min' => 'assets/lib/web/validation/jquery.validate',
+                    './jquery.validate.min'  => 'assets/lib/web/validation/jquery.validate',
                 ],
-                'shim' => [
-                    'jquery' => [
+                'shim'    => [
+                    'jquery'           => [
                         'exports' => '$'
                     ],
-                    'underscore' => [
+                    'underscore'       => [
                         'exports' => '_',
                     ],
-                    'jquery-ui' => [
+                    'jquery-ui'        => [
                         'deps' => ['jquery'],
                     ],
-                    'bootstrap' => [
-                        'deps' => ['jquery'],
+                    'bootstrap'        => [
+                        'deps'    => ['jquery'],
                         'exports' => 'bootstrap',
                     ],
-                    'switchery' => [
+                    'switchery'        => [
                         'exports' => 'Switchery',
                     ],
-                    'bootbox' => [
+                    'bootbox'          => [
                         'exports' => 'bootbox',
                     ],
-                    'icheck' => [
+                    'icheck'           => [
                         'deps' => ['jquery'],
                     ],
-                    'nanoscroller' => [
+                    'nanoscroller'     => [
                         'deps' => ['jquery'],
                     ],
-                    'chosen' => [
+                    'chosen'           => [
                         'deps' => ['jquery'],
                     ],
                     'bootstrap-switch' => [
-                        'deps' => ['jquery'],
+                        'deps'    => ['jquery'],
                         'exports' => 'bootstrapSwitch',
                     ],
-                    'FastClick' => ['exports' => 'FastClick'],
-                    'tinymce' => ['exports' => 'tinymce'],
-                    'moment' => ['exports' => 'moment'],
-                    'datetimepicker' => [
+                    'FastClick'        => ['exports' => 'FastClick'],
+                    'tinymce'          => ['exports' => 'tinymce'],
+                    'moment'           => ['exports' => 'moment'],
+                    'datetimepicker'   => [
                         'deps' => ['jquery'],
                     ],
-                    'daterangepicker' => [
+                    'daterangepicker'  => [
                         'deps' => ['jquery'],
                     ],
-                    'wellcart' => [
-                        'deps' => [],
+                    'wellcart'         => [
+                        'deps'    => [],
                         'exports' => 'WellCart',
                     ],
                 ],
-                'deps' => [
+                'deps'    => [
                     'wellcart',
                     'jquery',
                     'icheck',

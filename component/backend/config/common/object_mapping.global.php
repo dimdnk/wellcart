@@ -9,23 +9,23 @@ return [
     'object_mapping' => [
         'WellCart\Backend\Entity\Administrator' =>
             [
-                'type' => 'entity',
+                'type'            => 'entity',
                 'repositoryClass' => 'WellCart\Backend\Repository\Administrators',
-                'table' => 'admin_users',
+                'table'           => 'admin_users',
                 'entityListeners' => [
                     'WellCart\Backend\EventListener\Entity\AdministratorEntityListener' => [
-                        'preRemove' => ['preRemove' => 'preRemove'],
-                        'preUpdate' => ['preUpdate' => 'preUpdate'],
+                        'preRemove'  => ['preRemove' => 'preRemove'],
+                        'preUpdate'  => ['preUpdate' => 'preUpdate'],
                         'postUpdate' => ['postUpdate' => 'postUpdate'],
                     ],
                 ],
-                'manyToMany' => [
+                'manyToMany'      => [
                     'roles' => [
                         'targetEntity' => 'WellCart\User\Entity\Acl\Role',
-                        'inversedBy' => 'users',
-                        'joinTable' => [
-                            'name' => 'acl_admin_user_to_role',
-                            'joinColumns' =>
+                        'inversedBy'   => 'users',
+                        'joinTable'    => [
+                            'name'               => 'acl_admin_user_to_role',
+                            'joinColumns'        =>
                                 [
                                     'user_id' =>
                                         [
@@ -40,51 +40,51 @@ return [
                             ]
                         ],
                     ]],
-                'oneToOne' => [
+                'oneToOne'        => [
                     'language' => [
                         'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                        'joinColumn' => [
-                            'name' => 'language_id',
+                        'joinColumn'   => [
+                            'name'                 => 'language_id',
                             'referencedColumnName' => 'language_id',
                         ],
                     ],
                 ],
-                'id' =>
+                'id'              =>
                     [
                         'id' =>
                             [
-                                'column' => 'user_id',
-                                'type' => 'integer',
-                                'nullable' => false,
+                                'column'    => 'user_id',
+                                'type'      => 'integer',
+                                'nullable'  => false,
                                 'generator' =>
                                     [
                                         'strategy' => 'AUTO',
                                     ],
                             ],
                     ],
-                'fields' =>
+                'fields'          =>
                     [
-                        'state' =>
+                        'state'                  =>
                             [
-                                'column' => 'state',
-                                'type' => 'integer',
-                                'nullable' => false,
+                                'column'                     => 'state',
+                                'type'                       => 'integer',
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => true,
-                                    'filters' => [
-                                        'StripTags' => ['name' => 'StripTags'],
-                                        'StringTrim' => ['name' => 'StringTrim'],
+                                    'required'   => true,
+                                    'filters'    => [
+                                        'StripTags'     => ['name' => 'StripTags'],
+                                        'StringTrim'    => ['name' => 'StringTrim'],
                                         'StripNewlines' => ['name' => 'StripNewlines'],
                                     ],
                                     'validators' => [
                                         'NotEmpty' => [
                                             'name' => 'NotEmpty',
                                         ],
-                                        'Digits' => [
+                                        'Digits'   => [
                                             'name' => 'Digits',
                                         ],
-                                        'Between' => [
-                                            'name' => 'Between',
+                                        'Between'  => [
+                                            'name'    => 'Between',
                                             'options' => [
                                                 'min' => 0,
                                                 'max' => PHP_INT_MAX,
@@ -93,40 +93,40 @@ return [
                                     ],
                                 ],
                             ],
-                        'email' =>
+                        'email'                  =>
                             [
-                                'column' => 'email',
-                                'type' => 'string',
-                                'nullable' => false,
+                                'column'                     => 'email',
+                                'type'                       => 'string',
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => true,
-                                    'filters' => [
-                                        'StripTags' => ['name' => 'StripTags'],
-                                        'StringTrim' => ['name' => 'StringTrim'],
+                                    'required'   => true,
+                                    'filters'    => [
+                                        'StripTags'     => ['name' => 'StripTags'],
+                                        'StringTrim'    => ['name' => 'StringTrim'],
                                         'StripNewlines' => ['name' => 'StripNewlines'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'          => ['name' => 'Null'],
                                     ],
                                     'validators' => [
-                                        'NotEmpty' => [
+                                        'NotEmpty'       => [
                                             'name' => 'NotEmpty',
                                         ],
-                                        'EmailAddress' => [
+                                        'EmailAddress'   => [
                                             'name' => 'EmailAddress',
                                         ],
-                                        'StringLength' => [
-                                            'name' => 'StringLength',
+                                        'StringLength'   => [
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 4,
-                                                'max' => 255,
+                                                'min'      => 4,
+                                                'max'      => 255,
                                             ],
                                         ],
                                         'NoObjectExists' => [
-                                            'name' => 'WellCart\ORM\Validator\NoObjectExists',
+                                            'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                             'options' => [
                                                 'entity_class' => 'WellCart\Backend\Entity\Administrator',
-                                                'fields' => ['email'],
-                                                'messages' => [
+                                                'fields'       => ['email'],
+                                                'messages'     => [
                                                     'objectFound' => 'Account with this email already exists!'
                                                 ],
                                             ],
@@ -134,133 +134,133 @@ return [
                                     ],
                                 ],
                             ],
-                        'firstName' =>
+                        'firstName'              =>
                             [
-                                'column' => 'first_name',
-                                'type' => 'string',
-                                'nullable' => false,
+                                'column'                     => 'first_name',
+                                'type'                       => 'string',
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => true,
-                                    'filters' => [
-                                        'StripTags' => ['name' => 'StripTags'],
-                                        'StringTrim' => ['name' => 'StringTrim'],
+                                    'required'   => true,
+                                    'filters'    => [
+                                        'StripTags'     => ['name' => 'StripTags'],
+                                        'StringTrim'    => ['name' => 'StringTrim'],
                                         'StripNewlines' => ['name' => 'StripNewlines'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'          => ['name' => 'Null'],
                                     ],
                                     'validators' => [
-                                        'NotEmpty' => [
+                                        'NotEmpty'     => [
                                             'name' => 'NotEmpty',
                                         ],
                                         'StringLength' => [
-                                            'name' => 'StringLength',
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 1,
-                                                'max' => 255,
+                                                'min'      => 1,
+                                                'max'      => 255,
                                             ],
                                         ],
                                     ],
                                 ],
                             ],
-                        'lastName' =>
+                        'lastName'               =>
                             [
-                                'column' => 'last_name',
-                                'type' => 'string',
-                                'nullable' => false,
+                                'column'                     => 'last_name',
+                                'type'                       => 'string',
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => true,
-                                    'filters' => [
-                                        'StripTags' => ['name' => 'StripTags'],
-                                        'StringTrim' => ['name' => 'StringTrim'],
+                                    'required'   => true,
+                                    'filters'    => [
+                                        'StripTags'     => ['name' => 'StripTags'],
+                                        'StringTrim'    => ['name' => 'StringTrim'],
                                         'StripNewlines' => ['name' => 'StripNewlines'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'          => ['name' => 'Null'],
                                     ],
                                     'validators' => [
-                                        'NotEmpty' => [
+                                        'NotEmpty'     => [
                                             'name' => 'NotEmpty',
                                         ],
                                         'StringLength' => [
-                                            'name' => 'StringLength',
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 1,
-                                                'max' => 255,
+                                                'min'      => 1,
+                                                'max'      => 255,
                                             ],
                                         ],
                                     ],
                                 ],
                             ],
-                        'timeZone' =>
+                        'timeZone'               =>
                             [
-                                'column' => 'time_zone',
-                                'type' => 'string',
-                                'nullable' => false,
+                                'column'                     => 'time_zone',
+                                'type'                       => 'string',
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => true,
-                                    'filters' => [
-                                        'StripTags' => ['name' => 'StripTags'],
-                                        'StringTrim' => ['name' => 'StringTrim'],
+                                    'required'   => true,
+                                    'filters'    => [
+                                        'StripTags'     => ['name' => 'StripTags'],
+                                        'StringTrim'    => ['name' => 'StringTrim'],
                                         'StripNewlines' => ['name' => 'StripNewlines'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'          => ['name' => 'Null'],
                                     ],
                                     'validators' => [
-                                        'NotEmpty' => [
+                                        'NotEmpty'     => [
                                             'name' => 'NotEmpty',
                                         ],
                                         'StringLength' => [
-                                            'name' => 'StringLength',
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 1,
-                                                'max' => 255,
+                                                'min'      => 1,
+                                                'max'      => 255,
                                             ],
                                         ],
                                     ],
                                 ],
                             ],
-                        'password' =>
+                        'password'               =>
                             [
-                                'column' => 'password',
-                                'type' => 'string',
-                                'length' => 255,
-                                'nullable' => false,
+                                'column'                     => 'password',
+                                'type'                       => 'string',
+                                'length'                     => 255,
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => false,
-                                    'filters' => [
+                                    'required'   => false,
+                                    'filters'    => [
                                         'StringTrim' => ['name' => 'StringTrim'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'       => ['name' => 'Null'],
                                     ],
                                     'validators' => [
                                         'StringLength' => [
-                                            'name' => 'StringLength',
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 6,
-                                                'max' => 255,
+                                                'min'      => 6,
+                                                'max'      => 255,
                                             ],
                                         ],
                                     ],
                                 ],
                             ],
-                        'passwordResetToken' =>
+                        'passwordResetToken'     =>
                             [
-                                'column' => 'password_reset_token',
-                                'type' => 'string',
-                                'length' => 255,
-                                'nullable' => true,
+                                'column'                     => 'password_reset_token',
+                                'type'                       => 'string',
+                                'length'                     => 255,
+                                'nullable'                   => true,
                                 'input_filter_specification' => [
-                                    'required' => false,
-                                    'filters' => [
+                                    'required'   => false,
+                                    'filters'    => [
                                         'StringTrim' => ['name' => 'StringTrim'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'       => ['name' => 'Null'],
                                     ],
                                     'validators' => [
                                         'StringLength' => [
-                                            'name' => 'StringLength',
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 6,
-                                                'max' => 255,
+                                                'min'      => 6,
+                                                'max'      => 255,
                                             ],
                                         ],
                                     ],
@@ -268,36 +268,36 @@ return [
                             ],
                         'emailConfirmationToken' =>
                             [
-                                'column' => 'email_confirmation_token',
-                                'type' => 'string',
-                                'length' => 255,
-                                'nullable' => true,
+                                'column'                     => 'email_confirmation_token',
+                                'type'                       => 'string',
+                                'length'                     => 255,
+                                'nullable'                   => true,
                                 'input_filter_specification' => [
-                                    'required' => false,
-                                    'filters' => [
+                                    'required'   => false,
+                                    'filters'    => [
                                         'StringTrim' => ['name' => 'StringTrim'],
-                                        'Null' => ['name' => 'Null'],
+                                        'Null'       => ['name' => 'Null'],
                                     ],
                                     'validators' => [
                                         'StringLength' => [
-                                            'name' => 'StringLength',
+                                            'name'    => 'StringLength',
                                             'options' => [
                                                 'encoding' => 'UTF-8',
-                                                'min' => 6,
-                                                'max' => 255,
+                                                'min'      => 6,
+                                                'max'      => 255,
                                             ],
                                         ],
                                     ],
                                 ],
                             ],
-                        'failedLoginCount' =>
+                        'failedLoginCount'       =>
                             [
-                                'column' => 'failed_login_count',
-                                'type' => 'integer',
-                                'nullable' => false,
+                                'column'                     => 'failed_login_count',
+                                'type'                       => 'integer',
+                                'nullable'                   => false,
                                 'input_filter_specification' => [
-                                    'required' => false,
-                                    'filters' => [
+                                    'required'   => false,
+                                    'filters'    => [
                                         'StringTrim' => ['name' => 'StringTrim'],
                                     ],
                                     'validators' => [
@@ -307,12 +307,12 @@ return [
                                     ],
                                 ],
                             ],
-                        'createdAt' =>
+                        'createdAt'              =>
                             [
-                                'column' => 'created_at',
-                                'type' => 'datetime',
+                                'column'   => 'created_at',
+                                'type'     => 'datetime',
                                 'nullable' => false,
-                                'gedmo' =>
+                                'gedmo'    =>
                                     [
                                         'timestampable' =>
                                             [
@@ -320,12 +320,12 @@ return [
                                             ],
                                     ],
                             ],
-                        'updatedAt' =>
+                        'updatedAt'              =>
                             [
-                                'column' => 'updated_at',
-                                'type' => 'datetime',
+                                'column'   => 'updated_at',
+                                'type'     => 'datetime',
                                 'nullable' => true,
-                                'gedmo' =>
+                                'gedmo'    =>
                                     [
                                         'timestampable' =>
                                             [
@@ -338,133 +338,133 @@ return [
 
         'WellCart\Backend\Entity\Notification' =>
             [
-                'type' => 'entity',
+                'type'            => 'entity',
                 'repositoryClass' => 'WellCart\Backend\Repository\Notifications',
-                'table' => 'admin_notifications',
+                'table'           => 'admin_notifications',
                 'entityListeners' => [
                     'WellCart\Backend\EventListener\Entity\NotificationEntityListener' => [
                         'preRemove' => ['preRemove' => 'preRemove'],
                     ],
                 ],
-                'gedmo' => [
+                'gedmo'           => [
                     'soft_deleteable' => [
                         'field_name' => 'deletedAt',
                         'time_aware' => false,
                     ]
                 ],
-                'id' =>
+                'id'              =>
                     [
                         'id' =>
                             [
-                                'column' => 'notification_id',
-                                'type' => 'integer',
-                                'nullable' => false,
+                                'column'    => 'notification_id',
+                                'type'      => 'integer',
+                                'nullable'  => false,
                                 'generator' =>
                                     [
                                         'strategy' => 'AUTO',
                                     ],
                             ],
                     ],
-                'fields' => [
-                    'icon' =>
+                'fields'          => [
+                    'icon'      =>
                         [
-                            'column' => 'icon',
-                            'type' => 'string',
-                            'nullable' => false,
+                            'column'                     => 'icon',
+                            'type'                       => 'string',
+                            'nullable'                   => false,
                             'input_filter_specification' => [
-                                'required' => true,
-                                'filters' => [
-                                    'StripTags' => ['name' => 'StripTags'],
-                                    'StringTrim' => ['name' => 'StringTrim'],
+                                'required'   => true,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
                                     'StripNewlines' => ['name' => 'StripNewlines'],
-                                    'Null' => ['name' => 'Null'],
+                                    'Null'          => ['name' => 'Null'],
                                 ],
                                 'validators' => [
-                                    'NotEmpty' => [
+                                    'NotEmpty'     => [
                                         'name' => 'NotEmpty',
                                     ],
                                     'StringLength' => [
-                                        'name' => 'StringLength',
+                                        'name'    => 'StringLength',
                                         'options' => [
                                             'encoding' => 'UTF-8',
-                                            'min' => 1,
-                                            'max' => 100,
+                                            'min'      => 1,
+                                            'max'      => 100,
                                         ],
                                     ],
                                 ],
                             ],
                         ],
-                    'title' =>
+                    'title'     =>
                         [
-                            'column' => 'title',
-                            'type' => 'string',
-                            'nullable' => false,
+                            'column'                     => 'title',
+                            'type'                       => 'string',
+                            'nullable'                   => false,
                             'input_filter_specification' => [
-                                'required' => true,
-                                'filters' => [
-                                    'StripTags' => ['name' => 'StripTags'],
-                                    'StringTrim' => ['name' => 'StringTrim'],
+                                'required'   => true,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
                                     'StripNewlines' => ['name' => 'StripNewlines'],
-                                    'Null' => ['name' => 'Null'],
+                                    'Null'          => ['name' => 'Null'],
                                 ],
                                 'validators' => [
-                                    'NotEmpty' => [
+                                    'NotEmpty'     => [
                                         'name' => 'NotEmpty',
                                     ],
                                     'StringLength' => [
-                                        'name' => 'StringLength',
+                                        'name'    => 'StringLength',
                                         'options' => [
                                             'encoding' => 'UTF-8',
-                                            'min' => 1,
-                                            'max' => 255,
+                                            'min'      => 1,
+                                            'max'      => 255,
                                         ],
                                     ],
                                 ],
                             ],
                         ],
-                    'body' =>
+                    'body'      =>
                         [
-                            'column' => 'body',
-                            'type' => 'string',
-                            'nullable' => false,
+                            'column'                     => 'body',
+                            'type'                       => 'string',
+                            'nullable'                   => false,
                             'input_filter_specification' => [
-                                'required' => true,
-                                'filters' => [
-                                    'StripTags' => ['name' => 'StripTags'],
-                                    'StringTrim' => ['name' => 'StringTrim'],
+                                'required'   => true,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
                                     'StripNewlines' => ['name' => 'StripNewlines'],
-                                    'Null' => ['name' => 'Null'],
+                                    'Null'          => ['name' => 'Null'],
                                 ],
                                 'validators' => [
-                                    'NotEmpty' => [
+                                    'NotEmpty'     => [
                                         'name' => 'NotEmpty',
                                     ],
                                     'StringLength' => [
-                                        'name' => 'StringLength',
+                                        'name'    => 'StringLength',
                                         'options' => [
                                             'encoding' => 'UTF-8',
-                                            'min' => 1,
-                                            'max' => 512,
+                                            'min'      => 1,
+                                            'max'      => 512,
                                         ],
                                     ],
                                 ],
                             ],
                         ],
-                    'isRead' =>
+                    'isRead'    =>
                         [
-                            'column' => 'is_read',
-                            'type' => 'boolean',
-                            'nullable' => false,
+                            'column'                     => 'is_read',
+                            'type'                       => 'boolean',
+                            'nullable'                   => false,
                             'input_filter_specification' => [
-                                'required' => false,
-                                'filters' => [
-                                    'StripTags' => ['name' => 'StripTags'],
-                                    'StringTrim' => ['name' => 'StringTrim'],
+                                'required'   => false,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
                                     'StripNewlines' => ['name' => 'StripNewlines'],
                                 ],
                                 'validators' => [
                                     'Between' => [
-                                        'name' => 'Between',
+                                        'name'    => 'Between',
                                         'options' => [
                                             'min' => 0,
                                             'max' => 1,
@@ -475,19 +475,19 @@ return [
                         ],
                     'isDeleted' =>
                         [
-                            'column' => 'is_deleted',
-                            'type' => 'boolean',
-                            'nullable' => false,
+                            'column'                     => 'is_deleted',
+                            'type'                       => 'boolean',
+                            'nullable'                   => false,
                             'input_filter_specification' => [
-                                'required' => false,
-                                'filters' => [
-                                    'StripTags' => ['name' => 'StripTags'],
-                                    'StringTrim' => ['name' => 'StringTrim'],
+                                'required'   => false,
+                                'filters'    => [
+                                    'StripTags'     => ['name' => 'StripTags'],
+                                    'StringTrim'    => ['name' => 'StringTrim'],
                                     'StripNewlines' => ['name' => 'StripNewlines'],
                                 ],
                                 'validators' => [
                                     'Between' => [
-                                        'name' => 'Between',
+                                        'name'    => 'Between',
                                         'options' => [
                                             'min' => 0,
                                             'max' => 1,
@@ -498,10 +498,10 @@ return [
                         ],
                     'createdAt' =>
                         [
-                            'column' => 'created_at',
-                            'type' => 'datetime',
+                            'column'   => 'created_at',
+                            'type'     => 'datetime',
                             'nullable' => false,
-                            'gedmo' =>
+                            'gedmo'    =>
                                 [
                                     'timestampable' =>
                                         [
@@ -511,10 +511,10 @@ return [
                         ],
                     'updatedAt' =>
                         [
-                            'column' => 'updated_at',
-                            'type' => 'datetime',
+                            'column'   => 'updated_at',
+                            'type'     => 'datetime',
                             'nullable' => true,
-                            'gedmo' =>
+                            'gedmo'    =>
                                 [
                                     'timestampable' =>
                                         [
@@ -524,8 +524,8 @@ return [
                         ],
                     'deletedAt' =>
                         [
-                            'column' => 'deleted_at',
-                            'type' => 'datetime',
+                            'column'   => 'deleted_at',
+                            'type'     => 'datetime',
                             'nullable' => true,
                         ],
                 ],
@@ -533,7 +533,7 @@ return [
 
         'WellCart\User\Entity\Acl\Role' =>
             [
-                'type' => 'entity',
+                'type'            => 'entity',
                 'entityListeners' => [
                     'WellCart\Backend\EventListener\Entity\RoleEntityListener' => [
                         'preUpdate' => ['preUpdate' => 'preUpdate'],

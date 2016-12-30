@@ -19,18 +19,18 @@ return [
             ItemView\PageHead::class      => ItemView\PageHead::class,
             ItemView\PageNavigator::class => ItemView\PageNavigator::class,
 
-            'zfcDatagrid.renderer.HtmlDataGrid'        => PageView\Grid\Renderer::class,
-            EventListener\Ui\SetupPageVariables::class    => EventListener\Ui\SetupPageVariables::class,
+            'zfcDatagrid.renderer.HtmlDataGrid'               => PageView\Grid\Renderer::class,
+            EventListener\Ui\SetupPageVariables::class        => EventListener\Ui\SetupPageVariables::class,
             EventListener\Config\RemoveConfigCacheFile::class => EventListener\Config\RemoveConfigCacheFile::class,
-            ItemView\TopBranding::class                => ItemView\TopBranding::class,
-            ItemView\MainNavigationMenu::class         => ItemView\MainNavigationMenu::class,
-            ItemView\Account\WelcomeBox::class         => ItemView\Account\WelcomeBox::class,
+            ItemView\TopBranding::class                       => ItemView\TopBranding::class,
+            ItemView\MainNavigationMenu::class                => ItemView\MainNavigationMenu::class,
+            ItemView\Account\WelcomeBox::class                => ItemView\Account\WelcomeBox::class,
 
             Form\RecoverAccount::class => Form\RecoverAccount::class,
 
         ],
         'aliases'            => [
-            'wellcart-backend_db_adapter'        => 'Zend\Db\Adapter\Adapter',
+            'wellcart-backend_db_adapter'      => 'Zend\Db\Adapter\Adapter',
             'wellcart_admin_object_manager'    => 'Doctrine\ORM\EntityManager',
             'wellcart_admin_doctrine_hydrator' => 'doctrine_hydrator',
 
@@ -39,17 +39,17 @@ return [
             'admin\notification'                => Service\Notification::class,
         ],
         'factories'          => [
-            Rbac\View\Strategy\UnauthorizedStrategy::class    => Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory::class,
-            Command\Handler\PersistAdminAccountHandler::class => Factory\Command\Handler\PersistAdminAccountHandlerFactory::class,
-            EventListener\Entity\AdministratorEntityListener::class  => Factory\EventListener\Entity\AdministratorEntityListenerFactory::class,
-            'backend_main_navigation'                         => Factory\Navigation\Service\BackendMainMenuFactory::class,
+            Rbac\View\Strategy\UnauthorizedStrategy::class          => Factory\Rbac\View\Strategy\UnauthorizedStrategyFactory::class,
+            Command\Handler\PersistAdminAccountHandler::class       => Factory\Command\Handler\PersistAdminAccountHandlerFactory::class,
+            EventListener\Entity\AdministratorEntityListener::class => Factory\EventListener\Entity\AdministratorEntityListenerFactory::class,
+            'backend_main_navigation'                               => Factory\Navigation\Service\BackendMainMenuFactory::class,
         ],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],
         'shared'             => [
-            ItemView\TopBranding::class             => false,
-            ItemView\MainNavigationMenu::class      => false,
+            ItemView\TopBranding::class               => false,
+            ItemView\MainNavigationMenu::class        => false,
             PageView\Backend\AccountsGrid::class      => false,
             PageView\Backend\AccountForm::class       => false,
             PageView\Backend\NotificationsGrid::class => false,
@@ -90,7 +90,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'         => [
+    'doctrine'        => [
         'driver'          => [
             'wellcart_admin_driver' => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -110,20 +110,20 @@ return [
             'orm_default' => [
                 'resolvers' => [
                     Spec\AdministratorEntity::class => Entity\Administrator::class,
-                    'Backend::Administrator'          => Entity\Administrator::class,
+                    'Backend::Administrator'        => Entity\Administrator::class,
                     Spec\NotificationEntity::class  => Entity\Notification::class,
-                    'Backend::Notification'           => Entity\Notification::class,
+                    'Backend::Notification'         => Entity\Notification::class,
                 ]
             ]
         ],
     ],
 
-    'ze_theme'      => [
+    'ze_theme' => [
         'adapters' => [
             Ui\Theme\BackendRouteAdapter::class => Ui\Theme\BackendRouteAdapter::class,
         ],
     ],
-    'zfcadmin'      => [
+    'zfcadmin' => [
         'use_admin_layout'      => true,
         'admin_layout_template' => 'layout/page-fluid-2columns',
     ],
@@ -132,7 +132,7 @@ return [
     /**
      * Default ZfcRbac configuration for RBAC
      */
-    'zfc_rbac'      => [
+    'zfc_rbac' => [
         'guard_manager' => [
             'factories' => [
                 Rbac\Guard\RouteGuard::class => Factory\Rbac\Guard\RouteGuardFactory::class
@@ -145,20 +145,20 @@ return [
 
     'controllers' => [
         'aliases'   => [
-            'Backend::Login'               => Controller\LoginController::class,
-            'Backend::Logout'              => Controller\LogoutController::class,
-            'Backend::Dashboard'           => Controller\DashboardController::class,
-            'Backend::RecoverAccount'      => Controller\RecoverAccountController::class,
-            'Backend::Settings'            => Controller\SettingsController::class,
+            'Backend::Login'                 => Controller\LoginController::class,
+            'Backend::Logout'                => Controller\LogoutController::class,
+            'Backend::Dashboard'             => Controller\DashboardController::class,
+            'Backend::RecoverAccount'        => Controller\RecoverAccountController::class,
+            'Backend::Settings'              => Controller\SettingsController::class,
             'Backend::Backend\Accounts'      => Controller\Backend\AccountsController::class,
             'Backend::Backend\Notifications' => Controller\Backend\NotificationsController::class,
         ],
         'factories' => [
-            Controller\LoginController::class               => Factory\Controller\LoginControllerFactory::class,
-            Controller\LogoutController::class              => Factory\Controller\LogoutControllerFactory::class,
-            Controller\DashboardController::class           => Factory\Controller\DashboardControllerFactory::class,
-            Controller\RecoverAccountController::class      => Factory\Controller\RecoverAccountControllerFactory::class,
-            Controller\SettingsController::class            => Factory\Controller\SettingsControllerFactory::class,
+            Controller\LoginController::class                 => Factory\Controller\LoginControllerFactory::class,
+            Controller\LogoutController::class                => Factory\Controller\LogoutControllerFactory::class,
+            Controller\DashboardController::class             => Factory\Controller\DashboardControllerFactory::class,
+            Controller\RecoverAccountController::class        => Factory\Controller\RecoverAccountControllerFactory::class,
+            Controller\SettingsController::class              => Factory\Controller\SettingsControllerFactory::class,
             Controller\Backend\AccountsController::class      => Factory\Controller\Backend\AccountsControllerFactory::class,
             Controller\Backend\NotificationsController::class => Factory\Controller\Backend\NotificationsControllerFactory::class,
         ],
@@ -173,7 +173,7 @@ return [
         ],
     ],
 
-    'view_helpers'         => [
+    'view_helpers' => [
         'aliases'   => [
             'admin_notifications' => View\Helper\Notification::class,
         ],
@@ -187,7 +187,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'               => [
+    'router'       => [
         'routes' => [
             'zfcadmin'               => [
                 'type'             => 'WellCart\Router\Http\Segment',
@@ -350,12 +350,12 @@ return [
             ],
         ],
     ],
-    'listeners'            => [
-        EventListener\Ui\SetupPageVariables::class        => EventListener\Ui\SetupPageVariables::class,
+    'listeners'    => [
+        EventListener\Ui\SetupPageVariables::class     => EventListener\Ui\SetupPageVariables::class,
         Rbac\View\Strategy\UnauthorizedStrategy::class => Rbac\View\Strategy\UnauthorizedStrategy::class,
     ],
 
-    'ZfcDatagrid'          => [
+    'ZfcDatagrid'      => [
         'renderer' => [
             'HtmlDataGrid' => [
                 'templates'      =>
@@ -369,14 +369,14 @@ return [
                     'sortDirections' => 'sortOrder',
                     'massIds'        => 'ids',
                 ],
-                    'daterange'      => [
+                'daterange'      => [
                     'enabled' => false,
-                    ],
+                ],
             ],
         ],
     ],
     // Client-side application configuration
-    'wellcart-backend'       => [
+    'wellcart-backend' => [
         'client-side-application' => [
             'modules' => [
                 'assets/wellcart-backend/js/main-menu/module',

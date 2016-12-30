@@ -12,7 +12,7 @@ return [
     'object_mapping' => [
         Entity\OAuth2\PublicKey::class => [
             'formFields' => [
-                'client' => [
+                'client'              => [
                     'input_filter_specification' => [
                         'required' => true,
                     ],
@@ -22,53 +22,53 @@ return [
                         'required' => true,
                     ],
                 ],
-                'publicKey' =>
+                'publicKey'           =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
+                            'required'   => true,
+                            'filters'    => [
                                 'StringToLower' => ['name' => 'StringToLower'],
-                                'StripTags' => ['name' => 'StripTags'],
-                                'StringTrim' => ['name' => 'StringTrim'],
+                                'StripTags'     => ['name' => 'StripTags'],
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
-                                'NotEmpty' => [
+                                'NotEmpty'     => [
                                     'name' => 'NotEmpty',
                                 ],
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 1,
-                                        'max' => 255,
+                                        'min'      => 1,
+                                        'max'      => 255,
                                     ],
                                 ],
                             ],
                         ],
                     ],
-                'privateKey' =>
+                'privateKey'          =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
+                            'required'   => true,
+                            'filters'    => [
                                 'StringToLower' => ['name' => 'StringToLower'],
-                                'StripTags' => ['name' => 'StripTags'],
-                                'StringTrim' => ['name' => 'StringTrim'],
+                                'StripTags'     => ['name' => 'StripTags'],
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
-                                'NotEmpty' => [
+                                'NotEmpty'     => [
                                     'name' => 'NotEmpty',
                                 ],
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 1,
-                                        'max' => 255,
+                                        'min'      => 1,
+                                        'max'      => 255,
                                     ],
                                 ],
                             ],
@@ -80,15 +80,15 @@ return [
 
         Entity\OAuth2\Client::class => [
             'formFields' => [
-                'user' =>
+                'user'     =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
-                                'StripTags' => ['name' => 'StripTags'],
-                                'StringTrim' => ['name' => 'StringTrim'],
+                            'required'   => true,
+                            'filters'    => [
+                                'StripTags'     => ['name' => 'StripTags'],
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
                                 'NotEmpty' => [
@@ -100,33 +100,33 @@ return [
                 'clientId' =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
+                            'required'   => true,
+                            'filters'    => [
                                 'StringToLower' => ['name' => 'StringToLower'],
-                                'StripTags' => ['name' => 'StripTags'],
-                                'StringTrim' => ['name' => 'StringTrim'],
+                                'StripTags'     => ['name' => 'StripTags'],
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
-                                'NotEmpty' => [
+                                'NotEmpty'     => [
                                     'name' => 'NotEmpty',
                                 ],
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 1,
-                                        'max' => 255,
+                                        'min'      => 1,
+                                        'max'      => 255,
                                     ],
                                 ],
 
                                 [
-                                    'name' => 'WellCart\ORM\Validator\NoObjectExists',
+                                    'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
                                         'entity_class' => Entity\OAuth2\Client::class,
-                                        'fields' => ['client_id'],
-                                        'messages' => [
+                                        'fields'       => ['client_id'],
+                                        'messages'     => [
                                             'objectFound' => 'Client ID already exists!'
                                         ],
                                     ],
@@ -138,18 +138,18 @@ return [
                 'newSecret' =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
-                                'StringTrim' => ['name' => 'StringTrim'],
+                            'required'   => true,
+                            'filters'    => [
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 6,
+                                        'min'      => 6,
                                     ],
                                 ],
                             ],
@@ -159,22 +159,22 @@ return [
                 'newSecretVerify' =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
-                                'StringTrim' => ['name' => 'StringTrim'],
+                            'required'   => true,
+                            'filters'    => [
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 6,
+                                        'min'      => 6,
                                     ],
                                 ],
-                                'Identical' => [
-                                    'name' => 'Identical',
+                                'Identical'    => [
+                                    'name'    => 'Identical',
                                     'options' => [
                                         'token' => 'new_secret'
                                     ]
@@ -186,23 +186,23 @@ return [
                 'redirectUri' =>
                     [
                         'input_filter_specification' => [
-                            'required' => false,
-                            'filters' => [
-                                'StringTrim' => ['name' => 'StringTrim'],
+                            'required'   => false,
+                            'filters'    => [
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 10,
-                                        'max' => 255,
+                                        'min'      => 10,
+                                        'max'      => 255,
                                     ],
                                 ],
-                                'Uri' => [
-                                    'name' => 'Uri',
+                                'Uri'          => [
+                                    'name'    => 'Uri',
                                     'options' => [
                                         'allow_relative' => false,
                                     ],
@@ -219,19 +219,19 @@ return [
             'fields' => [
                 'isDefault' =>
                     [
-                        'column' => 'is_default',
-                        'type' => 'boolean',
-                        'nullable' => false,
+                        'column'                     => 'is_default',
+                        'type'                       => 'boolean',
+                        'nullable'                   => false,
                         'input_filter_specification' => [
-                            'required' => false,
-                            'filters' => [
-                                'StripTags' => ['name' => 'StripTags'],
-                                'StringTrim' => ['name' => 'StringTrim'],
+                            'required'   => false,
+                            'filters'    => [
+                                'StripTags'     => ['name' => 'StripTags'],
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
                             ],
                             'validators' => [
                                 'Between' => [
-                                    'name' => 'Between',
+                                    'name'    => 'Between',
                                     'options' => [
                                         'min' => 0,
                                         'max' => 1,
@@ -240,35 +240,35 @@ return [
                             ],
                         ],
                     ],
-                'scope' =>
+                'scope'     =>
                     [
                         'input_filter_specification' => [
-                            'required' => true,
-                            'filters' => [
-                                'StripTags' => ['name' => 'StripTags'],
-                                'StringTrim' => ['name' => 'StringTrim'],
+                            'required'   => true,
+                            'filters'    => [
+                                'StripTags'     => ['name' => 'StripTags'],
+                                'StringTrim'    => ['name' => 'StringTrim'],
                                 'StripNewlines' => ['name' => 'StripNewlines'],
-                                'Null' => ['name' => 'Null'],
+                                'Null'          => ['name' => 'Null'],
                             ],
                             'validators' => [
-                                'NotEmpty' => [
+                                'NotEmpty'     => [
                                     'name' => 'NotEmpty',
                                 ],
                                 'StringLength' => [
-                                    'name' => 'StringLength',
+                                    'name'    => 'StringLength',
                                     'options' => [
                                         'encoding' => 'UTF-8',
-                                        'min' => 1,
-                                        'max' => 50,
+                                        'min'      => 1,
+                                        'max'      => 50,
                                     ],
                                 ],
 
                                 [
-                                    'name' => 'WellCart\ORM\Validator\NoObjectExists',
+                                    'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
                                         'entity_class' => Entity\OAuth2\Scope::class,
-                                        'fields' => ['scope'],
-                                        'messages' => [
+                                        'fields'       => ['scope'],
+                                        'messages'     => [
                                             'objectFound' => 'Scope already exists!'
                                         ],
                                     ],
@@ -282,35 +282,35 @@ return [
         'WellCart\User\Entity\User' =>
             [
                 'oneToMany' => [
-                    'client' => [
+                    'client'            => [
                         'targetEntity' => Entity\OAuth2\Client::class,
-                        'mappedBy' => 'user',
-                        'joinColumn' => [
-                            'name' => 'oauth_client_id',
+                        'mappedBy'     => 'user',
+                        'joinColumn'   => [
+                            'name'                 => 'oauth_client_id',
                             'referencedColumnName' => 'id',
                         ],
                     ],
-                    'accessToken' => [
+                    'accessToken'       => [
                         'targetEntity' => Entity\OAuth2\AccessToken::class,
-                        'mappedBy' => 'user',
-                        'joinColumn' => [
-                            'name' => 'oauth_access_token_id',
+                        'mappedBy'     => 'user',
+                        'joinColumn'   => [
+                            'name'                 => 'oauth_access_token_id',
                             'referencedColumnName' => 'id',
                         ],
                     ],
                     'authorizationCode' => [
                         'targetEntity' => Entity\OAuth2\AuthorizationCode::class,
-                        'mappedBy' => 'user',
-                        'joinColumn' => [
-                            'name' => 'oauth_authorization_code_id',
+                        'mappedBy'     => 'user',
+                        'joinColumn'   => [
+                            'name'                 => 'oauth_authorization_code_id',
                             'referencedColumnName' => 'id',
                         ],
                     ],
-                    'refreshToken' => [
+                    'refreshToken'      => [
                         'targetEntity' => Entity\OAuth2\RefreshToken::class,
-                        'mappedBy' => 'user',
-                        'joinColumn' => [
-                            'name' => 'oauth_refresh_token_id',
+                        'mappedBy'     => 'user',
+                        'joinColumn'   => [
+                            'name'                 => 'oauth_refresh_token_id',
                             'referencedColumnName' => 'id',
                         ],
                     ],

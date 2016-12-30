@@ -12,11 +12,11 @@ return [
      * View manager configuration
      * =========================================================
      */
-    'view_manager'  => [
+    'view_manager' => [
         /**
          * Template map
          */
-        'template_map'        =>
+        'template_map' =>
             [
                 'wellcart-backend/page-view/grid/standard/layout'         => __DIR__
                     . '/../../view/page-view/grid/standard/layout.phtml',

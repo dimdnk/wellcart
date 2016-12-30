@@ -110,7 +110,7 @@ return [
                      */
                     'body' => [
                         //'content' => '',
-                        'charset' => 'utf-8',
+                        'charset'      => 'utf-8',
                         'use_template' => true,
 
                         /*
@@ -131,10 +131,10 @@ return [
                          *
                          * By default no children are used
                          */
-                        'template' => [
+                        'template'     => [
                             'default_layout' => [
-                                'path' => 'layout/mail/page-fixed-1column',
-                                'params' => [],
+                                'path'                => 'layout/mail/page-fixed-1column',
+                                'params'              => [],
                                 'template_capture_to' => 'content'
                             ]
                         ],
@@ -175,26 +175,26 @@ return [
                  * a local.php config (which are gitignored by default) to create environment-specific settings and/or to
                  * avoid committing credentials to Git.
                  */
-                'smtp_options' => [
+                'smtp_options'    => [
                     /**
                      * Hostname or IP address of the mail server.
                      *
                      * Default value is localhost
                      */
-                    'host' => 'localhost',
+                    'host'              => 'localhost',
                     /**
                      * Port of the mail server.
                      *
                      * Default value is 25
                      */
-                    'port' => 25,
+                    'port'              => 25,
                     /**
                      * The connection class used for authentication.
                      * The value can be one of 'smtp', 'plain', 'login' or 'crammd5'.
                      *
                      * Default value is 'smtp'.
                      */
-                    'connection_class' => 'smtp',
+                    'connection_class'  => 'smtp',
                     'connection_config' => [
                         /**
                          * The SMTP authentication identity.
@@ -215,7 +215,7 @@ return [
                          *
                          * Default value is null
                          */
-                        'ssl' => null,
+                        'ssl'      => null,
                     ],
                 ],
                 /*         * ********************
@@ -226,7 +226,7 @@ return [
                  * File concrete options that will be used only when the adapter is a Zend\Mail\Transport\File.
                  * This will be ignored otherwise.
                  */
-                'file_options' => [
+                'file_options'    => [
                     /**
                      * This is the folder where the file is going to be saved
                      */

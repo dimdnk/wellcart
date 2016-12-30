@@ -16,8 +16,7 @@ use WellCart\Backend\View\Helper\Notification as NotificationHelper;
 class NotificationHelperFactory
 {
     public function __invoke(ContainerInterface $sm
-    )
-    {
+    ) {
         $notification = $sm->getServiceLocator()->get(
             'admin\notification'
         );

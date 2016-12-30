@@ -16,8 +16,7 @@ use WellCart\Backend\Mvc\Controller\Plugin\Notification as NotificationPlugin;
 class NotificationPluginFactory
 {
     public function __invoke(ContainerInterface $sm
-    ): NotificationPlugin
-    {
+    ): NotificationPlugin {
         return new NotificationPlugin(
             $sm->getServiceLocator()
                 ->get('admin\notification')

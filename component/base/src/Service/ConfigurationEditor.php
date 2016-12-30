@@ -192,6 +192,24 @@ class ConfigurationEditor extends EventProvider
     }
 
     /**
+     * Retrieve tab info
+     *
+     * @param string $tabId
+     * @param string $default
+     *
+     * @return array
+     */
+    protected function tabInfo($tabId, $default = 'general')
+    {
+        $path = 'system_config_editor.tab.';
+        $tab = Arr::get($this->config, $path . $tabId, []);
+        if (empty($tab)) {
+            $tab = Arr::get($this->config, $path . $default, []);
+        }
+        return $tab;
+    }
+
+    /**
      * Retrieve Form object with fields specified for selected tab
      *
      * @param string $tabId
@@ -280,23 +298,5 @@ class ConfigurationEditor extends EventProvider
 
         $this->form->getEventManager()->trigger('init', $this);
         return $this->form;
-    }
-
-    /**
-     * Retrieve tab info
-     *
-     * @param string $tabId
-     * @param string $default
-     *
-     * @return array
-     */
-    protected function tabInfo($tabId, $default = 'general')
-    {
-        $path = 'system_config_editor.tab.';
-        $tab = Arr::get($this->config, $path . $tabId, []);
-        if (empty($tab)) {
-            $tab = Arr::get($this->config, $path . $default, []);
-        }
-        return $tab;
     }
 }

@@ -13,10 +13,10 @@ use WellCart\Base\Service\ConfigurationEditor;
 return [
     'event_manager' => [
         'aggregates' => [],
-        'listeners' => [
+        'listeners'  => [
             EventListener\Config\RemoveConfigCacheFile::class => [
-                'id' => ConfigurationEditor::class,
-                'event' => 'saveConfigSet.post',
+                'id'       => ConfigurationEditor::class,
+                'event'    => 'saveConfigSet.post',
                 'listener' => EventListener\Config\RemoveConfigCacheFile::class,
                 'priority' => -100,
             ],

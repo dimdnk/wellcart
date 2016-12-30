@@ -13,7 +13,7 @@ namespace WellCart\Directory;
  * =========================================================
  */
 return [
-    'router'         => [
+    'router' => [
         'routes' => [
             'zfcadmin' => [
                 'child_routes' => [

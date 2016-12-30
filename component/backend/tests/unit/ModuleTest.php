@@ -60,7 +60,9 @@ class ModuleTest extends TestCase
 
     public function testGetSetupDataFixtures()
     {
-        $this->assertInternalType('array', $this->object->getSetupDataFixtures());
+        $this->assertInternalType(
+            'array', $this->object->getSetupDataFixtures()
+        );
     }
 
     public function testGetAbsolutePath()

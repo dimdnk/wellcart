@@ -16,12 +16,12 @@ return
                         ]
                     ],
                 ],
-                'catalog/brands/form' => [
+                'catalog/brands/form'   => [
                     'blocks' => [
                         'brand.image.thumbnail' => [
                             'capture_to' => 'formPreRenderer',
-                            'parent' => 'action.result',
-                            'class' => 'WellCart\Catalog\ItemView\Backend\BrandThumbnail',
+                            'parent'     => 'action.result',
+                            'class'      => 'WellCart\Catalog\ItemView\Backend\BrandThumbnail',
                         ],
                     ]
                 ],

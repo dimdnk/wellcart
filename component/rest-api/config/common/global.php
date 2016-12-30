@@ -14,24 +14,24 @@ namespace WellCart\RestApi;
 $userEntity = 'WellCart\User\Entity\User';
 
 return [
-    'zf-versioning' => [
+    'zf-versioning'      => [
         'uri' => [],
     ],
     'zf-oauth2-doctrine' => [
         'default' => [
-            'object_manager' => 'doctrine.entitymanager.orm_default',
-            'event_manager' => 'doctrine.eventmanager.orm_default',
-            'driver' => 'doctrine.driver.orm_default',
+            'object_manager'          => 'doctrine.entitymanager.orm_default',
+            'event_manager'           => 'doctrine.eventmanager.orm_default',
+            'driver'                  => 'doctrine.driver.orm_default',
             'enable_default_entities' => false,
-            'bcrypt_cost' => 14, # match zfcuser
-            'auth_identity_fields' => ['email'],
+            'bcrypt_cost'             => 14, # match zfcuser
+            'auth_identity_fields'    => ['email'],
 
             'mapping' => [
                 'User' => [
                     'entity' => $userEntity,
                 ],
 
-                'Client' => [
+                'Client'      => [
                     'entity' => Entity\OAuth2\Client::class,
                 ],
                 'AccessToken' => [
@@ -64,25 +64,25 @@ return [
             ],
         ],
     ],
-    'zf-mvc-auth' => [
+    'zf-mvc-auth'        => [
         'authentication' => [
             'adapters' => [
                 'oauth2_doctrine' => [
                     'adapter' => 'ZF\\MvcAuth\\Authentication\\OAuth2Adapter',
                     'storage' => [
                         'storage' => 'oauth2.doctrineadapter.default',
-                        'route' => '/api/oauth',
+                        'route'   => '/api/oauth',
                     ],
                 ],
             ],
         ],
     ],
-    'zf-oauth2' => [
-        'allow_implicit' => true,
+    'zf-oauth2'          => [
+        'allow_implicit'  => true,
         // default (set to true when you need to support browser-based or mobile apps)
         'access_lifetime' => 3600,
         // default (set a value in seconds for access tokens lifetime)
-        'enforce_state' => true,  // default
-        'storage' => 'oauth2.doctrineadapter.default',
+        'enforce_state'   => true,  // default
+        'storage'         => 'oauth2.doctrineadapter.default',
     ],
 ];

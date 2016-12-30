@@ -58,16 +58,6 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     protected $updatedAt;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->translations = new ArrayCollection();
-    }
-
-    /**
      * @param Collection|PageI18nEntity[] $translations
      *
      * @return PageEntity
@@ -169,6 +159,16 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->translations = new ArrayCollection();
     }
 
     /**

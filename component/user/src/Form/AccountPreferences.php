@@ -307,6 +307,50 @@ class AccountPreferences extends AbstractForm
     }
 
     /**
+     * Prepare tabs
+     */
+    protected function prepareTabs()
+    {
+        $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+        $this->addTab('login', __('Log In'));
+        $login = $this->getTab('login');
+        $fields = [
+            'zfcuser.login_form_timeout',
+            'wellcart.user_account_options.max_login_attempts',
+        ];
+        foreach ($fields as $field) {
+            $login->add($field, $this->get($field));
+        }
+
+        $this->addTab('registration', __('Registration'));
+        $registration = $this->getTab('registration');
+        $fields = [
+            'zfcuser.enable_registration',
+            'zfcuser.user_form_timeout',
+            'wellcart.user_account_options.registration.email_contact',
+            'wellcart.user_account_options.registration.send_welcome_email',
+            'wellcart.user_account_options.registration.confirm_email',
+        ];
+        foreach ($fields as $field) {
+            $registration->add($field, $this->get($field));
+        }
+
+
+        $this->addTab('password_options', __('Password Options'));
+        $password = $this->getTab('password_options');
+        $fields = [
+            'wellcart.user_account_options.password_reset.email_contact',
+            'wellcart.user_account_options.password_reset.allow_for_admin',
+            'wellcart.user_account_options.password_reset.link_expiration_period',
+        ];
+        foreach ($fields as $field) {
+            $password->add($field, $this->get($field));
+        }
+
+        $this->getEventManager()->trigger(__FUNCTION__ . '.post', $this);
+    }
+
+    /**
      * Input filter specification
      *
      * @return array
@@ -527,49 +571,5 @@ class AccountPreferences extends AbstractForm
             ['specification' => &$specification]
         );
         return $specification;
-    }
-
-    /**
-     * Prepare tabs
-     */
-    protected function prepareTabs()
-    {
-        $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
-        $this->addTab('login', __('Log In'));
-        $login = $this->getTab('login');
-        $fields = [
-            'zfcuser.login_form_timeout',
-            'wellcart.user_account_options.max_login_attempts',
-        ];
-        foreach ($fields as $field) {
-            $login->add($field, $this->get($field));
-        }
-
-        $this->addTab('registration', __('Registration'));
-        $registration = $this->getTab('registration');
-        $fields = [
-            'zfcuser.enable_registration',
-            'zfcuser.user_form_timeout',
-            'wellcart.user_account_options.registration.email_contact',
-            'wellcart.user_account_options.registration.send_welcome_email',
-            'wellcart.user_account_options.registration.confirm_email',
-        ];
-        foreach ($fields as $field) {
-            $registration->add($field, $this->get($field));
-        }
-
-
-        $this->addTab('password_options', __('Password Options'));
-        $password = $this->getTab('password_options');
-        $fields = [
-            'wellcart.user_account_options.password_reset.email_contact',
-            'wellcart.user_account_options.password_reset.allow_for_admin',
-            'wellcart.user_account_options.password_reset.link_expiration_period',
-        ];
-        foreach ($fields as $field) {
-            $password->add($field, $this->get($field));
-        }
-
-        $this->getEventManager()->trigger(__FUNCTION__ . '.post', $this);
     }
 }

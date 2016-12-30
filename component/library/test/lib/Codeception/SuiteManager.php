@@ -75,6 +75,23 @@ class SuiteManager
         $this->suite = $this->createSuite($name);
     }
 
+    protected function createSuite($name)
+    {
+        $suite = new Suite();
+        $suite->setBaseName(
+            preg_replace('~\s.+$~', '', $name)
+        ); // replace everything after space (env name)
+        if ($this->settings['namespace']) {
+            $name = $this->settings['namespace'] . ".$name";
+        }
+        $suite->setName($name);
+        if (isset($this->settings['backup_globals'])) {
+            $suite->setBackupGlobals((bool)$this->settings['backup_globals']);
+        }
+        $suite->setModules($this->moduleContainer->all());
+        return $suite;
+    }
+
     public function initialize()
     {
         $this->dispatcher->dispatch(
@@ -106,54 +123,6 @@ class SuiteManager
             $this->addToSuite($test);
         }
         $this->suite->reorderDependencies();
-    }
-
-    public function run(PHPUnit\Runner $runner,
-        \PHPUnit_Framework_TestResult $result, $options
-    ) {
-        $runner->prepareSuite($this->suite, $options);
-        $this->dispatcher->dispatch(
-            Events::SUITE_BEFORE,
-            new Event\SuiteEvent($this->suite, $result, $this->settings)
-        );
-        $runner->doEnhancedRun($this->suite, $result, $options);
-        $this->dispatcher->dispatch(
-            Events::SUITE_AFTER,
-            new Event\SuiteEvent($this->suite, $result, $this->settings)
-        );
-    }
-
-    /**
-     * @return \Codeception\Suite
-     */
-    public function getSuite()
-    {
-        return $this->suite;
-    }
-
-    /**
-     * @return ModuleContainer
-     */
-    public function getModuleContainer()
-    {
-        return $this->moduleContainer;
-    }
-
-    protected function createSuite($name)
-    {
-        $suite = new Suite();
-        $suite->setBaseName(
-            preg_replace('~\s.+$~', '', $name)
-        ); // replace everything after space (env name)
-        if ($this->settings['namespace']) {
-            $name = $this->settings['namespace'] . ".$name";
-        }
-        $suite->setName($name);
-        if (isset($this->settings['backup_globals'])) {
-            $suite->setBackupGlobals((bool)$this->settings['backup_globals']);
-        }
-        $suite->setModules($this->moduleContainer->all());
-        return $suite;
     }
 
     protected function addToSuite($test)
@@ -259,5 +228,36 @@ class SuiteManager
             }
         }
         return false;
+    }
+
+    public function run(PHPUnit\Runner $runner,
+        \PHPUnit_Framework_TestResult $result, $options
+    ) {
+        $runner->prepareSuite($this->suite, $options);
+        $this->dispatcher->dispatch(
+            Events::SUITE_BEFORE,
+            new Event\SuiteEvent($this->suite, $result, $this->settings)
+        );
+        $runner->doEnhancedRun($this->suite, $result, $options);
+        $this->dispatcher->dispatch(
+            Events::SUITE_AFTER,
+            new Event\SuiteEvent($this->suite, $result, $this->settings)
+        );
+    }
+
+    /**
+     * @return \Codeception\Suite
+     */
+    public function getSuite()
+    {
+        return $this->suite;
+    }
+
+    /**
+     * @return ModuleContainer
+     */
+    public function getModuleContainer()
+    {
+        return $this->moduleContainer;
     }
 }

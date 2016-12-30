@@ -10,9 +10,9 @@ declare(strict_types = 1);
 
 namespace WellCart\User;
 
+use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
 use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
-use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
 use Zend\EventManager\EventInterface;

@@ -30,6 +30,11 @@ trait UnitTesterActions
     }
 
     /**
+     * @return \Codeception\Scenario
+     */
+    abstract protected function getScenario();
+
+    /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *
      * Checks that two variables are not equal
@@ -552,9 +557,4 @@ trait UnitTesterActions
             new \Codeception\Step\Action('expectException', func_get_args())
         );
     }
-
-    /**
-     * @return \Codeception\Scenario
-     */
-    abstract protected function getScenario();
 }

@@ -14,92 +14,92 @@ return [
     'router' =>
         [
             'router_class' => 'WellCart\Router\Http\TreeRouteStack',
-            'base_path' => '/',
-            'routes' =>
+            'base_path'    => '/',
+            'routes'       =>
                 [
                     'wellcart-base:url-rewrites' => [
-                        'type' => 'SystemUrlRewritesHandler',
+                        'type'     => 'SystemUrlRewritesHandler',
                         'priority' => 100000,
                     ],
-                    'assets' => [
-                        'type' => 'WellCart\Router\Http\Literal',
+                    'assets'                     => [
+                        'type'             => 'WellCart\Router\Http\Literal',
                         'javascript_route' => true,
-                        'priority' => -500,
-                        'options' => [
-                            'route' => '/assets/',
+                        'priority'         => -500,
+                        'options'          => [
+                            'route'    => '/assets/',
                             'defaults' => [
                                 'controller' => 'Base::Index',
-                                'action' => 'index',
+                                'action'     => 'index',
                             ],
                         ],
                     ],
-                    'wellcart-base:home' => [
-                        'type' => 'WellCart\Router\Http\Literal',
+                    'wellcart-base:home'         => [
+                        'type'             => 'WellCart\Router\Http\Literal',
                         'javascript_route' => true,
-                        'priority' => -500,
-                        'options' => [
-                            'route' => '/',
+                        'priority'         => -500,
+                        'options'          => [
+                            'route'    => '/',
                             'defaults' => [
                                 'controller' => 'Base::Index',
-                                'action' => 'index',
+                                'action'     => 'index',
                             ],
                         ],
                     ],
-                    'zfcadmin' => [
-                        'type' => 'WellCart\Router\Http\Segment',
+                    'zfcadmin'                   => [
+                        'type'          => 'WellCart\Router\Http\Segment',
                         'may_terminate' => true,
-                        'options' => [
-                            'route' => '/admin[/]',
+                        'options'       => [
+                            'route'    => '/admin[/]',
                             'defaults' => [
                                 'controller' => 'Base::Index',
-                                'action' => 'not-found',
+                                'action'     => 'not-found',
                             ],
                         ],
-                        'child_routes' => [
+                        'child_routes'  => [
                             'base' => [
-                                'type' => 'WellCart\Router\Http\Literal',
-                                'priority' => -500,
-                                'options' => [
-                                    'route' => 'base/',
+                                'type'         => 'WellCart\Router\Http\Literal',
+                                'priority'     => -500,
+                                'options'      => [
+                                    'route'    => 'base/',
                                     'defaults' => [
                                         'controller' => 'Base::Backend\Languages',
-                                        'action' => 'list',
+                                        'action'     => 'list',
                                     ],
                                 ],
                                 'child_routes' => [
-                                    'languages' => [
-                                        'type' => 'WellCart\Router\Http\Segment',
+                                    'languages'    => [
+                                        'type'             => 'WellCart\Router\Http\Segment',
                                         'javascript_route' => true,
-                                        'priority' => -500,
-                                        'options' => [
-                                            'route' => 'languages[/:action][/][:id]',
+                                        'priority'         => -500,
+                                        'options'          => [
+                                            'route'       => 'languages[/:action][/][:id]',
                                             'constraints' => [
                                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                                'action' => '(list|update|create|delete|group-action-handler)',
-                                                'id' => '([0-9]+|delete)',
+                                                'action'     => '(list|update|create|delete|group-action-handler)',
+                                                'id'         => '([0-9]+|delete)',
                                             ],
-                                            'defaults' => [
+                                            'defaults'    => [
                                                 'controller' => 'Base::Backend\Languages',
-                                                'action' => 'list',
-                                                'id' => null,
+                                                'action'     => 'list',
+                                                'id'         => null,
                                             ],
                                         ],
                                     ],
                                     'url-rewrites' => [
-                                        'type' => 'WellCart\Router\Http\Segment',
+                                        'type'             => 'WellCart\Router\Http\Segment',
                                         'javascript_route' => true,
-                                        'priority' => -500,
-                                        'options' => [
-                                            'route' => 'url-rewrites[/:action][/][:id]',
+                                        'priority'         => -500,
+                                        'options'          => [
+                                            'route'       => 'url-rewrites[/:action][/][:id]',
                                             'constraints' => [
                                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                                'action' => '(list|update|create|delete|group-action-handler)',
-                                                'id' => '([0-9]+|delete)',
+                                                'action'     => '(list|update|create|delete|group-action-handler)',
+                                                'id'         => '([0-9]+|delete)',
                                             ],
-                                            'defaults' => [
+                                            'defaults'    => [
                                                 'controller' => 'Base::Backend\UrlRewrites',
-                                                'action' => 'list',
-                                                'id' => null,
+                                                'action'     => 'list',
+                                                'id'         => null,
                                             ],
                                         ],
                                     ],
@@ -107,27 +107,27 @@ return [
                             ],
                         ],
                     ],
-                    'tckimageresizer' => [
-                        'type' => 'Literal',
-                        'options' => [
-                            'route' => '/media',
+                    'tckimageresizer'            => [
+                        'type'          => 'Literal',
+                        'options'       => [
+                            'route'    => '/media',
                             'defaults' => [
                                 '__NAMESPACE__' => null,
-                                'controller' => 'TckImageResizer\Controller\Index',
-                                'action' => 'index',
+                                'controller'    => 'TckImageResizer\Controller\Index',
+                                'action'        => 'index',
                             ],
                         ],
                         'may_terminate' => true,
-                        'child_routes' => [
+                        'child_routes'  => [
                             'resize' => [
-                                'type' => 'Zend\Mvc\Router\Http\Regex',
+                                'type'    => 'Zend\Mvc\Router\Http\Regex',
                                 'options' => [
-                                    'regex' => '/(?<file>.*?)\.\$(?<command>.*)\.(?<extension>[a-zA-Z]+)',
+                                    'regex'    => '/(?<file>.*?)\.\$(?<command>.*)\.(?<extension>[a-zA-Z]+)',
                                     'defaults' => [
                                         'controller' => 'TckImageResizer\Controller\Index',
-                                        'action' => 'resize',
+                                        'action'     => 'resize',
                                     ],
-                                    'spec' => '/media/%file%.$%command%.%extension%',
+                                    'spec'     => '/media/%file%.$%command%.%extension%',
                                 ],
                             ],
                         ],

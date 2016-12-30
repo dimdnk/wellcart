@@ -41,7 +41,7 @@ return [
         ],
         'invokables'         => [
             Command\Handler\PersistProductHandler::class => Command\Handler\PersistProductHandler::class,
-            ItemView\Backend\BrandThumbnail::class         => ItemView\Backend\BrandThumbnail::class
+            ItemView\Backend\BrandThumbnail::class       => ItemView\Backend\BrandThumbnail::class
         ],
         'factories'          => [],
         'abstract_factories' => [],
@@ -126,13 +126,13 @@ return [
         ],
     ],
 
-    'view_helpers'               => [
+    'view_helpers'  => [
         'invokables' => [
             'formCatalogProductImage'                    => Form\View\Helper\FormProductImage::class,
             'formCatalogFeatureCombinationMultiCheckbox' => Form\View\Helper\FormFeatureCombinationMultiCheckbox::class,
         ],
     ],
-    'form_elements'              => [
+    'form_elements' => [
         'aliases'    => [
             'catalogFeatureCombinationMultiCheckbox' => Form\Element\FeatureCombinationMultiCheckbox::class,
         ],

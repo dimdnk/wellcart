@@ -31,22 +31,6 @@ class InputFilterAbstractServiceFactory extends
     }
 
     /**
-     * @inheritdoc
-     */
-    public function createServiceWithName(ServiceLocatorInterface $inputFilters,
-        $cName, $rName
-    ) {
-        $rName = $this->realEntityName($rName);
-        $spec = $this->getDomainEntityInputFilterSpecification($rName);
-        if (empty($spec)) {
-            return parent::createServiceWithName($inputFilters, $cName, $rName);
-        }
-        $services = $inputFilters->getServiceLocator();
-        $factory = $this->getInputFilterFactory($services);
-        return $factory->createInputFilter($spec);
-    }
-
-    /**
      * Helper for simply maps interface to class name
      *
      * @param $rName
@@ -63,5 +47,21 @@ class InputFilterAbstractServiceFactory extends
             $rName = $entityName;
         }
         return $rName;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function createServiceWithName(ServiceLocatorInterface $inputFilters,
+        $cName, $rName
+    ) {
+        $rName = $this->realEntityName($rName);
+        $spec = $this->getDomainEntityInputFilterSpecification($rName);
+        if (empty($spec)) {
+            return parent::createServiceWithName($inputFilters, $cName, $rName);
+        }
+        $services = $inputFilters->getServiceLocator();
+        $factory = $this->getInputFilterFactory($services);
+        return $factory->createInputFilter($spec);
     }
 }

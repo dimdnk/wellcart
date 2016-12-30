@@ -432,6 +432,22 @@ class ValidTest extends TestCase
     }
 
     /**
+     * Check for internet connectivity
+     *
+     * @return boolean Whether an internet connection is available
+     */
+    protected function hasInternet()
+    {
+        if (self::$hasInternet == null) {
+            // The @ operator is used here to avoid DNS errors when there is no connection.
+            $sock = @fsockopen("www.google.com", 80, $errno, $errstr, 1);
+            self::$hasInternet = (bool)$sock ? true : false;
+        }
+        return self::$hasInternet;
+
+    }
+
+    /**
      * Provides data for testExactLength()
      *
      * @return array
@@ -945,21 +961,5 @@ class ValidTest extends TestCase
             $expected,
             Valid::matches($data, $field, $match)
         );
-    }
-
-    /**
-     * Check for internet connectivity
-     *
-     * @return boolean Whether an internet connection is available
-     */
-    protected function hasInternet()
-    {
-        if (self::$hasInternet == null) {
-            // The @ operator is used here to avoid DNS errors when there is no connection.
-            $sock = @fsockopen("www.google.com", 80, $errno, $errstr, 1);
-            self::$hasInternet = (bool)$sock ? true : false;
-        }
-        return self::$hasInternet;
-
     }
 }

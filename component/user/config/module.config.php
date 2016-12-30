@@ -25,9 +25,9 @@ return [
             Spec\UserRepository::class          => Repository\Users::class,
         ],
         'invokables'         => [
-            'ZfcRbac\Collector\RbacCollector'              => DeveloperTools\Rbac\Collector\RbacCollector::class,
+            'ZfcRbac\Collector\RbacCollector'       => DeveloperTools\Rbac\Collector\RbacCollector::class,
             PageView\Backend\PreferencesForm::class => PageView\Backend\PreferencesForm::class,
-            Form\RecoverAccount::class            => Form\RecoverAccount::class,
+            Form\RecoverAccount::class              => Form\RecoverAccount::class,
 
             EventListener\Registration\AddRequiredFieldsToFilter::class  => EventListener\Registration\AddRequiredFieldsToFilter::class,
             EventListener\Registration\AddRequiredFieldsToForm::class    => EventListener\Registration\AddRequiredFieldsToForm::class,
@@ -42,7 +42,7 @@ return [
             EventListener\Login\IdentityReview::class                   => Factory\EventListener\Login\IdentityReviewFactory::class,
             EventListener\Registration\SetDefaultAccountSettings::class => Factory\EventListener\Registration\SetDefaultAccountSettingsFactory::class,
             EventListener\Entity\UserEntityListener::class              => Factory\EventListener\Entity\UserEntityListenerFactory::class,
-            'zfcuser_user_service'                                               => Factory\Service\UserFactory::class,
+            'zfcuser_user_service'                                      => Factory\Service\UserFactory::class,
         ],
         'abstract_factories' => [],
         'services'           => [],
@@ -64,7 +64,7 @@ return [
         ],
     ],
 
-    'listeners'     => [
+    'listeners' => [
         EventListener\UnauthorizedStrategy::class => EventListener\UnauthorizedStrategy::class,
     ],
 
@@ -73,7 +73,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'        => [
+    'router'    => [
         'routes' => [
             'zfcadmin'                   => [
                 'child_routes' => [
@@ -196,18 +196,18 @@ return [
         ],
     ],
 
-    'controllers' => [
+    'controllers'   => [
         'aliases'   => [
-            'User::ConfirmEmail'      => Controller\ConfirmEmailController::class,
-            'User::RecoverAccount'    => Controller\RecoverAccountController::class,
+            'User::ConfirmEmail'        => Controller\ConfirmEmailController::class,
+            'User::RecoverAccount'      => Controller\RecoverAccountController::class,
             'User::Backend\Accounts'    => Controller\Backend\AccountsController::class,
             'User::Backend\Acl\Roles'   => Controller\Backend\Acl\RolesController::class,
             'User::Backend\Preferences' => Controller\Backend\PreferencesController::class,
         ],
         'factories' => [
-            'zfcuser'                                     => Factory\Controller\UserControllerFactory::class,
-            Controller\ConfirmEmailController::class      => Factory\Controller\ConfirmEmailControllerFactory::class,
-            Controller\RecoverAccountController::class    => Factory\Controller\RecoverAccountControllerFactory::class,
+            'zfcuser'                                       => Factory\Controller\UserControllerFactory::class,
+            Controller\ConfirmEmailController::class        => Factory\Controller\ConfirmEmailControllerFactory::class,
+            Controller\RecoverAccountController::class      => Factory\Controller\RecoverAccountControllerFactory::class,
             Controller\Backend\AccountsController::class    => Factory\Controller\Backend\AccountsControllerFactory::class,
             Controller\Backend\Acl\RolesController::class   => Factory\Controller\Backend\Acl\RolesControllerFactory::class,
             Controller\Backend\PreferencesController::class => Factory\Controller\Backend\PreferencesControllerFactory::class,
@@ -218,7 +218,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'    => [
+    'doctrine'      => [
         'eventmanager'    => [
             'orm_default' => [
                 'subscribers' => [],
@@ -271,7 +271,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'        => [
+    'asset_manager' => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -300,7 +300,7 @@ return [
             ],
         ],
     ],
-    'command_bus' => [
+    'command_bus'           => [
         'command_map' => [
             Command\PersistUserAccount::class => Command\Handler\PersistUserAccountHandler::class,
         ],

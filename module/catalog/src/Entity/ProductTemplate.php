@@ -62,6 +62,16 @@ class ProductTemplate extends AbstractEntity implements
     protected $sortOrder = 0;
 
     /**
+     * Perform a deep clone
+     *
+     * @return ProductTemplateEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
+    }
+
+    /**
      * Object constructor
      *
      */
@@ -71,16 +81,6 @@ class ProductTemplate extends AbstractEntity implements
         $this->features = new ArrayCollection();
         $this->attributes = new ArrayCollection();
         $this->products = new ArrayCollection();
-    }
-
-    /**
-     * Perform a deep clone
-     *
-     * @return ProductTemplateEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
     }
 
     /**

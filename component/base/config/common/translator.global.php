@@ -8,9 +8,9 @@
 return [
     'translator' =>
         [
-            'locale' =>
-                ['default_locale' => 'en_US',
-                    'fallback_locale' => 'en_US'
+            'locale'                =>
+                ['default_locale'  => 'en_US',
+                 'fallback_locale' => 'en_US'
                 ],
             'event_manager_enabled' => false,
             /**
@@ -37,9 +37,9 @@ return [
             'translation_file_patterns' => [
                 __FILE__ => [
                     'text_domain' => 'default',
-                    'type' => 'gettext',
-                    'base_dir' => __DIR__ . '/../../language',
-                    'pattern' => '%s.mo',
+                    'type'        => 'gettext',
+                    'base_dir'    => __DIR__ . '/../../language',
+                    'pattern'     => '%s.mo',
                 ],
             ],
         ]

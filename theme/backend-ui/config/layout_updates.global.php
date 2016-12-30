@@ -55,7 +55,7 @@ return [
 
         ],
     ],
-    'global'                      => [
+    'global'                            => [
         'guard-unauthorized' => [
             'helpers' => [
                 'headLink' => [
@@ -76,7 +76,7 @@ return [
             ],
         ],
     ],
-    'backend/unauthorized'        => [
+    'backend/unauthorized'              => [
         'default' => [
             'helpers' => [
                 'headLink' => [

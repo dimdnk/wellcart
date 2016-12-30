@@ -7,9 +7,8 @@
  */
 
 
-
 return [
-    'wellcart'        => [
+    'wellcart' => [
         'user_account_options' => [
             'max_login_attempts' => 5,
             'password_reset'     => [

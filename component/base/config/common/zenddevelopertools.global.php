@@ -16,7 +16,7 @@ return ['zenddevelopertools' => [
          * Expects: bool
          * Default: true
          */
-        'enabled' => false,
+        'enabled'     => false,
         /**
          * Enables or disables the strict mode. If the strict mode is enabled, any error will throw an exception,
          * otherwise all errors will be added to the report (and shown in the toolbar).
@@ -24,7 +24,7 @@ return ['zenddevelopertools' => [
          * Expects: bool
          * Default: true
          */
-        'strict' => true,
+        'strict'      => true,
         /**
          * If enabled, the profiler tries to flush the content before the it starts collecting data. This option
          * will be ignored if the Toolbar is enabled.
@@ -43,7 +43,7 @@ return ['zenddevelopertools' => [
          * Expects: string
          * Default: 'storage/cache'
          */
-        'cache_dir' => WELLCART_STORAGE_PATH . 'code',
+        'cache_dir'   => WELLCART_STORAGE_PATH . 'code',
         /**
          * If a matches is defined, the profiler will be disabled if the request does not match the pattern.
          *
@@ -52,7 +52,7 @@ return ['zenddevelopertools' => [
          * 'matcher' => array('url' => array('path' => '/admin')
          * Note: The matcher is not implemented yet!
          */
-        'matcher' => [],
+        'matcher'     => [],
         /**
          * Contains a list with all collector the profiler should run. Zend Developer Tools ships with
          * 'db' (Zend\Db), 'time', 'event', 'memory', 'exception', 'request' and 'mail' (Zend\Mail). If you wish to
@@ -61,9 +61,9 @@ return ['zenddevelopertools' => [
          * Example: 'collectors' => array('db' => null)
          * Expects: array
          */
-        'collectors' => []
+        'collectors'  => []
     ],
-    'events' => [
+    'events'   => [
         /**
          * Set to true to enable event-level logging for collectors that will support it. This enables a wildcard
          * listener onto the shared event manager that will allow profiling of user-defined events as well as the
@@ -72,7 +72,7 @@ return ['zenddevelopertools' => [
          * Expects: bool
          * Default: false
          */
-        'enabled' => true,
+        'enabled'     => true,
         /**
          * Contains a list with all event-level collectors that should run. Zend Developer Tools ships with 'time'
          * and 'memory'. If you wish to disable a default collector, simply set the value to null or false.
@@ -80,7 +80,7 @@ return ['zenddevelopertools' => [
          * Example: 'collectors' => array('memory' => null)
          * Expects: array
          */
-        'collectors' => [],
+        'collectors'  => [],
         /**
          * Contains event identifiers used with the event listener. Zend Developer Tools defaults to listen to all
          * events. If you wish to disable the default all-inclusive identifier, simply set the value to null or
@@ -94,28 +94,28 @@ return ['zenddevelopertools' => [
     /**
      * General Toolbar settings
      */
-    'toolbar' => [
+    'toolbar'  => [
         /**
          * Enables or disables the Toolbar.
          *
          * Expects: bool
          * Default: false
          */
-        'enabled' => false,
+        'enabled'       => false,
         /**
          * If enabled, every empty collector will be hidden.
          *
          * Expects: bool
          * Default: false
          */
-        'auto_hide' => false,
+        'auto_hide'     => false,
         /**
          * The Toolbar position.
          *
          * Expects: string ('bottom' or 'top')
          * Default: bottom
          */
-        'position' => 'bottom',
+        'position'      => 'bottom',
         /**
          * If enabled, the Toolbar will check if your current Zend Framework version is up-to-date.
          * Note: The check will only occur once every hour.
@@ -141,7 +141,7 @@ return ['zenddevelopertools' => [
          * ),
          * Expects: array
          */
-        'entries' => []
+        'entries'       => []
     ],
 ]
 ];

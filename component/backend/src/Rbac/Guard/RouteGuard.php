@@ -50,9 +50,9 @@ class RouteGuard
         $event->setError(self::GUARD_UNAUTHORIZED);
         $event->setParam(
             'exception', new UnauthorizedException(
-            'You are not authorized to access this resource',
-            403
-        )
+                'You are not authorized to access this resource',
+                403
+            )
         );
         $event->stopPropagation(true);
         $application = $event->getApplication();

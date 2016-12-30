@@ -59,16 +59,6 @@ class Loader extends
     }
 
     /**
-     * @inheritdoc
-     */
-    public function addFixture(FixtureInterface $fixture)
-    {
-        if ($this->validFixture($fixture)) {
-            return parent::addFixture($fixture);
-        }
-    }
-
-    /**
      * Load data fixtures form application modules
      */
     final protected function loadFromModules()
@@ -91,6 +81,16 @@ class Loader extends
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function addFixture(FixtureInterface $fixture)
+    {
+        if ($this->validFixture($fixture)) {
+            return parent::addFixture($fixture);
         }
     }
 

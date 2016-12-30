@@ -16,8 +16,8 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-        'system_config_editor_navigation'                 => Factory\Navigation\Service\SystemConfigEditorFactory::class,
-        Form\Account::class                     =>
+        'system_config_editor_navigation'         => Factory\Navigation\Service\SystemConfigEditorFactory::class,
+        Form\Account::class                       =>
             function (ContainerInterface $services) {
                 $form = new Form\Account(
                     new FormFactory($services->get('FormElementManager')),
@@ -26,7 +26,7 @@ return [
                 return $form;
             },
         Repository\Administrators::class
-                                                          =>
+                                                  =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_admin_object_manager')
                     ->getRepository(
@@ -34,7 +34,7 @@ return [
                     );
             },
         Repository\Notifications::class
-                                                          =>
+                                                  =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_admin_object_manager')
                     ->getRepository(
@@ -42,7 +42,7 @@ return [
                     );
             },
         Service\Notification::class
-                                                          =>
+                                                  =>
             function (ContainerInterface $services) {
                 return new Notification(
                     $services->get(

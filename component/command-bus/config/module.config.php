@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 namespace WellCart\CommandBus;
+
 use SimpleBus\Message\Bus\Middleware\FinishesHandlingMessageBeforeHandlingNext as FinishesHandlingMessage;
 use SimpleBus\Message\Handler\DelegatesToMessageHandlerMiddleware;
 use SimpleBus\Message\Name\ClassBasedNameResolver;
@@ -61,7 +62,7 @@ return [
             ],
         ],
         'command_map'                    => [
-            \Closure::class       => ClosureHandler::class,
+            \Closure::class      => ClosureHandler::class,
             PersistEntity::class => PersistEntityHandler::class,
         ],
     ],

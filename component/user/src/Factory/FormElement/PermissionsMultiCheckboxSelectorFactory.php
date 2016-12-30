@@ -13,8 +13,7 @@ use Interop\Container\ContainerInterface;
 class PermissionsMultiCheckboxSelectorFactory
 {
     public function __invoke(ContainerInterface $sm
-    )
-    {
+    ) {
         $services = $sm->getServiceLocator();
         $permissions = $services->get(
             'WellCart\User\Spec\AclPermissionRepository'

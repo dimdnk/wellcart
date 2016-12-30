@@ -56,6 +56,16 @@ class Feature extends AbstractEntity implements
     protected $backendName;
 
     /**
+     * Perform a deep clone
+     *
+     * @return FeatureEntity
+     */
+    public function __clone()
+    {
+        $this->__construct();
+    }
+
+    /**
      * Object constructor
      *
      */
@@ -64,16 +74,6 @@ class Feature extends AbstractEntity implements
         $this->translations = new ArrayCollection();
         $this->values = new ArrayCollection();
         $this->productTemplates = new ArrayCollection();
-    }
-
-    /**
-     * Perform a deep clone
-     *
-     * @return FeatureEntity
-     */
-    public function __clone()
-    {
-        $this->__construct();
     }
 
     /**

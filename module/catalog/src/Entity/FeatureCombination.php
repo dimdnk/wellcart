@@ -40,14 +40,6 @@ class FeatureCombination
     protected $product;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * Perform a deep clone
      *
      * @return FeatureCombinationEntity
@@ -55,6 +47,14 @@ class FeatureCombination
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
     }
 
     /**

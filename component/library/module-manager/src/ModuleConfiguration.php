@@ -26,8 +26,8 @@ class ModuleConfiguration extends Config
      *
      * @param string|array $dirOrArray
      */
-  public function __construct($dirOrArray)
-  {
+    public function __construct($dirOrArray)
+    {
         $allowModifications = true;
         if (is_string($dirOrArray)) {
             parent::__construct([], $allowModifications);

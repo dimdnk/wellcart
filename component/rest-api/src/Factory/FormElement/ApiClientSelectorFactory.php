@@ -19,8 +19,7 @@ class ApiClientSelectorFactory
      * @return \WellCart\Form\Element\Select
      */
     public function __invoke(ContainerInterface $sm
-    ): \WellCart\Form\Element\Select
-    {
+    ): \WellCart\Form\Element\Select {
         $services = $sm->getServiceLocator();
         $clients = $services->get(
             Repository\OAuth2\Clients'
@@ -30,7 +29,7 @@ class ApiClientSelectorFactory
             null,
             ['value_options' => $clients,
              'empty_option'  => __(
-                 '- Select client -'
+                 ' - Select client - '
              ),
             ]
         );

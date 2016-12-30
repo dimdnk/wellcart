@@ -88,17 +88,6 @@ class Role extends AbstractRole implements AclRoleEntity
     protected $updatedAt;
 
     /**
-     * Object constructor
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->users = new ArrayCollection;
-        $this->permissions = new ArrayCollection;
-        $this->children = new ArrayCollection();
-    }
-
-    /**
      * @param int $index
      *
      * @return AclRoleEntity
@@ -117,6 +106,17 @@ class Role extends AbstractRole implements AclRoleEntity
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->users = new ArrayCollection;
+        $this->permissions = new ArrayCollection;
+        $this->children = new ArrayCollection();
     }
 
     /**

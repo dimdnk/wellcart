@@ -40,14 +40,6 @@ class AttributeCombination
     protected $variant;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * Perform a deep clone
      *
      * @return AttributeCombinationEntity
@@ -55,6 +47,14 @@ class AttributeCombination
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
     }
 
     /**

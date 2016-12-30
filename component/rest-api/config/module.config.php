@@ -190,7 +190,7 @@ return [
     ],
     'controllers'     => [
         'aliases'    => [
-            'RestApi::Hello'                   => Controller\HelloController::class,
+            'RestApi::Hello'                     => Controller\HelloController::class,
             'RestApi::Backend\OAuth2\PublicKeys' => Controller\Backend\OAuth2\PublicKeysController::class,
             'RestApi::Backend\OAuth2\Clients'    => Controller\Backend\OAuth2\ClientsController::class,
             'RestApi::Backend\OAuth2\Scopes'     => Controller\Backend\OAuth2\ScopesController::class,

@@ -103,17 +103,6 @@ class AbstractUser extends AbstractEntity implements
     protected $updatedAt;
 
     /**
-     * Object constructor
-     *
-     * @return UserEntity
-     */
-    public function __construct()
-    {
-        $this->setCreatedAt(new Time());
-        $this->roles = new ArrayCollection;
-    }
-
-    /**
      * @return int
      */
     public function getFailedLoginCount()
@@ -140,6 +129,17 @@ class AbstractUser extends AbstractEntity implements
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     * @return UserEntity
+     */
+    public function __construct()
+    {
+        $this->setCreatedAt(new Time());
+        $this->roles = new ArrayCollection;
     }
 
     /**

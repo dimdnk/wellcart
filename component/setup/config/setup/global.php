@@ -9,7 +9,7 @@
 namespace WellCart\Setup;
 
 return [
-    'wellcart'        => [
+    'wellcart' => [
         'website'              => [
             'name' => 'WellCart',
         ],
@@ -24,7 +24,7 @@ return [
         ],
     ],
 
-    'php_settings'    => [
+    'php_settings' => [
         'log_errors'             => true,
         'display_errors'         => true,
         'display_startup_errors' => true,
@@ -38,7 +38,7 @@ return [
     /**
      * Session configuration
      */
-    'session'         => [
+    'session'      => [
         'config'     => [
             'options' => [
                 'name'           => 'wellcart_setup_sid',
@@ -59,7 +59,7 @@ return [
      * View manager configuration
      * =========================================================
      */
-    'view_manager'    => [
+    'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
         'layout'                   => 'layout/setup-wizard',
@@ -67,11 +67,11 @@ return [
             __DIR__ . '/../../view',
         ],
     ],
-    'ze_theme'        => [
+    'ze_theme'     => [
         'default_theme' => 'wellcart-setup-ui',
         'routes'        => [],
     ],
-    'wizard'          => [
+    'wizard'       => [
         /**
          * Default layout template of the wizard
          */
@@ -104,5 +104,5 @@ return [
             ],
         ],
     ],
-    'wizard_steps'    => [],
+    'wizard_steps' => [],
 ];

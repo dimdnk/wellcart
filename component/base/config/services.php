@@ -70,7 +70,7 @@ return [
                 );
             },
 
-        'system_configuration_editor'                    =>
+        'system_configuration_editor'              =>
             function (ContainerInterface $services) {
                 $form = new ConfigEditorForm;
                 $form->setAttribute('action', '');
@@ -88,35 +88,35 @@ return [
                 );
                 return $editor;
             },
-        Repository\Configuration::class         =>
+        Repository\Configuration::class            =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
                         Spec\ConfigurationEntity::class
                     );
             },
-        Repository\UrlRewrites::class           =>
+        Repository\UrlRewrites::class              =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
                         Spec\UrlRewriteEntity::class
                     );
             },
-        Repository\Locale\Languages::class      =>
+        Repository\Locale\Languages::class         =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
                         Spec\LocaleLanguageEntity::class
                     );
             },
-        Repository\Queue\Jobs::class            =>
+        Repository\Queue\Jobs::class               =>
             function (ContainerInterface $services) {
                 return $services->get('wellcart_base_object_manager')
                     ->getRepository(
                         Spec\JobQueueEntity::class
                     );
             },
-        Form\Locale\Language::class             =>
+        Form\Locale\Language::class                =>
             function (ContainerInterface $services) {
                 $form = new Form\Locale\Language(
                     new FormFactory($services->get('FormElementManager')),
@@ -124,7 +124,7 @@ return [
                 );
                 return $form;
             },
-        Form\UrlRewrite::class                  =>
+        Form\UrlRewrite::class                     =>
             function (ContainerInterface $services) {
                 $form = new Form\UrlRewrite(
                     new FormFactory($services->get('FormElementManager')),
@@ -140,7 +140,7 @@ return [
                     $services->get('RootView')
                 );
             },
-        'Zend\Session\SessionManager'                    =>
+        'Zend\Session\SessionManager'              =>
             function (
                 ContainerInterface $services
             ) {
@@ -201,7 +201,7 @@ return [
                 return $sessionManager;
             },
         'base_csrf_validator'
-                                                         =>
+                                                   =>
             function (ContainerInterface $services
             ) {
                 return (

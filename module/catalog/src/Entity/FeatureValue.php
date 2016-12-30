@@ -45,15 +45,6 @@ class FeatureValue extends AbstractEntity implements
     protected $feature;
 
     /**
-     * Object constructor
-     *
-     */
-    public function __construct()
-    {
-        $this->translations = new ArrayCollection();
-    }
-
-    /**
      * Perform a deep clone
      *
      * @return FeatureValueEntity
@@ -61,6 +52,15 @@ class FeatureValue extends AbstractEntity implements
     public function __clone()
     {
         $this->__construct();
+    }
+
+    /**
+     * Object constructor
+     *
+     */
+    public function __construct()
+    {
+        $this->translations = new ArrayCollection();
     }
 
     /**

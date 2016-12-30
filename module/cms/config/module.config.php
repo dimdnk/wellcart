@@ -33,7 +33,7 @@ return [
         ],
     ],
 
-    'controllers'    => [
+    'controllers'   => [
         'aliases'   => [
             'CMS::Backend\Pages' => Controller\Backend\PagesController::class,
         ],
@@ -47,7 +47,7 @@ return [
      * Router configuration
      * =========================================================
      */
-    'router'         => [
+    'router'        => [
         'routes' => [
             'zfcadmin' => [
                 'child_routes' => [
@@ -92,7 +92,7 @@ return [
      * Doctrine configuration
      * =========================================================
      */
-    'doctrine'       => [
+    'doctrine'      => [
         'driver'          => [
             'wellcart_cms_driver' => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -124,7 +124,7 @@ return [
      * Static assets configuration
      * =========================================================
      */
-    'asset_manager'  => [
+    'asset_manager' => [
         'resolver_configs' => [
             'paths' => [
                 __DIR__ => __DIR__ . '/../public/',
@@ -137,7 +137,7 @@ return [
      * Translator configuration
      * =========================================================
      */
-    'translator'     => [
+    'translator'    => [
         'translation_file_patterns' => [
             __FILE__ => [
                 'text_domain' => 'default',

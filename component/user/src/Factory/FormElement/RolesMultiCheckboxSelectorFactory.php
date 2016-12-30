@@ -13,8 +13,7 @@ use Interop\Container\ContainerInterface;
 class RolesMultiCheckboxSelectorFactory
 {
     public function __invoke(ContainerInterface $sm
-    )
-    {
+    ) {
         $services = $sm->getServiceLocator();
         $roles = $services->get(
             'WellCart\User\Spec\AclRoleRepository'

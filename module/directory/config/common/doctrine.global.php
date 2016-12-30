@@ -13,7 +13,7 @@ namespace WellCart\Directory;
  * =========================================================
  */
 return [
-    'doctrine'       => [
+    'doctrine' => [
         'driver'          => [
             'wellcart_directory_driver' => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',

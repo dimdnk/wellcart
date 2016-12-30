@@ -9,7 +9,7 @@
 use Zend\Http\Response;
 
 return [
-    'wellcart'        => [
+    'wellcart' => [
         'website'              => [
             'name' => 'Demo Application',
         ],

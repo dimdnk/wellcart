@@ -212,59 +212,6 @@ class Renderer
     }
 
     /**
-     * @param  \Zend\Validator\ValidatorInterface $validator
-     *
-     * @return null|Rule\AbstractRule
-     */
-    public function getRule(ValidatorInterface $validator = null)
-    {
-        $validatorName = lcfirst($this->getValidatorClassName($validator));
-        if ($this->getRulePluginManager()->has($validatorName)) {
-            $rule = $this->getRulePluginManager()->get($validatorName);
-            if ($rule instanceof TranslatorAwareInterface) {
-                $rule->setTranslatorTextDomain(
-                    $this->getTranslatorTextDomain()
-                );
-            }
-            return $rule;
-        }
-        return null;
-    }
-
-    /**
-     * @return RulePluginManager
-     */
-    public function getRulePluginManager()
-    {
-        return $this->rulePluginManager;
-    }
-
-    /**
-     * @param RulePluginManager $rulePluginManager
-     */
-    public function setRulePluginManager(RulePluginManager $rulePluginManager)
-    {
-        $this->rulePluginManager = $rulePluginManager;
-    }
-
-    /**
-     * @return AbstractOptions
-     */
-    public function getOptions()
-    {
-        return $this->options;
-    }
-
-    /**
-     * @param array $options
-     */
-    public function setOptions(array $options = [])
-    {
-        $this->options = clone $this->defaultOptions;
-        $this->options->setFromArray($options);
-    }
-
-    /**
      * @param string                             $formAlias
      * @param \Zend\Form\ElementInterface        $element
      * @param \Zend\Validator\ValidatorInterface $validator
@@ -322,6 +269,42 @@ class Renderer
     }
 
     /**
+     * @param  \Zend\Validator\ValidatorInterface $validator
+     *
+     * @return null|Rule\AbstractRule
+     */
+    public function getRule(ValidatorInterface $validator = null)
+    {
+        $validatorName = lcfirst($this->getValidatorClassName($validator));
+        if ($this->getRulePluginManager()->has($validatorName)) {
+            $rule = $this->getRulePluginManager()->get($validatorName);
+            if ($rule instanceof TranslatorAwareInterface) {
+                $rule->setTranslatorTextDomain(
+                    $this->getTranslatorTextDomain()
+                );
+            }
+            return $rule;
+        }
+        return null;
+    }
+
+    /**
+     * @return RulePluginManager
+     */
+    public function getRulePluginManager()
+    {
+        return $this->rulePluginManager;
+    }
+
+    /**
+     * @param RulePluginManager $rulePluginManager
+     */
+    public function setRulePluginManager(RulePluginManager $rulePluginManager)
+    {
+        $this->rulePluginManager = $rulePluginManager;
+    }
+
+    /**
      * Get the name of the form element
      *
      * @param  \Zend\Form\ElementInterface $element
@@ -338,6 +321,23 @@ class Renderer
         }
 
         return $elementName;
+    }
+
+    /**
+     * @return AbstractOptions
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * @param array $options
+     */
+    public function setOptions(array $options = [])
+    {
+        $this->options = clone $this->defaultOptions;
+        $this->options->setFromArray($options);
     }
 
     /**

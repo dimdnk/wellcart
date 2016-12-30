@@ -45,14 +45,14 @@ return [
                         'permission' => 'catalog/attributes/list',
                     ],
 
-                    'zfcadmin/catalog/features'          => [
+                    'zfcadmin/catalog/features' => [
                         'label'      => 'Features',
                         'route'      => 'zfcadmin/catalog/features',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/features/list',
                     ],
-                    'zfcadmin/catalog/brands'            => [
+                    'zfcadmin/catalog/brands'   => [
                         'label'      => 'Brands',
                         'route'      => 'zfcadmin/catalog/brands',
                         'action'     => 'list',
