@@ -15,8 +15,7 @@ use WellCart\RestApi\Controller\Backend\OAuth2\ScopesController;
 class ScopesControllerFactory
 {
     public function __invoke(ContainerInterface $sm
-    ): ScopesController
-    {
+    ): ScopesController {
         $controller = new ScopesController(
             $sm->getServiceLocator()
                 ->get(\WellCart\RestApi\Repository\OAuth2\Scopes::class)

@@ -203,47 +203,6 @@ class GridFilterBuilder extends AbstractPlugin
     }
 
     /**
-     * @return array
-     */
-    public function getDefaultOrder()
-    {
-        return $this->defaultOrder;
-    }
-
-    /**
-     * @param        $sortBy
-     * @param string $sortOrder
-     *
-     * @return GridFilterBuilder
-     */
-    public function setDefaultOrder($sortBy, $sortOrder = 'asc')
-    {
-        $formElements = $this->scopes[$this->scope]['form_elements'];
-        if (array_key_exists($sortBy, $formElements)) {
-            $this->defaultOrder = [
-                'sortBy'    => $sortBy,
-                'sortOrder' => $sortOrder,
-            ];
-        }
-
-        return $this;
-    }
-
-    /**
-     * Get paged entities
-     *
-     * @param int $page
-     * @param int $perPage
-     *
-     * @return Paginator
-     */
-    public function paginate($page = 1, $perPage = 50)
-    {
-        $queryBuilder = $this->scopes[$this->scope]['query_builder'];
-        return $queryBuilder->paginate($page, $perPage);
-    }
-
-    /**
      * @param string       $prefix
      * @param string       $expressionType
      * @param string       $column
@@ -377,5 +336,46 @@ class GridFilterBuilder extends AbstractPlugin
                 break;
         }
 
+    }
+
+    /**
+     * @return array
+     */
+    public function getDefaultOrder()
+    {
+        return $this->defaultOrder;
+    }
+
+    /**
+     * @param        $sortBy
+     * @param string $sortOrder
+     *
+     * @return GridFilterBuilder
+     */
+    public function setDefaultOrder($sortBy, $sortOrder = 'asc')
+    {
+        $formElements = $this->scopes[$this->scope]['form_elements'];
+        if (array_key_exists($sortBy, $formElements)) {
+            $this->defaultOrder = [
+                'sortBy'    => $sortBy,
+                'sortOrder' => $sortOrder,
+            ];
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get paged entities
+     *
+     * @param int $page
+     * @param int $perPage
+     *
+     * @return Paginator
+     */
+    public function paginate($page = 1, $perPage = 50)
+    {
+        $queryBuilder = $this->scopes[$this->scope]['query_builder'];
+        return $queryBuilder->paginate($page, $perPage);
     }
 }

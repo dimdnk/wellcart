@@ -50,17 +50,17 @@ class SystemConfigDriver extends YamlDriver
     /**
      * {@inheritDoc}
      */
-    public function getAllClassNames()
+    protected function initialize()
     {
-        return array_keys(Config::get('object_mapping', []));
+        $this->classCache = array();
     }
 
     /**
      * {@inheritDoc}
      */
-    protected function initialize()
+    public function getAllClassNames()
     {
-        $this->classCache = array();
+        return array_keys(Config::get('object_mapping', []));
     }
 
     /**
