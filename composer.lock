@@ -2965,16 +2965,16 @@
         },
         {
             "name": "josegonzalez/dotenv",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/josegonzalez/php-dotenv.git",
-                "reference": "eb9eb3beea37411d2f7b4960eed94fc72a592488"
+                "reference": "ff3461f2960737f54054dff4fef3482a2bb9682b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/eb9eb3beea37411d2f7b4960eed94fc72a592488",
-                "reference": "eb9eb3beea37411d2f7b4960eed94fc72a592488",
+                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/ff3461f2960737f54054dff4fef3482a2bb9682b",
+                "reference": "ff3461f2960737f54054dff4fef3482a2bb9682b",
                 "shasum": ""
             },
             "require": {
@@ -3013,7 +3013,7 @@
                 "dotenv",
                 "php"
             ],
-            "time": "2016-01-07T16:07:20+00:00"
+            "time": "2017-01-03T01:04:05+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
