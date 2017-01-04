@@ -12,8 +12,8 @@ namespace WellCart\Backend;
 
 use WellCart\Backend\Rbac\View\Strategy\UnauthorizedStrategy;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
-use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
 use Zend\EventManager\EventInterface;
@@ -26,8 +26,8 @@ class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
     VersionProviderInterface,
-    SetupDataFixturesProviderInterface,
-    SetupMigrationsProviderInterface,
+    DataFixturesProviderInterface,
+    MigrationsProviderInterface,
     ApigilityProviderInterface,
     ModulePathProviderInterface
 {

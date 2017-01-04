@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\SchemaMigration\Migration;
 
 use Phinx\Migration\Manager as AbstractManager;
-use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\SchemaMigration\AbstractMigration;
 
 class Manager extends AbstractManager
@@ -53,7 +53,7 @@ class Manager extends AbstractManager
                 ->getLoadedModules();
 
             foreach ($modules as $module) {
-                if (!$module instanceof SetupMigrationsProviderInterface) {
+                if (!$module instanceof MigrationsProviderInterface) {
                     continue;
                 }
                 $migrations = (array)$module->getSetupMigrations();

@@ -14,8 +14,8 @@ use ConLayout\ModuleManager\Feature\BlockProviderInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Locale;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
-use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
 use WellCart\ModuleManager\ModuleConfiguration;
@@ -42,8 +42,8 @@ class Module implements
     Feature\ControllerProviderInterface,
     Feature\InitProviderInterface,
     Feature\FormElementProviderInterface,
-    SetupDataFixturesProviderInterface,
-    SetupMigrationsProviderInterface,
+    DataFixturesProviderInterface,
+    MigrationsProviderInterface,
     VersionProviderInterface,
     ModulePathProviderInterface,
     BlockProviderInterface

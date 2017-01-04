@@ -11,8 +11,8 @@ declare(strict_types = 1);
 namespace WellCart\Catalog;
 
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
-use WellCart\ModuleManager\Feature\SetupMigrationsProviderInterface;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
 use Zend\ModuleManager\Feature;
@@ -21,8 +21,8 @@ use ZF\Apigility\Provider\ApigilityProviderInterface;
 class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
-    SetupDataFixturesProviderInterface,
-    SetupMigrationsProviderInterface,
+    DataFixturesProviderInterface,
+    MigrationsProviderInterface,
     ApigilityProviderInterface,
     VersionProviderInterface,
     ModulePathProviderInterface

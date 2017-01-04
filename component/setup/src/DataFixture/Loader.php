@@ -12,7 +12,7 @@ namespace WellCart\Setup\DataFixture;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\ORM\EntityManager;
-use WellCart\ModuleManager\Feature\SetupDataFixturesProviderInterface;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
 use WellCart\Setup\Exception\BadMethodCallException;
 
 class Loader extends
@@ -71,7 +71,7 @@ class Loader extends
                 ->getLoadedModules();
 
             foreach ($modules as $module) {
-                if (!$module instanceof SetupDataFixturesProviderInterface) {
+                if (!$module instanceof DataFixturesProviderInterface) {
                     continue;
                 }
                 $dataFixtures = (array)$module->getSetupDataFixtures();
