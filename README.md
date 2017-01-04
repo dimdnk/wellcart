@@ -7,7 +7,7 @@ WellCart Platform Skeleton Application
 
 WellCart is an open-source components for web apps:
 
-Fast, extensible platform, that helps to speed up development by providing ready-made forms and grids based on the server side controllers. You still have full flexibility in implementing Zend Framework 2 based Web Applications.
+Fast, extensible platform, that helps to speed up development by providing ready-made forms and grids based on the server side controllers. You still have full flexibility in implementing Zend Framework based Web Applications.
 Individual low coupled components, DI services, helpers & plugins for each simple responsibility. Strict OOP domain model, client & server input data validation, powerful & modern UI.
 
 ### System Requirements
