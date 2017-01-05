@@ -48,7 +48,7 @@ class PrepareFormLayout
       {
         if($element instanceof FieldsetInterface)
         {
-          $config = Arr::get($config, 'fieldset.' . $element->getName(), []);
+          $config = Arr::get($config, $element->getName(), []);
           if(!empty($config))
           {
             $this->composeForm($element, $config);
@@ -58,7 +58,7 @@ class PrepareFormLayout
         }
 
         $name =  $element->getName();
-        $elementConfig = Arr::get($config, $name, []);
+        $elementConfig = Arr::get($config, 'elements.' . $name, []);
         if(!empty($elementConfig))
         {
           $this->composeElement($element, $elementConfig);

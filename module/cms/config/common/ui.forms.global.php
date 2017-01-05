@@ -10,23 +10,24 @@ return [
     'form' =>
       [
         'cms_page' => [
-
-          'save' => [
-            'options'    => [
-              'fontAwesome' => [
-                'icon' => 'check'
+          'elements' => [
+            'save' => [
+              'options'    => [
+                'fontAwesome' => [
+                  'icon' => 'check'
+                ],
+              ],
+              'attributes' => [
+                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
               ],
             ],
-            'attributes' => [
-              'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
-            ],
-          ],
 
-          'save_and_continue_edit' => [
-            'attributes' => [
-              'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
-            ],
-          ]
+            'save_and_continue_edit' => [
+              'attributes' => [
+                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+              ],
+            ]
+          ],
         ]
       ]
   ]
