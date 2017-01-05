@@ -27,5 +27,10 @@ class ConsoleModel extends Model implements
     {
         parent::__construct($variables, $options);
         $this->setVariable('context', $this);
+      $this->getEventManager()
+        ->setIdentifiers([
+          __CLASS__,
+          get_class($this)
+        ]);
     }
 }

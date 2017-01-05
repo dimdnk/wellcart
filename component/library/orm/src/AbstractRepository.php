@@ -8,7 +8,9 @@
 
 namespace WellCart\ORM;
 
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Mapping;
 use Zend\EventManager\EventManagerAwareInterface;
 use Zend\EventManager\EventManagerAwareTrait;
 
@@ -18,7 +20,21 @@ abstract class AbstractRepository
 {
     use EventManagerAwareTrait, EventDrivenRepositoryTrait;
 
-    /**
+  /**
+   * @inheritDoc
+   */
+  public function __construct(EntityManager $em, Mapping\ClassMetadata $class)
+  {
+    parent::__construct($em, $class);
+    $this->getEventManager()
+      ->setIdentifiers([
+        __CLASS__,
+        get_class($this)
+      ]);
+  }
+
+
+  /**
      * @return QueryBuilder
      */
     abstract public function finder();

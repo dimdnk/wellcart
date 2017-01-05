@@ -8,6 +8,8 @@
 
 namespace WellCart\ORM;
 
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Mapping\ClassMetadata;
 use Gedmo\Tree\Entity\Repository\MaterializedPathRepository as Repository;
 use Zend\EventManager\EventManagerAwareInterface;
 use Zend\EventManager\EventManagerAwareTrait;
@@ -16,4 +18,19 @@ abstract class MaterializedPathRepository
     extends Repository implements EventManagerAwareInterface
 {
     use EventManagerAwareTrait, EventDrivenRepositoryTrait;
+
+  /**
+   * @inheritDoc
+   */
+  public function __construct(EntityManager $em, ClassMetadata $class)
+  {
+    parent::__construct($em, $class);
+    $this->getEventManager()
+      ->setIdentifiers([
+        __CLASS__,
+        get_class($this)
+      ]);
+  }
+
+
 }

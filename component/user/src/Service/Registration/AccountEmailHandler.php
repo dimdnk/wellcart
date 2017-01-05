@@ -79,6 +79,11 @@ class AccountEmailHandler
         $this->options = Arr::merge($this->options, $options);
 
         $events = $this->getEventManager();
+        $events
+          ->setIdentifiers([
+          __CLASS__,
+          get_class($this)
+        ]);
         $events->trigger('init', $this);
     }
 

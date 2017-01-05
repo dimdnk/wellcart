@@ -98,6 +98,11 @@ class RecoverAccount
         $this->options = Arr::merge($this->options, $options);
 
         $events = $this->getEventManager();
+        $events
+          ->setIdentifiers([
+          __CLASS__,
+          get_class($this)
+        ]);
 
         $events->attach(
             'initiate.pre',

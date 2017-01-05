@@ -8,6 +8,8 @@
 
 namespace WellCart\ORM;
 
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Mapping\ClassMetadata;
 use Gedmo\Tree\Entity\Repository\NestedTreeRepository as TreeRepository;
 use Zend\EventManager\EventManagerAwareInterface;
 use Zend\EventManager\EventManagerAwareTrait;
@@ -17,5 +19,16 @@ abstract class NestedTreeRepository
 {
     use EventManagerAwareTrait, EventDrivenRepositoryTrait;
 
-
+  /**
+   * @inheritDoc
+   */
+  public function __construct(EntityManager $em, ClassMetadata $class)
+  {
+    parent::__construct($em, $class);
+    $this->getEventManager()
+      ->setIdentifiers([
+        __CLASS__,
+        get_class($this)
+      ]);
+  }
 }

@@ -19,12 +19,15 @@ use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterInterface;
 use Zend\InputFilter\InputFilterProviderInterface;
 use Zend\Stdlib\PriorityList;
-use ZfcBase\Form\ProvidesEventsForm;
 
-class Form extends ProvidesEventsForm
+use Zend\EventManager\EventManagerAwareInterface;
+use Zend\EventManager\EventManagerAwareTrait;
+
+class Form extends \Zend\Form\Form implements EventManagerAwareInterface
 {
     use DomainInputFilterSpecConfigTrait,
-        AddAttributesToRequiredFieldsTrait;
+        AddAttributesToRequiredFieldsTrait,
+        EventManagerAwareTrait;
 
     /**
      * @var PriorityList
@@ -51,6 +54,11 @@ class Form extends ProvidesEventsForm
      */
     public function __construct($name = null, $options = [])
     {
+        $this->getEventManager()
+          ->setIdentifiers([
+          __CLASS__,
+          get_class($this)
+        ]);
         parent::__construct($name, $options);
         $this->toolbarButtons = new PriorityList;
         $this->toolbarButtons->isLIFO(false);

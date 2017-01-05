@@ -107,6 +107,7 @@ class AbstractItemView extends ViewModel
         if ($this->isPrepared()) {
             return $this;
         }
+      $this->getEventManager()->trigger(__FUNCTION__ .'.pre', $this);
 
         if ($template !== null) {
             $this->setTemplate($template);
@@ -118,6 +119,7 @@ class AbstractItemView extends ViewModel
         }
         $this->getEventManager()->trigger(__FUNCTION__, $this);
         $this->isPrepared = true;
+        $this->getEventManager()->trigger(__FUNCTION__ .'.post', $this);
         return $this;
     }
 

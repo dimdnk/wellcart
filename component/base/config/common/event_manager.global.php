@@ -10,6 +10,7 @@ namespace WellCart\Base;
 
 use ConLayout\Block\Factory\BlockFactory;
 use WellCart\Base\Service\ConfigurationEditor;
+use WellCart\Form\Form;
 
 return
     [
@@ -33,6 +34,12 @@ return
                     'event'    => 'createBlock.post',
                     'listener' => EventListener\Ui\PrepareLayoutItemView::class,
                     'priority' => -100,
+                ],
+                EventListener\Ui\PrepareFormLayout::class                     => [
+                  'id'       => Form::class,
+                  'event'    => 'init',
+                  'listener' => EventListener\Ui\PrepareFormLayout::class,
+                  'priority' => -100,
                 ],
             ],
         ]

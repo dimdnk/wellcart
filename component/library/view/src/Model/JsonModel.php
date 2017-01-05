@@ -16,4 +16,18 @@ class JsonModel extends Model implements
     EventManagerAwareInterface
 {
     use EventManagerAwareTrait;
+
+  /**
+   * @inheritDoc
+   */
+  public function __construct($variables = null, $options = null)
+  {
+    parent::__construct($variables, $options);
+    $this->getEventManager()
+      ->setIdentifiers([
+        __CLASS__,
+        get_class($this)
+      ]);
+  }
+
 }
