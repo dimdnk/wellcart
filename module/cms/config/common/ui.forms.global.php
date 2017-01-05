@@ -10,6 +10,7 @@ return [
     'form' =>
       [
         'cms_page' => [
+
           'elements' => [
             'save' => [
               'options'    => [
@@ -28,6 +29,80 @@ return [
               ],
             ]
           ],
+
+          'page' => [
+            'elements' => [
+              'status' => [
+                'options'    => [
+                  'twb-layout'          => 'horizontal',
+                  'column-size'         => 'md-12',
+                  'label_attributes'    => [
+                    'class' => 'col-md-8 col-md-offset-4',
+                  ],
+                ],
+                'attributes' => [
+                  'class' => 'switchery-element',
+                ],
+
+              ]
+            ],
+            'translations' => [
+              'elements' => [
+                'title' => [
+                  'options'    => [
+                    'twb-layout'       => 'horizontal',
+                    'column-size'      => 'md-8',
+                    'label_attributes' => [
+                      'class' => 'col-md-4',
+                    ],
+                  ],
+                  'attributes' => [
+                    'class' => 'form-control cms_page_title',
+                  ],
+                ],
+                'body' => [
+                  'options'    => [
+                    'twb-layout'       => 'horizontal',
+                    'column-size'      => 'md-8',
+                    'label_attributes' => [
+                      'class' => 'col-md-4',
+                    ],
+                  ],
+                  'attributes' => [
+                    'class' => 'wysiwyg-tinymce',
+                    'rows'  => 50,
+                  ],
+                ],
+                'meta_title' => [
+                  'options'    => [
+                    'twb-layout'       => 'horizontal',
+                    'column-size'      => 'md-8',
+                    'label_attributes' => [
+                      'class' => 'col-md-4',
+                    ],
+                  ],
+                ],
+                'meta_keywords' => [
+                  'options'    => [
+                    'twb-layout'       => 'horizontal',
+                    'column-size'      => 'md-8',
+                    'label_attributes' => [
+                      'class' => 'col-md-4',
+                    ],
+                  ],
+                ],
+                'meta_description' => [
+                  'options'    => [
+                    'twb-layout'       => 'horizontal',
+                    'column-size'      => 'md-8',
+                    'label_attributes' => [
+                      'class' => 'col-md-4',
+                    ],
+                  ],
+                ],
+              ],
+            ]
+          ]
         ]
       ]
   ]

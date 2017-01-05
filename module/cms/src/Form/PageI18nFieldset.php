@@ -54,14 +54,6 @@ class PageI18nFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Title'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
-                ],
-                'attributes' => [
-                    'class' => 'form-control cms_page_title',
                 ],
             ],
             ['priority' => 700]
@@ -73,15 +65,9 @@ class PageI18nFieldset extends Fieldset
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Content'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'class' => 'wysiwyg-tinymce',
-                    'rows'  => 50,
                 ],
             ],
             ['priority' => 650]
@@ -93,13 +79,7 @@ class PageI18nFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Page Title'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
-                'attributes' => [],
             ],
             ['priority' => 600]
         );
@@ -110,13 +90,7 @@ class PageI18nFieldset extends Fieldset
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Meta Keywords'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
-                'attributes' => [],
             ],
             ['priority' => 550]
         );
@@ -127,14 +101,9 @@ class PageI18nFieldset extends Fieldset
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Meta Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Maximum 255 chars'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+
                 ],
-                'attributes' => [],
             ],
             ['priority' => 500]
         );

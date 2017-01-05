@@ -44,16 +44,11 @@ class PrepareFormLayout
         array $config
     )
     {
-      foreach ($fieldset->getElements() as $element)
+      foreach ($fieldset->getIterator() as $element)
       {
         if($element instanceof FieldsetInterface)
         {
-          $config = Arr::get($config, $element->getName(), []);
-          if(!empty($config))
-          {
-            $this->composeForm($element, $config);
-            unset($config);
-          }
+          $this->composeForm($element, Arr::get($config, $element->getName(), []));
           continue;
         }
 
@@ -75,12 +70,20 @@ class PrepareFormLayout
       $options = Arr::get($config, 'options', []);
       foreach ($options as $option => $value)
       {
-        $element->setOption($option, $value);
+        switch ($option) {
+          case 'label_attributes':
+            $element->setLabelAttributes($value);
+            break;
+          default:
+            $element->setOption($option, $value);
+            break;
+        }
       }
       $attributes = Arr::get($config, 'attributes', []);
       foreach ($attributes as $attribute => $value)
       {
         $element->setAttribute($attribute, $value);
+
       }
       unset($options,$attributes);
     }

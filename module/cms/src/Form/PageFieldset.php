@@ -41,18 +41,12 @@ class PageFieldset extends Fieldset
                 'options'    => [
                     'label'               => __('Online'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'cms_page_status',
-                    'class' => 'switchery-element',
                     'value' => 1,
                 ],
             ],
