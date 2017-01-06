@@ -24,6 +24,11 @@ return [
             ],
 
             'save_and_continue_edit' => [
+                'options'    => [
+                    'fontAwesome' => [
+                        'icon' => 'check-circle'
+                    ],
+                ],
               'attributes' => [
                 'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
               ],
