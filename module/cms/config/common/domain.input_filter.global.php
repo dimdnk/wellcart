@@ -7,8 +7,10 @@
  */
 
 return [
-  'input_filter_specs' =>
-    [
+  'domain' => [
+    'input_filter' =>
+      [
 
-    ]
+      ]
+  ]
 ];

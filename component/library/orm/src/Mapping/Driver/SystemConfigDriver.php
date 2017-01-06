@@ -35,9 +35,9 @@ class SystemConfigDriver extends YamlDriver
         }
 
         $result = Config::get(
-            'object_mapping.' . str_replace('.', '\\', $className),
+            'domain.mapping.' . str_replace('.', '\\', $className),
             Config::get(
-                'object_mapping.' . str_replace('\\', '\\\\', $className)
+                'domain.mapping.' . str_replace('\\', '\\\\', $className)
             )
         );
         if ($result === null) {
@@ -60,7 +60,7 @@ class SystemConfigDriver extends YamlDriver
      */
     public function getAllClassNames()
     {
-        return array_keys(Config::get('object_mapping', []));
+        return array_keys(Config::get('domain.mapping', []));
     }
 
     /**
