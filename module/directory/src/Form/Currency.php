@@ -44,11 +44,7 @@ class Currency extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Currency Title'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_title',
@@ -63,11 +59,6 @@ class Currency extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Code'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_code',
@@ -82,11 +73,6 @@ class Currency extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Symbol'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_symbol',
@@ -101,11 +87,6 @@ class Currency extends AbstractForm
                 'type'       => 'Select',
                 'options'    => [
                     'label'            => __('Symbol Position'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                     'value_options'    => [
                         'left'  => __('Left'),
                         'right' => __('Right'),
@@ -128,11 +109,6 @@ class Currency extends AbstractForm
                     'help-block'       => __(
                         'This rate is to be defined according to your default currency. Primary currency always set to 1.'
                     ),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'       => 'directory_currency_exchange_rate',
@@ -148,11 +124,6 @@ class Currency extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Decimal Places'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_decimals',
@@ -167,11 +138,6 @@ class Currency extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Decimals Sign'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'       => 'directory_currency_decimals_separator',
@@ -187,11 +153,6 @@ class Currency extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Thousands Sign'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'       => 'directory_currency_thousands_separator',
@@ -208,18 +169,12 @@ class Currency extends AbstractForm
                 'options'    => [
                     'label'               => __('Is Enabled'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'directory_currency_status',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 300]
@@ -232,18 +187,12 @@ class Currency extends AbstractForm
                 'options'    => [
                     'label'               => __('Is Primary'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'directory_currency_is_primary',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 250]
@@ -279,8 +228,7 @@ class Currency extends AbstractForm
         $saveAndContinue = clone $this->get('save');
         $saveAndContinue
             ->setName('save_and_continue_edit')
-            ->setLabel(__('Save & Continue Edit'))
-            ->setOption('fontAwesome', ['icon' => 'check-circle']);
+            ->setLabel(__('Save & Continue Edit'));
         $this->addToolbarButton($saveAndContinue, 120000);
 
         $this->getEventManager()->trigger('init', $this);

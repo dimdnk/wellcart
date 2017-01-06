@@ -88,8 +88,7 @@ class Product extends AbstractForm
         $saveAndContinue = clone $this->get('save');
         $saveAndContinue
             ->setName('save_and_continue_edit')
-            ->setLabel(__('Save & Continue Edit'))
-            ->setOption('fontAwesome', ['icon' => 'check-circle']);
+            ->setLabel(__('Save & Continue Edit'));
         $this->addToolbarButton($saveAndContinue, 120000);
 
 
