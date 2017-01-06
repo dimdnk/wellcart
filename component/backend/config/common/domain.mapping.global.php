@@ -6,7 +6,8 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'object_mapping' => [
+    'domain' => [
+        'mapping' => [
         'WellCart\Backend\Entity\Administrator' =>
             [
                 'type'            => 'entity',
@@ -541,5 +542,6 @@ return [
                     ],
                 ],
             ],
+    ],
     ],
 ];

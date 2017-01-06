@@ -60,9 +60,9 @@ trait DomainInputFilterSpecConfigTrait
     ) {
 
         $fields = Config::get(
-            'object_mapping.' . $className . '.' . $section,
+            'domain.mapping.' . $className . '.' . $section,
             Config::get(
-                'object_mapping.' . str_replace('\\', '\\\\', $className)
+                'domain.mapping.' . str_replace('\\', '\\\\', $className)
                 . '.' . $section, []
             )
         );

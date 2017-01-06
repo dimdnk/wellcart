@@ -38,9 +38,9 @@ class SystemConfig extends Yaml implements Driver
     protected function _getMapping($className)
     {
         $mapping = Config::get(
-            'object_mapping.' . str_replace('.', '\\', $className),
+            'domain.mapping.' . str_replace('.', '\\', $className),
             Config::get(
-                'object_mapping.' . str_replace('\\', '\\\\', $className)
+                'domain.mapping.' . str_replace('\\', '\\\\', $className)
             )
         );
         if ($mapping === null) {

@@ -9,7 +9,8 @@
 namespace WellCart\RestApi;
 
 return [
-    'object_mapping' => [
+    'domain' => [
+        'mapping' => [
         Entity\OAuth2\PublicKey::class => [
             'formFields' => [
                 'client'              => [
@@ -316,5 +317,6 @@ return [
                     ],
                 ],
             ],
+    ],
     ],
 ];
