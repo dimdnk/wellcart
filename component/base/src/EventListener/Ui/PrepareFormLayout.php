@@ -44,7 +44,11 @@ class PrepareFormLayout
         array $config
     )
     {
-      foreach ($fieldset->getIterator() as $element)
+      if($fieldset instanceof Element\Collection) {
+        $fieldset = $fieldset
+          ->getTargetElement();
+      }
+      foreach ($fieldset as $element)
       {
         if($element instanceof FieldsetInterface)
         {
