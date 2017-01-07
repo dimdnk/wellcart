@@ -48,8 +48,16 @@ return [
                 'attributes' => [
                   'class' => 'switchery-element',
                 ],
-
-              ]
+              ],
+              'url_key' => [
+                  'options'    => [
+                      'twb-layout'       => 'horizontal',
+                      'column-size'      => 'md-8',
+                      'label_attributes' => [
+                          'class' => 'col-md-4',
+                      ],
+                  ],
+              ],
             ],
             'translations' => [
               'elements' => [

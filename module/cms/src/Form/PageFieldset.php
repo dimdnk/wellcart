@@ -77,11 +77,6 @@ class PageFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('URL Key'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'               => 'cms_page_url_key',
