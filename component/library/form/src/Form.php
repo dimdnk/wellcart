@@ -48,6 +48,10 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
      * @var string
      */
     protected $layout = 'partial/form/layout/standard';
+    /**
+     * @var string
+     */
+    protected $uiConfigSection;
 
     /**
      * @inheritDoc
@@ -63,6 +67,8 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         $this->toolbarButtons = new PriorityList;
         $this->toolbarButtons->isLIFO(false);
     }
+
+
 
     public function backButton(bool $value = null)
     {
@@ -693,4 +699,25 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         return $result;
 
     }
+
+    /**
+     * @return string
+     */
+    public function getUiConfigSection()
+    {
+        return ($this->uiConfigSection) ? $this->uiConfigSection : $this->getName();
+    }
+
+    /**
+     * @param string $uiConfigSection
+     *
+     * @return Form
+     */
+    public function setUiConfigSection(string $uiConfigSection)
+    {
+        $this->uiConfigSection = $uiConfigSection;
+        return $this;
+    }
+
+
 }

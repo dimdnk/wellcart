@@ -8,6 +8,32 @@
 return ['ui' =>
             ['form' =>
                  [
+                     'directory_country' => [
+                         'elements' => [
+                             'save'                   => [
+                                 'options'    => [
+                                     'fontAwesome' => [
+                                         'icon' => 'check'
+                                     ],
+                                 ],
+                                 'attributes' => [
+                                     'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                                 ],
+                             ],
+
+                             'save_and_continue_edit' => [
+                                 'options'    => [
+                                     'fontAwesome' => [
+                                         'icon' => 'check-circle'
+                                     ],
+                                 ],
+                                 'attributes' => [
+                                     'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                                 ],
+                             ]
+                         ],
+                     ],
+
                      'directory_currency' => [
                          'elements' => [
                              'save' => [
@@ -134,6 +160,60 @@ return ['ui' =>
                              ],
                          ],
                      ],
+
+
+                     'directory_geo_zone' => [
+                         'elements' => [
+                             'save'                   => [
+                                 'options'    => [
+                                     'fontAwesome' => [
+                                         'icon' => 'check'
+                                     ],
+                                 ],
+                                 'attributes' => [
+                                     'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                                 ],
+                             ],
+
+                             'save_and_continue_edit' => [
+                                 'options'    => [
+                                     'fontAwesome' => [
+                                         'icon' => 'check-circle'
+                                     ],
+                                 ],
+                                 'attributes' => [
+                                     'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                                 ],
+                             ]
+                         ],
+                     ],
+
+                     'directory_zone' => [
+                         'elements' => [
+                             'save'                   => [
+                                 'options'    => [
+                                     'fontAwesome' => [
+                                         'icon' => 'check'
+                                     ],
+                                 ],
+                                 'attributes' => [
+                                     'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                                 ],
+                             ],
+
+                             'save_and_continue_edit' => [
+                                 'options'    => [
+                                     'fontAwesome' => [
+                                         'icon' => 'check-circle'
+                                     ],
+                                 ],
+                                 'attributes' => [
+                                     'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                                 ],
+                             ]
+                         ],
+                     ],
+
                  ]
             ]
 ];

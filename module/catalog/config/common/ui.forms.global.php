@@ -9,6 +9,161 @@ return [
     'ui' => [
         'form' =>
             [
+                'catalog_attribute' => [
+                    'elements' => [
+                        'save'                   => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ],
+
+                        'save_and_continue_edit' => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check-circle'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ]
+                    ],
+                ],
+
+                'catalog_brand' => [
+                    'elements' => [
+                        'save'                   => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ],
+
+                        'save_and_continue_edit' => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check-circle'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ]
+                    ],
+                ],
+                'catalog_category' => [
+                    'elements' => [
+                        'save'                   => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ],
+
+                        'save_and_continue_edit' => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check-circle'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ]
+                    ],
+                ],
+
+                'catalog_feature' => [
+                    'elements' => [
+                        'save'                   => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ],
+
+                        'save_and_continue_edit' => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check-circle'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ]
+                    ],
+                ],
+
+                'catalog_product' => [
+                    'elements' => [
+                        'save'                   => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ],
+
+                        'save_and_continue_edit' => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check-circle'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ]
+                    ],
+                ],
+
+                'catalog_product_template' => [
+                    'elements' => [
+                        'save'                   => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ],
+
+                        'save_and_continue_edit' => [
+                            'options'    => [
+                                'fontAwesome' => [
+                                    'icon' => 'check-circle'
+                                ],
+                            ],
+                            'attributes' => [
+                                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                            ],
+                        ]
+                    ],
+                ],
+
             ]
     ]
 ];

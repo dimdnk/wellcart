@@ -94,12 +94,6 @@ class UrlRewrite extends AbstractForm
                 'type'       => 'Submit',
                 'options'    => [
                     'label'       => __('Save'),
-                    'fontAwesome' => [
-                        'icon' => 'check'
-                    ],
-                ],
-                'attributes' => [
-                    'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                 ],
             ]
         );

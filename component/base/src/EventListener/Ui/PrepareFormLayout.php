@@ -10,6 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\EventListener\Ui;
 
+use WellCart\Form\Form;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use Zend\EventManager\EventInterface;
@@ -24,7 +25,11 @@ class PrepareFormLayout
     public function __invoke(EventInterface $event)
     {
         $form = $event->getTarget();
-        $name = $form->getName();
+       if(!$form instanceof Form)
+       {
+         return;
+       }
+        $name = $form->getUiConfigSection();
         $config = Config::get('ui.form.'.$name, []);
         if(empty($config))
         {
