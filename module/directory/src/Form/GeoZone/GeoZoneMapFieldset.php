@@ -25,7 +25,7 @@ class GeoZoneMapFieldset extends Fieldset
         GeoZoneMapEntity $geoZoneMapPrototype
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('geo_zone_map');
+        parent::__construct('geo_zone_maps');
         $this->setHydrator($hydrator)
             ->setObject($geoZoneMapPrototype);
         $this->setAttribute('class', 'geo-zone-map-fieldset');
@@ -37,11 +37,6 @@ class GeoZoneMapFieldset extends Fieldset
                 'type'       => 'directoryCountrySelector',
                 'options'    => [
                     'label'            => __('Country'),
-                    'twb-layout'       => 'inline',
-                    'column-size'      => 'md-5',
-                    'label_attributes' => [
-                        'class' => 'inline-label',
-                    ],
                 ],
                 'attributes' => [
                     'class' => 'country-selector',
@@ -56,11 +51,6 @@ class GeoZoneMapFieldset extends Fieldset
                 'type'       => 'directoryZoneSelector',
                 'options'    => [
                     'label'            => __('Zone'),
-                    'twb-layout'       => 'inline',
-                    'column-size'      => 'md-5',
-                    'label_attributes' => [
-                        'class' => 'inline-label',
-                    ],
                 ],
                 'attributes' => [
                     'class' => 'zone-selector',
@@ -75,18 +65,9 @@ class GeoZoneMapFieldset extends Fieldset
                 'type'       => 'button',
                 'options'    => [
                     'label'            => ' ',
-                    'twb-layout'       => 'inline',
-                    'column-size'      => 'md-2',
-                    'fontAwesome'      => [
-                        'icon' => 'remove'
-                    ],
-                    'label_attributes' => [
-                        'class' => 'inline-label',
-                    ],
                 ],
                 'attributes' => [
                     'type'  => 'button',
-                    'class' => 'btn-remove-row btn btn-danger btn-xs',
                     'title' => __('Remove'),
                 ],
             ],

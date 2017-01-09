@@ -37,12 +37,7 @@ class GeoZoneFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Geo Zone Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Geo Zone Name')
                 ],
                 'attributes' => [
                     'id' => 'directory_geo_zone_name',
@@ -56,12 +51,7 @@ class GeoZoneFieldset extends Fieldset
                 'name'       => 'description',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Description')
                 ],
                 'attributes' => [
                     'id' => 'directory_geo_zone_description',
@@ -75,10 +65,7 @@ class GeoZoneFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_geo_zone',
                 'options'    => [
-                    'label'       => __('Create Geo Zone'),
-                    'twb-layout'  => 'horizontal',
-                    'column-size' => 'md-8 col-md-offset-4',
-                    'fontAwesome' => ['icon' => 'plus-circle'],
+                    'label'       => __('Create Geo Zone')
                 ],
                 'attributes' => [
                     'id'               => 'directory_geo_zone_add_new_image',

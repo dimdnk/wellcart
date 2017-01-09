@@ -251,6 +251,76 @@ return ['ui' =>
                         ],
                     ]
                 ],
+                'geo_zone' => [
+                    'elements' => [
+                        'name' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+                        'description' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+                        'add_new_geo_zone' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8 col-md-offset-4',
+                                'fontAwesome' => ['icon' => 'plus-circle'],
+                            ],
+                        ]
+                    ],
+
+                    'geo_zone_maps' => [
+                        'elements' => [
+                            'country' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-5',
+                                    'label_attributes' => [
+                                        'class' => 'inline-label',
+                                    ],
+                                ],
+                            ],
+                            'zone' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-5',
+                                    'label_attributes' => [
+                                        'class' => 'inline-label',
+                                    ],
+                                ],
+                            ],
+                            'remove' => [
+                                'options'    => [
+                                    'label'            => ' ',
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-2',
+                                    'fontAwesome'      => [
+                                        'icon' => 'remove'
+                                    ],
+                                    'label_attributes' => [
+                                        'class' => 'inline-label',
+                                    ],
+                                ],
+                                'attributes' => [
+                                    'class' => 'btn-remove-row btn btn-danger btn-xs',
+                                ],
+                            ]
+                        ]
+                    ],
+
+                ],
+
             ],
 
             'directory_zone' => [
