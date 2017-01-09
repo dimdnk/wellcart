@@ -73,13 +73,12 @@ abstract class Arr
      * @param   array $array   array to search
      * @param   mixed $path    key path string (delimiter separated) or array of keys
      * @param   mixed $default default value if the path is not set
+     * @param   mixed $delimiter
      *
      * @return  mixed
      */
-    public static function get($array, $path, $default = null)
+    public static function get($array, $path, $default = null, $delimiter = '.')
     {
-        $delimiter = '.';
-
         if (!static::isArray($array)) {
             // This is not an array!
             return $default;

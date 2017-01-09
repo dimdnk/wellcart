@@ -41,11 +41,6 @@ class Client extends AbstractForm
                 'type'       => 'userAccountsSelector',
                 'options'    => [
                     'label'            => __('User'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_client_user',
@@ -60,11 +55,6 @@ class Client extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('ID'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_client_client_id',
@@ -79,12 +69,8 @@ class Client extends AbstractForm
                 'type'       => 'Password',
                 'options'    => [
                     'label'            => __('Secret'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Minimum 6 chars'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+
                 ],
                 'attributes' => [
                     'id' => 'api_client_secret',
@@ -99,13 +85,8 @@ class Client extends AbstractForm
                 'type'       => 'Password',
                 'options'    => [
                     'label'               => __('Secret Verify'),
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-8',
                     'help-block'          => __('Repeat new secret'),
                     'strokerform-exclude' => false,
-                    'label_attributes'    => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_client_secret_verify',
@@ -120,12 +101,7 @@ class Client extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Redirect URI'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Optional'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_client_redirect_uri',

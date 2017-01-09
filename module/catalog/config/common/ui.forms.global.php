@@ -57,7 +57,72 @@ return [
                             'attributes' => [
                                 'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                             ],
-                        ]
+                        ],
+
+                        'name' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+
+                        'image' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+
+                        'meta_title' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+
+                        'meta_keywords' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+
+                        'meta_description' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+
+                        'remove_image' => [
+                            [
+                                'options'    => [
+                                    'twb-layout'          => 'horizontal',
+                                    'column-size'         => 'md-12',
+                                    'label_attributes'    => [
+                                        'class' => 'col-md-8 col-md-offset-4',
+                                    ],
+                                ],
+                                'attributes' => [
+                                    'class' => 'icheck-element',
+                                ],
+                            ]
+                        ],
                     ],
                 ],
                 'catalog_category' => [

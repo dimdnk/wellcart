@@ -44,18 +44,12 @@ class Country extends AbstractForm
                 'options'    => [
                     'label'               => __('Is Enabled'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'directory_country_status',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 700]
@@ -67,11 +61,6 @@ class Country extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'directory_country_name',
@@ -87,11 +76,7 @@ class Country extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('ISO Code (2)'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+
                 ],
                 'attributes' => [
                     'id'       => 'directory_country_iso_code2',
@@ -107,12 +92,7 @@ class Country extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('ISO Code (3)'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
-                ],
+                                  ],
                 'attributes' => [
                     'id'       => 'directory_country_iso_code3',
                     'required' => 'required',
@@ -127,11 +107,6 @@ class Country extends AbstractForm
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Address Format'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'directory_country_address_format',
@@ -147,18 +122,12 @@ class Country extends AbstractForm
                 'options'    => [
                     'label'               => __('Postcode required'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'directory_country_postcode_required',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 450]

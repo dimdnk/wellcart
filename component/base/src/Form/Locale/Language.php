@@ -43,18 +43,12 @@ class Language extends AbstractForm
                 'options'    => [
                     'label'               => __('Is Active'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'base_locale_language_is_active',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 800]
@@ -67,18 +61,12 @@ class Language extends AbstractForm
                 'options'    => [
                     'label'               => __('Is Primary'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'base_locale_language_is_default',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 750]
@@ -90,11 +78,6 @@ class Language extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_name',
@@ -110,11 +93,6 @@ class Language extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Code'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_code',
@@ -129,11 +107,6 @@ class Language extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Locale'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_locale',
@@ -148,11 +121,6 @@ class Language extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Territory'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_territory',

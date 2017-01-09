@@ -42,18 +42,12 @@ class Scope extends AbstractForm
                 'options'    => [
                     'label'               => __('Default Scope'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'api_scope_is_default',
-                    'class' => 'switchery-element',
                     'value' => 0,
                 ],
             ],
@@ -66,11 +60,6 @@ class Scope extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_scope_scope',

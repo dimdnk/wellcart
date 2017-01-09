@@ -44,18 +44,12 @@ class Role extends AbstractForm
                 'options'    => [
                     'label'               => __('Default role for new users'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'user_acl_role_is_default',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 700]
@@ -67,11 +61,6 @@ class Role extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'user_acl_role_name',
@@ -85,11 +74,6 @@ class Role extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'user_acl_role_description',
@@ -104,11 +88,6 @@ class Role extends AbstractForm
                 'type'       => 'userPermissionsMultiCheckboxSelector',
                 'options'    => [
                     'label'            => __('Permissions'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -135,12 +114,6 @@ class Role extends AbstractForm
                 'type'       => 'Submit',
                 'options'    => [
                     'label'       => __('Save'),
-                    'fontAwesome' => [
-                        'icon' => 'check'
-                    ],
-                ],
-                'attributes' => [
-                    'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                 ],
             ]
         );

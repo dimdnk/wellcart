@@ -62,7 +62,7 @@ class PrepareFormLayout
         }
 
         $name =  $element->getName();
-        $elementConfig = Arr::get($config, 'elements.' . $name, []);
+        $elementConfig = Arr::get($config, 'elements>' . $name, [],'>');
         if(!empty($elementConfig))
         {
           $this->composeElement($element, $elementConfig);

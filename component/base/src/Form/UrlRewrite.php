@@ -42,11 +42,6 @@ class UrlRewrite extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Request Path'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'       => 'base_url_rewrite_request_path',
@@ -63,11 +58,6 @@ class UrlRewrite extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Target Path'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'       => 'base_url_rewrite_target_path',

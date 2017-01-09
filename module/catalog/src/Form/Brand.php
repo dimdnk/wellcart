@@ -46,11 +46,6 @@ class Brand extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Brand Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_name',
@@ -66,11 +61,6 @@ class Brand extends AbstractForm
                 'type'       => 'File',
                 'options'    => [
                     'label'            => __('Brand Image'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_image',
@@ -85,11 +75,6 @@ class Brand extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Page Title'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_meta_title',
@@ -104,11 +89,6 @@ class Brand extends AbstractForm
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Meta Keywords'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_meta_keywords',
@@ -123,12 +103,7 @@ class Brand extends AbstractForm
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Meta Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Maximum 255 chars'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_meta_description',
@@ -208,18 +183,12 @@ class Brand extends AbstractForm
                     'options'    => [
                         'label'               => __('Remove Image'),
                         'strokerform-exclude' => true,
-                        'twb-layout'          => 'horizontal',
-                        'column-size'         => 'md-12',
-                        'label_attributes'    => [
-                            'class' => 'col-md-8 col-md-offset-4',
-                        ],
                         'use_hidden_element'  => true,
                         'checked_value'       => 1,
                         'unchecked_value'     => 0,
                     ],
                     'attributes' => [
                         'id'    => 'catalog_brand_remove_image',
-                        'class' => 'icheck-element',
                     ],
                 ],
                 ['priority' => 650]

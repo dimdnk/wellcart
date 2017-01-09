@@ -29,7 +29,7 @@ class AccountPreferences extends AbstractForm
     public function __construct(Factory $factory)
     {
         $this->setFormFactory($factory);
-        parent::__construct('preferences');
+        parent::__construct('user_account_preferences');
 
         $this->setWrapElements(true);
 
@@ -39,14 +39,9 @@ class AccountPreferences extends AbstractForm
                 'options'    => [
                     'context'          => Application::CONTEXT_FRONTEND,
                     'label'            => __('Enable Registration'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
                     'help-block'       => __(
                         "Allows users to register through the website."
                     ),
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                     'value_options'    => [
                         0 => __('No'),
                         1 => __('Yes'),
@@ -70,11 +65,6 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'wellcart.user_account_options.registration.email_contact',
                 'options'    => [
                     'label'            => __('Email Sender'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -92,11 +82,6 @@ class AccountPreferences extends AbstractForm
                 'options'    => [
                     'context'          => Application::CONTEXT_FRONTEND,
                     'label'            => __('Send Welcome Email'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                     'value_options'    => [
                         0 => __('No'),
                         1 => __('Yes'),
@@ -120,11 +105,6 @@ class AccountPreferences extends AbstractForm
                 'options'    => [
                     'context'          => Application::CONTEXT_FRONTEND,
                     'label'            => __('Require Emails Confirmation'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                     'value_options'    => [
                         0 => __('No'),
                         1 => __('Yes'),
@@ -147,14 +127,9 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'zfcuser.login_form_timeout',
                 'options'    => [
                     'label'            => __('Login Form Timeout'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
                     'help-block'       => __(
                         "Specify the timeout for the CSRF security field of the login form in seconds."
                     ),
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                 ],
                 'attributes' => [
                     'value' => Config::get(
@@ -171,14 +146,9 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'zfcuser.user_form_timeout',
                 'options'    => [
                     'label'            => __('Registration Form Timeout'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
                     'help-block'       => __(
                         "Specify the timeout for the CSRF security field of the registration form."
                     ),
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                 ],
                 'attributes' => [
                     'value' => Config::get(
@@ -195,14 +165,9 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'wellcart.user_account_options.max_login_attempts',
                 'options'    => [
                     'label'            => __('Max Login Attempts'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
                     'help-block'       => __(
                         "Maximum login attempts allowed before the account is locked."
                     ),
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                 ],
                 'attributes' => [
                     'value' => Config::get(
@@ -221,11 +186,6 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'wellcart.user_account_options.password_reset.email_contact',
                 'options'    => [
                     'label'            => __('Email Sender'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -242,11 +202,6 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'wellcart.user_account_options.password_reset.allow_for_admin',
                 'options'    => [
                     'label'            => __('Allow Admin Password Reset'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                     'value_options'    => [
                         0 => __('No'),
                         1 => __('Yes'),
@@ -269,12 +224,7 @@ class AccountPreferences extends AbstractForm
                 'name'       => 'wellcart.user_account_options.password_reset.link_expiration_period',
                 'options'    => [
                     'label'            => __('Reset Link Expiration Period'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-9',
                     'help-block'       => __("In days"),
-                    'label_attributes' => [
-                        'class' => 'col-md-3',
-                    ],
                 ],
                 'attributes' => [
                     'value' => Config::get(

@@ -46,18 +46,12 @@ class Zone extends AbstractForm
                 'type'       => 'Select',
                 'options'    => [
                     'label'            => __('Country'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                     'empty_option'     => __('- Select Country -'),
                     'value_options'    => $countryIdOptions,
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
                     'id'           => 'directory_zone_country',
-                    'class'        => 'chosen-element',
                 ],
             ],
             ['priority' => 700]
@@ -70,18 +64,12 @@ class Zone extends AbstractForm
                 'options'    => [
                     'label'               => __('Is Enabled'),
                     'strokerform-exclude' => true,
-                    'twb-layout'          => 'horizontal',
-                    'column-size'         => 'md-12',
-                    'label_attributes'    => [
-                        'class' => 'col-md-8 col-md-offset-4',
-                    ],
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
                     'id'    => 'directory_zone_status',
-                    'class' => 'icheck-element',
                 ],
             ],
             ['priority' => 650]
@@ -92,12 +80,7 @@ class Zone extends AbstractForm
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Zone Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Zone Name')
                 ],
                 'attributes' => [
                     'id' => 'directory_zone_name',
@@ -112,11 +95,6 @@ class Zone extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Zone Code'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'directory_zone_code',

@@ -44,11 +44,6 @@ class Account extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Email'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id'           => 'admin_account_name',
@@ -64,11 +59,6 @@ class Account extends AbstractForm
                 'type'       => 'userRolesMultiCheckboxSelector',
                 'options'    => [
                     'label'            => __('Roles'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -84,11 +74,6 @@ class Account extends AbstractForm
                 'type'       => 'localeLanguageSelector',
                 'options'    => [
                     'label'            => __('Language'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -105,11 +90,6 @@ class Account extends AbstractForm
                 'type'       => 'timezoneSelector',
                 'options'    => [
                     'label'            => __('Timezone'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -126,11 +106,6 @@ class Account extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('First Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -146,11 +121,6 @@ class Account extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Last Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -191,11 +161,6 @@ class Account extends AbstractForm
                 'type'       => 'password',
                 'options'    => [
                     'label'            => __('New Password'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -212,11 +177,6 @@ class Account extends AbstractForm
                 'type'       => 'password',
                 'options'    => [
                     'label'            => __('Password Verify'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',

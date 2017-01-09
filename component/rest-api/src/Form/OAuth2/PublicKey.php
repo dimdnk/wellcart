@@ -44,11 +44,6 @@ class PublicKey extends AbstractForm
                 'type'       => 'apiClientSelector',
                 'options'    => [
                     'label'            => __('Client'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_key_client',
@@ -63,12 +58,7 @@ class PublicKey extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Public Key'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Absolute path on server.'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_key_public_key',
@@ -83,12 +73,7 @@ class PublicKey extends AbstractForm
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Private Key'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Absolute path on server.'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'id' => 'api_key_private_key',
@@ -111,11 +96,6 @@ class PublicKey extends AbstractForm
                         'RS256' => 'RS256',
                         'RS384' => 'RS384',
                         'RS512' => 'RS512',
-                    ],
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
                     ],
                 ],
                 'attributes' => [
