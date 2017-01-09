@@ -40,14 +40,7 @@ class AttributeValueFieldset extends Fieldset
                 'type'       => 'button',
                 'options'    => [
                     'label'            => ' ',
-                    'twb-layout'       => 'inline',
-                    'column-size'      => 'md-2',
-                    'fontAwesome'      => [
-                        'icon' => 'remove'
-                    ],
-                    'label_attributes' => [
-                        'class' => 'inline-label',
-                    ],
+
                 ],
                 'attributes' => [
                     'type'  => 'button',
@@ -84,11 +77,7 @@ class AttributeValueFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Sort Order'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+
                 ],
                 'attributes' => [
                     'id'    => 'catalog_attribute_value_sort_order',

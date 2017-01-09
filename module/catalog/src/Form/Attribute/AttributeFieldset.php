@@ -46,11 +46,6 @@ class AttributeFieldset extends Fieldset
                     'help-block'       => __(
                         'Internal name for administrators.'
                     ),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_attribute_backend_name',
@@ -65,11 +60,6 @@ class AttributeFieldset extends Fieldset
                 'type'       => 'catalogProductTemplatesMultiCheckboxSelector',
                 'options'    => [
                     'label'            => __('Product Templates'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -105,12 +95,7 @@ class AttributeFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Sort Order')
                 ],
                 'attributes' => [
                     'id'    => 'catalog_attribute_sort_order',
@@ -125,10 +110,7 @@ class AttributeFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_attribute_value',
                 'options'    => [
-                    'label'       => __('Add Attribute Value'),
-                    'twb-layout'  => 'horizontal',
-                    'column-size' => 'md-8 col-md-offset-4',
-                    'fontAwesome' => ['icon' => 'plus-circle'],
+                    'label'       => __('Add Attribute Value')
                 ],
                 'attributes' => [
                     'id'               => 'catalog_attribute_add_new_attribute_value',

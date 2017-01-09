@@ -11,8 +11,8 @@ return [
             [
                 'catalog_attribute' => [
                     'elements' => [
-                        'save'                   => [
-                            'options'    => [
+                        'save' => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check'
                                 ],
@@ -23,7 +23,7 @@ return [
                         ],
 
                         'save_and_continue_edit' => [
-                            'options'    => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check-circle'
                                 ],
@@ -33,12 +33,92 @@ return [
                             ],
                         ]
                     ],
+                    'attribute' => [
+                        'elements' => [
+                            'backend_name' => [
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'product_templates' => [
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'sort_order' => [
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+
+                            'add_new_attribute_value' => [
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-8 col-md-offset-4',
+                                    'fontAwesome' => ['icon' => 'plus-circle'],
+                                ],
+                            ],
+                        ],
+
+                        'translations' => [
+                            'elements' =>
+                                [
+                                    'name' => [
+                                        'options' => [
+                                            'twb-layout' => 'horizontal',
+                                            'column-size' => 'md-8',
+                                            'label_attributes' => [
+                                                'class' => 'col-md-4',
+                                            ],
+                                        ],
+                                    ],
+                                ]
+                        ],
+                        'values' => [
+                            'elements' =>
+                                [
+                                    'sort_order' => [
+                                        'options' => [
+                                            'twb-layout' => 'horizontal',
+                                            'column-size' => 'md-8',
+                                            'label_attributes' => [
+                                                'class' => 'col-md-4',
+                                            ],
+                                        ],
+                                    ],
+                                    'remove' => [
+                                        'options' => [
+                                            'twb-layout' => 'inline',
+                                            'column-size' => 'md-2',
+                                            'fontAwesome' => [
+                                                'icon' => 'remove'
+                                            ],
+                                            'label_attributes' => [
+                                                'class' => 'inline-label',
+                                            ],
+                                        ]
+                                    ],
+                                ]
+                        ]
+                    ],
                 ],
 
                 'catalog_brand' => [
                     'elements' => [
-                        'save'                   => [
-                            'options'    => [
+                        'save' => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check'
                                 ],
@@ -49,7 +129,7 @@ return [
                         ],
 
                         'save_and_continue_edit' => [
-                            'options'    => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check-circle'
                                 ],
@@ -111,10 +191,10 @@ return [
 
                         'remove_image' => [
                             [
-                                'options'    => [
-                                    'twb-layout'          => 'horizontal',
-                                    'column-size'         => 'md-12',
-                                    'label_attributes'    => [
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-12',
+                                    'label_attributes' => [
                                         'class' => 'col-md-8 col-md-offset-4',
                                     ],
                                 ],
@@ -127,8 +207,8 @@ return [
                 ],
                 'catalog_category' => [
                     'elements' => [
-                        'save'                   => [
-                            'options'    => [
+                        'save' => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check'
                                 ],
@@ -139,7 +219,7 @@ return [
                         ],
 
                         'save_and_continue_edit' => [
-                            'options'    => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check-circle'
                                 ],
@@ -153,8 +233,8 @@ return [
 
                 'catalog_feature' => [
                     'elements' => [
-                        'save'                   => [
-                            'options'    => [
+                        'save' => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check'
                                 ],
@@ -165,7 +245,7 @@ return [
                         ],
 
                         'save_and_continue_edit' => [
-                            'options'    => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check-circle'
                                 ],
@@ -179,8 +259,8 @@ return [
 
                 'catalog_product' => [
                     'elements' => [
-                        'save'                   => [
-                            'options'    => [
+                        'save' => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check'
                                 ],
@@ -191,7 +271,7 @@ return [
                         ],
 
                         'save_and_continue_edit' => [
-                            'options'    => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check-circle'
                                 ],
@@ -205,8 +285,8 @@ return [
 
                 'catalog_product_template' => [
                     'elements' => [
-                        'save'                   => [
-                            'options'    => [
+                        'save' => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check'
                                 ],
@@ -217,7 +297,7 @@ return [
                         ],
 
                         'save_and_continue_edit' => [
-                            'options'    => [
+                            'options' => [
                                 'fontAwesome' => [
                                     'icon' => 'check-circle'
                                 ],
