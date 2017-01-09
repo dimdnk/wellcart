@@ -54,14 +54,6 @@ class CategoryI18nFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Category Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
-                ],
-                'attributes' => [
-                    'class' => 'form-control catalog_category_name',
                 ],
             ],
             ['priority' => 700]
@@ -72,14 +64,8 @@ class CategoryI18nFieldset extends Fieldset
                 'name'       => 'description',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Description')
                 ],
-                'attributes' => [],
             ],
             ['priority' => 650]
         );
@@ -89,14 +75,8 @@ class CategoryI18nFieldset extends Fieldset
                 'name'       => 'meta_title',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Page Title'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Page Title')
                 ],
-                'attributes' => [],
             ],
             ['priority' => 600]
         );
@@ -106,14 +86,8 @@ class CategoryI18nFieldset extends Fieldset
                 'name'       => 'meta_keywords',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Meta Keywords'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Meta Keywords')
                 ],
-                'attributes' => [],
             ],
             ['priority' => 550]
         );
@@ -124,14 +98,8 @@ class CategoryI18nFieldset extends Fieldset
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Meta Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Maximum 255 chars'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
-                'attributes' => [],
             ],
             ['priority' => 500]
         );

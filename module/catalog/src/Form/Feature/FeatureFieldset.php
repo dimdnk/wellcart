@@ -43,14 +43,9 @@ class FeatureFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __(
                         'Internal name for administrators.'
-                    ),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    )
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_feature_backend_name',
@@ -64,12 +59,7 @@ class FeatureFieldset extends Fieldset
                 'name'       => 'product_templates',
                 'type'       => 'catalogProductTemplatesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Product Templates'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Product Templates')
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -104,12 +94,8 @@ class FeatureFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Sort Order')
+
                 ],
                 'attributes' => [
                     'id'    => 'catalog_feature_sort_order',
@@ -124,10 +110,7 @@ class FeatureFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_feature_value',
                 'options'    => [
-                    'label'       => __('Add Feature Value'),
-                    'twb-layout'  => 'horizontal',
-                    'column-size' => 'md-8 col-md-offset-4',
-                    'fontAwesome' => ['icon' => 'plus-circle'],
+                    'label'       => __('Add Feature Value')
                 ],
                 'attributes' => [
                     'id'               => 'catalog_feature_add_new_feature_value',

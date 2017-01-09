@@ -53,12 +53,7 @@ class FeatureI18nFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Display Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Display Name')
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_feature_name',

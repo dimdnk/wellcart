@@ -40,15 +40,9 @@ class CategoryFieldset extends Fieldset
                 'name'       => 'parent',
                 'type'       => 'catalogCategorySelector',
                 'options'    => [
-                    'label'            => __('Parent Category'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Parent Category')
                 ],
                 'attributes' => [
-                    'class'        => 'chosen-element',
                     'autocomplete' => 'off',
                     'id'           => 'catalog_category_parent',
                 ],
@@ -62,18 +56,12 @@ class CategoryFieldset extends Fieldset
                 'type'       => 'Select',
                 'options'    => [
                     'label'            => __('Visibility'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                     'value_options'    => [
                         0 => __('Hidden'),
                         1 => __('Visible'),
                     ],
                 ],
                 'attributes' => [
-                    'class'        => 'chosen-element',
                     'autocomplete' => 'off',
                     'id'           => 'catalog_category_is_visible',
                 ],
@@ -86,12 +74,7 @@ class CategoryFieldset extends Fieldset
                 'name'       => 'url_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('URL Key'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('URL Key')
                 ],
                 'attributes' => [
                     'id'               => 'catalog_category_url_key',

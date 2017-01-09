@@ -46,11 +46,6 @@ class AttributeValueI18nFieldset extends Fieldset
                 'type'       => 'Text',
                 'options'    => [
                     'label'            => __('Attribute Value Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_attribute_value_name',

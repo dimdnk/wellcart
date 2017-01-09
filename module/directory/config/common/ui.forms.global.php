@@ -290,6 +290,9 @@ return ['ui' =>
                                         'class' => 'inline-label',
                                     ],
                                 ],
+                                'attributes' => [
+                                    'class' => 'country-selector',
+                                ],
                             ],
                             'zone' =>  [
                                 'options'    => [
