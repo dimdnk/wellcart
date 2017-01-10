@@ -524,9 +524,48 @@ return [
                             ],
                         ],
                         'variants' => [
-                            'quantity',
-                            'price',
-                            'sku',
+                            'remove' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-2',
+                                    'fontAwesome'      => [
+                                        'icon' => 'remove'
+                                    ],
+                                    'label_attributes' => [
+                                        'class' => 'inline-label',
+                                    ],
+                                ],
+                                'attributes' => [
+                                    'class' => 'btn-remove-row btn btn-danger btn-xs',
+                                ],
+                            ],
+                            'quantity' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'price' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'sku' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
                         ],
                         'translations' => [
                             'name',
@@ -546,8 +585,39 @@ return [
                             ],
                         ],
                         'images' => [
-                            'description',
-                            'image',
+                            'remove' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-2',
+                                    'fontAwesome'      => [
+                                        'icon' => 'remove'
+                                    ],
+                                    'label_attributes' => [
+                                        'class' => 'inline-label',
+                                    ],
+                                ],
+                                'attributes' => [
+                                    'class' => 'btn-remove-row btn btn-danger btn-xs',
+                                ],
+                            ],
+                            'description' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ] ,
+                            'image' => [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
                         ],
                     ],
                 ],

@@ -44,18 +44,9 @@ class ImagesFieldset extends Fieldset
                 'type'       => 'button',
                 'options'    => [
                     'label'            => ' ',
-                    'twb-layout'       => 'inline',
-                    'column-size'      => 'md-2',
-                    'fontAwesome'      => [
-                        'icon' => 'remove'
-                    ],
-                    'label_attributes' => [
-                        'class' => 'inline-label',
-                    ],
                 ],
                 'attributes' => [
-                    'type'  => 'button',
-                    'class' => 'btn-remove-row btn btn-danger btn-xs',
+                    'type' => 'button',
                     'title' => __('Remove'),
                 ],
             ],
@@ -74,7 +65,6 @@ class ImagesFieldset extends Fieldset
                         'class' => 'col-md-4',
                     ],
                 ],
-                'attributes' => [],
             ],
             ['priority' => 650]
         );
@@ -84,14 +74,8 @@ class ImagesFieldset extends Fieldset
                 'name'       => 'image',
                 'type'       => 'catalogProductImage',
                 'options'    => [
-                    'label'            => __('Image File'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Image File')
                 ],
-                'attributes' => [],
             ],
             ['priority' => 600]
         );

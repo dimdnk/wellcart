@@ -44,18 +44,10 @@ class VariantsFieldset extends Fieldset
                 'type'       => 'button',
                 'options'    => [
                     'label'            => ' ',
-                    'twb-layout'       => 'inline',
-                    'column-size'      => 'md-2',
-                    'fontAwesome'      => [
-                        'icon' => 'remove'
-                    ],
-                    'label_attributes' => [
-                        'class' => 'inline-label',
-                    ],
+
                 ],
                 'attributes' => [
                     'type'  => 'button',
-                    'class' => 'btn-remove-row btn btn-danger btn-xs',
                     'title' => __('Remove'),
                 ],
             ],
@@ -68,15 +60,7 @@ class VariantsFieldset extends Fieldset
                 'name'       => 'quantity',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Quantity'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
-                ],
-                'attributes' => [
-                    'id' => 'catalog_product_variant_quantity',
+                    'label'            => __('Quantity')
                 ],
             ],
             ['priority' => 1300]
@@ -87,15 +71,9 @@ class VariantsFieldset extends Fieldset
                 'name'       => 'price',
                 'type'       => 'catalogProductPrice',
                 'options'    => [
-                    'label'            => __('Price'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Price')
                 ],
                 'attributes' => [
-                    'id'       => 'catalog_product_variant_price',
                     'required' => 'required'
                 ],
             ],
@@ -108,15 +86,9 @@ class VariantsFieldset extends Fieldset
                 'name'       => 'sku',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('SKU'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('SKU')
                 ],
                 'attributes' => [
-                    'id'       => 'catalog_product_variant_sku',
                     'required' => 'required'
                 ],
             ],
