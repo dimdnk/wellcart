@@ -111,8 +111,6 @@ class ProductFieldset extends Fieldset
                 'type'       => 'Checkbox',
                 'options'    => [
                     'label'              => __('Online'),
-                    'twb-layout'         => 'horizontal',
-                    'column-size'        => 'md-8 col-md-offset-4',
                     'value_options'      => [
                         0 => __('Disable'),
                         1 => __('Enable'),
@@ -122,7 +120,6 @@ class ProductFieldset extends Fieldset
                     'unchecked_value'    => 0,
                 ],
                 'attributes' => [
-                    'class'        => 'switchery-element',
                     'autocomplete' => 'off',
                     'id'           => 'catalog_product_status',
                 ],
@@ -136,12 +133,7 @@ class ProductFieldset extends Fieldset
                 'name'       => 'url_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('URL Key'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('URL Key')
                 ],
                 'attributes' => [
                     'id'               => 'catalog_product_url_key',
@@ -164,12 +156,8 @@ class ProductFieldset extends Fieldset
                             'action' => 'create',
                         ]
                     ),
-                    'icon'        => 'fa fa-plus',
                     'text'        => __('Add feature'),
-                    'class'       => 'btn btn-primary btn-sm',
                     'target'      => '_blank',
-                    'twb-layout'  => 'horizontal',
-                    'column-size' => 'md-12',
                 ],
                 'attributes' => [
                     'id' => 'catalog_add_feature',
@@ -185,8 +173,6 @@ class ProductFieldset extends Fieldset
                 'options'    => [
                     'disable_inarray_validator' => true,
                     'unselected_value'          => null,
-                    'twb-layout'                => 'horizontal',
-                    'column-size'               => 'md-8',
 
                 ],
                 'attributes' => [
@@ -222,14 +208,10 @@ class ProductFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_variant',
                 'options'    => [
-                    'label'       => __('Add Variant'),
-                    'twb-layout'  => 'horizontal',
-                    'column-size' => 'md-8 col-md-offset-4',
-                    'fontAwesome' => ['icon' => 'plus-circle'],
+                    'label'       => __('Add Variant')
                 ],
                 'attributes' => [
                     'id'               => 'catalog_product_add_new_variant',
-                    'class'            => 'btn btn-default btn-create-new-row',
                     'data-source-path' => 'fieldset.product-variants',
                     'data-target-path' => 'fieldset.product-variants  tbody.table-fieldset-body',
                 ],
@@ -243,13 +225,9 @@ class ProductFieldset extends Fieldset
                 'name'       => 'add_new_image',
                 'options'    => [
                     'label'       => __('Add Image'),
-                    'twb-layout'  => 'horizontal',
-                    'column-size' => 'md-8 col-md-offset-4',
-                    'fontAwesome' => ['icon' => 'plus-circle'],
                 ],
                 'attributes' => [
                     'id'               => 'catalog_product_add_new_image',
-                    'class'            => 'btn btn-default btn-create-new-row',
                     'data-source-path' => 'fieldset.product-images',
                     'data-target-path' => 'fieldset.product-images  tbody.table-fieldset-body',
                 ],
