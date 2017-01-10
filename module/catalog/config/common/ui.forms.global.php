@@ -718,10 +718,12 @@ return [
                         ],
                         'translations' => [
                             'name' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
-                                'label_attributes' => [
-                                    'class' => 'col-md-4',
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
                                 ],
                             ]
                         ],

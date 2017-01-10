@@ -315,16 +315,16 @@
         },
         {
             "name": "beberlei/assert",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/assert.git",
-                "reference": "c33b48de9ab5c254347ef40389f012b655a04cba"
+                "reference": "412ca7cbd1c726d3d770f6af20aeed1089de296f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/assert/zipball/c33b48de9ab5c254347ef40389f012b655a04cba",
-                "reference": "c33b48de9ab5c254347ef40389f012b655a04cba",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/412ca7cbd1c726d3d770f6af20aeed1089de296f",
+                "reference": "412ca7cbd1c726d3d770f6af20aeed1089de296f",
                 "shasum": ""
             },
             "require": {
@@ -366,7 +366,7 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2017-01-06T18:10:03+00:00"
+            "time": "2017-01-09T09:19:50+00:00"
         },
         {
             "name": "behat/transliterator",
