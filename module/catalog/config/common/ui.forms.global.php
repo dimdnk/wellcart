@@ -568,11 +568,54 @@ return [
                             ],
                         ],
                         'translations' => [
-                            'name',
-                            'description',
-                            'meta_title',
-                            'meta_keywords',
-                            'meta_description',
+                            'name' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'description' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                                'attributes' => [
+                                    'class' => 'wysiwyg-tinymce',
+                                ],
+                            ],
+                            'meta_title' => [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'meta_keywords' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
+                            'meta_description' =>  [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
+                            ],
                         ],
                         'add_new_image' => [
                             'options'    => [

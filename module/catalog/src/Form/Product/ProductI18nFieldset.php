@@ -52,12 +52,7 @@ class ProductI18nFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Product Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Product Name')
                 ],
                 'attributes' => [
                     'class'    => 'form-control catalog_product_name',
@@ -72,15 +67,9 @@ class ProductI18nFieldset extends Fieldset
                 'name'       => 'description',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Description')
                 ],
                 'attributes' => [
-                    'class' => 'wysiwyg-tinymce',
                     'rows'  => 50,
                 ],
             ],
@@ -92,14 +81,8 @@ class ProductI18nFieldset extends Fieldset
                 'name'       => 'meta_title',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Page Title'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Page Title')
                 ],
-                'attributes' => [],
             ],
             ['priority' => 600]
         );
@@ -109,14 +92,7 @@ class ProductI18nFieldset extends Fieldset
                 'name'       => 'meta_keywords',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Meta Keywords'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
-                ],
-                'attributes' => [],
+                    'label'            => __('Meta Keywords')                ],
             ],
             ['priority' => 550]
         );
@@ -127,14 +103,8 @@ class ProductI18nFieldset extends Fieldset
                 'type'       => 'Textarea',
                 'options'    => [
                     'label'            => __('Meta Description'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
                     'help-block'       => __('Maximum 255 chars'),
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
-                'attributes' => [],
             ],
             ['priority' => 500]
         );

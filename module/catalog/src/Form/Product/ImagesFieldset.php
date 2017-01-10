@@ -58,12 +58,7 @@ class ImagesFieldset extends Fieldset
                 'name'       => 'description',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Alt Text'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Alt Text')
                 ],
             ],
             ['priority' => 650]
