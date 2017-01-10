@@ -45,14 +45,8 @@ class ProductFieldset extends Fieldset
                 'type'       => 'catalogProductTemplatesSelector',
                 'options'    => [
                     'label'            => __('Template'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
-                    'class'        => 'chosen-element',
                     'autocomplete' => 'off',
                     'id'           => 'catalog_product_product_template',
                 ],
@@ -86,14 +80,8 @@ class ProductFieldset extends Fieldset
                 'type'       => 'catalogBrandSelector',
                 'options'    => [
                     'label'            => __('Brand'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
                 ],
                 'attributes' => [
-                    'class'        => 'chosen-element',
                     'autocomplete' => 'off',
                     'id'           => 'catalog_product_brand',
                 ],

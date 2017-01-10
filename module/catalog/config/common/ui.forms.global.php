@@ -450,6 +450,18 @@ return [
                     ],
 
                     'product' => [
+                        'product_template' => [
+                            'options'    => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                            'attributes' => [
+                                'class'        => 'chosen-element',
+                            ],
+                        ],
                         'status' => [
                             'options' => [
                                 'twb-layout' => 'horizontal',
@@ -489,7 +501,18 @@ return [
                         ],
 
                         'categories' => [],
-                        'brand',
+                        'brand' =>   [
+                            'options'    => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                            'attributes' => [
+                                'class'        => 'chosen-element',
+                            ],
+                        ],
                         'add_new_variant' => [
                             'options' => [
                                 'twb-layout' => 'horizontal',
