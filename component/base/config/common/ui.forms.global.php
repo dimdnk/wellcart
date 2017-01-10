@@ -10,7 +10,6 @@ return [
         'form' =>
             [
                 'base_url_rewrite' => [
-                    'elements' => [
                         'save' => [
                             'options' => [
                                 'fontAwesome' => [
@@ -52,11 +51,10 @@ return [
                                 ],
                             ],
                         ],
-                    ],
+
                 ],
 
                 'base_locale_language' => [
-                    'elements' => [
                         'save' => [
                             'options' => [
                                 'fontAwesome' => [
@@ -143,7 +141,6 @@ return [
                                 ],
                             ],
                         ],
-                    ],
                 ]
             ]
     ]

@@ -10,7 +10,6 @@ return [
         'form' =>
             [
                 'api_client' => [
-                    'elements' => [
                         'save'                   => [
                             'options'    => [
                                 'fontAwesome' => [
@@ -81,12 +80,9 @@ return [
                                 ],
                             ],
                         ],
-
-                    ],
                 ],
 
                 'api_key' => [
-                    'elements' => [
                         'save'                   => [
                             'options'    => [
                                 'fontAwesome' => [
@@ -148,13 +144,9 @@ return [
                                 ],
                             ],
                         ],
-
-
-                    ],
                 ],
 
                 'api_scope' => [
-                    'elements' => [
                         'save'                   => [
                             'options'    => [
                                 'fontAwesome' => [
@@ -199,7 +191,6 @@ return [
                                 ],
                             ],
                         ],
-                    ],
                 ],
             ]
     ]

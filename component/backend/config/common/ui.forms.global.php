@@ -10,7 +10,6 @@ return [
         'form' =>
             [
                 'admin_account' => [
-                    'elements' => [
                         'save'                   => [
                             'options'    => [
                                 'fontAwesome' => [
@@ -112,8 +111,6 @@ return [
                                 ],
                             ],
                         ],
-
-                    ],
                 ]
             ]
     ]

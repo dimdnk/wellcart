@@ -10,7 +10,6 @@ return [
         'form' =>
             [
                 'user_account' => [
-                    'elements' => [
                         'save' => [
                             'options' => [
                                 'fontAwesome' => [
@@ -113,12 +112,10 @@ return [
                                 ],
                             ],
                         ],
-                    ],
                 ],
 
 
                 'user_acl_role' => [
-                    'elements' => [
                         'save' => [
                             'options' => [
                                 'fontAwesome' => [
@@ -183,14 +180,10 @@ return [
                                 ],
                             ],
                         ],
-
-
-                    ],
                 ],
 
 
                 'user_account_preferences' => [
-                    'elements' => [
                         'save' => [
                             'options' => [
                                 'fontAwesome' => [
@@ -311,9 +304,6 @@ return [
                                 ],
                             ],
                         ],
-
-
-                    ],
                 ],
 
             ]

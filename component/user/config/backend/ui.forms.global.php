@@ -10,7 +10,6 @@ return [
         'form' =>
             [
                 'preferences' => [
-                    'elements' => [
                         'save'                   => [
                             'options'    => [
                                 'fontAwesome' => [
@@ -21,7 +20,6 @@ return [
                                 'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                             ],
                         ],
-                    ],
                 ],
             ]
     ]
