@@ -32,7 +32,6 @@ return [
                         ],
                     ],
                     'attribute' => [
-                        'elements' => [
                             'backend_name' => [
                                 'options' => [
                                     'twb-layout' => 'horizontal',
@@ -67,12 +66,9 @@ return [
                                     'column-size' => 'md-8 col-md-offset-4',
                                     'fontAwesome' => ['icon' => 'plus-circle'],
                                 ],
-                            ],
                         ],
 
                         'translations' => [
-                            'elements' =>
-                                [
                                     'name' => [
                                         'options' => [
                                             'twb-layout' => 'horizontal',
@@ -82,7 +78,6 @@ return [
                                             ],
                                         ],
                                     ],
-                                ]
                         ],
                         'values' => [
 
