@@ -60,19 +60,15 @@ trait DomainInputFilterSpecConfigTrait
     ) {
 
         $fields = Config::get(
-            'domain.mapping.' . $className . '.' . $section,
+            'domain.input_filter.' . $className . '.' . $section,
             Config::get(
-                'domain.mapping.' . str_replace('\\', '\\\\', $className)
+                'domain.input_filter.' . str_replace('\\', '\\\\', $className)
                 . '.' . $section, []
             )
         );
         foreach ($fields as $field => $data) {
-            if (empty($data['input_filter_specification'])) {
-                unset($fields[$field]);
-                continue;
-            }
             $field = Str::camel2underscored($field);
-            $spec[$field] = (array)$data['input_filter_specification'];
+            $spec[$field] = $data;
             Arr::set($spec, $field . '.name', $field);
             unset($fields[$field]);
         }
