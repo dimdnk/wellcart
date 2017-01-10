@@ -5,13 +5,16 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\Directory;
+
 return [
     'domain' => [
         'mapping' => [
-            'WellCart\Directory\Entity\Country'    =>
+            Entity\Country::class    =>
                 [
                     'type'            => 'entity',
-                    'repositoryClass' => 'WellCart\Directory\Repository\Countries',
+                    'repositoryClass' => Repository\Countries::class,
                     'table'           => 'directory_countries',
                     'id'              =>
                         [
@@ -211,11 +214,11 @@ return [
                                 ],
                         ],
                 ],
-            'WellCart\Directory\Entity\Currency'   =>
+            Entity\Currency::class   =>
                 [
                     'type'            => 'entity',
                     'entityListeners' => [
-                        'WellCart\Directory\EventListener\Entity\CurrencyEntityListener' => [
+                        EventListener\Entity\CurrencyEntityListener::class => [
                             'prePersist'  => ['prePersist' => 'prePersist'],
                             'preUpdate'   => ['prePersist' => 'preUpdate'],
                             'postPersist' => ['postPersist' => 'postPersist'],
@@ -223,7 +226,7 @@ return [
                             'preRemove'   => ['preRemove' => 'preRemove'],
                         ],
                     ],
-                    'repositoryClass' => 'WellCart\Directory\Repository\Currencies',
+                    'repositoryClass' => Repository\Currencies::class,
                     'table'           => 'directory_currencies',
                     'id'              =>
                         [
@@ -301,7 +304,7 @@ return [
                                             'NoObjectExists' => [
                                                 'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                                 'options' => [
-                                                    'entity_class' => 'WellCart\Directory\Entity\Currency',
+                                                    'entity_class' => Entity\Currency::class,
                                                     'fields'       => ['code'],
                                                     'messages'     => [
                                                         'objectFound' => 'Currency with this code already exists!'
@@ -558,14 +561,14 @@ return [
                                 ],
                         ],
                 ],
-            'WellCart\Directory\Entity\GeoZone'    =>
+            Entity\GeoZone::class    =>
                 [
                     'type'            => 'entity',
-                    'repositoryClass' => 'WellCart\Directory\Repository\GeoZones',
+                    'repositoryClass' => Repository\GeoZones::class,
                     'table'           => 'directory_geo_zones',
                     'oneToMany'       => [
                         'geoZoneMaps' => [
-                            'targetEntity'  => 'WellCart\Directory\Entity\GeoZoneMap',
+                            'targetEntity'  => Entity\GeoZoneMap::class,
                             'mappedBy'      => 'geoZone',
                             'orphanRemoval' => true,
                             'cascade'       => ['persist', 'merge', 'detach'],
@@ -670,10 +673,10 @@ return [
                                 ],
                         ],
                 ],
-            'WellCart\Directory\Entity\GeoZoneMap' =>
+            Entity\GeoZoneMap::class =>
                 [
                     'type'            => 'entity',
-                    'repositoryClass' => 'WellCart\Directory\Repository\GeoZoneMaps',
+                    'repositoryClass' => Repository\GeoZoneMaps::class,
                     'table'           => 'directory_zone_to_geo_zone',
                     'id'              =>
                         [
@@ -690,14 +693,14 @@ return [
                         ],
                     'oneToOne'        => [
                         'country' => [
-                            'targetEntity' => 'WellCart\Directory\Entity\Country',
+                            'targetEntity' => Entity\Country::class,
                             'joinColumn'   => [
                                 'name'                 => 'country_id',
                                 'referencedColumnName' => 'country_id'
                             ],
                         ],
                         'zone'    => [
-                            'targetEntity' => 'WellCart\Directory\Entity\Zone',
+                            'targetEntity' => Entity\Zone::class,
                             'joinColumn'   => [
                                 'name'                 => 'zone_id',
                                 'referencedColumnName' => 'zone_id'
@@ -706,7 +709,7 @@ return [
                     ],
                     'manyToOne'       => [
                         'geoZone' => [
-                            'targetEntity' => 'WellCart\Directory\Entity\GeoZone',
+                            'targetEntity' => Entity\GeoZone::class,
                             'inversedBy'   => 'geoZoneMaps',
                             'joinColumn'   => [
                                 'name'                 => 'geo_zone_id',
@@ -762,14 +765,14 @@ return [
                                 ],
                         ],
                 ],
-            'WellCart\Directory\Entity\Zone'       =>
+            Entity\Zone::class       =>
                 [
                     'type'            => 'entity',
-                    'repositoryClass' => 'WellCart\Directory\Repository\Zones',
+                    'repositoryClass' => Repository\Zones::class,
                     'table'           => 'directory_zones',
                     'oneToOne'        => [
                         'country' => [
-                            'targetEntity' => 'WellCart\Directory\Entity\Country',
+                            'targetEntity' => Entity\Country::class,
                             'joinColumn'   => [
                                 'name'                 => 'country_id',
                                 'referencedColumnName' => 'country_id'

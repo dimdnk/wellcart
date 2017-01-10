@@ -5,13 +5,16 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\CMS;
+
 return [
   'domain' => [
     'mapping' => [
-      'WellCart\CMS\Entity\Page'     =>
+      Entity\Page::class     =>
         [
           'type'            => 'entity',
-          'repositoryClass' => 'WellCart\CMS\Repository\Pages',
+          'repositoryClass' => Repository\Pages::class,
           'table'           => 'cms_pages',
           'id'              =>
             [
@@ -28,7 +31,7 @@ return [
             ],
           'oneToMany'       => [
             'translations' => [
-              'targetEntity'  => 'WellCart\CMS\Entity\PageI18n',
+              'targetEntity'  => Entity\PageI18n::class,
               'mappedBy'      => 'page',
               'orphanRemoval' => true,
               'cascade'       => ['persist', 'merge', 'detach'],
@@ -67,7 +70,7 @@ return [
                       [
                         'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                         'options' => [
-                          'entity_class' => 'WellCart\CMS\Entity\Page',
+                          'entity_class' => Entity\Page::class,
                           'fields'       => ['urlKey'],
                           'messages'     => [
                             'objectFound' => 'Url key already exists!'
@@ -132,10 +135,10 @@ return [
                 ],
             ],
         ],
-      'WellCart\CMS\Entity\PageI18n' =>
+      Entity\PageI18n::class =>
         [
           'type'            => 'entity',
-          'repositoryClass' => 'WellCart\CMS\Repository\PageI18n',
+          'repositoryClass' => Repository\PageI18n::class,
           'table'           => 'cms_page_i18n',
           'id'              =>
             [
@@ -161,7 +164,7 @@ return [
           ],
           'manyToOne'       => [
             'page' => [
-              'targetEntity' => 'WellCart\CMS\Entity\Page',
+              'targetEntity' => Entity\Page::class,
               'inversedBy'   => 'translations',
               'joinColumn'   => [
                 'name'                 => 'page_id',

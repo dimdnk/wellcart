@@ -5,13 +5,16 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\Base;
+
 return [
     'domain' => [
         'mapping' => [
-        'WellCart\Base\Entity\Configuration'   =>
+        Entity\Configuration::class   =>
             [
                 'type'            => 'entity',
-                'repositoryClass' => 'WellCart\Base\Repository\Configuration',
+                'repositoryClass' => Repository\Configuration::class,
                 'table'           => 'base_configuration',
                 'id'              =>
                     [
@@ -57,7 +60,7 @@ return [
                                         'NoObjectExists' => [
                                             'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                             'options' => [
-                                                'entity_class' => 'WellCart\Base\Entity\Configuration',
+                                                'entity_class' => Entity\Configuration::class,
                                                 'fields'       => ['configKey'],
                                                 'messages'     => [
                                                     'objectFound' => 'Config key already exists!'
@@ -182,10 +185,10 @@ return [
                             ],
                     ],
             ],
-        'WellCart\Base\Entity\UrlRewrite'      =>
+        Entity\UrlRewrite::class      =>
             [
                 'type'            => 'entity',
-                'repositoryClass' => 'WellCart\Base\Repository\UrlRewrites',
+                'repositoryClass' => Repository\UrlRewrites::class,
                 'table'           => 'base_url_rewrites',
                 'id'              =>
                     [
@@ -234,7 +237,7 @@ return [
                                         'NoObjectExists' => [
                                             'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                             'options' => [
-                                                'entity_class' => 'WellCart\Base\Entity\UrlRewrite',
+                                                'entity_class' => Entity\UrlRewrite::class,
                                                 'fields'       => ['requestPath'],
                                                 'messages'     => [
                                                     'objectFound' => 'Request path already exists!'
@@ -327,11 +330,11 @@ return [
                             ],
                     ],
             ],
-        'WellCart\Base\Entity\Locale\Language' =>
+        Entity\Locale\Language::class =>
             [
                 'type'            => 'entity',
                 'entityListeners' => [
-                    'WellCart\Base\EventListener\Entity\LocaleLanguageEntityListener' => [
+                    EventListener\Entity\LocaleLanguageEntityListener::class => [
                         'prePersist'  => ['prePersist' => 'prePersist'],
                         'preUpdate'   => ['prePersist' => 'preUpdate'],
                         'postPersist' => ['postPersist' => 'postPersist'],
@@ -339,7 +342,7 @@ return [
                         'preRemove'   => ['preRemove' => 'preRemove'],
                     ],
                 ],
-                'repositoryClass' => 'WellCart\Base\Repository\Locale\Languages',
+                'repositoryClass' => Repository\Locale\Languages::class,
                 'table'           => 'base_locale_languages',
                 'id'              =>
                     [
@@ -385,7 +388,7 @@ return [
                                         'NoObjectExists' => [
                                             'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                             'options' => [
-                                                'entity_class' => 'WellCart\Base\Entity\Locale\Language',
+                                                'entity_class' => Entity\Locale\Language::class,
                                                 'fields'       => ['name'],
                                                 'messages'     => [
                                                     'objectFound' => 'Language already exists!'
@@ -424,7 +427,7 @@ return [
                                         'NoObjectExists' => [
                                             'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                             'options' => [
-                                                'entity_class' => 'WellCart\Base\Entity\Locale\Language',
+                                                'entity_class' => Entity\Locale\Language::class,
                                                 'fields'       => ['code'],
                                                 'messages'     => [
                                                     'objectFound' => 'Language code already exists!'
@@ -617,10 +620,10 @@ return [
                             ],
                     ],
             ],
-        'WellCart\Base\Entity\Queue\Job'       =>
+        Entity\Queue\Job::class       =>
             [
                 'type'            => 'entity',
-                'repositoryClass' => 'WellCart\Base\Repository\Queue\Jobs',
+                'repositoryClass' => Repository\Queue\Jobs::class,
                 'table'           => 'base_job_queue',
                 'id'              =>
                     [

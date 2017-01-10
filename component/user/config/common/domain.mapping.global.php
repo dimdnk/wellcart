@@ -5,15 +5,18 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+namespace WellCart\User;
+use WellCart\Base\Entity\Locale\Language;
 return [
     'domain' => [
         'mapping' => [
-        'WellCart\User\AbstractUser'          =>
+        AbstractUser::class          =>
             [
                 'type'     => 'mappedSuperclass',
                 'oneToOne' => [
                     'language' => [
-                        'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                        'targetEntity' => Language::class,
                         'joinColumn'   => [
                             'name'                 => 'language_id',
                             'referencedColumnName' => 'language_id',
