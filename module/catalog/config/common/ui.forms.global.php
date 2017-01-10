@@ -32,52 +32,52 @@ return [
                         ],
                     ],
                     'attribute' => [
-                            'backend_name' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
-                                    'label_attributes' => [
-                                        'class' => 'col-md-4',
-                                    ],
+                        'backend_name' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
                                 ],
                             ],
-                            'product_templates' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
-                                    'label_attributes' => [
-                                        'class' => 'col-md-4',
-                                    ],
+                        ],
+                        'product_templates' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
                                 ],
                             ],
-                            'sort_order' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
-                                    'label_attributes' => [
-                                        'class' => 'col-md-4',
-                                    ],
+                        ],
+                        'sort_order' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
                                 ],
                             ],
+                        ],
 
-                            'add_new_attribute_value' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8 col-md-offset-4',
-                                    'fontAwesome' => ['icon' => 'plus-circle'],
-                                ],
+                        'add_new_attribute_value' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8 col-md-offset-4',
+                                'fontAwesome' => ['icon' => 'plus-circle'],
+                            ],
                         ],
 
                         'translations' => [
-                                    'name' => [
-                                        'options' => [
-                                            'twb-layout' => 'horizontal',
-                                            'column-size' => 'md-8',
-                                            'label_attributes' => [
-                                                'class' => 'col-md-4',
-                                            ],
-                                        ],
+                            'name' => [
+                                'options' => [
+                                    'twb-layout' => 'horizontal',
+                                    'column-size' => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
                                     ],
+                                ],
+                            ],
                         ],
                         'values' => [
 
@@ -470,6 +470,45 @@ return [
                         ],
                         'attributes' => [
                             'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+                        ],
+                    ],
+
+                    'product_template' => [
+                        'sort_order' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+                        'attributes' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+                        'features' => [
+                            'options' => [
+                                'twb-layout' => 'horizontal',
+                                'column-size' => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ],
+                        ],
+                        'translations' => [
+                            'name' => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
+                                'label_attributes' => [
+                                    'class' => 'col-md-4',
+                                ],
+                            ]
                         ],
                     ]
                 ],

@@ -53,12 +53,7 @@ class ProductTemplateI18nFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Name'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Name')
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_product_template_name',

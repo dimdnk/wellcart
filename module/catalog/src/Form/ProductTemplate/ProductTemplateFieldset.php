@@ -37,12 +37,7 @@ class ProductTemplateFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Sort Order')
                 ],
                 'attributes' => [
                     'id'    => 'product_template_sort_order',
@@ -78,12 +73,7 @@ class ProductTemplateFieldset extends Fieldset
                 'name'       => 'attributes',
                 'type'       => 'catalogAttributesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Attributes'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Attributes')
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -98,12 +88,7 @@ class ProductTemplateFieldset extends Fieldset
                 'name'       => 'features',
                 'type'       => 'catalogFeaturesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Features'),
-                    'twb-layout'       => 'horizontal',
-                    'column-size'      => 'md-8',
-                    'label_attributes' => [
-                        'class' => 'col-md-4',
-                    ],
+                    'label'            => __('Features')
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
