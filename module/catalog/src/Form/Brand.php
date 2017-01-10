@@ -139,6 +139,25 @@ class Brand extends AbstractForm
             ->setLabel(__('Save & Continue Edit'));
         $this->addToolbarButton($saveAndContinue, 120000);
 
+
+        $this->add(
+            [
+                'name'       => 'remove_image',
+                'type'       => 'checkbox',
+                'options'    => [
+                    'label'               => __('Remove Image'),
+                    'strokerform-exclude' => true,
+                    'use_hidden_element'  => true,
+                    'checked_value'       => 1,
+                    'unchecked_value'     => 0,
+                ],
+                'attributes' => [
+                    'id'    => 'catalog_brand_remove_image',
+                ],
+            ],
+            ['priority' => 650]
+        );
+
         $this->getEventManager()->trigger('init', $this);
     }
 
@@ -175,24 +194,8 @@ class Brand extends AbstractForm
             );
         }
 
-        if ($object->getImageFullPath()) {
-            $this->add(
-                [
-                    'name'       => 'remove_image',
-                    'type'       => 'checkbox',
-                    'options'    => [
-                        'label'               => __('Remove Image'),
-                        'strokerform-exclude' => true,
-                        'use_hidden_element'  => true,
-                        'checked_value'       => 1,
-                        'unchecked_value'     => 0,
-                    ],
-                    'attributes' => [
-                        'id'    => 'catalog_brand_remove_image',
-                    ],
-                ],
-                ['priority' => 650]
-            );
+        if (!$object->getImageFullPath()) {
+          $this->remove('remove_image');
         }
 
         return parent::bind($object, $flags);
