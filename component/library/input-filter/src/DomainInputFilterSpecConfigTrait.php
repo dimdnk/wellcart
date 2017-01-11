@@ -29,41 +29,12 @@ trait DomainInputFilterSpecConfigTrait
             get_class($entity)
             : $entity;
 
-        $sections = [
-            'fields', 'manyToMany',
-            'oneToMany', 'manyToOne',
-            'oneToOne', 'formFields'
-        ];
-
-        foreach ($sections as $section) {
-            $this->populateDomainEntityInputFilterSpecification(
-                $spec,
-                $section,
-                $className
-            );
-        }
-        return $spec;
-    }
-
-
-    /**
-     * Populate domain entity input filter specification
-     *
-     * @param array $spec
-     * @param       $section
-     * @param       $className
-     */
-    final protected function populateDomainEntityInputFilterSpecification(
-        array &$spec,
-        $section,
-        $className
-    ) {
-
         $fields = Config::get(
-            'domain.input_filter.' . $className . '.' . $section,
+            'domain.input_filter.' . $className,
             Config::get(
-                'domain.input_filter.' . str_replace('\\', '\\\\', $className)
-                . '.' . $section, []
+                'domain.input_filter.'
+                . str_replace('\\', '\\\\', $className),
+                    []
             )
         );
         foreach ($fields as $field => $data) {
@@ -72,5 +43,6 @@ trait DomainInputFilterSpecConfigTrait
             Arr::set($spec, $field . '.name', $field);
             unset($fields[$field]);
         }
+        return $spec;
     }
 }
