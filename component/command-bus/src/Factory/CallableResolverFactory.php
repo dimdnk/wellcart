@@ -22,7 +22,8 @@ class CallableResolverFactory
      * @return ServiceLocatorAwareCallableResolver
      */
     public function __invoke(ContainerInterface $container
-    ): ServiceLocatorAwareCallableResolver {
+    ): ServiceLocatorAwareCallableResolver
+    {
         return new ServiceLocatorAwareCallableResolver(
             function ($serviceId) use ($container) {
                 $handler = $container->get($serviceId);

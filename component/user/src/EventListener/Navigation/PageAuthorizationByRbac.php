@@ -25,7 +25,8 @@ class PageAuthorizationByRbac
      * @param AuthorizationServiceInterface $authorizationService
      */
     public function __construct(AuthorizationServiceInterface $authorizationService
-    ) {
+    )
+    {
         $this->authorizationService = $authorizationService;
     }
 

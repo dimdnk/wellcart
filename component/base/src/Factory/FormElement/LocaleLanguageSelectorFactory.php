@@ -20,7 +20,8 @@ class LocaleLanguageSelectorFactory
      * @return \WellCart\Form\Element\Select
      */
     public function __invoke(ContainerInterface $sm
-    ): \WellCart\Form\Element\Select {
+    ): \WellCart\Form\Element\Select
+    {
         $services = $sm->getServiceLocator();
         $languages = $services->get(
             'locale\active_languages_collection'

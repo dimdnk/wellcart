@@ -16,5 +16,4 @@ interface MigrationsProviderInterface
      * @return \WellCart\SchemaMigration\AbstractMigration[]
      */
     public function getSetupMigrations(): array;
-
 }

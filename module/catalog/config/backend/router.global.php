@@ -7,6 +7,7 @@
  */
 
 namespace WellCart\Catalog;
+
 /**
  * =========================================================
  * Router configuration

@@ -15,7 +15,8 @@ use WellCart\User\Controller\UserController;
 class UserControllerFactory
 {
     public function __invoke(ContainerInterface $sm
-    ): UserController {
+    ): UserController
+    {
         $serviceManager = $sm->getServiceLocator();
         $redirectCallback = $serviceManager->get(
             'zfcuser_redirect_callback'

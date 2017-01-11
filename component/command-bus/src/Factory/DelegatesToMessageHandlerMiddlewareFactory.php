@@ -22,7 +22,8 @@ class DelegatesToMessageHandlerMiddlewareFactory
      * @return DelegatesToMessageHandlerMiddleware
      */
     public function __invoke(ContainerInterface $container
-    ): DelegatesToMessageHandlerMiddleware {
+    ): DelegatesToMessageHandlerMiddleware
+    {
         $commandHandlerResolver = $container->get(
             'command_bus.command_handler_resolver'
         );

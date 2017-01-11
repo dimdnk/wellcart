@@ -121,104 +121,104 @@ return ['ui' =>
                 ],
 
                 'title' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
-                    'attributes' => array(
+                        ],
+                    ],
+                    'attributes' => [
                         'autofocus' => 'autofocus',
-                    ),
+                    ],
                 ],
                 'code' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
+                        ],
+                    ],
                 ],
                 'symbol' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
+                        ],
+                    ],
                 ],
                 'symbol_position' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
+                        ],
+                    ],
                 ],
                 'exchange_rate' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
+                        ],
+                    ],
                 ],
                 'decimals' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
+                        ],
+                    ],
                 ],
                 'decimals_separator' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    ),
+                        ],
+                    ],
                 ],
                 'thousands_separator' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-8',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-4',
-                        ),
-                    )
+                        ],
+                    ]
                 ],
                 'status' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-12',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-8 col-md-offset-4',
-                        ),
+                        ],
 
-                    ),
-                    'attributes' => array(
+                    ],
+                    'attributes' => [
                         'class' => 'icheck-element',
-                    ),
+                    ],
                 ],
                 'is_primary' => [
-                    'options' => array(
+                    'options' => [
                         'twb-layout' => 'horizontal',
                         'column-size' => 'md-12',
-                        'label_attributes' => array(
+                        'label_attributes' => [
                             'class' => 'col-md-8 col-md-offset-4',
-                        ),
-                    ),
-                    'attributes' => array(
+                        ],
+                    ],
+                    'attributes' => [
                         'class' => 'icheck-element',
-                    ),
+                    ],
                 ],
             ],
 

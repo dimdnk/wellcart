@@ -23,7 +23,8 @@ class CommandBusFactory
      * @return MessageBusSupportingMiddleware
      */
     public function __invoke(ContainerInterface $container
-    ): MessageBusSupportingMiddleware {
+    ): MessageBusSupportingMiddleware
+    {
         $commandBus = new MessageBusSupportingMiddleware();
 
         $commandBusConfig = $container->get('command_bus.config');

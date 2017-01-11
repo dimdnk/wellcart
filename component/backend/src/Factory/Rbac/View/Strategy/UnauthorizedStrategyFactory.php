@@ -21,7 +21,8 @@ class UnauthorizedStrategyFactory
      * @return UnauthorizedStrategy
      */
     public function __invoke(ContainerInterface $container
-    ): UnauthorizedStrategy {
+    ): UnauthorizedStrategy
+    {
         /* @var \ZfcRbac\Options\ModuleOptions $moduleOptions */
         $moduleOptions = $container->get('ZfcRbac\Options\ModuleOptions');
 

@@ -16,7 +16,8 @@ use WellCart\Backend\Controller\SettingsController;
 class SettingsControllerFactory
 {
     public function __invoke(ContainerInterface $sm
-    ): SettingsController {
+    ): SettingsController
+    {
         return new SettingsController(
             $sm->getServiceLocator()
                 ->get('system_configuration_editor')

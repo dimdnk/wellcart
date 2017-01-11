@@ -369,9 +369,9 @@ return [
                     'sortDirections' => 'sortOrder',
                     'massIds'        => 'ids',
                 ],
-                'daterange'      => [
+                    'daterange'      => [
                     'enabled' => false,
-                ],
+                    ],
             ],
         ],
     ],

@@ -500,8 +500,8 @@ return [
                             ],
                         ],
 
-                        'categories' => [],
-                        'brand' =>   [
+                            'categories' => [],
+                            'brand' =>   [
                             'options'    => [
                                 'twb-layout'       => 'horizontal',
                                 'column-size'      => 'md-8',
@@ -512,7 +512,7 @@ return [
                             'attributes' => [
                                 'class'        => 'chosen-element',
                             ],
-                        ],
+                            ],
                         'add_new_variant' => [
                             'options' => [
                                 'twb-layout' => 'horizontal',
@@ -523,7 +523,7 @@ return [
                                 'class' => 'btn btn-default btn-create-new-row',
                             ],
                         ],
-                        'variants' => [
+                            'variants' => [
                             'remove' =>  [
                                 'options'    => [
                                     'twb-layout'       => 'inline',
@@ -566,8 +566,8 @@ return [
                                     ],
                                 ],
                             ],
-                        ],
-                        'translations' => [
+                            ],
+                            'translations' => [
                             'name' =>  [
                                 'options'    => [
                                     'twb-layout'       => 'horizontal',
@@ -616,7 +616,7 @@ return [
                                     ],
                                 ],
                             ],
-                        ],
+                            ],
                         'add_new_image' => [
                             'options'    => [
                                 'twb-layout'  => 'horizontal',
@@ -627,7 +627,7 @@ return [
                                 'class'            => 'btn btn-default btn-create-new-row',
                             ],
                         ],
-                        'images' => [
+                            'images' => [
                             'remove' =>  [
                                 'options'    => [
                                     'twb-layout'       => 'inline',
@@ -661,7 +661,7 @@ return [
                                     ],
                                 ],
                             ],
-                        ],
+                            ],
                     ],
                 ],
 

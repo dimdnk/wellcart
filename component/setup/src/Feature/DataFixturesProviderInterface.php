@@ -16,5 +16,4 @@ interface DataFixturesProviderInterface
      * @return \Doctrine\Common\DataFixtures\OrderedFixtureInterface[]
      */
     public function getSetupDataFixtures(): array;
-
 }
