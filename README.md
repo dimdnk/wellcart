@@ -1,5 +1,5 @@
-WellCart Platform Skeleton Application
-======================================
+WellCart Platform Application
+=============================
 
 [![Latest Stable Version](https://poser.pugx.org/wellcart/wellcart/v/stable.png)](https://packagist.org/packages/wellcart/wellcart) 
 [![Build Status](https://travis-ci.org/wellcart/wellcart.svg)](https://travis-ci.org/wellcart/wellcart) 
@@ -81,7 +81,7 @@ or just run the following command:
 - To create your new WellCart project:
 
 ```bash
-$ composer create-project -sdev wellcart/skeleton-application path/to/install
+$ composer create-project -sdev wellcart/platform-application path/to/install
 ```
 
 - Create the database (default name is "wellcart").
