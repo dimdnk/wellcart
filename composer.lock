@@ -253,16 +253,16 @@
         },
         {
             "name": "beberlei/DoctrineExtensions",
-            "version": "v1.0.12",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/DoctrineExtensions.git",
-                "reference": "7b5e5ef31e606e6bcd18a6bb7cc6f5b9bbd1fede"
+                "reference": "e6ffd1373cb2b9f658a830a5a4a668c716a75f62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/7b5e5ef31e606e6bcd18a6bb7cc6f5b9bbd1fede",
-                "reference": "7b5e5ef31e606e6bcd18a6bb7cc6f5b9bbd1fede",
+                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/e6ffd1373cb2b9f658a830a5a4a668c716a75f62",
+                "reference": "e6ffd1373cb2b9f658a830a5a4a668c716a75f62",
                 "shasum": ""
             },
             "require": {
@@ -311,7 +311,7 @@
                 "doctrine",
                 "orm"
             ],
-            "time": "2016-12-06T02:57:23+00:00"
+            "time": "2017-01-11T07:22:12+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -1101,16 +1101,16 @@
         },
         {
             "name": "cron/cron",
-            "version": "1.0.9",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cron/Cron.git",
-                "reference": "bbc012acd4a96e0f17b565fa64f8e364b263b576"
+                "reference": "649fc841fbead139497058f4f4420b39cdfa9d6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cron/Cron/zipball/bbc012acd4a96e0f17b565fa64f8e364b263b576",
-                "reference": "bbc012acd4a96e0f17b565fa64f8e364b263b576",
+                "url": "https://api.github.com/repos/Cron/Cron/zipball/649fc841fbead139497058f4f4420b39cdfa9d6f",
+                "reference": "649fc841fbead139497058f4f4420b39cdfa9d6f",
                 "shasum": ""
             },
             "require": {
@@ -1142,7 +1142,7 @@
                 }
             ],
             "description": "Cronjobs",
-            "time": "2016-03-24T20:53:55+00:00"
+            "time": "2017-01-11T18:06:57+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -7339,16 +7339,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59"
+                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c6ff71094fde15d12398eaba029434b013dc5e59",
-                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
                 "shasum": ""
             },
             "require": {
@@ -7356,12 +7356,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2@dev"
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.30-dev"
+                    "dev-master": "1.31-dev"
                 }
             },
             "autoload": {
@@ -7396,7 +7396,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-23T11:06:22+00:00"
+            "time": "2017-01-11T19:36:15+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -8497,16 +8497,16 @@
         },
         {
             "name": "zendframework/zend-file",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-file.git",
-                "reference": "8936999f244011525671db8d6e35a2f2232d5060"
+                "reference": "888fd4852432ee61ffd48a66b6812387b4f83c02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-file/zipball/8936999f244011525671db8d6e35a2f2232d5060",
-                "reference": "8936999f244011525671db8d6e35a2f2232d5060",
+                "url": "https://api.github.com/repos/zendframework/zend-file/zipball/888fd4852432ee61ffd48a66b6812387b4f83c02",
+                "reference": "888fd4852432ee61ffd48a66b6812387b4f83c02",
                 "shasum": ""
             },
             "require": {
@@ -8516,6 +8516,7 @@
             "require-dev": {
                 "fabpot/php-cs-fixer": "1.7.*",
                 "phpunit/phpunit": "~4.0",
+                "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-filter": "^2.6.1",
                 "zendframework/zend-i18n": "^2.6",
                 "zendframework/zend-progressbar": "^2.5.2",
@@ -8549,7 +8550,7 @@
                 "file",
                 "zf2"
             ],
-            "time": "2016-04-28T19:21:43+00:00"
+            "time": "2017-01-11T17:07:45+00:00"
         },
         {
             "name": "zendframework/zend-filter",
@@ -12796,16 +12797,16 @@
         },
         {
             "name": "pdepend/pdepend",
-            "version": "2.3.2",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdepend/pdepend.git",
-                "reference": "8d7ab8fe8c1f9de5056bb7ea2c0852f4ddd44f90"
+                "reference": "3acfa4fcadbb8b65b8b2ec077408c5ef0e112e68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/8d7ab8fe8c1f9de5056bb7ea2c0852f4ddd44f90",
-                "reference": "8d7ab8fe8c1f9de5056bb7ea2c0852f4ddd44f90",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/3acfa4fcadbb8b65b8b2ec077408c5ef0e112e68",
+                "reference": "3acfa4fcadbb8b65b8b2ec077408c5ef0e112e68",
                 "shasum": ""
             },
             "require": {
@@ -12832,7 +12833,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2016-11-23T20:25:02+00:00"
+            "time": "2017-01-11T16:15:35+00:00"
         },
         {
             "name": "phploc/phploc",

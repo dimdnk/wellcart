@@ -179,6 +179,9 @@ return [
                                     'class' => 'col-md-4',
                                 ],
                             ],
+                            'attributes' => [
+                                    'class' => 'icheck-element',
+                            ]
                         ],
                 ],
 
