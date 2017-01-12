@@ -28,6 +28,7 @@ class FeatureI18n extends AbstractRepository implements FeatureI18nRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class FeatureI18n extends AbstractRepository implements FeatureI18nRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 

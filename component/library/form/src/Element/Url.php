@@ -12,5 +12,6 @@ use Zend\Form\Element\Url as Element;
 
 class Url extends Element
 {
+
     use SetValueObjectTrait;
 }

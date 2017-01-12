@@ -12,6 +12,7 @@ use Zend\Stdlib\AbstractOptions;
 
 class Pager extends AbstractOptions
 {
+
     /**
      * Previous URL
      *
@@ -57,6 +58,7 @@ class Pager extends AbstractOptions
     public function setPreviousUrl(string $previousUrl)
     {
         $this->previousUrl = $previousUrl;
+
         return $this;
     }
 
@@ -76,6 +78,7 @@ class Pager extends AbstractOptions
     public function setNextUrl(string $nextUrl)
     {
         $this->nextUrl = $nextUrl;
+
         return $this;
     }
 
@@ -95,6 +98,7 @@ class Pager extends AbstractOptions
     public function setPreviousLabel(string $previousLabel)
     {
         $this->previousLabel = $previousLabel;
+
         return $this;
     }
 
@@ -114,6 +118,7 @@ class Pager extends AbstractOptions
     public function setNextLabel(string $nextLabel)
     {
         $this->nextLabel = $nextLabel;
+
         return $this;
     }
 

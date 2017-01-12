@@ -16,6 +16,7 @@ use Zend\Form\Element\MultiCheckbox as MultiCheckboxElement;
 
 class FormFeatureCombinationMultiCheckbox extends FormMultiCheckbox
 {
+
     /**
      * @inheritDoc
      */
@@ -40,6 +41,7 @@ class FormFeatureCombinationMultiCheckbox extends FormMultiCheckbox
                 $attributes
             );
         }
+
         return $html;
     }
 

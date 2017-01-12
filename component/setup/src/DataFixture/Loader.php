@@ -12,16 +12,18 @@ namespace WellCart\Setup\DataFixture;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\ORM\EntityManager;
-use WellCart\Setup\Feature\DataFixturesProviderInterface;
 use WellCart\Setup\Exception\BadMethodCallException;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
 
 class Loader extends
     \Doctrine\Common\DataFixtures\Loader
 {
+
     /**
      * @var \Doctrine\DBAL\Connection
      */
     protected $connection;
+
     /**
      * @var bool
      */
@@ -55,6 +57,7 @@ class Loader extends
         if (!$this->isLoaded) {
             $this->loadFromModules();
         }
+
         return parent::getFixtures();
     }
 
@@ -121,6 +124,7 @@ class Loader extends
                 'migration_name' => $dataFixtureName,
             ]
         );
+
         return true;
     }
 }

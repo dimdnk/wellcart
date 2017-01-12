@@ -17,6 +17,7 @@ use WellCart\Utility\Arr;
 
 trait EntityPersistenceAwareTrait
 {
+
     /**
      * @var EntityRepository
      */
@@ -77,10 +78,10 @@ trait EntityPersistenceAwareTrait
                     'save_and_continue_edit', false
                 );
                 if ($continueEdit !== false) {
-                    $params = array(
+                    $params = [
                         'id'     => $entity->getId(),
                         'action' => 'update',
-                    );
+                    ];
                 }
             }
 
@@ -91,7 +92,8 @@ trait EntityPersistenceAwareTrait
                     $options,
                     $reuseMatchedParams
                 );
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
             if ($e instanceof \DomainException) {
@@ -103,6 +105,7 @@ trait EntityPersistenceAwareTrait
             }
             $this->flashMessenger()
                 ->addWarningMessage($message);
+
             return $this->postRedirectGet();
         }
     }
@@ -131,6 +134,7 @@ trait EntityPersistenceAwareTrait
             $entity = $callback;
             $callback = function ($em) use ($entity) {
                 $em->remove($entity);
+
                 return $entity;
             };
         }
@@ -139,7 +143,8 @@ trait EntityPersistenceAwareTrait
             $this->commandBus()->handle($callback);
             $this->flashMessenger()
                 ->addSuccessMessage($successMessage);
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
 
@@ -154,6 +159,7 @@ trait EntityPersistenceAwareTrait
             $this->flashMessenger()
                 ->addWarningMessage($message);
         }
+
         return $this->redirect()
             ->toRoute(
                 $route,
@@ -198,11 +204,13 @@ trait EntityPersistenceAwareTrait
 
         try {
             $this->repository->performGroupAction($actionName, $ids, true);
-        } catch (ExpectedResultException $e) {
+        }
+        catch (ExpectedResultException $e) {
             $successMessage = $e->getMessage();
             $this->flashMessenger()
                 ->addSuccessMessage($successMessage);
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
 

@@ -16,6 +16,7 @@ use Zend\Crypt\Password\Bcrypt;
 
 class ClientHydrator extends ObjectHydrator
 {
+
     /**
      * @inheritdoc
      */
@@ -28,6 +29,7 @@ class ClientHydrator extends ObjectHydrator
             $bcrypt->setCost(14);
             $data['secret'] = $bcrypt->create($secret);
         }
+
         return parent::hydrate($data, $object);
     }
 }

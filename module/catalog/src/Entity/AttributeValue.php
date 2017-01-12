@@ -22,6 +22,7 @@ class AttributeValue extends AbstractEntity implements
     TranslatableEntity,
     AttributeValueEntity
 {
+
     /**
      * ID
      *
@@ -79,6 +80,7 @@ class AttributeValue extends AbstractEntity implements
     public function setTranslations(Collection $translations
     ): AttributeValueEntity {
         $this->translations = $translations;
+
         return $this;
     }
 
@@ -92,6 +94,7 @@ class AttributeValue extends AbstractEntity implements
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
+
         return $this;
     }
 
@@ -108,6 +111,7 @@ class AttributeValue extends AbstractEntity implements
 
         $translation->setAttributeValue($this);
         $this->translations->add($translation);
+
         return $this;
     }
 
@@ -121,6 +125,7 @@ class AttributeValue extends AbstractEntity implements
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
+
         return $this;
     }
 
@@ -135,6 +140,7 @@ class AttributeValue extends AbstractEntity implements
     ): AttributeValueEntity {
         $translation->setAttributeValue(null);
         $this->translations->removeElement($translation);
+
         return $this;
     }
 
@@ -155,6 +161,7 @@ class AttributeValue extends AbstractEntity implements
     public function setId($id): AttributeValueEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -174,6 +181,7 @@ class AttributeValue extends AbstractEntity implements
     public function setSortOrder($sortOrder): AttributeValueEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -193,6 +201,7 @@ class AttributeValue extends AbstractEntity implements
     public function setAttribute(AttributeEntity $attribute = null
     ): AttributeValueEntity {
         $this->attribute = $attribute;
+
         return $this;
     }
 }

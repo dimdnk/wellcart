@@ -14,10 +14,12 @@ use WellCart\Backend\Spec\AdministratorEntity;
 
 final class PersistAdminAccount
 {
+
     /**
      * @var AdministratorEntity
      */
     private $admin;
+
     /**
      * @var array
      */
@@ -37,6 +39,7 @@ final class PersistAdminAccount
     public function setAdministrator(AdministratorEntity $admin)
     {
         $this->admin = $admin;
+
         return $this;
     }
 

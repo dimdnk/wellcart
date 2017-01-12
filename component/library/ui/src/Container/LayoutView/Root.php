@@ -10,12 +10,14 @@ namespace WellCart\Ui\Container\LayoutView;
 
 class Root extends LayoutView
 {
+
     /**
      * @inheritdoc
      */
     public function setRootView(Root $layout)
     {
         $this->layout = $this;
+
         return $this;
     }
 

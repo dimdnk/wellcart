@@ -12,6 +12,7 @@ use Zend\Form\Element\MultiCheckbox as MultiCheckboxElement;
 
 class MultiCheckbox extends MultiCheckboxElement
 {
+
     use SetValueObjectTrait;
 
     /**
@@ -22,6 +23,7 @@ class MultiCheckbox extends MultiCheckboxElement
         $inputSpecification = parent::getInputSpecification();
         $inputSpecification['required'] = isset($this->attributes['required'])
             && $this->attributes['required'];
+
         return $inputSpecification;
     }
 

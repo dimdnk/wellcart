@@ -15,13 +15,17 @@ use Zend\InputFilter\InputFilterProviderInterface;
 class RecoverAccount extends \WellCart\Form\Form
     implements InputFilterProviderInterface
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'recover_account';
 
     /**
      * Form constructor
      */
     public function __construct()
     {
-        parent::__construct('recover_account');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -101,7 +105,7 @@ class RecoverAccount extends \WellCart\Form\Form
                                 'entity_class' => 'WellCart\User\Entity\User',
                                 'fields'       => ['email'],
                                 'messages'     => [
-                                    'noObjectFound' => 'No such user exists. Please make sure that you entered your email correctly.'
+                                    'noObjectFound' => 'No such user exists. Please make sure that you entered your email correctly.',
                                 ],
                             ],
                         ],
@@ -114,6 +118,7 @@ class RecoverAccount extends \WellCart\Form\Form
             $this,
             ['specification' => &$specification]
         );
+
         return $specification;
     }
 }

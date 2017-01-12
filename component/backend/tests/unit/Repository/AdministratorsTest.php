@@ -15,6 +15,7 @@ use WellCart\Backend\Spec\AdministratorRepository;
 
 class AdministratorsTest extends TestCase
 {
+
     /**
      * @var Administrators
      */

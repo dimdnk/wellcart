@@ -12,6 +12,7 @@ namespace WellCart\Directory\Repository\Helper;
 
 class CurrencyConverter
 {
+
     /**
      * Url where Curl request is made
      *
@@ -56,6 +57,7 @@ class CurrencyConverter
                 $url
             )
         );
+
         return false;
     }
 }

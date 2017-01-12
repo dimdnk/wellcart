@@ -14,6 +14,7 @@ use Phinx\Console\Command\Create as AbstractCommand;
 
 class Create extends AbstractCommand
 {
+
     use PhinxCommandTrait;
 
     /**

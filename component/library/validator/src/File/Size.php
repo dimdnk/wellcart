@@ -12,6 +12,7 @@ namespace WellCart\Validator\File;
 class Size extends
     \Zend\Validator\File\Size
 {
+
     /**
      * @var bool
      */
@@ -25,6 +26,7 @@ class Size extends
     public function setAllowEmpty($allowEmpty)
     {
         $this->allowEmpty = (bool)$allowEmpty;
+
         return $this;
     }
 
@@ -39,6 +41,7 @@ class Size extends
         ) {
             return true;
         }
+
         return parent::isValid($value, $file);
     }
 

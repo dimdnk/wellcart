@@ -19,6 +19,7 @@ use WellCart\User\Spec\UserRepository;
 
 class AccountsGrid extends Standard
 {
+
     public function __construct(
         UserRepository $repository,
         $variables = null,
@@ -119,7 +120,7 @@ class AccountsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -138,7 +139,7 @@ class AccountsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

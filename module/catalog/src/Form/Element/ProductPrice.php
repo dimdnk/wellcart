@@ -15,6 +15,7 @@ use WellCart\Form\Element\Text;
 
 class ProductPrice extends Text
 {
+
     /**
      * @var CurrencyEntity
      */
@@ -33,6 +34,7 @@ class ProductPrice extends Text
     public function setOptions($options)
     {
         $options['add-on-prepend'] = $this->currency->getSymbol();
+
         return parent::setOptions(
             $options
         );
@@ -41,6 +43,7 @@ class ProductPrice extends Text
     public function setValue($value)
     {
         parent::setValue(doubleval($value));
+
         return $this;
     }
 

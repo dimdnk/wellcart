@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Formatter\Link as AbstractFormatter;
 
 class Link extends AbstractFormatter
 {
+
 }

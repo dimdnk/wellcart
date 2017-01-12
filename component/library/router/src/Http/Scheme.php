@@ -12,13 +12,14 @@ use Zend\Mvc\Router\Http\Scheme as Route;
 
 class Scheme extends Route
 {
+
     /**
      * Create a new scheme route.
      *
      * @param  string $scheme
      * @param  array  $defaults
      */
-    public function __construct($scheme, array $defaults = array())
+    public function __construct($scheme, array $defaults = [])
     {
         if (empty($defaults['format'])) {
             $defaults['format'] = 'html';

@@ -12,6 +12,7 @@ use Zend\Form\Element\Select as SelectElement;
 
 class Select extends SelectElement
 {
+
     use SetValueObjectTrait;
 
     /**
@@ -22,6 +23,7 @@ class Select extends SelectElement
         $inputSpecification = parent::getInputSpecification();
         $inputSpecification['required'] = isset($this->attributes['required'])
             && $this->attributes['required'];
+
         return $inputSpecification;
     }
 

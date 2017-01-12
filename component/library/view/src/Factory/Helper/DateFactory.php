@@ -14,6 +14,7 @@ use WellCart\View\Helper\Date;
 
 class DateFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         try {
@@ -23,7 +24,8 @@ class DateFactory
                 )
                 ->getIdentity()
                 ->getTimeZone();
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $tz = Config::get('wellcart.localization.timezone');
         }
 

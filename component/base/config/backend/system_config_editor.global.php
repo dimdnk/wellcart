@@ -183,7 +183,7 @@ return
                                             'validators' => [],
                                         ],
                                     ],
-                            ]
+                            ],
                         ],
                         'design'       => [
                             'label'    => 'Design',
@@ -201,7 +201,7 @@ return
                                             ],
                                             'value_options'    =>
                                                 [
-                                                ]
+                                                ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -222,7 +222,7 @@ return
                                             ],
                                         ],
                                     ],
-                            ]
+                            ],
                         ],
                     ],
                 ],
@@ -248,8 +248,8 @@ return
                                             ],
                                             'value_options'    => [
                                                 0 => 'Yes',
-                                                1 => 'No'
-                                            ]
+                                                1 => 'No',
+                                            ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -285,7 +285,7 @@ return
                                                     'smtp'      => 'SMTP',
                                                     'file'      => 'Only log message to file',
                                                     'in_memory' => 'Do nothing',
-                                                ]
+                                                ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -578,7 +578,7 @@ return
                                             ],
                                         ],
                                     ],
-                            ]
+                            ],
                         ],
                         'contact_support'               => [
                             'label'    => 'Customer Support',
@@ -657,7 +657,7 @@ return
                                             ],
                                         ],
                                     ],
-                            ]
+                            ],
                         ],
                         'contact_website_administrator' => [
                             'label'    => 'Website Administrator Contact',
@@ -736,7 +736,7 @@ return
                                             ],
                                         ],
                                     ],
-                            ]
+                            ],
                         ],
                     ],
                 ],
@@ -762,8 +762,8 @@ return
                                             ],
                                             'value_options'    => [
                                                 0 => 'Disable',
-                                                1 => 'Enable'
-                                            ]
+                                                1 => 'Enable',
+                                            ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -802,7 +802,7 @@ return
                                                 'apc'        => 'APC',
                                                 'memcache'   => 'Memcache',
                                                 'memcached'  => 'Memcached',
-                                            ]
+                                            ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -834,8 +834,8 @@ return
                                             ],
                                             'value_options'    => [
                                                 0 => 'No',
-                                                1 => 'Yes'
-                                            ]
+                                                1 => 'Yes',
+                                            ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -870,8 +870,8 @@ return
                                             ],
                                             'value_options'    => [
                                                 0 => 'Hide',
-                                                1 => 'Display'
-                                            ]
+                                                1 => 'Display',
+                                            ],
                                         ],
                                         'attributes'                 => [
                                             'class' => 'chosen-element',
@@ -899,5 +899,5 @@ return
                     ],
                 ],
             ],
-        ]
+        ],
     ];

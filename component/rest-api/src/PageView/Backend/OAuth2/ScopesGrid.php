@@ -19,6 +19,7 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class ScopesGrid extends Standard
 {
+
     public function __construct(
         ScopeRepository $repository,
         $variables = null,
@@ -112,7 +113,7 @@ class ScopesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -131,7 +132,7 @@ class ScopesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

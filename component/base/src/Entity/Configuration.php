@@ -88,6 +88,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setConfigKey(string $configKey
     ): ConfigurationEntity {
         $this->configKey = $configKey;
+
         return $this;
     }
 
@@ -105,6 +106,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setConfigValue($configValue): ConfigurationEntity
     {
         $this->configValue = $configValue;
+
         return $this;
     }
 
@@ -122,6 +124,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): ConfigurationEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -139,6 +142,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setId($id): ConfigurationEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -156,6 +160,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): ConfigurationEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -175,6 +180,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setContext($context): ConfigurationEntity
     {
         $this->context = $context;
+
         return $this;
     }
 
@@ -194,6 +200,7 @@ class Configuration extends AbstractEntity implements ConfigurationEntity
     public function setEnvironment($environment): ConfigurationEntity
     {
         $this->environment = $environment;
+
         return $this;
     }
 

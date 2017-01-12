@@ -11,121 +11,210 @@ namespace WellCart\Backend;
 return [
     'domain' => [
         'mapping' => [
-        Entity\Administrator::class =>
-            [
-                'type'            => 'entity',
-                'repositoryClass' => Repository\Administrators::class,
-                'table'           => 'admin_users',
-                'entityListeners' => [
-                    EventListener\Entity\AdministratorEntityListener::class => [
-                        'preRemove'  => ['preRemove' => 'preRemove'],
-                        'preUpdate'  => ['preUpdate' => 'preUpdate'],
-                        'postUpdate' => ['postUpdate' => 'postUpdate'],
-                    ],
-                ],
-                'manyToMany'      => [
-                    'roles' => [
-                        'targetEntity' => 'WellCart\User\Entity\Acl\Role',
-                        'inversedBy'   => 'users',
-                        'joinTable'    => [
-                            'name'               => 'acl_admin_user_to_role',
-                            'joinColumns'        =>
-                                [
-                                    'user_id' =>
-                                        [
-                                            'referencedColumnName' => 'user_id'
-                                        ]
-                                ],
-                            'inverseJoinColumns' => [
-                                'role_id' =>
-                                    [
-                                        'referencedColumnName' => 'role_id'
-                                    ]
-                            ]
-                        ],
-                    ]],
-                'oneToOne'        => [
-                    'language' => [
-                        'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                        'joinColumn'   => [
-                            'name'                 => 'language_id',
-                            'referencedColumnName' => 'language_id',
+``            Entity\Administrator::class =>
+                [
+                    'type'            => 'entity',
+                    'repositoryClass' => Repository\Administrators::class,
+                    'table'           => 'admin_users',
+                    'entityListeners' => [
+                        EventListener\Entity\AdministratorEntityListener::class => [
+                            'preRemove'  => ['preRemove' => 'preRemove'],
+                            'preUpdate'  => ['preUpdate' => 'preUpdate'],
+                            'postUpdate' => ['postUpdate' => 'postUpdate'],
                         ],
                     ],
-                ],
-                'id'              =>
-                    [
-                        'id' =>
-                            [
-                                'column'    => 'user_id',
-                                'type'      => 'integer',
-                                'nullable'  => false,
-                                'generator' =>
+                    'manyToMany'      => [
+                        'roles' => [
+                            'targetEntity' => 'WellCart\User\Entity\Acl\Role',
+                            'inversedBy'   => 'users',
+                            'joinTable'    => [
+                                'name'               => 'acl_admin_user_to_role',
+                                'joinColumns'        =>
                                     [
-                                        'strategy' => 'AUTO',
+                                        'user_id' =>
+                                            [
+                                                'referencedColumnName' => 'user_id',
+                                            ],
                                     ],
+                                'inverseJoinColumns' => [
+                                    'role_id' =>
+                                        [
+                                            'referencedColumnName' => 'role_id',
+                                        ],
+                                ],
                             ],
+                        ]],
+                    'oneToOne'        => [
+                        'language' => [
+                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
+                            ],
+                        ],
                     ],
-                'fields'          =>
-                    [
-                        'state'                  =>
+                    'id'              =>
+                        [
+                            'id' =>
+                                [
+                                    'column'    => 'user_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
+                                    'generator' =>
+                                        [
+                                            'strategy' => 'AUTO',
+                                        ],
+                                ],
+                        ],
+                    'fields'          =>
+                        [
+                            'state'                  =>
+                                [
+                                    'column'   => 'state',
+                                    'type'     => 'integer',
+                                    'nullable' => false,
+                                ],
+                            'email'                  =>
+                                [
+                                    'column'   => 'email',
+                                    'type'     => 'string',
+                                    'nullable' => false,
+                                ],
+                            'firstName'              =>
+                                [
+                                    'column'   => 'first_name',
+                                    'type'     => 'string',
+                                    'nullable' => false,
+                                ],
+                            'lastName'               =>
+                                [
+                                    'column'   => 'last_name',
+                                    'type'     => 'string',
+                                    'nullable' => false,
+                                ],
+                            'timeZone'               =>
+                                [
+                                    'column'   => 'time_zone',
+                                    'type'     => 'string',
+                                    'nullable' => false,
+                                ],
+                            'password'               =>
+                                [
+                                    'column'   => 'password',
+                                    'type'     => 'string',
+                                    'length'   => 255,
+                                    'nullable' => false,
+                                ],
+                            'passwordResetToken'     =>
+                                [
+                                    'column'   => 'password_reset_token',
+                                    'type'     => 'string',
+                                    'length'   => 255,
+                                    'nullable' => true,
+                                ],
+                            'emailConfirmationToken' =>
+                                [
+                                    'column'   => 'email_confirmation_token',
+                                    'type'     => 'string',
+                                    'length'   => 255,
+                                    'nullable' => true,
+                                ],
+                            'failedLoginCount'       =>
+                                [
+                                    'column'   => 'failed_login_count',
+                                    'type'     => 'integer',
+                                    'nullable' => false,
+                                ],
+                            'createdAt'              =>
+                                [
+                                    'column'   => 'created_at',
+                                    'type'     => 'datetime',
+                                    'nullable' => false,
+                                    'gedmo'    =>
+                                        [
+                                            'timestampable' =>
+                                                [
+                                                    'on' => 'create',
+                                                ],
+                                        ],
+                                ],
+                            'updatedAt'              =>
+                                [
+                                    'column'   => 'updated_at',
+                                    'type'     => 'datetime',
+                                    'nullable' => true,
+                                    'gedmo'    =>
+                                        [
+                                            'timestampable' =>
+                                                [
+                                                    'on' => 'update',
+                                                ],
+                                        ],
+                                ],
+                        ],
+                ],
+
+            Entity\Notification::class =>
+                [
+                    'type'            => 'entity',
+                    'repositoryClass' => Repository\Notifications::class,
+                    'table'           => 'admin_notifications',
+                    'entityListeners' => [
+                        EventListener\Entity\NotificationEntityListener::class => [
+                            'preRemove' => ['preRemove' => 'preRemove'],
+                        ],
+                    ],
+                    'gedmo'           => [
+                        'soft_deleteable' => [
+                            'field_name' => 'deletedAt',
+                            'time_aware' => false,
+                        ],
+                    ],
+                    'id'              =>
+                        [
+                            'id' =>
+                                [
+                                    'column'    => 'notification_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
+                                    'generator' =>
+                                        [
+                                            'strategy' => 'AUTO',
+                                        ],
+                                ],
+                        ],
+                    'fields'          => [
+                        'icon'      =>
                             [
-                                'column'                     => 'state',
-                                'type'                       => 'integer',
-                                'nullable'                   => false,
+                                'column'   => 'icon',
+                                'type'     => 'string',
+                                'nullable' => false,
                             ],
-                        'email'                  =>
+                        'title'     =>
                             [
-                                'column'                     => 'email',
-                                'type'                       => 'string',
-                                'nullable'                   => false,
+                                'column'   => 'title',
+                                'type'     => 'string',
+                                'nullable' => false,
                             ],
-                        'firstName'              =>
+                        'body'      =>
                             [
-                                'column'                     => 'first_name',
-                                'type'                       => 'string',
-                                'nullable'                   => false,
+                                'column'   => 'body',
+                                'type'     => 'string',
+                                'nullable' => false,
                             ],
-                        'lastName'               =>
+                        'isRead'    =>
                             [
-                                'column'                     => 'last_name',
-                                'type'                       => 'string',
-                                'nullable'                   => false,
+                                'column'   => 'is_read',
+                                'type'     => 'boolean',
+                                'nullable' => false,
                             ],
-                        'timeZone'               =>
+                        'isDeleted' =>
                             [
-                                'column'                     => 'time_zone',
-                                'type'                       => 'string',
-                                'nullable'                   => false,
+                                'column'   => 'is_deleted',
+                                'type'     => 'boolean',
+                                'nullable' => false,
                             ],
-                        'password'               =>
-                            [
-                                'column'                     => 'password',
-                                'type'                       => 'string',
-                                'length'                     => 255,
-                                'nullable'                   => false,
-                            ],
-                        'passwordResetToken'     =>
-                            [
-                                'column'                     => 'password_reset_token',
-                                'type'                       => 'string',
-                                'length'                     => 255,
-                                'nullable'                   => true,
-                            ],
-                        'emailConfirmationToken' =>
-                            [
-                                'column'                     => 'email_confirmation_token',
-                                'type'                       => 'string',
-                                'length'                     => 255,
-                                'nullable'                   => true,
-                            ],
-                        'failedLoginCount'       =>
-                            [
-                                'column'                     => 'failed_login_count',
-                                'type'                       => 'integer',
-                                'nullable'                   => false,
-                            ],
-                        'createdAt'              =>
+                        'createdAt' =>
                             [
                                 'column'   => 'created_at',
                                 'type'     => 'datetime',
@@ -138,7 +227,7 @@ return [
                                             ],
                                     ],
                             ],
-                        'updatedAt'              =>
+                        'updatedAt' =>
                             [
                                 'column'   => 'updated_at',
                                 'type'     => 'datetime',
@@ -151,114 +240,25 @@ return [
                                             ],
                                     ],
                             ],
-                    ],
-            ],
-
-        Entity\Notification::class =>
-            [
-                'type'            => 'entity',
-                'repositoryClass' => Repository\Notifications::class,
-                'table'           => 'admin_notifications',
-                'entityListeners' => [
-                    EventListener\Entity\NotificationEntityListener::class => [
-                        'preRemove' => ['preRemove' => 'preRemove'],
-                    ],
-                ],
-                'gedmo'           => [
-                    'soft_deleteable' => [
-                        'field_name' => 'deletedAt',
-                        'time_aware' => false,
-                    ]
-                ],
-                'id'              =>
-                    [
-                        'id' =>
+                        'deletedAt' =>
                             [
-                                'column'    => 'notification_id',
-                                'type'      => 'integer',
-                                'nullable'  => false,
-                                'generator' =>
-                                    [
-                                        'strategy' => 'AUTO',
-                                    ],
+                                'column'   => 'deleted_at',
+                                'type'     => 'datetime',
+                                'nullable' => true,
                             ],
                     ],
-                'fields'          => [
-                    'icon'      =>
-                        [
-                            'column'                     => 'icon',
-                            'type'                       => 'string',
-                            'nullable'                   => false,
-                        ],
-                    'title'     =>
-                        [
-                            'column'                     => 'title',
-                            'type'                       => 'string',
-                            'nullable'                   => false,
-                        ],
-                    'body'      =>
-                        [
-                            'column'                     => 'body',
-                            'type'                       => 'string',
-                            'nullable'                   => false,
-                        ],
-                    'isRead'    =>
-                        [
-                            'column'                     => 'is_read',
-                            'type'                       => 'boolean',
-                            'nullable'                   => false,
-                        ],
-                    'isDeleted' =>
-                        [
-                            'column'                     => 'is_deleted',
-                            'type'                       => 'boolean',
-                            'nullable'                   => false,
-                        ],
-                    'createdAt' =>
-                        [
-                            'column'   => 'created_at',
-                            'type'     => 'datetime',
-                            'nullable' => false,
-                            'gedmo'    =>
-                                [
-                                    'timestampable' =>
-                                        [
-                                            'on' => 'create',
-                                        ],
-                                ],
-                        ],
-                    'updatedAt' =>
-                        [
-                            'column'   => 'updated_at',
-                            'type'     => 'datetime',
-                            'nullable' => true,
-                            'gedmo'    =>
-                                [
-                                    'timestampable' =>
-                                        [
-                                            'on' => 'update',
-                                        ],
-                                ],
-                        ],
-                    'deletedAt' =>
-                        [
-                            'column'   => 'deleted_at',
-                            'type'     => 'datetime',
-                            'nullable' => true,
-                        ],
                 ],
-            ],
 
-        'WellCart\User\Entity\Acl\Role' =>
-            [
-                'type'            => 'entity',
-                'entityListeners' => [
-                    EventListener\Entity\RoleEntityListener::class => [
-                        'preUpdate' => ['preUpdate' => 'preUpdate'],
-                        'preRemove' => ['preRemove' => 'preRemove'],
+            'WellCart\User\Entity\Acl\Role' =>
+                [
+                    'type'            => 'entity',
+                    'entityListeners' => [
+                        EventListener\Entity\RoleEntityListener::class => [
+                            'preUpdate' => ['preUpdate' => 'preUpdate'],
+                            'preRemove' => ['preRemove' => 'preRemove'],
+                        ],
                     ],
                 ],
-            ],
         ],
     ],
 ];

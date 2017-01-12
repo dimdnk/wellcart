@@ -13,6 +13,7 @@ use WellCart\Ui\Layout\EventListener\AreaBasedOnThemeContext;
 
 class AreaBasedOnThemeContextFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

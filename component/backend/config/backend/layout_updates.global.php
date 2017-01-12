@@ -33,7 +33,7 @@ return [
                         'parent'     => 'action.result',
                         'class'      => 'WellCart\Base\ItemView\Notifications',
                     ],
-                ]
+                ],
             ],
             'ui/form/standard' => [
                 'blocks' => [
@@ -59,8 +59,8 @@ return [
                         'parent'     => 'action.result',
                         'class'      => 'WellCart\Base\ItemView\Notifications',
                     ],
-                ]
+                ],
             ],
         ],
-    ]
+    ],
 ];

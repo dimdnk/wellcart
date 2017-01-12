@@ -24,7 +24,7 @@ class Locale extends AbstractLocale
      */
     public static function getOptionLocales()
     {
-        return array(
+        return [
             'af_ZA'  => 'Afrikaans (South Africa)',
             'ar_DZ'  => 'Arabic (Algeria)',
             'ar_EG'  => 'Arabic (Egypt)',
@@ -106,7 +106,7 @@ class Locale extends AbstractLocale
             'zh_CN'  => 'Chinese (China)',
             'zh_HK'  => 'Chinese (Hong Kong SAR China)',
             'zh_TW'  => 'Chinese (Taiwan)',
-        );
+        ];
     }
 
     /**
@@ -116,7 +116,7 @@ class Locale extends AbstractLocale
      */
     public static function getOptionTimezones()
     {
-        return array(
+        return [
             'Etc/GMT+12'           => 'Dateline Standard Time (Etc/GMT+12)',
             'Etc/GMT+11'           => 'UTC-11 (Etc/GMT+11)',
             'Pacific/Honolulu'     => 'Hawaiian Standard Time (Pacific/Honolulu)',
@@ -216,7 +216,7 @@ class Locale extends AbstractLocale
             'Asia/Magadan'         => 'Magadan Standard Time (Asia/Magadan)',
             'Pacific/Tongatapu'    => 'Tonga Standard Time (Pacific/Tongatapu)',
             'Pacific/Apia'         => 'Samoa Standard Time (Pacific/Apia)',
-        );
+        ];
 
     }
 
@@ -227,7 +227,7 @@ class Locale extends AbstractLocale
      */
     public static function getOptionCountries()
     {
-        return array(
+        return [
             'AF' => 'Afghanistan',
             'AX' => 'Åland Islands',
             'AL' => 'Albania',
@@ -473,6 +473,6 @@ class Locale extends AbstractLocale
             'YE' => 'Yemen',
             'ZM' => 'Zambia',
             'ZW' => 'Zimbabwe',
-        );
+        ];
     }
 }

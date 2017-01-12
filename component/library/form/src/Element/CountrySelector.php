@@ -12,6 +12,7 @@ use WellCart\Utility\Locale;
 
 class CountrySelector extends Select
 {
+
     /**
      * @param  null|int|string $name    Optional name for the element
      * @param  array           $options Optional options for the element

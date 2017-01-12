@@ -63,6 +63,7 @@ return [
                     $services->get(Spec\UserRepository::class),
                     $options['wellcart']['user_account_options']['registration']
                 );
+
                 return $form;
             },
         Service\RecoverAccount::class                       =>
@@ -77,6 +78,7 @@ return [
                     $services->get('zfcuser_change_password_form'),
                     $options['wellcart']['user_account_options']['password_reset']
                 );
+
                 return $service;
             },
         Form\Account::class                                 =>
@@ -85,6 +87,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_user_doctrine_hydrator')
                 );
+
                 return $form;
             },
         Form\Acl\Role::class                                =>
@@ -93,6 +96,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_user_doctrine_hydrator')
                 );
+
                 return $form;
             },
         Form\AccountPreferences::class                      =>
@@ -100,6 +104,7 @@ return [
                 $form = new Form\AccountPreferences(
                     new FormFactory($services->get('FormElementManager'))
                 );
+
                 return $form;
             },
         Repository\Users::class                             =>
@@ -136,6 +141,7 @@ return [
                 $auth = $serviceManager->get(
                     'doctrine.authenticationservice.orm_default'
                 );
+
                 return $auth;
             },
 
@@ -144,7 +150,8 @@ return [
                 $authorizationService = $serviceManager->get(
                     'ZfcRbac\Service\AuthorizationService'
                 );
+
                 return new PageAuthorizationByRbac($authorizationService);
-            }
+            },
     ],
 ];

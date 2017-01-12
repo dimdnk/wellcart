@@ -16,13 +16,14 @@ use WellCart\Base\Spec\UrlRewriteRepository;
 
 class UrlRewritesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): UrlRewritesController
-    {
+    ): UrlRewritesController {
         $controller = new UrlRewritesController(
             $sm->getServiceLocator()
                 ->get(UrlRewriteRepository::class)
         );
+
         return $controller;
     }
 }

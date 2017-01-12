@@ -38,6 +38,7 @@ class WelcomeEmail
         if ($this->handler->isSendWelcomeEmail()) {
             $this->handler->sendWelcomeEmail($user);
         }
+
         return true;
     }
 }

@@ -13,12 +13,14 @@ use Zend\Config\Config;
 
 class ModuleConfiguration extends Config
 {
+
     /**
      * Config directory
      *
      * @var string
      */
     protected $dir;
+
     protected $isLoaded = false;
 
     /**

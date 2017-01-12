@@ -14,6 +14,7 @@ use Phinx\Console\Command\Rollback as AbstractCommand;
 
 class Rollback extends AbstractCommand
 {
+
     use PhinxCommandTrait;
 
     /**

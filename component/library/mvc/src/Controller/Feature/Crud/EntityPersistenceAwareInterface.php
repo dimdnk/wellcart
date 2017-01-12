@@ -10,6 +10,7 @@ namespace WellCart\Mvc\Controller\Feature\Crud;
 
 interface EntityPersistenceAwareInterface
 {
+
     /**
      * Attempt to save. If save is complete,redirect the user to the index action for the module.
      *

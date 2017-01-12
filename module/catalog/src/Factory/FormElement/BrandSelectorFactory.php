@@ -14,6 +14,7 @@ use WellCart\Catalog\Spec\BrandRepository;
 
 class BrandSelectorFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
@@ -21,6 +22,7 @@ class BrandSelectorFactory
             BrandRepository::class
         )
             ->toOptionsList();
+
         return new \WellCart\Form\Element\Select(
             null,
             [

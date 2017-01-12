@@ -19,7 +19,10 @@ use Zend\Form\FormInterface;
 
 class Country extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'directory_country';
     /**
      * Form constructor
      *
@@ -31,7 +34,7 @@ class Country extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('directory_country');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -49,7 +52,7 @@ class Country extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'directory_country_status',
+                    'id' => 'directory_country_status',
                 ],
             ],
             ['priority' => 700]
@@ -60,7 +63,7 @@ class Country extends AbstractForm
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Name'),
+                    'label' => __('Name'),
                 ],
                 'attributes' => [
                     'id' => 'directory_country_name',
@@ -75,7 +78,7 @@ class Country extends AbstractForm
                 'name'       => 'iso_code2',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('ISO Code (2)'),
+                    'label' => __('ISO Code (2)'),
 
                 ],
                 'attributes' => [
@@ -91,8 +94,8 @@ class Country extends AbstractForm
                 'name'       => 'iso_code3',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('ISO Code (3)'),
-                                  ],
+                    'label' => __('ISO Code (3)'),
+                ],
                 'attributes' => [
                     'id'       => 'directory_country_iso_code3',
                     'required' => 'required',
@@ -106,7 +109,7 @@ class Country extends AbstractForm
                 'name'       => 'address_format',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Address Format'),
+                    'label' => __('Address Format'),
                 ],
                 'attributes' => [
                     'id' => 'directory_country_address_format',
@@ -127,7 +130,7 @@ class Country extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'directory_country_postcode_required',
+                    'id' => 'directory_country_postcode_required',
                 ],
             ],
             ['priority' => 450]
@@ -147,10 +150,10 @@ class Country extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save')
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -174,6 +177,7 @@ class Country extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\CountryEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -187,6 +191,7 @@ class Country extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\CountryEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

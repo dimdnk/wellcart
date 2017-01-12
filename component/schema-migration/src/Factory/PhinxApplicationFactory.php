@@ -15,11 +15,13 @@ use WellCart\SchemaMigration\Console\PhinxApplication;
 
 class PhinxApplicationFactory
 {
+
     public function __invoke(ContainerInterface $container): PhinxApplication
     {
         $app = new PhinxApplication('');
         $app->setAutoExit(false);
         $app->setCatchExceptions(false);
+
         return $app;
     }
 }

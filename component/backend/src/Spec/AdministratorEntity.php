@@ -14,4 +14,5 @@ use WellCart\User\Spec\UserEntity;
 
 interface AdministratorEntity extends UserEntity
 {
+
 }

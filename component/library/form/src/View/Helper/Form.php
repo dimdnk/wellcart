@@ -13,6 +13,7 @@ use Zend\Form\FormInterface;
 
 class Form extends TwbBundleForm
 {
+
     protected $currentLayout = self::LAYOUT_HORIZONTAL;
 
     /**
@@ -53,11 +54,12 @@ class Form extends TwbBundleForm
                 $oForm->setAttribute(
                     'action',
                     url_to_route(
-                        null, array(), array(), true
+                        null, [], [], true
                     )
                 );
             }
         }
+
         return parent::openTag($oForm);
     }
 

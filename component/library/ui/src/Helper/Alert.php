@@ -12,4 +12,5 @@ use TwbBundle\View\Helper\TwbBundleAlert;
 
 class Alert extends TwbBundleAlert
 {
+
 }

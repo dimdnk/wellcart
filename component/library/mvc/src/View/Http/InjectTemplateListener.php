@@ -13,6 +13,7 @@ use Zend\Mvc\View\Http\InjectTemplateListener as ZendInjectTemplateListener;
 
 class InjectTemplateListener extends ZendInjectTemplateListener
 {
+
     /**
      * Inject a template into the view model, if none present
      *
@@ -45,6 +46,7 @@ class InjectTemplateListener extends ZendInjectTemplateListener
         // Retrieve the first two elements representing the vendor and module name.
         $nsArray = explode('\\', $controller);
         $subNsArray = array_slice($nsArray, 0, 2);
+
         return implode('/', $subNsArray);
     }
 
@@ -65,6 +67,7 @@ class InjectTemplateListener extends ZendInjectTemplateListener
         if (empty($subNsArray)) {
             return '';
         }
+
         return implode('/', $subNsArray);
     }
 }

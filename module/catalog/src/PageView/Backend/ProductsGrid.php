@@ -61,6 +61,7 @@ class ProductsGrid extends Standard
     public function setDisplayLanguage(LocaleLanguageEntity $language)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -74,6 +75,7 @@ class ProductsGrid extends Standard
         parent::configureQueryBuilder($qb);
         $qb->filterByLanguage($this->language)
             ->withVariants();
+
         return $this;
     }
 
@@ -146,7 +148,7 @@ class ProductsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -165,7 +167,7 @@ class ProductsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

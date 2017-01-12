@@ -12,5 +12,6 @@ use Zend\Form\Element\File as Element;
 
 class File extends Element
 {
+
     use SetValueObjectTrait;
 }

@@ -14,6 +14,7 @@ use WellCart\ORM\Entity;
 
 class ObjectExists extends AbstractObjectExists
 {
+
     /**
      * @var Entity
      */
@@ -85,6 +86,7 @@ class ObjectExists extends AbstractObjectExists
                 }
 
                 $this->error(self::ERROR_NO_OBJECT_FOUND, $value);
+
                 return false;
             }
         }

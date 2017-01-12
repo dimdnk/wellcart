@@ -16,6 +16,7 @@ use WellCart\ORM\AbstractRepository;
 class AttributeValues extends AbstractRepository
     implements AttributeValueRepository
 {
+
     /**
      * @return AttributeValuesQuery
      */
@@ -27,6 +28,7 @@ class AttributeValues extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +47,7 @@ class AttributeValues extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

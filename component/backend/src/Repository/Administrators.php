@@ -16,6 +16,7 @@ use WellCart\User\Spec\AclRoleEntity;
 
 class Administrators extends Users implements AdministratorRepository
 {
+
     /**
      * @param $role
      *
@@ -48,6 +49,7 @@ class Administrators extends Users implements AdministratorRepository
             $this,
             compact('role', 'count')
         );
+
         return $count;
     }
 
@@ -81,6 +83,7 @@ class Administrators extends Users implements AdministratorRepository
             $this,
             compact('role', 'ids')
         );
+
         return $ids;
     }
 }

@@ -15,6 +15,7 @@ use WellCart\ORM\AbstractRepository;
 
 class FeatureValues extends AbstractRepository implements FeatureValueRepository
 {
+
     /**
      * @return FeatureValuesQuery
      */
@@ -26,6 +27,7 @@ class FeatureValues extends AbstractRepository implements FeatureValueRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -44,6 +46,7 @@ class FeatureValues extends AbstractRepository implements FeatureValueRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

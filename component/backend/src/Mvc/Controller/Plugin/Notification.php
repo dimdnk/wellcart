@@ -15,6 +15,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class Notification extends AbstractPlugin
 {
+
     /**
      * @var Notificator
      */

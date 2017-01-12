@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class AccountForm extends Standard
 {
+
     public function __construct(
         AdministratorRepository $repository,
         $variables = null,

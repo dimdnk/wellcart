@@ -18,7 +18,9 @@ use ZF\OAuth2\Doctrine\Entity\UserInterface;
 
 class AuthorizationCode extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -99,6 +101,7 @@ class AuthorizationCode extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -294,6 +297,7 @@ class AuthorizationCode extends AbstractEntity implements Entity
                     break;
             }
         }
+
         return $this;
     }
 

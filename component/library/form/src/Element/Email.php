@@ -12,5 +12,6 @@ use Zend\Form\Element\Email as Element;
 
 class Email extends Element
 {
+
     use SetValueObjectTrait;
 }

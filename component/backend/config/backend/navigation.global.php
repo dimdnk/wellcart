@@ -30,7 +30,7 @@ return [
                         'params'     => ['section' => 'general'],
                         'order'      => 9500,
                         'permission' => 'admin/system-settings/general/view',
-                    ]
+                    ],
                 ],
             ],
 

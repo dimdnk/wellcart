@@ -105,8 +105,8 @@ return [
             'orm_default'         => [
                 'drivers' => [
                     'WellCart\CMS\Entity' => 'wellcart_cms_driver',
-                ]
-            ]
+                ],
+            ],
         ],
         'entity_resolver' => [
             'orm_default' => [

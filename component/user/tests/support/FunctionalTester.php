@@ -26,6 +26,7 @@ namespace WellCart\User\Test;
  */
 class FunctionalTester extends \Codeception\Actor
 {
+
     use Traits\FunctionalTesterActions;
 
     /**

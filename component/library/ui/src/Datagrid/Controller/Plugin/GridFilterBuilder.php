@@ -16,15 +16,16 @@ use Zend\Paginator\Paginator;
 
 class GridFilterBuilder extends AbstractPlugin
 {
-    const EQ = 'eq';
-    const NEQ = 'neq';
-    const LT = 'lt';
-    const LTE = 'lte';
-    const GT = 'gt';
-    const GTE = 'gte';
-    const LIKE = 'like';
+
+    const EQ      = 'eq';
+    const NEQ     = 'neq';
+    const LT      = 'lt';
+    const LTE     = 'lte';
+    const GT      = 'gt';
+    const GTE     = 'gte';
+    const LIKE    = 'like';
     const BETWEEN = 'between';
-    const RANGE = 'range';
+    const RANGE   = 'range';
 
     /**
      * Current scope
@@ -32,6 +33,7 @@ class GridFilterBuilder extends AbstractPlugin
      * @var string
      */
     protected $scope;
+
     /**
      * Scopes
      *
@@ -74,6 +76,7 @@ class GridFilterBuilder extends AbstractPlugin
     public function getValue($column)
     {
         $values = $this->getValues();
+
         return (isset($values[$column])) ? $values[$column] : null;
     }
 
@@ -104,6 +107,7 @@ class GridFilterBuilder extends AbstractPlugin
             'expressions'   => [],
             'values'        => [],
         ];
+
         return $this;
     }
 
@@ -123,6 +127,7 @@ class GridFilterBuilder extends AbstractPlugin
     public function setScope($scope)
     {
         $this->scope = (string)$scope;
+
         return $this;
     }
 
@@ -159,6 +164,7 @@ class GridFilterBuilder extends AbstractPlugin
         $this->scopes[$this->scope]['form_elements'][$column] = $formElement;
         $this->scopes[$this->scope]['expressions'][$column] = $expression;
         $this->scopes[$this->scope]['values'][$column] = $value;
+
         return $this;
     }
 
@@ -199,6 +205,7 @@ class GridFilterBuilder extends AbstractPlugin
                 $rootAlias . $sortBy, strtoupper($sortOrder)
             );
         }
+
         return $this;
     }
 
@@ -376,6 +383,7 @@ class GridFilterBuilder extends AbstractPlugin
     public function paginate($page = 1, $perPage = 50)
     {
         $queryBuilder = $this->scopes[$this->scope]['query_builder'];
+
         return $queryBuilder->paginate($page, $perPage);
     }
 }

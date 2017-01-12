@@ -71,6 +71,7 @@ class AccountsController extends AbstractActionController implements
          */
         $form->makePasswordRequired()
             ->bind($entity);
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 
@@ -109,6 +110,7 @@ class AccountsController extends AbstractActionController implements
                 $entity = $form->getData();
                 $entity->setId($id);
                 $command = new Command\PersistAdminAccount($entity, $postData);
+
                 return $this->attemptToPersistEntity(
                     $command,
                     __('Admin profile successfully created.'),
@@ -141,6 +143,7 @@ class AccountsController extends AbstractActionController implements
         if ($domainResponse) {
             $form->makePasswordOptional()
                 ->bind($domainResponse);
+
             return $this->handleForm($formPageView, $form, $domainResponse);
         }
     }
@@ -181,6 +184,7 @@ class AccountsController extends AbstractActionController implements
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllIds();
         }
+
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,

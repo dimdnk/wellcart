@@ -12,5 +12,6 @@ use Zend\Form\Element\Textarea as Element;
 
 class Textarea extends Element
 {
+
     use SetValueObjectTrait;
 }

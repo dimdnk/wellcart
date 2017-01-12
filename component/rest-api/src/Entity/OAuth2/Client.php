@@ -18,6 +18,7 @@ use ZF\OAuth2\Doctrine\Entity\UserInterface;
 
 class Client extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
 
     /**
@@ -141,6 +142,7 @@ class Client extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

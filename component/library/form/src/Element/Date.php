@@ -12,5 +12,6 @@ use Zend\Form\Element\Date as Element;
 
 class Date extends Element
 {
+
     use SetValueObjectTrait;
 }

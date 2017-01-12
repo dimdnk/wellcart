@@ -30,10 +30,12 @@ class EntityPageView extends AbstractPageView
      * @var array
      */
     protected $breadcrumbs = [];
+
     /**
      * @var Pager
      */
     protected $pager;
+
     /**
      * Object Repository
      *
@@ -79,6 +81,7 @@ class EntityPageView extends AbstractPageView
     public function setRepository(Repository $repository)
     {
         $this->repository = $repository;
+
         return $this;
     }
 
@@ -99,6 +102,7 @@ class EntityPageView extends AbstractPageView
     {
         $this->pageTitle = $pageTitle;
         $this->setVariable('pageTitle', $pageTitle);
+
         return $this;
     }
 
@@ -120,12 +124,14 @@ class EntityPageView extends AbstractPageView
     public function setBreadcrumbs(array $breadcrumbs)
     {
         $this->breadcrumbs = $breadcrumbs;
+
         return $this;
     }
 
     public function addBreadcrumb(array $breadcrumb)
     {
         $this->breadcrumbs = Arr::merge($this->breadcrumbs, $breadcrumb);
+
         return $this;
     }
 
@@ -141,6 +147,7 @@ class EntityPageView extends AbstractPageView
     final protected function setContainerClass($cssClass)
     {
         $this->setVariable('containerClass', $cssClass);
+
         return $this;
     }
 }

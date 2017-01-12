@@ -18,6 +18,7 @@ use WellCart\User\Spec\UserRepository;
 
 class AccountForm extends Standard
 {
+
     public function __construct(
         UserRepository $repository,
         $variables = null,

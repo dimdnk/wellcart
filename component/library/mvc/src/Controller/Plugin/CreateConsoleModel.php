@@ -13,6 +13,7 @@ use Zend\View\Model\ConsoleModel;
 
 class CreateConsoleModel extends AbstractPlugin
 {
+
     /**
      * Create view model
      *

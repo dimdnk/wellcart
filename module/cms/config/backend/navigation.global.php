@@ -19,7 +19,7 @@ return [
                         'route'  => 'zfcadmin/cms/pages',
                         'action' => 'list',
                     ],
-                ]
+                ],
             ],
         ],
     ],

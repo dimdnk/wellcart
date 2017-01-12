@@ -21,6 +21,7 @@ class MaintenanceModeController extends AbstractConsoleController implements
     LoggerAwareInterface,
     TranslatorAwareInterface
 {
+
     use AbstractControllerTrait;
 
     /**
@@ -34,7 +35,8 @@ class MaintenanceModeController extends AbstractConsoleController implements
                 'Status: maintenance mode is ' .
                 ($maintenanceMode->isEnabled() ? 'active' : 'not active')
             );
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(
@@ -57,7 +59,8 @@ class MaintenanceModeController extends AbstractConsoleController implements
         try {
             $maintenanceMode->enable();
             $console->writeLine('Maintenance mode enabled');
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(
@@ -79,7 +82,8 @@ class MaintenanceModeController extends AbstractConsoleController implements
         try {
             $maintenanceMode->disable();
             $console->writeLine('Maintenance mode disabled');
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(

@@ -13,6 +13,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class CreateHalJsonModel extends AbstractPlugin
 {
+
     /**
      * Create view model
      *

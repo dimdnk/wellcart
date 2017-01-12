@@ -19,81 +19,75 @@ use Zend\Form\FieldsetInterface;
 
 class PrepareFormLayout
 {
+
     /**
      * @param EventInterface $event
      */
     public function __invoke(EventInterface $event)
     {
         $form = $event->getTarget();
-       if(!$form instanceof Form)
-       {
-         return;
-       }
+        if (!$form instanceof Form) {
+            return;
+        }
         $name = $form->getUiConfigSection();
-        $config = Config::get('ui.form.'.$name, []);
-        if(empty($config))
-        {
-          return;
+        $config = Config::get('ui.form.' . $name, []);
+        if (empty($config)) {
+            return;
         }
         $this->composeForm($form, $config);
     }
 
-  /**
-   * Compose form layout
-   *
-   * @param FieldsetInterface $fieldset
-   * @param array             $config
-   */
+    /**
+     * Compose form layout
+     *
+     * @param FieldsetInterface $fieldset
+     * @param array             $config
+     */
     public function composeForm(
-      FieldsetInterface $fieldset,
+        FieldsetInterface $fieldset,
         array $config
-    )
-    {
-      if($fieldset instanceof Element\Collection) {
-        $fieldset = $fieldset
-          ->getTargetElement();
-      }
-      foreach ($fieldset as $element)
-      {
-        if($element instanceof FieldsetInterface)
-        {
-          $this->composeForm($element, Arr::get($config, $element->getName(), []));
-          continue;
+    ) {
+        if ($fieldset instanceof Element\Collection) {
+            $fieldset = $fieldset
+                ->getTargetElement();
         }
+        foreach ($fieldset as $element) {
+            if ($element instanceof FieldsetInterface) {
+                $this->composeForm(
+                    $element, Arr::get($config, $element->getName(), [])
+                );
+                continue;
+            }
 
-        $name =  $element->getName();
-        $elementConfig = Arr::get($config, $name, [],'>');
-        if(!empty($elementConfig))
-        {
-          $this->composeElement($element, $elementConfig);
+            $name = $element->getName();
+            $elementConfig = Arr::get($config, $name, [], '>');
+            if (!empty($elementConfig)) {
+                $this->composeElement($element, $elementConfig);
+            }
+            unset($elementConfig);
         }
-        unset($elementConfig);
-      }
     }
 
     protected function composeElement(
-      Element $element,
-      array $config
-    )
-    {
-      $options = Arr::get($config, 'options', []);
-      foreach ($options as $option => $value)
-      {
-        switch ($option) {
-          case 'label_attributes':
-            $element->setLabelAttributes($value);
-            break;
-          default:
-            $element->setOption($option, $value);
-            break;
+        Element $element,
+        array $config
+    ) {
+        $options = Arr::get($config, 'options', []);
+        foreach ($options as $option => $value) {
+            switch ($option) {
+                case 'label_attributes':
+                    $element->setLabelAttributes($value);
+                    break;
+                default:
+                    $element->setOption($option, $value);
+                    break;
+            }
         }
-      }
-      $attributes = Arr::get($config, 'attributes', []);
-      foreach ($attributes as $attribute => $value)
-      {
-        $element->setAttribute($attribute, $value);
+        $attributes = Arr::get($config, 'attributes', []);
+        foreach ($attributes as $attribute => $value) {
+            $element->setAttribute($attribute, $value);
 
-      }
-      unset($options,$attributes);
+        }
+        unset($options, $attributes);
     }
 }

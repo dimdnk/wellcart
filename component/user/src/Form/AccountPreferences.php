@@ -19,7 +19,13 @@ use Zend\InputFilter\InputFilterProviderInterface;
 class AccountPreferences extends AbstractForm
     implements InputFilterProviderInterface
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'user_account_preferences';
+
     protected $backButton = false;
+
     protected $resetButton = false;
 
     /**
@@ -29,7 +35,7 @@ class AccountPreferences extends AbstractForm
     public function __construct(Factory $factory)
     {
         $this->setFormFactory($factory);
-        parent::__construct('user_account_preferences');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -37,12 +43,12 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'zfcuser.enable_registration',
                 'options'    => [
-                    'context'          => Application::CONTEXT_FRONTEND,
-                    'label'            => __('Enable Registration'),
-                    'help-block'       => __(
+                    'context'       => Application::CONTEXT_FRONTEND,
+                    'label'         => __('Enable Registration'),
+                    'help-block'    => __(
                         "Allows users to register through the website."
                     ),
-                    'value_options'    => [
+                    'value_options' => [
                         0 => __('No'),
                         1 => __('Yes'),
                     ],
@@ -64,7 +70,7 @@ class AccountPreferences extends AbstractForm
                 'type'       => 'baseEmailContactSelector',
                 'name'       => 'wellcart.user_account_options.registration.email_contact',
                 'options'    => [
-                    'label'            => __('Email Sender'),
+                    'label' => __('Email Sender'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -80,9 +86,9 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.registration.send_welcome_email',
                 'options'    => [
-                    'context'          => Application::CONTEXT_FRONTEND,
-                    'label'            => __('Send Welcome Email'),
-                    'value_options'    => [
+                    'context'       => Application::CONTEXT_FRONTEND,
+                    'label'         => __('Send Welcome Email'),
+                    'value_options' => [
                         0 => __('No'),
                         1 => __('Yes'),
                     ],
@@ -103,9 +109,9 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.registration.confirm_email',
                 'options'    => [
-                    'context'          => Application::CONTEXT_FRONTEND,
-                    'label'            => __('Require Emails Confirmation'),
-                    'value_options'    => [
+                    'context'       => Application::CONTEXT_FRONTEND,
+                    'label'         => __('Require Emails Confirmation'),
+                    'value_options' => [
                         0 => __('No'),
                         1 => __('Yes'),
                     ],
@@ -126,8 +132,8 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'zfcuser.login_form_timeout',
                 'options'    => [
-                    'label'            => __('Login Form Timeout'),
-                    'help-block'       => __(
+                    'label'      => __('Login Form Timeout'),
+                    'help-block' => __(
                         "Specify the timeout for the CSRF security field of the login form in seconds."
                     ),
                 ],
@@ -145,8 +151,8 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'zfcuser.user_form_timeout',
                 'options'    => [
-                    'label'            => __('Registration Form Timeout'),
-                    'help-block'       => __(
+                    'label'      => __('Registration Form Timeout'),
+                    'help-block' => __(
                         "Specify the timeout for the CSRF security field of the registration form."
                     ),
                 ],
@@ -164,8 +170,8 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.max_login_attempts',
                 'options'    => [
-                    'label'            => __('Max Login Attempts'),
-                    'help-block'       => __(
+                    'label'      => __('Max Login Attempts'),
+                    'help-block' => __(
                         "Maximum login attempts allowed before the account is locked."
                     ),
                 ],
@@ -185,7 +191,7 @@ class AccountPreferences extends AbstractForm
                 'type'       => 'baseEmailContactSelector',
                 'name'       => 'wellcart.user_account_options.password_reset.email_contact',
                 'options'    => [
-                    'label'            => __('Email Sender'),
+                    'label' => __('Email Sender'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -201,8 +207,8 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.password_reset.allow_for_admin',
                 'options'    => [
-                    'label'            => __('Allow Admin Password Reset'),
-                    'value_options'    => [
+                    'label'         => __('Allow Admin Password Reset'),
+                    'value_options' => [
                         0 => __('No'),
                         1 => __('Yes'),
                     ],
@@ -223,8 +229,8 @@ class AccountPreferences extends AbstractForm
             [
                 'name'       => 'wellcart.user_account_options.password_reset.link_expiration_period',
                 'options'    => [
-                    'label'            => __('Reset Link Expiration Period'),
-                    'help-block'       => __("In days"),
+                    'label'      => __('Reset Link Expiration Period'),
+                    'help-block' => __("In days"),
                 ],
                 'attributes' => [
                     'value' => Config::get(
@@ -238,10 +244,10 @@ class AccountPreferences extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -506,7 +512,7 @@ class AccountPreferences extends AbstractForm
                             ],
                         ],
                     ],
-                ]
+                ],
         ];
 
         $this->getEventManager()->trigger(
@@ -514,6 +520,7 @@ class AccountPreferences extends AbstractForm
             $this,
             ['specification' => &$specification]
         );
+
         return $specification;
     }
 }

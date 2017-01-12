@@ -135,8 +135,8 @@ return [
                             'default_layout' => [
                                 'path'                => 'layout/mail/page-fixed-1column',
                                 'params'              => [],
-                                'template_capture_to' => 'content'
-                            ]
+                                'template_capture_to' => 'content',
+                            ],
                         ],
 
 
@@ -243,5 +243,5 @@ return [
                  */
                 //'mail_listeners' => [],
             ],
-        ]
+        ],
 ];

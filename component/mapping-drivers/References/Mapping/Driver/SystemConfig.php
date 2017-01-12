@@ -17,6 +17,7 @@ use WellCart\Utility\Config;
  */
 class SystemConfig extends Yaml implements Driver
 {
+
     /**
      * File extension
      *

@@ -19,7 +19,7 @@ class Literal extends Route
      * @param  string $route
      * @param  array  $defaults
      */
-    public function __construct($route, array $defaults = array())
+    public function __construct($route, array $defaults = [])
     {
         if (empty($defaults['format'])) {
             $defaults['format'] = 'html';

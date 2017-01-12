@@ -16,7 +16,9 @@ use WellCart\ORM\EntityTrait;
 
 class PublicKey extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -69,6 +71,7 @@ class PublicKey extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

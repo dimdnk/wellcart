@@ -16,6 +16,7 @@ use ZfcRbac\Exception\UnauthorizedException;
 class RouteGuard
     extends \ZfcRbac\Guard\RouteGuard
 {
+
     /**
      * Route guard rules
      *

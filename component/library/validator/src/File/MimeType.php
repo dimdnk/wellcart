@@ -12,6 +12,7 @@ namespace WellCart\Validator\File;
 class MimeType extends
     \Zend\Validator\File\MimeType
 {
+
     /**
      * @var bool
      */
@@ -25,6 +26,7 @@ class MimeType extends
     public function setAllowEmpty($allowEmpty)
     {
         $this->allowEmpty = (bool)$allowEmpty;
+
         return $this;
     }
 
@@ -39,6 +41,7 @@ class MimeType extends
         ) {
             return true;
         }
+
         return parent::isValid($value, $file);
     }
 

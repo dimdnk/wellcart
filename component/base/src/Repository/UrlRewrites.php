@@ -28,6 +28,7 @@ class UrlRewrites extends AbstractRepository implements UrlRewriteRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class UrlRewrites extends AbstractRepository implements UrlRewriteRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 

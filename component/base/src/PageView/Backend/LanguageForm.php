@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class LanguageForm extends Standard
 {
+
     public function __construct(
         LocaleLanguageRepository $repository,
         $variables = null,

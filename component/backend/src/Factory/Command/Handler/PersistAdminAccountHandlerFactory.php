@@ -16,6 +16,7 @@ use WellCart\User\Spec\AclRoleRepository;
 
 class PersistAdminAccountHandlerFactory
 {
+
     public function __invoke(
         ContainerInterface $container
     ): PersistAdminAccountHandler {

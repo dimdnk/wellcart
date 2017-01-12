@@ -13,6 +13,7 @@ use Zend\View\Model\FeedModel;
 
 class CreateFeedModel extends AbstractPlugin
 {
+
     /**
      * Create view model
      *

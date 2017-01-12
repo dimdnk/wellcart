@@ -27,6 +27,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
      * @var \WellCart\Base\Spec\LocaleLanguageEntity
      */
     protected $language;
+
     /**
      * Name
      *
@@ -62,6 +63,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
     public function setAttribute(AttributeEntity $attribute = null)
     {
         $this->attribute = $attribute;
+
         return $this;
     }
 
@@ -81,6 +83,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
     public function setLanguage(LocaleLanguageEntity $language = null
     ): AttributeI18nEntity {
         $this->language = $language;
+
         return $this;
     }
 
@@ -100,6 +103,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
     public function setId($id): AttributeI18nEntity
     {
         $this->attributeId = $id;
+
         return $this;
     }
 
@@ -119,6 +123,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
     public function setName($name): AttributeI18nEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -138,6 +143,7 @@ class AttributeI18n extends AbstractEntity implements AttributeI18nEntity
     public function setAttributeId($attributeId): AttributeI18nEntity
     {
         $this->attributeId = $attributeId;
+
         return $this;
     }
 }

@@ -39,5 +39,6 @@ abstract class AbstractRestfulController
     TranslatorAwareInterface,
     ObjectManagerAwareInterface
 {
+
     use AbstractControllerTrait;
 }

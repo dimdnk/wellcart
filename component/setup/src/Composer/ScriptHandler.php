@@ -13,6 +13,7 @@ namespace WellCart\Setup\Composer;
 
 class ScriptHandler
 {
+
     const DIRS
         = [
             'data',

@@ -12,4 +12,5 @@
 class PHP_CodeCoverage_Exception
     extends \SebastianBergmann\CodeCoverage\RuntimeException
 {
+
 }

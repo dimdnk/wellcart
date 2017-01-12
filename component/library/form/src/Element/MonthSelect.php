@@ -12,5 +12,6 @@ use Zend\Form\Element\MonthSelect as Element;
 
 class MonthSelect extends Element
 {
+
     use SetValueObjectTrait;
 }

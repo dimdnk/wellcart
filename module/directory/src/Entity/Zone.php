@@ -95,6 +95,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setStatus($status): ZoneEntity
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -123,6 +124,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     ): ZoneEntity {
         $this->country = $country;
         $this->setCountryId($country->getId());
+
         return $this;
     }
 
@@ -142,6 +144,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setCode($code): ZoneEntity
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -161,6 +164,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setCountryId($countryId): ZoneEntity
     {
         $this->countryId = $countryId;
+
         return $this;
     }
 
@@ -180,6 +184,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setId($id): ZoneEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -199,6 +204,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setName($name): ZoneEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -218,6 +224,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): ZoneEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -237,6 +244,7 @@ class Zone extends AbstractEntity implements ZoneEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): ZoneEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 }

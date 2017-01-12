@@ -20,6 +20,7 @@ use ZfcUser\Options\UserServiceOptionsInterface;
 
 class User extends \ZfcUser\Service\User
 {
+
     /**
      * User constructor.
      *

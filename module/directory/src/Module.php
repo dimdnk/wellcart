@@ -11,10 +11,10 @@ declare(strict_types = 1);
 namespace WellCart\Directory;
 
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\Setup\Feature\DataFixturesProviderInterface;
-use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\Console\Adapter\AdapterInterface;
 use Zend\ModuleManager\Feature;
 use ZF\Apigility\Provider\ApigilityProviderInterface;

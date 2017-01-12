@@ -52,7 +52,7 @@ class ProductI18nFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Product Name')
+                    'label' => __('Product Name'),
                 ],
                 'attributes' => [
                     'class'    => 'form-control catalog_product_name',
@@ -67,10 +67,10 @@ class ProductI18nFieldset extends Fieldset
                 'name'       => 'description',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Description')
+                    'label' => __('Description'),
                 ],
                 'attributes' => [
-                    'rows'  => 50,
+                    'rows' => 50,
                 ],
             ],
             ['priority' => 650]
@@ -78,10 +78,10 @@ class ProductI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_title',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Page Title')
+                'name'    => 'meta_title',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Page Title'),
                 ],
             ],
             ['priority' => 600]
@@ -89,21 +89,21 @@ class ProductI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_keywords',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Meta Keywords')                ],
+                'name'    => 'meta_keywords',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label' => __('Meta Keywords')],
             ],
             ['priority' => 550]
         );
 
         $this->add(
             [
-                'name'       => 'meta_description',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Meta Description'),
-                    'help-block'       => __('Maximum 255 chars'),
+                'name'    => 'meta_description',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label'      => __('Meta Description'),
+                    'help-block' => __('Maximum 255 chars'),
                 ],
             ],
             ['priority' => 500]
@@ -120,6 +120,7 @@ class ProductI18nFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\ProductI18nEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

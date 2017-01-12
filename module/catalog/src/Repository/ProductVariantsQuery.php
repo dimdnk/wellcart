@@ -14,4 +14,5 @@ use WellCart\ORM\QueryBuilder;
 
 class ProductVariantsQuery extends QueryBuilder
 {
+
 }

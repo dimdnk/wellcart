@@ -14,9 +14,11 @@ use ZfcUserDoctrineORM\Mapper\User as AbstractMapper;
 
 class User extends AbstractMapper
 {
+
     public function setUserEntityClass($className)
     {
         $this->options->setUserEntityClass($className);
+
         return $this;
     }
 }

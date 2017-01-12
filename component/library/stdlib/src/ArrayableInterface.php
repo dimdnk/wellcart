@@ -10,6 +10,7 @@ namespace WellCart\Stdlib;
 
 interface ArrayableInterface
 {
+
     /**
      * Gets a native PHP array representation of the object.
      *

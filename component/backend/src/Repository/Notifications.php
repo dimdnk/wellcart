@@ -29,6 +29,7 @@ class Notifications extends AbstractRepository implements NotificationRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -46,6 +47,7 @@ class Notifications extends AbstractRepository implements NotificationRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -79,7 +81,7 @@ class Notifications extends AbstractRepository implements NotificationRepository
             ['1', $ids],
             [
                 \PDO::PARAM_INT,
-                Connection::PARAM_INT_ARRAY
+                Connection::PARAM_INT_ARRAY,
             ]
         );
 
@@ -94,6 +96,7 @@ class Notifications extends AbstractRepository implements NotificationRepository
                 'Messages successfully marked as read.'
             );
         }
+
         return $result;
     }
 }

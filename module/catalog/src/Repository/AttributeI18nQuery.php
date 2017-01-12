@@ -35,6 +35,7 @@ class AttributeI18nQuery extends QueryBuilder
     public function withAttribute()
     {
         $this->innerJoin($this->getRootAliases()[0] . '.attribute', 'fe');
+
         return $this;
     }
 }

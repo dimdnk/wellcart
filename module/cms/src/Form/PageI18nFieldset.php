@@ -50,10 +50,10 @@ class PageI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'title',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Title'),
+                'name'    => 'title',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Title'),
                 ],
             ],
             ['priority' => 700]
@@ -64,7 +64,7 @@ class PageI18nFieldset extends Fieldset
                 'name'       => 'body',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Content'),
+                    'label' => __('Content'),
                 ],
                 'attributes' => [
                     'class' => 'wysiwyg-tinymce',
@@ -75,10 +75,10 @@ class PageI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_title',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Page Title'),
+                'name'    => 'meta_title',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Page Title'),
                 ],
             ],
             ['priority' => 600]
@@ -86,10 +86,10 @@ class PageI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_keywords',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Meta Keywords'),
+                'name'    => 'meta_keywords',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label' => __('Meta Keywords'),
                 ],
             ],
             ['priority' => 550]
@@ -97,11 +97,11 @@ class PageI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_description',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Meta Description'),
-                    'help-block'       => __('Maximum 255 chars'),
+                'name'    => 'meta_description',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label'      => __('Meta Description'),
+                    'help-block' => __('Maximum 255 chars'),
 
                 ],
             ],
@@ -119,6 +119,7 @@ class PageI18nFieldset extends Fieldset
                 'Object must implement interface WellCart\CMS\Spec\PageI18nEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

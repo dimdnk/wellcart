@@ -14,19 +14,20 @@ use WellCart\RestApi\Repository\OAuth2\Clients;
 
 class ApiClientSelectorFactory
 {
+
     /**
      * @param ContainerInterface $sm
      *
      * @return \WellCart\Form\Element\Select
      */
     public function __invoke(ContainerInterface $sm
-    ): \WellCart\Form\Element\Select
-    {
+    ): \WellCart\Form\Element\Select {
         $services = $sm->getServiceLocator();
         $clients = $services->get(
             Clients::class
         )
             ->toOptionsList();
+
         return new \WellCart\Form\Element\Select(
             null,
             ['value_options' => $clients,

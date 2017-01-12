@@ -40,7 +40,7 @@ class CategoryFieldset extends Fieldset
                 'name'       => 'parent',
                 'type'       => 'catalogCategorySelector',
                 'options'    => [
-                    'label'            => __('Parent Category')
+                    'label' => __('Parent Category'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -55,8 +55,8 @@ class CategoryFieldset extends Fieldset
                 'name'       => 'is_visible',
                 'type'       => 'Select',
                 'options'    => [
-                    'label'            => __('Visibility'),
-                    'value_options'    => [
+                    'label'         => __('Visibility'),
+                    'value_options' => [
                         0 => __('Hidden'),
                         1 => __('Visible'),
                     ],
@@ -74,13 +74,13 @@ class CategoryFieldset extends Fieldset
                 'name'       => 'url_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('URL Key')
+                    'label' => __('URL Key'),
                 ],
                 'attributes' => [
                     'id'               => 'catalog_category_url_key',
                     'data-sluggable'   => 'true',
                     'data-slug-source' => '.catalog_category_name:first',
-                    'required'         => 'required'
+                    'required'         => 'required',
                 ],
             ],
             ['priority' => 600]
@@ -101,7 +101,7 @@ class CategoryFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'category-translations',
-                ]
+                ],
             ],
             ['priority' => 550]
         );
@@ -132,6 +132,7 @@ class CategoryFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\CategoryEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

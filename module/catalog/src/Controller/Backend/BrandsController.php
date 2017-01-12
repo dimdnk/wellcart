@@ -61,6 +61,7 @@ class BrandsController extends AbstractActionController implements
     public function createAction(FormPageView $formPageView, EntityForm $form)
     {
         $entity = $this->repository->createEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 

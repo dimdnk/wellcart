@@ -32,6 +32,7 @@ class Complete extends AbstractStep
         if ($form->isValid()) {
             return true;
         }
+
         return false;
     }
 
@@ -41,6 +42,7 @@ class Complete extends AbstractStep
     public function getViewTemplate()
     {
         $this->getSetup()->createInstalledManifest();
+
         return parent::getViewTemplate();
     }
 }

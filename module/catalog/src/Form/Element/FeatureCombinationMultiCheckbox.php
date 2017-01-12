@@ -15,6 +15,7 @@ use WellCart\Form\Element\MultiCheckbox;
 
 class FeatureCombinationMultiCheckbox extends MultiCheckbox
 {
+
     /**
      * Seed attributes
      *

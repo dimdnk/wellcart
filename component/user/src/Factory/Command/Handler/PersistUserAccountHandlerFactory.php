@@ -15,6 +15,7 @@ use WellCart\User\Command\Handler\PersistUserAccountHandler;
 
 class PersistUserAccountHandlerFactory
 {
+
     public function __invoke(
         ContainerInterface $container
     ): PersistUserAccountHandler {

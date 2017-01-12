@@ -23,7 +23,7 @@ class SkippableSegment extends Segment
      *
      * @var array map of skippable segments
      */
-    protected $skippable = array();
+    protected $skippable = [];
 
     /**
      * Create a new regex route.
@@ -32,8 +32,8 @@ class SkippableSegment extends Segment
      * @param array  $constraints
      * @param array  $defaults
      */
-    public function __construct($route, array $constraints = array(),
-        array $defaults = array(), array $skippable = array()
+    public function __construct($route, array $constraints = [],
+        array $defaults = [], array $skippable = []
     ) {
         $this->defaults = $defaults;
         $this->skippable = $skippable;
@@ -68,15 +68,15 @@ class SkippableSegment extends Segment
         }
 
         if (!isset($options['constraints'])) {
-            $options['constraints'] = array();
+            $options['constraints'] = [];
         }
 
         if (!isset($options['defaults'])) {
-            $options['defaults'] = array();
+            $options['defaults'] = [];
         }
 
         if (!isset($options['skippable'])) {
-            $options['skippable'] = array();
+            $options['skippable'] = [];
         }
 
         return new static(

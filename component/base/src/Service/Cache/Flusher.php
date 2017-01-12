@@ -12,6 +12,7 @@ namespace WellCart\Base\Service\Cache;
 
 class Flusher
 {
+
     /**
      * @var array
      */

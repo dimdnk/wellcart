@@ -14,6 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 class AdministratorTest extends TestCase
 {
+
     /**
      * @var Administrator
      */

@@ -51,6 +51,7 @@ class ConfirmEmailController extends AbstractActionController
                         'This confirmation key is invalid or has expired.'
                     )
                 );
+
             return $this->redirect()->toRoute('zfcuser');
         }
 
@@ -70,7 +71,8 @@ class ConfirmEmailController extends AbstractActionController
                 );
 
             return $this->redirect()->toRoute('zfcuser');
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
             $this->flashMessenger()
@@ -79,6 +81,7 @@ class ConfirmEmailController extends AbstractActionController
                         'An unexpected error occurred. Please try again or contact Customer Support.'
                     )
                 );
+
             return $this->redirect()->toRoute('zfcuser');
         }
     }

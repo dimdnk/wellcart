@@ -30,8 +30,10 @@ if (!function_exists('application_env')) {
                     return true;
                 }
             }
+
             return false;
         }
+
         return $env;
     }
 }
@@ -56,8 +58,10 @@ if (!function_exists('application_context')) {
                     return true;
                 }
             }
+
             return false;
         }
+
         return $context;
     }
 }
@@ -89,7 +93,8 @@ if (!function_exists('get_file_size')) {
      */
     function get_file_size($size)
     {
-        $units = array('Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB');
+        $units = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB'];
+
         return @
             round($size / pow(1024, ($i = floor(log($size, 1024)))), 2) . ' '
             . $units[$i];
@@ -167,7 +172,8 @@ if (!function_exists('hex2rgb')) {
             $g = hexdec(substr($hex, 2, 2));
             $b = hexdec(substr($hex, 4, 2));
         }
-        $rgb = array($r, $g, $b);
+        $rgb = [$r, $g, $b];
+
         return $rgb; // returns an array with the rgb values
     }
 }
@@ -210,6 +216,7 @@ if (!function_exists('root_namespace')) {
     {
         if (WellCart\Utility\Str::contains($class, $separator)) {
             $arr = explode($separator, $class);
+
             return reset($arr);
         }
     }

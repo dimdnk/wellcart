@@ -18,7 +18,9 @@ use ZF\OAuth2\Doctrine\Entity\UserInterface;
 
 class AccessToken extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -87,6 +89,7 @@ class AccessToken extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

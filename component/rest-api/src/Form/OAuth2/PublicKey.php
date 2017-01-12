@@ -19,7 +19,10 @@ use Zend\Form\FormInterface;
 
 class PublicKey extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'api_key';
     /**
      * Form constructor
      *
@@ -31,7 +34,7 @@ class PublicKey extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('api_key');
+        parent::__construct(static::NAME);
 
         $this->setHydrator($hydrator);
 
@@ -43,7 +46,7 @@ class PublicKey extends AbstractForm
                 'name'       => 'client',
                 'type'       => 'apiClientSelector',
                 'options'    => [
-                    'label'            => __('Client'),
+                    'label' => __('Client'),
                 ],
                 'attributes' => [
                     'id' => 'api_key_client',
@@ -57,8 +60,8 @@ class PublicKey extends AbstractForm
                 'name'       => 'public_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Public Key'),
-                    'help-block'       => __('Absolute path on server.'),
+                    'label'      => __('Public Key'),
+                    'help-block' => __('Absolute path on server.'),
                 ],
                 'attributes' => [
                     'id' => 'api_key_public_key',
@@ -72,8 +75,8 @@ class PublicKey extends AbstractForm
                 'name'       => 'private_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Private Key'),
-                    'help-block'       => __('Absolute path on server.'),
+                    'label'      => __('Private Key'),
+                    'help-block' => __('Absolute path on server.'),
                 ],
                 'attributes' => [
                     'id' => 'api_key_private_key',
@@ -87,9 +90,9 @@ class PublicKey extends AbstractForm
                 'name'       => 'encryption_algorithm',
                 'type'       => 'select',
                 'options'    => [
-                    'label'            => __('Encryption Algorithm'),
-                    'empty_option'     => __('- Select Algorithm -'),
-                    'value_options'    => [
+                    'label'         => __('Encryption Algorithm'),
+                    'empty_option'  => __('- Select Algorithm -'),
+                    'value_options' => [
                         'HS256' => 'HS256',
                         'HS384' => 'HS384',
                         'HS512' => 'HS512',
@@ -119,10 +122,10 @@ class PublicKey extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -146,6 +149,7 @@ class PublicKey extends AbstractForm
                 'Object must implement interface WellCart\RestApi\Entity\PublicKey'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -159,6 +163,7 @@ class PublicKey extends AbstractForm
                 'Object must implement interface WellCart\RestApi\Entity\PublicKey'
             );
         }
+
         return parent::setObject($object);
     }
 }

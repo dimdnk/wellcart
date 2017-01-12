@@ -15,12 +15,14 @@ use WellCart\Catalog\Spec\ProductTemplateI18nRepository;
 
 class ProductTemplatesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm): ProductTemplatesController
     {
         $controller = new ProductTemplatesController(
             $sm->getServiceLocator()
                 ->get(ProductTemplateI18nRepository::class)
         );
+
         return $controller;
     }
 }

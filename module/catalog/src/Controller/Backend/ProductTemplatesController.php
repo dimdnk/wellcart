@@ -50,6 +50,7 @@ class ProductTemplatesController extends AbstractActionController implements
         $gridPageView->setDisplayLanguage(
             $this->locale()->getLanguage()
         );
+
         return $gridPageView->prepare();
     }
 
@@ -64,6 +65,7 @@ class ProductTemplatesController extends AbstractActionController implements
     public function createAction(FormPageView $formPageView, EntityForm $form)
     {
         $entity = $this->repository->createProductTemplateEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 
@@ -155,6 +157,7 @@ class ProductTemplatesController extends AbstractActionController implements
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllTemplateIds();
         }
+
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,

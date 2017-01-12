@@ -12,6 +12,7 @@ use Zend\Stdlib\RequestInterface;
 
 trait RequestAwareTrait
 {
+
     /**
      * @var RequestInterface
      */

@@ -17,10 +17,12 @@ use Zend\EventManager\EventInterface;
 
 class SetDefaultAccountSettings
 {
+
     /**
      * @var LanguageEntity
      */
     protected $defaultLanguage;
+
     /**
      * @var AclRoleRepository
      */
@@ -77,6 +79,7 @@ class SetDefaultAccountSettings
         }
 
         $user->setTimeZone($user->getTimeZone());
+
         return true;
     }
 }

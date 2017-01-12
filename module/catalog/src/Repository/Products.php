@@ -27,6 +27,7 @@ class Products extends AbstractRepository implements ProductRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class Products extends AbstractRepository implements ProductRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

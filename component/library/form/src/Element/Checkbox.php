@@ -12,5 +12,6 @@ use Zend\Form\Element\Checkbox as Element;
 
 class Checkbox extends Element
 {
+
     use SetValueObjectTrait;
 }

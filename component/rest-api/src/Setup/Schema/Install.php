@@ -327,7 +327,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Client to Scope mapping',
                 'id'          => false,
-                'primary_key' => ['scope_id', 'client_id']
+                'primary_key' => ['scope_id', 'client_id'],
             ]
         )
             ->addColumn(
@@ -360,7 +360,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Authorization Code to Scope mapping',
                 'id'          => false,
-                'primary_key' => ['scope_id', 'auth_code_id']
+                'primary_key' => ['scope_id', 'auth_code_id'],
             ]
         )
             ->addColumn(
@@ -393,7 +393,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Refresh Token to Scope mapping',
                 'id'          => false,
-                'primary_key' => ['scope_id', 'refresh_token_id']
+                'primary_key' => ['scope_id', 'refresh_token_id'],
             ]
         )
             ->addColumn(
@@ -425,7 +425,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Refresh Token to Scope mapping',
                 'id'          => false,
-                'primary_key' => ['scope_id', 'refresh_token_id']
+                'primary_key' => ['scope_id', 'refresh_token_id'],
             ]
         )
             ->addColumn(

@@ -40,6 +40,7 @@ CodeceptionAutoload::addNamespace(
  */
 class Bootstrap
 {
+
     /**
      * Initialize testing environment
      *
@@ -144,6 +145,7 @@ class Bootstrap
             }
             $previousDir = $dir;
         }
+
         return str_replace('\\', '/', $dir . '/' . $path) . '/';
     }
 

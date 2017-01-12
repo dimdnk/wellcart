@@ -13,7 +13,7 @@ return
                     'helpers' => [
                         'requireJS' => [
                             'assets/wellcart-base/js/tinymce' => ['dependencies' => ['assets/wellcart-base/js/tinymce']],
-                        ]
+                        ],
                     ],
                 ],
                 'catalog/brands/form'   => [
@@ -23,8 +23,8 @@ return
                             'parent'     => 'action.result',
                             'class'      => 'WellCart\Catalog\ItemView\Backend\BrandThumbnail',
                         ],
-                    ]
+                    ],
                 ],
             ],
-        ]
+        ],
     ];

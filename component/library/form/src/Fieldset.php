@@ -16,6 +16,7 @@ use Zend\InputFilter\InputFilterProviderInterface;
 class Fieldset extends \Zend\Form\Fieldset
     implements FormFactoryAwareInterface, InputFilterProviderInterface
 {
+
     use DomainInputFilterSpecConfigTrait,
         AddAttributesToRequiredFieldsTrait;
 
@@ -35,6 +36,7 @@ class Fieldset extends \Zend\Form\Fieldset
 
         }
         $this->addAttributesToRequiredFields($specs);
+
         return $specs;
     }
 }

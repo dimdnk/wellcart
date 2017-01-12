@@ -22,8 +22,7 @@ class DoctrineWrapsMessageHandlingInTransactionFactory
      * @return DoctrineWrapsMessageHandlingInTransaction
      */
     public function __invoke(ContainerInterface $container
-    ): DoctrineWrapsMessageHandlingInTransaction
-    {
+    ): DoctrineWrapsMessageHandlingInTransaction {
         $entityManager = $container->get('Doctrine\ORM\EntityManager');
 
         return new DoctrineWrapsMessageHandlingInTransaction($entityManager);

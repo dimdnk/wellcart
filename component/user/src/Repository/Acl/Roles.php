@@ -36,6 +36,7 @@ class Roles extends AbstractRepository implements AclRoleRepository
             $this,
             compact('optionsList')
         );
+
         return $optionList;
     }
 
@@ -50,6 +51,7 @@ class Roles extends AbstractRepository implements AclRoleRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -67,6 +69,7 @@ class Roles extends AbstractRepository implements AclRoleRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 

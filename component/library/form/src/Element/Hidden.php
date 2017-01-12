@@ -12,5 +12,6 @@ use Zend\Form\Element\Hidden as Element;
 
 class Hidden extends Element
 {
+
     use SetValueObjectTrait;
 }

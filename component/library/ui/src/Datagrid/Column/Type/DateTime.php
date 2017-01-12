@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Type\DateTime as AbstractType;
 
 class DateTime extends AbstractType
 {
+
 }

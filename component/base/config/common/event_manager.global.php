@@ -35,12 +35,12 @@ return
                     'listener' => EventListener\Ui\PrepareLayoutItemView::class,
                     'priority' => -100,
                 ],
-                EventListener\Ui\PrepareFormLayout::class                     => [
-                  'id'       => Form::class,
-                  'event'    => 'init',
-                  'listener' => EventListener\Ui\PrepareFormLayout::class,
-                  'priority' => -100,
+                EventListener\Ui\PrepareFormLayout::class                         => [
+                    'id'       => Form::class,
+                    'event'    => 'init',
+                    'listener' => EventListener\Ui\PrepareFormLayout::class,
+                    'priority' => -100,
                 ],
             ],
-        ]
+        ],
     ];

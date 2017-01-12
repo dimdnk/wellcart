@@ -13,12 +13,14 @@ use WellCart\View\Helper\Locale;
 
 class LocaleFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $locale = $sm->getServiceLocator()
             ->get('ControllerPluginManager')
             ->get('locale');
         $helper = new Locale($locale);
+
         return $helper;
     }
 }

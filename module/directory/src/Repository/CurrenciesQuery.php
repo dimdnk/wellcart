@@ -15,10 +15,12 @@ use WellCart\ORM\QueryBuilder;
 
 class CurrenciesQuery extends QueryBuilder
 {
+
     public function enabled()
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', CurrencyEntity::STATUS_ENABLED);
+
         return $this;
     }
 
@@ -26,6 +28,7 @@ class CurrenciesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', CurrencyEntity::STATUS_DISABLED);
+
         return $this;
     }
 
@@ -34,6 +37,7 @@ class CurrenciesQuery extends QueryBuilder
         $this->andWhere($this->getRootAliases()[0] . '.isPrimary = :is_primary')
             ->setParameter('is_primary', true)
             ->setMaxResults(1);
+
         return $this;
     }
 }

@@ -18,11 +18,14 @@ use Zend\Mvc\MvcEvent;
 class AreaBasedOnThemeContext implements
     ListenerAggregateInterface
 {
+
     use ListenerAggregateTrait;
+
     /**
      * @var LayoutUpdaterInterface
      */
     protected $layoutUpdater;
+
     protected $themeManager;
 
     public function __construct(

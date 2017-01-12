@@ -73,10 +73,12 @@ class Setup
                     $this->refreshPermissions();
                 }
             );
-        } catch (Throwable $e) {
+        }
+        catch (Throwable $e) {
             unlink($dbConfigFile);
             throw $e;
-        } finally {
+        }
+        finally {
             ini_restore('max_execution_time');
         }
     }
@@ -147,10 +149,13 @@ class Setup
 
             application($app);
             $this->sm = $app->getServiceManager();
+
             return $result;
-        } catch (Throwable $e) {
+        }
+        catch (Throwable $e) {
             throw $e;
-        } finally {
+        }
+        finally {
             $_ENV['WELLCART_APPLICATION_CONTEXT']
                 = Application::CONTEXT_SETUP;
             $app->disableMaintenanceMode();
@@ -337,7 +342,8 @@ class Setup
                     $this->refreshPermissions();
                 }
             );
-        } finally {
+        }
+        finally {
             ini_restore('max_execution_time');
         }
     }
@@ -412,17 +418,20 @@ class Setup
                     }
                 }
             }
+
             return $result;
         };
 
         try {
             ignore_user_abort(true);
             set_time_limit(0);
+
             return $this->runInContext(
                 Application::CONTEXT_GLOBAL,
                 $callback
             );
-        } finally {
+        }
+        finally {
             ini_restore('max_execution_time');
         }
     }
@@ -485,65 +494,66 @@ class Setup
         $assetsPath = str_replace(WELLCART_ROOT, '', WELLCART_ASSETS_PATH);
         $themesPath = str_replace(WELLCART_ROOT, '', WELLCART_THEMES_PATH);
         $mediaPath = str_replace(WELLCART_ROOT, '', WELLCART_MEDIA_PATH);
+
         return [
             'Server Capabilities' => [
                 'php_version' => [
                     'title'    => __('PHP Version'),
                     'expected' => '>= 7.0.0',
                     'value'    => phpversion(),
-                    'success'  => version_compare(phpversion(), '7.0.0', '>=')
-                ]
+                    'success'  => version_compare(phpversion(), '7.0.0', '>='),
+                ],
             ],
             'PHP Settings'        => [
                 'file_uploads'          => [
                     'title'    => __('File uploads'),
-                    'expected' => __('On')
+                    'expected' => __('On'),
                 ],
                 'session.auto_start'    => [
                     'title'    => __('Session autostart'),
-                    'expected' => __('Off')
+                    'expected' => __('Off'),
                 ],
                 'session.use_trans_sid' => [
                     'title'    => 'Session use trans SID',
-                    'expected' => __('Off')
-                ]
+                    'expected' => __('Off'),
+                ],
             ],
             'PHP Extensions'      => [
                 'pdo_mysql' => [
                     'title'    => 'pdo_mysql',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'spl'       => [
                     'title'    => 'spl',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'ctype'     => [
                     'title'    => 'ctype',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'gd'        => [
                     'title'    => 'gd',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'curl'      => [
                     'title'    => 'curl',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'json'      => [
                     'title'    => 'json',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'hash'      => [
                     'title'    => 'hash',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'intl'      => [
                     'title'    => 'intl',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'dom'       => [
                     'title'    => 'DOM',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'xsl'       => [
                     'title'    => 'xsl',
@@ -555,51 +565,51 @@ class Setup
                 ],
                 'simplexml' => [
                     'title'    => 'SimpleXML',
-                    'expected' => __('Loaded')
+                    'expected' => __('Loaded'),
                 ],
                 'xmlreader' => [
                     'title'    => 'xmlReader',
-                    'expected' => __('Loaded')
-                ]
+                    'expected' => __('Loaded'),
+                ],
             ],
             'File Permissions'    => [
                 './config/autoload/' => [
                     'title'    => '/config/autoload',
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './' . $assetsPath   => [
                     'title'    => '/' . $assetsPath,
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './' . $themesPath   => [
                     'title'    => '/' . $themesPath,
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './' . $mediaPath    => [
                     'title'    => '/' . $mediaPath,
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './data/code'        => [
                     'title'    => '/data/code',
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './data/cache'       => [
                     'title'    => '/data/cache',
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './data/logs'        => [
                     'title'    => '/data/logs',
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './data/sessions'    => [
                     'title'    => '/data/sessions',
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
                 './data/upload'      => [
                     'title'    => '/data/upload',
-                    'expected' => __('Writable')
+                    'expected' => __('Writable'),
                 ],
-            ]
+            ],
         ];
     }
 
@@ -649,9 +659,11 @@ class Setup
                     $em->flush($admin);
                 }
             );
-        } catch (Throwable $e) {
+        }
+        catch (Throwable $e) {
             throw $e;
         }
+
         return true;
     }
 

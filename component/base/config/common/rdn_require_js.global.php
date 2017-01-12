@@ -38,7 +38,7 @@ return [
                 ],
                 'shim'    => [
                     'jquery'           => [
-                        'exports' => '$'
+                        'exports' => '$',
                     ],
                     'underscore'       => [
                         'exports' => '_',
@@ -91,5 +91,5 @@ return [
                     'assets/wellcart-base/js/helpers',
                 ],
             ],
-        ]
+        ],
 ];

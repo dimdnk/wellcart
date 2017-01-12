@@ -16,6 +16,7 @@ use Zend\Mvc\MvcEvent;
 
 trait AbstractControllerTrait
 {
+
     use TranslatorAwareTrait,
         LoggerAwareTrait,
         ProvidesObjectManager;
@@ -61,6 +62,7 @@ trait AbstractControllerTrait
         $preResult = $this->preDispatch($e);
         if ($preResult !== null) {
             $e->setResult($preResult);
+
             return $preResult;
         }
 
@@ -73,10 +75,12 @@ trait AbstractControllerTrait
         $postResult = $this->postDispatch($e);
         if ($postResult !== null) {
             $e->setResult($postResult);
+
             return $postResult;
         }
 
         $layout->prepare();
+
         return $result;
     }
 

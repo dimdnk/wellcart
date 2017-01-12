@@ -15,6 +15,7 @@ use WellCart\CommandBus\Mvc\Controller\Plugin\CommandBus;
 
 class CommandBusControllerPluginFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

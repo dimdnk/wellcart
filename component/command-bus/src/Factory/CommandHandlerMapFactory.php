@@ -15,6 +15,7 @@ use SimpleBus\Message\CallableResolver\CallableMap;
 
 class CommandHandlerMapFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

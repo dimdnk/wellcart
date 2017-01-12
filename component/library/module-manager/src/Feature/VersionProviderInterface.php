@@ -10,6 +10,7 @@ namespace WellCart\ModuleManager\Feature;
 
 interface VersionProviderInterface
 {
+
     /**
      * Expected to return version string
      *

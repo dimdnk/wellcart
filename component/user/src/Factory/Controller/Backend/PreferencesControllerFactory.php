@@ -16,9 +16,9 @@ use WellCart\User\PageView\Backend\PreferencesForm;
 
 class PreferencesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): PreferencesController
-    {
+    ): PreferencesController {
         $services = $sm->getServiceLocator();
         $controller = new PreferencesController(
             $services->get('system_configuration_editor'),
@@ -29,6 +29,7 @@ class PreferencesControllerFactory
                 PreferencesForm::class
             )
         );
+
         return $controller;
     }
 }

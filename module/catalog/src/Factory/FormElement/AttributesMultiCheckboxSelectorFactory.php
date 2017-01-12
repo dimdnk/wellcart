@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
@@ -13,6 +14,7 @@ use WellCart\Catalog\Spec\AttributeRepository;
 
 class AttributesMultiCheckboxSelectorFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
@@ -20,6 +22,7 @@ class AttributesMultiCheckboxSelectorFactory
             AttributeRepository::class
         )
             ->toOptionsList();
+
         return new \WellCart\Form\Element\MultiCheckbox(
             null,
             ['value_options' => $values]

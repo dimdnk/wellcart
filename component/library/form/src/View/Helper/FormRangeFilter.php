@@ -16,6 +16,7 @@ use Zend\Form\View\Helper\FormNumber;
 
 class FormRangeFilter extends AbstractHelper
 {
+
     /**
      * FormNumber helper
      *

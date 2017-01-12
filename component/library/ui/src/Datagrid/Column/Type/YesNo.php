@@ -34,6 +34,7 @@ class YesNo extends PhpString
         $isTrue = $validator->toBoolean($value);
         $label = ($isTrue) ? __('Yes') : __('No');
         $class = ($isTrue) ? 'success' : 'warning';
+
         return sprintf(
             '<span class="label label-%s">%s</span>', $class, $label
         );

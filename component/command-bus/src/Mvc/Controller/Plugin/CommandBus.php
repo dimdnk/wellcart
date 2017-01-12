@@ -15,6 +15,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class CommandBus extends AbstractPlugin
 {
+
     /**
      * @var MessageBusSupportingMiddleware
      */

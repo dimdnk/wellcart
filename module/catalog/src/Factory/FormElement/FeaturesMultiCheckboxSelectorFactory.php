@@ -14,6 +14,7 @@ use WellCart\Catalog\Spec\FeatureRepository;
 
 class FeaturesMultiCheckboxSelectorFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
@@ -21,6 +22,7 @@ class FeaturesMultiCheckboxSelectorFactory
             FeatureRepository::class
         )
             ->toOptionsList();
+
         return new \WellCart\Form\Element\MultiCheckbox(
             null,
             ['value_options' => $values]

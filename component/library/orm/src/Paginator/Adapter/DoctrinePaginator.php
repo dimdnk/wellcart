@@ -12,6 +12,7 @@ use DoctrineORMModule\Paginator\Adapter\DoctrinePaginator as AbstractDoctrinePag
 
 class DoctrinePaginator extends AbstractDoctrinePaginator
 {
+
     public function getQueryBuilder()
     {
         return $this->getPaginator()->getQueryBuilder();

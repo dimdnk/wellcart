@@ -24,6 +24,7 @@ class LanguagesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isActive = :is_active');
         $this->setParameter('is_active', true);
+
         return $this;
     }
 
@@ -32,6 +33,7 @@ class LanguagesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isActive = :is_active');
         $this->setParameter('is_active', false);
+
         return $this;
     }
 
@@ -39,6 +41,7 @@ class LanguagesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isSystem = :is_system');
         $this->setParameter('is_system', true);
+
         return $this;
     }
 
@@ -46,6 +49,7 @@ class LanguagesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isSystem = :is_system');
         $this->setParameter('is_system', false);
+
         return $this;
     }
 
@@ -54,6 +58,7 @@ class LanguagesQuery extends QueryBuilder
         $this->andWhere($this->getRootAliases()[0] . '.isDefault = :is_default')
             ->setParameter('is_default', true)
             ->setMaxResults(1);
+
         return $this;
     }
 
@@ -63,6 +68,7 @@ class LanguagesQuery extends QueryBuilder
     public function prioritize()
     {
         $this->addOrderBy($this->getRootAliases()[0] . '.isDefault', 'DESC');
+
         return $this;
     }
 
@@ -72,6 +78,7 @@ class LanguagesQuery extends QueryBuilder
     public function defaultSortOrder()
     {
         $this->addOrderBy($this->getRootAliases()[0] . '.sortOrder', 'ASC');
+
         return $this;
     }
 }

@@ -10,5 +10,6 @@ namespace WellCart\ORM;
 
 interface TranslatableEntity
 {
+
     public function getTranslations();
 }

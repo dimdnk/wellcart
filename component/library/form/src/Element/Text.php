@@ -10,5 +10,6 @@ namespace WellCart\Form\Element;
 
 class Text extends \Zend\Form\Element\Text
 {
+
     use SetValueObjectTrait;
 }

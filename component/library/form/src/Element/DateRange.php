@@ -12,7 +12,9 @@ use Zend\Form\Element\Range;
 
 class DateRange extends Range
 {
+
     use SetValueObjectTrait;
+
     /**
      * Seed attributes
      *

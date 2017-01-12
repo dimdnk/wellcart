@@ -12,4 +12,5 @@ use TwbBundle\View\Helper\TwbBundleGlyphicon;
 
 class Glyphicon extends TwbBundleGlyphicon
 {
+
 }

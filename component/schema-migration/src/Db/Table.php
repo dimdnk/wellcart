@@ -14,6 +14,7 @@ use Phinx\Db\Table as AbstractTable;
 
 class Table extends AbstractTable
 {
+
     /**
      * Insert a new record(s) into the database.
      *

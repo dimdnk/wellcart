@@ -15,9 +15,11 @@ use WellCart\ORM\QueryBuilder;
 
 class ProductsQuery extends QueryBuilder
 {
+
     public function defaultSortOrder()
     {
         $this->addOrderBy($this->getRootAliases()[0] . '.sortOrder', 'ASC');
+
         return $this;
     }
 
@@ -25,6 +27,7 @@ class ProductsQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', ProductEntity::STATUS_ENABLED);
+
         return $this;
     }
 
@@ -32,6 +35,7 @@ class ProductsQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', ProductEntity::STATUS_DISABLED);
+
         return $this;
     }
 }

@@ -13,6 +13,7 @@ use ConLayout\Handle\Handle;
 
 trait LayoutManagerAwareTrait
 {
+
     /**
      * @var LayoutManager
      */
@@ -29,6 +30,7 @@ trait LayoutManagerAwareTrait
     public function addLayoutHandle(string $handle, int $priority = 0)
     {
         $this->getLayoutManager()->addHandle(new Handle($handle, $priority));
+
         return $this;
     }
 
@@ -48,6 +50,7 @@ trait LayoutManagerAwareTrait
     public function setLayoutManager(LayoutManager $layoutManager)
     {
         $this->layoutManager = $layoutManager;
+
         return $this;
     }
 
@@ -61,6 +64,7 @@ trait LayoutManagerAwareTrait
     public function removeLayoutHandle(string $handle)
     {
         $this->getLayoutManager()->removeHandle($handle);
+
         return $this;
     }
 }

@@ -15,6 +15,7 @@ use Zend\EventManager\EventManagerAwareTrait;
 class ViewModel extends Model implements
     EventManagerAwareInterface
 {
+
     use EventManagerAwareTrait;
 
     /**
@@ -28,9 +29,11 @@ class ViewModel extends Model implements
         parent::__construct($variables, $options);
         $this->setVariable('context', $this);
         $this->getEventManager()
-          ->setIdentifiers([
-          __CLASS__,
-          get_class($this)
-        ]);
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
     }
 }

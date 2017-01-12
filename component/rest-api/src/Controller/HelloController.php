@@ -15,6 +15,7 @@ use WellCart\View\Model\HalJsonModel as ViewModel;
 
 class HelloController extends AbstractRestfulController
 {
+
     public function helloAction()
     {
         return new ViewModel(['welcome' => 'Hello, World!']);

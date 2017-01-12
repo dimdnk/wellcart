@@ -10,6 +10,7 @@ namespace WellCart\ModuleManager\Feature;
 
 interface ModulePathProviderInterface
 {
+
     /**
      * Expected to return absolute path to module directory
      *

@@ -14,6 +14,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 class InputFilterAbstractServiceFactory extends
     \Zend\InputFilter\InputFilterAbstractServiceFactory
 {
+
     use DomainInputFilterSpecConfigTrait;
 
     /**
@@ -27,6 +28,7 @@ class InputFilterAbstractServiceFactory extends
         if (!empty($spec)) {
             return true;
         }
+
         return parent::canCreateServiceWithName($inputFilters, $cName, $rName);
     }
 
@@ -46,6 +48,7 @@ class InputFilterAbstractServiceFactory extends
         ) {
             $rName = $entityName;
         }
+
         return $rName;
     }
 
@@ -62,6 +65,7 @@ class InputFilterAbstractServiceFactory extends
         }
         $services = $inputFilters->getServiceLocator();
         $factory = $this->getInputFilterFactory($services);
+
         return $factory->createInputFilter($spec);
     }
 }

@@ -73,8 +73,10 @@ class RecoverAccountController extends AbstractActionController
                                 "We'll email you a link to reset your password."
                             )
                         );
+
                     return $this->redirect()->toRoute('zfcadmin');
-                } catch (\Throwable $e) {
+                }
+                catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e->getMessage());
                     $this->flashMessenger()
@@ -83,6 +85,7 @@ class RecoverAccountController extends AbstractActionController
                                 'An unexpected error occurred. Please try again or contact Customer Support.'
                             )
                         );
+
                     return $this->postRedirectGet();
                 }
             }
@@ -114,6 +117,7 @@ class RecoverAccountController extends AbstractActionController
                         'Your password reset link has expired.'
                     )
                 );
+
             return $this->redirect()->toRoute('zfcadmin');
         }
 
@@ -143,8 +147,10 @@ class RecoverAccountController extends AbstractActionController
                                 "You update your password. Please, log in."
                             )
                         );
+
                     return $this->redirect()->toRoute('zfcadmin');
-                } catch (\Throwable $e) {
+                }
+                catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e);
                     $this->flashMessenger()
@@ -153,6 +159,7 @@ class RecoverAccountController extends AbstractActionController
                                 'An unexpected error occurred. Please try again or contact Customer Support.'
                             )
                         );
+
                     return $this->postRedirectGet();
                 }
             }

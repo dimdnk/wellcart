@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Type\PhpString as AbstractType;
 
 class PhpString extends AbstractType
 {
+
 }

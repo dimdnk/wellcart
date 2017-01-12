@@ -11,6 +11,7 @@ namespace WellCart\User\Test\Traits;
 
 trait AcceptanceTesterActions
 {
+
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *

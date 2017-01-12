@@ -17,6 +17,7 @@ use WellCart\Form\Form;
 
 class PersistProduct extends PersistEntity
 {
+
     /**
      * @var Form
      */
@@ -38,6 +39,7 @@ class PersistProduct extends PersistEntity
     public function setForm(Product $form)
     {
         $this->form = $form;
+
         return $this;
     }
 }

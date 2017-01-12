@@ -14,6 +14,7 @@ use WellCart\Ui\Container\ItemView\ItemView;
 
 class BrandThumbnail extends ItemView
 {
+
     /**
      * Template
      *

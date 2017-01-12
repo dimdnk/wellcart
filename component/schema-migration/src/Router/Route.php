@@ -18,6 +18,7 @@ use Zend\Stdlib\RequestInterface as Request;
 
 class Route implements RouteInterface
 {
+
     /**
      * @var PhinxApplication
      */
@@ -37,7 +38,7 @@ class Route implements RouteInterface
      * @param array            $defaults
      */
     public function __construct(PhinxApplication $application,
-        array $defaults = array()
+        array $defaults = []
     ) {
         $this->application = $application;
         $this->defaults = $defaults;
@@ -50,7 +51,7 @@ class Route implements RouteInterface
      *
      * @throws \BadMethodCallException this method is disabled
      */
-    public static function factory($options = array())
+    public static function factory($options = [])
     {
         throw new \BadMethodCallException('Unsupported');
     }
@@ -68,6 +69,7 @@ class Route implements RouteInterface
         if (!isset($params[0]) || !$this->application->has($params[0])) {
             return null;
         }
+
         return new RouteMatch($this->defaults);
     }
 
@@ -78,7 +80,7 @@ class Route implements RouteInterface
      *
      * @throws \BadMethodCallException this method is disabled
      */
-    public function assemble(array $params = array(), array $options = array())
+    public function assemble(array $params = [], array $options = [])
     {
         throw new \BadMethodCallException('Unsupported');
     }
@@ -88,6 +90,6 @@ class Route implements RouteInterface
      */
     public function getAssembledParams()
     {
-        return array();
+        return [];
     }
 }

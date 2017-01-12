@@ -14,6 +14,7 @@ use Zend\Paginator\Paginator;
 
 trait EventDrivenRepositoryTrait
 {
+
     /**
      * Perform group action
      *
@@ -48,6 +49,7 @@ trait EventDrivenRepositoryTrait
         set_time_limit(0);
         $result = $this->$methodName($ids, $useException);
         ini_restore('max_execution_time');
+
         return $result;
     }
 
@@ -82,6 +84,7 @@ trait EventDrivenRepositoryTrait
                 'Records successfully removed from database.'
             );
         }
+
         return $result;
     }
 
@@ -105,6 +108,7 @@ trait EventDrivenRepositoryTrait
             __FUNCTION__ . '.post', $this,
             compact('id', 'lockMode', 'lockVersion', 'result')
         );
+
         return $result;
     }
 
@@ -132,6 +136,7 @@ trait EventDrivenRepositoryTrait
         $this->getEventManager()->trigger(
             __FUNCTION__ . '.post', $this, compact('result')
         );
+
         return $result;
     }
 
@@ -153,6 +158,7 @@ trait EventDrivenRepositoryTrait
     public function count()
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->finder()->count();
     }
 
@@ -173,6 +179,7 @@ trait EventDrivenRepositoryTrait
     public function min($column)
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->finder()->min($column);
     }
 
@@ -186,6 +193,7 @@ trait EventDrivenRepositoryTrait
     public function max($column)
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->finder()->max($column);
     }
 
@@ -199,6 +207,7 @@ trait EventDrivenRepositoryTrait
     public function sum($column)
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->finder()->sum($column);
     }
 
@@ -212,6 +221,7 @@ trait EventDrivenRepositoryTrait
     public function avg($column)
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->finder()->avg($column);
     }
 
@@ -223,6 +233,7 @@ trait EventDrivenRepositoryTrait
     public function findAllIds(): array
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->finder()->findAllIds();
     }
 
@@ -268,6 +279,7 @@ trait EventDrivenRepositoryTrait
                 'result'
             )
         );
+
         return $result;
     }
 
@@ -307,6 +319,7 @@ trait EventDrivenRepositoryTrait
                 'result'
             )
         );
+
         return $result;
     }
 
@@ -338,6 +351,7 @@ trait EventDrivenRepositoryTrait
     public function createEntity()
     {
         $className = $this->getClassName();
+
         return new $className;
     }
 
@@ -352,12 +366,14 @@ trait EventDrivenRepositoryTrait
     {
         $this->_em->persist($entity);
         $this->_em->flush($entity);
+
         return $entity;
     }
 
     public function findPreviousRecord(Entity $entity)
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->_em->getRepository(get_class($entity))
             ->finder()
             ->findPreviousRecord((int)$entity->getId());
@@ -367,6 +383,7 @@ trait EventDrivenRepositoryTrait
     public function findNextRecord(Entity $entity)
     {
         $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
+
         return $this->_em->getRepository(get_class($entity))
             ->finder()
             ->findNextRecord((int)$entity->getId());
@@ -395,6 +412,7 @@ trait EventDrivenRepositoryTrait
             __FUNCTION__ . '.post', $this,
             compact('page', 'perPage', 'paginator')
         );
+
         return $paginator;
     }
 }

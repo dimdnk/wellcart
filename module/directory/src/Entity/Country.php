@@ -96,6 +96,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setStatus($status): CountryEntity
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -120,6 +121,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setAddressFormat($addressFormat): CountryEntity
     {
         $this->addressFormat = $addressFormat;
+
         return $this;
     }
 
@@ -139,6 +141,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setId($id): CountryEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -158,6 +161,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setIsoCode2($isoCode2): CountryEntity
     {
         $this->isoCode2 = $isoCode2;
+
         return $this;
     }
 
@@ -177,6 +181,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setIsoCode3($isoCode3): CountryEntity
     {
         $this->isoCode3 = $isoCode3;
+
         return $this;
     }
 
@@ -196,6 +201,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setName($name): CountryEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -215,6 +221,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setPostcodeRequired($postcodeRequired
     ): CountryEntity {
         $this->postcodeRequired = (bool)$postcodeRequired;
+
         return $this;
     }
 
@@ -234,6 +241,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -253,6 +261,7 @@ class Country extends AbstractEntity implements CountryEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 }

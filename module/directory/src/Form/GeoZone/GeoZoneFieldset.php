@@ -37,7 +37,7 @@ class GeoZoneFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Geo Zone Name')
+                    'label' => __('Geo Zone Name'),
                 ],
                 'attributes' => [
                     'id' => 'directory_geo_zone_name',
@@ -51,7 +51,7 @@ class GeoZoneFieldset extends Fieldset
                 'name'       => 'description',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Description')
+                    'label' => __('Description'),
                 ],
                 'attributes' => [
                     'id' => 'directory_geo_zone_description',
@@ -65,13 +65,13 @@ class GeoZoneFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_geo_zone',
                 'options'    => [
-                    'label'       => __('Create Geo Zone')
+                    'label' => __('Create Geo Zone'),
                 ],
                 'attributes' => [
                     'id'               => 'directory_geo_zone_add_new_image',
                     'class'            => 'btn btn-default btn-create-new-row',
                     'data-source-path' => 'fieldset.geo-zone-maps',
-                    'data-target-path' => 'tbody.table-fieldset-body'
+                    'data-target-path' => 'tbody.table-fieldset-body',
                 ],
             ],
             ['priority' => 600]
@@ -102,7 +102,7 @@ class GeoZoneFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'geo-zone-maps',
-                ]
+                ],
             ],
             ['priority' => 550]
         );
@@ -118,6 +118,7 @@ class GeoZoneFieldset extends Fieldset
                 'Object must implement interface WellCart\Directory\Spec\GeoZoneEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

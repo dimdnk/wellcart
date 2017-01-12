@@ -10,7 +10,9 @@ trait HeadBuildTrait
 {
 
     protected $publicPath;
+
     protected $manifestFile;
+
     protected $config;
 
     /**
@@ -61,6 +63,7 @@ trait HeadBuildTrait
             $src = $basePath . '/' . ($baseBuildPath . '/'
                     . $manifest[$newSrc]);
         }
+
         return parent::__call($method, $args);
     }
 
@@ -94,6 +97,7 @@ trait HeadBuildTrait
         $publicDir = preg_replace(
             '/[^\\\\\/]*$/', '', str_replace($cwd, '', $filename)
         );
+
         return realpath(trim($publicDir, '\/'));
     }
 
@@ -106,6 +110,7 @@ trait HeadBuildTrait
             'headbuild.manifest_file',
             WELLCART_ASSETS_PATH . 'revision-manifest.json'
         );
+
         return $path;
     }
 

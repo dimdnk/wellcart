@@ -11,10 +11,10 @@ declare(strict_types = 1);
 namespace WellCart\User;
 
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\Setup\Feature\DataFixturesProviderInterface;
-use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use ZF\Apigility\Provider\ApigilityProviderInterface;
@@ -81,6 +81,7 @@ class Module implements
                     return true;
                     $resource = $e->getParam('block_id');
                     $e->stopPropagation();
+
                     return $authService->isGranted($resource);
                 }
             );

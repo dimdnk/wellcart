@@ -12,6 +12,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 interface ServiceLocatorAwareInterface
 {
+
     /**
      * Set service locator
      *

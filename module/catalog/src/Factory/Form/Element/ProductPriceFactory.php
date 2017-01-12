@@ -16,6 +16,7 @@ use WellCart\Directory\Spec\CurrencyEntity;
 
 class ProductPriceFactory
 {
+
     /**
      * @param ContainerInterface $container
      *
@@ -30,6 +31,7 @@ class ProductPriceFactory
             'directory\primary_currency'
         );
         $productPrice = new ProductPrice(null, [], $currency);
+
         return $productPrice;
     }
 }

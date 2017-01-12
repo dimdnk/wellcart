@@ -25,6 +25,7 @@ class Install
     extends AbstractFixture
     implements PermissionsProviderInterface
 {
+
     /**
      * Load data fixtures with the passed EntityManager
      *

@@ -15,12 +15,14 @@ use WellCart\Catalog\Spec\BrandRepository;
 
 class BrandsControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm): BrandsController
     {
         $controller = new BrandsController(
             $sm->getServiceLocator()
                 ->get(BrandRepository::class)
         );
+
         return $controller;
     }
 }

@@ -29,6 +29,7 @@ class Languages extends AbstractRepository implements LocaleLanguageRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -46,6 +47,7 @@ class Languages extends AbstractRepository implements LocaleLanguageRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -81,6 +83,7 @@ class Languages extends AbstractRepository implements LocaleLanguageRepository
             $this,
             compact('language')
         );
+
         return $language;
     }
 

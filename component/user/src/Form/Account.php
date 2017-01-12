@@ -19,6 +19,11 @@ use Zend\Form\FormInterface;
 
 class Account extends AbstractForm
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'user_account';
+
     protected $passwordRequired = true;
 
     /**
@@ -32,7 +37,7 @@ class Account extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('user_account');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -43,7 +48,7 @@ class Account extends AbstractForm
                 'name'       => 'email',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Email'),
+                    'label' => __('Email'),
                 ],
                 'attributes' => [
                     'id'           => 'user_account_name',
@@ -58,7 +63,7 @@ class Account extends AbstractForm
                 'name'       => 'roles',
                 'type'       => 'userRolesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Roles'),
+                    'label' => __('Roles'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -73,7 +78,7 @@ class Account extends AbstractForm
                 'name'       => 'language',
                 'type'       => 'localeLanguageSelector',
                 'options'    => [
-                    'label'            => __('Language'),
+                    'label' => __('Language'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -88,7 +93,7 @@ class Account extends AbstractForm
                 'name'       => 'time_zone',
                 'type'       => 'timezoneSelector',
                 'options'    => [
-                    'label'            => __('Timezone'),
+                    'label' => __('Timezone'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -104,7 +109,7 @@ class Account extends AbstractForm
                 'name'       => 'first_name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('First Name'),
+                    'label' => __('First Name'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -120,7 +125,7 @@ class Account extends AbstractForm
                 'name'       => 'last_name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Last Name'),
+                    'label' => __('Last Name'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -148,7 +153,7 @@ class Account extends AbstractForm
                 'name'       => 'password',
                 'type'       => 'password',
                 'options'    => [
-                    'label'            => __('New Password'),
+                    'label' => __('New Password'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -164,7 +169,7 @@ class Account extends AbstractForm
                 'name'       => 'passwordVerify',
                 'type'       => 'password',
                 'options'    => [
-                    'label'            => __('Password Verify'),
+                    'label' => __('Password Verify'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -190,10 +195,10 @@ class Account extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -215,6 +220,7 @@ class Account extends AbstractForm
                 $this->remove('passwordVerify');
             }
         }
+
         return $this->setData($data);
     }
 
@@ -222,12 +228,14 @@ class Account extends AbstractForm
     public function makePasswordRequired()
     {
         $this->passwordRequired = true;
+
         return $this;
     }
 
     public function makePasswordOptional()
     {
         $this->passwordRequired = false;
+
         return $this;
     }
 
@@ -241,6 +249,7 @@ class Account extends AbstractForm
                 'Object must implement interface WellCart\User\Spec\UserEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -257,6 +266,7 @@ class Account extends AbstractForm
                 $account->getRoles()->clear();
             }
         }
+
         return $account;
     }
 
@@ -270,6 +280,7 @@ class Account extends AbstractForm
                 'Object must implement interface WellCart\User\Spec\UserEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

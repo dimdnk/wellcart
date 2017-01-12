@@ -40,6 +40,7 @@ class UnauthorizedStrategy extends Strategy implements
      * @var Event
      */
     protected $event;
+
     protected $layoutUpdater;
 
     /**

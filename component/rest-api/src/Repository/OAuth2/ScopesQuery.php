@@ -14,12 +14,14 @@ use WellCart\ORM\QueryBuilder;
 
 class ScopesQuery extends QueryBuilder
 {
+
     public function defaultgetScope()
     {
         $this->andWhere(
             $this->getRootAliases()[0] . '.isDefault = :is_default'
         );
         $this->setParameter('is_default', 1);
+
         return $this;
     }
 }

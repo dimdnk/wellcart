@@ -14,6 +14,7 @@ use WellCart\Ui\Layout\EventListener\PrepareActionViewModelListener;
 
 class PrepareActionViewModelListenerFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

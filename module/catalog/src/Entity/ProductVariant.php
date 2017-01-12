@@ -22,6 +22,7 @@ class ProductVariant
     extends AbstractEntity
     implements ProductVariantEntity
 {
+
     /**
      * ID
      *
@@ -112,6 +113,7 @@ class ProductVariant
     public function setQuantity($quantity): ProductVariantEntity
     {
         $this->quantity = $quantity;
+
         return $this;
     }
 
@@ -131,6 +133,7 @@ class ProductVariant
     public function setSku($sku): ProductVariantEntity
     {
         $this->sku = $sku;
+
         return $this;
     }
 
@@ -150,6 +153,7 @@ class ProductVariant
     public function setSortOrder($sortOrder): ProductVariantEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -169,6 +173,7 @@ class ProductVariant
     public function setPrice($price): ProductVariantEntity
     {
         $this->price = doubleval($price);
+
         return $this;
     }
 
@@ -188,6 +193,7 @@ class ProductVariant
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): ProductVariantEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -216,6 +222,7 @@ class ProductVariant
     public function setProduct(ProductEntity $product = null
     ): ProductVariantEntity {
         $this->product = $product;
+
         return $this;
     }
 
@@ -235,6 +242,7 @@ class ProductVariant
     public function setId($id): ProductVariantEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -254,6 +262,7 @@ class ProductVariant
     public function setCombinations(Collection $combinations
     ): ProductVariantEntity {
         $this->combinations = $combinations;
+
         return $this;
     }
 
@@ -267,6 +276,7 @@ class ProductVariant
         foreach ($combinations as $combination) {
             $this->addCombination($combination);
         }
+
         return $this;
     }
 
@@ -282,6 +292,7 @@ class ProductVariant
         }
 
         $this->combinations->add($combination);
+
         return $this;
     }
 
@@ -295,6 +306,7 @@ class ProductVariant
         foreach ($combinations as $combination) {
             $this->removeCombination($combination);
         }
+
         return $this;
     }
 
@@ -308,6 +320,7 @@ class ProductVariant
     public function removeCombination(AttributeCombinationEntity $combination
     ): ProductVariantEntity {
         $this->combinations->removeElement($combination);
+
         return $this;
     }
 

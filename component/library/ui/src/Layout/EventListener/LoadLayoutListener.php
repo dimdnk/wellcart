@@ -15,6 +15,7 @@ use Zend\Mvc\MvcEvent;
 class LoadLayoutListener
     extends \ConLayout\Listener\LoadLayoutListener
 {
+
     /**
      *
      * @param EventManagerInterface $events

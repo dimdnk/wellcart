@@ -20,7 +20,10 @@ use Zend\Form\FormInterface;
 
 class Page extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'cms_page';
     /**
      * Form constructor
      *
@@ -36,7 +39,7 @@ class Page extends AbstractForm
         PageI18nEntity $pageTranslationPrototype
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('cms_page');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -53,10 +56,10 @@ class Page extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -98,6 +101,7 @@ class Page extends AbstractForm
                 'Object must implement interface WellCart\CMS\Spec\PageEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -111,6 +115,7 @@ class Page extends AbstractForm
                 'Object must implement interface WellCart\CMS\Spec\PageEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

@@ -12,6 +12,7 @@ use TckImageResizer\View\Helper\Resize;
 
 class ResizeImage extends Resize
 {
+
     /**
      * @inheritdoc
      */

@@ -27,6 +27,7 @@ class Countries extends AbstractRepository implements CountryRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -38,6 +39,7 @@ class Countries extends AbstractRepository implements CountryRepository
         $queryBuilder = (new CountriesQuery($this->_em))
             ->select($alias)
             ->from($this->_entityName, $alias, $indexBy);
+
         return $queryBuilder;
     }
 
@@ -58,6 +60,7 @@ class Countries extends AbstractRepository implements CountryRepository
             $this,
             compact('optionsList')
         );
+
         return $optionList;
     }
 }

@@ -14,4 +14,5 @@ use Zend\Paginator\Paginator;
 
 class LocaleLanguageCollection extends Paginator
 {
+
 }

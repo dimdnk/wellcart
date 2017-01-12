@@ -20,10 +20,12 @@ use Zend\Uri\Uri;
 
 class SystemUrlRewrites implements RouteInterface
 {
+
     /**
      * @var string
      */
     private static $requestPath;
+
     /**
      * @var UrlRewriteRepository
      */
@@ -53,6 +55,7 @@ class SystemUrlRewrites implements RouteInterface
                 'Missing "repository" in options array'
             );
         }
+
         return new static($options['repository']);
     }
 
@@ -91,7 +94,8 @@ class SystemUrlRewrites implements RouteInterface
             $urlRewrite = $this->urlRewrites->findOneByRequestPath(
                 $requestPath
             );
-        } catch (TableNotFoundException $e) {
+        }
+        catch (TableNotFoundException $e) {
             $urlRewrite = null;
         }
 
@@ -101,6 +105,7 @@ class SystemUrlRewrites implements RouteInterface
             $uri->setPath($targetPath);
         }
         self::$requestPath = $targetPath;
+
         return;
     }
 

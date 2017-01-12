@@ -39,5 +39,6 @@ abstract class AbstractConsoleController
     TranslatorAwareInterface,
     ObjectManagerAwareInterface
 {
+
     use AbstractControllerTrait;
 }

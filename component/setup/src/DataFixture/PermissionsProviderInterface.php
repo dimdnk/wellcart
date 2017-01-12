@@ -15,6 +15,7 @@ namespace WellCart\Setup\DataFixture;
  */
 interface PermissionsProviderInterface
 {
+
     /**
      * Get permissions definition
      *

@@ -11,4 +11,5 @@ namespace WellCart\Utility\Exception;
 
 interface ExceptionInterface
 {
+
 }

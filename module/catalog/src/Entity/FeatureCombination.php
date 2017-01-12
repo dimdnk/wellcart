@@ -20,20 +20,24 @@ class FeatureCombination
     extends AbstractEntity
     implements FeatureCombinationEntity
 {
+
     /**
      * ID
      *
      * @var int
      */
     protected $id;
+
     /**
      * @var FeatureEntity
      */
     protected $feature;
+
     /**
      * @var FeatureValueEntity
      */
     protected $featureValue;
+
     /**
      * @var ProductEntity
      */
@@ -73,6 +77,7 @@ class FeatureCombination
     public function setId($id): FeatureCombinationEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -92,6 +97,7 @@ class FeatureCombination
     public function setFeature(FeatureEntity $feature
     ): FeatureCombinationEntity {
         $this->feature = $feature;
+
         return $this;
     }
 
@@ -111,6 +117,7 @@ class FeatureCombination
     public function setFeatureValue(FeatureValueEntity $featureValue = null
     ): FeatureCombinationEntity {
         $this->featureValue = $featureValue;
+
         return $this;
     }
 
@@ -130,6 +137,7 @@ class FeatureCombination
     public function setProduct(ProductEntity $product = null
     ): FeatureCombinationEntity {
         $this->product = $product;
+
         return $this;
     }
 }

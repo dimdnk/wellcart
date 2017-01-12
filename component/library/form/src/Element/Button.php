@@ -12,5 +12,6 @@ use Zend\Form\Element\Button as Element;
 
 class Button extends Element
 {
+
     use SetValueObjectTrait;
 }

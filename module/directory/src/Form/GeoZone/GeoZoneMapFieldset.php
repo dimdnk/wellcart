@@ -36,7 +36,7 @@ class GeoZoneMapFieldset extends Fieldset
                 'name'       => 'country',
                 'type'       => 'directoryCountrySelector',
                 'options'    => [
-                    'label'            => __('Country'),
+                    'label' => __('Country'),
                 ],
                 'attributes' => [
                     'class' => 'country-selector',
@@ -50,7 +50,7 @@ class GeoZoneMapFieldset extends Fieldset
                 'name'       => 'zone',
                 'type'       => 'directoryZoneSelector',
                 'options'    => [
-                    'label'            => __('Zone'),
+                    'label' => __('Zone'),
                 ],
                 'attributes' => [
                     'class' => 'zone-selector',
@@ -64,7 +64,7 @@ class GeoZoneMapFieldset extends Fieldset
                 'name'       => 'remove',
                 'type'       => 'button',
                 'options'    => [
-                    'label'            => ' ',
+                    'label' => ' ',
                 ],
                 'attributes' => [
                     'type'  => 'button',
@@ -90,6 +90,7 @@ class GeoZoneMapFieldset extends Fieldset
             $this->get('zone')
                 ->setCountry($object->getCountry());
         }
+
         return parent::setObject($object);
     }
 }

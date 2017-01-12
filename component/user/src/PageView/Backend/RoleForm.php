@@ -18,6 +18,7 @@ use WellCart\User\Spec\AclRoleRepository;
 
 class RoleForm extends Standard
 {
+
     public function __construct(
         AclRoleRepository $repository,
         $variables = null,

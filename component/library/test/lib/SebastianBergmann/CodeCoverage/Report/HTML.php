@@ -12,4 +12,5 @@
 class PHP_CodeCoverage_Report_HTML extends
     SebastianBergmann\CodeCoverage\Report\Html\Renderer
 {
+
 }

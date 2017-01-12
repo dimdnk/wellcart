@@ -28,6 +28,7 @@ class License extends AbstractStep
     {
         $form = $this->getForm();
         $form->setData($data);
+
         return $form->isValid();
     }
 }

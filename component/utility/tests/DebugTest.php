@@ -16,6 +16,7 @@ use PHPUnit\Framework\TestCase;
  */
 class DebugTest extends TestCase
 {
+
     public function testDump()
     {
         Debug::dump([10 => 100, 'x' => 'y']);

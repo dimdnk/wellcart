@@ -16,6 +16,7 @@ use WellCart\User\Spec\UserRepository;
 
 class IdentityReviewFactory
 {
+
     public function __invoke(ContainerInterface $container): IdentityReview
     {
         return new IdentityReview($container->get(UserRepository::class));

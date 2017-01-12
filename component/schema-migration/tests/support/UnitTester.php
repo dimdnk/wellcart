@@ -20,6 +20,7 @@ namespace WellCart\SchemaMigration\Test;
  */
 class UnitTester extends \Codeception\Actor
 {
+
     use Traits\UnitTesterActions;
 
     /**

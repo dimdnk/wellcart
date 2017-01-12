@@ -12,6 +12,7 @@ use ZfcDatagrid\Action\Mass as MassAction;
 
 class GroupAction extends MassAction
 {
+
     /**
      * @return mixed
      */
@@ -28,6 +29,7 @@ class GroupAction extends MassAction
     public function setLabel($label)
     {
         $this->setTitle($label);
+
         return $this;
     }
 }

@@ -74,13 +74,13 @@ class FormRow extends \Zend\Form\View\Helper\FormRow
         //Partial rendering
         if ($this->partial) {
             return $this->view->render(
-                $this->partial, array(
+                $this->partial, [
                     'element'         => $oElement,
                     'label'           => $this->renderLabel($oElement),
                     'labelAttributes' => $this->labelAttributes,
                     'labelPosition'   => $this->labelPosition,
                     'renderErrors'    => $this->renderErrors,
-                )
+                ]
             );
         }
 
@@ -128,7 +128,7 @@ class FormRow extends \Zend\Form\View\Helper\FormRow
         $sElementContent = $this->renderElement($oElement);
 
         //Render form row
-        if (in_array($sElementType, array('checkbox'))
+        if (in_array($sElementType, ['checkbox'])
             && $sLayout
             !== \TwbBundle\Form\View\Helper\TwbBundleForm::LAYOUT_HORIZONTAL
         ) {
@@ -164,6 +164,7 @@ class FormRow extends \Zend\Form\View\Helper\FormRow
                 $sLabel, $this->getTranslatorTextDomain()
             );
         }
+
         return $sLabel;
     }
 

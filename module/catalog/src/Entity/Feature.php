@@ -23,6 +23,7 @@ class Feature extends AbstractEntity implements
     TranslatableEntity,
     FeatureEntity
 {
+
     /**
      * ID
      *
@@ -92,6 +93,7 @@ class Feature extends AbstractEntity implements
     public function setTranslations(Collection $translations
     ): FeatureEntity {
         $this->translations = $translations;
+
         return $this;
     }
 
@@ -105,6 +107,7 @@ class Feature extends AbstractEntity implements
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
+
         return $this;
     }
 
@@ -121,6 +124,7 @@ class Feature extends AbstractEntity implements
 
         $translation->setFeature($this);
         $this->translations->add($translation);
+
         return $this;
     }
 
@@ -134,6 +138,7 @@ class Feature extends AbstractEntity implements
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
+
         return $this;
     }
 
@@ -148,6 +153,7 @@ class Feature extends AbstractEntity implements
     ): FeatureEntity {
         $translation->setFeature(null);
         $this->translations->removeElement($translation);
+
         return $this;
     }
 
@@ -168,6 +174,7 @@ class Feature extends AbstractEntity implements
     public function setId($id): FeatureEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -187,6 +194,7 @@ class Feature extends AbstractEntity implements
     public function setSortOrder($sortOrder): FeatureEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -204,6 +212,7 @@ class Feature extends AbstractEntity implements
     public function setValues(Collection $values
     ): FeatureEntity {
         $this->values = $values;
+
         return $this;
     }
 
@@ -215,6 +224,7 @@ class Feature extends AbstractEntity implements
         foreach ($values as $value) {
             $this->addValue($value);
         }
+
         return $this;
     }
 
@@ -229,6 +239,7 @@ class Feature extends AbstractEntity implements
 
         $value->setFeature($this);
         $this->values->add($value);
+
         return $this;
     }
 
@@ -240,6 +251,7 @@ class Feature extends AbstractEntity implements
         foreach ($values as $value) {
             $this->removeValue($value);
         }
+
         return $this;
     }
 
@@ -250,6 +262,7 @@ class Feature extends AbstractEntity implements
     ): FeatureEntity {
         $value->setFeature(null);
         $this->values->removeElement($value);
+
         return $this;
     }
 
@@ -269,6 +282,7 @@ class Feature extends AbstractEntity implements
     public function setProductTemplates($productTemplates)
     {
         $this->productTemplates = $productTemplates;
+
         return $this;
     }
 
@@ -280,6 +294,7 @@ class Feature extends AbstractEntity implements
         foreach ($productTemplates as $productTemplate) {
             $this->addProductTemplate($productTemplate);
         }
+
         return $this;
     }
 
@@ -292,6 +307,7 @@ class Feature extends AbstractEntity implements
             return $this;
         }
         $this->productTemplates->add($productTemplate);
+
         return $this;
     }
 
@@ -303,6 +319,7 @@ class Feature extends AbstractEntity implements
         foreach ($productTemplates as $productTemplate) {
             $this->removeProductTemplate($productTemplate);
         }
+
         return $this;
     }
 
@@ -312,6 +329,7 @@ class Feature extends AbstractEntity implements
     public function removeProductTemplate(ProductTemplateEntity $productTemplate
     ): FeatureEntity {
         $this->productTemplates->removeElement($productTemplate);
+
         return $this;
     }
 
@@ -331,6 +349,7 @@ class Feature extends AbstractEntity implements
     public function setBackendName($backendName)
     {
         $this->backendName = $backendName;
+
         return $this;
     }
 }

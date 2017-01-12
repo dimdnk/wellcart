@@ -15,20 +15,23 @@ use Zend\View\Model\FeedModel as Model;
 class FeedModel extends Model implements
     EventManagerAwareInterface
 {
+
     use EventManagerAwareTrait;
 
-  /**
-   * @inheritDoc
-   */
-  public function __construct($variables = null, $options = null)
-  {
-    parent::__construct($variables, $options);
-    $this->getEventManager()
-      ->setIdentifiers([
-        __CLASS__,
-        get_class($this)
-      ]);
-  }
+    /**
+     * @inheritDoc
+     */
+    public function __construct($variables = null, $options = null)
+    {
+        parent::__construct($variables, $options);
+        $this->getEventManager()
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
+    }
 
 
 }

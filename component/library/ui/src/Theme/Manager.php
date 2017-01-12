@@ -14,6 +14,7 @@ use ZeTheme\Manager as AbstractManager;
 
 class Manager extends AbstractManager
 {
+
     /**
      * Get a theme configuration file
      *

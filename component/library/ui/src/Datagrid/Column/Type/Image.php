@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Type\Image as AbstractType;
 
 class Image extends AbstractType
 {
+
 }

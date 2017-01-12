@@ -84,6 +84,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): AclPermissionEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -103,6 +104,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
     public function setDescription($description): AclPermissionEntity
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -122,6 +124,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
     public function setIsSystem($isSystem)
     {
         $this->isSystem = (bool)$isSystem;
+
         return $this;
     }
 
@@ -141,6 +144,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
     public function setId($id): AclPermissionEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -160,6 +164,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): AclPermissionEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -187,6 +192,7 @@ class Permission extends AbstractEntity implements AclPermissionEntity
     public function setName($name): AclPermissionEntity
     {
         $this->name = $name;
+
         return $this;
     }
 }

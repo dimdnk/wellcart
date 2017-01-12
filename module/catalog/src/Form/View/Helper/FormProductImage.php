@@ -38,6 +38,7 @@ class FormProductImage extends FormFile
             );
         }
         $html = parent::render($element);
+
         return $panel . $html;
     }
 }

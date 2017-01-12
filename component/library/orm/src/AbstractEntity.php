@@ -15,6 +15,7 @@ abstract class AbstractEntity
     implements
     Entity, IteratorAggregate
 {
+
     use EntityTrait;
 
     /**

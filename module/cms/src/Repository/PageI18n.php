@@ -29,6 +29,7 @@ class PageI18n extends AbstractRepository implements PageI18nRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -46,6 +47,7 @@ class PageI18n extends AbstractRepository implements PageI18nRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -133,6 +135,7 @@ class PageI18n extends AbstractRepository implements PageI18nRepository
                 'Records successfully removed from database.'
             );
         }
+
         return $result;
     }
 
@@ -145,6 +148,7 @@ class PageI18n extends AbstractRepository implements PageI18nRepository
             __FUNCTION__ . '.pre',
             $this
         );
+
         return $this->getEntityManager()
             ->getRepository(PageEntity::class)
             ->findAllIds();

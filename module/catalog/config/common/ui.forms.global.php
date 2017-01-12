@@ -5,15 +5,18 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+use WellCart\Catalog\Form;
+
 return [
     'ui' => [
         'form' =>
             [
-                'catalog_attribute' => [
+                Form\Attribute::NAME => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -22,20 +25,20 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
                             'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                         ],
                     ],
-                    'attribute' => [
-                        'backend_name' => [
+                    'attribute'              => [
+                        'backend_name'      => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -43,17 +46,17 @@ return [
                         ],
                         'product_templates' => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
                             ],
                         ],
-                        'sort_order' => [
+                        'sort_order'        => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -62,7 +65,7 @@ return [
 
                         'add_new_attribute_value' => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
+                                'twb-layout'  => 'horizontal',
                                 'column-size' => 'md-8 col-md-offset-4',
                                 'fontAwesome' => ['icon' => 'plus-circle'],
                             ],
@@ -71,58 +74,58 @@ return [
                         'translations' => [
                             'name' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
                         ],
-                        'values' => [
+                        'values'       => [
 
                             'sort_order' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
-                            'remove' => [
+                            'remove'     => [
                                 'options' => [
-                                    'twb-layout' => 'inline',
-                                    'column-size' => 'md-2',
-                                    'fontAwesome' => [
-                                        'icon' => 'remove'
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-2',
+                                    'fontAwesome'      => [
+                                        'icon' => 'remove',
                                     ],
                                     'label_attributes' => [
                                         'class' => 'inline-label',
                                     ],
-                                ]
+                                ],
                             ],
 
                             'translations' => [
                                 'name' => [
                                     'options' => [
-                                        'twb-layout' => 'horizontal',
-                                        'column-size' => 'md-8',
+                                        'twb-layout'       => 'horizontal',
+                                        'column-size'      => 'md-8',
                                         'label_attributes' => [
                                             'class' => 'col-md-4',
                                         ],
                                     ],
                                 ],
                             ],
-                        ]
+                        ],
                     ],
                 ],
 
-                'catalog_brand' => [
+                Form\Brand::NAME    => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -131,9 +134,9 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
@@ -143,8 +146,8 @@ return [
 
                     'name' => [
                         'options' => [
-                            'twb-layout' => 'horizontal',
-                            'column-size' => 'md-8',
+                            'twb-layout'       => 'horizontal',
+                            'column-size'      => 'md-8',
                             'label_attributes' => [
                                 'class' => 'col-md-4',
                             ],
@@ -153,8 +156,8 @@ return [
 
                     'image' => [
                         'options' => [
-                            'twb-layout' => 'horizontal',
-                            'column-size' => 'md-8',
+                            'twb-layout'       => 'horizontal',
+                            'column-size'      => 'md-8',
                             'label_attributes' => [
                                 'class' => 'col-md-4',
                             ],
@@ -163,8 +166,8 @@ return [
 
                     'meta_title' => [
                         'options' => [
-                            'twb-layout' => 'horizontal',
-                            'column-size' => 'md-8',
+                            'twb-layout'       => 'horizontal',
+                            'column-size'      => 'md-8',
                             'label_attributes' => [
                                 'class' => 'col-md-4',
                             ],
@@ -173,8 +176,8 @@ return [
 
                     'meta_keywords' => [
                         'options' => [
-                            'twb-layout' => 'horizontal',
-                            'column-size' => 'md-8',
+                            'twb-layout'       => 'horizontal',
+                            'column-size'      => 'md-8',
                             'label_attributes' => [
                                 'class' => 'col-md-4',
                             ],
@@ -183,8 +186,8 @@ return [
 
                     'meta_description' => [
                         'options' => [
-                            'twb-layout' => 'horizontal',
-                            'column-size' => 'md-8',
+                            'twb-layout'       => 'horizontal',
+                            'column-size'      => 'md-8',
                             'label_attributes' => [
                                 'class' => 'col-md-4',
                             ],
@@ -193,9 +196,9 @@ return [
 
                     'remove_image' => [
                         [
-                            'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-12',
+                            'options'    => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-12',
                                 'label_attributes' => [
                                     'class' => 'col-md-8 col-md-offset-4',
                                 ],
@@ -203,14 +206,14 @@ return [
                             'attributes' => [
                                 'class' => 'icheck-element',
                             ],
-                        ]
+                        ],
                     ],
                 ],
-                'catalog_category' => [
+                Form\Category::NAME => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -219,20 +222,20 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
                             'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                         ],
                     ],
-                    'category' => [
-                        'parent' => [
-                            'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                    'category'               => [
+                        'parent'       => [
+                            'options'    => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -241,10 +244,10 @@ return [
                                 'class' => 'chosen-element',
                             ],
                         ],
-                        'is_visible' => [
-                            'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                        'is_visible'   => [
+                            'options'    => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -253,10 +256,10 @@ return [
                                 'class' => 'chosen-element',
                             ],
                         ],
-                        'url_key' => [
+                        'url_key'      => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -264,10 +267,10 @@ return [
 
                         ],
                         'translations' => [
-                            'name' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                            'name'             => [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
@@ -276,28 +279,28 @@ return [
                                     'class' => 'form-control catalog_category_name',
                                 ],
                             ],
-                            'description' => [
+                            'description'      => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
-                            'meta_title' => [
+                            'meta_title'       => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
-                            'meta_keywords' => [
+                            'meta_keywords'    => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
@@ -305,22 +308,22 @@ return [
                             ],
                             'meta_description' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
-                            ]
+                            ],
                         ],
-                    ]
+                    ],
                 ],
 
-                'catalog_feature' => [
+                Form\Feature::NAME => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -329,20 +332,20 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
                             'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
                         ],
                     ],
-                    'feature' => [
-                        'backend_name' => [
+                    'feature'                => [
+                        'backend_name'      => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -350,17 +353,17 @@ return [
                         ],
                         'product_templates' => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
                             ],
                         ],
-                        'sort_order' => [
+                        'sort_order'        => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -369,7 +372,7 @@ return [
 
                         'add_new_feature_value' => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
+                                'twb-layout'  => 'horizontal',
                                 'column-size' => 'md-8 col-md-offset-4',
                                 'fontAwesome' => ['icon' => 'plus-circle'],
                             ],
@@ -379,42 +382,42 @@ return [
                         'translations' => [
                             'name' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
                         ],
-                        'values' => [
+                        'values'       => [
                             'sort_order' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
-                            'remove' => [
+                            'remove'     => [
                                 'options' => [
-                                    'twb-layout' => 'inline',
-                                    'column-size' => 'md-2',
-                                    'fontAwesome' => [
-                                        'icon' => 'remove'
+                                    'twb-layout'       => 'inline',
+                                    'column-size'      => 'md-2',
+                                    'fontAwesome'      => [
+                                        'icon' => 'remove',
                                     ],
                                     'label_attributes' => [
                                         'class' => 'inline-label',
                                     ],
-                                ]
+                                ],
                             ],
 
                             'translations' => [
                                 'name' => [
                                     'options' => [
-                                        'twb-layout' => 'horizontal',
-                                        'column-size' => 'md-8',
+                                        'twb-layout'       => 'horizontal',
+                                        'column-size'      => 'md-8',
                                         'label_attributes' => [
                                             'class' => 'col-md-4',
                                         ],
@@ -422,15 +425,15 @@ return [
                                 ],
 
                             ],
-                        ]
+                        ],
                     ],
                 ],
 
-                'catalog_product' => [
+                Form\Product::NAME => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -439,9 +442,9 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
@@ -459,49 +462,49 @@ return [
                                 ],
                             ],
                             'attributes' => [
-                                'class'        => 'chosen-element',
+                                'class' => 'chosen-element',
                             ],
                         ],
-                        'status' => [
-                            'options' => [
-                                'twb-layout' => 'horizontal',
+                        'status'           => [
+                            'options'    => [
+                                'twb-layout'  => 'horizontal',
                                 'column-size' => 'md-8 col-md-offset-4',
                             ],
                             'attributes' => [
                                 'class' => 'switchery-element',
                             ],
                         ],
-                        'url_key' =>
+                        'url_key'          =>
                             [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
-                        'add_feature' =>
+                        'add_feature'      =>
                             [
-                                'options' => [
-                                    'icon' => 'fa fa-plus',
-                                    'class' => 'btn btn-primary btn-sm',
-                                    'twb-layout' => 'horizontal',
+                                'options'    => [
+                                    'icon'        => 'fa fa-plus',
+                                    'class'       => 'btn btn-primary btn-sm',
+                                    'twb-layout'  => 'horizontal',
                                     'column-size' => 'md-12',
                                 ],
                                 'attributes' => [
                                     'id' => 'catalog_add_feature',
                                 ],
                             ],
-                        'features' =>  [
-                            'options'    => [
-                                'twb-layout'                => 'horizontal',
-                                'column-size'               => 'md-8',
+                        'features'         => [
+                            'options' => [
+                                'twb-layout'  => 'horizontal',
+                                'column-size' => 'md-8',
                             ],
                         ],
 
-                            'categories' => [],
-                            'brand' =>   [
+                        'categories'      => [],
+                        'brand'           => [
                             'options'    => [
                                 'twb-layout'       => 'horizontal',
                                 'column-size'      => 'md-8',
@@ -510,12 +513,12 @@ return [
                                 ],
                             ],
                             'attributes' => [
-                                'class'        => 'chosen-element',
+                                'class' => 'chosen-element',
                             ],
-                            ],
+                        ],
                         'add_new_variant' => [
-                            'options' => [
-                                'twb-layout' => 'horizontal',
+                            'options'    => [
+                                'twb-layout'  => 'horizontal',
                                 'column-size' => 'md-8 col-md-offset-4',
                                 'fontAwesome' => ['icon' => 'plus-circle'],
                             ],
@@ -523,13 +526,13 @@ return [
                                 'class' => 'btn btn-default btn-create-new-row',
                             ],
                         ],
-                            'variants' => [
-                            'remove' =>  [
+                        'variants'        => [
+                            'remove'   => [
                                 'options'    => [
                                     'twb-layout'       => 'inline',
                                     'column-size'      => 'md-2',
                                     'fontAwesome'      => [
-                                        'icon' => 'remove'
+                                        'icon' => 'remove',
                                     ],
                                     'label_attributes' => [
                                         'class' => 'inline-label',
@@ -539,8 +542,8 @@ return [
                                     'class' => 'btn-remove-row btn btn-danger btn-xs',
                                 ],
                             ],
-                            'quantity' =>  [
-                                'options'    => [
+                            'quantity' => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -548,8 +551,8 @@ return [
                                     ],
                                 ],
                             ],
-                            'price' =>  [
-                                'options'    => [
+                            'price'    => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -557,8 +560,8 @@ return [
                                     ],
                                 ],
                             ],
-                            'sku' =>  [
-                                'options'    => [
+                            'sku'      => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -566,10 +569,10 @@ return [
                                     ],
                                 ],
                             ],
-                            ],
-                            'translations' => [
-                            'name' =>  [
-                                'options'    => [
+                        ],
+                        'translations'    => [
+                            'name'             => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -577,7 +580,7 @@ return [
                                     ],
                                 ],
                             ],
-                            'description' =>  [
+                            'description'      => [
                                 'options'    => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
@@ -589,8 +592,8 @@ return [
                                     'class' => 'wysiwyg-tinymce',
                                 ],
                             ],
-                            'meta_title' => [
-                                'options'    => [
+                            'meta_title'       => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -598,8 +601,8 @@ return [
                                     ],
                                 ],
                             ],
-                            'meta_keywords' =>  [
-                                'options'    => [
+                            'meta_keywords'    => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -607,8 +610,8 @@ return [
                                     ],
                                 ],
                             ],
-                            'meta_description' =>  [
-                                'options'    => [
+                            'meta_description' => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -616,24 +619,24 @@ return [
                                     ],
                                 ],
                             ],
-                            ],
-                        'add_new_image' => [
+                        ],
+                        'add_new_image'   => [
                             'options'    => [
                                 'twb-layout'  => 'horizontal',
                                 'column-size' => 'md-8 col-md-offset-4',
                                 'fontAwesome' => ['icon' => 'plus-circle'],
                             ],
                             'attributes' => [
-                                'class'            => 'btn btn-default btn-create-new-row',
+                                'class' => 'btn btn-default btn-create-new-row',
                             ],
                         ],
-                            'images' => [
-                            'remove' =>  [
+                        'images'          => [
+                            'remove'      => [
                                 'options'    => [
                                     'twb-layout'       => 'inline',
                                     'column-size'      => 'md-2',
                                     'fontAwesome'      => [
-                                        'icon' => 'remove'
+                                        'icon' => 'remove',
                                     ],
                                     'label_attributes' => [
                                         'class' => 'inline-label',
@@ -643,17 +646,8 @@ return [
                                     'class' => 'btn-remove-row btn btn-danger btn-xs',
                                 ],
                             ],
-                            'description' =>  [
-                                'options'    => [
-                                    'twb-layout'       => 'horizontal',
-                                    'column-size'      => 'md-8',
-                                    'label_attributes' => [
-                                        'class' => 'col-md-4',
-                                    ],
-                                ],
-                            ] ,
-                            'image' => [
-                                'options'    => [
+                            'description' => [
+                                'options' => [
                                     'twb-layout'       => 'horizontal',
                                     'column-size'      => 'md-8',
                                     'label_attributes' => [
@@ -661,15 +655,24 @@ return [
                                     ],
                                 ],
                             ],
+                            'image'       => [
+                                'options' => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
+                                    'label_attributes' => [
+                                        'class' => 'col-md-4',
+                                    ],
+                                ],
                             ],
+                        ],
                     ],
                 ],
 
-                'catalog_product_template' => [
+                Form\ProductTemplate::NAME => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -678,9 +681,9 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
@@ -689,28 +692,28 @@ return [
                     ],
 
                     'product_template' => [
-                        'sort_order' => [
+                        'sort_order'   => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
                             ],
                         ],
-                        'attributes' => [
+                        'attributes'   => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
                             ],
                         ],
-                        'features' => [
+                        'features'     => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -719,17 +722,17 @@ return [
                         'translations' => [
                             'name' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
-                            ]
+                            ],
                         ],
-                    ]
+                    ],
                 ],
 
-            ]
-    ]
+            ],
+    ],
 ];

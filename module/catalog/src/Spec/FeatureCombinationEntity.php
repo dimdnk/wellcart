@@ -12,6 +12,7 @@ namespace WellCart\Catalog\Spec;
 
 interface FeatureCombinationEntity
 {
+
     /**
      * Object constructor
      *

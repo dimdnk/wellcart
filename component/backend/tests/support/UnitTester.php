@@ -20,6 +20,7 @@ namespace WellCart\Backend\Test;
  */
 class UnitTester extends \Codeception\Actor
 {
+
     use Traits\UnitTesterActions;
 
     /**

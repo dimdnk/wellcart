@@ -65,6 +65,7 @@ class UrlRewritesController extends AbstractActionController implements
         EntityForm $form
     ) {
         $entity = $this->repository->createEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 

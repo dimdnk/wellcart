@@ -310,7 +310,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Product to Category mapping',
                 'id'          => false,
-                'primary_key' => ['product_id', 'category_id']
+                'primary_key' => ['product_id', 'category_id'],
             ]
         )
             ->addColumn(
@@ -738,7 +738,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Feature to Template mapping',
                 'id'          => false,
-                'primary_key' => ['feature_id', 'product_template_id']
+                'primary_key' => ['feature_id', 'product_template_id'],
             ]
         )
             ->addColumn(
@@ -770,7 +770,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Attribute to Template mapping',
                 'id'          => false,
-                'primary_key' => ['attribute_id', 'product_template_id']
+                'primary_key' => ['attribute_id', 'product_template_id'],
             ]
         )
             ->addColumn(
@@ -854,7 +854,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Attribute Combinations',
                 'id'          => 'combination_id',
-                'primary_key' => ['combination_id']
+                'primary_key' => ['combination_id'],
             ]
         )
             ->addColumn(
@@ -897,7 +897,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Product Feature Combination',
                 'id'          => 'combination_id',
-                'primary_key' => ['combination_id']
+                'primary_key' => ['combination_id'],
             ]
         )
             ->addColumn(

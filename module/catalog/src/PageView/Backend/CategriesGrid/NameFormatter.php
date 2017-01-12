@@ -35,6 +35,7 @@ class NameFormatter extends AbstractFormatter
         if ($lvl < 0) {
             $lvl = 0;
         }
+
         return sprintf(
             '%s %s',
             str_repeat('-', $lvl),

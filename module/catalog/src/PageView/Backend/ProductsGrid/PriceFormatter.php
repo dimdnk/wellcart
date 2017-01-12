@@ -30,6 +30,7 @@ class PriceFormatter extends AbstractFormatter
     public function getFormattedValue(AbstractColumn $column)
     {
         $row = $this->getRowData();
+
         return format_price(
             $row['product']->getVariants()->current()->getPrice()
         );

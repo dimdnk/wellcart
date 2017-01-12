@@ -28,6 +28,7 @@ class ProductVariants extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class ProductVariants extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

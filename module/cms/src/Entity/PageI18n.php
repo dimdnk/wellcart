@@ -107,6 +107,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setMetaTitle($metaTitle): PageI18nEntity
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -126,6 +127,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setPage(PageEntity $page = null
     ): PageI18nEntity {
         $this->page = $page;
+
         return $this;
     }
 
@@ -145,6 +147,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setLanguage(LocaleLanguageEntity $language = null
     ): PageI18nEntity {
         $this->language = $language;
+
         return $this;
     }
 
@@ -164,6 +167,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): PageI18nEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setId($id): PageI18nEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -202,6 +207,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): PageI18nEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -221,6 +227,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setBody($body): PageI18nEntity
     {
         $this->body = $body;
+
         return $this;
     }
 
@@ -240,6 +247,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setMetaDescription($metaDescription
     ): PageI18nEntity {
         $this->metaDescription = $metaDescription;
+
         return $this;
     }
 
@@ -259,6 +267,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setMetaKeywords($metaKeywords
     ): PageI18nEntity {
         $this->metaKeywords = $metaKeywords;
+
         return $this;
     }
 
@@ -278,6 +287,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setTitle($title): PageI18nEntity
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -297,6 +307,7 @@ class PageI18n extends AbstractEntity implements PageI18nEntity
     public function setPageId($pageId): PageI18nEntity
     {
         $this->pageId = $pageId;
+
         return $this;
     }
 }

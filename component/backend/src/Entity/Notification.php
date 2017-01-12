@@ -17,14 +17,17 @@ use WellCart\Utility\Time;
 
 class Notification extends AbstractEntity implements NotificationEntity
 {
+
     /**
      * @var int
      */
     protected $id;
+
     /**
      * @var string
      */
     protected $icon;
+
     /**
      * @var string
      */
@@ -91,6 +94,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setId($id): NotificationEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -110,6 +114,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setIcon($icon): NotificationEntity
     {
         $this->icon = $icon;
+
         return $this;
     }
 
@@ -129,6 +134,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setTitle($title): NotificationEntity
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -148,6 +154,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setBody($body): NotificationEntity
     {
         $this->body = $body;
+
         return $this;
     }
 
@@ -167,6 +174,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setIsRead($isRead): NotificationEntity
     {
         $this->isRead = (bool)$isRead;
+
         return $this;
     }
 
@@ -186,6 +194,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setIsDeleted($isDeleted): NotificationEntity
     {
         $this->isDeleted = (bool)$isDeleted;
+
         return $this;
     }
 
@@ -205,6 +214,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setCreatedAt($createdAt): NotificationEntity
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -224,6 +234,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setUpdatedAt(DateTimeInterface $updatedAt = null
     ): NotificationEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -243,6 +254,7 @@ class Notification extends AbstractEntity implements NotificationEntity
     public function setDeletedAt(DateTimeInterface $deletedAt = null
     ): NotificationEntity {
         $this->deletedAt = $deletedAt;
+
         return $this;
     }
 }

@@ -47,6 +47,7 @@ class ProductImage extends File
     public function setObject(ProductImageEntity $object)
     {
         $this->object = $object;
+
         return $this;
     }
 }

@@ -13,6 +13,7 @@ use Zend\View\Helper\AbstractHelper;
 
 class Date extends AbstractHelper
 {
+
     /**
      * @var string
      */
@@ -42,6 +43,7 @@ class Date extends AbstractHelper
 
         $dt = new Formatter($date, 'UTC');
         $dt->setTimezone($tz);
+
         return $dt->format($format);
     }
 
@@ -61,6 +63,7 @@ class Date extends AbstractHelper
     public function setTimezone(string $timezone)
     {
         $this->timezone = $timezone;
+
         return $this;
     }
 

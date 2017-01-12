@@ -18,6 +18,7 @@ use WellCart\RestApi\Repository\OAuth2\PublicKeys;
 
 class PublicKeyForm extends Standard
 {
+
     public function __construct(
         PublicKeys $repository,
         $variables = null,

@@ -12,6 +12,7 @@ use WellCart\Utility\Arr;
 
 trait AddAttributesToRequiredFieldsTrait
 {
+
     /**
      * Add attributes to required fields
      *

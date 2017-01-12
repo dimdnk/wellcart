@@ -27,6 +27,7 @@ class BindRequiredFieldsToEntity
         /* @var $user \WellCart\User\Spec\UserEntity */
         $user->setFirstName($filter->get('first_name')->getValue());
         $user->setLastName($filter->get('last_name')->getValue());
+
         return true;
     }
 }

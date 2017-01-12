@@ -14,6 +14,7 @@ use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
 
 class LocalePluginFactory
 {
+
     /**
      * @param ContainerInterface $sm
      *
@@ -29,7 +30,8 @@ class LocalePluginFactory
                 'locale\active_languages_collection'
             );
             $defaultLanguage = $languages->current();
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $languages
                 = new \Doctrine\Common\Collections\ArrayCollection();
             $defaultLanguage = new DefaultLanguage();

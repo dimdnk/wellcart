@@ -29,6 +29,7 @@ class AttributeI18n extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -46,6 +47,7 @@ class AttributeI18n extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -95,6 +97,7 @@ class AttributeI18n extends AbstractRepository
             __FUNCTION__ . '.pre',
             $this
         );
+
         return $this->getEntityManager()
             ->getRepository('WellCart\Catalog\Spec\AttributeEntity')
             ->findAllIds();

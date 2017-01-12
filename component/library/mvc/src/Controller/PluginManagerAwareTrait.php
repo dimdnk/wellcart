@@ -13,6 +13,7 @@ use Zend\Mvc\Controller\PluginManager;
 
 trait PluginManagerAwareTrait
 {
+
     /**
      * @var PluginManager
      */
@@ -44,6 +45,7 @@ trait PluginManagerAwareTrait
     public function setControllerPlugins(PluginManager $plugins)
     {
         $this->controllerPlugins = $plugins;
+
         return $this;
     }
 }

@@ -14,6 +14,7 @@ use WellCart\Router\Http\SystemUrlRewrites;
 
 class SystemUrlRewritesFactory
 {
+
     /**
      * Create service
      *
@@ -28,6 +29,7 @@ class SystemUrlRewritesFactory
             $rewrites = $container->getServiceLocator()
                 ->get('WellCart\Base\Spec\UrlRewriteRepository');
         }
+
         return new SystemUrlRewrites($rewrites);
     }
 }

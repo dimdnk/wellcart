@@ -53,7 +53,7 @@ class ProductTemplateI18nFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Name')
+                    'label' => __('Name'),
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_product_template_name',
@@ -73,6 +73,7 @@ class ProductTemplateI18nFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\ProductTemplateI18nEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

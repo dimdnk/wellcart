@@ -15,6 +15,7 @@ use WellCart\Backend\Spec\NotificationEntity;
 
 class NotificationEntityListener
 {
+
     public function preRemove(
         NotificationEntity $notification,
         LifecycleEventArgs $event

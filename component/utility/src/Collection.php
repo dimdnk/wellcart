@@ -22,6 +22,7 @@ use OutOfBoundsException;
 class Collection
     implements ArrayAccess, Countable, IteratorAggregate
 {
+
     /**
      * Collection items.
      *
@@ -256,6 +257,7 @@ class Collection
     public function first()
     {
         $this->rewind();
+
         return $this->current();
     }
 
@@ -272,6 +274,7 @@ class Collection
     public function last()
     {
         $this->position = count($this->items) - 1;
+
         return end($this->items);
     }
 

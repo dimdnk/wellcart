@@ -14,10 +14,12 @@ use Zend\View\Helper\AbstractHelper;
 
 class Notification extends AbstractHelper
 {
+
     /**
      * @var array
      */
     protected $recentMessages;
+
     /**
      * @var int
      */

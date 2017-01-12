@@ -61,6 +61,7 @@ class CategoriesGrid extends Standard
     public function setDisplayLanguage(LocaleLanguageEntity $language)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -75,6 +76,7 @@ class CategoriesGrid extends Standard
         $qb->excludeRoot()
             ->sortByCategory()
             ->filterByLanguage($this->language);
+
         return $this;
     }
 
@@ -141,7 +143,7 @@ class CategoriesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -160,7 +162,7 @@ class CategoriesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

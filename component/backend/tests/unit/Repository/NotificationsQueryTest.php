@@ -15,6 +15,7 @@ use WellCart\Backend\Entity\Notification;
 
 class NotificationsQueryTest extends TestCase
 {
+
     /**
      * @var NotificationsQuery
      */

@@ -61,6 +61,7 @@ class AttributesGrid extends Standard
     public function setDisplayLanguage(LocaleLanguageEntity $language)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -74,6 +75,7 @@ class AttributesGrid extends Standard
         parent::configureQueryBuilder($qb);
         $qb
             ->filterByLanguage($this->language);
+
         return $this;
     }
 
@@ -138,7 +140,7 @@ class AttributesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -157,7 +159,7 @@ class AttributesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

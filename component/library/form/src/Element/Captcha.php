@@ -12,5 +12,6 @@ use Zend\Form\Element\Captcha as Element;
 
 class Captcha extends Element
 {
+
     use SetValueObjectTrait;
 }

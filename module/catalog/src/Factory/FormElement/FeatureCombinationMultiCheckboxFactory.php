@@ -14,6 +14,7 @@ use WellCart\Catalog\Spec\FeatureRepository;
 
 class FeatureCombinationMultiCheckboxFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
@@ -21,6 +22,7 @@ class FeatureCombinationMultiCheckboxFactory
             FeatureRepository::class
         )
             ->toGroupedOptionsList();
+
         return new \WellCart\Catalog\Form\Element\FeatureCombinationMultiCheckbox(
             null,
             [

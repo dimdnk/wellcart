@@ -69,7 +69,7 @@ return ['doctrine' => [
                 ),
                 'charset'        => 'utf8',
                 'driver_options' => [
-                    1002 => "SET NAMES UTF8 COLLATE utf8_general_ci"
+                    1002 => "SET NAMES UTF8 COLLATE utf8_general_ci",
                 ],
                 'driver'         => Arr::get(
                     $masterDbConfig,
@@ -96,7 +96,7 @@ return ['doctrine' => [
                     ),
                     'charset'        => 'utf8',
                     'driver_options' => [
-                        1002 => "SET NAMES UTF8 COLLATE utf8_general_ci"
+                        1002 => "SET NAMES UTF8 COLLATE utf8_general_ci",
                     ],
                 ],
                 'slaves'         => [
@@ -127,7 +127,7 @@ return ['doctrine' => [
                         ),
                         'charset'        => 'utf8',
                         'driver_options' => [
-                            1002 => "SET NAMES UTF8 COLLATE utf8_general_ci"
+                            1002 => "SET NAMES UTF8 COLLATE utf8_general_ci",
                         ],
                     ],
                 ],
@@ -146,8 +146,8 @@ return ['doctrine' => [
         'orm_default'          => [
             'drivers' => [
                 'WellCart\Base\Entity' => 'wellcart_base_driver',
-            ]
-        ]
+            ],
+        ],
     ],
     'cache'                => [
         'apc'        => [
@@ -274,7 +274,7 @@ return ['doctrine' => [
                 'object'           => 'Oro\DBAL\Types\ObjectType',
                 'percent'          => 'Oro\DBAL\Types\PercentType',
             ],
-        ]
+        ],
     ],
     'eventmanager'         => [
         'orm_default' => [
@@ -302,5 +302,5 @@ return ['doctrine' => [
             ],
         ],
     ],
-]
+],
 ];

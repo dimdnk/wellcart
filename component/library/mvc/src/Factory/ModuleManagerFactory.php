@@ -15,6 +15,7 @@ use Zend\Mvc\Service\ModuleManagerFactory as AbstractFactory;
 
 class ModuleManagerFactory extends AbstractFactory
 {
+
     /**
      * Packages installed by Composer
      *
@@ -50,6 +51,7 @@ class ModuleManagerFactory extends AbstractFactory
         $configuration['modules'] = $modules;
         $container->setService('ApplicationConfig', $configuration);
         $container->setAllowOverride(false);
+
         return parent::__invoke(
             $container,
             $name,
@@ -108,6 +110,7 @@ class ModuleManagerFactory extends AbstractFactory
         }
 
         ksort($modules);
+
         return $modules;
     }
 
@@ -161,6 +164,7 @@ class ModuleManagerFactory extends AbstractFactory
                 }
             }
         }
+
         return $contextInfo;
     }
 

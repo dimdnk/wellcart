@@ -5,6 +5,7 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
 namespace WellCart\ORM\Repository;
 
 use Doctrine\ORM\EntityManagerInterface;
@@ -12,12 +13,13 @@ use Doctrine\ORM\EntityManagerInterface;
 class RepositoryFactory implements
     \Doctrine\ORM\Repository\RepositoryFactory
 {
+
     /**
      * The list of EntityRepository instances.
      *
      * @var \Doctrine\Common\Persistence\ObjectRepository[]
      */
-    private $repositoryList = array();
+    private $repositoryList = [];
 
     /**
      * {@inheritdoc}

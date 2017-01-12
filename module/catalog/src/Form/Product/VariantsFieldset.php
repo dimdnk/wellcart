@@ -43,7 +43,7 @@ class VariantsFieldset extends Fieldset
                 'name'       => 'remove',
                 'type'       => 'button',
                 'options'    => [
-                    'label'            => ' ',
+                    'label' => ' ',
 
                 ],
                 'attributes' => [
@@ -57,10 +57,10 @@ class VariantsFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'quantity',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Quantity')
+                'name'    => 'quantity',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Quantity'),
                 ],
             ],
             ['priority' => 1300]
@@ -71,10 +71,10 @@ class VariantsFieldset extends Fieldset
                 'name'       => 'price',
                 'type'       => 'catalogProductPrice',
                 'options'    => [
-                    'label'            => __('Price')
+                    'label' => __('Price'),
                 ],
                 'attributes' => [
-                    'required' => 'required'
+                    'required' => 'required',
                 ],
             ],
             ['priority' => 1250]
@@ -86,10 +86,10 @@ class VariantsFieldset extends Fieldset
                 'name'       => 'sku',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('SKU')
+                    'label' => __('SKU'),
                 ],
                 'attributes' => [
-                    'required' => 'required'
+                    'required' => 'required',
                 ],
             ],
             ['priority' => 1200]
@@ -108,6 +108,7 @@ class VariantsFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\ProductVariantEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

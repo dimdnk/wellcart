@@ -15,10 +15,12 @@ use WellCart\ORM\QueryBuilder;
 
 class ZonesQuery extends QueryBuilder
 {
+
     public function enabled()
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', ZoneEntity::STATUS_ENABLED);
+
         return $this;
     }
 
@@ -26,6 +28,7 @@ class ZonesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', ZoneEntity::STATUS_DISABLED);
+
         return $this;
     }
 }

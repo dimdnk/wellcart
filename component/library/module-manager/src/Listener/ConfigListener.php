@@ -19,7 +19,9 @@ use Zend\ModuleManager\ModuleEvent;
 
 class ConfigListener extends AbstractListenerAggregate
 {
+
     const BASE_CONFIG_CACHE_FILE = 'base-config';
+
     /**
      * @var bool
      */

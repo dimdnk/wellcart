@@ -16,6 +16,7 @@ use WellCart\User\Spec\UserRepository;
 
 class HandleFailedLoginCountFactory
 {
+
     public function __invoke(
         ContainerInterface $container
     ): HandleFailedLoginCount {

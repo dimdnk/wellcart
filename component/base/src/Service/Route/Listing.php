@@ -16,7 +16,9 @@ use Zend\Text\Table\Table;
 
 class Listing
 {
+
     protected $http = [];
+
     protected $console = [];
 
     /**
@@ -61,6 +63,7 @@ class Listing
 
             }
         }
+
         return $table;
     }
 
@@ -68,6 +71,7 @@ class Listing
     {
         $http = $this->format($this->http);
         $console = $this->format($this->console);
+
         return [
             'Http'    => $http,
             'Console' => $console,
@@ -96,6 +100,7 @@ class Listing
                 );
             }
         }
+
         return $result;
     }
 }

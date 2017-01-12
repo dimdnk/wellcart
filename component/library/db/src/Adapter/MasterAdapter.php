@@ -17,6 +17,7 @@ use ZfcBase\Db\Adapter\MasterSlaveAdapterInterface;
 class MasterAdapter extends ProfilingAdapter
     implements MasterSlaveAdapterInterface
 {
+
     /**
      * Slave adapter
      *

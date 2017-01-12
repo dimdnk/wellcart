@@ -13,11 +13,17 @@ use Zend\Stdlib\AbstractOptions;
 
 class Column extends AbstractOptions
 {
+
     protected $elementName;
+
     protected $label;
+
     protected $width;
+
     protected $align;
+
     protected $rowClass;
+
     protected $cellClass;
 
     /**
@@ -36,6 +42,7 @@ class Column extends AbstractOptions
     public function setElementName($elementName)
     {
         $this->elementName = $elementName;
+
         return $this;
     }
 
@@ -55,6 +62,7 @@ class Column extends AbstractOptions
     public function setLabel($label)
     {
         $this->label = $label;
+
         return $this;
     }
 
@@ -74,6 +82,7 @@ class Column extends AbstractOptions
     public function setWidth($width)
     {
         $this->width = $width;
+
         return $this;
     }
 
@@ -93,6 +102,7 @@ class Column extends AbstractOptions
     public function setAlign($align)
     {
         $this->align = $align;
+
         return $this;
     }
 
@@ -112,6 +122,7 @@ class Column extends AbstractOptions
     public function setRowClass($rowClass)
     {
         $this->rowClass = $rowClass;
+
         return $this;
     }
 
@@ -131,6 +142,7 @@ class Column extends AbstractOptions
     public function setCellClass($cellClass)
     {
         $this->cellClass = $cellClass;
+
         return $this;
     }
 

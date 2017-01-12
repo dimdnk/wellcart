@@ -91,6 +91,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setMetaTitle($metaTitle): CategoryI18nEntity
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -116,6 +117,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
 
         $this->category = $category;
         $this->setCategoryId($categoryId);
+
         return $this;
     }
 
@@ -141,6 +143,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
 
         $this->language = $language;
         $this->setLanguageId($languageId);
+
         return $this;
     }
 
@@ -160,6 +163,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setLanguageId($languageId)
     {
         $this->languageId = $languageId;
+
         return $this;
     }
 
@@ -179,6 +183,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setDescription($description
     ): CategoryI18nEntity {
         $this->description = $description;
+
         return $this;
     }
 
@@ -198,6 +203,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setMetaDescription($metaDescription
     ): CategoryI18nEntity {
         $this->metaDescription = $metaDescription;
+
         return $this;
     }
 
@@ -217,6 +223,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setMetaKeywords($metaKeywords
     ): CategoryI18nEntity {
         $this->metaKeywords = $metaKeywords;
+
         return $this;
     }
 
@@ -236,6 +243,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setId($id): CategoryI18nEntity
     {
         $this->categoryId = $id;
+
         return $this;
     }
 
@@ -255,6 +263,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setName($name): CategoryI18nEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -274,6 +283,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     public function setCategoryId($categoryId
     ): CategoryI18nEntity {
         $this->categoryId = $categoryId;
+
         return $this;
     }
 }

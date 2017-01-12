@@ -18,6 +18,7 @@ use Zend\Http\PhpEnvironment\Request;
 
 class SettingsController extends AbstractActionController
 {
+
     use ActionGrantedTrait;
 
     /**
@@ -78,7 +79,8 @@ class SettingsController extends AbstractActionController
 
                     return $this->redirect()->refresh();
                 }
-            } catch (\Throwable $e) {
+            }
+            catch (\Throwable $e) {
                 $this->getLogger()->emerg($e);
                 $this->flashMessenger()
                     ->addWarningMessage(

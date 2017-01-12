@@ -20,20 +20,24 @@ class AttributeCombination
     extends AbstractEntity
     implements AttributeCombinationEntity
 {
+
     /**
      * ID
      *
      * @var int
      */
     protected $id;
+
     /**
      * @var AttributeEntity
      */
     protected $attribute;
+
     /**
      * @var AttributeValueEntity
      */
     protected $attributeValue;
+
     /**
      * @var ProductVariantEntity
      */
@@ -73,6 +77,7 @@ class AttributeCombination
     public function setId($id): AttributeCombinationEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -92,6 +97,7 @@ class AttributeCombination
     public function setAttribute(AttributeEntity $attribute
     ): AttributeCombinationEntity {
         $this->attribute = $attribute;
+
         return $this;
     }
 
@@ -111,6 +117,7 @@ class AttributeCombination
     public function setAttributeValue(AttributeValueEntity $attributeValue
     ): AttributeCombinationEntity {
         $this->attributeValue = $attributeValue;
+
         return $this;
     }
 
@@ -130,6 +137,7 @@ class AttributeCombination
     public function setVariant(ProductVariantEntity $variant
     ): AttributeCombinationEntity {
         $this->variant = $variant;
+
         return $this;
     }
 }

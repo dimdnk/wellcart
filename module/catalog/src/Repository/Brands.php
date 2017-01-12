@@ -27,6 +27,7 @@ class Brands extends AbstractRepository implements BrandRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -44,6 +45,7 @@ class Brands extends AbstractRepository implements BrandRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -65,6 +67,7 @@ class Brands extends AbstractRepository implements BrandRepository
             $this,
             compact('featuresList')
         );
+
         return $optionList;
     }
 }

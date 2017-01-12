@@ -16,6 +16,7 @@ use Zend\InputFilter\InputProviderInterface;
 class RangeFilter extends Element
     implements InputProviderInterface, ElementPrepareAwareInterface
 {
+
     /**
      * Input form element that contains values for start
      *
@@ -78,13 +79,13 @@ class RangeFilter extends Element
      */
     public function getInputSpecification()
     {
-        return array(
+        return [
             'name'       => $this->getName(),
             'required'   => false,
-            'filters'    => array(
-                array(
+            'filters'    => [
+                [
                     'name'    => 'Callback',
-                    'options' => array(
+                    'options' => [
                         'callback' => function ($date) {
                             // Convert the date to a specific format
                             if (is_array($date)) {
@@ -92,12 +93,12 @@ class RangeFilter extends Element
                             }
 
                             return $date;
-                        }
-                    )
-                )
-            ),
-            'validators' => array()
-        );
+                        },
+                    ],
+                ],
+            ],
+            'validators' => [],
+        ];
     }
 
     /**
@@ -128,6 +129,7 @@ class RangeFilter extends Element
         if (isset($options['end_attributes'])) {
             $this->endElement->setAttributes($options['end_attributes']);
         }
+
         return $this;
     }
 

@@ -61,7 +61,7 @@ return ['zenddevelopertools' => [
          * Example: 'collectors' => array('db' => null)
          * Expects: array
          */
-        'collectors'  => []
+        'collectors'  => [],
     ],
     'events'   => [
         /**
@@ -89,7 +89,7 @@ return ['zenddevelopertools' => [
          * Example: 'identifiers' => array('all' => null, 'dispatchable' => 'Zend\Stdlib\DispatchableInterface')
          * Expects: array
          */
-        'identifiers' => []
+        'identifiers' => [],
     ],
     /**
      * General Toolbar settings
@@ -141,7 +141,7 @@ return ['zenddevelopertools' => [
          * ),
          * Expects: array
          */
-        'entries'       => []
+        'entries'       => [],
     ],
-]
+],
 ];

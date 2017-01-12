@@ -14,6 +14,7 @@ use WellCart\ORM\Entity;
 
 class PersistEntity
 {
+
     /**
      * @var Entity
      */

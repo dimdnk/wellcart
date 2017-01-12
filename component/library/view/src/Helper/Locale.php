@@ -12,6 +12,7 @@ use Zend\View\Helper\AbstractHelper;
 
 class Locale extends AbstractHelper
 {
+
     /**
      * @var \WellCart\Mvc\Controller\Plugin\Locale
      */

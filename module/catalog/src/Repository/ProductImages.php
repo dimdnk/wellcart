@@ -27,6 +27,7 @@ class ProductImages extends AbstractRepository implements ProductImageRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -44,6 +45,7 @@ class ProductImages extends AbstractRepository implements ProductImageRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

@@ -14,6 +14,7 @@ use Zend\Navigation\Service\DefaultNavigationFactory;
 
 class BackendMainMenuFactory extends DefaultNavigationFactory
 {
+
     /**
      * @{inheritdoc}
      */
@@ -41,6 +42,7 @@ class BackendMainMenuFactory extends DefaultNavigationFactory
                 }
             }
         }
+
         return parent::injectComponents(
             $pages,
             $routeMatch,

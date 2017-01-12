@@ -10,26 +10,32 @@ namespace WellCart\Ui\Datagrid;
 
 class ToolbarButton
 {
+
     /**
      * @var string
      */
     protected $label = '';
+
     /**
      * @var string
      */
     protected $name = '';
+
     /**
      * @var string
      */
     protected $class = '';
+
     /**
      * @var string
      */
     protected $icon = '';
+
     /**
      * @var string
      */
     protected $target = '';
+
     /**
      * @var string
      */
@@ -51,6 +57,7 @@ class ToolbarButton
     public function setName(string $name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -85,6 +92,7 @@ class ToolbarButton
     public function setLink(string $link)
     {
         $this->link = $link;
+
         return $this;
     }
 
@@ -104,6 +112,7 @@ class ToolbarButton
     public function setClass($class)
     {
         $this->class = $class;
+
         return $this;
     }
 
@@ -123,6 +132,7 @@ class ToolbarButton
     public function setTarget($target)
     {
         $this->target = $target;
+
         return $this;
     }
 
@@ -142,6 +152,7 @@ class ToolbarButton
     public function setIcon(string $icon)
     {
         $this->icon = $icon;
+
         return $this;
     }
 
@@ -161,6 +172,7 @@ class ToolbarButton
     public function setLabel($label)
     {
         $this->label = $label;
+
         return $this;
     }
 

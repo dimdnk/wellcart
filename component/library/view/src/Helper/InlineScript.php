@@ -10,4 +10,5 @@ namespace WellCart\View\Helper;
 
 class InlineScript extends \Zend\View\Helper\InlineScript
 {
+
 }

@@ -27,8 +27,8 @@ return [
             'orm_default'               => [
                 'drivers' => [
                     'WellCart\Directory\Entity' => 'wellcart_directory_driver',
-                ]
-            ]
+                ],
+            ],
         ],
         'entity_resolver' => [
             'orm_default' => [

@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class BrandForm extends Standard
 {
+
     public function __construct(
         BrandRepository $repository,
         $variables = null,

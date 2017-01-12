@@ -18,6 +18,7 @@ use Patchwork\Utf8\Bootup;
  */
 abstract class PHPEnvironment
 {
+
     /**
      * Initialize PHP environment
      *

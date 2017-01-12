@@ -29,6 +29,7 @@ class AttributeValueI18n extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -47,6 +48,7 @@ class AttributeValueI18n extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 

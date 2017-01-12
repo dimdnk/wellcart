@@ -14,6 +14,7 @@ use DateTimeInterface;
 
 interface NotificationEntity
 {
+
     /**
      * Object constructor
      *

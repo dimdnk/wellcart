@@ -17,6 +17,7 @@ use Zend\Mvc\MvcEvent;
 
 class SetLayoutViewModel extends AbstractListenerAggregate
 {
+
     /**
      * @var Root
      */

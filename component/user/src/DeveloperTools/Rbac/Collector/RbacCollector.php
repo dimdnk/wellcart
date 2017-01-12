@@ -24,9 +24,10 @@ class RbacCollector extends \ZfcRbac\Collector\RbacCollector
                 'guards'      => $this->collectedGuards,
                 'roles'       => $this->collectedRoles,
                 'permissions' => $this->collectedPermissions,
-                'options'     => $this->collectedOptions
+                'options'     => $this->collectedOptions,
             ];
         }
+
         return $collection;
     }
 }

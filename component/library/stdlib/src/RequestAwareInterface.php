@@ -12,6 +12,7 @@ use Zend\Stdlib\RequestInterface;
 
 interface RequestAwareInterface
 {
+
     /**
      * @param RequestInterface $request
      *

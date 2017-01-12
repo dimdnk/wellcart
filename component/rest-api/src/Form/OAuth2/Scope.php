@@ -19,6 +19,10 @@ use Zend\Form\FormInterface;
 
 class Scope extends AbstractForm
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'api_scope';
 
     /**
      * Form constructor
@@ -31,7 +35,7 @@ class Scope extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('api_scope');
+        parent::__construct(static::NAME);
         $this->setHydrator($hydrator);
         $this->setWrapElements(true);
 
@@ -59,7 +63,7 @@ class Scope extends AbstractForm
                 'name'       => 'scope',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Name'),
+                    'label' => __('Name'),
                 ],
                 'attributes' => [
                     'id' => 'api_scope_scope',
@@ -81,10 +85,10 @@ class Scope extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -108,6 +112,7 @@ class Scope extends AbstractForm
                 'Object must implement interface WellCart\RestApi\Entity\OAuth2\Scope'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -121,6 +126,7 @@ class Scope extends AbstractForm
                 'Object must implement interface WellCart\RestApi\Entity\OAuth2\Scope'
             );
         }
+
         return parent::setObject($object);
     }
 }

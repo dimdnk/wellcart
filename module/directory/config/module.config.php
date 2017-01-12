@@ -114,11 +114,11 @@ return [
                         'defaults' => [
                             'controller' => 'Directory::Console\UpdateCurrencyRates',
                             'action'     => 'handle',
-                        ]
-                    ]
+                        ],
+                    ],
                 ],
-            ]
-        ]
+            ],
+        ],
     ],
 
     'cronModule' => [
@@ -126,8 +126,8 @@ return [
             'directory:update-currency-rates'
             => [
                 'command'  => 'wellcart directory:update-currency-rates',
-                'schedule' => '*/30 * * * *'
+                'schedule' => '*/30 * * * *',
             ],
-        ]
+        ],
     ],
 ];

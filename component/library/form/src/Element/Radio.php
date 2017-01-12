@@ -12,5 +12,6 @@ use Zend\Form\Element\Radio as Element;
 
 class Radio extends Element
 {
+
     use SetValueObjectTrait;
 }

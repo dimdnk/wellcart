@@ -30,8 +30,10 @@ class AdminUser extends AbstractStep
         $form->setData($data);
         if ($form->isValid()) {
             $data = $form->getData();
+
             return $this->getSetup()->createAdminAccount($data);
         }
+
         return false;
     }
 }

@@ -29,6 +29,7 @@ class NormalizeViewManagerBasePath
                 break;
             }
         }
+
         return true;
     }
 }

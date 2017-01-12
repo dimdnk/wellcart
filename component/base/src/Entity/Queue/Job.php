@@ -99,6 +99,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setCreatedAt(\DateTimeInterface $createdAt = null
     ): JobQueueEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -116,6 +117,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setId($id): JobQueueEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -133,6 +135,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setQueue($queue): JobQueueEntity
     {
         $this->queue = $queue;
+
         return $this;
     }
 
@@ -150,6 +153,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setData($data): JobQueueEntity
     {
         $this->data = $data;
+
         return $this;
     }
 
@@ -167,6 +171,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setStatus($status): JobQueueEntity
     {
         $this->status = (int)$status;
+
         return $this;
     }
 
@@ -184,6 +189,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setMessage($message): JobQueueEntity
     {
         $this->message = $message;
+
         return $this;
     }
 
@@ -201,6 +207,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setTrace($trace): JobQueueEntity
     {
         $this->trace = $trace;
+
         return $this;
     }
 
@@ -218,6 +225,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setScheduledAt(\DateTimeInterface $scheduledAt = null
     ): JobQueueEntity {
         $this->scheduledAt = $scheduledAt;
+
         return $this;
     }
 
@@ -235,6 +243,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setExecutedAt(\DateTimeInterface $executedAt = null
     ): JobQueueEntity {
         $this->executedAt = $executedAt;
+
         return $this;
     }
 
@@ -252,6 +261,7 @@ class Job extends AbstractEntity implements JobQueueEntity
     public function setFinishedAt(\DateTimeInterface $finishedAt = null
     ): JobQueueEntity {
         $this->finishedAt = $finishedAt;
+
         return $this;
     }
 }

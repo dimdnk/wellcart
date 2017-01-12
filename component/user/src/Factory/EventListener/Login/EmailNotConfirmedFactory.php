@@ -16,6 +16,7 @@ use WellCart\User\Spec\UserRepository;
 
 class EmailNotConfirmedFactory
 {
+
     public function __invoke(ContainerInterface $container): EmailNotConfirmed
     {
         return new EmailNotConfirmed($container->get(UserRepository::class));

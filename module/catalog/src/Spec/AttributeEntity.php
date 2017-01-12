@@ -14,6 +14,7 @@ use Doctrine\Common\Collections\Collection;
 
 interface AttributeEntity
 {
+
     /**
      * Object constructor
      *

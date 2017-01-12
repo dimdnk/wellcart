@@ -17,12 +17,14 @@ use WellCart\ORM\Entity;
 
 class PersistEntityHandler implements ObjectManagerAwareInterface
 {
+
     use ProvidesObjectManager;
 
     public function handle(PersistEntity $command): Entity
     {
         $entity = $command->getEntity();
         $this->getObjectManager()->persist($entity);
+
         return $entity;
     }
 }

@@ -13,6 +13,7 @@ use Zend\Stdlib\PriorityList;
 
 class TabbedForm extends AbstractForm
 {
+
     /**
      * @var
      */
@@ -65,12 +66,14 @@ class TabbedForm extends AbstractForm
             ->setAttributes($attributes)
             ->setItems($formElements);
         $this->tabs->insert($id, $tab, $priority);
+
         return $this;
     }
 
     public function removeTab($id)
     {
         $this->tabs->remove($id);
+
         return $this;
     }
 
@@ -89,8 +92,8 @@ class TabbedForm extends AbstractForm
      */
     public function getNavTabsAttributes()
     {
-        return array(
+        return [
             'class' => 'nav nav-tabs',
-        );
+        ];
     }
 }

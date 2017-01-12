@@ -17,6 +17,7 @@ use WellCart\User\Spec\AclRoleRepository;
 
 class SetDefaultAccountSettingsFactory
 {
+
     public function __invoke(
         ContainerInterface $container
     ): SetDefaultAccountSettings {

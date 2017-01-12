@@ -12,6 +12,7 @@ use WellCart\Mvc\Exception\AccessDeniedException;
 
 trait ActionGrantedTrait
 {
+
     protected function isGrantedOrDeny($permission)
     {
         if (!$this->isGranted($permission)) {
@@ -23,6 +24,7 @@ trait ActionGrantedTrait
                 )
             );
         }
+
         return true;
     }
 }

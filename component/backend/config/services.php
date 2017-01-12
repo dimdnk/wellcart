@@ -23,6 +23,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_user_doctrine_hydrator')
                 );
+
                 return $form;
             },
         Repository\Administrators::class
@@ -91,6 +92,7 @@ return [
                     $services->get('zfcuser_change_password_form'),
                     $options['wellcart']['user_account_options']['password_reset']
                 );
+
                 return $service;
             },
     ],

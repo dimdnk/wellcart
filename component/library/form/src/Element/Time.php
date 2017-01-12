@@ -12,5 +12,6 @@ use Zend\Form\Element\Time as Element;
 
 class Time extends Element
 {
+
     use SetValueObjectTrait;
 }

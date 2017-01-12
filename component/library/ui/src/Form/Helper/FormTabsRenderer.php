@@ -18,6 +18,7 @@ use Zend\View\Helper\AbstractHtmlElement;
 
 class FormTabsRenderer extends AbstractHtmlElement
 {
+
     /**
      * Render form
      *
@@ -61,6 +62,7 @@ class FormTabsRenderer extends AbstractHtmlElement
         if ($wrap) {
             $html .= $this->view->form()->closeTag();
         }
+
         return $html;
     }
 
@@ -95,6 +97,7 @@ class FormTabsRenderer extends AbstractHtmlElement
                 "<a %s>%s</a>", $this->htmlAttribs($attr), $label
             );
         }
+
         return $menuLinks;
     }
 
@@ -185,6 +188,7 @@ class FormTabsRenderer extends AbstractHtmlElement
                 $html .= $this->view->formRow($element);
             }
         }
+
         return $html;
     }
 }

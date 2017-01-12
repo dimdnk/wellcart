@@ -24,6 +24,7 @@ class ProductTemplatesGrid extends Standard
 {
 
     protected $idFieldName = 'product_template_id';
+
     /**
      * @var LocaleLanguageEntity
      */
@@ -60,6 +61,7 @@ class ProductTemplatesGrid extends Standard
     public function setDisplayLanguage(LocaleLanguageEntity $language)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -73,6 +75,7 @@ class ProductTemplatesGrid extends Standard
         parent::configureQueryBuilder($qb);
         $qb
             ->filterByLanguage($this->language);
+
         return $this;
     }
 
@@ -138,7 +141,7 @@ class ProductTemplatesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -157,7 +160,7 @@ class ProductTemplatesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

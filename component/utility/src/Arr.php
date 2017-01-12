@@ -16,6 +16,7 @@ use Closure;
  */
 abstract class Arr
 {
+
     /**
      * Sets an array value using "dot notation".
      *
@@ -53,6 +54,7 @@ abstract class Arr
             }
             $array = $array[$segment];
         }
+
         return true;
     }
 
@@ -120,7 +122,7 @@ abstract class Arr
                 }
             } elseif ($key === '*') {
                 // Handle wildcards
-                $values = array();
+                $values = [];
                 foreach ($array as $arr) {
                     if ($value = static::get($arr, implode('.', $keys))) {
                         $values[] = $value;
@@ -138,6 +140,7 @@ abstract class Arr
                 break;
             }
         } while ($keys);
+
         // Unable to find the value requested
         return $default;
     }
@@ -189,6 +192,7 @@ abstract class Arr
             $array =& $array[$segment];
         }
         unset($array[array_shift($segments)]);
+
         return true;
     }
 
@@ -245,13 +249,14 @@ abstract class Arr
      */
     public static function build($array, Closure $callback)
     {
-        $results = array();
+        $results = [];
         foreach ($array as $key => $value) {
             list($innerKey, $innerValue) = call_user_func(
                 $callback, $key, $value
             );
             $results[$innerKey] = $innerValue;
         }
+
         return $results;
     }
 
@@ -264,7 +269,7 @@ abstract class Arr
      */
     public static function divide($array)
     {
-        return array(array_keys($array), array_values($array));
+        return [array_keys($array), array_values($array)];
     }
 
     /**
@@ -292,13 +297,14 @@ abstract class Arr
     {
         $results = [];
         foreach (explode('.', $key) as $segment) {
-            $results = array();
+            $results = [];
             foreach ($array as $value) {
                 $value = (array)$value;
                 $results[] = $value[$segment];
             }
             $array = array_values($results);
         }
+
         return array_values($results);
     }
 
@@ -345,6 +351,7 @@ abstract class Arr
                 return $value;
             }
         }
+
         return $default instanceof Closure ? $default() : $default;
     }
 
@@ -357,12 +364,13 @@ abstract class Arr
      */
     public static function flatten($array)
     {
-        $return = array();
+        $return = [];
         array_walk_recursive(
             $array, function ($x) use (&$return) {
             $return[] = $x;
         }
         );
+
         return $return;
     }
 
@@ -376,12 +384,13 @@ abstract class Arr
      */
     public static function where($array, Closure $callback)
     {
-        $filtered = array();
+        $filtered = [];
         foreach ($array as $key => $value) {
             if (call_user_func($callback, $key, $value)) {
                 $filtered[$key] = $value;
             }
         }
+
         return $filtered;
     }
 
@@ -434,9 +443,9 @@ abstract class Arr
      */
     public static function flattenSeparated($array, $sep = ".")
     {
-        $result = array();
-        $stack = array();
-        array_push($stack, array("", $array));
+        $result = [];
+        $stack = [];
+        array_push($stack, ["", $array]);
 
         while (count($stack) > 0) {
             list($prefix, $array) = array_pop($stack);
@@ -445,7 +454,7 @@ abstract class Arr
                 $newKey = $prefix . strval($key);
 
                 if (is_array($value)) {
-                    array_push($stack, array($newKey . $sep, $value));
+                    array_push($stack, [$newKey . $sep, $value]);
                 } else {
                     $result[$newKey] = $value;
                 }

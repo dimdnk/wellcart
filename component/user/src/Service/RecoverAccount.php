@@ -99,10 +99,12 @@ class RecoverAccount
 
         $events = $this->getEventManager();
         $events
-          ->setIdentifiers([
-          __CLASS__,
-          get_class($this)
-        ]);
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
 
         $events->attach(
             'initiate.pre',
@@ -129,6 +131,7 @@ class RecoverAccount
                     )
                 )
             ) * Time::DAY;
+
         return $this->repository->cleanExpiredPasswordResetTokens(
             $expirySeconds
         );
@@ -166,7 +169,8 @@ class RecoverAccount
         try {
             $user->setPasswordResetToken($token);
             $this->sendConfirmationEmail($user, $route);
-        } catch (\Throwable $exception) {
+        }
+        catch (\Throwable $exception) {
             $user->setPasswordResetToken(null);
             $this->getLogger()->err($exception->__toString());
             $this->getEventManager()->trigger(
@@ -380,6 +384,7 @@ class RecoverAccount
             $this,
             compact('user', 'password', 'result')
         );
+
         return $result;
     }
 }

@@ -11,11 +11,12 @@ declare(strict_types = 1);
 namespace WellCart\SchemaMigration\Migration;
 
 use Phinx\Migration\Manager as AbstractManager;
-use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\SchemaMigration\AbstractMigration;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 
 class Manager extends AbstractManager
 {
+
     /**
      * @var bool
      */
@@ -32,6 +33,7 @@ class Manager extends AbstractManager
     {
         $this->migrations = $migrations;
         $this->mergeMigrationsFromModules();
+
         return $this;
     }
 
@@ -68,6 +70,7 @@ class Manager extends AbstractManager
             ksort($this->migrations);
         }
         $this->merged = true;
+
         return $this->migrations;
     }
 }

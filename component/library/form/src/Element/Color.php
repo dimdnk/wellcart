@@ -12,5 +12,6 @@ use Zend\Form\Element\Color as Element;
 
 class Color extends Element
 {
+
     use SetValueObjectTrait;
 }

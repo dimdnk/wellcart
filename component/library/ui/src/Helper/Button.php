@@ -15,6 +15,7 @@ use Zend\View\Helper\AbstractHelper;
  */
 class Button extends AbstractHelper
 {
+
     const TYPE_BUTTON = 0;
 
     const TYPE_ANCHOR = 1;

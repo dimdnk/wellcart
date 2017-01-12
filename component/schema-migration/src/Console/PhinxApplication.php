@@ -16,6 +16,7 @@ use WellCart\SchemaMigration\Console\Command;
 
 class PhinxApplication extends AbstractApplication
 {
+
     /**
      * Object Constructor.
      *
@@ -27,7 +28,7 @@ class PhinxApplication extends AbstractApplication
     {
         Application::__construct($version);
         $this->addCommands(
-            array(
+            [
                 new Command\Create(),
                 new Command\Migrate(),
                 new Command\Rollback(),
@@ -36,7 +37,7 @@ class PhinxApplication extends AbstractApplication
                 new Command\Test(),
                 new Command\SeedCreate(),
                 new Command\SeedRun(),
-            )
+            ]
         );
     }
 }

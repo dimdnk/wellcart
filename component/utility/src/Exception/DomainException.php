@@ -12,4 +12,5 @@ namespace WellCart\Utility\Exception;
 class DomainException extends \DomainException implements
     ExceptionInterface
 {
+
 }

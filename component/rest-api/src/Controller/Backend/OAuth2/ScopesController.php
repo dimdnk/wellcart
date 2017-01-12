@@ -22,6 +22,7 @@ use WellCart\View\Model\ViewModel;
 class ScopesController extends AbstractActionController implements
     CrudFeature\EntityPersistenceAwareInterface
 {
+
     use CrudFeature\EntityPersistenceAwareTrait,
         CrudFeature\HandleEntityFormTrait,
         CrudFeature\FindOrNotFoundTrait,
@@ -61,6 +62,7 @@ class ScopesController extends AbstractActionController implements
         EntityForm $form
     ) {
         $entity = $this->repository->createEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 

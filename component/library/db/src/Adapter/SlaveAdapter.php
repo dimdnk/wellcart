@@ -15,6 +15,7 @@ use Zend\Db\ResultSet\ResultSetInterface;
 
 class SlaveAdapter extends ProfilingAdapter
 {
+
     /**
      * Object constructor
      *

@@ -360,6 +360,7 @@ class DbConfigurationForm extends Form implements InputFilterProviderInterface
             $this,
             ['specification' => &$specification]
         );
+
         return $specification;
     }
 }

@@ -12,4 +12,5 @@ use Zend\Mvc\Router\Http\Chain as Route;
 
 class Chain extends Route
 {
+
 }

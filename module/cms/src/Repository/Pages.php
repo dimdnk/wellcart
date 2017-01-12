@@ -27,6 +27,7 @@ class Pages extends AbstractRepository implements PageRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -44,6 +45,7 @@ class Pages extends AbstractRepository implements PageRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

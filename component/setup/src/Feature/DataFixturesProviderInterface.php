@@ -10,6 +10,7 @@ namespace WellCart\Setup\Feature;
 
 interface DataFixturesProviderInterface
 {
+
     /**
      * Retrieve array of data fixture classes
      *

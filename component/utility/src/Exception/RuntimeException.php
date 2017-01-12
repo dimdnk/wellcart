@@ -12,4 +12,5 @@ namespace WellCart\Utility\Exception;
 class RuntimeException extends \RuntimeException implements
     ExceptionInterface
 {
+
 }

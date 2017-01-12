@@ -36,6 +36,7 @@ class Features extends AbstractRepository implements FeatureRepository
             $this,
             compact('optionList')
         );
+
         return $optionList;
     }
 
@@ -50,6 +51,7 @@ class Features extends AbstractRepository implements FeatureRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -68,6 +70,7 @@ class Features extends AbstractRepository implements FeatureRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -103,6 +106,7 @@ class Features extends AbstractRepository implements FeatureRepository
             $this,
             compact('optionList')
         );
+
         return $optionList;
     }
 }

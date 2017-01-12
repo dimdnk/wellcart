@@ -61,6 +61,7 @@ class ZoneSelector extends Select
         $this->setValueOptions($valueOptions);
 
         $this->disableValidator();
+
         return $this;
     }
 }

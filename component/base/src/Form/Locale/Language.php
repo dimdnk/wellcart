@@ -19,6 +19,10 @@ use Zend\Form\FormInterface;
 
 class Language extends AbstractForm
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'base_locale_language';
 
     /**
      * Form constructor
@@ -30,7 +34,7 @@ class Language extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('base_locale_language');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -48,7 +52,7 @@ class Language extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'base_locale_language_is_active',
+                    'id' => 'base_locale_language_is_active',
                 ],
             ],
             ['priority' => 800]
@@ -66,7 +70,7 @@ class Language extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'base_locale_language_is_default',
+                    'id' => 'base_locale_language_is_default',
                 ],
             ],
             ['priority' => 750]
@@ -77,7 +81,7 @@ class Language extends AbstractForm
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Name'),
+                    'label' => __('Name'),
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_name',
@@ -92,7 +96,7 @@ class Language extends AbstractForm
                 'name'       => 'code',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Code'),
+                    'label' => __('Code'),
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_code',
@@ -106,7 +110,7 @@ class Language extends AbstractForm
                 'name'       => 'locale',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Locale'),
+                    'label' => __('Locale'),
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_locale',
@@ -120,7 +124,7 @@ class Language extends AbstractForm
                 'name'       => 'territory',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Territory'),
+                    'label' => __('Territory'),
                 ],
                 'attributes' => [
                     'id' => 'base_locale_language_territory',
@@ -143,10 +147,10 @@ class Language extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -170,6 +174,7 @@ class Language extends AbstractForm
                 'Object must implement interface WellCart\Base\Spec\LocaleLanguageEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -183,6 +188,7 @@ class Language extends AbstractForm
                 'Object must implement interface WellCart\Base\Spec\LocaleLanguageEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

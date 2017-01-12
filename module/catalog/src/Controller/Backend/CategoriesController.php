@@ -52,6 +52,7 @@ class CategoriesController extends AbstractActionController implements
         $gridPageView->setDisplayLanguage(
             $this->locale()->getLanguage()
         );
+
         return $gridPageView->prepare();
     }
 
@@ -66,6 +67,7 @@ class CategoriesController extends AbstractActionController implements
     public function createAction(FormPageView $formPageView, EntityForm $form)
     {
         $entity = $this->repository->createCategoryEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 
@@ -156,6 +158,7 @@ class CategoriesController extends AbstractActionController implements
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllCategoryIds();
         }
+
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,

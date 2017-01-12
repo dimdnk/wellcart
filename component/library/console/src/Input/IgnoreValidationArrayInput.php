@@ -11,6 +11,7 @@ namespace WellCart\Console\Input;
 class IgnoreValidationArrayInput
     extends \Symfony\Component\Console\Input\ArrayInput
 {
+
     protected $ignoreValidationErrors = false;
 
     /**

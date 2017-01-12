@@ -118,6 +118,7 @@ class AbstractUser extends AbstractEntity implements
     public function setFailedLoginCount($failedLoginCount): UserEntity
     {
         $this->failedLoginCount = abs((int)$failedLoginCount);
+
         return $this;
     }
 
@@ -184,6 +185,7 @@ class AbstractUser extends AbstractEntity implements
     public function setEmail($email): UserEntity
     {
         $this->email = $email;
+
         return $this;
     }
 
@@ -213,6 +215,7 @@ class AbstractUser extends AbstractEntity implements
     public function setFirstName($firstName): UserEntity
     {
         $this->firstName = $firstName;
+
         return $this;
     }
 
@@ -232,6 +235,7 @@ class AbstractUser extends AbstractEntity implements
     public function setLastName($lastName): UserEntity
     {
         $this->lastName = $lastName;
+
         return $this;
     }
 
@@ -269,6 +273,7 @@ class AbstractUser extends AbstractEntity implements
         if (!empty($password)) {
             $this->password = $password;
         }
+
         return $this;
     }
 
@@ -292,6 +297,7 @@ class AbstractUser extends AbstractEntity implements
     public function setUserId($id): UserEntity
     {
         $this->id = (int)$id;
+
         return $this;
     }
 
@@ -310,6 +316,7 @@ class AbstractUser extends AbstractEntity implements
                 return true;
             }
         }
+
         return false;
     }
 
@@ -331,6 +338,7 @@ class AbstractUser extends AbstractEntity implements
     public function setRoles(Collection $roles): UserEntity
     {
         $this->roles = $roles;
+
         return $this;
     }
 
@@ -354,6 +362,7 @@ class AbstractUser extends AbstractEntity implements
     public function setId($id): UserEntity
     {
         $this->id = (int)$id;
+
         return $this;
     }
 
@@ -373,6 +382,7 @@ class AbstractUser extends AbstractEntity implements
     public function setCreatedAt(\DateTimeInterface $createdAt = null
     ): UserEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -392,6 +402,7 @@ class AbstractUser extends AbstractEntity implements
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): UserEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -407,6 +418,7 @@ class AbstractUser extends AbstractEntity implements
                 'Primary role must be assigned to the user account.'
             );
         }
+
         return $this->roles->first();
     }
 
@@ -420,6 +432,7 @@ class AbstractUser extends AbstractEntity implements
         foreach ($roles as $role) {
             $this->addRole($role);
         }
+
         return $this;
     }
 
@@ -434,6 +447,7 @@ class AbstractUser extends AbstractEntity implements
             return $this;
         }
         $this->roles->add($role);
+
         return $this;
     }
 
@@ -447,6 +461,7 @@ class AbstractUser extends AbstractEntity implements
         foreach ($roles as $role) {
             $this->removeRole($role);
         }
+
         return $this;
     }
 
@@ -459,6 +474,7 @@ class AbstractUser extends AbstractEntity implements
     ): UserEntity {
         $role->getUsers()->removeElement($this);
         $this->roles->removeElement($role);
+
         return $this;
     }
 
@@ -478,6 +494,7 @@ class AbstractUser extends AbstractEntity implements
     public function setPasswordResetToken($passwordResetToken
     ): UserEntity {
         $this->passwordResetToken = $passwordResetToken;
+
         return $this;
     }
 
@@ -497,6 +514,7 @@ class AbstractUser extends AbstractEntity implements
     public function setEmailConfirmationToken($emailConfirmationToken
     ): UserEntity {
         $this->emailConfirmationToken = $emailConfirmationToken;
+
         return $this;
     }
 
@@ -519,6 +537,7 @@ class AbstractUser extends AbstractEntity implements
     public function setTimeZone($timeZone): UserEntity
     {
         $this->timeZone = $timeZone;
+
         return $this;
     }
 
@@ -538,6 +557,7 @@ class AbstractUser extends AbstractEntity implements
     public function setLanguage(LocaleLanguageEntity $language = null)
     {
         $this->language = $language;
+
         return $this;
     }
 
@@ -569,6 +589,7 @@ class AbstractUser extends AbstractEntity implements
     public function setState($state): UserEntity
     {
         $this->state = (int)$state;
+
         return $this;
     }
 
@@ -586,6 +607,7 @@ class AbstractUser extends AbstractEntity implements
     public function enable(): bool
     {
         $this->setState(UserEntity::STATE_ENABLED);
+
         return true;
     }
 
@@ -595,6 +617,7 @@ class AbstractUser extends AbstractEntity implements
     public function disable(): bool
     {
         $this->setState(UserEntity::STATE_DISABLED);
+
         return true;
     }
 }

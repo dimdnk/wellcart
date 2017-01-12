@@ -38,5 +38,6 @@ abstract class AbstractActionController
     TranslatorAwareInterface,
     ObjectManagerAwareInterface
 {
+
     use AbstractControllerTrait;
 }

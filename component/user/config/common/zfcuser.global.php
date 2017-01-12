@@ -209,5 +209,5 @@ return [
         /**
          * End of ZfcUser configuration
          */
-    ]
+    ],
 ];

@@ -21,6 +21,7 @@ namespace WellCart\Directory\Test;
  */
 class UnitTester extends \Codeception\Actor
 {
+
     use Traits\UnitTesterActions;
 
     /**

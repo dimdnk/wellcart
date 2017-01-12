@@ -16,7 +16,9 @@ use WellCart\ORM\EntityTrait;
 
 class Jti extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -104,6 +106,7 @@ class Jti extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

@@ -18,6 +18,7 @@ use ZfcUser\Authentication\Adapter\AdapterChainEvent as AuthenticationAdapterCha
 
 class HandleFailedLoginCount
 {
+
     /**
      * @var UserRepository
      */

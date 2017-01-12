@@ -12,4 +12,5 @@ use Zend\Mvc\Router\Http\Wildcard as Route;
 
 class Wildcard extends Route
 {
+
 }

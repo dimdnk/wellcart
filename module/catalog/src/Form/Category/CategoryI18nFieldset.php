@@ -50,10 +50,10 @@ class CategoryI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'name',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Category Name'),
+                'name'    => 'name',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Category Name'),
                 ],
             ],
             ['priority' => 700]
@@ -61,10 +61,10 @@ class CategoryI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'description',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Description')
+                'name'    => 'description',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label' => __('Description'),
                 ],
             ],
             ['priority' => 650]
@@ -72,10 +72,10 @@ class CategoryI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_title',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Page Title')
+                'name'    => 'meta_title',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Page Title'),
                 ],
             ],
             ['priority' => 600]
@@ -83,10 +83,10 @@ class CategoryI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_keywords',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Meta Keywords')
+                'name'    => 'meta_keywords',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label' => __('Meta Keywords'),
                 ],
             ],
             ['priority' => 550]
@@ -94,11 +94,11 @@ class CategoryI18nFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'meta_description',
-                'type'       => 'Textarea',
-                'options'    => [
-                    'label'            => __('Meta Description'),
-                    'help-block'       => __('Maximum 255 chars'),
+                'name'    => 'meta_description',
+                'type'    => 'Textarea',
+                'options' => [
+                    'label'      => __('Meta Description'),
+                    'help-block' => __('Maximum 255 chars'),
                 ],
             ],
             ['priority' => 500]
@@ -115,6 +115,7 @@ class CategoryI18nFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\CategoryI18nEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

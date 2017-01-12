@@ -26,6 +26,10 @@ use Zend\Form\FormInterface;
 class Product extends AbstractForm
 {
     /**
+     * Canonical form name
+     */
+    const NAME = 'catalog_product';
+    /**
      * Form constructor
      *
      * @param Factory                  $factory
@@ -46,7 +50,7 @@ class Product extends AbstractForm
         ProductImageEntity $productImagePrototype
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('catalog_product');
+        parent::__construct(static::NAME);
 
         $this->setAttribute('enctype', 'multipart/form-data');
 
@@ -71,10 +75,10 @@ class Product extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -221,6 +225,7 @@ class Product extends AbstractForm
                 'Object must implement interface WellCart\Catalog\ProductEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -234,6 +239,7 @@ class Product extends AbstractForm
                 'Object must implement interface WellCart\Catalog\ProductEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

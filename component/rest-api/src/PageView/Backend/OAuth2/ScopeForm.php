@@ -18,6 +18,7 @@ use WellCart\RestApi\Repository\OAuth2\Scopes;
 
 class ScopeForm extends Standard
 {
+
     public function __construct(
         Scopes $repository,
         $variables = null,

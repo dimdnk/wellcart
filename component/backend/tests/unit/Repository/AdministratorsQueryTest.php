@@ -15,6 +15,7 @@ use WellCart\Backend\Entity\Administrator;
 
 class AdministratorsQueryTest extends TestCase
 {
+
     /**
      * @var AdministratorsQuery
      */

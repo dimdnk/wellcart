@@ -26,6 +26,7 @@ class Clients extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -43,6 +44,7 @@ class Clients extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -66,6 +68,7 @@ class Clients extends AbstractRepository
             $this,
             compact('optionsList')
         );
+
         return $optionList;
     }
 }

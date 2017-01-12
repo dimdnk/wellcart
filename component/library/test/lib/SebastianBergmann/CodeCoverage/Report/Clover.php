@@ -12,4 +12,5 @@
 class PHP_CodeCoverage_Report_Clover
     extends \SebastianBergmann\CodeCoverage\Report\Clover
 {
+
 }

@@ -14,10 +14,12 @@ use WellCart\ORM\QueryBuilder;
 
 class NotificationsQuery extends QueryBuilder
 {
+
     public function read()
     {
         $this->andWhere($this->getRootAliases()[0] . '.isRead = :is_read')
             ->setParameter('is_read', true);
+
         return $this;
     }
 
@@ -25,6 +27,7 @@ class NotificationsQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isDeleted = :is_deleted')
             ->setParameter('is_deleted', true);
+
         return $this;
     }
 
@@ -56,6 +59,7 @@ class NotificationsQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isDeleted = :is_deleted')
             ->setParameter('is_deleted', false);
+
         return $this;
     }
 
@@ -63,6 +67,7 @@ class NotificationsQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.isRead = :is_read')
             ->setParameter('is_read', false);
+
         return $this;
     }
 }

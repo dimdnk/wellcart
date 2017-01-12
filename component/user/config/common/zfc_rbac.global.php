@@ -62,8 +62,8 @@ return [
             'ZfcRbac\Role\ObjectRepositoryRoleProvider' => [
                 'object_manager'     => 'doctrine.entitymanager.orm_default',
                 'class_name'         => 'WellCart\User\Entity\Acl\Role',
-                'role_name_property' => 'name'
-            ]
+                'role_name_property' => 'name',
+            ],
         ],
         /**
          * Configure the unauthorized strategy. It is used to render a template whenever a user is unauthorized
@@ -72,7 +72,7 @@ return [
             /**
              * Set the template name to render
              */
-            'template' => 'error/403'
+            'template' => 'error/403',
         ],
         /**
          * Configure the redirect strategy. It is used to redirect the user to another route when a user is
@@ -100,13 +100,13 @@ return [
              * If append_previous_uri option is set to true, this option set the query key to use when
              * the previous uri is appended
              */
-            'previous_uri_query_key'         => 'redirect'
+            'previous_uri_query_key'         => 'redirect',
         ],
         /**
          * Various plugin managers for guards and role providers. Each of them must follow a common
          * plugin manager config format, and can be used to create your custom objects
          */
         'guard_manager'         => [],
-        'role_provider_manager' => []
-    ]
+        'role_provider_manager' => [],
+    ],
 ];

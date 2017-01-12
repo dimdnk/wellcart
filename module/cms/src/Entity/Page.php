@@ -72,6 +72,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
             $translation->setPage($this);
             $this->translations->add($translation);
         }
+
         return $this;
     }
 
@@ -88,6 +89,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
 
         $translation->setPage($this);
         $this->translations->add($translation);
+
         return $this;
     }
 
@@ -101,6 +103,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
+
         return $this;
     }
 
@@ -113,6 +116,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     ): PageEntity {
         $translation->setPage(null);
         $this->translations->removeElement($translation);
+
         return $this;
     }
 
@@ -140,6 +144,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function setStatus($status): PageEntity
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -187,6 +192,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function setTranslations(Collection $translations
     ): PageEntity {
         $this->translations = $translations;
+
         return $this;
     }
 
@@ -206,6 +212,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): PageEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -225,6 +232,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function setId($id): PageEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -244,6 +252,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -263,6 +272,7 @@ class Page extends AbstractEntity implements TranslatableEntity, PageEntity
     public function setUrlKey($urlKey): PageEntity
     {
         $this->urlKey = $urlKey;
+
         return $this;
     }
 }

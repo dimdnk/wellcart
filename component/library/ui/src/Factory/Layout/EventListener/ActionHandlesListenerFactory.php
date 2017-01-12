@@ -15,6 +15,7 @@ use WellCart\Ui\Layout\EventListener\ActionHandlesListener;
 
 class ActionHandlesListenerFactory
 {
+
     /**
      * @param ContainerInterface $container
      *
@@ -33,6 +34,7 @@ class ActionHandlesListenerFactory
         $actionHandlesListener->setPreferRouteMatchController(
             $moduleOptions->isPreferRouteMatchController()
         );
+
         return $actionHandlesListener;
     }
 }

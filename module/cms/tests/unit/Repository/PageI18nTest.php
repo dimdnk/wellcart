@@ -16,6 +16,7 @@ use WellCart\CMS\Spec\PageI18nRepository;
 
 class PageI18nTest extends TestCase
 {
+
     /**
      * @var PageI18n
      */

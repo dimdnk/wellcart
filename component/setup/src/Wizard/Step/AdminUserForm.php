@@ -150,7 +150,7 @@ class AdminUserForm extends Form implements
                             'name'    => 'StringLength',
                             'options' => [
                                 'encoding' => 'UTF-8',
-                                'min'      => 6
+                                'min'      => 6,
                             ],
                         ],
                     ],
@@ -169,14 +169,14 @@ class AdminUserForm extends Form implements
                             'name'    => 'StringLength',
                             'options' => [
                                 'encoding' => 'UTF-8',
-                                'min'      => 6
+                                'min'      => 6,
                             ],
                         ],
                         'Identical'    => [
                             'name'    => 'Identical',
                             'options' => [
-                                'token' => 'password'
-                            ]
+                                'token' => 'password',
+                            ],
                         ],
                     ],
                 ],
@@ -235,6 +235,7 @@ class AdminUserForm extends Form implements
             $this,
             ['specification' => &$specification]
         );
+
         return $specification;
     }
 }

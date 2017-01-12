@@ -21,6 +21,7 @@ class RouteController extends AbstractConsoleController implements
     LoggerAwareInterface,
     TranslatorAwareInterface
 {
+
     use AbstractControllerTrait;
 
     /**
@@ -31,7 +32,8 @@ class RouteController extends AbstractConsoleController implements
         $console = $this->getConsole();
         try {
             $console->writeLine($listing->asTable()->render());
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(

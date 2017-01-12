@@ -12,6 +12,7 @@ namespace WellCart\Catalog\Spec;
 
 interface ProductVariantEntity
 {
+
     /**
      * Object constructor
      *

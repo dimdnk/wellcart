@@ -26,6 +26,7 @@ class AbstractItemView extends ViewModel
     ItemViewInterface,
     BlockInterface
 {
+
     use
         Mvc\Controller\PluginManagerAwareTrait,
         Stdlib\ResponseAwareTrait,
@@ -37,6 +38,7 @@ class AbstractItemView extends ViewModel
      * @var Root
      */
     protected $rootView;
+
     /**
      * Is the item prepared ?
      *
@@ -62,6 +64,7 @@ class AbstractItemView extends ViewModel
     public function setRootView(Root $rootView)
     {
         $this->rootView = $rootView;
+
         return $this;
     }
 
@@ -81,6 +84,7 @@ class AbstractItemView extends ViewModel
     public function setActionResult($actionResult)
     {
         $this->actionResult = $actionResult;
+
         return $this;
     }
 
@@ -107,7 +111,7 @@ class AbstractItemView extends ViewModel
         if ($this->isPrepared()) {
             return $this;
         }
-      $this->getEventManager()->trigger(__FUNCTION__ .'.pre', $this);
+        $this->getEventManager()->trigger(__FUNCTION__ . '.pre', $this);
 
         if ($template !== null) {
             $this->setTemplate($template);
@@ -119,7 +123,8 @@ class AbstractItemView extends ViewModel
         }
         $this->getEventManager()->trigger(__FUNCTION__, $this);
         $this->isPrepared = true;
-        $this->getEventManager()->trigger(__FUNCTION__ .'.post', $this);
+        $this->getEventManager()->trigger(__FUNCTION__ . '.post', $this);
+
         return $this;
     }
 
@@ -148,6 +153,7 @@ class AbstractItemView extends ViewModel
     {
         $this->id = $id;
         $this->setVariable('__BLOCK_ID__', $id);
+
         return $this;
     }
 

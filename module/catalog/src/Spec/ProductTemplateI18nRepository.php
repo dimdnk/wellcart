@@ -14,6 +14,7 @@ use WellCart\ORM\Repository;
 
 interface ProductTemplateI18nRepository extends Repository
 {
+
     public function finder();
 
     public function createQueryBuilder($alias, $indexBy = null);

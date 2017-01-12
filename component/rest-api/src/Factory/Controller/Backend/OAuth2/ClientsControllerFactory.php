@@ -15,13 +15,14 @@ use WellCart\RestApi\Controller\Backend\OAuth2\ClientsController;
 
 class ClientsControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): ClientsController
-    {
+    ): ClientsController {
         $controller = new ClientsController(
             $sm->getServiceLocator()
                 ->get(\WellCart\RestApi\Repository\OAuth2\Clients::class)
         );
+
         return $controller;
     }
 }

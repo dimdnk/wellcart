@@ -16,6 +16,7 @@ use WellCart\SchemaMigration\Migration\Manager;
 
 trait PhinxCommandTrait
 {
+
     /**
      * Load the migrations manager and inject the config
      *

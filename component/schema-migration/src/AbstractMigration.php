@@ -15,6 +15,7 @@ use WellCart\SchemaMigration\Db\Table;
 
 abstract class AbstractMigration extends Migration
 {
+
     /**
      * {@inheritdoc}
      */

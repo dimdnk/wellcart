@@ -30,10 +30,12 @@ class Module implements
     ModulePathProviderInterface,
     ConsoleUsageProviderInterface
 {
+
     /**
      * @var string
      */
     const VERSION = '0.1.0';
+
     /**
      * @var ContainerInterface
      */
@@ -67,6 +69,7 @@ class Module implements
         $cli = $this->container->get(PhinxApplication::class);
         $output = new PropertyOutput();
         $cli->run(new StringInput('list'), $output);
+
         return $output->getMessage();
     }
 

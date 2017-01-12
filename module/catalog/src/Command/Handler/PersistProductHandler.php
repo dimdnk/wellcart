@@ -22,6 +22,7 @@ use WellCart\ORM\Entity;
 
 class PersistProductHandler extends PersistEntityHandler
 {
+
     /**
      * @param PersistProduct $command
      *

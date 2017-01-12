@@ -20,7 +20,7 @@ class Regex extends Route
      * @param  string $spec
      * @param  array  $defaults
      */
-    public function __construct($regex, $spec, array $defaults = array())
+    public function __construct($regex, $spec, array $defaults = [])
     {
         if (empty($defaults['format'])) {
             $defaults['format'] = 'html';

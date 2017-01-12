@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 
 class CollectionTest extends TestCase
 {
+
     public function testGetItems()
     {
         $collection = new Collection();
@@ -166,6 +167,7 @@ class CollectionTest extends TestCase
         $collection = new Collection(['a' => 0.9, 'b' => 0.7, 'c' => 0.8]);
         $callback = function ($a, $b) {
             $d = $a = $b;
+
             return $d < 0 ? -1 : ($d > 0 ? 1 : 0);
         };
 

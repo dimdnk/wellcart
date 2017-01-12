@@ -74,6 +74,7 @@ class Notification
             ->setBody($body)
             ->setIcon($icon);
         $this->repository->add($notification);
+
         return $notification;
     }
 }

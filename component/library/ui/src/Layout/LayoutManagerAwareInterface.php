@@ -12,6 +12,7 @@ use ConLayout\Controller\Plugin\LayoutManager;
 
 interface LayoutManagerAwareInterface
 {
+
     /**
      * @return LayoutManager
      */

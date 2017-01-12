@@ -18,6 +18,7 @@ class FeaturesQuery extends QueryBuilder
     public function defaultSortOrder()
     {
         $this->addOrderBy($this->getRootAliases()[0] . '.sortOrder', 'ASC');
+
         return $this;
     }
 }

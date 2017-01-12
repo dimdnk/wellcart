@@ -12,13 +12,14 @@ use Zend\Mvc\Router\Http\Method as Route;
 
 class Method extends Route
 {
+
     /**
      * Create a new method route.
      *
      * @param  string $verb
      * @param  array  $defaults
      */
-    public function __construct($verb, array $defaults = array())
+    public function __construct($verb, array $defaults = [])
     {
         if (empty($defaults['format'])) {
             $defaults['format'] = 'html';

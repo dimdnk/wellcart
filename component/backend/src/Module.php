@@ -12,10 +12,10 @@ namespace WellCart\Backend;
 
 use WellCart\Backend\Rbac\View\Strategy\UnauthorizedStrategy;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\Setup\Feature\DataFixturesProviderInterface;
-use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use Zend\Mvc\MvcEvent;

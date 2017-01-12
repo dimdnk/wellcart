@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Action\Button as AbstractAction;
 
 class RowButton extends AbstractAction
 {
+
 }

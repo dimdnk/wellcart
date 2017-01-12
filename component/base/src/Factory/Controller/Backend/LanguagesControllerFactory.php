@@ -15,13 +15,14 @@ use WellCart\Base\Controller\Backend\LanguagesController;
 
 class LanguagesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): LanguagesController
-    {
+    ): LanguagesController {
         $controller = new LanguagesController(
             $sm->getServiceLocator()
                 ->get('WellCart\Base\Spec\LocaleLanguageRepository')
         );
+
         return $controller;
     }
 }

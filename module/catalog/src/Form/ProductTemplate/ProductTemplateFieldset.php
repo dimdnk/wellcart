@@ -37,7 +37,7 @@ class ProductTemplateFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order')
+                    'label' => __('Sort Order'),
                 ],
                 'attributes' => [
                     'id'    => 'product_template_sort_order',
@@ -63,7 +63,7 @@ class ProductTemplateFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'product-template-i18n',
-                ]
+                ],
             ],
             ['priority' => 600]
         );
@@ -73,7 +73,7 @@ class ProductTemplateFieldset extends Fieldset
                 'name'       => 'attributes',
                 'type'       => 'catalogAttributesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Attributes')
+                    'label' => __('Attributes'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -88,7 +88,7 @@ class ProductTemplateFieldset extends Fieldset
                 'name'       => 'features',
                 'type'       => 'catalogFeaturesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Features')
+                    'label' => __('Features'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -109,6 +109,7 @@ class ProductTemplateFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\ProductTemplateEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

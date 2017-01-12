@@ -13,6 +13,7 @@ use WellCart\Ui\Datagrid\Datagrid;
 
 class DatagridFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

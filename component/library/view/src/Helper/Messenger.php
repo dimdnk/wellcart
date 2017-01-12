@@ -12,4 +12,5 @@ use Zend\View\Helper\FlashMessenger;
 
 class Messenger extends FlashMessenger
 {
+
 }

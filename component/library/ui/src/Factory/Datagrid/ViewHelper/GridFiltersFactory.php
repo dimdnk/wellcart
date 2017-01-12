@@ -15,6 +15,7 @@ use Zend\Form\Factory;
 
 class GridFiltersFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $locator = $sm->getServiceLocator();
@@ -26,6 +27,7 @@ class GridFiltersFactory
             new Factory($locator->get('FormElementManager'))
         );
         $helper = new GridFilters($builder, $form);
+
         return $helper;
     }
 }

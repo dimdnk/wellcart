@@ -59,7 +59,7 @@ return [
                         'order'      => -300,
                         'permission' => 'catalog/brands/list',
                     ],
-                ]
+                ],
             ],
         ],
     ],

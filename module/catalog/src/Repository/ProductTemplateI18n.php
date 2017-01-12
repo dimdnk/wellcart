@@ -36,6 +36,7 @@ class ProductTemplateI18n extends AbstractRepository
             $this,
             compact('id')
         );
+
         return $this->getEntityManager()
             ->find(
                 'WellCart\Catalog\Spec\ProductTemplateEntity',
@@ -110,6 +111,7 @@ class ProductTemplateI18n extends AbstractRepository
                 'Records successfully removed from database.'
             );
         }
+
         return $result;
     }
 
@@ -130,6 +132,7 @@ class ProductTemplateI18n extends AbstractRepository
             $this,
             compact('featuresList')
         );
+
         return $optionList;
     }
 
@@ -144,6 +147,7 @@ class ProductTemplateI18n extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -161,6 +165,7 @@ class ProductTemplateI18n extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -173,6 +178,7 @@ class ProductTemplateI18n extends AbstractRepository
             __FUNCTION__ . '.pre',
             $this
         );
+
         return $this->getEntityManager()
             ->getRepository('WellCart\Catalog\Spec\ProductTemplateEntity')
             ->findAllIds();

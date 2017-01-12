@@ -6,5 +6,5 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'system_config_editor' => []
+    'system_config_editor' => [],
 ];

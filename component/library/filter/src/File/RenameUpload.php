@@ -13,6 +13,7 @@ use WellCart\Utility\Str;
 
 class RenameUpload extends \Zend\Filter\File\RenameUpload
 {
+
     /**
      * If this variable is set to TRUE, our library will be able to automatically create
      * non-existed directories.
@@ -71,6 +72,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
             $this->setAllowCreateFolders(true);
             $this->setTransliterateFilename(true);
         }
+
         return $this;
     }
 
@@ -90,6 +92,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
             $finalTarget = $this->transliterateFilename($finalTarget);
             $finalTarget = $this->fileDispersion($finalTarget);
         }
+
         return $finalTarget;
     }
 
@@ -142,6 +145,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     public function setTargetDirectory($targetDirectory)
     {
         $this->targetDirectory = $targetDirectory;
+
         return $this;
     }
 
@@ -165,6 +169,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     public function setAllowCreateFolders($allowCreateFolders)
     {
         $this->allowCreateFolders = (bool)$allowCreateFolders;
+
         return $this;
     }
 
@@ -185,6 +190,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
                 $finalTarget
             );
         }
+
         return $finalTarget;
     }
 
@@ -206,6 +212,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     public function setCaseInsensitiveFilename($caseInsensitiveFilename)
     {
         $this->caseInsensitiveFilename = (bool)$caseInsensitiveFilename;
+
         return $this;
     }
 
@@ -227,6 +234,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
                 $finalTarget
             );
         }
+
         return $finalTarget;
     }
 
@@ -249,6 +257,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
         if ($transliterateFilename) {
             $this->setCaseInsensitiveFilename(true);
         }
+
         return $this;
     }
 
@@ -305,6 +314,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
             }
             $char++;
         }
+
         return $dispertionPath . DS;
     }
 
@@ -320,6 +330,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
         if (substr($dir, -1) != DS) {
             $dir .= DS;
         }
+
         return $dir;
     }
 }

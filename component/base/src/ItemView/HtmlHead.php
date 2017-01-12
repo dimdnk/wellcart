@@ -18,6 +18,7 @@ use Zend\View\Helper\HeadMeta;
  */
 class HtmlHead extends AbstractItemView
 {
+
     protected $csrf;
 
     /**

@@ -64,6 +64,7 @@ class ZonesController extends AbstractActionController implements
     public function createAction(FormPageView $formPageView, EntityForm $form)
     {
         $entity = $this->repository->createEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 
@@ -138,6 +139,7 @@ class ZonesController extends AbstractActionController implements
     {
         $country = (int)$this->params()->fromQuery('country_id');
         $zoneOptions = $this->repository->toOptionsList($country, true);
+
         return new JsonModel($zoneOptions);
     }
 
@@ -157,6 +159,7 @@ class ZonesController extends AbstractActionController implements
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllIds();
         }
+
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,

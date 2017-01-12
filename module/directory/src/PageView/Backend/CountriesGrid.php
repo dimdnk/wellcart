@@ -19,6 +19,7 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CountriesGrid extends Standard
 {
+
     public function __construct(
         CountryRepository $repository,
         $variables = null,
@@ -118,7 +119,7 @@ class CountriesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -137,7 +138,7 @@ class CountriesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

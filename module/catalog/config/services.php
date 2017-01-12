@@ -229,6 +229,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_catalog_brand_hydrator')
                 );
+
                 return $form;
             },
         Repository\Brands::class           =>
@@ -273,6 +274,7 @@ return [
                     $productFeatureCombinationPrototype,
                     $productImagePrototype
                 );
+
                 return $form;
             },
         Form\Category::class               =>
@@ -291,6 +293,7 @@ return [
                     $categoryPrototype,
                     $categoryTranslationPrototype
                 );
+
                 return $form;
             },
 
@@ -309,6 +312,7 @@ return [
                     $productTemplatePrototype,
                     $productTemplateI18nPrototype
                 );
+
                 return $form;
             },
 
@@ -339,6 +343,7 @@ return [
                     $attributeValuePrototype,
                     $attributeValueI18nPrototype
                 );
+
                 return $form;
             },
 
@@ -368,6 +373,7 @@ return [
                     $featureValuePrototype,
                     $featureValueI18nPrototype
                 );
+
                 return $form;
             },
         'wellcart_catalog_product_hydrator' =>

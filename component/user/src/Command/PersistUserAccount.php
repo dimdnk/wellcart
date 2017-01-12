@@ -14,10 +14,12 @@ use WellCart\User\Spec\UserEntity;
 
 final class PersistUserAccount
 {
+
     /**
      * @var UserEntity
      */
     private $user;
+
     /**
      * @var array
      */
@@ -61,6 +63,7 @@ final class PersistUserAccount
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 }

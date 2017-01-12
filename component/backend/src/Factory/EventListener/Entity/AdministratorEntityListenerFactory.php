@@ -16,6 +16,7 @@ use Zend\Authentication\AuthenticationService;
 
 class AdministratorEntityListenerFactory
 {
+
     public function __invoke(
         ContainerInterface $container
     ): AdministratorEntityListener {

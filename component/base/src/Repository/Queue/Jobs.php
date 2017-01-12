@@ -27,6 +27,7 @@ class Jobs extends AbstractRepository implements JobQueueRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class Jobs extends AbstractRepository implements JobQueueRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

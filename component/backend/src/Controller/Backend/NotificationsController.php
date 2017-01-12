@@ -80,6 +80,7 @@ class NotificationsController extends AbstractActionController implements
         );
         if ($domainResponse) {
             $domainResponse->setIsRead(true);
+
             return $this->attemptToPersistEntity(
                 $domainResponse,
                 __('The message has been marked as Read.'),

@@ -12,5 +12,6 @@ use Zend\Form\Element\Password as Element;
 
 class Password extends Element
 {
+
     use SetValueObjectTrait;
 }

@@ -14,4 +14,5 @@ use ZF\Apigility\Doctrine\Server\Resource\DoctrineResource;
 
 class LocaleLanguageResource extends DoctrineResource
 {
+
 }

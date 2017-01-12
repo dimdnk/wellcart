@@ -14,6 +14,7 @@ use Interop\Container\ContainerInterface;
 
 class SQLLoggerCollectorFactory extends AbstractSQLLoggerCollectorFactory
 {
+
     /**
      * {@inheritDoc}
      */
@@ -26,6 +27,7 @@ class SQLLoggerCollectorFactory extends AbstractSQLLoggerCollectorFactory
 
         /* @var $configuration \Doctrine\ORM\Configuration */
         $configuration = $serviceLocator->get($options->getConfiguration());
+
         return new SQLLoggerCollector(
             $configuration->getSQLLogger(),
             'doctrine.sql_logger_collector.' . $options->getName()

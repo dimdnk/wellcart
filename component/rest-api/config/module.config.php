@@ -54,8 +54,8 @@ return [
             'orm_default'         => [
                 'drivers' => [
                     'WellCart\RestApi\Entity' => 'wellcart_api_driver',
-                ]
-            ]
+                ],
+            ],
         ],
         'entity_resolver' => [
             'orm_default' => [

@@ -28,7 +28,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Setup Data Versioning',
                 'id'          => false,
-                'primary_key' => 'version'
+                'primary_key' => 'version',
             ]
         )
             ->addColumn('version', 'biginteger')
@@ -44,7 +44,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Base System Configuration',
                 'id'          => 'config_id',
-                'primary_key' => ['config_id']
+                'primary_key' => ['config_id'],
             ]
         )
             ->addColumn(
@@ -190,7 +190,7 @@ class Install extends AbstractMigration
             [
                 'comment'     => 'Queue Data',
                 'id'          => 'id',
-                'primary_key' => ['id']
+                'primary_key' => ['id'],
             ]
         )
             ->addColumn(

@@ -10,6 +10,7 @@ namespace WellCart\Mvc\Application;
 
 class MaintenanceMode
 {
+
     /**
      * Maintenance flag file name
      */
@@ -38,6 +39,7 @@ class MaintenanceMode
         if ($this->isEnabled()) {
             return unlink(WELLCART_STORAGE_PATH . self::FLAG_FILENAME);
         }
+
         return true;
     }
 

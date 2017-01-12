@@ -14,6 +14,7 @@ namespace WellCart\Utility;
  */
 abstract class Config
 {
+
     /**
      * Config array.
      *
@@ -67,6 +68,7 @@ abstract class Config
     public static function load(array $config): array
     {
         static::$config = $config;
+
         return $config;
     }
 
@@ -91,26 +93,26 @@ abstract class Config
      */
     public static function application(array $configuration = []): array
     {
-        $defaults = array(
+        $defaults = [
             // This should be an array of module namespaces used in the application.
             'modules'                  => [],
 
             // These are various options for the listeners attached to the ModuleManager
-            'module_listener_options'  => array(
+            'module_listener_options'  => [
                 // This should be an array of paths in which modules reside.
                 // If a string key is provided, the listener will consider that a module
                 // namespace, the value of that key the specific path to that module's
                 // Module class.
-                'module_paths'             => array(
+                'module_paths'             => [
                     './module',
-                ),
+                ],
 
                 // An array of paths from which to glob configuration files after
                 // modules are loaded. These effectively override configuration
                 // provided by modules themselves. Paths may use GLOB_BRACE notation.
-                'config_glob_paths'        => array(
+                'config_glob_paths'        => [
                     'config/autoload/{,*.}{global,local}.php',
-                ),
+                ],
 
                 // Whether or not to enable a configuration cache.
                 // If enabled, the merged configuration will be cached and used in
@@ -140,7 +142,7 @@ abstract class Config
                 // Enabled by default, prevents usage of modules that depend on other modules
                 // that weren't loaded.
                 'check_dependencies'       => false,
-            ),
+            ],
 
             // Used to create an own service manager. May contain one or more child arrays.
             'service_listener_options' =>
@@ -160,9 +162,9 @@ abstract class Config
                 [
                     'factories' => [
                         'ModuleManager' => 'WellCart\Mvc\Factory\ModuleManagerFactory',
-                    ]
+                    ],
                 ],
-        );
+        ];
 
         return Arr::merge($defaults, $configuration);
     }

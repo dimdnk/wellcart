@@ -48,6 +48,7 @@ class SystemConfigEditorFactory extends AbstractNavigationFactory
             );
             $this->pages = $this->preparePages($container, $pages);
         }
+
         return $this->pages;
     }
 

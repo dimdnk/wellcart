@@ -10,6 +10,7 @@ namespace WellCart\Stdlib;
 
 interface JsonableInterface
 {
+
     /**
      * Convert the object to its JSON representation.
      *

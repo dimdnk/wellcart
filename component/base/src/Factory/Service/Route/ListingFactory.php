@@ -15,10 +15,11 @@ use WellCart\Base\Service\Route\Listing;
 
 class ListingFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): Listing
-    {
+    ): Listing {
         $config = $sm->get('config');
+
         return new Listing(
             $config['console']['router']['routes'],
             $config['router']['routes']

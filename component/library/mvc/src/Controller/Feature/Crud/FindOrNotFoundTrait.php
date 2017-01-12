@@ -10,6 +10,7 @@ namespace WellCart\Mvc\Controller\Feature\Crud;
 
 trait FindOrNotFoundTrait
 {
+
     protected function findOrNotFound($errorMessage,
         $route = null,
         $params = [],
@@ -31,6 +32,7 @@ trait FindOrNotFoundTrait
                 $reuseMatchedParams
             );
         }
+
         return $entity;
     }
 }

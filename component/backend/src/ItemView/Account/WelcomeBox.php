@@ -14,6 +14,7 @@ use WellCart\Ui\Container\ItemView\AbstractItemView;
 
 class WelcomeBox extends AbstractItemView
 {
+
     /**
      * Template
      *

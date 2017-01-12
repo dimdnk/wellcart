@@ -12,6 +12,7 @@ use Zend\Mvc\Controller\Plugin\Redirect as AbstractPlugin;
 
 class Redirect extends AbstractPlugin
 {
+
     /**
      * @return \Zend\Http\Response
      */

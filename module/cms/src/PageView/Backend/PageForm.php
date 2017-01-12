@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class PageForm extends Standard
 {
+
     public function __construct(
         PageRepository $repository,
         $variables = null,
@@ -64,6 +65,7 @@ class PageForm extends Standard
             $this->addLayoutHandle('cms/pages/form/create');
             $this->setFormTitle(__('Create new Page'));
         }
+
         return parent::prepare($template, $values);
     }
 
@@ -77,6 +79,7 @@ class PageForm extends Standard
                 'Object must implement interface WellCart\CMS\Spec\PageEntity'
             );
         }
+
         return parent::setEntity($entity);
     }
 }

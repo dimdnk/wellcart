@@ -12,6 +12,7 @@ use Zend\View\Renderer\RendererInterface;
 
 interface ViewRendererAwareInterface
 {
+
     /**
      * @inheritDoc
      */

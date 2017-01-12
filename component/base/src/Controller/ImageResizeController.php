@@ -14,6 +14,7 @@ use TckImageResizer\Controller\IndexController;
 
 class ImageResizeController extends IndexController
 {
+
     /**
      * @return \Zend\Http\Response
      */

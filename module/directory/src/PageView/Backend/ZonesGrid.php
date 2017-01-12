@@ -19,6 +19,7 @@ use WellCart\Ui\Datagrid\Column\Type as StandardColumnType;
 
 class ZonesGrid extends Standard
 {
+
     public function __construct(
         ZoneRepository $repository,
         $variables = null,
@@ -129,7 +130,7 @@ class ZonesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -148,7 +149,7 @@ class ZonesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

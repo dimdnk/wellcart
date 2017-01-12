@@ -27,6 +27,7 @@ class Country extends PhpString
         if (!empty($country['name'])) {
             return $country['name'];
         }
+
         return null;
     }
 }

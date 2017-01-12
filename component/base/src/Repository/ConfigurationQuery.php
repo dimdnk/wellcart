@@ -32,6 +32,7 @@ class ConfigurationQuery extends QueryBuilder
             ->setParameter('config_key', $key)
             ->getQuery()
             ->getOneOrNullResult(AbstractQuery::HYDRATE_SCALAR);
+
         return $result;
     }
 }

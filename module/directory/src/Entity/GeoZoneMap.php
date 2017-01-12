@@ -94,6 +94,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setCountryId($countryId): GeoZoneMapEntity
     {
         $this->countryId = $countryId;
+
         return $this;
     }
 
@@ -113,6 +114,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setZoneId($zoneId): GeoZoneMapEntity
     {
         $this->zoneId = $zoneId;
+
         return $this;
     }
 
@@ -132,6 +134,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setGeoZoneId($geoZoneId): GeoZoneMapEntity
     {
         $this->geoZoneId = $geoZoneId;
+
         return $this;
     }
 
@@ -151,6 +154,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setCountry(CountryEntity $country
     ): GeoZoneMapEntity {
         $this->country = $country;
+
         return $this;
     }
 
@@ -170,6 +174,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setZone(ZoneEntity $zone
     ): GeoZoneMapEntity {
         $this->zone = $zone;
+
         return $this;
     }
 
@@ -189,6 +194,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setGeoZone(GeoZoneEntity $geoZone
     ): GeoZoneMapEntity {
         $this->geoZone = $geoZone;
+
         return $this;
     }
 
@@ -208,6 +214,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): GeoZoneMapEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -227,6 +234,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): GeoZoneMapEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -246,6 +254,7 @@ class GeoZoneMap extends AbstractEntity implements GeoZoneMapEntity
     public function setId($id): GeoZoneMapEntity
     {
         $this->id = $id;
+
         return $this;
     }
 }

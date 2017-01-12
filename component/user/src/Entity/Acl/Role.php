@@ -21,6 +21,7 @@ use Zend\Permissions\Rbac\AbstractRole;
 
 class Role extends AbstractRole implements AclRoleEntity
 {
+
     use EntityTrait;
 
     /**
@@ -95,6 +96,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setIndex($index)
     {
         $this->index = $index;
+
         return $this;
     }
 
@@ -135,6 +137,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setParent($parent): AclRoleEntity
     {
         $this->parent = $parent;
+
         return $this;
     }
 
@@ -164,6 +167,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setChildren($children)
     {
         $this->children = $children;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setPermissions($permissions): AclRoleEntity
     {
         $this->permissions = $permissions;
+
         return $this;
     }
 
@@ -210,6 +215,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setUsers(Collection $users)
     {
         $this->users = $users;
+
         return $this;
     }
 
@@ -223,6 +229,7 @@ class Role extends AbstractRole implements AclRoleEntity
         foreach ($users as $user) {
             $this->addUser($user);
         }
+
         return $this;
     }
 
@@ -238,6 +245,7 @@ class Role extends AbstractRole implements AclRoleEntity
         }
 
         $this->users->add($user);
+
         return $this;
     }
 
@@ -251,6 +259,7 @@ class Role extends AbstractRole implements AclRoleEntity
         foreach ($users as $user) {
             $this->removeUser($user);
         }
+
         return $this;
     }
 
@@ -262,6 +271,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function removeUser(UserEntity $user
     ): AclRoleEntity {
         $this->users->removeElement($user);
+
         return $this;
     }
 
@@ -275,6 +285,7 @@ class Role extends AbstractRole implements AclRoleEntity
         foreach ($permissions as $permission) {
             $this->addPermission($permission);
         }
+
         return $this;
     }
 
@@ -290,6 +301,7 @@ class Role extends AbstractRole implements AclRoleEntity
         }
 
         $this->permissions->add($permission);
+
         return $this;
     }
 
@@ -304,6 +316,7 @@ class Role extends AbstractRole implements AclRoleEntity
         foreach ($permissions as $permission) {
             $this->removePermission($permission);
         }
+
         return $this;
     }
 
@@ -315,6 +328,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function removePermission(AclPermissionEntity $permission
     ): AclRoleEntity {
         $this->permissions->removeElement($permission);
+
         return $this;
     }
 
@@ -334,6 +348,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setDescription($description): AclRoleEntity
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -353,6 +368,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): AclRoleEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -372,6 +388,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setId($id): AclRoleEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -391,6 +408,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setIsDefault($isDefault): AclRoleEntity
     {
         $this->isDefault = (bool)$isDefault;
+
         return $this;
     }
 
@@ -410,6 +428,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setParentId($parentId): AclRoleEntity
     {
         $this->parentId = $parentId;
+
         return $this;
     }
 
@@ -439,6 +458,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setIsSystem($isSystem): AclRoleEntity
     {
         $this->isSystem = (bool)$isSystem;
+
         return $this;
     }
 
@@ -458,6 +478,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): AclRoleEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -485,6 +506,7 @@ class Role extends AbstractRole implements AclRoleEntity
     public function setName($name): AclRoleEntity
     {
         $this->name = $name;
+
         return $this;
     }
 

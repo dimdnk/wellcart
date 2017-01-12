@@ -16,6 +16,7 @@ use Zend\Stdlib\JsonSerializable;
 class ArrayCollection extends AbstractCollection implements
     JsonSerializable, ArrayableInterface, JsonableInterface
 {
+
     /**
      * Convert the object into something JSON serializable.
      *

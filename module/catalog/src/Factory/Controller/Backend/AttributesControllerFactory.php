@@ -15,12 +15,14 @@ use WellCart\Catalog\Spec\AttributeI18nRepository;
 
 class AttributesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm): AttributesController
     {
         $controller = new AttributesController(
             $sm->getServiceLocator()
                 ->get(AttributeI18nRepository::class)
         );
+
         return $controller;
     }
 }

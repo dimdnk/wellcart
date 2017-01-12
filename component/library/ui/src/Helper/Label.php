@@ -12,4 +12,5 @@ use TwbBundle\View\Helper\TwbBundleLabel;
 
 class Label extends TwbBundleLabel
 {
+
 }

@@ -19,6 +19,7 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class BrandsGrid extends Standard
 {
+
     public function __construct(
         BrandRepository $repository,
         $variables = null,
@@ -104,7 +105,7 @@ class BrandsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -123,7 +124,7 @@ class BrandsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

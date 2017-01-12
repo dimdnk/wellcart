@@ -18,6 +18,7 @@ use WellCart\ORM\AbstractRepository;
 
 class Currencies extends AbstractRepository implements CurrencyRepository
 {
+
     /**
      * @return CurrenciesQuery
      */
@@ -29,6 +30,7 @@ class Currencies extends AbstractRepository implements CurrencyRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -46,6 +48,7 @@ class Currencies extends AbstractRepository implements CurrencyRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -108,6 +111,7 @@ class Currencies extends AbstractRepository implements CurrencyRepository
         }
         ini_restore('max_execution_time');
         $this->getEntityManager()->flush();
+
         return $result;
     }
 
@@ -137,6 +141,7 @@ class Currencies extends AbstractRepository implements CurrencyRepository
                 $this->_em->flush($currency);
             }
         }
+
         return $currency;
     }
 }

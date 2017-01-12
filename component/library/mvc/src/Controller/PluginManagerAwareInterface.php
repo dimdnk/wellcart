@@ -13,6 +13,7 @@ use Zend\Mvc\Controller\PluginManager;
 
 interface PluginManagerAwareInterface
 {
+
     /**
      * @param PluginManager $plugins
      *

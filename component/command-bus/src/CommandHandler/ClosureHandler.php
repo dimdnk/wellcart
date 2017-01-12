@@ -15,6 +15,7 @@ use DoctrineModule\Persistence\ProvidesObjectManager;
 
 class ClosureHandler implements ObjectManagerAwareInterface
 {
+
     use ProvidesObjectManager;
 
     public function handle(\Closure $command)

@@ -40,6 +40,7 @@ class CategoryI18nQuery extends QueryBuilder
         $alias = $this->getRootAliases()[0];
         $this->leftJoin($alias . '.category', 'cat');
         $this->addOrderBy('cat.lft', 'ASC');
+
         return $this;
     }
 
@@ -51,12 +52,14 @@ class CategoryI18nQuery extends QueryBuilder
     {
         $alias = $this->getRootAliases()[0];
         $this->andWhere($this->expr()->andX($alias . '.categoryId <> ' . 1));
+
         return $this;
     }
 
     public function withCategory()
     {
         $this->innerJoin($this->getRootAliases()[0] . '.category', 'c');
+
         return $this;
     }
 }

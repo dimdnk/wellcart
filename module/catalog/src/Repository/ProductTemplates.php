@@ -36,6 +36,7 @@ class ProductTemplates extends AbstractRepository
             $this,
             compact('featuresList')
         );
+
         return $optionList;
     }
 
@@ -50,6 +51,7 @@ class ProductTemplates extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -67,6 +69,7 @@ class ProductTemplates extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 

@@ -38,6 +38,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('email', 'user')
         );
+
         return $user;
     }
 
@@ -61,6 +62,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('token', 'user')
         );
+
         return $user;
     }
 
@@ -84,6 +86,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('token', 'user')
         );
+
         return $user;
     }
 
@@ -109,6 +112,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -126,6 +130,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -195,6 +200,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('role', 'count')
         );
+
         return $count;
     }
 
@@ -228,6 +234,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('role', 'ids')
         );
+
         return $ids;
     }
 
@@ -250,6 +257,7 @@ class Users extends AbstractRepository implements UserRepository
             $this,
             compact('optionsList')
         );
+
         return $optionList;
     }
 }

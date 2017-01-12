@@ -28,6 +28,7 @@ class Zones extends AbstractRepository implements ZoneRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class Zones extends AbstractRepository implements ZoneRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -67,6 +69,7 @@ class Zones extends AbstractRepository implements ZoneRepository
             $this,
             compact('optionsList')
         );
+
         return $optionList;
     }
 
@@ -90,6 +93,7 @@ class Zones extends AbstractRepository implements ZoneRepository
             $this,
             compact('id', 'zone')
         );
+
         return $zone;
     }
 

@@ -15,6 +15,7 @@ use WellCart\Utility\Str;
 
 trait DomainInputFilterSpecConfigTrait
 {
+
     /**
      * Retrieve domain entity input filter specification
      *
@@ -34,7 +35,7 @@ trait DomainInputFilterSpecConfigTrait
             Config::get(
                 'domain.input_filter.'
                 . str_replace('\\', '\\\\', $className),
-                    []
+                []
             )
         );
         foreach ($fields as $field => $data) {
@@ -43,6 +44,7 @@ trait DomainInputFilterSpecConfigTrait
             Arr::set($spec, $field . '.name', $field);
             unset($fields[$field]);
         }
+
         return $spec;
     }
 }

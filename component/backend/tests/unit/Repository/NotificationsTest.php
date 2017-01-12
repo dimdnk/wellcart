@@ -15,6 +15,7 @@ use WellCart\Backend\Spec\NotificationRepository;
 
 class NotificationsTest extends TestCase
 {
+
     /**
      * @var Notifications
      */

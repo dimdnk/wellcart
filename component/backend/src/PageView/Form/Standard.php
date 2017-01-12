@@ -21,6 +21,7 @@ class Standard extends EntityPageView
      * Default layout handle for form
      */
     protected $layout = 'ui/form/standard';
+
     /**
      * Form Title
      *
@@ -66,6 +67,7 @@ class Standard extends EntityPageView
     {
         $this->form = $form;
         $this->setVariable('form', $form);
+
         return $this;
     }
 
@@ -86,6 +88,7 @@ class Standard extends EntityPageView
     {
         $this->formTitle = $formTitle;
         $this->setVariable('formTitle', $formTitle);
+
         return $this;
     }
 
@@ -132,6 +135,7 @@ class Standard extends EntityPageView
                 }
             }
         }
+
         return parent::prepare($template, $values);
     }
 
@@ -154,6 +158,7 @@ class Standard extends EntityPageView
     {
         $this->entity = $entity;
         $this->setVariable('entity', $entity);
+
         return $this;
     }
 }

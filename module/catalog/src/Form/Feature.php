@@ -22,7 +22,10 @@ use Zend\Form\FormInterface;
 
 class Feature extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'catalog_feature';
     /**
      * Form constructor
      *
@@ -38,7 +41,7 @@ class Feature extends AbstractForm
         FeatureValueI18nEntity $featureValueI18nPrototype
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('catalog_feature');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -58,10 +61,10 @@ class Feature extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -89,7 +92,7 @@ class Feature extends AbstractForm
                                 'language',
                                 'name',
                             ],
-                        ]
+                        ],
                 ],
             ]
         );
@@ -107,6 +110,7 @@ class Feature extends AbstractForm
                 'Object must implement interface WellCart\Catalog\Spec\FeatureEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -142,6 +146,7 @@ class Feature extends AbstractForm
                 }
             }
         }
+
         return $feature;
     }
 
@@ -155,6 +160,7 @@ class Feature extends AbstractForm
                 'Object must implement interface WellCart\Catalog\Spec\FeatureEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

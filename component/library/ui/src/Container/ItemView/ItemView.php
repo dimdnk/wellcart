@@ -10,4 +10,5 @@ namespace WellCart\Ui\Container\ItemView;
 
 class ItemView extends AbstractItemView
 {
+
 }

@@ -16,6 +16,7 @@ use WellCart\Utility\Arr;
 
 class PermissionsLoader
 {
+
     /**
      * @var EntityManager
      */

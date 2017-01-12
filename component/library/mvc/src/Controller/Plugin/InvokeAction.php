@@ -19,6 +19,7 @@ use Zend\Mvc\MvcEvent;
 class InvokeAction extends AbstractPlugin
     implements ServiceLocatorAwareInterface
 {
+
     use ServiceLocatorAwareTrait;
 
     public function __invoke(MvcEvent $e)
@@ -45,6 +46,7 @@ class InvokeAction extends AbstractPlugin
         );
 
         $e->setResult($actionResponse);
+
         return $actionResponse;
     }
 
@@ -63,6 +65,7 @@ class InvokeAction extends AbstractPlugin
             $dependencies[$key] = $this->serviceLocator
                 ->get($dependency);
         }
+
         return $dependencies;
     }
 }

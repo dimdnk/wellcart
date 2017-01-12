@@ -66,7 +66,7 @@ class PageFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'page-translations',
-                ]
+                ],
             ],
             ['priority' => 650]
         );
@@ -76,13 +76,13 @@ class PageFieldset extends Fieldset
                 'name'       => 'url_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('URL Key'),
+                    'label' => __('URL Key'),
                 ],
                 'attributes' => [
                     'id'               => 'cms_page_url_key',
                     'data-sluggable'   => 'true',
                     'data-slug-source' => '.cms_page_title:first',
-                    'required'         => 'required'
+                    'required'         => 'required',
                 ],
             ],
             ['priority' => 600]
@@ -99,6 +99,7 @@ class PageFieldset extends Fieldset
                 'Object must implement interface WellCart\CMS\Spec\PageEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

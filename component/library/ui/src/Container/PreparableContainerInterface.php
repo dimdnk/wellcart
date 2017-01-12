@@ -10,6 +10,7 @@ namespace WellCart\Ui\Container;
 
 interface PreparableContainerInterface
 {
+
     /**
      * This method is called to allow the action to prepare itself.
      *

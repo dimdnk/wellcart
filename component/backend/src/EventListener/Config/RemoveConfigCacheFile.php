@@ -33,6 +33,7 @@ class RemoveConfigCacheFile
                 remove_directory($fullPath);
             }
         }
+
         return true;
     }
 }

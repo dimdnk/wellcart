@@ -17,6 +17,7 @@ use URLify;
  */
 class Str
 {
+
     /**
      * Alphanumeric characters.
      *
@@ -47,6 +48,7 @@ class Str
      * @var string
      */
     const SYMBOLS = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
     /**
      * Pluralization rules.
      *
@@ -73,6 +75,7 @@ class Str
             '/s$/i'                          => "s",
             '/$/'                            => "s",
         ];
+
     /**
      * Irregular noun.
      *
@@ -149,6 +152,7 @@ class Str
                 }
             }
         }
+
         return $noun;
     }
 
@@ -200,6 +204,7 @@ class Str
         if (isset($matches[0]) && mb_strlen($matches[0]) < mb_strlen($string)) {
             return trim($matches[0]) . $suffix;
         }
+
         return $string;
     }
 
@@ -238,6 +243,7 @@ class Str
     {
         return function () use ($strings) {
             static $i = 0;
+
             return $strings[($i++ % count($strings))];
         };
     }
@@ -257,6 +263,7 @@ class Str
             return str_repeat($mask, mb_strlen($string));
         }
         $visible = mb_substr($string, -$visible);
+
         return str_pad(
             $visible,
             (mb_strlen($string) + (strlen($visible) - mb_strlen($visible))),
@@ -278,6 +285,7 @@ class Str
         preg_match(
             '/(.+)' . preg_quote($separator) . '([0-9]+)$/', $string, $matches
         );
+
         return isset($matches[2]) ?
             $matches[1] . $separator . ((int)$matches[2] + 1)
             : $string . $separator . $start;
@@ -298,6 +306,7 @@ class Str
         for ($i = 0; $i < $length; $i++) {
             $string .= mb_substr($pool, mt_rand(0, $poolSize), 1);
         }
+
         return $string;
     }
 
@@ -316,6 +325,7 @@ class Str
                 return true;
             }
         }
+
         return false;
     }
 
@@ -330,6 +340,7 @@ class Str
     public static function finish($value, $cap)
     {
         $quoted = preg_quote($cap, '/');
+
         return preg_replace('/(?:' . $quoted . ')+$/', '', $value) . $cap;
     }
 
@@ -351,6 +362,7 @@ class Str
         // to make it convenient to check if the strings starts with the given
         // pattern such as "library/*", making any string check convenient.
         $pattern = str_replace('\*', '.*', $pattern) . '\z';
+
         return (bool)preg_match('#^' . $pattern . '#', $value);
     }
 
@@ -365,7 +377,7 @@ class Str
     public static function parseCallback($callback, $default)
     {
         return static::contains($callback, '@') ? explode('@', $callback, 2)
-            : array($callback, $default);
+            : [$callback, $default];
     }
 
     /**
@@ -383,6 +395,7 @@ class Str
                 return true;
             }
         }
+
         return false;
     }
 
@@ -442,6 +455,7 @@ class Str
                 return true;
             }
         }
+
         return false;
     }
 
@@ -474,6 +488,7 @@ class Str
         for ($i = $strLen - 1; $i >= 0; $i--) {
             $result .= static::substr($str, $i, 1);
         }
+
         return $result;
     }
 
@@ -503,6 +518,7 @@ class Str
         if (is_null($length)) {
             $length = static::length($string) - $offset;
         }
+
         return iconv_substr($string, $offset, $length, 'UTF-8');
     }
 

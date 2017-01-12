@@ -103,6 +103,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setIsPrimary($isPrimary)
     {
         $this->isPrimary = $isPrimary;
+
         return $this;
     }
 
@@ -130,6 +131,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setStatus($status): CurrencyEntity
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -157,6 +159,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): CurrencyEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -176,6 +179,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): CurrencyEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -195,6 +199,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setCode($code): CurrencyEntity
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -214,6 +219,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setDecimals($decimals): CurrencyEntity
     {
         $this->decimals = $decimals;
+
         return $this;
     }
 
@@ -233,6 +239,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setDecimalsSeparator($decimalsSeparator
     ): CurrencyEntity {
         $this->decimalsSeparator = $decimalsSeparator;
+
         return $this;
     }
 
@@ -255,6 +262,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
             $exchangeRate = 1;
         }
         $this->exchangeRate = (double)$exchangeRate;
+
         return $this;
     }
 
@@ -282,6 +290,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setId($id): CurrencyEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -301,6 +310,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setSymbol($symbol): CurrencyEntity
     {
         $this->symbol = $symbol;
+
         return $this;
     }
 
@@ -320,6 +330,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setSymbolPosition($symbolPosition): CurrencyEntity
     {
         $this->symbolPosition = $symbolPosition;
+
         return $this;
     }
 
@@ -339,6 +350,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setThousandsSeparator($thousandsSeparator
     ): CurrencyEntity {
         $this->thousandsSeparator = $thousandsSeparator;
+
         return $this;
     }
 
@@ -358,6 +370,7 @@ class Currency extends AbstractEntity implements CurrencyEntity
     public function setTitle($title): CurrencyEntity
     {
         $this->title = $title;
+
         return $this;
     }
 }

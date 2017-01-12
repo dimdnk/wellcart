@@ -12,4 +12,5 @@ use Zend\Db\Adapter\Driver\Pdo\Connection as PdoConnection;
 
 class Connection extends PdoConnection
 {
+
 }

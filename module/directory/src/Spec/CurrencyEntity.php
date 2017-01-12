@@ -14,9 +14,9 @@ interface CurrencyEntity
 {
 
     const STATUS_DISABLED = 0;
-    const STATUS_ENABLED = 1;
-    const POSITION_LEFT = 'left';
-    const POSITION_RIGHT = 'right';
+    const STATUS_ENABLED  = 1;
+    const POSITION_LEFT   = 'left';
+    const POSITION_RIGHT  = 'right';
 
     /**
      * Object constructor

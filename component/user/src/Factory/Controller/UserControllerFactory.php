@@ -7,6 +7,7 @@
  */
 
 declare(strict_types = 1);
+
 namespace WellCart\User\Factory\Controller;
 
 use Interop\Container\ContainerInterface;
@@ -14,13 +15,14 @@ use WellCart\User\Controller\UserController;
 
 class UserControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): UserController
-    {
+    ): UserController {
         $serviceManager = $sm->getServiceLocator();
         $redirectCallback = $serviceManager->get(
             'zfcuser_redirect_callback'
         );
+
         return new UserController($redirectCallback);
     }
 }

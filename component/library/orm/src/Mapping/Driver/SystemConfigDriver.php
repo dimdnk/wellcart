@@ -14,6 +14,7 @@ use WellCart\Utility\Config;
 
 class SystemConfigDriver extends YamlDriver
 {
+
     /**
      * Gets the element of schema meta data for the class from the mapping file.
      * This will lazily load the mapping file if it is not loaded yet.
@@ -44,6 +45,7 @@ class SystemConfigDriver extends YamlDriver
             throw MappingException::invalidMappingFile($className, $className);
         }
         $this->classCache[$className] = $result;
+
         return $result;
     }
 
@@ -52,7 +54,7 @@ class SystemConfigDriver extends YamlDriver
      */
     protected function initialize()
     {
-        $this->classCache = array();
+        $this->classCache = [];
     }
 
     /**

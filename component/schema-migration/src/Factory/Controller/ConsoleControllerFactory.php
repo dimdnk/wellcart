@@ -16,11 +16,13 @@ use WellCart\SchemaMigration\Controller\ConsoleController;
 
 class ConsoleControllerFactory
 {
+
     public function __invoke(ContainerInterface $container): ConsoleController
     {
         $application = $container
             ->getServiceLocator()
             ->get(PhinxApplication::class);
+
         return new ConsoleController($application);
     }
 }

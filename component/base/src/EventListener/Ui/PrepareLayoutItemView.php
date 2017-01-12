@@ -24,6 +24,7 @@ class PrepareLayoutItemView
     {
         $block = $event->getParams()['block'];
         $block->prepare();
+
         return $block;
     }
 }

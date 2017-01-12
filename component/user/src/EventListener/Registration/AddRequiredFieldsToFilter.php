@@ -74,6 +74,7 @@ class AddRequiredFieldsToFilter
                 ],
             ]
         );
+
         return true;
     }
 }

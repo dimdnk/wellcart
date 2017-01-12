@@ -13,6 +13,7 @@ use PHPUnit\Framework\TestCase;
 
 class ValidTest extends TestCase
 {
+
     protected static $hasInternet;
 
     /**
@@ -22,19 +23,19 @@ class ValidTest extends TestCase
      */
     public function providerAlpha()
     {
-        return array(
-            array('asdavafaiwnoabwiubafpowf', true),
-            array('!aidhfawiodb', false),
-            array('51535oniubawdawd78', false),
-            array('!"£$(G$W£(HFW£F(HQ)"n', false),
+        return [
+            ['asdavafaiwnoabwiubafpowf', true],
+            ['!aidhfawiodb', false],
+            ['51535oniubawdawd78', false],
+            ['!"£$(G$W£(HFW£F(HQ)"n', false],
             // UTF-8 tests
-            array('あいうえお', true, true),
-            array('¥', false, true),
+            ['あいうえお', true, true],
+            ['¥', false, true],
             // Empty test
-            array('', false, false),
-            array(null, false, false),
-            array(false, false, false),
-        );
+            ['', false, false],
+            [null, false, false],
+            [false, false, false],
+        ];
     }
 
     /**
@@ -61,20 +62,20 @@ class ValidTest extends TestCase
      */
     public function provideAlphaNumeric()
     {
-        return array(
-            array('abcd1234', true),
-            array('abcd', true),
-            array('1234', true),
-            array('abc123&^/-', false),
+        return [
+            ['abcd1234', true],
+            ['abcd', true],
+            ['1234', true],
+            ['abc123&^/-', false],
             // UTF-8 tests
-            array('あいうえお', true, true),
-            array('零一二三四五', true, true),
-            array('あい四五£^£^', false, true),
+            ['あいうえお', true, true],
+            ['零一二三四五', true, true],
+            ['あい四五£^£^', false, true],
             // Empty test
-            array('', false, false),
-            array(null, false, false),
-            array(false, false, false),
-        );
+            ['', false, false],
+            [null, false, false],
+            [false, false, false],
+        ];
     }
 
     /**
@@ -101,17 +102,17 @@ class ValidTest extends TestCase
      */
     public function providerAlphaDash()
     {
-        return array(
-            array('abcdef', true),
-            array('12345', true),
-            array('abcd1234', true),
-            array('abcd1234-', true),
-            array('abc123&^/-', false),
+        return [
+            ['abcdef', true],
+            ['12345', true],
+            ['abcd1234', true],
+            ['abcd1234-', true],
+            ['abc123&^/-', false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -145,23 +146,23 @@ class ValidTest extends TestCase
      */
     public function providerDate()
     {
-        return array(
-            array('now', true),
-            array('10 September 2010', true),
-            array('+1 day', true),
-            array('+1 week', true),
-            array('+1 week 2 days 4 hours 2 seconds', true),
-            array('next Thursday', true),
-            array('last Monday', true),
+        return [
+            ['now', true],
+            ['10 September 2010', true],
+            ['+1 day', true],
+            ['+1 week', true],
+            ['+1 week 2 days 4 hours 2 seconds', true],
+            ['next Thursday', true],
+            ['last Monday', true],
 
-            array('blarg', false),
-            array('in the year 2000', false),
-            array('324824', false),
+            ['blarg', false],
+            ['in the year 2000', false],
+            ['324824', false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -185,18 +186,18 @@ class ValidTest extends TestCase
      */
     public function providerDecimal()
     {
-        return array(
+        return [
             // Empty test
-            array('', 2, null, false),
-            array(null, 2, null, false),
-            array(false, 2, null, false),
-            array('45.1664', 3, null, false),
-            array('45.1664', 4, null, true),
-            array('45.1664', 4, 2, true),
-            array('-45.1664', 4, null, true),
-            array('+45.1664', 4, null, true),
-            array('-45.1664', 3, null, false),
-        );
+            ['', 2, null, false],
+            [null, 2, null, false],
+            [false, 2, null, false],
+            ['45.1664', 3, null, false],
+            ['45.1664', 4, null, true],
+            ['45.1664', 4, 2, true],
+            ['-45.1664', 4, null, true],
+            ['+45.1664', 4, null, true],
+            ['-45.1664', 3, null, false],
+        ];
     }
 
     /**
@@ -226,18 +227,18 @@ class ValidTest extends TestCase
      */
     public function providerDigit()
     {
-        return array(
-            array('12345', true),
-            array('10.5', false),
-            array('abcde', false),
-            array('abcd1234', false),
-            array('-5', false),
-            array(-5, false),
+        return [
+            ['12345', true],
+            ['10.5', false],
+            ['abcde', false],
+            ['abcd1234', false],
+            ['-5', false],
+            [-5, false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -270,23 +271,23 @@ class ValidTest extends TestCase
      */
     public function providerColor()
     {
-        return array(
-            array('#000000', true),
-            array('#GGGGGG', false),
-            array('#AbCdEf', true),
-            array('#000', true),
-            array('#abc', true),
-            array('#DEF', true),
-            array('000000', true),
-            array('GGGGGG', false),
-            array('AbCdEf', true),
-            array('000', true),
-            array('DEF', true),
+        return [
+            ['#000000', true],
+            ['#GGGGGG', false],
+            ['#AbCdEf', true],
+            ['#000', true],
+            ['#abc', true],
+            ['#DEF', true],
+            ['000000', true],
+            ['GGGGGG', false],
+            ['AbCdEf', true],
+            ['000', true],
+            ['DEF', true],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -307,20 +308,20 @@ class ValidTest extends TestCase
 
     public function providerLuhn()
     {
-        return array(
-            array('4222222222222', true),
-            array('4012888888881881', true),
-            array('5105105105105100', true),
-            array('6011111111111117', true),
-            array('60111111111111.7', false),
-            array('6011111111111117X', false),
-            array('6011111111111117 ', false),
-            array('WORD ', false),
+        return [
+            ['4222222222222', true],
+            ['4012888888881881', true],
+            ['5105105105105100', true],
+            ['6011111111111117', true],
+            ['60111111111111.7', false],
+            ['6011111111111117X', false],
+            ['6011111111111117 ', false],
+            ['WORD ', false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -346,24 +347,24 @@ class ValidTest extends TestCase
      */
     public function providerEmail()
     {
-        return array(
-            array('foo', true, false),
-            array('foo', false, false),
+        return [
+            ['foo', true, false],
+            ['foo', false, false],
 
-            array('foo@bar', true, true),
+            ['foo@bar', true, true],
             // RFC is less strict than the normal regex, presumably to allow
             //  admin@localhost, therefore we IGNORE IT!!!
-            array('foo@bar', false, false),
-            array('foo@bar.com', false, true),
-            array('foo@barcom:80', false, false),
-            array('foo@bar.sub.com', false, true),
-            array('foo+asd@bar.sub.com', false, true),
-            array('foo.asd@bar.sub.com', false, true),
+            ['foo@bar', false, false],
+            ['foo@bar.com', false, true],
+            ['foo@barcom:80', false, false],
+            ['foo@bar.sub.com', false, true],
+            ['foo+asd@bar.sub.com', false, true],
+            ['foo.asd@bar.sub.com', false, true],
             // Empty test
-            array('', true, false),
-            array(null, true, false),
-            array(false, true, false),
-        );
+            ['', true, false],
+            [null, true, false],
+            [false, true, false],
+        ];
     }
 
     /**
@@ -392,15 +393,15 @@ class ValidTest extends TestCase
      */
     public function providerEmailDomain()
     {
-        return array(
-            array('google.com', true),
+        return [
+            ['google.com', true],
             // Don't anybody dare register this...
-            array('DAWOMAWIDAIWNDAIWNHDAWIHDAIWHDAIWOHDAIOHDAIWHD.com', false),
+            ['DAWOMAWIDAIWNDAIWNHDAWIHDAIWHDAIWOHDAIOHDAIWHD.com', false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -443,6 +444,7 @@ class ValidTest extends TestCase
             $sock = @fsockopen("www.google.com", 80, $errno, $errstr, 1);
             self::$hasInternet = (bool)$sock ? true : false;
         }
+
         return self::$hasInternet;
 
     }
@@ -454,18 +456,18 @@ class ValidTest extends TestCase
      */
     public function providerExactLength()
     {
-        return array(
-            array('somestring', 10, true),
-            array('somestring', 11, false),
-            array('anotherstring', 13, true),
+        return [
+            ['somestring', 10, true],
+            ['somestring', 11, false],
+            ['anotherstring', 13, true],
             // Empty test
-            array('', 10, false),
-            array(null, 10, false),
-            array(false, 10, false),
+            ['', 10, false],
+            [null, 10, false],
+            [false, 10, false],
             // Test array of allowed lengths
-            array('somestring', array(1, 3, 5, 7, 9, 10), true),
-            array('somestring', array(1, 3, 5, 7, 9), false),
-        );
+            ['somestring', [1, 3, 5, 7, 9, 10], true],
+            ['somestring', [1, 3, 5, 7, 9], false],
+        ];
     }
 
     /**
@@ -498,16 +500,16 @@ class ValidTest extends TestCase
      */
     public function providerEquals()
     {
-        return array(
-            array('foo', 'foo', true),
-            array('1', '1', true),
-            array(1, '1', false),
-            array('011', 011, false),
+        return [
+            ['foo', 'foo', true],
+            ['1', '1', true],
+            [1, '1', false],
+            ['011', 011, false],
             // Empty test
-            array('', 123, false),
-            array(null, 123, false),
-            array(false, 123, false),
-        );
+            ['', 123, false],
+            [null, 123, false],
+            [false, 123, false],
+        ];
     }
 
     /**
@@ -537,16 +539,16 @@ class ValidTest extends TestCase
      */
     public function providerIp()
     {
-        return array(
-            array('75.125.175.50', false, true),
-            array('256.257.258.259', false, false),
-            array('255.255.255.255', false, false),
-            array('192.168.0.1', false, false),
+        return [
+            ['75.125.175.50', false, true],
+            ['256.257.258.259', false, false],
+            ['255.255.255.255', false, false],
+            ['192.168.0.1', false, false],
             // Empty test
-            array('', true, false),
-            array(null, true, false),
-            array(false, true, false),
-        );
+            ['', true, false],
+            [null, true, false],
+            [false, true, false],
+        ];
     }
 
     /**
@@ -573,18 +575,18 @@ class ValidTest extends TestCase
      */
     public function providerMaxLength()
     {
-        return array(
+        return [
             // Border line
-            array('some', 4, true),
+            ['some', 4, true],
             // Exceeds
-            array('UPPERCASEDEMO', 2, false),
+            ['UPPERCASEDEMO', 2, false],
             // Under
-            array('SnakeCaseDemo', 13, true),
+            ['SnakeCaseDemo', 13, true],
             // Empty test
-            array('', -10, false),
-            array(null, -10, false),
-            array(false, -10, false),
-        );
+            ['', -10, false],
+            [null, -10, false],
+            [false, -10, false],
+        ];
     }
 
     /**
@@ -613,15 +615,15 @@ class ValidTest extends TestCase
      */
     public function providerMinLength()
     {
-        return array(
-            array('This is obviously long enough', 10, true),
-            array('This is not', 101, false),
-            array('This is on the borderline', 25, true),
+        return [
+            ['This is obviously long enough', 10, true],
+            ['This is not', 101, false],
+            ['This is on the borderline', 25, true],
             // Empty test
-            array('', 10, false),
-            array(null, 10, false),
-            array(false, 10, false),
-        );
+            ['', 10, false],
+            [null, 10, false],
+            [false, 10, false],
+        ];
     }
 
     /**
@@ -657,17 +659,17 @@ class ValidTest extends TestCase
         $ao1 = new ArrayObject;
         $ao1['test'] = 'value';
 
-        return array(
-            array(array(), false),
-            array(null, false),
-            array('', false),
-            array($ao, false),
-            array($ao1, true),
-            array(array(null), true),
-            array(0, true),
-            array('0', true),
-            array('Something', true),
-        );
+        return [
+            [[], false],
+            [null, false],
+            ['', false],
+            [$ao, false],
+            [$ao1, true],
+            [[null], true],
+            [0, true],
+            ['0', true],
+            ['Something', true],
+        ];
     }
 
     /**
@@ -693,29 +695,29 @@ class ValidTest extends TestCase
      */
     public function providerNumeric()
     {
-        return array(
-            array(12345, true),
-            array(123.45, true),
-            array('12345', true),
-            array('10.5', true),
-            array('-10.5', true),
-            array('10.5a', false),
+        return [
+            [12345, true],
+            [123.45, true],
+            ['12345', true],
+            ['10.5', true],
+            ['-10.5', true],
+            ['10.5a', false],
             // @issue 3240
-            array(.4, true),
-            array(-.4, true),
-            array(4., true),
-            array(-4., true),
-            array('.5', true),
-            array('-.5', true),
-            array('5.', true),
-            array('-5.', true),
-            array('.', false),
-            array('1.2.3', false),
+            [.4, true],
+            [-.4, true],
+            [4., true],
+            [-4., true],
+            ['.5', true],
+            ['-.5', true],
+            ['5.', true],
+            ['-5.', true],
+            ['.', false],
+            ['1.2.3', false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
     }
 
     /**
@@ -741,22 +743,22 @@ class ValidTest extends TestCase
      */
     public function providerPhone()
     {
-        return array(
-            array('0163634840', null, true),
-            array('+27173634840', null, true),
-            array('123578', null, false),
+        return [
+            ['0163634840', null, true],
+            ['+27173634840', null, true],
+            ['123578', null, false],
             // Some uk numbers
-            array('01234456778', null, true),
-            array('+0441234456778', null, false),
+            ['01234456778', null, true],
+            ['+0441234456778', null, false],
             // Google UK case you're interested
-            array('+44 20-7031-3000', array(12), true),
+            ['+44 20-7031-3000', [12], true],
             // BT Corporate
-            array('020 7356 5000', null, true),
+            ['020 7356 5000', null, true],
             // Empty test
-            array('', null, false),
-            array(null, null, false),
-            array(false, null, false),
-        );
+            ['', null, false],
+            [null, null, false],
+            [false, null, false],
+        ];
     }
 
     /**
@@ -781,16 +783,16 @@ class ValidTest extends TestCase
      */
     public function providerRegex()
     {
-        return array(
-            array('hello world', '/[a-zA-Z\s]++/', true),
-            array('123456789', '/[0-9]++/', true),
-            array('£$%£%', '/[abc]/', false),
-            array('Good evening', '/hello/', false),
+        return [
+            ['hello world', '/[a-zA-Z\s]++/', true],
+            ['123456789', '/[0-9]++/', true],
+            ['£$%£%', '/[abc]/', false],
+            ['Good evening', '/hello/', false],
             // Empty test
-            array('', '/hello/', false),
-            array(null, '/hello/', false),
-            array(false, '/hello/', false),
-        );
+            ['', '/hello/', false],
+            [null, '/hello/', false],
+            [false, '/hello/', false],
+        ];
     }
 
     /**
@@ -817,30 +819,30 @@ class ValidTest extends TestCase
      */
     public function providerRange()
     {
-        return array(
-            array(1, 0, 2, null, true),
-            array(-1, -5, 0, null, true),
-            array(-1, 0, 1, null, false),
-            array(1, 0, 0, null, false),
-            array(2147483647, 0, 200000000000000, null, true),
-            array(-2147483647, -2147483655, 2147483645, null, true),
+        return [
+            [1, 0, 2, null, true],
+            [-1, -5, 0, null, true],
+            [-1, 0, 1, null, false],
+            [1, 0, 0, null, false],
+            [2147483647, 0, 200000000000000, null, true],
+            [-2147483647, -2147483655, 2147483645, null, true],
             // #4043
-            array(2, 0, 10, 2, true),
-            array(3, 0, 10, 2, false),
+            [2, 0, 10, 2, true],
+            [3, 0, 10, 2, false],
             // #4672
-            array(0, 0, 10, null, true),
-            array(10, 0, 10, null, true),
-            array(-10, -10, 10, null, true),
-            array(-10, -1, 1, null, false),
-            array(0, 0, 10, 2, true), // with $step
-            array(10, 0, 10, 2, true),
-            array(10, 0, 10, 3, false), // max outside $step
-            array(12, 0, 12, 3, true),
+            [0, 0, 10, null, true],
+            [10, 0, 10, null, true],
+            [-10, -10, 10, null, true],
+            [-10, -1, 1, null, false],
+            [0, 0, 10, 2, true], // with $step
+            [10, 0, 10, 2, true],
+            [10, 0, 10, 3, false], // max outside $step
+            [12, 0, 12, 3, true],
             // Empty test
-            array('', 5, 10, null, false),
-            array(null, 5, 10, null, false),
-            array(false, 5, 10, null, false),
-        );
+            ['', 5, 10, null, false],
+            [null, 5, 10, null, false],
+            [false, 5, 10, null, false],
+        ];
     }
 
     /**
@@ -870,43 +872,43 @@ class ValidTest extends TestCase
      */
     public function providerUrl()
     {
-        $data = array(
-            array('http://google.com', true),
-            array('http://google.com/', true),
-            array('http://google.com/?q=abc', true),
-            array('http://google.com/#hash', true),
-            array('http://localhost', true),
-            array('http://hello-world.pl', true),
-            array('http://hello--world.pl', true),
-            array('http://h.e.l.l.0.pl', true),
-            array('http://server.tld/get/info', true),
-            array('http://127.0.0.1', true),
-            array('http://127.0.0.1:80', true),
-            array('http://user@127.0.0.1', true),
-            array('http://user:pass@127.0.0.1', true),
-            array('ftp://my.server.com', true),
-            array('rss+xml://rss.example.com', true),
+        $data = [
+            ['http://google.com', true],
+            ['http://google.com/', true],
+            ['http://google.com/?q=abc', true],
+            ['http://google.com/#hash', true],
+            ['http://localhost', true],
+            ['http://hello-world.pl', true],
+            ['http://hello--world.pl', true],
+            ['http://h.e.l.l.0.pl', true],
+            ['http://server.tld/get/info', true],
+            ['http://127.0.0.1', true],
+            ['http://127.0.0.1:80', true],
+            ['http://user@127.0.0.1', true],
+            ['http://user:pass@127.0.0.1', true],
+            ['ftp://my.server.com', true],
+            ['rss+xml://rss.example.com', true],
 
-            array('http://google.2com', false),
-            array('http://google.com?q=abc', false),
-            array('http://google.com#hash', false),
-            array('http://hello-.pl', false),
-            array('http://hel.-lo.world.pl', false),
-            array('http://ww£.google.com', false),
-            array('http://127.0.0.1334', false),
-            array('http://127.0.0.1.1', false),
-            array('http://user:@127.0.0.1', false),
-            array("http://finalnewline.com\n", false),
+            ['http://google.2com', false],
+            ['http://google.com?q=abc', false],
+            ['http://google.com#hash', false],
+            ['http://hello-.pl', false],
+            ['http://hel.-lo.world.pl', false],
+            ['http://ww£.google.com', false],
+            ['http://127.0.0.1334', false],
+            ['http://127.0.0.1.1', false],
+            ['http://user:@127.0.0.1', false],
+            ["http://finalnewline.com\n", false],
             // Empty test
-            array('', false),
-            array(null, false),
-            array(false, false),
-        );
+            ['', false],
+            [null, false],
+            [false, false],
+        ];
 
-        $data[] = array('http://' . str_repeat('123456789.', 25) . 'com/',
-                        true); // 253 chars
-        $data[] = array('http://' . str_repeat('123456789.', 25) . 'info/',
-                        false); // 254 chars
+        $data[] = ['http://' . str_repeat('123456789.', 25) . 'com/',
+                   true]; // 253 chars
+        $data[] = ['http://' . str_repeat('123456789.', 25) . 'info/',
+                   false]; // 254 chars
 
         return $data;
     }
@@ -932,15 +934,15 @@ class ValidTest extends TestCase
      */
     public function providerMatches()
     {
-        return array(
-            array(array('a' => 'hello', 'b' => 'hello'), 'a', 'b', true),
-            array(array('a' => 'hello', 'b' => 'hello '), 'a', 'b', false),
-            array(array('a' => '1', 'b' => 1), 'a', 'b', false),
+        return [
+            [['a' => 'hello', 'b' => 'hello'], 'a', 'b', true],
+            [['a' => 'hello', 'b' => 'hello '], 'a', 'b', false],
+            [['a' => '1', 'b' => 1], 'a', 'b', false],
             // Empty test
-            array(array('a' => '', 'b' => 'hello'), 'a', 'b', false),
-            array(array('a' => null, 'b' => 'hello'), 'a', 'b', false),
-            array(array('a' => false, 'b' => 'hello'), 'a', 'b', false),
-        );
+            [['a' => '', 'b' => 'hello'], 'a', 'b', false],
+            [['a' => null, 'b' => 'hello'], 'a', 'b', false],
+            [['a' => false, 'b' => 'hello'], 'a', 'b', false],
+        ];
     }
 
     /**

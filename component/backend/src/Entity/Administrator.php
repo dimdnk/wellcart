@@ -16,15 +16,16 @@ use WellCart\User\Spec\UserEntity;
 
 class Administrator extends AbstractUser implements AdministratorEntity
 {
+
     /**
      * @param string $emailConfirmationToken
      *
      * @return UserEntity
      */
     public function setEmailConfirmationToken($emailConfirmationToken
-    ): UserEntity
-    {
+    ): UserEntity {
         $this->emailConfirmationToken = null;
+
         return $this;
     }
 }

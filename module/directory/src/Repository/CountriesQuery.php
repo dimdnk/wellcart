@@ -15,11 +15,13 @@ use WellCart\ORM\QueryBuilder;
 
 class CountriesQuery extends QueryBuilder
 {
+
     public function primary()
     {
         $this->andWhere($this->getRootAliases()[0] . '.isPrimary = :is_primary')
             ->setParameter('is_primary', true)
             ->setMaxResults(1);
+
         return $this;
     }
 
@@ -27,6 +29,7 @@ class CountriesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', CountryEntity::STATUS_ENABLED);
+
         return $this;
     }
 
@@ -34,6 +37,7 @@ class CountriesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', CountryEntity::STATUS_DISABLED);
+
         return $this;
     }
 }

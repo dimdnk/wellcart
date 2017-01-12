@@ -16,6 +16,7 @@ use Zend\Authentication\AuthenticationService;
 
 class UserEntityListenerFactory
 {
+
     public function __invoke(
         ContainerInterface $container
     ): UserEntityListener {

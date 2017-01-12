@@ -20,7 +20,10 @@ use Zend\Form\FormInterface;
 
 class Category extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'catalog_category';
     /**
      * Form constructor
      *
@@ -34,7 +37,7 @@ class Category extends AbstractForm
         CategoryI18nEntity $categoryTranslationPrototype
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('catalog_category');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -52,10 +55,10 @@ class Category extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save')
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -97,6 +100,7 @@ class Category extends AbstractForm
                 'Object must implement interface WellCart\Catalog\Spec\CategoryEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -110,6 +114,7 @@ class Category extends AbstractForm
                 'Object must implement interface WellCart\Catalog\Spec\CategoryEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

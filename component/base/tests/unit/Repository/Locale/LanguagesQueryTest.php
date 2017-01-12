@@ -14,6 +14,7 @@ use WellCart\Base\Entity\Locale\Language;
 
 class LanguagesQueryTest extends TestCase
 {
+
     /**
      * @var LanguagesQuery
      */

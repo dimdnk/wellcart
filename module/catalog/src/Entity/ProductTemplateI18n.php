@@ -33,6 +33,7 @@ class ProductTemplateI18n extends AbstractEntity
      * @var \WellCart\Base\Spec\LocaleLanguageEntity
      */
     protected $language;
+
     /**
      * Name
      *
@@ -63,6 +64,7 @@ class ProductTemplateI18n extends AbstractEntity
     public function setProductTemplate(ProductTemplateEntity $productTemplate = null
     ) {
         $this->productTemplate = $productTemplate;
+
         return $this;
     }
 
@@ -82,6 +84,7 @@ class ProductTemplateI18n extends AbstractEntity
     public function setLanguage(LocaleLanguageEntity $language = null
     ): ProductTemplateI18nEntity {
         $this->language = $language;
+
         return $this;
     }
 
@@ -101,6 +104,7 @@ class ProductTemplateI18n extends AbstractEntity
     public function setId($id): ProductTemplateI18nEntity
     {
         $this->productTemplateId = $id;
+
         return $this;
     }
 
@@ -120,6 +124,7 @@ class ProductTemplateI18n extends AbstractEntity
     public function setName($name): ProductTemplateI18nEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -139,6 +144,7 @@ class ProductTemplateI18n extends AbstractEntity
     public function setProductTemplateId($productTemplateId
     ): ProductTemplateI18nEntity {
         $this->productTemplateId = $productTemplateId;
+
         return $this;
     }
 }

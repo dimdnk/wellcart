@@ -12,4 +12,5 @@ use TwbBundle\View\Helper\TwbBundleButtonGroup;
 
 class ButtonGroup extends TwbBundleButtonGroup
 {
+
 }

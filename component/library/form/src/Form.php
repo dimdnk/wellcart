@@ -11,6 +11,8 @@ namespace WellCart\Form;
 use WellCart\InputFilter\DomainInputFilterSpecConfigTrait;
 use WellCart\ORM\Entity;
 use WellCart\Utility\Arr;
+use Zend\EventManager\EventManagerAwareInterface;
+use Zend\EventManager\EventManagerAwareTrait;
 use Zend\Form\ElementInterface;
 use Zend\Form\FieldsetInterface;
 use Zend\Form\FormInterface;
@@ -20,11 +22,9 @@ use Zend\InputFilter\InputFilterInterface;
 use Zend\InputFilter\InputFilterProviderInterface;
 use Zend\Stdlib\PriorityList;
 
-use Zend\EventManager\EventManagerAwareInterface;
-use Zend\EventManager\EventManagerAwareTrait;
-
 class Form extends \Zend\Form\Form implements EventManagerAwareInterface
 {
+
     use DomainInputFilterSpecConfigTrait,
         AddAttributesToRequiredFieldsTrait,
         EventManagerAwareTrait;
@@ -48,6 +48,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
      * @var string
      */
     protected $layout = 'partial/form/layout/standard';
+
     /**
      * @var string
      */
@@ -59,15 +60,16 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
     public function __construct($name = null, $options = [])
     {
         $this->getEventManager()
-          ->setIdentifiers([
-          __CLASS__,
-          get_class($this)
-        ]);
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
         parent::__construct($name, $options);
         $this->toolbarButtons = new PriorityList;
         $this->toolbarButtons->isLIFO(false);
     }
-
 
 
     public function backButton(bool $value = null)
@@ -75,6 +77,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         if ($value !== null) {
             $this->backButton = $value;
         }
+
         return $this->backButton;
     }
 
@@ -83,6 +86,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         if ($value !== null) {
             $this->resetButton = $value;
         }
+
         return $this->resetButton;
     }
 
@@ -126,13 +130,14 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         $this->toolbarButtons->insert(
             $name, $this->get($name), $priority
         );
+
         return $this;
     }
 
     /**
      * @inheritdoc
      */
-    public function add($elementOrFieldset, array $flags = array())
+    public function add($elementOrFieldset, array $flags = [])
     {
         $this->getEventManager()->trigger
         (
@@ -149,6 +154,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('elementOrFieldset', 'flags', 'result')
         );
+
         return $result;
     }
 
@@ -173,6 +179,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('name')
         );
+
         return $this;
     }
 
@@ -192,6 +199,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this, compact('elementOrFieldset')
         );
+
         return $this;
     }
 
@@ -209,6 +217,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
                 $this,
                 ['inputFilter' => $this->filter]
             );
+
             return $this->filter;
         }
 
@@ -278,6 +287,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this
         );
+
         return $this;
     }
 
@@ -303,6 +313,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this
         );
+
         return $result;
     }
 
@@ -326,6 +337,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('form')
         );
+
         return $result;
     }
 
@@ -349,6 +361,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('data')
         );
+
         return $result;
     }
 
@@ -373,13 +386,14 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('object', 'flags', 'result')
         );
+
         return $result;
     }
 
     /**
      * @inheritdoc
      */
-    public function bindValues(array $values = array())
+    public function bindValues(array $values = [])
     {
         $this->getEventManager()->trigger
         (
@@ -396,6 +410,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('values', 'result')
         );
+
         return $result;
     }
 
@@ -419,6 +434,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('hydrator', 'result')
         );
+
         return $result;
     }
 
@@ -442,6 +458,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('bindOnValidateFlag', 'result')
         );
+
         return $result;
     }
 
@@ -463,6 +480,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this
         );
+
         return $result;
 
     }
@@ -487,6 +505,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('baseFieldset', 'result')
         );
+
         return $result;
     }
 
@@ -508,6 +527,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this
         );
+
         return $result;
     }
 
@@ -529,6 +549,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this, compact('result')
         );
+
         return $result;
     }
 
@@ -550,6 +571,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this, compact('result')
         );
+
         return $result;
     }
 
@@ -571,6 +593,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             __FUNCTION__ . '.post',
             $this, compact('flag', 'data')
         );
+
         return $data;
     }
 
@@ -587,13 +610,14 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         );
 
         $result = call_user_func_array(
-            array('parent', __FUNCTION__), $arguments
+            ['parent', __FUNCTION__], $arguments
         );
         $this->getEventManager()->trigger
         (
             __FUNCTION__ . '.post',
             $this, compact('arguments', 'result')
         );
+
         return $result;
     }
 
@@ -617,6 +641,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('inputFilter', 'result')
         );
+
         return $result;
 
     }
@@ -637,6 +662,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
     public function setLayout(string $layout)
     {
         $this->layout = $layout;
+
         return $this;
     }
 
@@ -648,6 +674,27 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
     public function isMultipart(): bool
     {
         return ($this->getAttribute('enctype') == 'multipart/form-data');
+    }
+
+    /**
+     * @return string
+     */
+    public function getUiConfigSection()
+    {
+        return ($this->uiConfigSection) ? $this->uiConfigSection
+            : $this->getName();
+    }
+
+    /**
+     * @param string $uiConfigSection
+     *
+     * @return Form
+     */
+    public function setUiConfigSection(string $uiConfigSection)
+    {
+        $this->uiConfigSection = $uiConfigSection;
+
+        return $this;
     }
 
     /**
@@ -670,6 +717,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('values', 'match', 'result')
         );
+
         return $result;
     }
 
@@ -696,27 +744,9 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             $this,
             compact('formOrFieldset', 'data', 'validationGroup', 'result')
         );
+
         return $result;
 
-    }
-
-    /**
-     * @return string
-     */
-    public function getUiConfigSection()
-    {
-        return ($this->uiConfigSection) ? $this->uiConfigSection : $this->getName();
-    }
-
-    /**
-     * @param string $uiConfigSection
-     *
-     * @return Form
-     */
-    public function setUiConfigSection(string $uiConfigSection)
-    {
-        $this->uiConfigSection = $uiConfigSection;
-        return $this;
     }
 
 

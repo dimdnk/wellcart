@@ -27,8 +27,8 @@ return [
             'orm_default'             => [
                 'drivers' => [
                     'WellCart\Catalog\Entity' => 'wellcart_catalog_driver',
-                ]
-            ]
+                ],
+            ],
         ],
         'entity_resolver' => [
             'orm_default' => [
@@ -76,6 +76,6 @@ return [
                     'Catalog::ProductImage' => Entity\ProductImage::class,
                 ],
             ],
-        ]
+        ],
     ],
 ];

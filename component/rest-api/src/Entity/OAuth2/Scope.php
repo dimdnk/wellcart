@@ -17,7 +17,9 @@ use WellCart\ORM\EntityTrait;
 
 class Scope extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -89,6 +91,7 @@ class Scope extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

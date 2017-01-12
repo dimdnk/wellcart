@@ -14,14 +14,14 @@ use Interop\Container\ContainerInterface;
 
 class LocaleLanguageSelectorFactory
 {
+
     /**
      * @param ContainerInterface $sm
      *
      * @return \WellCart\Form\Element\Select
      */
     public function __invoke(ContainerInterface $sm
-    ): \WellCart\Form\Element\Select
-    {
+    ): \WellCart\Form\Element\Select {
         $services = $sm->getServiceLocator();
         $languages = $services->get(
             'locale\active_languages_collection'
@@ -30,6 +30,7 @@ class LocaleLanguageSelectorFactory
         foreach ($languages as $language) {
             $options[$language->getId()] = $language->getName();
         }
+
         return new \WellCart\Form\Element\Select(
             null,
             ['value_options' => $options]

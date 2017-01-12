@@ -16,6 +16,7 @@ use WellCart\SchemaMigration\Console\PhinxApplication;
 
 class ConsoleController extends AbstractActionController
 {
+
     /**
      * @var \Symfony\Component\Console\Application
      */
@@ -42,6 +43,7 @@ class ConsoleController extends AbstractActionController
         if (is_numeric($exitCode)) {
             $model = $this->createConsoleModel();
             $model->setErrorLevel($exitCode);
+
             return $model;
         }
     }

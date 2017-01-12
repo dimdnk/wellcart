@@ -42,8 +42,8 @@ class AttributeFieldset extends Fieldset
                 'name'       => 'backend_name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Description'),
-                    'help-block'       => __(
+                    'label'      => __('Description'),
+                    'help-block' => __(
                         'Internal name for administrators.'
                     ),
                 ],
@@ -59,7 +59,7 @@ class AttributeFieldset extends Fieldset
                 'name'       => 'product_templates',
                 'type'       => 'catalogProductTemplatesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Product Templates'),
+                    'label' => __('Product Templates'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -84,7 +84,7 @@ class AttributeFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'attribute-i18n',
-                ]
+                ],
             ],
             ['priority' => 750]
         );
@@ -95,7 +95,7 @@ class AttributeFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order')
+                    'label' => __('Sort Order'),
                 ],
                 'attributes' => [
                     'id'    => 'catalog_attribute_sort_order',
@@ -110,7 +110,7 @@ class AttributeFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_attribute_value',
                 'options'    => [
-                    'label'       => __('Add Attribute Value')
+                    'label' => __('Add Attribute Value'),
                 ],
                 'attributes' => [
                     'id'               => 'catalog_attribute_add_new_attribute_value',
@@ -150,7 +150,7 @@ class AttributeFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'attribute-values',
-                ]
+                ],
             ]
         );
     }
@@ -165,6 +165,7 @@ class AttributeFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\AttributeEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

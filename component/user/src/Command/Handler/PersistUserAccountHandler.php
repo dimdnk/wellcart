@@ -20,6 +20,7 @@ use WellCart\Utility\Str;
 class PersistUserAccountHandler
     implements ObjectManagerAwareInterface
 {
+
     use ProvidesObjectManager;
 
     /**
@@ -67,6 +68,7 @@ class PersistUserAccountHandler
             } else {
                 $this->getObjectManager()->persist($user);
             }
+
             return $user;
         } else {
             $result = $userService->register($data);

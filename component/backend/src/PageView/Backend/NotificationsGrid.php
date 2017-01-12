@@ -21,6 +21,7 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class NotificationsGrid extends Standard
 {
+
     public function __construct(
         NotificationRepository $repository,
         $variables = null,
@@ -63,6 +64,7 @@ class NotificationsGrid extends Standard
     {
         parent::configureQueryBuilder($qb);
         $qb->notDeleted();
+
         return $this;
     }
 
@@ -150,7 +152,7 @@ class NotificationsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'mark-as-read',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -170,7 +172,7 @@ class NotificationsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

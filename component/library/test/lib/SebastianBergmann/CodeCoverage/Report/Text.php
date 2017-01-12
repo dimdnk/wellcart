@@ -12,4 +12,5 @@
 class PHP_CodeCoverage_Report_Text
     extends \SebastianBergmann\CodeCoverage\Report\Text
 {
+
 }

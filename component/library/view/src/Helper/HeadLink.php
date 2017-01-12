@@ -10,5 +10,6 @@ namespace WellCart\View\Helper;
 
 class HeadLink extends \Zend\View\Helper\HeadLink
 {
+
     use HeadBuildTrait;
 }

@@ -79,6 +79,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): UrlRewriteEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -96,6 +97,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
     public function setId($id): UrlRewriteEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -113,6 +115,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): UrlRewriteEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -130,6 +133,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
     public function setRequestPath($requestPath)
     {
         $this->requestPath = ltrim((string)$requestPath, '/');
+
         return $this;
     }
 
@@ -147,6 +151,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
     public function setTargetPath($targetPath)
     {
         $this->targetPath = ltrim((string)$targetPath, '/');
+
         return $this;
     }
 
@@ -164,6 +169,7 @@ class UrlRewrite extends AbstractEntity implements UrlRewriteEntity
     public function setIsSystem(bool $isSystem)
     {
         $this->isSystem = $isSystem;
+
         return $this;
     }
 }

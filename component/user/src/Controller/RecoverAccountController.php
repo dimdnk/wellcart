@@ -68,8 +68,10 @@ class RecoverAccountController extends AbstractActionController
                                 "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
                             )
                         );
+
                     return $this->redirect()->toRoute('zfcuser');
-                } catch (\Throwable $e) {
+                }
+                catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e->getMessage());
                     $this->flashMessenger()
@@ -78,6 +80,7 @@ class RecoverAccountController extends AbstractActionController
                                 'An unexpected error occurred. Please try again or contact Customer Support.'
                             )
                         );
+
                     return $this->postRedirectGet();
                 }
             }
@@ -108,6 +111,7 @@ class RecoverAccountController extends AbstractActionController
                         'Your password reset link has expired.'
                     )
                 );
+
             return $this->redirect()->toRoute('zfcuser');
         }
 
@@ -137,8 +141,10 @@ class RecoverAccountController extends AbstractActionController
                                 "You update your password. Please, log in."
                             )
                         );
+
                     return $this->redirect()->toRoute('zfcuser');
-                } catch (\Throwable $e) {
+                }
+                catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e);
                     $this->flashMessenger()
@@ -147,6 +153,7 @@ class RecoverAccountController extends AbstractActionController
                                 'An unexpected error occurred. Please try again or contact Customer Support.'
                             )
                         );
+
                     return $this->postRedirectGet();
                 }
             }

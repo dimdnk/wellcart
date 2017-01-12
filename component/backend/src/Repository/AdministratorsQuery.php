@@ -15,10 +15,12 @@ use WellCart\User\Spec\UserEntity;
 
 class AdministratorsQuery extends QueryBuilder
 {
+
     public function enabled()
     {
         $this->andWhere($this->getRootAliases()[0] . '.state = :state');
         $this->setParameter('state', UserEntity::STATE_ENABLED);
+
         return $this;
     }
 
@@ -26,6 +28,7 @@ class AdministratorsQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.state = :state');
         $this->setParameter('state', UserEntity::STATE_DISABLED);
+
         return $this;
     }
 
@@ -48,6 +51,7 @@ class AdministratorsQuery extends QueryBuilder
         $this->setParameter('period', $period->format('Y-m-d H:i:s'));
 
         $this->getQuery()->execute();
+
         return $this;
     }
 }

@@ -10,5 +10,6 @@ namespace WellCart\Form\Element;
 
 class StaticElement extends \TwbBundle\Form\Element\StaticElement
 {
+
     use SetValueObjectTrait;
 }

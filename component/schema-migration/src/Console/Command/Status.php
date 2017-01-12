@@ -14,6 +14,7 @@ use Phinx\Console\Command\Status as AbstractCommand;
 
 class Status extends AbstractCommand
 {
+
     use PhinxCommandTrait;
 
     /**

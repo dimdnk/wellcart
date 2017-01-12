@@ -12,6 +12,7 @@ use Zend\Mvc\Router\Http\Hostname as Route;
 
 class Hostname extends Route
 {
+
     /**
      * Create a new hostname route.
      *
@@ -19,8 +20,8 @@ class Hostname extends Route
      * @param  array  $constraints
      * @param  array  $defaults
      */
-    public function __construct($route, array $constraints = array(),
-        array $defaults = array()
+    public function __construct($route, array $constraints = [],
+        array $defaults = []
     ) {
         if (empty($defaults['format'])) {
             $defaults['format'] = 'html';

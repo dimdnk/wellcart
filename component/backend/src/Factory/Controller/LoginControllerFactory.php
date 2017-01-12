@@ -15,9 +15,9 @@ use WellCart\Backend\Controller\LoginController;
 
 class LoginControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): LoginController
-    {
+    ): LoginController {
         /* @var ControllerManager $sm */
         $serviceManager = $sm->getServiceLocator();
 

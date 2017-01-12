@@ -14,6 +14,7 @@ use Interop\Container\ContainerInterface;
 
 class CommandBusConfigFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

@@ -10,7 +10,7 @@ return [
         [
             'locale'                =>
                 ['default_locale'  => 'en_US',
-                 'fallback_locale' => 'en_US'
+                 'fallback_locale' => 'en_US',
                 ],
             'event_manager_enabled' => false,
             /**
@@ -42,5 +42,5 @@ return [
                     'pattern'     => '%s.mo',
                 ],
             ],
-        ]
+        ],
 ];

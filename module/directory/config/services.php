@@ -89,6 +89,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_directory_doctrine_hydrator')
                 );
+
                 return $form;
             },
         Repository\Countries::class            =>
@@ -104,6 +105,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_directory_doctrine_hydrator')
                 );
+
                 return $form;
             },
         Repository\Zones::class                =>
@@ -123,6 +125,7 @@ return [
                     )
                         ->toOptionsList()
                 );
+
                 return $form;
             },
         Repository\GeoZones::class             =>
@@ -156,6 +159,7 @@ return [
                     $geoZonePrototype,
                     $geoZoneMapPrototype
                 );
+
                 return $form;
             },
         'wellcart_directory_geo_zone_hydrator' =>

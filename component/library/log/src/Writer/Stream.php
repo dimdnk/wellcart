@@ -17,8 +17,11 @@ use Zend\Stdlib\ErrorHandler;
 
 class Stream extends StreamWriter
 {
+
     protected $lines = [];
+
     protected $streamOrUrl;
+
     protected $streamMode;
 
     /**

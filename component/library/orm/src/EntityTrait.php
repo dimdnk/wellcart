@@ -15,6 +15,7 @@ use Zend\Hydrator\ClassMethods;
 
 trait EntityTrait
 {
+
     /**
      * Convert the object into something JSON serializable.
      *
@@ -45,6 +46,7 @@ trait EntityTrait
         foreach ($data as $key => $value) {
             $arr[$key] = $value;
         }
+
         return $arr;
     }
 
@@ -57,9 +59,11 @@ trait EntityTrait
     {
         try {
             return $this->toJson();
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $msg = get_class($e) . ': ' . $e->getMessage();
             trigger_error($msg, E_USER_ERROR);
+
             return '';
         }
     }
@@ -80,6 +84,7 @@ trait EntityTrait
                 && (!$var instanceof Collection));
         }
         );
+
         return json_encode($data, $options);
     }
 
@@ -93,6 +98,7 @@ trait EntityTrait
     public function &__get($key)
     {
         $key = Str::underscored2camel($key);
+
         return $this->{$key};
     }
 
@@ -121,6 +127,7 @@ trait EntityTrait
     public function __isset($key)
     {
         $key = Str::underscored2camel($key);
+
         return isset($this->{$key});
     }
 
@@ -177,6 +184,7 @@ trait EntityTrait
     public function offsetExists($offset)
     {
         $offset = Str::underscored2camel($offset);
+
         return isset($this->{$offset});
     }
 
@@ -191,6 +199,7 @@ trait EntityTrait
     public function offsetGet($offset)
     {
         $offset = Str::underscored2camel($offset);
+
         return $this->offsetExists($offset) ? $this->{$offset} : null;
     }
 

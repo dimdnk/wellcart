@@ -14,6 +14,7 @@ use ZfcDatagrid\PrepareData;
 
 class Datagrid extends DatagridAbstract
 {
+
     /**
      * @var PriorityList
      */
@@ -38,6 +39,7 @@ class Datagrid extends DatagridAbstract
         $this->toolbarButtons->insert(
             $button->getName(), $button, $priority
         );
+
         return $this;
     }
 
@@ -49,6 +51,7 @@ class Datagrid extends DatagridAbstract
     public function removeToolbarButton($name)
     {
         $this->toolbarButtons->remove($name);
+
         return $this;
     }
 

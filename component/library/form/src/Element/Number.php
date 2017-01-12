@@ -12,5 +12,6 @@ use Zend\Form\Element\Number as Element;
 
 class Number extends Element
 {
+
     use SetValueObjectTrait;
 }

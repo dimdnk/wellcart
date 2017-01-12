@@ -1,4 +1,5 @@
 <?php
+
 namespace Codeception;
 
 use Codeception\Lib\Di;
@@ -13,7 +14,9 @@ use Symfony\Component\EventDispatcher\EventDispatcher;
 
 class SuiteManager
 {
+
     public static $environment;
+
     public static $name;
 
     /**
@@ -47,11 +50,15 @@ class SuiteManager
     protected $di;
 
     protected $tests = [];
+
     protected $debug = false;
+
     protected $path = '';
+
     protected $printer = null;
 
     protected $env = null;
+
     protected $settings;
 
     public function __construct(EventDispatcher $dispatcher, $name,
@@ -89,6 +96,7 @@ class SuiteManager
             $suite->setBackupGlobals((bool)$this->settings['backup_globals']);
         }
         $suite->setModules($this->moduleContainer->all());
+
         return $suite;
     }
 
@@ -163,14 +171,14 @@ class SuiteManager
             [
                 'di'         => clone($this->di),
                 'dispatcher' => $this->dispatcher,
-                'modules'    => $this->moduleContainer
+                'modules'    => $this->moduleContainer,
             ]
         );
         $t->getMetadata()->setCurrent(
             [
                 'actor'   => $this->getActor(),
                 'env'     => $this->env,
-                'modules' => $this->moduleContainer->all()
+                'modules' => $this->moduleContainer->all(),
             ]
         );
         if ($t instanceof ScenarioDriven) {
@@ -197,6 +205,7 @@ class SuiteManager
                 "Environments are not configured",
                 Descriptor::getTestFullName($test)
             );
+
             return;
         }
         $availableEnvironments = array_keys($this->settings['env']);
@@ -227,6 +236,7 @@ class SuiteManager
                 return true;
             }
         }
+
         return false;
     }
 

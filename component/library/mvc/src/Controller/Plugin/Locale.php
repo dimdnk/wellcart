@@ -15,12 +15,16 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class Locale extends AbstractPlugin
 {
+
     /**
      * Language entities
      */
     protected $languages;
+
     protected $defaultLanguage;
+
     protected $language;
+
     protected $translator;
 
     public function __construct(

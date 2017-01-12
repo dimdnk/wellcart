@@ -137,6 +137,7 @@ class Product extends AbstractEntity
     public function setBrandId($brandId): ProductEntity
     {
         $this->brandId = $brandId;
+
         return $this;
     }
 
@@ -156,6 +157,7 @@ class Product extends AbstractEntity
     public function setBrand(BrandEntity $brand = null
     ): ProductEntity {
         $this->brand = $brand;
+
         return $this;
     }
 
@@ -173,6 +175,7 @@ class Product extends AbstractEntity
     public function setProductTemplate(ProductTemplateEntity $template
     ): ProductEntity {
         $this->productTemplate = $template;
+
         return $this;
     }
 
@@ -218,6 +221,7 @@ class Product extends AbstractEntity
     public function setChildren(Collection $children): ProductEntity
     {
         $this->children = $children;
+
         return $this;
     }
 
@@ -237,6 +241,7 @@ class Product extends AbstractEntity
     public function setTranslations(Collection $translations
     ): ProductEntity {
         $this->translations = $translations;
+
         return $this;
     }
 
@@ -256,6 +261,7 @@ class Product extends AbstractEntity
     public function setStatus($status): ProductEntity
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -283,6 +289,7 @@ class Product extends AbstractEntity
     public function setSortOrder($sortOrder): ProductEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -310,6 +317,7 @@ class Product extends AbstractEntity
     public function setUrlKey($urlKey): ProductEntity
     {
         $this->urlKey = $urlKey;
+
         return $this;
     }
 
@@ -329,6 +337,7 @@ class Product extends AbstractEntity
     public function setParentId($parentId): ProductEntity
     {
         $this->parentId = $parentId;
+
         return $this;
     }
 
@@ -348,6 +357,7 @@ class Product extends AbstractEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): ProductEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -361,6 +371,7 @@ class Product extends AbstractEntity
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
+
         return $this;
     }
 
@@ -377,6 +388,7 @@ class Product extends AbstractEntity
 
         $translation->setProduct($this);
         $this->translations->add($translation);
+
         return $this;
     }
 
@@ -390,6 +402,7 @@ class Product extends AbstractEntity
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
+
         return $this;
     }
 
@@ -402,6 +415,7 @@ class Product extends AbstractEntity
     ): ProductEntity {
         $translation->setProduct(null);
         $this->translations->removeElement($translation);
+
         return $this;
     }
 
@@ -415,6 +429,7 @@ class Product extends AbstractEntity
         foreach ($children as $child) {
             $this->addChild($child);
         }
+
         return $this;
     }
 
@@ -431,6 +446,7 @@ class Product extends AbstractEntity
 
         $child->setParent($this);
         $this->children->add($child);
+
         return $this;
     }
 
@@ -444,6 +460,7 @@ class Product extends AbstractEntity
         foreach ($children as $child) {
             $this->removeChild($child);
         }
+
         return $this;
     }
 
@@ -456,6 +473,7 @@ class Product extends AbstractEntity
     ): ProductEntity {
         $child->setParent(null);
         $this->children->removeElement($child);
+
         return $this;
     }
 
@@ -475,6 +493,7 @@ class Product extends AbstractEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): ProductEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -488,6 +507,7 @@ class Product extends AbstractEntity
         foreach ($categories as $category) {
             $this->addCategory($category);
         }
+
         return $this;
     }
 
@@ -502,6 +522,7 @@ class Product extends AbstractEntity
             return $this;
         }
         $this->categories->add($category);
+
         return $this;
     }
 
@@ -515,6 +536,7 @@ class Product extends AbstractEntity
         foreach ($categories as $category) {
             $this->removeCategory($category);
         }
+
         return $this;
     }
 
@@ -526,6 +548,7 @@ class Product extends AbstractEntity
     public function removeCategory(CategoryEntity $category
     ): ProductEntity {
         $this->categories->removeElement($category);
+
         return $this;
     }
 
@@ -551,6 +574,7 @@ class Product extends AbstractEntity
 
         $this->parent = $parent;
         $this->setParentId($parentId);
+
         return $this;
     }
 
@@ -570,6 +594,7 @@ class Product extends AbstractEntity
     public function setId($id): ProductEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -583,6 +608,7 @@ class Product extends AbstractEntity
         foreach ($images as $image) {
             $this->addImage($image);
         }
+
         return $this;
     }
 
@@ -598,6 +624,7 @@ class Product extends AbstractEntity
         }
         $image->setProduct($this);
         $this->images->add($image);
+
         return $this;
     }
 
@@ -611,6 +638,7 @@ class Product extends AbstractEntity
         foreach ($images as $image) {
             $this->removeImage($image);
         }
+
         return $this;
     }
 
@@ -625,6 +653,7 @@ class Product extends AbstractEntity
     ): ProductEntity {
         $image->setProduct(null);
         $this->images->removeElement($image);
+
         return $this;
     }
 
@@ -634,6 +663,7 @@ class Product extends AbstractEntity
     public function noCategories(): ProductEntity
     {
         $this->getCategories()->clear();
+
         return $this;
     }
 
@@ -653,6 +683,7 @@ class Product extends AbstractEntity
     public function setCategories(Collection $categories
     ): ProductEntity {
         $this->categories = $categories;
+
         return $this;
     }
 
@@ -662,6 +693,7 @@ class Product extends AbstractEntity
     public function noImages(): ProductEntity
     {
         $this->getImages()->clear();
+
         return $this;
     }
 
@@ -681,6 +713,7 @@ class Product extends AbstractEntity
     public function setImages(Collection $images): ProductEntity
     {
         $this->images = $images;
+
         return $this;
     }
 
@@ -700,6 +733,7 @@ class Product extends AbstractEntity
     public function setVariants(Collection $variants): ProductEntity
     {
         $this->variants = $variants;
+
         return $this;
     }
 
@@ -713,6 +747,7 @@ class Product extends AbstractEntity
         foreach ($variants as $variant) {
             $this->addVariant($variant);
         }
+
         return $this;
     }
 
@@ -728,6 +763,7 @@ class Product extends AbstractEntity
         }
         $variant->setProduct($this);
         $this->variants->add($variant);
+
         return $this;
     }
 
@@ -741,6 +777,7 @@ class Product extends AbstractEntity
         foreach ($variants as $variant) {
             $this->removeVariant($variant);
         }
+
         return $this;
     }
 
@@ -755,6 +792,7 @@ class Product extends AbstractEntity
     ): ProductEntity {
         $variant->setProduct(null);
         $this->variants->removeElement($variant);
+
         return $this;
     }
 
@@ -775,6 +813,7 @@ class Product extends AbstractEntity
     public function setFeatures(Collection $features): ProductEntity
     {
         $this->features = $features;
+
         return $this;
     }
 
@@ -788,6 +827,7 @@ class Product extends AbstractEntity
         foreach ($features as $feature) {
             $this->addFeature($feature);
         }
+
         return $this;
     }
 
@@ -803,6 +843,7 @@ class Product extends AbstractEntity
         }
         $feature->setProduct($this);
         $this->features->add($feature);
+
         return $this;
     }
 
@@ -816,6 +857,7 @@ class Product extends AbstractEntity
         foreach ($features as $feature) {
             $this->removeFeature($feature);
         }
+
         return $this;
     }
 
@@ -830,6 +872,7 @@ class Product extends AbstractEntity
     ): ProductEntity {
         $feature->setProduct(null);
         $this->features->removeElement($feature);
+
         return $this;
     }
 }

@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Formatter\Email as AbstractFormatter;
 
 class Email extends AbstractFormatter
 {
+
 }

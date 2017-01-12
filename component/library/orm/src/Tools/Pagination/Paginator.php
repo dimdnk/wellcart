@@ -13,6 +13,7 @@ use Doctrine\ORM\Tools\Pagination\Paginator as AbstractPaginator;
 
 class Paginator extends AbstractPaginator
 {
+
     /**
      * @var QueryBuilder
      */

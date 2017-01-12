@@ -12,5 +12,6 @@ use Zend\Form\Element\Submit as Element;
 
 class Submit extends Element
 {
+
     use SetValueObjectTrait;
 }

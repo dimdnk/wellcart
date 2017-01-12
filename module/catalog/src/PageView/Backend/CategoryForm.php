@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class CategoryForm extends Standard
 {
+
     public function __construct(
         CategoryRepository $repository,
         $variables = null,

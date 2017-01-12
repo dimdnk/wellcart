@@ -12,6 +12,7 @@ use WellCart\Utility\Config;
 
 class MediaPath extends \Zend\View\Helper\BasePath
 {
+
     /**
      * @inheritdoc
      */
@@ -21,6 +22,7 @@ class MediaPath extends \Zend\View\Helper\BasePath
             'public_resources.media.base_path',
             Config::get('view_manager.base_path') . 'media'
         );
+
         return parent::__invoke($file);
     }
 }

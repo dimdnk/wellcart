@@ -140,8 +140,8 @@ return [
                             'db-host'     => 'localhost',
                             'db-name'     => 'wellcart',
                             'db-username' => 'root',
-                        ]
-                    ]
+                        ],
+                    ],
                 ],
                 'setup:upgrade'        => [
                     'options' => [
@@ -149,8 +149,8 @@ return [
                         'defaults' => [
                             'controller' => 'Setup::ConsoleSetup',
                             'action'     => 'upgrade',
-                        ]
-                    ]
+                        ],
+                    ],
                 ],
                 'setup:publish-assets' => [
                     'options' => [
@@ -158,10 +158,10 @@ return [
                         'defaults' => [
                             'controller' => 'Setup::ConsoleSetup',
                             'action'     => 'publish-assets',
-                        ]
-                    ]
+                        ],
+                    ],
                 ],
-            ]
-        ]
+            ],
+        ],
     ],
 ];

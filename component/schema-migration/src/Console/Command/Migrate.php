@@ -14,6 +14,7 @@ use Phinx\Console\Command\Migrate as AbstractCommand;
 
 class Migrate extends AbstractCommand
 {
+
     use PhinxCommandTrait;
 
     /**

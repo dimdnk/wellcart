@@ -14,4 +14,5 @@ use ZF\Apigility\Doctrine\Server\Resource\DoctrineResource;
 
 class CategoryResource extends DoctrineResource
 {
+
 }

@@ -12,4 +12,5 @@
 class PHP_CodeCoverage_Report_XML
     extends \SebastianBergmann\CodeCoverage\Report\Xml\Report
 {
+
 }

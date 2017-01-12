@@ -12,6 +12,7 @@ use Zend\Stdlib\ResponseInterface;
 
 interface ResponseAwareInterface
 {
+
     /**
      * @param ResponseInterface $response
      *

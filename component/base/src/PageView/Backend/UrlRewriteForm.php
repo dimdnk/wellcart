@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class UrlRewriteForm extends Standard
 {
+
     public function __construct(
         UrlRewriteRepository $repository,
         $variables = null,

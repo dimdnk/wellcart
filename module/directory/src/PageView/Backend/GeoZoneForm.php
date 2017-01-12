@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class GeoZoneForm extends Standard
 {
+
     public function __construct(
         GeoZoneRepository $repository,
         $variables = null,
@@ -38,6 +39,7 @@ class GeoZoneForm extends Standard
 
         $this->addLayoutHandle('directory/geo-zones/form');
         $this->configure();
+
         return parent::prepare($template, $values);
     }
 
@@ -78,6 +80,7 @@ class GeoZoneForm extends Standard
                 'Object must implement interface WellCart\Directory\Spec\GeoZoneEntity'
             );
         }
+
         return parent::setEntity($entity);
     }
 }

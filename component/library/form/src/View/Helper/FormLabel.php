@@ -14,6 +14,7 @@ use Zend\Form\View\Helper\FormLabel as Label;
 
 class FormLabel extends Label
 {
+
     /**
      * @inheritdoc
      */

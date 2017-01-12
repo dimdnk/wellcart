@@ -18,6 +18,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 class RouteGuardFactory
     implements FactoryInterface, MutableCreationOptionsInterface
 {
+
     /**
      * @var array
      */

@@ -117,7 +117,7 @@ return [
         'host'           => 'localhost',
         'database'       => 'wellcart',
         'driver_options' => [
-            1002 => "SET NAMES UTF8 COLLATE utf8_general_ci"
+            1002 => "SET NAMES UTF8 COLLATE utf8_general_ci",
         ],
         'options'        => [
             'buffer_results' => true,
@@ -166,7 +166,7 @@ return [
                     'serializer'        => [],
                     'exception_handler' =>
                         [
-                            'throw_exceptions' => false
+                            'throw_exceptions' => false,
                         ],
                 ],
             ],
@@ -189,7 +189,7 @@ return [
                     'serializer'        => [],
                     'exception_handler' =>
                         [
-                            'throw_exceptions' => false
+                            'throw_exceptions' => false,
                         ],
                 ],
             ],
@@ -220,7 +220,7 @@ return [
             'variables'  => [],
             'template'   => '',
             'actions'    => [],
-            'wrapper'    => false
+            'wrapper'    => false,
         ],
         'layout_update_extensions'       => [
             'xml' => false,
@@ -235,10 +235,10 @@ return [
          */
         'view_helpers'                   => [
             'requireJS'             => [
-                'method' => '__invoke'
+                'method' => '__invoke',
             ],
             'javaScriptEnvironment' => [
-                'method' => 'set'
+                'method' => 'set',
             ],
         ],
     ],
@@ -281,7 +281,7 @@ return [
 
             \WellCart\Ui\Datagrid\View\Helper\GridFilters::class => \WellCart\Ui\Factory\Datagrid\ViewHelper\GridFiltersFactory::class,
             \WellCart\View\Helper\Locale::class                  => \WellCart\View\Factory\Helper\LocaleFactory::class,
-            \WellCart\View\Helper\Date::class                    => \WellCart\View\Factory\Helper\DateFactory::class
+            \WellCart\View\Helper\Date::class                    => \WellCart\View\Factory\Helper\DateFactory::class,
         ],
         'invokables' => [
             'assetPath'             => ViewHelper\AssetPath::class,
@@ -360,8 +360,8 @@ return [
                         'defaults' => [
                             'controller' => 'Base::Console\Cache',
                             'action'     => 'flush',
-                        ]
-                    ]
+                        ],
+                    ],
                 ],
                 'route:list'  => [
                     'options' => [
@@ -369,8 +369,8 @@ return [
                         'defaults' => [
                             'controller' => 'Base::Console\Route',
                             'action'     => 'list',
-                        ]
-                    ]
+                        ],
+                    ],
                 ],
             ],
         ],
@@ -466,7 +466,7 @@ return [
                 'options_class'         => 'StrokerForm\Renderer\JqueryValidate\Options',
                 'include_assets'        => false,
                 'use_twitter_bootstrap' => false,
-            ]
+            ],
         ],
     ],
     'session_containers'         => [
@@ -477,7 +477,7 @@ return [
         'phpPath'    => 'php',
         'scriptPath' => WELLCART_BIN_PATH,
         'jobs'       => [
-        ]
+        ],
     ],
     'route_manager'              => [
         'invokables' => [
@@ -672,13 +672,13 @@ return [
 
     'headbuild' => [
         'public_path'   => WELLCART_PUBLIC_PATH,
-        'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json'
+        'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json',
     ],
     'slm_queue' => [
         'queue_manager' => [
             'factories' => [
-                'system' => 'SlmQueueDoctrine\Factory\DoctrineQueueFactory'
-            ]
+                'system' => 'SlmQueueDoctrine\Factory\DoctrineQueueFactory',
+            ],
         ],
         'queues'        => [
             'system' => [

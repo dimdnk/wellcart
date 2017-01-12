@@ -43,10 +43,10 @@ class ImagesFieldset extends Fieldset
                 'name'       => 'remove',
                 'type'       => 'button',
                 'options'    => [
-                    'label'            => ' ',
+                    'label' => ' ',
                 ],
                 'attributes' => [
-                    'type' => 'button',
+                    'type'  => 'button',
                     'title' => __('Remove'),
                 ],
             ],
@@ -55,10 +55,10 @@ class ImagesFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'description',
-                'type'       => 'Text',
-                'options'    => [
-                    'label'            => __('Alt Text')
+                'name'    => 'description',
+                'type'    => 'Text',
+                'options' => [
+                    'label' => __('Alt Text'),
                 ],
             ],
             ['priority' => 650]
@@ -66,10 +66,10 @@ class ImagesFieldset extends Fieldset
 
         $this->add(
             [
-                'name'       => 'image',
-                'type'       => 'catalogProductImage',
-                'options'    => [
-                    'label'            => __('Image File')
+                'name'    => 'image',
+                'type'    => 'catalogProductImage',
+                'options' => [
+                    'label' => __('Image File'),
                 ],
             ],
             ['priority' => 600]
@@ -91,6 +91,7 @@ class ImagesFieldset extends Fieldset
             $this->get('image')
                 ->setObject($object);
         }
+
         return parent::setObject($object);
     }
 }

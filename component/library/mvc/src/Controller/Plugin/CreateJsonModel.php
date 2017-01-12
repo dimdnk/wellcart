@@ -13,6 +13,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class CreateJsonModel extends AbstractPlugin
 {
+
     /**
      * Create view model
      *

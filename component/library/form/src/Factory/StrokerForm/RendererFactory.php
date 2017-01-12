@@ -15,6 +15,7 @@ use WellCart\Form\StrokerForm\Renderer;
 
 class RendererFactory
 {
+
     /**
      * @param ContainerInterface $container
      *
@@ -31,6 +32,7 @@ class RendererFactory
         $options = new Options($config);
         $renderer->setDefaultOptions($options);
         $renderer->setOptions($config);
+
         return $renderer;
     }
 }

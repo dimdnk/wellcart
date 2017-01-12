@@ -16,6 +16,7 @@ use WellCart\Utility\Arr;
 
 class ProductHydrator extends ObjectHydrator
 {
+
     /**
      * @inheritDoc
      */
@@ -57,6 +58,7 @@ class ProductHydrator extends ObjectHydrator
                     )
                 );
         }
+
         return parent::hydrate($data, $object);
     }
 }

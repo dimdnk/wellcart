@@ -20,6 +20,7 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CurrenciesGrid extends Standard
 {
+
     protected $timeZone;
 
     public function __construct(
@@ -149,7 +150,7 @@ class CurrenciesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -168,7 +169,7 @@ class CurrenciesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

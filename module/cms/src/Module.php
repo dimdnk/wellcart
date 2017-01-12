@@ -12,10 +12,10 @@ namespace WellCart\CMS;
 
 use Interop\Container\ContainerInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\Setup\Feature\DataFixturesProviderInterface;
-use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\Form\Factory as FormFactory;
 use Zend\ModuleManager\Feature;
 use ZF\Apigility\Provider\ApigilityProviderInterface;
@@ -141,6 +141,7 @@ class Module implements
                             $pagePrototype,
                             $pageTranslationPrototype
                         );
+
                         return $form;
                     },
             ],

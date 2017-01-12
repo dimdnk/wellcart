@@ -22,6 +22,7 @@ class WizardController extends AbstractActionController implements
     LoggerAwareInterface,
     TranslatorAwareInterface
 {
+
     use AbstractControllerTrait;
 
     /**
@@ -38,7 +39,7 @@ class WizardController extends AbstractActionController implements
             [
                 'wizard'      => $wizard,
                 'currentStep' => $currentStep,
-                'setup'       => $setup
+                'setup'       => $setup,
             ]
         );
         if ($this->getRequest()->isPost()) {
@@ -47,7 +48,8 @@ class WizardController extends AbstractActionController implements
                 if ($currentStep->isComplete()) {
                     return $this->prg();
                 }
-            } catch (Throwable $e) {
+            }
+            catch (Throwable $e) {
                 error_log($e->__toString());
                 $this->getLogger()
                     ->emerg($e);
@@ -55,6 +57,7 @@ class WizardController extends AbstractActionController implements
                     ->addWarningMessage(
                         $this->__($e->getMessage())
                     );
+
                 return $this->prg();
             }
         }

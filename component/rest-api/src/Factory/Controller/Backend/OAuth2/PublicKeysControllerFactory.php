@@ -14,13 +14,14 @@ use WellCart\RestApi\Controller\Backend\OAuth2\PublicKeysController;
 
 class PublicKeysControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): PublicKeysController
-    {
+    ): PublicKeysController {
         $controller = new PublicKeysController(
             $sm->getServiceLocator()
                 ->get(\WellCart\RestApi\Repository\OAuth2\PublicKeys::class)
         );
+
         return $controller;
     }
 }

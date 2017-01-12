@@ -14,14 +14,17 @@ use Zend\Stdlib\PriorityList;
 
 class TableFieldsetCollection extends Collection
 {
+
     /**
      * @var PriorityList
      */
     protected $columns;
+
     /**
      * @var PriorityList
      */
     protected $rowActions;
+
     /**
      * @var string
      */
@@ -58,6 +61,7 @@ class TableFieldsetCollection extends Collection
         if (isset($options['row_actions'])) {
             $this->setRowActions($options['row_actions']);
         }
+
         return $this;
     }
 
@@ -80,6 +84,7 @@ class TableFieldsetCollection extends Collection
         foreach ($columns as $column) {
             $this->addColumn($column);
         }
+
         return $this;
     }
 
@@ -91,6 +96,7 @@ class TableFieldsetCollection extends Collection
             $column,
             $priority
         );
+
         return $this;
     }
 
@@ -113,6 +119,7 @@ class TableFieldsetCollection extends Collection
         foreach ($rowActions as $action) {
             $this->addRowAction($action);
         }
+
         return $this;
     }
 
@@ -125,6 +132,7 @@ class TableFieldsetCollection extends Collection
             $action,
             $priority
         );
+
         return $this;
     }
 
@@ -144,6 +152,7 @@ class TableFieldsetCollection extends Collection
     public function setCaption($caption)
     {
         $this->caption = $caption;
+
         return $this;
     }
 

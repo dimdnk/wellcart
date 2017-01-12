@@ -19,6 +19,7 @@ use Zend\Http\PhpEnvironment\Request;
 
 class PreferencesController extends AbstractActionController
 {
+
     use ActionGrantedTrait;
 
     /**
@@ -91,7 +92,8 @@ class PreferencesController extends AbstractActionController
                             'Settings have been successfully changed.'
                         );
                 }
-            } catch (\Throwable $e) {
+            }
+            catch (\Throwable $e) {
                 $this->getLogger()->emerg($e->getMessage());
                 $this->flashMessenger()
                     ->addWarningMessage(

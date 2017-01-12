@@ -20,6 +20,7 @@ use WellCart\Setup\DataFixture\PermissionsLoader;
 
 class ImportFixtureCommand extends ImportCommand
 {
+
     public function execute(InputInterface $input, OutputInterface $output)
     {
         $loader = new Loader($this->em);

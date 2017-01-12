@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class ProductTemplateForm extends Standard
 {
+
     public function __construct(
         ProductTemplateRepository $repository,
         $variables = null,

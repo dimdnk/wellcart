@@ -17,8 +17,11 @@ class User extends AbstractUser implements OAuth2UserInterface
 {
 
     protected $client;
+
     protected $accessToken;
+
     protected $authorizationCode;
+
     protected $refreshToken;
 
 
@@ -38,6 +41,7 @@ class User extends AbstractUser implements OAuth2UserInterface
     public function setClient($client)
     {
         $this->client = $client;
+
         return $this;
     }
 
@@ -57,6 +61,7 @@ class User extends AbstractUser implements OAuth2UserInterface
     public function setAccessToken($accessToken)
     {
         $this->accessToken = $accessToken;
+
         return $this;
     }
 
@@ -76,6 +81,7 @@ class User extends AbstractUser implements OAuth2UserInterface
     public function setAuthorizationCode($authorizationCode)
     {
         $this->authorizationCode = $authorizationCode;
+
         return $this;
     }
 
@@ -95,6 +101,7 @@ class User extends AbstractUser implements OAuth2UserInterface
     public function setRefreshToken($refreshToken)
     {
         $this->refreshToken = $refreshToken;
+
         return $this;
     }
 }

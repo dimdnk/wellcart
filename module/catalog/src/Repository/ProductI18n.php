@@ -28,6 +28,7 @@ class ProductI18n extends AbstractRepository implements ProductI18nRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -46,6 +47,7 @@ class ProductI18n extends AbstractRepository implements ProductI18nRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -93,6 +95,7 @@ class ProductI18n extends AbstractRepository implements ProductI18nRepository
             __FUNCTION__ . '.pre',
             $this
         );
+
         return $this->getEntityManager()
             ->getRepository('WellCart\Catalog\Spec\ProductEntity')
             ->findAllIds();

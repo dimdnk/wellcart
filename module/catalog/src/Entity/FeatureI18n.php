@@ -27,6 +27,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
      * @var \WellCart\Base\Spec\LocaleLanguageEntity
      */
     protected $language;
+
     /**
      * Name
      *
@@ -62,6 +63,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
     public function setFeature(FeatureEntity $feature = null)
     {
         $this->feature = $feature;
+
         return $this;
     }
 
@@ -81,6 +83,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
     public function setLanguage(LocaleLanguageEntity $language = null
     ): FeatureI18nEntity {
         $this->language = $language;
+
         return $this;
     }
 
@@ -100,6 +103,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
     public function setId($id): FeatureI18nEntity
     {
         $this->featureId = $id;
+
         return $this;
     }
 
@@ -119,6 +123,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
     public function setName($name): FeatureI18nEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -138,6 +143,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
     public function setFeatureId($featureId): FeatureI18nEntity
     {
         $this->featureId = $featureId;
+
         return $this;
     }
 }

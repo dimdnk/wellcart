@@ -22,6 +22,7 @@ use WellCart\View\Model\ViewModel;
 class ClientsController extends AbstractActionController implements
     CrudFeature\EntityPersistenceAwareInterface
 {
+
     use CrudFeature\EntityPersistenceAwareTrait,
         CrudFeature\HandleEntityFormTrait,
         CrudFeature\FindOrNotFoundTrait,
@@ -61,6 +62,7 @@ class ClientsController extends AbstractActionController implements
         EntityForm $form
     ) {
         $entity = $this->repository->createEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 
@@ -107,6 +109,7 @@ class ClientsController extends AbstractActionController implements
 
         if ($domainResponse) {
             $form->removePasswordElements();
+
             return $this->handleForm(
                 $formPageView,
                 $form,

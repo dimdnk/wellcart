@@ -18,6 +18,7 @@ use Zend\Db\TableGateway\Feature\GlobalAdapterFeature;
 
 class MasterSlaveAdapterFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

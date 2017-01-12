@@ -13,69 +13,69 @@ return [
         'mapping' => [
             Entity\Brand::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\Brands::class,
-                    'table' => 'catalog_brands',
-                    'id' =>
+                    'table'           => 'catalog_brands',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'brand_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'brand_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToMany' => [
+                    'oneToMany'       => [
                         'products' => [
-                            'targetEntity' => Entity\Product::class,
-                            'mappedBy' => 'brand',
+                            'targetEntity'  => Entity\Product::class,
+                            'mappedBy'      => 'brand',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
-                            'fetch' => "EAGER",
+                            'cascade'       => ['persist', 'merge', 'detach'],
+                            'fetch'         => "EAGER",
                         ],
                     ],
-                        'fields' =>
+                    'fields'          =>
                         [
-                            'name' =>
+                            'name'            =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'imageFullPath' =>
+                            'imageFullPath'   =>
                                 [
-                                    'column' => 'image_full_path',
-                                    'type' => 'string',
+                                    'column'   => 'image_full_path',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'metaTitle' =>
+                            'metaTitle'       =>
                                 [
-                                    'column' => 'meta_title',
-                                    'type' => 'string',
+                                    'column'   => 'meta_title',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
-                            'metaKeywords' =>
+                            'metaKeywords'    =>
                                 [
-                                    'column' => 'meta_keywords',
-                                    'type' => 'string',
+                                    'column'   => 'meta_keywords',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
                             'metaDescription' =>
                                 [
-                                    'column' => 'meta_description',
-                                    'type' => 'string',
+                                    'column'   => 'meta_description',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
-                            'createdAt' =>
+                            'createdAt'       =>
                                 [
-                                    'column' => 'created_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'created_at',
+                                    'type'     => 'datetime',
                                     'nullable' => false,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -83,12 +83,12 @@ return [
                                                 ],
                                         ],
                                 ],
-                            'updatedAt' =>
+                            'updatedAt'       =>
                                 [
-                                    'column' => 'updated_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'updated_at',
+                                    'type'     => 'datetime',
                                     'nullable' => true,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -100,116 +100,116 @@ return [
                 ],
 
 
-            Entity\ProductTemplate::class =>
+            Entity\ProductTemplate::class     =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\ProductTemplates::class,
-                    'table' => 'catalog_product_templates',
-                    'id' =>
+                    'table'           => 'catalog_product_templates',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'product_template_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'product_template_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToMany' => [
-                        'features' => [
+                    'manyToMany'      => [
+                        'features'   => [
                             'targetEntity' => Entity\Feature::class,
-                            'mappedBy' => 'productTemplates',
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'mappedBy'     => 'productTemplates',
+                            'cascade'      => ['persist', 'merge', 'detach'],
                         ],
                         'attributes' => [
                             'targetEntity' => Entity\Attribute::class,
-                            'mappedBy' => 'productTemplates',
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'mappedBy'     => 'productTemplates',
+                            'cascade'      => ['persist', 'merge', 'detach'],
                         ],
                     ],
-                        'oneToMany' => [
+                    'oneToMany'       => [
                         'translations' => [
-                            'targetEntity' => Entity\ProductTemplateI18n::class,
-                            'mappedBy' => 'productTemplate',
+                            'targetEntity'  => Entity\ProductTemplateI18n::class,
+                            'mappedBy'      => 'productTemplate',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
-                            'fetch' => "EAGER",
+                            'cascade'       => ['persist', 'merge', 'detach'],
+                            'fetch'         => "EAGER",
                         ],
-                        'products' => [
+                        'products'     => [
                             'targetEntity' => Entity\Product::class,
-                            'mappedBy' => 'productTemplate',
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'mappedBy'     => 'productTemplate',
+                            'cascade'      => ['persist', 'merge', 'detach'],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
-                            'isSystem' =>
+                            'isSystem'  =>
                                 [
-                                    'column' => 'is_system',
-                                    'type' => 'boolean',
+                                    'column'   => 'is_system',
+                                    'type'     => 'boolean',
                                     'nullable' => false,
                                 ],
                             'sortOrder' =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
                         ],
                 ],
             Entity\ProductTemplateI18n::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\ProductTemplateI18n::class,
-                    'table' => 'catalog_product_template_i18n',
-                    'id' =>
+                    'table'           => 'catalog_product_template_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
 
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'productTemplate' => [
                             'targetEntity' => Entity\ProductTemplate::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'product_template_id',
-                                'referencedColumnName' => 'product_template_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'product_template_id',
+                                'referencedColumnName' => 'product_template_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
-                            'name' =>
+                            'name'              =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                             'productTemplateId' =>
                                 [
-                                    'column' => 'product_template_id',
-                                    'type' => 'integer',
+                                    'column'   => 'product_template_id',
+                                    'type'     => 'integer',
                                     'nullable' => true,
                                 ],
                         ],
@@ -218,76 +218,76 @@ return [
 
             Entity\ProductImage::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\ProductImages::class,
-                    'table' => 'catalog_images',
-                    'id' =>
+                    'table'           => 'catalog_images',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'image_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'image_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToOne' => [
+                    'manyToOne'       => [
                         'product' => [
                             'targetEntity' => Entity\Product::class,
-                            'inversedBy' => 'images',
-                            'joinColumn' => [
-                                'name' => 'product_id',
-                                'referencedColumnName' => 'product_id'
+                            'inversedBy'   => 'images',
+                            'joinColumn'   => [
+                                'name'                 => 'product_id',
+                                'referencedColumnName' => 'product_id',
                             ],
                         ],
                     ],
-                        'fields' =>
+                    'fields'          =>
                         [
-                            'fullPath' =>
+                            'fullPath'         =>
                                 [
-                                    'column' => 'full_path',
-                                    'type' => 'string',
+                                    'column'   => 'full_path',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'filename' =>
+                            'filename'         =>
                                 [
-                                    'column' => 'filename',
-                                    'type' => 'string',
+                                    'column'   => 'filename',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                             'originalFilename' =>
                                 [
-                                    'column' => 'original_filename',
-                                    'type' => 'string',
+                                    'column'   => 'original_filename',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'description' =>
+                            'description'      =>
                                 [
-                                    'column' => 'description',
-                                    'type' => 'string',
+                                    'column'   => 'description',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'imageX' =>
+                            'imageX'           =>
                                 [
-                                    'column' => 'image_x',
-                                    'type' => 'integer',
+                                    'column'   => 'image_x',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'imageY' =>
+                            'imageY'           =>
                                 [
-                                    'column' => 'image_y',
-                                    'type' => 'integer',
+                                    'column'   => 'image_y',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'createdAt' =>
+                            'createdAt'        =>
                                 [
-                                    'column' => 'created_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'created_at',
+                                    'type'     => 'datetime',
                                     'nullable' => false,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -295,12 +295,12 @@ return [
                                                 ],
                                         ],
                                 ],
-                            'updatedAt' =>
+                            'updatedAt'        =>
                                 [
-                                    'column' => 'updated_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'updated_at',
+                                    'type'     => 'datetime',
                                     'nullable' => true,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -310,137 +310,137 @@ return [
                                 ],
                         ],
                 ],
-            Entity\Product::class =>
+            Entity\Product::class      =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\Products::class,
-                    'table' => 'catalog_products',
-                    'id' =>
+                    'table'           => 'catalog_products',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'product_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'product_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToMany' => [
+                    'manyToMany'      => [
                         'categories' => [
-                            'targetEntity' => Entity\Category::class,
+                            'targetEntity'  => Entity\Category::class,
                             'orphanRemoval' => false,
-                            'inversedBy' => 'products',
-                            'joinTable' => [
-                                'name' => 'catalog_products_to_categories',
-                                'joinColumns' => [
+                            'inversedBy'    => 'products',
+                            'joinTable'     => [
+                                'name'               => 'catalog_products_to_categories',
+                                'joinColumns'        => [
                                     'product_id' => [
                                         'referencedColumnName' => 'product_id',
-                                        'nullable' => false,
+                                        'nullable'             => false,
                                     ],
                                 ],
                                 'inverseJoinColumns' => [
                                     'category_id' => [
                                         'referencedColumnName' => 'category_id',
-                                        'nullable' => false,
+                                        'nullable'             => false,
                                     ],
                                 ],
                             ],
                         ],
                     ],
-                        'oneToMany' => [
+                    'oneToMany'       => [
                         'translations' => [
-                            'targetEntity' => Entity\ProductI18n::class,
-                            'mappedBy' => 'product',
+                            'targetEntity'  => Entity\ProductI18n::class,
+                            'mappedBy'      => 'product',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        'features' => [
-                            'targetEntity' => Entity\FeatureCombination::class,
-                            'mappedBy' => 'product',
+                        'features'     => [
+                            'targetEntity'  => Entity\FeatureCombination::class,
+                            'mappedBy'      => 'product',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        'variants' => [
-                            'targetEntity' => Entity\ProductVariant::class,
-                            'mappedBy' => 'product',
+                        'variants'     => [
+                            'targetEntity'  => Entity\ProductVariant::class,
+                            'mappedBy'      => 'product',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        'images' => [
-                            'targetEntity' => Entity\ProductImage::class,
-                            'mappedBy' => 'product',
+                        'images'       => [
+                            'targetEntity'  => Entity\ProductImage::class,
+                            'mappedBy'      => 'product',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        'children' => [
+                        'children'     => [
                             'targetEntity' => Entity\Product::class,
-                            'mappedBy' => 'parent',
-                            'cascade' => ['persist', 'merge', 'detach'],
-                        ]
+                            'mappedBy'     => 'parent',
+                            'cascade'      => ['persist', 'merge', 'detach'],
                         ],
-                        'manyToOne' => [
+                    ],
+                    'manyToOne'       => [
                         'productTemplate' => [
                             'targetEntity' => Entity\ProductTemplate::class,
-                            'inversedBy' => 'products',
-                            'joinColumn' => [
-                                'name' => 'product_template_id',
+                            'inversedBy'   => 'products',
+                            'joinColumn'   => [
+                                'name'                 => 'product_template_id',
                                 'referencedColumnName' => 'product_template_id',
                             ],
-                            'nullable' => false,
+                            'nullable'     => false,
                         ],
-                        'parent' => [
+                        'parent'          => [
                             'targetEntity' => Entity\Product::class,
-                            'inversedBy' => 'children',
-                            'joinColumn' => [
-                                'name' => 'parent_id',
+                            'inversedBy'   => 'children',
+                            'joinColumn'   => [
+                                'name'                 => 'parent_id',
                                 'referencedColumnName' => 'product_id',
                             ],
                         ],
-                        'brand' => [
+                        'brand'           => [
                             'targetEntity' => Entity\Brand::class,
-                            'inversedBy' => 'products',
-                            'joinColumn' => [
-                                'name' => 'brand_id',
+                            'inversedBy'   => 'products',
+                            'joinColumn'   => [
+                                'name'                 => 'brand_id',
                                 'referencedColumnName' => 'brand_id',
                             ],
                         ],
-                        ],
-                    'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'parentId' =>
                                 [
-                                    'column' => 'parent_id',
-                                    'type' => 'integer',
+                                    'column'   => 'parent_id',
+                                    'type'     => 'integer',
                                     'nullable' => true,
                                 ],
 
-                            'status' =>
+                            'status'    =>
                                 [
-                                    'column' => 'status',
-                                    'type' => 'boolean',
+                                    'column'   => 'status',
+                                    'type'     => 'boolean',
                                     'nullable' => false,
                                 ],
-                            'urlKey' =>
+                            'urlKey'    =>
                                 [
-                                    'column' => 'url_key',
-                                    'type' => 'string',
+                                    'column'   => 'url_key',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                             'sortOrder' =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
                             'createdAt' =>
                                 [
-                                    'column' => 'created_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'created_at',
+                                    'type'     => 'datetime',
                                     'nullable' => false,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -450,10 +450,10 @@ return [
                                 ],
                             'updatedAt' =>
                                 [
-                                    'column' => 'updated_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'updated_at',
+                                    'type'     => 'datetime',
                                     'nullable' => true,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -463,200 +463,200 @@ return [
                                 ],
                         ],
                 ],
-            Entity\ProductI18n::class =>
+            Entity\ProductI18n::class  =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\ProductI18n::class,
-                    'table' => 'catalog_product_i18n',
-                    'id' =>
+                    'table'           => 'catalog_product_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'product' => [
                             'targetEntity' => Entity\Product::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'product_id',
-                                'referencedColumnName' => 'product_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'product_id',
+                                'referencedColumnName' => 'product_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
-                            'productId' =>
+                            'productId'       =>
                                 [
-                                    'column' => 'product_id',
-                                    'type' => 'integer',
+                                    'column'   => 'product_id',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'languageId' =>
+                            'languageId'      =>
                                 [
-                                    'column' => 'language_id',
-                                    'type' => 'integer',
+                                    'column'   => 'language_id',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'name' =>
+                            'name'            =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'description' =>
+                            'description'     =>
                                 [
-                                    'column' => 'description',
-                                    'type' => 'string',
+                                    'column'   => 'description',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'metaTitle' =>
+                            'metaTitle'       =>
                                 [
-                                    'column' => 'meta_title',
-                                    'type' => 'string',
+                                    'column'   => 'meta_title',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
-                            'metaKeywords' =>
+                            'metaKeywords'    =>
                                 [
-                                    'column' => 'meta_keywords',
-                                    'type' => 'string',
+                                    'column'   => 'meta_keywords',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
                             'metaDescription' =>
                                 [
-                                    'column' => 'meta_description',
-                                    'type' => 'string',
+                                    'column'   => 'meta_description',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
                         ],
                 ],
-            Entity\Category::class =>
+            Entity\Category::class     =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\Categories::class,
-                    'table' => 'catalog_categories',
-                    'gedmo' => [
+                    'table'           => 'catalog_categories',
+                    'gedmo'           => [
                         'tree' =>
                             ['type' => 'nested'],
                     ],
-                    'id' =>
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'category_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'category_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToOne' => [
+                    'manyToOne'       => [
                         'parent' => [
                             'targetEntity' => Entity\Category::class,
-                            'inversedBy' => 'children',
-                            'joinColumn' => [
-                                'name' => 'parent_id',
+                            'inversedBy'   => 'children',
+                            'joinColumn'   => [
+                                'name'                 => 'parent_id',
                                 'referencedColumnName' => 'category_id',
-                                'onDelete' => 'CASCADE',
+                                'onDelete'             => 'CASCADE',
                             ],
-                            'gedmo' => [
+                            'gedmo'        => [
                                 'treeParent',
-                            ]
+                            ],
                         ],
                     ],
-                        'oneToMany' => [
+                    'oneToMany'       => [
                         'translations' => [
-                            'targetEntity' => Entity\CategoryI18n::class,
-                            'mappedBy' => 'category',
+                            'targetEntity'  => Entity\CategoryI18n::class,
+                            'mappedBy'      => 'category',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        'children' => [
+                        'children'     => [
                             'targetEntity' => Entity\Category::class,
-                            'mappedBy' => 'parent',
-                            'cascade' => ['persist', 'merge', 'detach'],
-                            'orderBy' => ['lft' => 'ASC']
+                            'mappedBy'     => 'parent',
+                            'cascade'      => ['persist', 'merge', 'detach'],
+                            'orderBy'      => ['lft' => 'ASC'],
                         ],
-                        ],
-                        'manyToMany' => [
+                    ],
+                    'manyToMany'      => [
                         'products' => [
                             'targetEntity' => Entity\Product::class,
-                            'mappedBy' => 'categories',
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'mappedBy'     => 'categories',
+                            'cascade'      => ['persist', 'merge', 'detach'],
                         ],
-                        ],
-                    'fields' =>
+                    ],
+                    'fields'          =>
                         [
-                            'lft' =>
+                            'lft'       =>
                                 [
-                                    'column' => 'lft',
-                                    'type' => 'integer',
+                                    'column'   => 'lft',
+                                    'type'     => 'integer',
                                     'nullable' => true,
-                                    'gedmo' => ['treeLeft'],
+                                    'gedmo'    => ['treeLeft'],
                                 ],
-                            'rgt' =>
+                            'rgt'       =>
                                 [
-                                    'column' => 'rgt',
-                                    'type' => 'integer',
+                                    'column'   => 'rgt',
+                                    'type'     => 'integer',
                                     'nullable' => true,
-                                    'gedmo' => ['treeRight'],
+                                    'gedmo'    => ['treeRight'],
                                 ],
-                            'root' =>
+                            'root'      =>
                                 [
-                                    'column' => 'root',
-                                    'type' => 'integer',
+                                    'column'   => 'root',
+                                    'type'     => 'integer',
                                     'nullable' => true,
-                                    'gedmo' => ['treeRoot'],
+                                    'gedmo'    => ['treeRoot'],
                                 ],
-                            'lvl' =>
+                            'lvl'       =>
                                 [
-                                    'column' => 'lvl',
-                                    'type' => 'integer',
+                                    'column'   => 'lvl',
+                                    'type'     => 'integer',
                                     'nullable' => true,
-                                    'gedmo' => ['treeLevel'],
+                                    'gedmo'    => ['treeLevel'],
                                 ],
                             'isVisible' =>
                                 [
-                                    'column' => 'is_visible',
-                                    'type' => 'boolean',
+                                    'column'   => 'is_visible',
+                                    'type'     => 'boolean',
                                     'nullable' => false,
                                 ],
-                            'urlKey' =>
+                            'urlKey'    =>
                                 [
-                                    'column' => 'url_key',
-                                    'type' => 'string',
+                                    'column'   => 'url_key',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                             'sortOrder' =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
                             'createdAt' =>
                                 [
-                                    'column' => 'created_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'created_at',
+                                    'type'     => 'datetime',
                                     'nullable' => false,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -666,10 +666,10 @@ return [
                                 ],
                             'updatedAt' =>
                                 [
-                                    'column' => 'updated_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'updated_at',
+                                    'type'     => 'datetime',
                                     'nullable' => true,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -681,155 +681,155 @@ return [
                 ],
             Entity\CategoryI18n::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\CategoryI18n::class,
-                    'table' => 'catalog_category_i18n',
-                    'id' =>
+                    'table'           => 'catalog_category_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'category' => [
                             'targetEntity' => Entity\Category::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'category_id',
-                                'referencedColumnName' => 'category_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'category_id',
+                                'referencedColumnName' => 'category_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
-                            'categoryId' =>
+                            'categoryId'      =>
                                 [
-                                    'column' => 'category_id',
-                                    'type' => 'integer',
+                                    'column'   => 'category_id',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'languageId' =>
+                            'languageId'      =>
                                 [
-                                    'column' => 'language_id',
-                                    'type' => 'integer',
+                                    'column'   => 'language_id',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'name' =>
+                            'name'            =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'description' =>
+                            'description'     =>
                                 [
-                                    'column' => 'description',
-                                    'type' => 'string',
+                                    'column'   => 'description',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'metaTitle' =>
+                            'metaTitle'       =>
                                 [
-                                    'column' => 'meta_title',
-                                    'type' => 'string',
+                                    'column'   => 'meta_title',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
-                            'metaKeywords' =>
+                            'metaKeywords'    =>
                                 [
-                                    'column' => 'meta_keywords',
-                                    'type' => 'string',
+                                    'column'   => 'meta_keywords',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
                             'metaDescription' =>
                                 [
-                                    'column' => 'meta_description',
-                                    'type' => 'string',
+                                    'column'   => 'meta_description',
+                                    'type'     => 'string',
                                     'nullable' => true,
                                 ],
                         ],
                 ],
 
-            Entity\Feature::class =>
+            Entity\Feature::class     =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\Features::class,
-                    'table' => 'catalog_features',
-                    'id' =>
+                    'table'           => 'catalog_features',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'feature_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'feature_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToMany' => [
+                    'manyToMany'      => [
                         'productTemplates' => [
                             'targetEntity' => Entity\ProductTemplate::class,
-                            'inversedBy' => 'features',
-                            'cascade' => ['persist', 'merge', 'detach'],
-                            'joinTable' => [
-                                'name' => 'catalog_feature_to_template',
-                                'joinColumns' =>
+                            'inversedBy'   => 'features',
+                            'cascade'      => ['persist', 'merge', 'detach'],
+                            'joinTable'    => [
+                                'name'               => 'catalog_feature_to_template',
+                                'joinColumns'        =>
                                     [
                                         'feature_id' =>
                                             [
-                                                'referencedColumnName' => 'feature_id'
-                                            ]
+                                                'referencedColumnName' => 'feature_id',
+                                            ],
                                     ],
                                 'inverseJoinColumns' => [
                                     'product_template_id' =>
                                         [
-                                            'referencedColumnName' => 'product_template_id'
-                                        ]
-                                ]
+                                            'referencedColumnName' => 'product_template_id',
+                                        ],
+                                ],
                             ],
                         ],
                     ],
-                        'oneToMany' => [
-                        'values' => [
-                            'targetEntity' => Entity\FeatureValue::class,
-                            'mappedBy' => 'feature',
+                    'oneToMany'       => [
+                        'values'       => [
+                            'targetEntity'  => Entity\FeatureValue::class,
+                            'mappedBy'      => 'feature',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
                         'translations' => [
-                            'targetEntity' => Entity\FeatureI18n::class,
-                            'mappedBy' => 'feature',
+                            'targetEntity'  => Entity\FeatureI18n::class,
+                            'mappedBy'      => 'feature',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'backendName' =>
                                 [
-                                    'column' => 'backend_name',
-                                    'type' => 'string',
+                                    'column'   => 'backend_name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'sortOrder' =>
+                            'sortOrder'   =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
 
@@ -837,101 +837,101 @@ return [
                 ],
             Entity\FeatureI18n::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\FeatureI18n::class,
-                    'table' => 'catalog_feature_i18n',
-                    'id' =>
+                    'table'           => 'catalog_feature_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'feature' => [
                             'targetEntity' => Entity\Feature::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'feature_id',
-                                'referencedColumnName' => 'feature_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'feature_id',
+                                'referencedColumnName' => 'feature_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'featureId' =>
                                 [
-                                    'column' => 'feature_id',
-                                    'type' => 'integer',
+                                    'column'   => 'feature_id',
+                                    'type'     => 'integer',
                                     'nullable' => true,
                                 ],
-                            'name' =>
+                            'name'      =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                         ],
                 ],
 
 
-            Entity\FeatureValue::class =>
+            Entity\FeatureValue::class     =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\FeatureValues::class,
-                    'table' => 'catalog_feature_values',
-                    'id' =>
+                    'table'           => 'catalog_feature_values',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'feature_value_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'feature_value_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToOne' => [
+                    'manyToOne'       => [
                         'feature' => [
                             'targetEntity' => Entity\Feature::class,
-                            'inversedBy' => 'values',
-                            'joinColumn' => [
-                                'name' => 'feature_id',
-                                'referencedColumnName' => 'feature_id'
+                            'inversedBy'   => 'values',
+                            'joinColumn'   => [
+                                'name'                 => 'feature_id',
+                                'referencedColumnName' => 'feature_id',
                             ],
                         ],
                     ],
-                        'oneToMany' => [
+                    'oneToMany'       => [
                         'translations' => [
-                            'targetEntity' => Entity\FeatureValueI18n::class,
-                            'mappedBy' => 'featureValue',
+                            'targetEntity'  => Entity\FeatureValueI18n::class,
+                            'mappedBy'      => 'featureValue',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'sortOrder' =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
 
@@ -939,129 +939,129 @@ return [
                 ],
             Entity\FeatureValueI18n::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\FeatureValueI18n::class,
-                    'table' => 'catalog_feature_value_i18n',
-                    'id' =>
+                    'table'           => 'catalog_feature_value_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'feature' => [
                             'targetEntity' => Entity\Feature::class,
 
                             'joinColumn' => [
-                                'name' => 'feature_id',
-                                'referencedColumnName' => 'feature_id'
+                                'name'                 => 'feature_id',
+                                'referencedColumnName' => 'feature_id',
                             ],
                         ],
 
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'featureValue' => [
                             'targetEntity' => Entity\FeatureValue::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'feature_value_id',
-                                'referencedColumnName' => 'feature_value_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'feature_value_id',
+                                'referencedColumnName' => 'feature_value_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'name' =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                         ],
                 ],
 
 
-            Entity\Attribute::class =>
+            Entity\Attribute::class     =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\Attributes::class,
-                    'table' => 'catalog_attributes',
-                    'id' =>
+                    'table'           => 'catalog_attributes',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'attribute_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'attribute_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToMany' => [
+                    'manyToMany'      => [
                         'productTemplates' => [
                             'targetEntity' => Entity\ProductTemplate::class,
-                            'inversedBy' => 'attributes',
-                            'cascade' => ['persist', 'merge', 'detach'],
-                            'joinTable' => [
-                                'name' => 'catalog_attribute_to_template',
-                                'joinColumns' =>
+                            'inversedBy'   => 'attributes',
+                            'cascade'      => ['persist', 'merge', 'detach'],
+                            'joinTable'    => [
+                                'name'               => 'catalog_attribute_to_template',
+                                'joinColumns'        =>
                                     [
                                         'attribute_id' =>
                                             [
-                                                'referencedColumnName' => 'attribute_id'
-                                            ]
+                                                'referencedColumnName' => 'attribute_id',
+                                            ],
                                     ],
                                 'inverseJoinColumns' => [
                                     'product_template_id' =>
                                         [
-                                            'referencedColumnName' => 'product_template_id'
-                                        ]
-                                ]
+                                            'referencedColumnName' => 'product_template_id',
+                                        ],
+                                ],
                             ],
                         ],
                     ],
-                        'oneToMany' => [
-                        'values' => [
-                            'targetEntity' => Entity\AttributeValue::class,
-                            'mappedBy' => 'attribute',
+                    'oneToMany'       => [
+                        'values'       => [
+                            'targetEntity'  => Entity\AttributeValue::class,
+                            'mappedBy'      => 'attribute',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
                         'translations' => [
-                            'targetEntity' => Entity\AttributeI18n::class,
-                            'mappedBy' => 'attribute',
+                            'targetEntity'  => Entity\AttributeI18n::class,
+                            'mappedBy'      => 'attribute',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'backendName' =>
                                 [
-                                    'column' => 'backend_name',
-                                    'type' => 'string',
+                                    'column'   => 'backend_name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'sortOrder' =>
+                            'sortOrder'   =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
 
@@ -1069,101 +1069,101 @@ return [
                 ],
             Entity\AttributeI18n::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\AttributeI18n::class,
-                    'table' => 'catalog_attribute_i18n',
-                    'id' =>
+                    'table'           => 'catalog_attribute_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'attribute' => [
                             'targetEntity' => Entity\Attribute::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'attribute_id',
-                                'referencedColumnName' => 'attribute_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'attribute_id',
+                                'referencedColumnName' => 'attribute_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'attributeId' =>
                                 [
-                                    'column' => 'attribute_id',
-                                    'type' => 'integer',
+                                    'column'   => 'attribute_id',
+                                    'type'     => 'integer',
                                     'nullable' => true,
                                 ],
-                            'name' =>
+                            'name'        =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                         ],
                 ],
 
 
-            Entity\AttributeValue::class =>
+            Entity\AttributeValue::class     =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\AttributeValues::class,
-                    'table' => 'catalog_attribute_values',
-                    'id' =>
+                    'table'           => 'catalog_attribute_values',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'attribute_value_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'attribute_value_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'manyToOne' => [
+                    'manyToOne'       => [
                         'attribute' => [
                             'targetEntity' => Entity\Attribute::class,
-                            'inversedBy' => 'values',
-                            'joinColumn' => [
-                                'name' => 'attribute_id',
-                                'referencedColumnName' => 'attribute_id'
+                            'inversedBy'   => 'values',
+                            'joinColumn'   => [
+                                'name'                 => 'attribute_id',
+                                'referencedColumnName' => 'attribute_id',
                             ],
                         ],
                     ],
-                        'oneToMany' => [
+                    'oneToMany'       => [
                         'translations' => [
-                            'targetEntity' => Entity\AttributeValueI18n::class,
-                            'mappedBy' => 'attributeValue',
+                            'targetEntity'  => Entity\AttributeValueI18n::class,
+                            'mappedBy'      => 'attributeValue',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'sortOrder' =>
                                 [
-                                    'column' => 'sort_order',
-                                    'type' => 'integer',
+                                    'column'   => 'sort_order',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
 
@@ -1171,55 +1171,55 @@ return [
                 ],
             Entity\AttributeValueI18n::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\AttributeValueI18n::class,
-                    'table' => 'catalog_attribute_value_i18n',
-                    'id' =>
+                    'table'           => 'catalog_attribute_value_i18n',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'translation_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'translation_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToOne' => [
+                    'oneToOne'        => [
                         'attribute' => [
                             'targetEntity' => Entity\Attribute::class,
-                            'joinColumn' => [
-                                'name' => 'attribute_id',
-                                'referencedColumnName' => 'attribute_id'
+                            'joinColumn'   => [
+                                'name'                 => 'attribute_id',
+                                'referencedColumnName' => 'attribute_id',
                             ],
                         ],
 
                         'language' => [
                             'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
-                            'joinColumn' => [
-                                'name' => 'language_id',
-                                'referencedColumnName' => 'language_id'
+                            'joinColumn'   => [
+                                'name'                 => 'language_id',
+                                'referencedColumnName' => 'language_id',
                             ],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'attributeValue' => [
                             'targetEntity' => Entity\AttributeValue::class,
-                            'inversedBy' => 'translations',
-                            'joinColumn' => [
-                                'name' => 'attribute_value_id',
-                                'referencedColumnName' => 'attribute_value_id'
+                            'inversedBy'   => 'translations',
+                            'joinColumn'   => [
+                                'name'                 => 'attribute_value_id',
+                                'referencedColumnName' => 'attribute_value_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
                             'name' =>
                                 [
-                                    'column' => 'name',
-                                    'type' => 'string',
+                                    'column'   => 'name',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
                         ],
@@ -1227,66 +1227,66 @@ return [
 
             Entity\ProductVariant::class =>
                 [
-                    'type' => 'entity',
+                    'type'            => 'entity',
                     'repositoryClass' => Repository\ProductVariants::class,
-                    'table' => 'catalog_product_variants',
-                    'id' =>
+                    'table'           => 'catalog_product_variants',
+                    'id'              =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'variant_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'variant_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
                                         ],
                                 ],
                         ],
-                    'oneToMany' => [
+                    'oneToMany'       => [
                         'combinations' => [
-                            'targetEntity' => Entity\AttributeCombination::class,
-                            'mappedBy' => 'variant',
+                            'targetEntity'  => Entity\AttributeCombination::class,
+                            'mappedBy'      => 'variant',
                             'orphanRemoval' => true,
-                            'cascade' => ['persist', 'merge', 'detach'],
+                            'cascade'       => ['persist', 'merge', 'detach'],
                         ],
                     ],
-                        'manyToOne' => [
+                    'manyToOne'       => [
                         'product' => [
                             'targetEntity' => Entity\Product::class,
-                            'inversedBy' => 'variants',
-                            'joinColumn' => [
-                                'name' => 'product_id',
-                                'referencedColumnName' => 'product_id'
+                            'inversedBy'   => 'variants',
+                            'joinColumn'   => [
+                                'name'                 => 'product_id',
+                                'referencedColumnName' => 'product_id',
                             ],
                         ],
-                        ],
-                        'fields' =>
+                    ],
+                    'fields'          =>
                         [
-                            'quantity' =>
+                            'quantity'  =>
                                 [
-                                    'column' => 'quantity',
-                                    'type' => 'integer',
+                                    'column'   => 'quantity',
+                                    'type'     => 'integer',
                                     'nullable' => false,
                                 ],
-                            'sku' =>
+                            'sku'       =>
                                 [
-                                    'column' => 'sku',
-                                    'type' => 'string',
+                                    'column'   => 'sku',
+                                    'type'     => 'string',
                                     'nullable' => false,
                                 ],
-                            'price' =>
+                            'price'     =>
                                 [
-                                    'column' => 'price',
-                                    'type' => 'decimal',
+                                    'column'   => 'price',
+                                    'type'     => 'decimal',
                                     'nullable' => false,
                                 ],
                             'createdAt' =>
                                 [
-                                    'column' => 'created_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'created_at',
+                                    'type'     => 'datetime',
                                     'nullable' => false,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -1296,10 +1296,10 @@ return [
                                 ],
                             'updatedAt' =>
                                 [
-                                    'column' => 'updated_at',
-                                    'type' => 'datetime',
+                                    'column'   => 'updated_at',
+                                    'type'     => 'datetime',
                                     'nullable' => true,
-                                    'gedmo' =>
+                                    'gedmo'    =>
                                         [
                                             'timestampable' =>
                                                 [
@@ -1312,15 +1312,15 @@ return [
 
             Entity\AttributeCombination::class =>
                 [
-                    'type' => 'entity',
-                    'table' => 'catalog_attribute_combinations',
-                    'id' =>
+                    'type'      => 'entity',
+                    'table'     => 'catalog_attribute_combinations',
+                    'id'        =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'combination_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'combination_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
@@ -1328,32 +1328,32 @@ return [
                                 ],
                         ],
                     'manyToOne' => [
-                        'variant' => [
+                        'variant'        => [
                             'targetEntity' => Entity\ProductVariant::class,
-                            'inversedBy' => 'combinations',
-                            'joinColumn' => [
-                                'name' => 'variant_id',
-                                'referencedColumnName' => 'variant_id'
+                            'inversedBy'   => 'combinations',
+                            'joinColumn'   => [
+                                'name'                 => 'variant_id',
+                                'referencedColumnName' => 'variant_id',
                             ],
                         ],
-                        'attribute' => [
+                        'attribute'      => [
                             'targetEntity' => Entity\Attribute::class,
                             //'inversedBy'   => 'combinations',
-                            'joinColumn' => [
-                                'name' => 'attribute_id',
-                                'referencedColumnName' => 'attribute_id'
+                            'joinColumn'   => [
+                                'name'                 => 'attribute_id',
+                                'referencedColumnName' => 'attribute_id',
                             ],
                         ],
                         'attributeValue' => [
                             'targetEntity' => Entity\AttributeValue::class,
                             //'inversedBy'   => 'combinations',
-                            'joinColumn' => [
-                                'name' => 'attribute_value_id',
-                                'referencedColumnName' => 'attribute_value_id'
+                            'joinColumn'   => [
+                                'name'                 => 'attribute_value_id',
+                                'referencedColumnName' => 'attribute_value_id',
                             ],
                         ],
                     ],
-                        'fields' =>
+                    'fields'    =>
                         [
 
                         ],
@@ -1361,15 +1361,15 @@ return [
 
             Entity\FeatureCombination::class =>
                 [
-                    'type' => 'entity',
-                    'table' => 'catalog_feature_combinations',
-                    'id' =>
+                    'type'      => 'entity',
+                    'table'     => 'catalog_feature_combinations',
+                    'id'        =>
                         [
                             'id' =>
                                 [
-                                    'column' => 'combination_id',
-                                    'type' => 'integer',
-                                    'nullable' => false,
+                                    'column'    => 'combination_id',
+                                    'type'      => 'integer',
+                                    'nullable'  => false,
                                     'generator' =>
                                         [
                                             'strategy' => 'AUTO',
@@ -1377,34 +1377,34 @@ return [
                                 ],
                         ],
                     'manyToOne' => [
-                        'product' => [
+                        'product'      => [
                             'targetEntity' => Entity\Product::class,
-                            'inversedBy' => 'features',
-                            'joinColumn' => [
-                                'name' => 'product_id',
-                                'referencedColumnName' => 'product_id'
+                            'inversedBy'   => 'features',
+                            'joinColumn'   => [
+                                'name'                 => 'product_id',
+                                'referencedColumnName' => 'product_id',
                             ],
                         ],
-                        'feature' => [
+                        'feature'      => [
                             'targetEntity' => Entity\Feature::class,
-                            'joinColumn' => [
-                                'name' => 'feature_id',
-                                'referencedColumnName' => 'feature_id'
+                            'joinColumn'   => [
+                                'name'                 => 'feature_id',
+                                'referencedColumnName' => 'feature_id',
                             ],
                         ],
                         'featureValue' => [
                             'targetEntity' => Entity\FeatureValue::class,
-                            'joinColumn' => [
-                                'name' => 'feature_value_id',
-                                'referencedColumnName' => 'feature_value_id'
+                            'joinColumn'   => [
+                                'name'                 => 'feature_value_id',
+                                'referencedColumnName' => 'feature_value_id',
                             ],
                         ],
                     ],
-                        'fields' =>
+                    'fields'    =>
                         [
 
                         ],
                 ],
         ],
-    ]
+    ],
 ];

@@ -14,6 +14,7 @@ use WellCart\Catalog\Spec\ProductTemplateRepository;
 
 class ProductTemplateSelectorFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $services = $sm->getServiceLocator();
@@ -21,6 +22,7 @@ class ProductTemplateSelectorFactory
             ProductTemplateRepository::class
         )
             ->toOptionsList();
+
         return new \WellCart\Form\Element\Select(
             null,
             ['value_options' => $groups]

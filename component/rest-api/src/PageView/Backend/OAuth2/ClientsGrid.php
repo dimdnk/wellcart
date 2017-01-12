@@ -18,6 +18,7 @@ use WellCart\Ui\Datagrid;
 
 class ClientsGrid extends Standard
 {
+
     public function __construct(
         ClientRepository $repository,
         $variables = null,
@@ -103,7 +104,7 @@ class ClientsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -122,7 +123,7 @@ class ClientsGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

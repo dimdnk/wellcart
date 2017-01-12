@@ -16,6 +16,7 @@ use Zend\View\Helper\AbstractHelper;
  */
 class Well extends AbstractHelper
 {
+
     protected $format = '<div class="well%s">%s</div>';
 
     /**
@@ -29,6 +30,7 @@ class Well extends AbstractHelper
         if ($content) {
             return $this->render($content, $class);
         }
+
         return $this;
     }
 
@@ -37,6 +39,7 @@ class Well extends AbstractHelper
         if (!empty($class)) {
             $class = ' ' . trim($class);
         }
+
         return sprintf($this->format, $class, $content);
     }
 

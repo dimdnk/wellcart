@@ -25,6 +25,7 @@ if (!function_exists('application')) {
         if ($instance !== null) {
             $app = $instance;
         }
+
         return $app;
     }
 
@@ -79,6 +80,7 @@ if (!function_exists('e')) {
         if ($escaper === null) {
             $escaper = new Zend\Escaper\Escaper();
         }
+
         return $escaper->escapeHtml($string);
     }
 
@@ -116,6 +118,7 @@ if (!function_exists('__')) {
                 $locale
             );
         }
+
         return $translator->translate($string, $textDomain, $locale);
     }
 
@@ -161,6 +164,7 @@ if (!function_exists('format_price')) {
         if (!$withSymbol) {
             $symbol = '';
         }
+
         return $symbol . number_format(
                 $number,
                 2,

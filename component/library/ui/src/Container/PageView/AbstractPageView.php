@@ -19,6 +19,7 @@ abstract class AbstractPageView
     PageViewInterface,
     LayoutManagerAwareInterface
 {
+
     use LayoutManagerAwareTrait;
 
 }

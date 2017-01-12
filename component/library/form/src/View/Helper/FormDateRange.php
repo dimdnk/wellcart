@@ -13,6 +13,7 @@ use Zend\Form\View\Helper\FormRange;
 
 class FormDateRange extends FormRange
 {
+
     /**
      * Determine input type to use
      *

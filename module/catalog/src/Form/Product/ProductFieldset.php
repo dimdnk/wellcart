@@ -44,7 +44,7 @@ class ProductFieldset extends Fieldset
                 'name'       => 'product_template',
                 'type'       => 'catalogProductTemplatesSelector',
                 'options'    => [
-                    'label'            => __('Template'),
+                    'label' => __('Template'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -68,7 +68,7 @@ class ProductFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'product-translations',
-                ]
+                ],
             ],
             ['priority' => 1500]
         );
@@ -79,7 +79,7 @@ class ProductFieldset extends Fieldset
                 'name'       => 'brand',
                 'type'       => 'catalogBrandSelector',
                 'options'    => [
-                    'label'            => __('Brand'),
+                    'label' => __('Brand'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -121,13 +121,13 @@ class ProductFieldset extends Fieldset
                 'name'       => 'url_key',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('URL Key')
+                    'label' => __('URL Key'),
                 ],
                 'attributes' => [
                     'id'               => 'catalog_product_url_key',
                     'data-sluggable'   => 'true',
                     'data-slug-source' => '.catalog_product_name:first',
-                    'required'         => 'required'
+                    'required'         => 'required',
                 ],
             ],
             ['priority' => 1100]
@@ -138,14 +138,14 @@ class ProductFieldset extends Fieldset
                 'name'       => 'add_feature',
                 'type'       => 'htmlAnchor',
                 'options'    => [
-                    'link'        => url_to_route(
+                    'link'   => url_to_route(
                         'zfcadmin/catalog/features',
                         [
                             'action' => 'create',
                         ]
                     ),
-                    'text'        => __('Add feature'),
-                    'target'      => '_blank',
+                    'text'   => __('Add feature'),
+                    'target' => '_blank',
                 ],
                 'attributes' => [
                     'id' => 'catalog_add_feature',
@@ -196,7 +196,7 @@ class ProductFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_variant',
                 'options'    => [
-                    'label'       => __('Add Variant')
+                    'label' => __('Add Variant'),
                 ],
                 'attributes' => [
                     'id'               => 'catalog_product_add_new_variant',
@@ -212,7 +212,7 @@ class ProductFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_image',
                 'options'    => [
-                    'label'       => __('Add Image'),
+                    'label' => __('Add Image'),
                 ],
                 'attributes' => [
                     'id'               => 'catalog_product_add_new_image',
@@ -257,7 +257,7 @@ class ProductFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'product-variants',
-                ]
+                ],
             ],
             ['priority' => 950]
         );
@@ -290,7 +290,7 @@ class ProductFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'product-images',
-                ]
+                ],
             ],
             ['priority' => 950]
         );
@@ -306,6 +306,7 @@ class ProductFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\ProductEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

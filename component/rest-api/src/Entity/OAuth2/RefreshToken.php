@@ -18,7 +18,9 @@ use ZF\OAuth2\Doctrine\Entity\UserInterface;
 
 class RefreshToken extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -150,6 +152,7 @@ class RefreshToken extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

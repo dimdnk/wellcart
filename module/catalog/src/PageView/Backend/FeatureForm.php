@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class FeatureForm extends Standard
 {
+
     public function __construct(
         FeatureRepository $repository,
         $variables = null,

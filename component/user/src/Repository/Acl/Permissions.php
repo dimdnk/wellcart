@@ -34,6 +34,7 @@ class Permissions extends AbstractRepository implements AclPermissionRepository
             $this,
             compact('optionsList')
         );
+
         return $optionList;
     }
 
@@ -48,6 +49,7 @@ class Permissions extends AbstractRepository implements AclPermissionRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -65,6 +67,7 @@ class Permissions extends AbstractRepository implements AclPermissionRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

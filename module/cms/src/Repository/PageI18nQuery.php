@@ -21,12 +21,14 @@ class PageI18nQuery extends QueryBuilder
         $alias = $this->getRootAliases()[0];
         $this->andWhere($alias . '.language = :language');
         $this->setParameter('language', $language);
+
         return $this;
     }
 
     public function withPage()
     {
         $this->innerJoin($this->getRootAliases()[0] . '.page', 'p');
+
         return $this;
     }
 }

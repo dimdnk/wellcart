@@ -15,6 +15,7 @@ use WellCart\Mvc\Application;
 
 class ModuleTest extends TestCase
 {
+
     /**
      * @var Module
      */

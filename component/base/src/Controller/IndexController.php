@@ -14,6 +14,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 
 class IndexController extends AbstractActionController
 {
+
     /**
      * @return \Zend\View\Model\ViewModel
      */

@@ -14,4 +14,5 @@ use WellCart\User\Spec\UserRepository;
 
 interface AdministratorRepository extends UserRepository
 {
+
 }

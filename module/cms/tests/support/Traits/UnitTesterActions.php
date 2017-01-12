@@ -11,6 +11,7 @@ namespace WellCart\CMS\Test\Traits;
 
 trait UnitTesterActions
 {
+
     /**
      * [!] Method is generated. Documentation taken from corresponding module.
      *

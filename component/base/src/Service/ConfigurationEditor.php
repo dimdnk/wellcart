@@ -188,6 +188,7 @@ class ConfigurationEditor extends EventProvider
             }
             $list->insert($fieldsetId, $fieldset, (int)$fieldset['priority']);
         }
+
         return $list;
     }
 
@@ -206,6 +207,7 @@ class ConfigurationEditor extends EventProvider
         if (empty($tab)) {
             $tab = Arr::get($this->config, $path . $default, []);
         }
+
         return $tab;
     }
 
@@ -266,7 +268,7 @@ class ConfigurationEditor extends EventProvider
         $this->form->add(
             [
                 'type' => 'Csrf',
-                'name' => 'csrf'
+                'name' => 'csrf',
             ],
             ['priority' => 100000]
         );
@@ -278,7 +280,7 @@ class ConfigurationEditor extends EventProvider
                 'options'    => [
                     'label'       => __('Save'),
                     'fontAwesome' => [
-                        'icon' => 'check'
+                        'icon' => 'check',
                     ],
                 ],
                 'attributes' => [
@@ -290,13 +292,14 @@ class ConfigurationEditor extends EventProvider
                         '<span class="fa fa-%s"></span> %s',
                         'check',
                         __('Save')
-                    )
+                    ),
                 ],
             ],
             ['priority' => 1000000]
         );
 
         $this->form->getEventManager()->trigger('init', $this);
+
         return $this->form;
     }
 }

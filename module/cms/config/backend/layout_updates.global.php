@@ -14,9 +14,9 @@ return
                         'helpers' => [
                             'requireJS' => [
                                 'assets/wellcart-base/js/tinymce' => ['dependencies' => ['assets/wellcart-base/js/tinymce']],
-                            ]
+                            ],
                         ],
                     ],
                 ],
-            ]
+            ],
     ];

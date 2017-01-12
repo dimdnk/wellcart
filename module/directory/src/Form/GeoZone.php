@@ -21,7 +21,10 @@ use Zend\Form\FormInterface;
 
 class GeoZone extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'directory_geo_zone';
     /**
      * Form constructor
      *
@@ -37,7 +40,7 @@ class GeoZone extends AbstractForm
         GeoZoneMapEntity $geoZoneMapPrototype
     ) {
         $this->setFormFactory($formFactory);
-        parent::__construct('directory_geo_zone');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -55,10 +58,10 @@ class GeoZone extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save')
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -97,6 +100,7 @@ class GeoZone extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\GeoZoneEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -114,6 +118,7 @@ class GeoZone extends AbstractForm
                 $geoZone->getGeoZoneMaps()->clear();
             }
         }
+
         return $geoZone;
     }
 
@@ -127,6 +132,7 @@ class GeoZone extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\GeoZoneEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

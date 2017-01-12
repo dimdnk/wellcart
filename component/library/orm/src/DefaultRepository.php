@@ -10,6 +10,7 @@ namespace WellCart\ORM;
 
 class DefaultRepository extends AbstractRepository
 {
+
     /**
      * {@inheritDoc}
      */

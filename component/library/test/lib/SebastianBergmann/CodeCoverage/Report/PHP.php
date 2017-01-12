@@ -12,6 +12,7 @@
 class PHP_CodeCoverage_Report_PHP
     extends \SebastianBergmann\CodeCoverage\Report\PHP
 {
+
     /**
      * @param  PHP_CodeCoverage $coverage
      * @param  string           $target

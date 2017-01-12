@@ -26,6 +26,7 @@ namespace WellCart\Directory\Test;
  */
 class AcceptanceTester extends \Codeception\Actor
 {
+
     use Traits\AcceptanceTesterActions;
 
     /**

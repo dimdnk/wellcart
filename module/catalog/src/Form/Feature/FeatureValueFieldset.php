@@ -67,7 +67,7 @@ class FeatureValueFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'feature-value-i18n',
-                ]
+                ],
             ],
             ['priority' => 750]
         );
@@ -78,7 +78,7 @@ class FeatureValueFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order'),
+                    'label' => __('Sort Order'),
                 ],
                 'attributes' => [
                     'id'    => 'catalog_feature_value_sort_order',
@@ -100,6 +100,7 @@ class FeatureValueFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\FeatureValueEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

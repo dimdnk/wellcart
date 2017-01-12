@@ -14,6 +14,7 @@ namespace WellCart\Utility;
  */
 abstract class Num
 {
+
     /**
      * Converts arabic numerals (1-3999) to roman numerals.
      *
@@ -48,7 +49,7 @@ abstract class Num
             'IX' => 9,
             'V'  => 5,
             'IV' => 4,
-            'I'  => 1
+            'I'  => 1,
         ];
 
         $romanNumeral = '';
@@ -104,7 +105,7 @@ abstract class Num
             'L' => 50,
             'X' => 10,
             'V' => 5,
-            'I' => 1
+            'I' => 1,
         ];
 
         $arabicNumeral = 0;

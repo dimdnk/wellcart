@@ -28,6 +28,7 @@ class ProductI18nQuery extends QueryBuilder
         $alias = $this->getRootAliases()[0];
         $this->andWhere($alias . '.language = :language');
         $this->setParameter('language', $language);
+
         return $this;
     }
 
@@ -35,12 +36,14 @@ class ProductI18nQuery extends QueryBuilder
     {
         $this->withProduct();
         $this->innerJoin('p.variants', 'variants');
+
         return $this;
     }
 
     public function withProduct()
     {
         $this->innerJoin($this->getRootAliases()[0] . '.product', 'p');
+
         return $this;
     }
 }

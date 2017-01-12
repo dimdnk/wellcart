@@ -13,6 +13,7 @@ use Zend\Hydrator\Strategy\DefaultStrategy;
 
 class DateStrategy extends DefaultStrategy
 {
+
     /**
      * {@inheritdoc}
      *

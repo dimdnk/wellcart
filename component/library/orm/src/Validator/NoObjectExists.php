@@ -80,8 +80,10 @@ class NoObjectExists extends AbstractNoObjectExists
                 $match = $qb->getQuery()->getOneOrNullResult();
                 if (is_object($match)) {
                     $this->error(self::ERROR_OBJECT_FOUND, $value);
+
                     return false;
                 }
+
                 return true;
             }
         }

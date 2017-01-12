@@ -14,6 +14,7 @@ use WellCart\User\Form\RecoverAccount as RecoverUserAccountForm;
 
 class RecoverAccount extends RecoverUserAccountForm
 {
+
     /**
      * Input filter specification
      *
@@ -53,7 +54,7 @@ class RecoverAccount extends RecoverUserAccountForm
                                 'entity_class' => 'WellCart\Backend\Entity\Administrator',
                                 'fields'       => ['email'],
                                 'messages'     => [
-                                    'noObjectFound' => 'No such user exists. Please make sure that you entered your email correctly.'
+                                    'noObjectFound' => 'No such user exists. Please make sure that you entered your email correctly.',
                                 ],
                             ],
                         ],
@@ -66,6 +67,7 @@ class RecoverAccount extends RecoverUserAccountForm
             $this,
             ['specification' => &$specification]
         );
+
         return $specification;
     }
 }

@@ -12,10 +12,12 @@ use ZfcDatagrid\Column\Select;
 
 class Column extends Select
 {
+
     /**
      * @var bool
      */
     protected $sortable = false;
+
     /**
      * @var bool
      */
@@ -42,6 +44,7 @@ class Column extends Select
     public function setSortable(bool $sortable)
     {
         $this->sortable = $sortable;
+
         return $this;
     }
 
@@ -61,6 +64,7 @@ class Column extends Select
     public function setFilterable(bool $filterable)
     {
         $this->filterable = $filterable;
+
         return $this;
     }
 
@@ -82,6 +86,7 @@ class Column extends Select
     {
         $this->filter['form_element'] = $formElement;
         $this->filter['expression'] = $expression;
+
         return $this;
     }
 

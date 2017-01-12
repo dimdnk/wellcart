@@ -16,10 +16,12 @@ use Zend\Stdlib\RequestInterface;
 class Sorter
     extends Collection
 {
+
     /**
      * @var \Zend\Http\PhpEnvironment\Request
      */
     protected $request;
+
     protected $urlPlugin;
 
     /**
@@ -64,6 +66,7 @@ class Sorter
             'sortBy'    => $sortBy,
             'sortOrder' => $sortOrder,
         ];
+
         return $this;
     }
 
@@ -108,6 +111,7 @@ class Sorter
             $chevron = sprintf($chevron, $icon);
         }
         $url = $this->urlPlugin->fromRoute(null, [], [], true) . $querySuffix;
+
         return '<a href="' . $url . '">' . $label . ' &nbsp; ' . $chevron
             . '</a>';
     }

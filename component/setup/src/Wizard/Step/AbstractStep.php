@@ -37,6 +37,7 @@ class AbstractStep extends Step
     public function setSetupService(Setup $setup)
     {
         $this->setup = $setup;
+
         return $this;
     }
 
@@ -47,6 +48,7 @@ class AbstractStep extends Step
     {
         $array = parent::toArray();
         unset($array['setup']);
+
         return $array;
     }
 

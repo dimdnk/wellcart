@@ -14,6 +14,7 @@ use WellCart\Ui\Layout\EventListener\LoadLayoutListener;
 
 class LoadLayoutListenerFactory
 {
+
     /**
      * @param ContainerInterface $container
      *

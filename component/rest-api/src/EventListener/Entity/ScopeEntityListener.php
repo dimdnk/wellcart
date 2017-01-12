@@ -17,6 +17,7 @@ use WellCart\RestApi\Repository\OAuth2\Scopes as ScopeRepository;
 
 class ScopeEntityListener
 {
+
     public function postPersist(
         ScopeEntity $scope,
         LifecycleEventArgs $args

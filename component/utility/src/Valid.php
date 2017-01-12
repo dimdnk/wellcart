@@ -16,6 +16,7 @@ use ArrayObject;
  */
 abstract class Valid
 {
+
     /**
      * Checks a field against a regular expression.
      *
@@ -71,6 +72,7 @@ abstract class Valid
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -163,7 +165,7 @@ abstract class Valid
         }
 
         // Value cannot be NULL, FALSE, '', or an empty array
-        return !in_array($value, array(null, false, '', array()), true);
+        return !in_array($value, [null, false, '', []], true);
     }
 
     /**
@@ -228,6 +230,7 @@ abstract class Valid
         // An extra check for the top level domain
         // It must start with a letter
         $tld = ltrim(substr($matches[1], (int)strrpos($matches[1], '.')), '.');
+
         return ctype_alpha($tld[0]);
     }
 
@@ -305,7 +308,7 @@ abstract class Valid
     public static function phone($number, $lengths = null)
     {
         if (!is_array($lengths)) {
-            $lengths = array(7, 10, 11);
+            $lengths = [7, 10, 11];
         }
 
         // Remove all non-digit characters from the number

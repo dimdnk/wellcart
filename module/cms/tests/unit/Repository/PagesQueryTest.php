@@ -15,6 +15,7 @@ use WellCart\CMS\Spec\PageRepository;
 
 class PagesQueryTest extends TestCase
 {
+
     /**
      * @var PagesQuery
      */

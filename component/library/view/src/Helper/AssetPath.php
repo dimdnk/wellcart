@@ -12,6 +12,7 @@ use WellCart\Utility\Config;
 
 class AssetPath extends \Zend\View\Helper\BasePath
 {
+
     /**
      * @inheritdoc
      */
@@ -21,6 +22,7 @@ class AssetPath extends \Zend\View\Helper\BasePath
             'public_resources.assets.base_path',
             Config::get('view_manager.base_path') . 'assets'
         );
+
         return parent::__invoke($file);
     }
 }

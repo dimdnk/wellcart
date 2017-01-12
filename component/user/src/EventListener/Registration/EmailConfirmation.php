@@ -38,6 +38,7 @@ class EmailConfirmation
         if ($this->handler->isConfirmEmail()) {
             $this->handler->sendConfirmationEmail($user);
         }
+
         return true;
     }
 }

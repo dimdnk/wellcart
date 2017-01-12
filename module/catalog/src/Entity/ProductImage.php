@@ -103,6 +103,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setProduct(ProductEntity $product = null
     ): ProductImageEntity {
         $this->product = $product;
+
         return $this;
     }
 
@@ -122,6 +123,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setId($id): ProductImageEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -141,6 +143,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setFullPath($fullPath): ProductImageEntity
     {
         $this->fullPath = $fullPath;
+
         return $this;
     }
 
@@ -160,6 +163,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setFilename($filename): ProductImageEntity
     {
         $this->filename = $filename;
+
         return $this;
     }
 
@@ -179,6 +183,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setOriginalFilename($originalFilename
     ): ProductImageEntity {
         $this->originalFilename = $originalFilename;
+
         return $this;
     }
 
@@ -198,6 +203,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setDescription($description): ProductImageEntity
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -217,6 +223,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setImageX($imageX): ProductImageEntity
     {
         $this->imageX = $imageX;
+
         return $this;
     }
 
@@ -236,6 +243,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setImageY($imageY): ProductImageEntity
     {
         $this->imageY = $imageY;
+
         return $this;
     }
 
@@ -255,6 +263,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setIsBase($isBase)
     {
         $this->isBase = $isBase;
+
         return $this;
     }
 
@@ -274,6 +283,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): ProductImageEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -293,6 +303,7 @@ class ProductImage extends AbstractEntity implements ProductImageEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): ProductImageEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 }

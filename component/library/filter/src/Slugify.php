@@ -13,6 +13,7 @@ use Zend\Filter\AbstractFilter;
 
 class Slugify extends AbstractFilter
 {
+
     /**
      * Defined by Zend\Filter\FilterInterface
      *

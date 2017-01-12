@@ -16,6 +16,7 @@ use PHPUnit\Framework\TestCase;
  */
 class TimeTest extends TestCase
 {
+
     public function testConstructor()
     {
         $this->assertInstanceOf('WellCart\Utility\Time', new Time);

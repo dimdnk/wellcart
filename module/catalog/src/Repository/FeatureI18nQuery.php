@@ -35,6 +35,7 @@ class FeatureI18nQuery extends QueryBuilder
     public function withFeature()
     {
         $this->innerJoin($this->getRootAliases()[0] . '.feature', 'fe');
+
         return $this;
     }
 }

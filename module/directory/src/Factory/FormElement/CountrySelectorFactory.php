@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Directory\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
@@ -13,6 +14,7 @@ use WellCart\Directory\Form\Element\CountrySelector;
 
 class CountrySelectorFactory
 {
+
     public function __invoke(ContainerInterface $sm)
     {
         $countries = $sm->getServiceLocator()->get(
@@ -28,6 +30,7 @@ class CountrySelectorFactory
 
         $value = current(array_keys($options));
         $countrySelector->setValue($value);
+
         return $countrySelector;
     }
 }

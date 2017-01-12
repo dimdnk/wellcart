@@ -13,9 +13,13 @@ use Zend\Stdlib\PriorityList;
 
 class Tab extends PriorityList
 {
+
     protected $id;
+
     protected $label;
+
     protected $attributes = [];
+
     protected $options = [];
 
     /**
@@ -34,6 +38,7 @@ class Tab extends PriorityList
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -53,6 +58,7 @@ class Tab extends PriorityList
     public function setLabel($label)
     {
         $this->label = $label;
+
         return $this;
     }
 
@@ -72,6 +78,7 @@ class Tab extends PriorityList
     public function setAttributes(array $attributes)
     {
         $this->attributes = $attributes;
+
         return $this;
     }
 
@@ -99,6 +106,7 @@ class Tab extends PriorityList
     public function setOptions($options)
     {
         $this->options = $options;
+
         return $this;
     }
 
@@ -112,6 +120,7 @@ class Tab extends PriorityList
     public function setOption($option, $value)
     {
         $this->options[$option] = $value;
+
         return $this;
     }
 
@@ -124,6 +133,7 @@ class Tab extends PriorityList
     public function setAttribute($attr, $value)
     {
         $this->attributes[$attr] = $value;
+
         return $this;
     }
 
@@ -149,6 +159,7 @@ class Tab extends PriorityList
     public function add($name, $value, $priority = 0)
     {
         $this->insert($name, $value, $priority);
+
         return $this;
     }
 
@@ -170,6 +181,7 @@ class Tab extends PriorityList
         foreach ($items as $key => $item) {
             $this->insert($key, $item);
         }
+
         return $this;
 
     }

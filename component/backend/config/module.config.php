@@ -103,8 +103,8 @@ return [
             'orm_default'           => [
                 'drivers' => [
                     'WellCart\Backend\Entity' => 'wellcart_admin_driver',
-                ]
-            ]
+                ],
+            ],
         ],
         'entity_resolver' => [
             'orm_default' => [
@@ -113,8 +113,8 @@ return [
                     'Backend::Administrator'        => Entity\Administrator::class,
                     Spec\NotificationEntity::class  => Entity\Notification::class,
                     'Backend::Notification'         => Entity\Notification::class,
-                ]
-            ]
+                ],
+            ],
         ],
     ],
 
@@ -135,7 +135,7 @@ return [
     'zfc_rbac' => [
         'guard_manager' => [
             'factories' => [
-                Rbac\Guard\RouteGuard::class => Factory\Rbac\Guard\RouteGuardFactory::class
+                Rbac\Guard\RouteGuard::class => Factory\Rbac\Guard\RouteGuardFactory::class,
             ],
         ],
         'guards'        => [
@@ -369,9 +369,9 @@ return [
                     'sortDirections' => 'sortOrder',
                     'massIds'        => 'ids',
                 ],
-                    'daterange'      => [
+                'daterange'      => [
                     'enabled' => false,
-                    ],
+                ],
             ],
         ],
     ],
@@ -382,7 +382,7 @@ return [
                 'assets/wellcart-backend/js/main-menu/module',
                 'assets/wellcart-backend/js/admin/module',
             ],
-        ]
+        ],
     ],
 
     'command_bus' => [

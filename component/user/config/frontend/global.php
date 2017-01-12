@@ -12,7 +12,7 @@ return [
             'registration' => [
                 'send_welcome_email' => true,
                 'confirm_email'      => true,
-            ]
+            ],
         ],
     ],
     'zfcuser'  => [

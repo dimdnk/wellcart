@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Type\Number as AbstractType;
 
 class Number extends AbstractType
 {
+
 }

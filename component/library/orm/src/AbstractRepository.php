@@ -18,23 +18,26 @@ abstract class AbstractRepository
     extends EntityRepository
     implements EventManagerAwareInterface, Repository
 {
+
     use EventManagerAwareTrait, EventDrivenRepositoryTrait;
 
-  /**
-   * @inheritDoc
-   */
-  public function __construct(EntityManager $em, Mapping\ClassMetadata $class)
-  {
-    parent::__construct($em, $class);
-    $this->getEventManager()
-      ->setIdentifiers([
-        __CLASS__,
-        get_class($this)
-      ]);
-  }
+    /**
+     * @inheritDoc
+     */
+    public function __construct(EntityManager $em, Mapping\ClassMetadata $class)
+    {
+        parent::__construct($em, $class);
+        $this->getEventManager()
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
+    }
 
 
-  /**
+    /**
      * @return QueryBuilder
      */
     abstract public function finder();

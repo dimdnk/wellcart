@@ -16,7 +16,9 @@ use WellCart\ORM\EntityTrait;
 
 class Jwt extends AbstractEntity implements Entity
 {
+
     use EntityTrait;
+
     /**
      * @var string
      */
@@ -63,6 +65,7 @@ class Jwt extends AbstractEntity implements Entity
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 

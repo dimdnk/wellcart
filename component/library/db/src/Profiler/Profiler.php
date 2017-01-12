@@ -12,4 +12,5 @@ use BjyProfiler\Db\Profiler\Profiler as AbstractProfiler;
 
 class Profiler extends AbstractProfiler
 {
+
 }

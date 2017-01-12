@@ -14,6 +14,7 @@ use Zend\View\Helper\AbstractHelper;
 
 class GridFilters extends AbstractHelper
 {
+
     /**
      * @var \WellCart\Ui\Datagrid\Controller\Plugin\GridFilterBuilder
      */
@@ -67,56 +68,57 @@ class GridFilters extends AbstractHelper
         foreach ($columns as $column) {
             $value = $values[$column];
             $spec
-                = array(
+                = [
                 'name'       => $column,
                 'type'       => $formElements[$column],
-                'options'    => array(
+                'options'    => [
                     'label' => $column,
-                ),
-                'attributes' => array(
+                ],
+                'attributes' => [
                     'id'           => $scopeName . '_' . $column,
                     'value'        => $value,
                     'class'        => 'form-control',
                     'autocomplete' => 'off',
-                ),
-            );
+                ],
+            ];
             $this->form->add($spec);
         }
 
         $this->form->add(
-            array(
+            [
                 'name'       => 'apply_filters',
                 'type'       => 'submit',
-                'options'    => array(
+                'options'    => [
                     'label' => __('Search'),
-                ),
-                'attributes' => array(
+                ],
+                'attributes' => [
                     'class' => 'btn btn-success btn-sm',
                     'role'  => 'button',
                     'value' => __('Search'),
                     'id'    => 'apply_filters',
-                ),
-            )
+                ],
+            ]
         );
 
         $this->form->add(
-            array(
+            [
                 'name'       => 'reset_filters',
                 'type'       => 'submit',
-                'options'    => array(
+                'options'    => [
                     'label' => __('Reset'),
-                ),
-                'attributes' => array(
+                ],
+                'attributes' => [
                     'class' => 'btn btn-default btn-sm',
                     'role'  => 'button',
                     'value' => __('Reset'),
                     'id'    => 'reset_filters',
-                ),
-            )
+                ],
+            ]
         );
 
         $this->form->prepare();
         $this->sorterLinks = $sorter;
+
         return $this;
     }
 

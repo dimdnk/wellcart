@@ -235,7 +235,7 @@ return [
         'driver'          => [
             'wellcart_user_xml_driver' => [
                 'class' => 'Doctrine\ORM\Mapping\Driver\XmlDriver',
-                'paths' => __DIR__ . '/common/mapping/'
+                'paths' => __DIR__ . '/common/mapping/',
             ],
             'wellcart_user_driver'     => [
                 'class' => 'WellCart\ORM\Mapping\Driver\SystemConfigDriver',
@@ -249,8 +249,8 @@ return [
                 'drivers' => [
                     'WellCart\User\Entity' => 'wellcart_user_driver',
                     'ZfcUser\Entity'       => 'wellcart_user_xml_driver',
-                ]
-            ]
+                ],
+            ],
         ],
         'entity_resolver' => [
             'orm_default' => [
@@ -261,8 +261,8 @@ return [
                     'User::User'                    => Entity\User::class,
                     'User::Acl\AclPermission'       => Entity\Acl\Permission::class,
                     'User::Acl\Role'                => Entity\Acl\Role::class,
-                ]
-            ]
+                ],
+            ],
         ],
     ],
 
@@ -281,8 +281,8 @@ return [
 
     'assetic_configuration' => [
         'acceptableErrors' => [
-            \ZfcRbac\Guard\GuardInterface::GUARD_UNAUTHORIZED
-        ]
+            \ZfcRbac\Guard\GuardInterface::GUARD_UNAUTHORIZED,
+        ],
     ],
 
     /**

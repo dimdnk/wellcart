@@ -34,8 +34,10 @@ class DbConfiguration extends AbstractStep
             $setup->installDatabase($data);
             $setup->setupWebsiteConfiguration($data);
             $setup->publishAssets();
+
             return true;
         }
+
         return false;
     }
 }

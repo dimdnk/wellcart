@@ -14,6 +14,7 @@ use Phinx\Console\Command\SeedCreate as AbstractCommand;
 
 class SeedCreate extends AbstractCommand
 {
+
     use PhinxCommandTrait;
 
     /**

@@ -11,6 +11,7 @@ namespace WellCart\Catalog\Test\Traits;
 
 trait FunctionalTesterActions
 {
+
     /**
      * @return \Codeception\Scenario
      */

@@ -20,6 +20,7 @@ class Module implements
     VersionProviderInterface,
     ModulePathProviderInterface
 {
+
     /**
      * Module version
      *

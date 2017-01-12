@@ -24,6 +24,7 @@ abstract class Standard
     extends EntityPageView
     implements ServiceLocatorAwareInterface
 {
+
     use ServiceLocatorAwareTrait;
 
     /**
@@ -32,6 +33,7 @@ abstract class Standard
     protected $layout = 'ui/grid/standard';
 
     protected $idFieldName = 'id';
+
     /**
      * @var Datagrid\Datagrid
      */
@@ -64,6 +66,7 @@ abstract class Standard
      * @var string
      */
     protected $template = 'wellcart-backend/page-view/grid/standard/layout';
+
     protected $limitPerPage = 20;
 
     /**
@@ -89,6 +92,7 @@ abstract class Standard
     public function addToolbarButton(Datagrid\ToolbarButton $button)
     {
         $this->toolbarButtons->insert($button->getName(), $button);
+
         return $this;
     }
 
@@ -100,6 +104,7 @@ abstract class Standard
     public function removeToolbarButton($name)
     {
         $this->toolbarButtons->remove($name);
+
         return $this;
     }
 
@@ -111,6 +116,7 @@ abstract class Standard
     public function removeColumn($name)
     {
         $this->columns->remove($name);
+
         return $this;
     }
 
@@ -122,6 +128,7 @@ abstract class Standard
     public function addGroupAction(Datagrid\GroupAction $button)
     {
         $this->groupActions->insert($button->getLabel(), $button);
+
         return $this;
     }
 
@@ -133,6 +140,7 @@ abstract class Standard
     public function removeGroupAction($name)
     {
         $this->groupActions->remove($name);
+
         return $this;
     }
 
@@ -317,6 +325,7 @@ abstract class Standard
     public function addColumn($column)
     {
         $this->columns->insert($column->getUniqueId(), $column);
+
         return $this;
     }
 
@@ -357,6 +366,7 @@ abstract class Standard
             'sortBy'    => $sortBy,
             'sortOrder' => $sortOrder,
         ];
+
         return $this;
     }
 

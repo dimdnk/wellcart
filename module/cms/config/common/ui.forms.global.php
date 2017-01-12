@@ -5,15 +5,18 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
+
+use WellCart\CMS\Form;
+
 return [
     'ui' => [
         'form' =>
             [
-                'cms_page' => [
+                Form\Page::NAME => [
                     'save' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check'
+                                'icon' => 'check',
                             ],
                         ],
                         'attributes' => [
@@ -22,9 +25,9 @@ return [
                     ],
 
                     'save_and_continue_edit' => [
-                        'options' => [
+                        'options'    => [
                             'fontAwesome' => [
-                                'icon' => 'check-circle'
+                                'icon' => 'check-circle',
                             ],
                         ],
                         'attributes' => [
@@ -34,10 +37,10 @@ return [
                     ],
 
                     'page' => [
-                        'status' => [
-                            'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-12',
+                        'status'       => [
+                            'options'    => [
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-12',
                                 'label_attributes' => [
                                     'class' => 'col-md-8 col-md-offset-4',
                                 ],
@@ -46,10 +49,10 @@ return [
                                 'class' => 'switchery-element',
                             ],
                         ],
-                        'url_key' => [
+                        'url_key'      => [
                             'options' => [
-                                'twb-layout' => 'horizontal',
-                                'column-size' => 'md-8',
+                                'twb-layout'       => 'horizontal',
+                                'column-size'      => 'md-8',
                                 'label_attributes' => [
                                     'class' => 'col-md-4',
                                 ],
@@ -57,10 +60,10 @@ return [
 
                         ],
                         'translations' => [
-                            'title' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                            'title'            => [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
@@ -69,32 +72,32 @@ return [
                                     'class' => 'form-control cms_page_title',
                                 ],
                             ],
-                            'body' => [
-                                'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                            'body'             => [
+                                'options'    => [
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                                 'attributes' => [
                                     'class' => 'wysiwyg-tinymce',
-                                    'rows' => 50,
+                                    'rows'  => 50,
                                 ],
                             ],
-                            'meta_title' => [
+                            'meta_title'       => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
-                            'meta_keywords' => [
+                            'meta_keywords'    => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
@@ -102,17 +105,17 @@ return [
                             ],
                             'meta_description' => [
                                 'options' => [
-                                    'twb-layout' => 'horizontal',
-                                    'column-size' => 'md-8',
+                                    'twb-layout'       => 'horizontal',
+                                    'column-size'      => 'md-8',
                                     'label_attributes' => [
                                         'class' => 'col-md-4',
                                     ],
                                 ],
                             ],
 
-                        ]
-                    ]
-                ]
-            ]
-    ]
+                        ],
+                    ],
+                ],
+            ],
+    ],
 ];

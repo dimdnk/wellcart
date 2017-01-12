@@ -116,6 +116,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): LocaleLanguageEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -133,6 +134,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setId($id): LocaleLanguageEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -150,6 +152,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): LocaleLanguageEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -167,6 +170,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setCode($code): LocaleLanguageEntity
     {
         $this->code = $code;
+
         return $this;
     }
 
@@ -184,6 +188,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setIsActive(bool $isActive)
     {
         $this->isActive = (bool)$isActive;
+
         return $this;
     }
 
@@ -201,6 +206,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setIsDefault(bool $isDefault)
     {
         $this->isDefault = (bool)$isDefault;
+
         return $this;
     }
 
@@ -218,6 +224,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setLocale($locale): LocaleLanguageEntity
     {
         $this->locale = $locale;
+
         return $this;
     }
 
@@ -235,6 +242,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setName($name): LocaleLanguageEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -252,6 +260,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setSortOrder($sortOrder): LocaleLanguageEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -269,6 +278,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setTerritory($territory): LocaleLanguageEntity
     {
         $this->territory = $territory;
+
         return $this;
     }
 
@@ -286,6 +296,7 @@ class Language extends AbstractEntity implements LocaleLanguageEntity
     public function setIsSystem(bool $isSystem)
     {
         $this->isSystem = (bool)$isSystem;
+
         return $this;
     }
 }

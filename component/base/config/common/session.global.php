@@ -25,5 +25,5 @@ return [
                 'Zend\Session\Validator\HttpUserAgent',
             ],
         ],
-    ]
+    ],
 ];

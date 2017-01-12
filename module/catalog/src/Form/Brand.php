@@ -20,7 +20,10 @@ use Zend\Form\FormInterface;
 
 class Brand extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'catalog_brand';
     /**
      * Form constructor
      *
@@ -32,7 +35,7 @@ class Brand extends AbstractForm
         BrandHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('catalog_brand');
+        parent::__construct(static::NAME);
 
         $this->setHydrator($hydrator);
 
@@ -45,7 +48,7 @@ class Brand extends AbstractForm
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Brand Name'),
+                    'label' => __('Brand Name'),
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_name',
@@ -60,7 +63,7 @@ class Brand extends AbstractForm
                 'name'       => 'image',
                 'type'       => 'File',
                 'options'    => [
-                    'label'            => __('Brand Image'),
+                    'label' => __('Brand Image'),
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_image',
@@ -74,7 +77,7 @@ class Brand extends AbstractForm
                 'name'       => 'meta_title',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Page Title'),
+                    'label' => __('Page Title'),
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_meta_title',
@@ -88,7 +91,7 @@ class Brand extends AbstractForm
                 'name'       => 'meta_keywords',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Meta Keywords'),
+                    'label' => __('Meta Keywords'),
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_meta_keywords',
@@ -102,8 +105,8 @@ class Brand extends AbstractForm
                 'name'       => 'meta_description',
                 'type'       => 'Textarea',
                 'options'    => [
-                    'label'            => __('Meta Description'),
-                    'help-block'       => __('Maximum 255 chars'),
+                    'label'      => __('Meta Description'),
+                    'help-block' => __('Maximum 255 chars'),
                 ],
                 'attributes' => [
                     'id' => 'catalog_brand_meta_description',
@@ -125,10 +128,10 @@ class Brand extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -152,7 +155,7 @@ class Brand extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'catalog_brand_remove_image',
+                    'id' => 'catalog_brand_remove_image',
                 ],
             ],
             ['priority' => 650]
@@ -195,7 +198,7 @@ class Brand extends AbstractForm
         }
 
         if (!$object->getImageFullPath()) {
-          $this->remove('remove_image');
+            $this->remove('remove_image');
         }
 
         return parent::bind($object, $flags);
@@ -211,6 +214,7 @@ class Brand extends AbstractForm
                 'Object must implement interface WellCart\Catalog\Spec\BrandEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

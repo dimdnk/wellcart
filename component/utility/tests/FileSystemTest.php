@@ -16,10 +16,12 @@ use PHPUnit\Framework\TestCase;
  */
 class FileSystemTest extends TestCase
 {
+
     /**
      * @var FileSystem
      */
     protected $fs;
+
     protected $dir;
 
     public function setUp()

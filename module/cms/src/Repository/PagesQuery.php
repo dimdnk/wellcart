@@ -15,10 +15,12 @@ use WellCart\ORM\QueryBuilder;
 
 class PagesQuery extends QueryBuilder
 {
+
     public function visible()
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', PageEntity::STATUS_VISIBLE);
+
         return $this;
     }
 
@@ -26,6 +28,7 @@ class PagesQuery extends QueryBuilder
     {
         $this->andWhere($this->getRootAliases()[0] . '.status = :status');
         $this->setParameter('status', PageEntity::STATUS_HIDDEN);
+
         return $this;
     }
 }

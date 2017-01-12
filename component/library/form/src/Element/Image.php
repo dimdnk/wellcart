@@ -12,5 +12,6 @@ use Zend\Form\Element\Image as Element;
 
 class Image extends Element
 {
+
     use SetValueObjectTrait;
 }

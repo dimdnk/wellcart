@@ -12,4 +12,5 @@ use TwbBundle\View\Helper\TwbBundleBadge;
 
 class Badge extends TwbBundleBadge
 {
+
 }

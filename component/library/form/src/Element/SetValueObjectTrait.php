@@ -13,6 +13,7 @@ use WellCart\ORM\Entity;
 
 trait SetValueObjectTrait
 {
+
     /**
      * @inheritDoc
      */

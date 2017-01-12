@@ -15,6 +15,7 @@ use Zend\View\Helper\AbstractHelper;
  */
 class Chosen extends AbstractHelper
 {
+
     protected $format = '$("%s").chosen(%s);';
 
     /**
@@ -28,6 +29,7 @@ class Chosen extends AbstractHelper
         if ($element) {
             return $this->render($element, $options);
         }
+
         return $this;
     }
 

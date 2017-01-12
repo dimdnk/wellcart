@@ -29,6 +29,7 @@ trait ViewRendererAwareTrait
     public function setView(RendererInterface $view)
     {
         $this->view = $view;
+
         return $this;
     }
 }

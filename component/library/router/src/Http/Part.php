@@ -12,4 +12,5 @@ use Zend\Mvc\Router\Http\Part as Route;
 
 class Part extends Route
 {
+
 }

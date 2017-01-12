@@ -19,6 +19,7 @@ use Throwable;
  */
 final class ErrorHandler
 {
+
     /**
      * PHP error handler, converts all errors into ErrorExceptions. This handler
      * respects error_reporting settings.
@@ -123,7 +124,7 @@ final class ErrorHandler
         $template = file_get_contents($template);
         exit(
         str_replace(
-            array('{exception}', '{reason}'), array($textMessage, $reason),
+            ['{exception}', '{reason}'], [$textMessage, $reason],
             $template
         )
         );
@@ -147,7 +148,8 @@ final class ErrorHandler
                     $e['line']
                 );
             }
-        } catch (ErrorException $e) {
+        }
+        catch (ErrorException $e) {
             if (error_reporting()) {
                 $this->enableMaintenanceMode("Internal Server Error", $e);
             } else {

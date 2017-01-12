@@ -42,10 +42,10 @@ class FeatureFieldset extends Fieldset
                 'name'       => 'backend_name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Description'),
-                    'help-block'       => __(
+                    'label'      => __('Description'),
+                    'help-block' => __(
                         'Internal name for administrators.'
-                    )
+                    ),
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_feature_backend_name',
@@ -59,7 +59,7 @@ class FeatureFieldset extends Fieldset
                 'name'       => 'product_templates',
                 'type'       => 'catalogProductTemplatesMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Product Templates')
+                    'label' => __('Product Templates'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -83,7 +83,7 @@ class FeatureFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'feature-i18n',
-                ]
+                ],
             ],
             ['priority' => 750]
         );
@@ -94,7 +94,7 @@ class FeatureFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order')
+                    'label' => __('Sort Order'),
 
                 ],
                 'attributes' => [
@@ -110,7 +110,7 @@ class FeatureFieldset extends Fieldset
                 'type'       => 'button',
                 'name'       => 'add_new_feature_value',
                 'options'    => [
-                    'label'       => __('Add Feature Value')
+                    'label' => __('Add Feature Value'),
                 ],
                 'attributes' => [
                     'id'               => 'catalog_feature_add_new_feature_value',
@@ -150,7 +150,7 @@ class FeatureFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'feature-values',
-                ]
+                ],
             ]
         );
     }
@@ -166,6 +166,7 @@ class FeatureFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\FeatureEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

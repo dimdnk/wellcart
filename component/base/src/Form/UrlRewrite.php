@@ -19,6 +19,10 @@ use Zend\Form\FormInterface;
 
 class UrlRewrite extends AbstractForm
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'base_url_rewrite';
 
     /**
      * Form constructor
@@ -31,7 +35,7 @@ class UrlRewrite extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('base_url_rewrite');
+        parent::__construct(static::NAME);
         $this->setWrapElements(true);
 
         $this->setHydrator($hydrator);
@@ -41,11 +45,11 @@ class UrlRewrite extends AbstractForm
                 'name'       => 'request_path',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Request Path'),
+                    'label' => __('Request Path'),
                 ],
                 'attributes' => [
                     'id'       => 'base_url_rewrite_request_path',
-                    'required' => 'required'
+                    'required' => 'required',
                 ],
             ],
             ['priority' => 700]
@@ -57,11 +61,11 @@ class UrlRewrite extends AbstractForm
                 'name'       => 'target_path',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Target Path'),
+                    'label' => __('Target Path'),
                 ],
                 'attributes' => [
                     'id'       => 'base_url_rewrite_target_path',
-                    'required' => 'required'
+                    'required' => 'required',
                 ],
             ],
             ['priority' => 650]
@@ -80,10 +84,10 @@ class UrlRewrite extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -107,6 +111,7 @@ class UrlRewrite extends AbstractForm
                 'Object must implement interface WellCart\Base\Spec\UrlRewriteEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -120,6 +125,7 @@ class UrlRewrite extends AbstractForm
                 'Object must implement interface WellCart\Base\Spec\UrlRewriteEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

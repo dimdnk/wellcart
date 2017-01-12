@@ -14,6 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 class HtmlHeadTest extends TestCase
 {
+
     /**
      * @var HtmlHead
      */

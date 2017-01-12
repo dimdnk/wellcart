@@ -18,6 +18,7 @@ use WellCart\Ui\Datagrid;
 
 class PublicKeysGrid extends Standard
 {
+
     public function __construct(
         PublicKeyRepository $repository,
         $variables = null,
@@ -117,7 +118,7 @@ class PublicKeysGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -136,7 +137,7 @@ class PublicKeysGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

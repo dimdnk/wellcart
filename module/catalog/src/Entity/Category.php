@@ -137,6 +137,7 @@ class Category extends AbstractEntity
     public function setProducts(Collection $products): CategoryEntity
     {
         $this->products = $products;
+
         return $this;
     }
 
@@ -156,6 +157,7 @@ class Category extends AbstractEntity
     public function setTranslations(Collection $translations
     ): CategoryEntity {
         $this->translations = $translations;
+
         return $this;
     }
 
@@ -169,6 +171,7 @@ class Category extends AbstractEntity
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
+
         return $this;
     }
 
@@ -185,6 +188,7 @@ class Category extends AbstractEntity
 
         $translation->setCategory($this);
         $this->translations->add($translation);
+
         return $this;
     }
 
@@ -198,6 +202,7 @@ class Category extends AbstractEntity
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
+
         return $this;
     }
 
@@ -212,6 +217,7 @@ class Category extends AbstractEntity
     ): CategoryEntity {
         $translation->setCategory(null);
         $this->translations->removeElement($translation);
+
         return $this;
     }
 
@@ -231,6 +237,7 @@ class Category extends AbstractEntity
     public function setLft($lft): CategoryEntity
     {
         $this->lft = $lft;
+
         return $this;
     }
 
@@ -250,6 +257,7 @@ class Category extends AbstractEntity
     public function setRgt($rgt): CategoryEntity
     {
         $this->rgt = $rgt;
+
         return $this;
     }
 
@@ -269,6 +277,7 @@ class Category extends AbstractEntity
     public function setRoot($root): CategoryEntity
     {
         $this->root = $root;
+
         return $this;
     }
 
@@ -288,6 +297,7 @@ class Category extends AbstractEntity
     public function setLvl($lvl): CategoryEntity
     {
         $this->lvl = $lvl;
+
         return $this;
     }
 
@@ -307,6 +317,7 @@ class Category extends AbstractEntity
     public function setParent(CategoryEntity $parent = null)
     {
         $this->parent = $parent;
+
         return $this;
     }
 
@@ -326,6 +337,7 @@ class Category extends AbstractEntity
     public function setId($id): CategoryEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -345,6 +357,7 @@ class Category extends AbstractEntity
     public function setChildren(Collection $children): CategoryEntity
     {
         $this->children = $children;
+
         return $this;
     }
 
@@ -358,6 +371,7 @@ class Category extends AbstractEntity
         foreach ($children as $child) {
             $this->addChild($child);
         }
+
         return $this;
     }
 
@@ -374,6 +388,7 @@ class Category extends AbstractEntity
 
         $child->setParent($this);
         $this->children->add($child);
+
         return $this;
     }
 
@@ -387,6 +402,7 @@ class Category extends AbstractEntity
         foreach ($children as $child) {
             $this->removeChild($child);
         }
+
         return $this;
     }
 
@@ -399,6 +415,7 @@ class Category extends AbstractEntity
     ): CategoryEntity {
         $child->setParent(null);
         $this->children->removeElement($child);
+
         return $this;
     }
 
@@ -426,6 +443,7 @@ class Category extends AbstractEntity
     public function setSortOrder($sortOrder): CategoryEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -445,6 +463,7 @@ class Category extends AbstractEntity
     public function setUrlKey($urlKey): CategoryEntity
     {
         $this->urlKey = $urlKey;
+
         return $this;
     }
 
@@ -464,6 +483,7 @@ class Category extends AbstractEntity
     public function setCreatedAt(\DateTimeInterface $createdAt)
     {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -483,6 +503,7 @@ class Category extends AbstractEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -496,6 +517,7 @@ class Category extends AbstractEntity
         foreach ($products as $product) {
             $this->addProduct($product);
         }
+
         return $this;
     }
 
@@ -512,6 +534,7 @@ class Category extends AbstractEntity
 
         $product->getCategories()->add($this);
         $this->products->add($product);
+
         return $this;
     }
 
@@ -525,6 +548,7 @@ class Category extends AbstractEntity
         foreach ($products as $product) {
             $this->removeProduct($product);
         }
+
         return $this;
     }
 
@@ -537,6 +561,7 @@ class Category extends AbstractEntity
     ): CategoryEntity {
         $product->getCategories()->removeElement($this);
         $this->products->removeElement($product);
+
         return $this;
     }
 
@@ -548,6 +573,7 @@ class Category extends AbstractEntity
     public function setIsVisible($isVisible): CategoryEntity
     {
         $this->isVisible = $isVisible;
+
         return $this;
     }
 }

@@ -15,6 +15,7 @@ use SimpleBus\Message\Bus\Middleware\MessageBusMiddleware;
 
 class DoctrineWrapsMessageHandlingInTransaction implements MessageBusMiddleware
 {
+
     /**
      * @var EntityManagerInterface
      */

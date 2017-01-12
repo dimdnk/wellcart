@@ -67,6 +67,7 @@ class EmailNotConfirmed
                 throw new RuntimeException($message);
             }
         }
+
         return true;
     }
 }

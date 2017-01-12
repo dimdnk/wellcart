@@ -14,6 +14,7 @@ namespace WellCart\Utility;
  */
 abstract class Debug
 {
+
     /**
      * Debug helper function.
      *

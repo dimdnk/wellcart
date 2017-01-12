@@ -84,6 +84,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_api_doctrine_hydrator')
                 );
+
                 return $form;
             },
 
@@ -104,6 +105,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $hydrator
                 );
+
                 return $form;
             },
 
@@ -120,6 +122,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_api_doctrine_hydrator')
                 );
+
                 return $form;
             },
     ],

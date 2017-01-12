@@ -14,6 +14,7 @@ use Zend\Form\FormInterface;
 class TranslatableCollection
     extends \WellCart\Form\Element\Collection
 {
+
     /**
      * @var Collection
      */
@@ -39,6 +40,7 @@ class TranslatableCollection
                 = $options['create_new_objects'] = false;
         }
         parent::setOptions($options);
+
         return $this;
     }
 
@@ -92,6 +94,7 @@ class TranslatableCollection
     public function setLanguages(Collection $languages)
     {
         $this->languages = $languages;
+
         return $this;
     }
 

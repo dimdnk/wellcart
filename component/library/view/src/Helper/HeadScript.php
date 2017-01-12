@@ -10,5 +10,6 @@ namespace WellCart\View\Helper;
 
 class HeadScript extends \Zend\View\Helper\HeadScript
 {
+
     use HeadBuildTrait;
 }

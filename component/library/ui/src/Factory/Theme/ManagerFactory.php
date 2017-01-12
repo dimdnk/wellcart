@@ -13,6 +13,7 @@ use WellCart\Ui\Theme\Manager;
 
 class ManagerFactory
 {
+
     /**
      * @param ContainerInterface $container
      *
@@ -23,6 +24,7 @@ class ManagerFactory
         $config = $container->get('Configuration');
 
         $manager = new Manager($container, $config['ze_theme']);
+
         return $manager;
     }
 }

@@ -19,6 +19,10 @@ use Zend\Form\FormInterface;
 
 class Role extends AbstractForm
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'user_acl_role';
 
     /**
      * Form constructor
@@ -31,7 +35,7 @@ class Role extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('user_acl_role');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -49,7 +53,7 @@ class Role extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'user_acl_role_is_default',
+                    'id' => 'user_acl_role_is_default',
                 ],
             ],
             ['priority' => 700]
@@ -60,7 +64,7 @@ class Role extends AbstractForm
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Name'),
+                    'label' => __('Name'),
                 ],
                 'attributes' => [
                     'id' => 'user_acl_role_name',
@@ -73,7 +77,7 @@ class Role extends AbstractForm
                 'name'       => 'description',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Description'),
+                    'label' => __('Description'),
                 ],
                 'attributes' => [
                     'id' => 'user_acl_role_description',
@@ -87,7 +91,7 @@ class Role extends AbstractForm
                 'name'       => 'permissions',
                 'type'       => 'userPermissionsMultiCheckboxSelector',
                 'options'    => [
-                    'label'            => __('Permissions'),
+                    'label' => __('Permissions'),
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -110,10 +114,10 @@ class Role extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -137,6 +141,7 @@ class Role extends AbstractForm
                 'Object must implement interface WellCart\User\Spec\AclRoleEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -168,6 +173,7 @@ class Role extends AbstractForm
                 'Object must implement interface WellCart\User\Spec\AclRoleEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

@@ -18,6 +18,7 @@ use DateTimeZone;
  */
 class Time extends Carbon
 {
+
     /**
      * Number of seconds in a minute.
      *
@@ -98,6 +99,7 @@ class Time extends Carbon
         $minutes = ($timestamp >> 5) & 0x3f;
         $seconds = 2 * ($timestamp & 0x1f);
         $timestamp = mktime($hours, $minutes, $seconds, $mon, $mday, $year);
+
         return static::createFromTimestamp($timestamp, $timeZone);
     }
 
@@ -116,6 +118,7 @@ class Time extends Carbon
          */
         $dateTime = new static('now', $timeZone);
         $dateTime->setTimestamp($timestamp);
+
         return $dateTime;
     }
 
@@ -138,6 +141,7 @@ class Time extends Carbon
         } else {
             $dateTime = parent::createFromFormat($format, $time);
         }
+
         return static::createFromTimestamp(
             $dateTime->getTimestamp(), $dateTime->getTimeZone()
         );
@@ -155,6 +159,7 @@ class Time extends Carbon
         foreach (DateTimeZone::listIdentifiers() as $timeZone) {
             $timeZones[$timeZone] = str_replace('_', ' ', $timeZone);
         }
+
         return $timeZones;
     }
 
@@ -172,6 +177,7 @@ class Time extends Carbon
             $timeZones[$group][$timeZone] = str_replace('_', ' ', $city);
         }
         unset($timeZones['UTC']);
+
         return $timeZones;
     }
 
@@ -187,6 +193,7 @@ class Time extends Carbon
         if (!is_object($timeZone)) {
             $timeZone = new DateTimeZone($timeZone);
         }
+
         return parent::setTimeZone($timeZone);
     }
 
@@ -200,6 +207,7 @@ class Time extends Carbon
     public function forward($seconds)
     {
         $this->setTimestamp($this->getTimestamp() + $seconds);
+
         return $this;
     }
 
@@ -214,6 +222,7 @@ class Time extends Carbon
     public function rewind($seconds)
     {
         $this->setTimestamp($this->getTimestamp() - $seconds);
+
         return $this;
     }
 
@@ -233,6 +242,7 @@ class Time extends Carbon
             $time['minutes'] = 0;
             $time['seconds'] = 0;
         }
+
         return (($time['year'] - 1980) << 25) | ($time['mon'] << 21)
             | ($time['mday'] << 16) | ($time['hours'] << 11)
             | ($time['minutes'] << 5) | ($time['seconds'] >> 1);
@@ -258,8 +268,9 @@ class Time extends Carbon
             30,
             31,
             30,
-            31
+            31,
         ];
+
         return $days[$this->format('n') - 1];
     }
 
@@ -274,6 +285,7 @@ class Time extends Carbon
         if ($year % 400 === 0 || ($year % 4 === 0 && $year % 100 !== 0)) {
             return true;
         }
+
         return false;
     }
 }

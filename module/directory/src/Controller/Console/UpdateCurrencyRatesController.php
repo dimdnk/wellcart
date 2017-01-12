@@ -21,6 +21,7 @@ class UpdateCurrencyRatesController extends AbstractConsoleController implements
     LoggerAwareInterface,
     TranslatorAwareInterface
 {
+
     use AbstractControllerTrait;
 
     public function handleAction(CurrencyRepository $currencyRepository)
@@ -38,7 +39,8 @@ class UpdateCurrencyRatesController extends AbstractConsoleController implements
                     Color::GREEN
                 );
             }
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $this->getLogger()->crit($e);
             $console->writeLine(
                 sprintf("Error during import: %s", $e->getMessage()),

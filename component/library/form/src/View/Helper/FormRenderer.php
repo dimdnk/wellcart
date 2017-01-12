@@ -14,6 +14,7 @@ use Zend\Form\FormInterface;
 
 class FormRenderer extends TwbBundleForm
 {
+
     /**
      * Render form
      *
@@ -48,6 +49,7 @@ class FormRenderer extends TwbBundleForm
         if ($wrap) {
             $html .= $this->view->form()->closeTag();
         }
+
         return $html;
     }
 
@@ -58,6 +60,7 @@ class FormRenderer extends TwbBundleForm
         } else {
             $html = $this->view->formRow($element);
         }
+
         return $html;
     }
 }

@@ -12,6 +12,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 
 trait ServiceLocatorAwareTrait
 {
+
     /**
      * @var ServiceLocatorInterface
      */

@@ -15,6 +15,7 @@ use WellCart\User\Service\User;
 
 class UserFactory
 {
+
     public function __invoke(ContainerInterface $container): User
     {
         return new User(

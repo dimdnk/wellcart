@@ -12,4 +12,5 @@
 class PHP_CodeCoverage extends
     \SebastianBergmann\CodeCoverage\CodeCoverage
 {
+
 }

@@ -12,5 +12,6 @@ use Zend\Form\Element\Range as Element;
 
 class Range extends Element
 {
+
     use SetValueObjectTrait;
 }

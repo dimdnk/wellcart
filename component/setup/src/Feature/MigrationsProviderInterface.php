@@ -10,6 +10,7 @@ namespace WellCart\Setup\Feature;
 
 interface MigrationsProviderInterface
 {
+
     /**
      * Retrieve array of migration classes
      *

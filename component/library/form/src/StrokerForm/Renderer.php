@@ -28,44 +28,52 @@ use Zend\View\Renderer\PhpRenderer as View;
 class Renderer
     implements RendererInterface, TranslatorAwareInterface
 {
+
     use TranslatorAwareTrait;
 
     /**
      * @var \Zend\Mvc\Router\RouteInterface
      */
     protected $httpRouter;
+
     /**
      * @var AbstractOptions
      */
-    protected $defaultOptions = array();
+    protected $defaultOptions = [];
+
     /**
      * @var AbstractOptions
      */
     protected $options = [];
+
     /**
      * @var FormManager
      */
     protected $formManager;
+
     /**
      * @var array
      */
     protected $skipValidators
-        = array(
+        = [
             'Explode',
-            'Upload'
-        );
+            'Upload',
+        ];
+
     /**
      * @var RulePluginManager
      */
     protected $rulePluginManager;
+
     /**
      * @var array
      */
-    private $rules = array();
+    private $rules = [];
+
     /**
      * @var array
      */
-    private $messages = array();
+    private $messages = [];
 
     /**
      * @return RouteInterface
@@ -157,16 +165,16 @@ class Renderer
 
     public function extractValidatorsForForm($formOrFieldset, $inputFilter)
     {
-        $foundValidators = array();
+        $foundValidators = [];
         foreach ($formOrFieldset->getElements() as $element) {
             $validators = $this->getValidatorsForElement(
                 $inputFilter, $element
             );
             if (count($validators) > 0) {
-                $foundValidators[] = array(
+                $foundValidators[] = [
                     'element'    => $element,
-                    'validators' => $validators
-                );
+                    'validators' => $validators,
+                ];
             }
         }
 
@@ -208,6 +216,7 @@ class Renderer
         $input->isValid();
 
         $chain = $input->getValidatorChain();
+
         return $chain->getValidators();
     }
 
@@ -235,20 +244,20 @@ class Renderer
             $rules = $rule->getRules($validator, $element);
             $messages = $rule->getMessages($validator);
         } else {
-            $rules = array();
-            $messages = array();
+            $rules = [];
+            $messages = [];
         }
 
         $elementName = $this->getElementName($element);
 
         if (!isset($this->rules[$elementName])) {
-            $this->rules[$elementName] = array();
+            $this->rules[$elementName] = [];
         }
         $this->rules[$elementName] = array_merge(
             $this->rules[$elementName], $rules
         );
         if (!isset($this->messages[$elementName])) {
-            $this->messages[$elementName] = array();
+            $this->messages[$elementName] = [];
         }
         $this->messages[$elementName] = array_merge(
             $this->messages[$elementName], $messages
@@ -265,6 +274,7 @@ class Renderer
     protected function getValidatorClassName(ValidatorInterface $validator = null
     ) {
         $namespaces = explode('\\', get_class($validator));
+
         return end($namespaces);
     }
 
@@ -283,8 +293,10 @@ class Renderer
                     $this->getTranslatorTextDomain()
                 );
             }
+
             return $rule;
         }
+
         return null;
     }
 
@@ -349,7 +361,7 @@ class Renderer
     protected function getInlineJavascript(FormInterface $form, Options $options
     ) {
 
-        $validateOptions = array();
+        $validateOptions = [];
         foreach ($options->getValidateOptions() as $key => $value) {
             $value = (is_string($value))
                 ? $value

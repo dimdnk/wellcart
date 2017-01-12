@@ -19,7 +19,10 @@ use Zend\Form\FormInterface;
 
 class Currency extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'directory_currency';
     /**
      * Form constructor
      *
@@ -31,7 +34,7 @@ class Currency extends AbstractForm
         ObjectHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('directory_currency');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -43,7 +46,7 @@ class Currency extends AbstractForm
                 'name'       => 'title',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Currency Title'),
+                    'label' => __('Currency Title'),
 
                 ],
                 'attributes' => [
@@ -58,7 +61,7 @@ class Currency extends AbstractForm
                 'name'       => 'code',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Code'),
+                    'label' => __('Code'),
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_code',
@@ -72,7 +75,7 @@ class Currency extends AbstractForm
                 'name'       => 'symbol',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Symbol'),
+                    'label' => __('Symbol'),
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_symbol',
@@ -86,8 +89,8 @@ class Currency extends AbstractForm
                 'name'       => 'symbol_position',
                 'type'       => 'Select',
                 'options'    => [
-                    'label'            => __('Symbol Position'),
-                    'value_options'    => [
+                    'label'         => __('Symbol Position'),
+                    'value_options' => [
                         'left'  => __('Left'),
                         'right' => __('Right'),
                     ],
@@ -105,8 +108,8 @@ class Currency extends AbstractForm
                 'name'       => 'exchange_rate',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Exchange Rate'),
-                    'help-block'       => __(
+                    'label'      => __('Exchange Rate'),
+                    'help-block' => __(
                         'This rate is to be defined according to your default currency. Primary currency always set to 1.'
                     ),
                 ],
@@ -123,7 +126,7 @@ class Currency extends AbstractForm
                 'name'       => 'decimals',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Decimal Places'),
+                    'label' => __('Decimal Places'),
                 ],
                 'attributes' => [
                     'id' => 'directory_currency_decimals',
@@ -137,7 +140,7 @@ class Currency extends AbstractForm
                 'name'       => 'decimals_separator',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Decimals Sign'),
+                    'label' => __('Decimals Sign'),
                 ],
                 'attributes' => [
                     'id'       => 'directory_currency_decimals_separator',
@@ -152,7 +155,7 @@ class Currency extends AbstractForm
                 'name'       => 'thousands_separator',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Thousands Sign'),
+                    'label' => __('Thousands Sign'),
                 ],
                 'attributes' => [
                     'id'       => 'directory_currency_thousands_separator',
@@ -174,7 +177,7 @@ class Currency extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'directory_currency_status',
+                    'id' => 'directory_currency_status',
                 ],
             ],
             ['priority' => 300]
@@ -192,7 +195,7 @@ class Currency extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'directory_currency_is_primary',
+                    'id' => 'directory_currency_is_primary',
                 ],
             ],
             ['priority' => 250]
@@ -211,10 +214,10 @@ class Currency extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save')
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -238,6 +241,7 @@ class Currency extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\CurrencyEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -251,6 +255,7 @@ class Currency extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\CurrencyEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

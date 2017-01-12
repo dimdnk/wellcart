@@ -16,6 +16,7 @@ use WellCart\Utility\Config;
  */
 class SystemConfig extends Yaml
 {
+
     /**
      * File extension
      *

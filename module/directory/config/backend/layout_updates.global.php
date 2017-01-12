@@ -12,9 +12,9 @@ return [
                 'helpers' => [
                     'requireJS' => [
                         'assets/wellcart-directory/js/geo-zone-configurator' => ['dependencies' => ['assets/wellcart-directory/js/geo-zone-configurator']],
-                    ]
+                    ],
                 ],
             ],
         ],
-    ]
+    ],
 ];

@@ -17,6 +17,7 @@ use SplFileObject;
  */
 class FileSystem
 {
+
     /**
      * Mime types.
      *

@@ -41,7 +41,7 @@ return [
         ],
         'invokables'         => [
             Command\Handler\PersistProductHandler::class => Command\Handler\PersistProductHandler::class,
-            ItemView\Backend\BrandThumbnail::class       => ItemView\Backend\BrandThumbnail::class
+            ItemView\Backend\BrandThumbnail::class       => ItemView\Backend\BrandThumbnail::class,
         ],
         'factories'          => [],
         'abstract_factories' => [],
@@ -95,7 +95,7 @@ return [
     'twbbundle'                  => [
         'ignoredViewHelpers' => [
             'catalogProductImage' => 'catalogProductImage',
-        ]
+        ],
     ],
     /**
      * =========================================================

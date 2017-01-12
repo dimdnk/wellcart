@@ -15,6 +15,7 @@ use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 class EntityListenerResolver extends DefaultEntityListenerResolver
     implements ServiceLocatorAwareInterface
 {
+
     use ServiceLocatorAwareTrait;
 
     /**
@@ -27,6 +28,7 @@ class EntityListenerResolver extends DefaultEntityListenerResolver
         if ($locator->has($className)) {
             return $locator->get($className);
         }
+
         return parent::resolve($className);
     }
 

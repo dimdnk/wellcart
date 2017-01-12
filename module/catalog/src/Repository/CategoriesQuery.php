@@ -14,6 +14,7 @@ use WellCart\ORM\QueryBuilder;
 
 class CategoriesQuery extends QueryBuilder
 {
+
     /**
      * @return CategoriesQuery
      */
@@ -21,12 +22,14 @@ class CategoriesQuery extends QueryBuilder
     {
         $alias = $this->getRootAliases()[0];
         $this->addOrderBy($alias . '.lft', 'ASC');
+
         return $this;
     }
 
     public function defaultSortOrder()
     {
         $this->addOrderBy($this->getRootAliases()[0] . '.sortOrder', 'ASC');
+
         return $this;
     }
 
@@ -36,6 +39,7 @@ class CategoriesQuery extends QueryBuilder
             $this->getRootAliases()[0] . '.isVisible = :is_visible'
         );
         $this->setParameter('is_visible', 1);
+
         return $this;
     }
 
@@ -45,6 +49,7 @@ class CategoriesQuery extends QueryBuilder
             $this->getRootAliases()[0] . '.isVisible = :is_visible'
         );
         $this->setParameter('is_visible', 0);
+
         return $this;
     }
 
@@ -54,6 +59,7 @@ class CategoriesQuery extends QueryBuilder
     public function findPreviousRecord($id)
     {
         $this->excludeRoot();
+
         return parent::findPreviousRecord(
             $id
         );
@@ -67,6 +73,7 @@ class CategoriesQuery extends QueryBuilder
     {
         $alias = $this->getRootAliases()[0];
         $this->andWhere($this->expr()->andX($alias . '.id <> ' . 1));
+
         return $this;
     }
 
@@ -76,6 +83,7 @@ class CategoriesQuery extends QueryBuilder
     public function findNextRecord($id)
     {
         $this->excludeRoot();
+
         return parent::findNextRecord(
             $id
         );

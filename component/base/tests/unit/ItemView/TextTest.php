@@ -14,6 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 class TextTest extends TestCase
 {
+
     /**
      * @var Text
      */

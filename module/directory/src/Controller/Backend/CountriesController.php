@@ -24,6 +24,7 @@ class CountriesController extends AbstractActionController implements
     GroupActionHandlerInterface,
     CrudFeature\EntityPersistenceAwareInterface
 {
+
     use CrudFeature\EntityPersistenceAwareTrait,
         CrudFeature\ActionGrantedTrait,
         CrudFeature\HandleEntityFormTrait,
@@ -63,6 +64,7 @@ class CountriesController extends AbstractActionController implements
     public function createAction(FormPageView $formPageView, EntityForm $form)
     {
         $entity = $this->repository->createEntity();
+
         return $this->handleForm($formPageView, $form, $entity);
     }
 
@@ -146,6 +148,7 @@ class CountriesController extends AbstractActionController implements
         if ($selectionType == 'all') {
             $ids = $this->repository->findAllIds();
         }
+
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,

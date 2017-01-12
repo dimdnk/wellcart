@@ -21,12 +21,14 @@ use WellCart\Utility\Str;
 class PersistAdminAccountHandler
     implements ObjectManagerAwareInterface
 {
+
     use ProvidesObjectManager;
 
     /**
      * @var UserService
      */
     protected $userService;
+
     /**
      * @var AclRoleEntity
      */
@@ -76,6 +78,7 @@ class PersistAdminAccountHandler
             } else {
                 $this->getObjectManager()->persist($user);
             }
+
             return $user;
         } else {
             $result = $userService->register($data);

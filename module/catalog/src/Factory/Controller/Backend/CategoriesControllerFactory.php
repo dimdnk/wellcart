@@ -15,12 +15,14 @@ use WellCart\Catalog\Spec\CategoryI18nRepository;
 
 class CategoriesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm): CategoriesController
     {
         $controller = new CategoriesController(
             $sm->getServiceLocator()
                 ->get(CategoryI18nRepository::class)
         );
+
         return $controller;
     }
 }

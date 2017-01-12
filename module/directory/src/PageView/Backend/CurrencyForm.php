@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class CurrencyForm extends Standard
 {
+
     public function __construct(
         CurrencyRepository $repository,
         $variables = null,

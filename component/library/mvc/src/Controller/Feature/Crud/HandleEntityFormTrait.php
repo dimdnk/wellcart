@@ -15,6 +15,7 @@ use WellCart\Utility\Arr;
 
 trait HandleEntityFormTrait
 {
+
     /**
      * @param FormPageView $pageView
      * @param Form         $form

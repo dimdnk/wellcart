@@ -97,6 +97,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setId($id): BrandEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -116,6 +117,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setName($name): BrandEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -145,6 +147,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setImageFullPath($imageFullPath): BrandEntity
     {
         $this->imageFullPath = $imageFullPath;
+
         return $this;
     }
 
@@ -164,6 +167,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setMetaTitle($metaTitle): BrandEntity
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -183,6 +187,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setMetaKeywords($metaKeywords): BrandEntity
     {
         $this->metaKeywords = $metaKeywords;
+
         return $this;
     }
 
@@ -202,6 +207,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setMetaDescription($metaDescription): BrandEntity
     {
         $this->metaDescription = $metaDescription;
+
         return $this;
     }
 
@@ -221,6 +227,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): BrandEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -240,6 +247,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): BrandEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -249,6 +257,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function getProducts(): Collection
     {
         $this->products || $this->products = new ArrayCollection();
+
         return $this->products;
     }
 
@@ -260,6 +269,7 @@ class Brand extends AbstractEntity implements BrandEntity
     public function setProducts(Collection $products): BrandEntity
     {
         $this->products = $products;
+
         return $this;
     }
 }

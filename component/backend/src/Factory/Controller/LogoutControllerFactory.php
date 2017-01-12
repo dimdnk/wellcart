@@ -15,9 +15,9 @@ use WellCart\Backend\Controller\LogoutController;
 
 class LogoutControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): LogoutController
-    {
+    ): LogoutController {
         return new LogoutController;
     }
 }

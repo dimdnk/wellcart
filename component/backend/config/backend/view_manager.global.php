@@ -55,7 +55,7 @@ return [
 
                 'wellcart-backend/item-view/page-head' => __DIR__
                     . '/../../view/item-view/page-head.phtml',
-            ]
+            ],
     ],
 
 ];

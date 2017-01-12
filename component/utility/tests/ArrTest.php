@@ -16,133 +16,134 @@ use PHPUnit\Framework\TestCase;
  */
 class ArrTest extends TestCase
 {
+
     public static function mergeArrays()
     {
-        return array(
+        return [
             'merge-integer-and-string-keys'
-            => array(
-                array(
+            => [
+                [
                     'foo',
                     3     => 'bar',
                     'baz' => 'baz',
-                    4     => array(
+                    4     => [
                         'a',
                         1 => 'b',
                         'c',
-                    ),
-                ),
-                array(
+                    ],
+                ],
+                [
                     'baz',
-                    4 => array(
+                    4 => [
                         'd' => 'd',
-                    ),
-                ),
+                    ],
+                ],
                 false,
-                array(
+                [
                     0     => 'foo',
                     3     => 'bar',
                     'baz' => 'baz',
-                    4     => array(
+                    4     => [
                         'a',
                         1 => 'b',
                         'c',
-                    ),
+                    ],
                     5     => 'baz',
-                    6     => array(
+                    6     => [
                         'd' => 'd',
-                    ),
-                )
-            ),
+                    ],
+                ],
+            ],
             'merge-integer-and-string-keys-preserve-numeric'
             =>
-                array(
-                    array(
+                [
+                    [
                         'foo',
                         3     => 'bar',
                         'baz' => 'baz',
-                        4     => array(
+                        4     => [
                             'a',
                             1 => 'b',
                             'c',
-                        ),
-                    ),
-                    array(
+                        ],
+                    ],
+                    [
                         'baz',
-                        4 => array(
+                        4 => [
                             'd' => 'd',
-                        ),
-                    ),
+                        ],
+                    ],
                     true,
-                    array(
+                    [
                         0     => 'baz',
                         3     => 'bar',
                         'baz' => 'baz',
-                        4     => array(
+                        4     => [
                             'a',
                             1   => 'b',
                             'c',
                             'd' => 'd',
-                        ),
-                    )
-                ),
+                        ],
+                    ],
+                ],
             'merge-arrays-recursively'
-            => array(
-                array(
-                    'foo' => array(
-                        'baz'
-                    )
-                ),
-                array(
-                    'foo' => array(
-                        'baz'
-                    )
-                ),
+            => [
+                [
+                    'foo' => [
+                        'baz',
+                    ],
+                ],
+                [
+                    'foo' => [
+                        'baz',
+                    ],
+                ],
                 false,
-                array(
-                    'foo' => array(
+                [
+                    'foo' => [
                         0 => 'baz',
-                        1 => 'baz'
-                    )
-                )
-            ),
+                        1 => 'baz',
+                    ],
+                ],
+            ],
             'replace-string-keys'
-            => array(
-                array(
+            => [
+                [
                     'foo' => 'bar',
-                    'bar' => array()
-                ),
-                array(
+                    'bar' => [],
+                ],
+                [
                     'foo' => 'baz',
-                    'bar' => 'bat'
-                ),
+                    'bar' => 'bat',
+                ],
                 false,
-                array(
+                [
                     'foo' => 'baz',
-                    'bar' => 'bat'
-                )
-            ),
+                    'bar' => 'bat',
+                ],
+            ],
             'merge-with-null'
-            => array(
-                array(
+            => [
+                [
                     'foo' => null,
                     null  => 'rod',
                     'cat' => 'bar',
-                    'god' => 'rad'
-                ),
-                array(
+                    'god' => 'rad',
+                ],
+                [
                     'foo' => 'baz',
                     null  => 'zad',
-                    'god' => null
-                ),
+                    'god' => null,
+                ],
                 false,
-                array(
+                [
                     'foo' => 'baz',
                     null  => 'zad',
                     'cat' => 'bar',
-                    'god' => null
-                )
-            ),
-        );
+                    'god' => null,
+                ],
+            ],
+        ];
     }
 
     public function testSet()
@@ -212,38 +213,38 @@ class ArrTest extends TestCase
 
     public function testArrayFetch()
     {
-        $data = array(
-            'post-1' => array(
-                'comments' => array(
-                    'tags' => array(
+        $data = [
+            'post-1' => [
+                'comments' => [
+                    'tags' => [
                         '#foo', '#bar',
-                    ),
-                ),
-            ),
-            'post-2' => array(
-                'comments' => array(
-                    'tags' => array(
+                    ],
+                ],
+            ],
+            'post-2' => [
+                'comments' => [
+                    'tags' => [
                         '#baz',
-                    ),
-                ),
-            ),
+                    ],
+                ],
+            ],
+        ];
+        $this->assertEquals(
+            [
+                0 => [
+                    'tags' => [
+                        '#foo', '#bar',
+                    ],
+                ],
+                1 => [
+                    'tags' => [
+                        '#baz',
+                    ],
+                ],
+            ], Arr::fetch($data, 'comments')
         );
         $this->assertEquals(
-            array(
-                0 => array(
-                    'tags' => array(
-                        '#foo', '#bar',
-                    ),
-                ),
-                1 => array(
-                    'tags' => array(
-                        '#baz',
-                    ),
-                ),
-            ), Arr::fetch($data, 'comments')
-        );
-        $this->assertEquals(
-            array(array('#foo', '#bar'), array('#baz')),
+            [['#foo', '#bar'], ['#baz']],
             Arr::fetch($data, 'comments.tags')
         );
     }
@@ -261,9 +262,9 @@ class ArrTest extends TestCase
     public function testBuild()
     {
         $this->assertEquals(
-            array('foo' => 'bar'), Arr::build(
-            array('foo' => 'bar'), function ($key, $value) {
-            return array($key, $value);
+            ['foo' => 'bar'], Arr::build(
+            ['foo' => 'bar'], function ($key, $value) {
+            return [$key, $value];
         }
         )
         );
@@ -271,32 +272,32 @@ class ArrTest extends TestCase
 
     public function testArrayExcept()
     {
-        $array = array('name' => 'taylor', 'age' => 26);
+        $array = ['name' => 'taylor', 'age' => 26];
         $this->assertEquals(
-            array('age' => 26), Arr::except($array, array('name'))
+            ['age' => 26], Arr::except($array, ['name'])
         );
     }
 
     public function testArrayOnly()
     {
-        $array = array('name' => 'taylor', 'age' => 26);
+        $array = ['name' => 'taylor', 'age' => 26];
         $this->assertEquals(
-            array('name' => 'taylor'), Arr::only($array, array('name'))
+            ['name' => 'taylor'], Arr::only($array, ['name'])
         );
-        $this->assertSame(array(), Arr::only($array, array('nonExistingKey')));
+        $this->assertSame([], Arr::only($array, ['nonExistingKey']));
     }
 
     public function testDivide()
     {
-        $array = array('name' => 'taylor');
+        $array = ['name' => 'taylor'];
         list($keys, $values) = Arr::divide($array);
-        $this->assertEquals(array('name'), $keys);
-        $this->assertEquals(array('taylor'), $values);
+        $this->assertEquals(['name'], $keys);
+        $this->assertEquals(['taylor'], $values);
     }
 
     public function testFirst()
     {
-        $array = array('name' => 'taylor', 'otherDeveloper' => 'dayle');
+        $array = ['name' => 'taylor', 'otherDeveloper' => 'dayle'];
         $this->assertEquals(
             'dayle', Arr::first(
             $array, function ($key, $value) {
@@ -315,7 +316,7 @@ class ArrTest extends TestCase
 
     public function testLast()
     {
-        $array = array('name' => 'taylor', 'otherDeveloper' => 'dayle');
+        $array = ['name' => 'taylor', 'otherDeveloper' => 'dayle'];
         $this->assertEquals(
             'dayle', Arr::last(
             $array, function ($key, $value) {
@@ -335,8 +336,8 @@ class ArrTest extends TestCase
     public function testFlatten()
     {
         $this->assertEquals(
-            array('#foo', '#bar', '#baz'),
-            Arr::flatten(array(array('#foo', '#bar'), array('#baz')))
+            ['#foo', '#bar', '#baz'],
+            Arr::flatten([['#foo', '#bar'], ['#baz']])
         );
     }
 
@@ -349,13 +350,13 @@ class ArrTest extends TestCase
 
     public function testWhere()
     {
-        $array = array(100, '200', 300, '400', 500);
+        $array = [100, '200', 300, '400', 500];
         $array = Arr::where(
             $array, function ($key, $value) {
             return is_string($value);
         }
         );
-        $this->assertEquals(Array(1 => 200, 3 => 400), $array);
+        $this->assertEquals([1 => 200, 3 => 400], $array);
     }
 
 

@@ -18,6 +18,7 @@ use WellCart\ORM\Entity;
 
 class ProductForm extends Standard
 {
+
     public function __construct(
         ProductRepository $repository,
         $variables = null,
@@ -63,6 +64,7 @@ class ProductForm extends Standard
             $this->addLayoutHandle('catalog/products/form/create');
             $this->setFormTitle(__('Create new Product'));
         }
+
         return parent::prepare($template, $values);
     }
 
@@ -76,6 +78,7 @@ class ProductForm extends Standard
                 'Object must implement interface WellCart\Catalog\Spec\ProductEntity'
             );
         }
+
         return parent::setEntity($entity);
     }
 }

@@ -80,6 +80,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     public function setCreatedAt(\DateTimeInterface $createdAt
     ): GeoZoneEntity {
         $this->createdAt = $createdAt;
+
         return $this;
     }
 
@@ -99,6 +100,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     public function setUpdatedAt(\DateTimeInterface $updatedAt = null
     ): GeoZoneEntity {
         $this->updatedAt = $updatedAt;
+
         return $this;
     }
 
@@ -118,6 +120,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     public function setDescription($description): GeoZoneEntity
     {
         $this->description = $description;
+
         return $this;
     }
 
@@ -137,6 +140,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     public function setId($id): GeoZoneEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -156,6 +160,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     public function setName($name): GeoZoneEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -175,6 +180,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     public function setGeoZoneMaps(Collection $geoZoneMaps)
     {
         $this->geoZoneMaps = $geoZoneMaps;
+
         return $this;
     }
 
@@ -188,6 +194,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
         foreach ($geoZoneMaps as $geoZoneMap) {
             $this->addGeoZoneMap($geoZoneMap);
         }
+
         return $this;
     }
 
@@ -203,6 +210,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
         }
         $geoZoneMap->setGeoZone($this);
         $this->geoZoneMaps->add($geoZoneMap);
+
         return $this;
     }
 
@@ -216,6 +224,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
         foreach ($geoZoneMaps as $geoZoneMap) {
             $this->removeGeoZoneMap($geoZoneMap);
         }
+
         return $this;
     }
 
@@ -230,6 +239,7 @@ class GeoZone extends AbstractEntity implements GeoZoneEntity
     ): GeoZoneEntity {
         //$geoZoneMap->setGeoZone(null);
         $this->geoZoneMaps->removeElement($geoZoneMap);
+
         return $this;
     }
 }

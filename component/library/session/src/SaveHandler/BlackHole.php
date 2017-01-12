@@ -13,6 +13,7 @@ use Zend\Session\SaveHandler\SaveHandlerInterface;
 
 final class BlackHole implements SaveHandlerInterface
 {
+
     /**
      * Open Session - retrieve resources
      *

@@ -39,7 +39,7 @@ class AttributeValueFieldset extends Fieldset
                 'name'       => 'remove',
                 'type'       => 'button',
                 'options'    => [
-                    'label'            => ' ',
+                    'label' => ' ',
 
                 ],
                 'attributes' => [
@@ -65,7 +65,7 @@ class AttributeValueFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'class' => 'attribute-value-i18n',
-                ]
+                ],
             ],
             ['priority' => 750]
         );
@@ -76,7 +76,7 @@ class AttributeValueFieldset extends Fieldset
                 'name'       => 'sort_order',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Sort Order'),
+                    'label' => __('Sort Order'),
 
                 ],
                 'attributes' => [
@@ -99,6 +99,7 @@ class AttributeValueFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\AttributeValueEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

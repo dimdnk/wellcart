@@ -28,6 +28,7 @@ class Scopes extends AbstractRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class Scopes extends AbstractRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -73,6 +75,7 @@ class Scopes extends AbstractRepository
             $this,
             compact('scope')
         );
+
         return $scope;
     }
 

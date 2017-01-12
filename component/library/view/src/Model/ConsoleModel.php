@@ -15,6 +15,7 @@ use Zend\View\Model\ConsoleModel as Model;
 class ConsoleModel extends Model implements
     EventManagerAwareInterface
 {
+
     use EventManagerAwareTrait;
 
     /**
@@ -27,10 +28,12 @@ class ConsoleModel extends Model implements
     {
         parent::__construct($variables, $options);
         $this->setVariable('context', $this);
-      $this->getEventManager()
-        ->setIdentifiers([
-          __CLASS__,
-          get_class($this)
-        ]);
+        $this->getEventManager()
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
     }
 }

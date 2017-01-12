@@ -91,6 +91,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setMetaTitle($metaTitle): ProductI18nEntity
     {
         $this->metaTitle = $metaTitle;
+
         return $this;
     }
 
@@ -116,6 +117,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
 
         $this->product = $product;
         $this->setProductId($productId);
+
         return $this;
     }
 
@@ -135,6 +137,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setLanguageId($languageId
     ): ProductI18nEntity {
         $this->languageId = $languageId;
+
         return $this;
     }
 
@@ -154,6 +157,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setProductId($productId): ProductI18nEntity
     {
         $this->productId = $productId;
+
         return $this;
     }
 
@@ -173,6 +177,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setId($id): ProductI18nEntity
     {
         $this->productId = $id;
+
         return $this;
     }
 
@@ -192,6 +197,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setDescription($description
     ): ProductI18nEntity {
         $this->description = $description;
+
         return $this;
     }
 
@@ -211,6 +217,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setMetaDescription($metaDescription
     ): ProductI18nEntity {
         $this->metaDescription = $metaDescription;
+
         return $this;
     }
 
@@ -230,6 +237,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setMetaKeywords($metaKeywords
     ): ProductI18nEntity {
         $this->metaKeywords = $metaKeywords;
+
         return $this;
     }
 
@@ -249,6 +257,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setName($name): ProductI18nEntity
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -268,6 +277,7 @@ class ProductI18n extends AbstractEntity implements ProductI18nEntity
     public function setLanguage(LocaleLanguageEntity $language = null
     ): ProductI18nEntity {
         $this->language = $language;
+
         return $this;
     }
 }

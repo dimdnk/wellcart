@@ -32,6 +32,7 @@ class QueryBuilder extends AbstractQueryBuilder
     public function find($id)
     {
         $this->andWhere($this->getRootAliases()[0] . '.id = ' . intval($id));
+
         return $this->findOne();
     }
 
@@ -46,6 +47,7 @@ class QueryBuilder extends AbstractQueryBuilder
             ->setMaxResults(1);
         $arr = $this->getQuery()
             ->execute();
+
         return current($arr);
     }
 
@@ -59,6 +61,7 @@ class QueryBuilder extends AbstractQueryBuilder
     public function findPreviousRecord($id)
     {
         $this->andWhere($this->getRootAliases()[0] . '.id < ' . intval($id));
+
         return $this->findOne();
     }
 
@@ -72,6 +75,7 @@ class QueryBuilder extends AbstractQueryBuilder
     public function findNextRecord($id)
     {
         $this->andWhere($this->getRootAliases()[0] . '.id > ' . intval($id));
+
         return $this->findOne();
     }
 
@@ -123,6 +127,7 @@ class QueryBuilder extends AbstractQueryBuilder
     public function count()
     {
         $paginator = new ORMPaginator($this);
+
         return count($paginator);
     }
 
@@ -137,6 +142,7 @@ class QueryBuilder extends AbstractQueryBuilder
     {
         $prefix = $this->getRootAliases()[0];
         $this->select("MIN({$prefix}.{$column}) AS min_{$column}");
+
         return $this->getQuery()->getSingleScalarResult();
     }
 
@@ -150,6 +156,7 @@ class QueryBuilder extends AbstractQueryBuilder
         $prefix = $this->getRootAliases()[0];
         $this->select("{$prefix}.id");
         $ids = array_column($this->getQuery()->getScalarResult(), 'id');
+
         return array_map('intval', $ids);
     }
 
@@ -162,6 +169,7 @@ class QueryBuilder extends AbstractQueryBuilder
     public function countObjectsWithValue($field, $value)
     {
         $prefix = $this->getRootAliases()[0];
+
         return $this->setMaxResults(1)
             ->where("{$prefix}.{$field} = :checked_value")
             ->setParameter('checked_value', (string)$value)
@@ -179,6 +187,7 @@ class QueryBuilder extends AbstractQueryBuilder
     {
         $prefix = $this->getRootAliases()[0];
         $this->select("MAX({$prefix}.{$column}) AS max_{$column}");
+
         return $this->getQuery()->getSingleScalarResult();
     }
 
@@ -193,6 +202,7 @@ class QueryBuilder extends AbstractQueryBuilder
     {
         $prefix = $this->getRootAliases()[0];
         $this->select("SUM({$prefix}.{$column}) AS sum_{$column}");
+
         return $this->getQuery()->getScalarResult();
     }
 
@@ -207,6 +217,7 @@ class QueryBuilder extends AbstractQueryBuilder
     {
         $prefix = $this->getRootAliases()[0];
         $this->select("AVG({$prefix}.{$column}) AS avg_{$column}");
+
         return $this->getQuery()->getSingleScalarResult();
     }
 

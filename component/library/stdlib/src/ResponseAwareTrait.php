@@ -12,6 +12,7 @@ use Zend\Stdlib\ResponseInterface;
 
 trait ResponseAwareTrait
 {
+
     /**
      * @var ResponseInterface
      */

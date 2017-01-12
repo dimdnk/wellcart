@@ -19,7 +19,10 @@ use Zend\Form\FormInterface;
 
 class Client extends AbstractForm
 {
-
+    /**
+     * Canonical form name
+     */
+    const NAME = 'api_client';
     /**
      * Form constructor
      *
@@ -31,7 +34,7 @@ class Client extends AbstractForm
         ClientHydrator $hydrator
     ) {
         $this->setFormFactory($factory);
-        parent::__construct('api_client');
+        parent::__construct(static::NAME);
         $this->setHydrator($hydrator);
         $this->setWrapElements(true);
 
@@ -40,7 +43,7 @@ class Client extends AbstractForm
                 'name'       => 'user',
                 'type'       => 'userAccountsSelector',
                 'options'    => [
-                    'label'            => __('User'),
+                    'label' => __('User'),
                 ],
                 'attributes' => [
                     'id' => 'api_client_user',
@@ -54,7 +57,7 @@ class Client extends AbstractForm
                 'name'       => 'client_id',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('ID'),
+                    'label' => __('ID'),
                 ],
                 'attributes' => [
                     'id' => 'api_client_client_id',
@@ -68,8 +71,8 @@ class Client extends AbstractForm
                 'name'       => 'new_secret',
                 'type'       => 'Password',
                 'options'    => [
-                    'label'            => __('Secret'),
-                    'help-block'       => __('Minimum 6 chars'),
+                    'label'      => __('Secret'),
+                    'help-block' => __('Minimum 6 chars'),
 
                 ],
                 'attributes' => [
@@ -100,8 +103,8 @@ class Client extends AbstractForm
                 'name'       => 'redirect_uri',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Redirect URI'),
-                    'help-block'       => __('Optional'),
+                    'label'      => __('Redirect URI'),
+                    'help-block' => __('Optional'),
                 ],
                 'attributes' => [
                     'id' => 'api_client_redirect_uri',
@@ -123,10 +126,10 @@ class Client extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save'),
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -150,6 +153,7 @@ class Client extends AbstractForm
                 'Object must implement interface WellCart\RestApi\Entity\Client'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -163,6 +167,7 @@ class Client extends AbstractForm
                 'Object must implement interface WellCart\RestApi\Entity\Client'
             );
         }
+
         return parent::setObject($object);
     }
 
@@ -172,6 +177,7 @@ class Client extends AbstractForm
         $this->remove('new_secret');
         $this->remove('new_secret_verify');
         $this->getEventManager()->trigger('post.' . __FUNCTION__, $this);
+
         return $this;
     }
 }

@@ -87,6 +87,7 @@ class IdentityReview
                 break;
         }
         $users->add($user);
+
         return true;
     }
 }

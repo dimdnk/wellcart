@@ -13,6 +13,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class CreateViewModel extends AbstractPlugin
 {
+
     /**
      * Create view model
      *

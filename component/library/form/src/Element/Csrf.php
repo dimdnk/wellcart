@@ -12,5 +12,6 @@ use Zend\Form\Element\Csrf as Element;
 
 class Csrf extends Element
 {
+
     use SetValueObjectTrait;
 }

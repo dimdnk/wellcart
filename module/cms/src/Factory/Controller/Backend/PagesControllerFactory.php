@@ -15,12 +15,14 @@ use WellCart\CMS\Spec\PageI18nRepository;
 
 class PagesControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm): PagesController
     {
         $controller = new PagesController(
             $sm->getServiceLocator()
                 ->get(PageI18nRepository::class)
         );
+
         return $controller;
     }
 }

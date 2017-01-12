@@ -12,4 +12,5 @@ use ZfcDatagrid\Column\Formatter\FileSize as AbstractFormatter;
 
 class FileSize extends AbstractFormatter
 {
+
 }

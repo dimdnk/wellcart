@@ -14,12 +14,14 @@ use WellCart\Ui\Container\ItemView\ItemView;
 
 class Text extends ItemView
 {
+
     /**
      * Template to use when rendering this model
      *
      * @var string
      */
     protected $template = 'item-view/text';
+
     /**
      * @var string
      */
@@ -41,6 +43,7 @@ class Text extends ItemView
     public function setText(string $text): Text
     {
         $this->text = $text;
+
         return $this;
     }
 }

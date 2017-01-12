@@ -16,6 +16,7 @@ use ZfcRbac\Service\AuthorizationServiceInterface;
 
 class PageAuthorizationByRbac
 {
+
     /**
      * @var AuthorizationServiceInterface
      */
@@ -25,8 +26,7 @@ class PageAuthorizationByRbac
      * @param AuthorizationServiceInterface $authorizationService
      */
     public function __construct(AuthorizationServiceInterface $authorizationService
-    )
-    {
+    ) {
         $this->authorizationService = $authorizationService;
     }
 
@@ -47,6 +47,7 @@ class PageAuthorizationByRbac
 
         if (is_null($permission)) {
             $event->stopPropagation();
+
             return true;
         }
 

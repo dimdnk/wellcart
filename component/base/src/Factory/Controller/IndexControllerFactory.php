@@ -15,9 +15,9 @@ use WellCart\Base\Controller\IndexController;
 
 class IndexControllerFactory
 {
+
     public function __invoke(ContainerInterface $sm
-    ): IndexController
-    {
+    ): IndexController {
         return new IndexController;
     }
 }

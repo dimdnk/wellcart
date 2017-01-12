@@ -16,6 +16,7 @@ use PHPUnit\Framework\TestCase;
  */
 class BooleansTest extends TestCase
 {
+
     /**
      * @var Booleans
      */
@@ -23,7 +24,7 @@ class BooleansTest extends TestCase
 
     public function testConstructor()
     {
-        $object = new Booleans(array('yep'), array('nope'));
+        $object = new Booleans(['yep'], ['nope']);
         $this->assertTrue($object->toBoolean('yep'));
         $this->assertFalse($object->toBoolean('nope'));
     }
@@ -42,16 +43,16 @@ class BooleansTest extends TestCase
 
     public function toBooleanDataProvider()
     {
-        return array(
-            'boolean "true"'         => array(true, true),
-            'boolean "false"'        => array(false, false),
-            'boolean string "true"'  => array('true', true),
-            'boolean string "false"' => array('false', false),
-            'boolean numeric "1"'    => array(1, true),
-            'boolean numeric "0"'    => array(0, false),
-            'boolean string "1"'     => array('1', true),
-            'boolean string "0"'     => array('0', false)
-        );
+        return [
+            'boolean "true"'         => [true, true],
+            'boolean "false"'        => [false, false],
+            'boolean string "true"'  => ['true', true],
+            'boolean string "false"' => ['false', false],
+            'boolean numeric "1"'    => [1, true],
+            'boolean numeric "0"'    => [0, false],
+            'boolean string "1"'     => ['1', true],
+            'boolean string "0"'     => ['0', false],
+        ];
     }
 
     /**
@@ -68,16 +69,16 @@ class BooleansTest extends TestCase
 
     public function toBooleanExceptionDataProvider()
     {
-        return array(
-            'boolean string "on"'    => array('on'),
-            'boolean string "off"'   => array('off'),
-            'boolean string "yes"'   => array('yes'),
-            'boolean string "no"'    => array('no'),
-            'boolean string "TRUE"'  => array('TRUE'),
-            'boolean string "FALSE"' => array('FALSE'),
-            'empty string'           => array(''),
-            'null'                   => array(null)
-        );
+        return [
+            'boolean string "on"'    => ['on'],
+            'boolean string "off"'   => ['off'],
+            'boolean string "yes"'   => ['yes'],
+            'boolean string "no"'    => ['no'],
+            'boolean string "TRUE"'  => ['TRUE'],
+            'boolean string "FALSE"' => ['FALSE'],
+            'empty string'           => [''],
+            'null'                   => [null],
+        ];
     }
 
     protected function setUp()

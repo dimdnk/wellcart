@@ -10,6 +10,7 @@ namespace WellCart\Mvc\Controller\Feature;
 
 interface GroupActionHandlerInterface
 {
+
     /**
      * Group action handler
      *

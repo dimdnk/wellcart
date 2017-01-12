@@ -19,6 +19,7 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class UrlRewritesGrid extends Standard
 {
+
     public function __construct(
         UrlRewriteRepository $repository,
         $variables = null,
@@ -120,7 +121,7 @@ class UrlRewritesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder()
+                    'id'     => $updateButton->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -139,7 +140,7 @@ class UrlRewritesGrid extends Standard
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder()
+                    'id'     => $deleteButton->getRowIdPlaceholder(),
                 ]
             )
         );

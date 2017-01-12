@@ -12,6 +12,7 @@ use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
 class CreatePageView extends AbstractPlugin
 {
+
     public function __invoke(array $variables = null, array $options = null,
         $pageView = 'StandardPageView'
     ) {

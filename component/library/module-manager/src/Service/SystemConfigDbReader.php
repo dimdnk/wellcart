@@ -18,6 +18,7 @@ use Zend\Config\Config;
 
 class SystemConfigDbReader
 {
+
     /**
      * SQL query
      */
@@ -40,14 +41,14 @@ class SystemConfigDbReader
         if ($connection === null) {
             $parameters = include
                 WELLCART_ROOT . 'config/autoload/db.global.php';
-            $defaultConfig = array(
-                'driver_options' => array(
-                    1002 => "SET NAMES UTF8 COLLATE utf8_general_ci"
-                ),
-                'options'        => array(
+            $defaultConfig = [
+                'driver_options' => [
+                    1002 => "SET NAMES UTF8 COLLATE utf8_general_ci",
+                ],
+                'options'        => [
                     'buffer_results' => true,
-                ),
-            );
+                ],
+            ];
 
             if (!empty($parameters['db']['adapters']['Zend\Db\Adapter\Adapter'])) {
                 $dbConfig
@@ -70,7 +71,8 @@ class SystemConfigDbReader
                 $rows = $result->fetchAll(PDO::FETCH_ASSOC);
                 $this->config = $this->buildConfig($rows);
             }
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e) {
             $this->config = new Config([]);
         }
 
@@ -114,6 +116,7 @@ class SystemConfigDbReader
                 Arr::set($config, $key, $value);
             }
         }
+
         return new Config($config);
     }
 

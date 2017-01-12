@@ -12,4 +12,5 @@ use Zend\Mvc\Controller\Plugin\FlashMessenger as AbstractPlugin;
 
 class Messenger extends AbstractPlugin
 {
+
 }

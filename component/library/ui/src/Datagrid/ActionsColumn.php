@@ -12,6 +12,7 @@ use ZfcDatagrid\Column\Action as AbstractAction;
 
 class ActionsColumn extends AbstractAction
 {
+
     /**
      * @return boolean
      */

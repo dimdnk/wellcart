@@ -24,6 +24,7 @@ class ProductTemplate extends AbstractEntity implements
     TranslatableEntity,
     ProductTemplateEntity
 {
+
     /**
      * ID
      *
@@ -99,6 +100,7 @@ class ProductTemplate extends AbstractEntity implements
     public function setTranslations(Collection $translations
     ): ProductTemplateEntity {
         $this->translations = $translations;
+
         return $this;
     }
 
@@ -112,6 +114,7 @@ class ProductTemplate extends AbstractEntity implements
         foreach ($translations as $translation) {
             $this->addTranslation($translation);
         }
+
         return $this;
     }
 
@@ -128,6 +131,7 @@ class ProductTemplate extends AbstractEntity implements
 
         $translation->setProductTemplate($this);
         $this->translations->add($translation);
+
         return $this;
     }
 
@@ -141,6 +145,7 @@ class ProductTemplate extends AbstractEntity implements
         foreach ($translations as $translation) {
             $this->removeTranslation($translation);
         }
+
         return $this;
     }
 
@@ -155,6 +160,7 @@ class ProductTemplate extends AbstractEntity implements
     ): ProductTemplateEntity {
         $translation->setProductTemplate(null);
         $this->translations->removeElement($translation);
+
         return $this;
     }
 
@@ -175,6 +181,7 @@ class ProductTemplate extends AbstractEntity implements
     public function setId($id): ProductTemplateEntity
     {
         $this->id = $id;
+
         return $this;
     }
 
@@ -194,6 +201,7 @@ class ProductTemplate extends AbstractEntity implements
     public function setSortOrder($sortOrder): ProductTemplateEntity
     {
         $this->sortOrder = abs((int)$sortOrder);
+
         return $this;
     }
 
@@ -213,6 +221,7 @@ class ProductTemplate extends AbstractEntity implements
     public function setFeatures(Collection $features)
     {
         $this->features = $features;
+
         return $this;
     }
 
@@ -232,6 +241,7 @@ class ProductTemplate extends AbstractEntity implements
     public function setAttributes(Collection $attributes)
     {
         $this->attributes = $attributes;
+
         return $this;
     }
 
@@ -244,6 +254,7 @@ class ProductTemplate extends AbstractEntity implements
         foreach ($attributes as $attribute) {
             $this->addAttribute($attribute);
         }
+
         return $this;
     }
 
@@ -258,6 +269,7 @@ class ProductTemplate extends AbstractEntity implements
 
         $attribute->addProductTemplate($this);
         $this->attributes->add($attribute);
+
         return $this;
     }
 
@@ -269,6 +281,7 @@ class ProductTemplate extends AbstractEntity implements
         foreach ($attributes as $attribute) {
             $this->removeAttribute($attribute);
         }
+
         return $this;
     }
 
@@ -279,6 +292,7 @@ class ProductTemplate extends AbstractEntity implements
     ): ProductTemplateEntity {
         $attribute->removeProductTemplate($this);
         $this->attributes->removeElement($attribute);
+
         return $this;
     }
 
@@ -291,6 +305,7 @@ class ProductTemplate extends AbstractEntity implements
         foreach ($features as $feature) {
             $this->addFeature($feature);
         }
+
         return $this;
     }
 
@@ -305,6 +320,7 @@ class ProductTemplate extends AbstractEntity implements
 
         $feature->addProductTemplate($this);
         $this->features->add($feature);
+
         return $this;
     }
 
@@ -316,6 +332,7 @@ class ProductTemplate extends AbstractEntity implements
         foreach ($features as $feature) {
             $this->removeFeature($feature);
         }
+
         return $this;
     }
 
@@ -326,6 +343,7 @@ class ProductTemplate extends AbstractEntity implements
     ): ProductTemplateEntity {
         $feature->removeProductTemplate($this);
         $this->features->removeElement($feature);
+
         return $this;
     }
 
@@ -353,6 +371,7 @@ class ProductTemplate extends AbstractEntity implements
     public function setIsSystem(bool $isSystem): ProductTemplateEntity
     {
         $this->isSystem = $isSystem;
+
         return $this;
     }
 }

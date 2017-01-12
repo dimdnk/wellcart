@@ -15,6 +15,7 @@ use WellCart\Mvc\Controller\Feature\Crud\ActionGrantedTrait;
 
 class DashboardController extends AbstractActionController
 {
+
     use ActionGrantedTrait;
 
     /**

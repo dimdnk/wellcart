@@ -14,6 +14,7 @@ use Zend\View\Helper\AbstractHelper;
 
 class JavaScriptEnvironment extends AbstractHelper
 {
+
     /**
      * @var array
      */
@@ -48,6 +49,7 @@ class JavaScriptEnvironment extends AbstractHelper
     public function set($var, $value)
     {
         $this->items[$var] = $value;
+
         return $this;
     }
 
@@ -95,9 +97,11 @@ class JavaScriptEnvironment extends AbstractHelper
 
             return "\n\t<script type=\"text/javascript\">
             \n" . $output . "</script>\n";
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $msg = get_class($e) . ': ' . $e->getMessage();
             trigger_error($msg, E_USER_ERROR);
+
             return '';
         }
     }

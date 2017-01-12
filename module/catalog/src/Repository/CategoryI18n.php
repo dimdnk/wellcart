@@ -28,6 +28,7 @@ class CategoryI18n extends AbstractRepository implements CategoryI18nRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -45,6 +46,7 @@ class CategoryI18n extends AbstractRepository implements CategoryI18nRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 
@@ -96,6 +98,7 @@ class CategoryI18n extends AbstractRepository implements CategoryI18nRepository
             __FUNCTION__ . '.pre',
             $this
         );
+
         return $this->getEntityManager()
             ->getRepository('WellCart\Catalog\Spec\CategoryEntity')
             ->findAllIds();

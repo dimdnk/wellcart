@@ -80,10 +80,12 @@ class AccountEmailHandler
 
         $events = $this->getEventManager();
         $events
-          ->setIdentifiers([
-          __CLASS__,
-          get_class($this)
-        ]);
+            ->setIdentifiers(
+                [
+                    __CLASS__,
+                    get_class($this),
+                ]
+            );
         $events->trigger('init', $this);
     }
 
@@ -246,6 +248,7 @@ class AccountEmailHandler
             $this->getLogger()->err($msg);
         }
         $this->getRepository()->add($user);
+
         return $result;
     }
 

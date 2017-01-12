@@ -11,6 +11,7 @@ namespace WellCart\Ui\Layout\EventListener;
 class ActionHandlesListener extends
     \ConLayout\Listener\ActionHandlesListener
 {
+
     /**
      * Determine the module name of the controller
      *
@@ -27,6 +28,7 @@ class ActionHandlesListener extends
         // Retrieve second element representing module name.
         $nsArray = explode('\\', $controller);
         $subNsArray = array_slice($nsArray, 1, 1);
+
         return implode('/', $subNsArray);
     }
 }

@@ -12,5 +12,6 @@ use Zend\Form\Element\Week as Element;
 
 class Week extends Element
 {
+
     use SetValueObjectTrait;
 }

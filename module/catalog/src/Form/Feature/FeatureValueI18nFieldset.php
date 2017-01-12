@@ -45,7 +45,7 @@ class FeatureValueI18nFieldset extends Fieldset
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Feature Value Name')
+                    'label' => __('Feature Value Name'),
                 ],
                 'attributes' => [
                     'class' => 'form-control catalog_feature_value_name',
@@ -65,6 +65,7 @@ class FeatureValueI18nFieldset extends Fieldset
                 'Object must implement interface WellCart\Catalog\Spec\FeatureValueI18nEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

@@ -35,6 +35,7 @@ class Attributes extends AbstractRepository implements AttributeRepository
             $this,
             compact('attributesList')
         );
+
         return $optionList;
     }
 
@@ -49,6 +50,7 @@ class Attributes extends AbstractRepository implements AttributeRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -67,6 +69,7 @@ class Attributes extends AbstractRepository implements AttributeRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 }

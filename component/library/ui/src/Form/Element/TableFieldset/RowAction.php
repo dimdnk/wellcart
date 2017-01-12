@@ -13,6 +13,7 @@ use Zend\Stdlib\AbstractOptions;
 
 class RowAction extends AbstractOptions
 {
+
     protected $elementName;
 
     /**
@@ -31,6 +32,7 @@ class RowAction extends AbstractOptions
     public function setElementName($elementName)
     {
         $this->elementName = $elementName;
+
         return $this;
     }
 

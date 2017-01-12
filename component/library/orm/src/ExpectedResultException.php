@@ -13,4 +13,5 @@ use Doctrine\ORM\UnexpectedResultException;
 class ExpectedResultException
     extends UnexpectedResultException
 {
+
 }

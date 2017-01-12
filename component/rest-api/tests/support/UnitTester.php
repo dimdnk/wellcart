@@ -20,6 +20,7 @@ namespace WellCart\RestApi\Test;
  */
 class UnitTester extends \Codeception\Actor
 {
+
     use Traits\UnitTesterActions;
 
     /**

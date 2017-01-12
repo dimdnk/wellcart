@@ -11,10 +11,10 @@ declare(strict_types = 1);
 namespace WellCart\RestApi;
 
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
-use WellCart\Setup\Feature\DataFixturesProviderInterface;
-use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\Setup\Feature\DataFixturesProviderInterface;
+use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\ModuleManager\Feature;
 
 class Module implements

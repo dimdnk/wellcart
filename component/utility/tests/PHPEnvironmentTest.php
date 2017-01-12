@@ -16,6 +16,7 @@ use PHPUnit\Framework\TestCase;
  */
 class PHPEnvironmentTest extends TestCase
 {
+
     /**
      * @covers \WellCart\Utility\PHPEnvironment::initialize
      */

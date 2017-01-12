@@ -68,7 +68,7 @@ class LicenseForm extends Form implements InputFilterProviderInterface
                             'name' => 'NotEmpty',
                         ],
                     ],
-                ]
+                ],
         ];
 
         $this->getEventManager()->trigger(
@@ -76,6 +76,7 @@ class LicenseForm extends Form implements InputFilterProviderInterface
             $this,
             ['specification' => &$specification]
         );
+
         return $specification;
     }
 }

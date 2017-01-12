@@ -27,6 +27,7 @@ class GeoZones extends AbstractRepository implements GeoZoneRepository
             $this,
             compact('finder')
         );
+
         return $finder;
     }
 
@@ -44,6 +45,7 @@ class GeoZones extends AbstractRepository implements GeoZoneRepository
             $this,
             compact('queryBuilder')
         );
+
         return $queryBuilder;
     }
 

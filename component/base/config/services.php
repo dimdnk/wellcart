@@ -86,6 +86,7 @@ return [
                 $editor->setObjectManager(
                     $services->get('Doctrine\ORM\EntityManager')
                 );
+
                 return $editor;
             },
         Repository\Configuration::class            =>
@@ -122,6 +123,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_base_doctrine_hydrator')
                 );
+
                 return $form;
             },
         Form\UrlRewrite::class                     =>
@@ -130,6 +132,7 @@ return [
                     new FormFactory($services->get('FormElementManager')),
                     $services->get('wellcart_base_doctrine_hydrator')
                 );
+
                 return $form;
             },
         EventListener\Ui\SetLayoutViewModel::class =>
@@ -198,6 +201,7 @@ return [
                     $sessionManager = new SessionManager();
                 }
                 Container::setDefaultManager($sessionManager);
+
                 return $sessionManager;
             },
         'base_csrf_validator'

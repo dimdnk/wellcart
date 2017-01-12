@@ -19,6 +19,10 @@ use Zend\Form\FormInterface;
 
 class Zone extends AbstractForm
 {
+    /**
+     * Canonical form name
+     */
+    const NAME = 'directory_zone';
 
     /**
      * Form constructor
@@ -34,7 +38,7 @@ class Zone extends AbstractForm
     ) {
         $this->setFormFactory($factory);
 
-        parent::__construct('directory_zone');
+        parent::__construct(static::NAME);
 
         $this->setWrapElements(true);
 
@@ -45,9 +49,9 @@ class Zone extends AbstractForm
                 'name'       => 'country',
                 'type'       => 'Select',
                 'options'    => [
-                    'label'            => __('Country'),
-                    'empty_option'     => __('- Select Country -'),
-                    'value_options'    => $countryIdOptions,
+                    'label'         => __('Country'),
+                    'empty_option'  => __('- Select Country -'),
+                    'value_options' => $countryIdOptions,
                 ],
                 'attributes' => [
                     'autocomplete' => 'off',
@@ -69,7 +73,7 @@ class Zone extends AbstractForm
                     'unchecked_value'     => 0,
                 ],
                 'attributes' => [
-                    'id'    => 'directory_zone_status',
+                    'id' => 'directory_zone_status',
                 ],
             ],
             ['priority' => 650]
@@ -80,7 +84,7 @@ class Zone extends AbstractForm
                 'name'       => 'name',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Zone Name')
+                    'label' => __('Zone Name'),
                 ],
                 'attributes' => [
                     'id' => 'directory_zone_name',
@@ -94,7 +98,7 @@ class Zone extends AbstractForm
                 'name'       => 'code',
                 'type'       => 'Text',
                 'options'    => [
-                    'label'            => __('Zone Code'),
+                    'label' => __('Zone Code'),
                 ],
                 'attributes' => [
                     'id' => 'directory_zone_code',
@@ -117,10 +121,10 @@ class Zone extends AbstractForm
 
         $this->addToolbarButton(
             [
-                'name'       => 'save',
-                'type'       => 'Submit',
-                'options'    => [
-                    'label'       => __('Save')
+                'name'    => 'save',
+                'type'    => 'Submit',
+                'options' => [
+                    'label' => __('Save'),
                 ],
             ]
         );
@@ -144,6 +148,7 @@ class Zone extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\ZoneEntity'
             );
         }
+
         return parent::bind($object, $flags);
     }
 
@@ -157,6 +162,7 @@ class Zone extends AbstractForm
                 'Object must implement interface WellCart\Directory\Spec\ZoneEntity'
             );
         }
+
         return parent::setObject($object);
     }
 }

@@ -18,6 +18,7 @@ use Zend\View\Model\ModelInterface;
 
 class PrepareActionViewModelListener implements ListenerAggregateInterface
 {
+
     use ListenerAggregateTrait;
 
     /**

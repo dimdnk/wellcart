@@ -14,6 +14,7 @@ use Doctrine\ORM\Mapping\ClassMetadata;
 
 interface Repository extends ObjectRepository, Selectable
 {
+
     /**
      * Creates a new QueryBuilder instance.
      *

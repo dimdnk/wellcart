@@ -20,6 +20,7 @@ abstract class AbstractFixture
     OrderedFixtureInterface,
     SetupDataFixtureInterface
 {
+
     /**
      * @var int
      */

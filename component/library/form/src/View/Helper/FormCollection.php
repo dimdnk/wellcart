@@ -13,12 +13,14 @@ use Zend\Form\ElementInterface;
 
 class FormCollection extends TwbBundleFormCollection
 {
+
     /**
      * Where shall the template-data be inserted into
      *
      * @var string
      */
     protected $templateWrapper = '<template data-content="%s"></template>';
+
     /**
      * @var string
      */
@@ -46,8 +48,10 @@ class FormCollection extends TwbBundleFormCollection
 
             $result = $this->view->render($this->partial, $vars);
             $this->setPartial(null);
+
             return $result;
         }
+
         return parent::render($oElement);
     }
 
@@ -67,6 +71,7 @@ class FormCollection extends TwbBundleFormCollection
     public function setPartial($partial)
     {
         $this->partial = $partial;
+
         return $this;
     }
 
