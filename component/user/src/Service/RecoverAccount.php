@@ -11,9 +11,9 @@ declare(strict_types = 1);
 namespace WellCart\User\Service;
 
 use AcMailer\Result\MailResult;
-use AcMailer\Service\MailServiceAwareInterface;
-use AcMailer\Service\MailServiceAwareTrait;
 use AcMailer\Service\MailServiceInterface;
+use WellCart\Mail\MailerAwareInterface;
+use WellCart\Mail\MailerAwareTrait;
 use WellCart\User\Exception\DomainException;
 use WellCart\User\Form\RecoverAccount as RecoverAccountForm;
 use WellCart\User\Service\User as UserService;
@@ -23,21 +23,13 @@ use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use WellCart\Utility\Str;
 use WellCart\Utility\Time;
-use Zend\EventManager\EventManagerAwareInterface;
-use Zend\EventManager\EventManagerAwareTrait;
-use Zend\Log\LoggerAwareTrait;
 use Zend\Log\LoggerInterface;
 use ZfcUser\Form\ChangePassword;
 
 class RecoverAccount
-    implements EventManagerAwareInterface, MailServiceAwareInterface
+    implements MailerAwareInterface
 {
-
-    use EventManagerAwareTrait;
-
-    use MailServiceAwareTrait;
-
-    use LoggerAwareTrait;
+    use MailerAwareTrait;
 
     /**
      * @var RecoverAccountForm

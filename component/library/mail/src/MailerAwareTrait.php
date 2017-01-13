@@ -8,7 +8,14 @@
 
 namespace WellCart\Mail;
 
+use AcMailer\Service\MailServiceAwareTrait;
+use Zend\EventManager\EventManagerAwareTrait;
+use Zend\Log\LoggerAwareTrait;
+
 trait MailerAwareTrait
 {
+    use EventManagerAwareTrait,
+        MailServiceAwareTrait,
+        LoggerAwareTrait;
 
 }

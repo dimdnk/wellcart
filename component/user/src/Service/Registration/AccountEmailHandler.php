@@ -11,28 +11,20 @@ declare(strict_types = 1);
 namespace WellCart\User\Service\Registration;
 
 use AcMailer\Result\MailResult;
-use AcMailer\Service\MailServiceAwareInterface;
-use AcMailer\Service\MailServiceAwareTrait;
 use AcMailer\Service\MailServiceInterface;
+use WellCart\Mail\MailerAwareInterface;
+use WellCart\Mail\MailerAwareTrait;
 use WellCart\User\Repository\Users;
 use WellCart\User\Spec\UserEntity;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use WellCart\Utility\Str;
-use Zend\EventManager\EventManagerAwareInterface;
-use Zend\EventManager\EventManagerAwareTrait;
-use Zend\Log\LoggerAwareTrait;
 use Zend\Log\LoggerInterface;
 
 class AccountEmailHandler
-    implements EventManagerAwareInterface, MailServiceAwareInterface
+    implements MailerAwareInterface
 {
-
-    use EventManagerAwareTrait;
-
-    use MailServiceAwareTrait;
-
-    use LoggerAwareTrait;
+    use MailerAwareTrait;
 
     /**
      * @var Users
@@ -277,7 +269,7 @@ class AccountEmailHandler
      *
      * @param UserEntity $user
      *
-     * @return bool
+     * @return MailResult
      */
     public function confirmEmail(UserEntity $user)
     {

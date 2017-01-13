@@ -8,7 +8,14 @@
 
 namespace WellCart\Mail;
 
+use AcMailer\Service\MailServiceAwareInterface;
+use Zend\EventManager\EventManagerAwareInterface;
+use Zend\Log\LoggerAwareInterface;
+
 interface MailerAwareInterface
+    extends MailServiceAwareInterface,
+            LoggerAwareInterface,
+            EventManagerAwareInterface
 {
 
 }
