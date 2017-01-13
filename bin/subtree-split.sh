@@ -21,6 +21,7 @@ remote component-utility git@github.com:wellcart/component-utility.git
 remote component-mapping-drivers git@github.com:wellcart/component-mapping-drivers.git
 
 remote component-console git@github.com:wellcart/component-console.git
+remote component-mail git@github.com:wellcart/component-mail.git
 remote component-db git@github.com:wellcart/component-db.git
 remote component-filter git@github.com:wellcart/component-filter.git
 remote component-form git@github.com:wellcart/component-form.git
@@ -61,6 +62,7 @@ split 'component/utility' component-utility
 split 'component/mapping-drivers' component-mapping-drivers
 
 split 'component/library/console' component-console
+split 'component/library/mail' component-mail
 split 'component/library/db' component-db
 split 'component/library/filter' component-filter
 split 'component/library/form' component-form

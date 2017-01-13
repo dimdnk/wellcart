@@ -8,6 +8,8 @@
 
 namespace WellCart\Catalog;
 
+use WellCart\Base\Entity\Locale\Language as LanguageEntity;
+
 return [
     'domain' => [
         'mapping' => [
@@ -180,7 +182,7 @@ return [
                         ],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -483,7 +485,7 @@ return [
                         ],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -699,7 +701,7 @@ return [
                         ],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -855,7 +857,7 @@ return [
                         ],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -966,7 +968,7 @@ return [
                         ],
 
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -1087,7 +1089,7 @@ return [
                         ],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -1197,7 +1199,7 @@ return [
                         ],
 
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',

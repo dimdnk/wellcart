@@ -22,3 +22,11 @@ $forms = [
         ],
     ],
 ];
+
+return [
+    'ui' => [
+        'component' => [
+            'form' => $forms,
+        ],
+    ],
+];

@@ -8,7 +8,7 @@
 
 namespace WellCart\User;
 
-use WellCart\Base\Entity\Locale\Language;
+use WellCart\Base\Entity\Locale\Language as LanguageEntity;
 
 return [
     'domain' => [
@@ -18,7 +18,7 @@ return [
                     'type'     => 'mappedSuperclass',
                     'oneToOne' => [
                         'language' => [
-                            'targetEntity' => Language::class,
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
@@ -159,7 +159,7 @@ return [
                         ]],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',

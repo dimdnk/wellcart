@@ -8,10 +8,12 @@
 
 namespace WellCart\Backend;
 
+use WellCart\Base\Entity\Locale\Language as LanguageEntity;
+
 return [
     'domain' => [
         'mapping' => [
-``            Entity\Administrator::class =>
+           Entity\Administrator::class =>
                 [
                     'type'            => 'entity',
                     'repositoryClass' => Repository\Administrators::class,
@@ -46,7 +48,7 @@ return [
                         ]],
                     'oneToOne'        => [
                         'language' => [
-                            'targetEntity' => 'WellCart\Base\Entity\Locale\Language',
+                            'targetEntity' => LanguageEntity::class,
                             'joinColumn'   => [
                                 'name'                 => 'language_id',
                                 'referencedColumnName' => 'language_id',
