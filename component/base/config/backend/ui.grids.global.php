@@ -6,10 +6,11 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-use WellCart\CMS\PageView;
+use WellCart\Base\PageView;
 
 $grids = [
-    PageView\Backend\PagesGrid::NAME => [],
+    PageView\Backend\UrlRewritesGrid::NAME => [],
+    PageView\Backend\LanguagesGrid::NAME => [],
 ];
 return [
     'ui' => [
