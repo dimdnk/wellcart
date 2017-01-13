@@ -22,6 +22,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class PagesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'cms_pages';
 
     protected $idFieldName = 'page_id';
 
@@ -78,14 +82,6 @@ class PagesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function scope()
-    {
-        return 'cms_pages';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     protected function configurePage()
     {
         $this->addLayoutHandle('cms/pages/grid');
@@ -115,8 +111,6 @@ class PagesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_cms_admin_pages_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('title');

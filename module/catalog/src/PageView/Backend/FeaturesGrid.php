@@ -22,6 +22,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class FeaturesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'catalog_features';
 
     protected $idFieldName = 'feature_id';
 
@@ -82,14 +86,6 @@ class FeaturesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function scope()
-    {
-        return 'catalog_features';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     protected function configurePage()
     {
         $this->addLayoutHandle('catalog/features/grid');
@@ -119,8 +115,6 @@ class FeaturesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_catalog_admin_features_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

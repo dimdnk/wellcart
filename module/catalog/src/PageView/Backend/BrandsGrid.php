@@ -19,6 +19,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class BrandsGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'catalog_brands';
 
     public function __construct(
         BrandRepository $repository,
@@ -41,14 +45,6 @@ class BrandsGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'catalog_brands';
     }
 
     /**
@@ -83,8 +79,6 @@ class BrandsGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_catalog_brands');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

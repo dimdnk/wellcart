@@ -18,6 +18,10 @@ use WellCart\Ui\Datagrid;
 
 class ClientsGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'api_clients';
 
     public function __construct(
         ClientRepository $repository,
@@ -40,14 +44,6 @@ class ClientsGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'api_clients';
     }
 
     /**
@@ -82,8 +78,6 @@ class ClientsGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_api_clients');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('client_id');

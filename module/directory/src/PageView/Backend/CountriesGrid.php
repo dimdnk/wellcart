@@ -19,6 +19,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CountriesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'directory_countries';
 
     public function __construct(
         CountryRepository $repository,
@@ -41,14 +45,6 @@ class CountriesGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'directory_countries';
     }
 
     /**
@@ -83,8 +79,6 @@ class CountriesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_directory_admin_counties_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

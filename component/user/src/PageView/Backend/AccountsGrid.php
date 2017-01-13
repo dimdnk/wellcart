@@ -19,6 +19,10 @@ use WellCart\User\Spec\UserRepository;
 
 class AccountsGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'user_accounts';
 
     public function __construct(
         UserRepository $repository,
@@ -41,14 +45,6 @@ class AccountsGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'user_accounts';
     }
 
     /**
@@ -83,8 +79,6 @@ class AccountsGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_user_admin_accounts_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('email');

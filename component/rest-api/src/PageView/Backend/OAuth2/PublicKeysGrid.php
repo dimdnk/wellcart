@@ -18,6 +18,10 @@ use WellCart\Ui\Datagrid;
 
 class PublicKeysGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'api_public_keys';
 
     public function __construct(
         PublicKeyRepository $repository,
@@ -40,14 +44,6 @@ class PublicKeysGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'api_public_keys';
     }
 
     /**
@@ -81,8 +77,6 @@ class PublicKeysGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_api_public_keys');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('public_key');

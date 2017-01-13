@@ -19,6 +19,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class LanguagesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'base_locale_languages';
 
     public function __construct(
         LocaleLanguageRepository $repository,
@@ -41,14 +45,6 @@ class LanguagesGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'base_locale_languages';
     }
 
     /**
@@ -83,8 +79,6 @@ class LanguagesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_base_admin_languages_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

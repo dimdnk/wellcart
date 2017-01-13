@@ -19,6 +19,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class UrlRewritesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'base_url_rewrites';
 
     public function __construct(
         UrlRewriteRepository $repository,
@@ -41,14 +45,6 @@ class UrlRewritesGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'base_url_rewrites';
     }
 
     /**
@@ -83,8 +79,6 @@ class UrlRewritesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_base_admin_url_rewrites_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('request_path');

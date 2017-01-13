@@ -22,6 +22,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class ProductTemplatesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'catalog_product_templates';
 
     protected $idFieldName = 'product_template_id';
 
@@ -82,14 +86,6 @@ class ProductTemplatesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function scope()
-    {
-        return 'catalog_product_templates';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     protected function configurePage()
     {
         $this->addLayoutHandle('catalog/product-templates/grid');
@@ -119,8 +115,6 @@ class ProductTemplatesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_catalog_admin_product_templates_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

@@ -19,6 +19,10 @@ use WellCart\User\Spec\AclRoleRepository;
 
 class RolesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'user_acl_roles';
 
     public function __construct(
         AclRoleRepository $repository,
@@ -41,14 +45,6 @@ class RolesGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'user_acl_roles';
     }
 
     /**
@@ -83,8 +79,6 @@ class RolesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_user_admin_acl_roles_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

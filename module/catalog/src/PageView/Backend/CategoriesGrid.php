@@ -22,6 +22,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CategoriesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'catalog_categories';
 
     protected $idFieldName = 'category_id';
 
@@ -83,14 +87,6 @@ class CategoriesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function scope()
-    {
-        return 'catalog_categories';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     protected function configurePage()
     {
         $this->addLayoutHandle('catalog/categories/grid');
@@ -120,8 +116,6 @@ class CategoriesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_catalog_admin_categories_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

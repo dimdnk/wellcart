@@ -19,6 +19,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class ScopesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'api_scopes';
 
     public function __construct(
         ScopeRepository $repository,
@@ -42,15 +46,6 @@ class ScopesGrid extends Standard
 
         return parent::setRepository($repository);
     }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'api_scopes';
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -83,8 +78,6 @@ class ScopesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_api_scopes');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('scope');

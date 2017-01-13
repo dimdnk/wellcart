@@ -20,6 +20,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CurrenciesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'directory_currencies';
 
     protected $timeZone;
 
@@ -46,14 +50,6 @@ class CurrenciesGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'directory_currencies';
     }
 
     /**
@@ -88,8 +84,6 @@ class CurrenciesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_directory_admin_currencies_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('title');

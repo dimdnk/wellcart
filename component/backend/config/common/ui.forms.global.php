@@ -8,113 +8,116 @@
 
 use WellCart\Backend\Form;
 
-return [
-    'ui' => [
-        'form' =>
-            [
-                Form\Account::NAME => [
-                    'save' => [
-                        'options'    => [
-                            'fontAwesome' => [
-                                'icon' => 'check',
-                            ],
-                        ],
-                        'attributes' => [
-                            'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
-                        ],
-                    ],
-
-                    'save_and_continue_edit' => [
-                        'options'    => [
-                            'fontAwesome' => [
-                                'icon' => 'check-circle',
-                            ],
-                        ],
-                        'attributes' => [
-                            'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
-                        ],
-                    ],
-
-                    'email' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'roles' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'language' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'time_zone' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'first_name' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'last_name' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'password' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
-
-                    'passwordVerify' => [
-                        'options' => [
-                            'twb-layout'       => 'horizontal',
-                            'column-size'      => 'md-8',
-                            'label_attributes' => [
-                                'class' => 'col-md-4',
-                            ],
-                        ],
-                    ],
+$forms = [
+    Form\Account::NAME => [
+        'save' => [
+            'options'    => [
+                'fontAwesome' => [
+                    'icon' => 'check',
                 ],
             ],
+            'attributes' => [
+                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+            ],
+        ],
+
+        'save_and_continue_edit' => [
+            'options'    => [
+                'fontAwesome' => [
+                    'icon' => 'check-circle',
+                ],
+            ],
+            'attributes' => [
+                'class' => 'btn btn-toolbar-action btn-circle btn-success pull-right',
+            ],
+        ],
+
+        'email' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'roles' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'language' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'time_zone' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'first_name' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'last_name' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'password' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+
+        'passwordVerify' => [
+            'options' => [
+                'twb-layout'       => 'horizontal',
+                'column-size'      => 'md-8',
+                'label_attributes' => [
+                    'class' => 'col-md-4',
+                ],
+            ],
+        ],
+    ],
+];
+
+return [
+    'ui' => [
+        'component' => [
+            'form' => $forms,
+        ],
     ],
 ];

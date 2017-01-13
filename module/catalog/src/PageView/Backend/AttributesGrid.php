@@ -22,6 +22,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class AttributesGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'catalog_attributes';
 
     protected $idFieldName = 'attribute_id';
 
@@ -82,14 +86,6 @@ class AttributesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function scope()
-    {
-        return 'catalog_attributes';
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     protected function configurePage()
     {
         $this->addLayoutHandle('catalog/attributes/grid');
@@ -119,7 +115,6 @@ class AttributesGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_catalog_admin_attributes_grid');
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
         $col = new Datagrid\Column('name');

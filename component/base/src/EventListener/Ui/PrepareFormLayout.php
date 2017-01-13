@@ -30,7 +30,7 @@ class PrepareFormLayout
             return;
         }
         $name = $form->getUiConfigSection();
-        $config = Config::get('ui.form.' . $name, []);
+        $config = Config::get('ui.component.form.' . $name, []);
         if (empty($config)) {
             return;
         }

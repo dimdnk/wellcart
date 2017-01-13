@@ -21,6 +21,10 @@ use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class NotificationsGrid extends Standard
 {
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'admin_notifications';
 
     public function __construct(
         NotificationRepository $repository,
@@ -43,14 +47,6 @@ class NotificationsGrid extends Standard
         }
 
         return parent::setRepository($repository);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    protected function scope()
-    {
-        return 'admin_notifications';
     }
 
     /**
@@ -99,8 +95,6 @@ class NotificationsGrid extends Standard
      */
     protected function configureGrid()
     {
-        $this->setId('wellcart_user_admin_notifications_grid');
-
         $this->setDefaultOrder($this->idFieldName, 'desc');
 
         $col = new Datagrid\Column('created_at');

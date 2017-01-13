@@ -24,8 +24,12 @@ abstract class Standard
     extends EntityPageView
     implements ServiceLocatorAwareInterface
 {
-
     use ServiceLocatorAwareTrait;
+
+    /**
+     * Canonical grid name
+     */
+    const NAME = 'backend_grid';
 
     /**
      * Default layout handle for grid
@@ -265,7 +269,10 @@ abstract class Standard
      *
      * @return string
      */
-    abstract protected function scope();
+    protected function scope()
+    {
+        return static::NAME;
+    }
 
     /**
      * Current route name
@@ -284,7 +291,7 @@ abstract class Standard
         /* @var $grid \WellCart\Ui\Datagrid\Datagrid */
         $grid = $this->getServiceLocator()->get('ZfcDatagrid\Datagrid');
 
-        $this->setId('standard_admin_grid');
+        $this->setId(static::NAME);
         $grid->setTitle('Standard Backend Grid');
         $grid->setRendererName('HtmlDataGrid');
         $grid->setToolbarTemplate(
