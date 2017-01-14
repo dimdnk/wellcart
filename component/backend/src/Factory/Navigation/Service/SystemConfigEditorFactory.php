@@ -57,6 +57,6 @@ class SystemConfigEditorFactory extends AbstractNavigationFactory
      */
     protected function getName()
     {
-        return 'tab';
+        return 'tabs';
     }
 }

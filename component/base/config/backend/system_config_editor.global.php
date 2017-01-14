@@ -8,18 +8,18 @@
 return
     [
         'system_config_editor' => [
-            'tab' => [
+            'tabs' => [
                 'general'          => [
 
                     'label'      => 'General Settings',
                     'route'      => 'zfcadmin/system-settings/sections',
                     'params'     => ['section' => 'general'],
                     'permission' => 'admin/system-settings/general/view',
-                    'fieldset'   => [
+                    'fieldsets'   => [
                         'web_settings' => [
                             'label'    => 'Web Settings',
                             'priority' => -19,
-                            'element'  => [
+                            'elements'  => [
 
 
                                 'wellcart.website.name' =>
@@ -104,7 +104,7 @@ return
                         'localization' => [
                             'label'    => 'Localization',
                             'priority' => -20,
-                            'element'  => [
+                            'elements'  => [
                                 'wellcart.localization.locale'       =>
                                     [
                                         'name'                       => 'wellcart.localization.locale',
@@ -188,7 +188,7 @@ return
                         'design'       => [
                             'label'    => 'Design',
                             'priority' => -21,
-                            'element'  => [
+                            'elements'  => [
                                 'ze_theme.default_theme' =>
                                     [
                                         'name'                       => 'ze_theme.default_theme',
@@ -231,11 +231,11 @@ return
                     'route'      => 'zfcadmin/system-settings/sections',
                     'params'     => ['section' => 'acmailer_options'],
                     'permission' => 'admin/system-settings/acmailer_options/view',
-                    'fieldset'   => [
+                    'fieldsets'   => [
                         'mail_server_configuration'     => [
                             'label'    => 'Mail Server Configuration',
                             'priority' => -19,
-                            'element'  => [
+                            'elements'  => [
                                 'wellcart.email_communications.enabled'                            =>
                                     [
                                         'name'                       => 'wellcart.email_communications.enabled',
@@ -504,7 +504,7 @@ return
                         'contact_general'               => [
                             'label'    => 'General Contact',
                             'priority' => -21,
-                            'element'  => [
+                            'elements'  => [
                                 'wellcart.email_communications.contacts.general.name'  =>
                                     [
                                         'name'                       => 'wellcart.email_communications.contacts.general.name',
@@ -583,7 +583,7 @@ return
                         'contact_support'               => [
                             'label'    => 'Customer Support',
                             'priority' => -22,
-                            'element'  => [
+                            'elements'  => [
                                 'wellcart.email_communications.contacts.support.name'  =>
                                     [
                                         'name'                       => 'wellcart.email_communications.contacts.support.name',
@@ -662,7 +662,7 @@ return
                         'contact_website_administrator' => [
                             'label'    => 'Website Administrator Contact',
                             'priority' => -23,
-                            'element'  => [
+                            'elements'  => [
                                 'wellcart.email_communications.contacts.website_administrator.name'  =>
                                     [
                                         'name'                       => 'wellcart.email_communications.contacts.website_administrator.name',
@@ -745,11 +745,11 @@ return
                     'route'      => 'zfcadmin/system-settings/sections',
                     'params'     => ['section' => 'advanced'],
                     'permission' => 'admin/system-settings/advanced/view',
-                    'fieldset'   => [
+                    'fieldsets'   => [
                         'developer' => [
                             'label'    => 'Developer Settings',
                             'priority' => -19,
-                            'element'  => [
+                            'elements'  => [
                                 'zenddevelopertools.toolbar.enabled'      =>
                                     [
                                         'name'                       => 'zenddevelopertools.toolbar.enabled',

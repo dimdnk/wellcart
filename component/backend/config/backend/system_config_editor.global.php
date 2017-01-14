@@ -7,9 +7,9 @@
  */
 return [
     'system_config_editor' => [
-        'tab' => [
+        'tabs' => [
             'advanced' => [
-                'fieldset' => [
+                'fieldsets' => [
                 ],
             ],
         ],

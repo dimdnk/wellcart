@@ -170,7 +170,7 @@ class ConfigurationEditor extends EventProvider
         $list = new PriorityList();
         $tab = $this->tabInfo($tabId, $default);
 
-        $tabFieldsets = Arr::get($tab, 'fieldset', []);
+        $tabFieldsets = Arr::get($tab, 'fieldsets', []);
         foreach ($tabFieldsets as $fieldsetId => $fieldset) {
             if (!Arr::get($fieldset, 'priority')) {
                 throw new Exception\InvalidArgumentException(
@@ -202,7 +202,7 @@ class ConfigurationEditor extends EventProvider
      */
     protected function tabInfo($tabId, $default = 'general')
     {
-        $path = 'system_config_editor.tab.';
+        $path = 'system_config_editor.tabs.';
         $tab = Arr::get($this->config, $path . $tabId, []);
         if (empty($tab)) {
             $tab = Arr::get($this->config, $path . $default, []);
@@ -227,12 +227,12 @@ class ConfigurationEditor extends EventProvider
         $this->form->setWrapElements(true);
         $prototype = clone $this->form;
         $tab = $this->tabInfo($tabId, $default);
-        $tabFieldsets = Arr::get($tab, 'fieldset', []);
+        $tabFieldsets = Arr::get($tab, 'fieldsets', []);
 
         foreach ($tabFieldsets as $fieldsetId => $fieldsetSpec) {
             $fieldset = clone $prototype;
             $fieldset->setAttribute('name', $fieldsetId);
-            $elements = Arr::get($fieldsetSpec, 'element', []);
+            $elements = Arr::get($fieldsetSpec, 'elements', []);
             $fieldsetPriority = Arr::get($fieldsetSpec, 'priority', 0);
             foreach ($elements as $element) {
                 $elementName = Arr::get($element, 'name');
@@ -250,7 +250,7 @@ class ConfigurationEditor extends EventProvider
         $inputFilter = $this->form->getInputFilter();
         $filterFactory = $inputFilter->getFactory();
         foreach ($tabFieldsets as $fieldsetId => $fieldsetSpec) {
-            $elements = Arr::get($fieldsetSpec, 'element', []);
+            $elements = Arr::get($fieldsetSpec, 'elements', []);
             foreach ($elements as $element) {
                 if (!empty($element['input_filter_specification'])) {
                     $elementName = Arr::get($element, 'name');
