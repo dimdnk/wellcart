@@ -163,7 +163,7 @@ class SetupPageVariables extends AbstractListenerAggregate
             $action = 'action-' . $routeMatch->getParam('action');
             $controller = 'controller-' . str_replace(
                     ['\\', 'controller-', '::'],
-                    ['-', '', ''],
+                    ['-', '', '-'],
                     strtolower($routeMatch->getParam('controller'))
                 );
 
