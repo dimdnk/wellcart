@@ -8,7 +8,7 @@
 
 namespace WellCart\Ui\Form;
 
-use WellCart\Ui\Form\LinearForm as AbstractForm;
+use WellCart\Form\Form as AbstractForm;
 use Zend\Stdlib\PriorityList;
 
 

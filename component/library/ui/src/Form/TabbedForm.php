@@ -8,9 +8,10 @@
 
 namespace WellCart\Ui\Form;
 
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Stdlib\PriorityList;
 
-class TabbedForm extends Form
+class TabbedForm extends AbstractForm
 {
     /**
      * @var
