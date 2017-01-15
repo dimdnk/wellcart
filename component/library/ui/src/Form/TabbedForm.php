@@ -57,7 +57,7 @@ class TabbedForm extends Form
         array $formElements = [],
         $priority = 0
     ) {
-        $tab = new Tab;
+        $tab = new Tab\Tab;
         $tab->isLIFO(false);
         $tab->setId($id)
             ->setLabel($label)

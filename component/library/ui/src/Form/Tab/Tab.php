@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Ui\Form;
+namespace WellCart\Ui\Form\Tab;
 
 use WellCart\Utility\Arr;
 use Zend\Stdlib\PriorityList;
