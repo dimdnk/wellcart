@@ -18,8 +18,8 @@ return
              'template_map'             => [
                  'partial/form/table-fieldset'                 => __DIR__
                      . '/../../view/partial/form/table-fieldset.phtml',
-                 'partial/form/layout/standard'                => __DIR__
-                     . '/../../view/partial/form/layout/standard.phtml',
+                 'partial/form/layout/linear'                => __DIR__
+                     . '/../../view/partial/form/layout/linear.phtml',
                  'partial/form/layout/tabbed'                  => __DIR__
                      . '/../../view/partial/form/layout/tabbed.phtml',
                  'partial/navigation/menu/dropdown'            => __DIR__

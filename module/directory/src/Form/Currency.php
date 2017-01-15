@@ -12,7 +12,7 @@ namespace WellCart\Directory\Form;
 
 use WellCart\Directory\Exception;
 use WellCart\Directory\Spec\CurrencyEntity;
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;

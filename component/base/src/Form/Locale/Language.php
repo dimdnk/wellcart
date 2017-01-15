@@ -12,7 +12,7 @@ namespace WellCart\Base\Form\Locale;
 
 use WellCart\Base\Exception;
 use WellCart\Base\Spec\LocaleLanguageEntity;
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;

@@ -14,7 +14,7 @@ use WellCart\Directory\Exception;
 use WellCart\Directory\Form\GeoZone\GeoZoneFieldset;
 use WellCart\Directory\Spec\GeoZoneEntity;
 use WellCart\Directory\Spec\GeoZoneMapEntity;
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;

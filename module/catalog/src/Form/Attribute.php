@@ -15,7 +15,7 @@ use WellCart\Catalog\Spec\AttributeEntity;
 use WellCart\Catalog\Spec\AttributeI18nEntity;
 use WellCart\Catalog\Spec\AttributeValueEntity;
 use WellCart\Catalog\Spec\AttributeValueI18nEntity;
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;

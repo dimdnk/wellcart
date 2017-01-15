@@ -8,14 +8,14 @@
 
 namespace WellCart\Ui\Form;
 
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Stdlib\PriorityList;
 
 
 use WellCart\Utility\Arr;
 use Zend\Form\ElementInterface;
 
-class Form extends AbstractForm
+class LinearForm extends AbstractForm
 {
     /**
      * @var PriorityList
@@ -35,7 +35,7 @@ class Form extends AbstractForm
     /**
      * @var string
      */
-    protected $layout = 'partial/form/layout/standard';
+    protected $layout = 'partial/form/layout/linear';
 
     /**
      * @var string

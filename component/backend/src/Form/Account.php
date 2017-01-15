@@ -12,7 +12,7 @@ namespace WellCart\Backend\Form;
 
 use WellCart\Backend\Exception;
 use WellCart\Backend\Spec\AdministratorEntity;
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;

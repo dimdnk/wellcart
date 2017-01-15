@@ -13,7 +13,7 @@ namespace WellCart\Catalog\Form;
 use WellCart\Catalog\Exception;
 use WellCart\Catalog\Spec\ProductTemplateEntity;
 use WellCart\Catalog\Spec\ProductTemplateI18nEntity;
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;

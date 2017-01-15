@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\RestApi\Form\OAuth2;
 
-use WellCart\Form\Form as AbstractForm;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use WellCart\RestApi\Entity\OAuth2\Scope as ScopeEntity;
 use WellCart\RestApi\Exception;
