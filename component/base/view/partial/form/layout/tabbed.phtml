@@ -22,7 +22,7 @@ $activeClass = ' active';
 $html = '<div class="tab-content">';
 foreach ($form->getTabs() as $tab) {
     /**
-     * @var $tab \WellCart\Ui\Form\Tab
+     * @var $tab \WellCart\Ui\Form\Tab\Tab
      */
     $elements = $tab->toArray();
     $tabId = 'tab-' . $formName . '-' . $tab->getId();
