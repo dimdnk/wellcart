@@ -15,7 +15,7 @@ use Zend\Stdlib\PriorityList;
 use WellCart\Utility\Arr;
 use Zend\Form\ElementInterface;
 
-class LinearForm extends AbstractForm
+class LinearForm extends AbstractForm implements FormInterface
 {
     /**
      * @var PriorityList

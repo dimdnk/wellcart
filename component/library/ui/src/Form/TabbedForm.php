@@ -12,7 +12,7 @@ use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Utility\Arr;
 use Zend\Stdlib\PriorityList;
 
-class TabbedForm extends AbstractForm
+class TabbedForm extends AbstractForm implements FormInterface
 {
     /**
      * @var
@@ -56,11 +56,11 @@ class TabbedForm extends AbstractForm
         foreach ($tabs as $tabId => $tab)
         {
             $this->addTab($tabId,
-               __(Arr::get($tabs, 'label','')),
-                Arr::get($tabs, 'elements', []),
-                Arr::get($tabs, 'options', []),
-                Arr::get($tabs, 'attributes', []),
-                Arr::get($tabs, 'priority', 0)
+               __(Arr::get($tab, 'label','')),
+                Arr::get($tab, 'elements', []),
+                Arr::get($tab, 'options', []),
+                Arr::get($tab, 'attributes', []),
+                Arr::get($tab, 'priority', 0)
             );
         }
         return $this;
