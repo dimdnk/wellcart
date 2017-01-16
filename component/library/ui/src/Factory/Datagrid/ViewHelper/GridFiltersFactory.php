@@ -5,7 +5,7 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
-
+declare(strict_types = 1);
 namespace WellCart\Ui\Factory\Datagrid\ViewHelper;
 
 use Interop\Container\ContainerInterface;
@@ -16,7 +16,7 @@ use Zend\Form\Factory;
 class GridFiltersFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): GridFilters
     {
         $locator = $sm->getServiceLocator();
         $builder = $locator

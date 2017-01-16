@@ -11,14 +11,15 @@ namespace WellCart\Directory\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Directory\Form\Element\ZoneSelector;
+use WellCart\Directory\Spec\ZoneRepository;
 
 class ZoneSelectorFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): ZoneSelector
     {
         $zones = $sm->getServiceLocator()->get(
-            'WellCart\Directory\Spec\ZoneRepository'
+            ZoneRepository::class
         );
 
         return new ZoneSelector(

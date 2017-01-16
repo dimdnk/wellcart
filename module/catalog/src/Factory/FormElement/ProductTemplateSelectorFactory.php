@@ -11,11 +11,11 @@ namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Spec\ProductTemplateRepository;
-
+use WellCart\Form\Element\Select;
 class ProductTemplateSelectorFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): Select
     {
         $services = $sm->getServiceLocator();
         $groups = $services->get(
@@ -23,7 +23,7 @@ class ProductTemplateSelectorFactory
         )
             ->toOptionsList();
 
-        return new \WellCart\Form\Element\Select(
+        return new Select(
             null,
             ['value_options' => $groups]
         );

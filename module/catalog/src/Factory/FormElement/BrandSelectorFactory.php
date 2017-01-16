@@ -11,11 +11,12 @@ namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Spec\BrandRepository;
+use WellCart\Form\Element\Select;
 
 class BrandSelectorFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): Select
     {
         $services = $sm->getServiceLocator();
         $brands = $services->get(
@@ -23,7 +24,7 @@ class BrandSelectorFactory
         )
             ->toOptionsList();
 
-        return new \WellCart\Form\Element\Select(
+        return new Select(
             null,
             [
                 'empty_option'              => '',

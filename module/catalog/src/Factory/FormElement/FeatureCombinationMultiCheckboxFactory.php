@@ -10,12 +10,13 @@ declare(strict_types = 1);
 namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Catalog\Form\Element\FeatureCombinationMultiCheckbox;
 use WellCart\Catalog\Spec\FeatureRepository;
 
 class FeatureCombinationMultiCheckboxFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): FeatureCombinationMultiCheckbox
     {
         $services = $sm->getServiceLocator();
         $options = $services->get(
@@ -23,7 +24,7 @@ class FeatureCombinationMultiCheckboxFactory
         )
             ->toGroupedOptionsList();
 
-        return new \WellCart\Catalog\Form\Element\FeatureCombinationMultiCheckbox(
+        return new FeatureCombinationMultiCheckbox(
             null,
             [
                 'value_options'             => $options,

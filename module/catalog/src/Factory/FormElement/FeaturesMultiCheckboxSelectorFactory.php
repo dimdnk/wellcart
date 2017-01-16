@@ -11,11 +11,12 @@ namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Spec\FeatureRepository;
+use \WellCart\Form\Element\MultiCheckbox;
 
 class FeaturesMultiCheckboxSelectorFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): MultiCheckbox
     {
         $services = $sm->getServiceLocator();
         $values = $services->get(
@@ -23,7 +24,7 @@ class FeaturesMultiCheckboxSelectorFactory
         )
             ->toOptionsList();
 
-        return new \WellCart\Form\Element\MultiCheckbox(
+        return new MultiCheckbox(
             null,
             ['value_options' => $values]
         );

@@ -11,14 +11,16 @@ namespace WellCart\Directory\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Directory\Form\Element\CountrySelector;
+use WellCart\Directory\Spec\CountryRepository;
 
 class CountrySelectorFactory
 {
 
-    public function __invoke(ContainerInterface $sm)
+    public function __invoke(ContainerInterface $sm): CountrySelector
     {
-        $countries = $sm->getServiceLocator()->get(
-            'WellCart\Directory\Spec\CountryRepository'
+        $countries = $sm->getServiceLocator()
+            ->get(
+           CountryRepository::class
         );
 
         $options = $countries->toOptionsList();

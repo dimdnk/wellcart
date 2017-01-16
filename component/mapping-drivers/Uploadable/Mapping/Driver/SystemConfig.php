@@ -3,6 +3,7 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+declare(strict_types = 1);
 namespace Gedmo\Uploadable\Mapping\Driver;
 
 use Doctrine\Common\Persistence\Mapping\MappingException;
