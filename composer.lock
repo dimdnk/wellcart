@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c45723350fea7cef82c717221949d5b",
+    "content-hash": "69a8a9618532bb08031cb5b489190f6a",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -66,6 +66,59 @@
                 "zf2"
             ],
             "time": "2016-06-04T17:27:26+00:00"
+        },
+        {
+            "name": "adlogix/zf2-opensoft-rollout",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adlogix/zf2-opensoft-rollout.git",
+                "reference": "cab372761e5819101d0ef4baa592d025426c1000"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adlogix/zf2-opensoft-rollout/zipball/cab372761e5819101d0ef4baa592d025426c1000",
+                "reference": "cab372761e5819101d0ef4baa592d025426c1000",
+                "shasum": ""
+            },
+            "require": {
+                "opensoft/rollout": "~2.1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "doctrine/orm": "*",
+                "phpunit/phpunit": "5.5.*",
+                "zendframework/zendframework": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Adlogix\\Zf2Rollout\\": "src/"
+                },
+                "classmap": [
+                    "./"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toni Van de Voorde",
+                    "email": "toni.vdv@gmail.com",
+                    "homepage": "http://www.devexp.eu"
+                }
+            ],
+            "description": "ZF2 module for the Opensoft Rollout library",
+            "homepage": "https://github.com/adlogix/zf2-opensoft-rollout",
+            "keywords": [
+                "feature",
+                "feature flags",
+                "flags",
+                "zf2"
+            ],
+            "time": "2016-10-06T08:37:35+00:00"
         },
         {
             "name": "api-skeletons/zf-doctrine-module-zend-hydrator",
@@ -1350,16 +1403,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "5954c297e9d93ff84554906c2fbbc2a133c43941"
+                "reference": "930297026c8009a567ac051fd545bf6124150347"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/5954c297e9d93ff84554906c2fbbc2a133c43941",
-                "reference": "5954c297e9d93ff84554906c2fbbc2a133c43941",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/930297026c8009a567ac051fd545bf6124150347",
+                "reference": "930297026c8009a567ac051fd545bf6124150347",
                 "shasum": ""
             },
             "require": {
@@ -1419,7 +1472,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2016-12-03T08:15:01+00:00"
+            "time": "2017-01-13T14:02:13+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -1477,16 +1530,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.5.6",
+            "version": "v2.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "a526d0df58daa8ab6802244bf3227f532e0deb45"
+                "reference": "3a351369582dade60c750e2cef540eb7b568e6b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/a526d0df58daa8ab6802244bf3227f532e0deb45",
-                "reference": "a526d0df58daa8ab6802244bf3227f532e0deb45",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/3a351369582dade60c750e2cef540eb7b568e6b3",
+                "reference": "3a351369582dade60c750e2cef540eb7b568e6b3",
                 "shasum": ""
             },
             "require": {
@@ -1544,7 +1597,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-12-04T05:53:43+00:00"
+            "time": "2017-01-14T21:05:28+00:00"
         },
         {
             "name": "doctrine/doctrine-module",
@@ -2063,16 +2116,16 @@
         },
         {
             "name": "doctrine/mongodb-odm",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb-odm.git",
-                "reference": "e839648ef7649757aae3b9818236a6fa47c016cd"
+                "reference": "12611cff4ff66cd6e1ebf0b56a7754a537572318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/e839648ef7649757aae3b9818236a6fa47c016cd",
-                "reference": "e839648ef7649757aae3b9818236a6fa47c016cd",
+                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/12611cff4ff66cd6e1ebf0b56a7754a537572318",
+                "reference": "12611cff4ff66cd6e1ebf0b56a7754a537572318",
                 "shasum": ""
             },
             "require": {
@@ -2087,7 +2140,7 @@
                 "symfony/console": "~2.3|~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8|~5.0",
+                "phpunit/phpunit": "~5.4",
                 "symfony/yaml": "~2.3|~3.0"
             },
             "suggest": {
@@ -2143,7 +2196,7 @@
                 "odm",
                 "persistence"
             ],
-            "time": "2016-10-07T09:18:05+00:00"
+            "time": "2017-01-14T17:19:01+00:00"
         },
         {
             "name": "doctrine/orm",
@@ -2582,6 +2635,7 @@
                 "schema",
                 "validate"
             ],
+            "abandoned": "kherge/json",
             "time": "2013-10-30T16:51:34+00:00"
         },
         {
@@ -2639,6 +2693,7 @@
                 "phar",
                 "update"
             ],
+            "abandoned": true,
             "time": "2013-10-30T17:23:01+00:00"
         },
         {
@@ -3128,6 +3183,7 @@
             ],
             "description": "A parsing and comparison library for semantic versioning.",
             "homepage": "http://github.com/kherge/Version",
+            "abandoned": true,
             "time": "2012-08-16T17:13:03+00:00"
         },
         {
@@ -3659,26 +3715,32 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.21.0",
+            "version": "1.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7"
+                "reference": "3b114ab800c6432ad42387ccf6bc8d4388a2885a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
-                "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/3b114ab800c6432ad42387ccf6bc8d4388a2885a",
+                "reference": "3b114ab800c6432ad42387ccf6bc8d4388a2885a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "symfony/translation": "~2.6|~3.0"
+                "symfony/translation": "~2.6 || ~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0|~5.0"
+                "friendsofphp/php-cs-fixer": "~2",
+                "phpunit/phpunit": "~4.0 || ~5.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.23-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Carbon\\": "src/Carbon/"
@@ -3702,7 +3764,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2015-11-04T20:07:17+00:00"
+            "time": "2017-01-15T14:47:48+00:00"
         },
         {
             "name": "netglue/zf2-money-module",
@@ -3754,6 +3816,58 @@
                 "zf2"
             ],
             "time": "2015-07-22T10:42:26+00:00"
+        },
+        {
+            "name": "opensoft/rollout",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opensoft/rollout.git",
+                "reference": "41083bc1f010898f6b48296764fd1c4207615623"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opensoft/rollout/zipball/41083bc1f010898f6b48296764fd1c4207615623",
+                "reference": "41083bc1f010898f6b48296764fd1c4207615623",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "doctrine/cache": "*",
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "doctrine/cache": "For use with the DoctrineCacheStorageAdapter",
+                "predis/predis": "For use with the RedisStorageAdapter"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Opensoft\\Rollout\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Richard Fullmer",
+                    "email": "richard.fullmer@opensoftdev.com"
+                }
+            ],
+            "description": "Feature switches or flags for PHP",
+            "keywords": [
+                "feature",
+                "flag",
+                "flipper",
+                "rollout",
+                "switches",
+                "toggle"
+            ],
+            "time": "2016-11-08T03:54:16+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
@@ -12486,26 +12600,28 @@
         },
         {
             "name": "facebook/webdriver",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/php-webdriver.git",
-                "reference": "af21de3ae5306a8ca0bcc02a19735dadc43e83f3"
+                "reference": "77300c4ab2025d4316635f592ec849ca7323bd8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/af21de3ae5306a8ca0bcc02a19735dadc43e83f3",
-                "reference": "af21de3ae5306a8ca0bcc02a19735dadc43e83f3",
+                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/77300c4ab2025d4316635f592ec849ca7323bd8c",
+                "reference": "77300c4ab2025d4316635f592ec849ca7323bd8c",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "php": "^5.5 || ~7.0"
+                "php": "^5.5 || ~7.0",
+                "symfony/process": "^2.8 || ^3.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^1.11",
                 "php-mock/php-mock-phpunit": "^1.1",
                 "phpunit/phpunit": "4.6.* || ~5.0",
+                "satooshi/php-coveralls": "^1.0",
                 "squizlabs/php_codesniffer": "^2.6"
             },
             "suggest": {
@@ -12529,7 +12645,7 @@
                 "selenium",
                 "webdriver"
             ],
-            "time": "2016-10-14T15:16:51+00:00"
+            "time": "2017-01-13T15:48:08+00:00"
         },
         {
             "name": "guzzle/guzzle",
