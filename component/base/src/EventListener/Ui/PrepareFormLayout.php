@@ -34,6 +34,16 @@ class PrepareFormLayout
         if (empty($config)) {
             return;
         }
+        if(!empty($config['options']))
+        {
+            $form->setOptions($config['options']);
+            unset($config['options']);
+        }
+        if(!empty($config['attributes']))
+        {
+            $form->setAttributes($config['attributes']);
+            unset($config['attributes']);
+        }
         $this->composeForm($form, $config);
     }
 

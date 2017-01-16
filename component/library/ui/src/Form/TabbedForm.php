@@ -9,6 +9,7 @@
 namespace WellCart\Ui\Form;
 
 use WellCart\Ui\Form\LinearForm as AbstractForm;
+use WellCart\Utility\Arr;
 use Zend\Stdlib\PriorityList;
 
 class TabbedForm extends AbstractForm
@@ -35,6 +36,38 @@ class TabbedForm extends AbstractForm
     }
 
     /**
+     * @inheritDoc
+     */
+    public function setOptions($options)
+    {
+        parent::setOptions(
+            $options
+        );
+
+        if (isset($options['tabs'])) {
+            $this->setTabsSpecification($options['tabs']);
+        }
+
+        return $this;
+    }
+
+    public function setTabsSpecification(array $tabs)
+    {
+        foreach ($tabs as $tabId => $tab)
+        {
+            $this->addTab($tabId,
+               __(Arr::get($tabs, 'label','')),
+                Arr::get($tabs, 'elements', []),
+                Arr::get($tabs, 'options', []),
+                Arr::get($tabs, 'attributes', []),
+                Arr::get($tabs, 'priority', 0)
+            );
+        }
+        return $this;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getTabs()
@@ -43,10 +76,11 @@ class TabbedForm extends AbstractForm
     }
 
     /**
-     * @param       $id
-     * @param       $label
+     * @param string $id
+     * @param string $label
+     * @param array $elements
+     * @param array $options
      * @param array $attributes
-     * @param array $formElements
      * @param int   $priority
      *
      * @return TabbedForm
@@ -54,18 +88,25 @@ class TabbedForm extends AbstractForm
     public function addTab(
         $id,
         $label,
+        array $elements = [],
+        array $options = [],
         array $attributes = [],
-        array $formElements = [],
         $priority = 0
     ) {
         $tab = new Tab\Tab;
         $tab->isLIFO(false);
         $tab->setId($id)
             ->setLabel($label)
-            ->setAttributes($attributes)
-            ->setItems($formElements);
-        $this->tabs->insert($id, $tab, $priority);
+            ->setOptions($options)
+            ->setAttributes($attributes);
 
+        foreach ($elements as $element) {
+            if(is_string($element)) {
+                $element = $this->get($element);
+            }
+            $tab->add($element->getName(), $element);
+        }
+        $this->tabs->insert($id, $tab, $priority);
         return $this;
     }
 
