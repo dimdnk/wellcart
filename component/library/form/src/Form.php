@@ -87,6 +87,29 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         return $this;
     }
 
+    public function getFromTree(string $element, $delimiter = '.')
+    {
+        if(strpos($element, $delimiter) === false){
+            return $this->get($element);
+        }
+        if($this->has($element)){
+            return $element;
+        }
+        $keys = explode($delimiter, $element);
+        $result = $this;
+        do {
+            $key = array_shift($keys);
+            if($result->has($key))
+            {
+                $result = $result->get($key);
+            } else {
+              $result = false;
+              break;
+            }
+        } while ($keys);
+        return $result;
+    }
+
     /**
      * Retrieve input filter used by this form
      *

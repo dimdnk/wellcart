@@ -94,11 +94,11 @@ class Module implements
             'layout_updates'       => include __DIR__
                 . '/../config/layout_updates.global.php',
             'system_config_editor' => [
-                'tab' => [
+                'tabs' => [
                     'general' => [
-                        'fieldset' => [
+                        'fieldsets' => [
                             'design' => [
-                                'element' => [
+                                'elements' => [
                                     'ze_theme.default_theme' =>
                                         [
                                             'options' => [

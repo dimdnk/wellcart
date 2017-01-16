@@ -100,11 +100,18 @@ class TabbedForm extends AbstractForm implements FormInterface
             ->setOptions($options)
             ->setAttributes($attributes);
 
-        foreach ($elements as $element) {
+        foreach ($elements as $k => $element) {
             if(is_string($element)) {
-                $element = $this->get($element);
+                $element = $this->getFromTree($element);
+            } elseif(is_array($element)) {
+                $element = $this->getFromTree($k);
+                if($element) {
+                    $element->setOptions(Arr::get($elements[$k],'options', []));
+                }
             }
-            $tab->add($element->getName(), $element);
+            if($element) {
+                $tab->add($element->getName(), $element);
+            }
         }
         $this->tabs->insert($id, $tab, $priority);
         return $this;
