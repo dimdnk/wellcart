@@ -429,32 +429,32 @@ $forms = [
     Form\Product::NAME => [
         'options' => [
             'tabs' => [
-                'general'            => [
+                'general'    => [
                     'label'    => 'General',
-                    'options' => ['layout' => '2columns'],
-                    'elements' =>[
-                        'product.translations'  =>  ['options' => ['tab' => 'general-left']],
-                        'product.status'    =>  ['options' => ['tab' => 'general-right']]       ,
-                        'product.brand'    =>  ['options' => ['tab' => 'general-right']]        ,
-                        'product.url_key'   =>  ['options' => ['tab' => 'general-right']]       ,
-                        'product.add_new_variant'  =>  ['options' => ['tab' => 'general-right']],
-                        'product.variants'   =>  ['options' => ['tab' => 'general-right']]      ,
+                    'options'  => ['layout' => '2columns'],
+                    'elements' => [
+                        'product.translations'    => ['options' => ['tab' => 'general-left']],
+                        'product.status'          => ['options' => ['tab' => 'general-right']],
+                        'product.brand'           => ['options' => ['tab' => 'general-right']],
+                        'product.url_key'         => ['options' => ['tab' => 'general-right']],
+                        'product.add_new_variant' => ['options' => ['tab' => 'general-right']],
+                        'product.variants'        => ['options' => ['tab' => 'general-right']],
                     ],
                 ],
-                'features'     => [
+                'features'   => [
                     'label'    => 'Features',
                     'elements' => [
                         'product.add_feature',
                         'product.features',
                     ],
                 ],
-                'categories'     => [
+                'categories' => [
                     'label'    => 'Categories',
                     'elements' => [
                         'product.categories',
                     ],
                 ],
-                'images' => [
+                'images'     => [
                     'label'    => 'Images',
                     'elements' => [
                         'product.add_new_image',
@@ -463,7 +463,7 @@ $forms = [
                 ],
             ],
         ],
-        'save' => [
+        'save'    => [
             'options'    => [
                 'fontAwesome' => [
                     'icon' => 'check',
