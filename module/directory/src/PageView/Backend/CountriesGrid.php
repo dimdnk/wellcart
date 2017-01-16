@@ -63,7 +63,7 @@ class CountriesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

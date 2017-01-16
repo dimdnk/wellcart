@@ -62,7 +62,7 @@ class ClientsGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

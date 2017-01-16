@@ -99,7 +99,7 @@ class ProductTemplatesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

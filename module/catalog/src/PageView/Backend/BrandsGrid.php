@@ -63,7 +63,7 @@ class BrandsGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

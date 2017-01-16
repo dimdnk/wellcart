@@ -355,6 +355,8 @@ abstract class Standard
     public function configureQueryBuilder(QueryBuilder $qb)
     {
         $qb->setCacheable(true);
+        $this->getEventManager()
+            ->trigger(__FUNCTION__, $this);
     }
 
     /**
@@ -386,5 +388,9 @@ abstract class Standard
      *
      * @return void
      */
-    abstract public function configurePage();
+    public function configurePage()
+    {
+        $this->getEventManager()
+            ->trigger(__FUNCTION__, $this);
+    }
 }

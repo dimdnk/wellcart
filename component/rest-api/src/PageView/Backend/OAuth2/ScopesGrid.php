@@ -62,7 +62,7 @@ class ScopesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

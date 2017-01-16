@@ -99,7 +99,7 @@ class AttributesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

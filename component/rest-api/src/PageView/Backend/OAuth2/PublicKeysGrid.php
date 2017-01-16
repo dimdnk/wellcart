@@ -62,6 +62,7 @@ class PublicKeysGrid extends Standard
                     ],
                 ]
             );
+        parent::configurePage();
     }
 
     /**

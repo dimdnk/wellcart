@@ -68,7 +68,7 @@ class CurrenciesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

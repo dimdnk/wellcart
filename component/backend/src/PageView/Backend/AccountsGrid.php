@@ -62,6 +62,7 @@ class AccountsGrid extends Standard
                     ],
                 ]
             );
+        parent::configurePage();
     }
 
     /**

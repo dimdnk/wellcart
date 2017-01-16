@@ -95,7 +95,7 @@ class PagesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

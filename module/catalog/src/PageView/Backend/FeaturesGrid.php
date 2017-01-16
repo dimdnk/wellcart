@@ -99,7 +99,7 @@ class FeaturesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

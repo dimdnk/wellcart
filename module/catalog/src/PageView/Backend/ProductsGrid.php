@@ -99,6 +99,7 @@ class ProductsGrid extends Standard
                     ],
                 ]
             );
+        parent::configurePage();
     }
 
     /**

@@ -63,7 +63,7 @@ class UrlRewritesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

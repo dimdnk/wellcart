@@ -63,7 +63,7 @@ class RolesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

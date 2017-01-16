@@ -100,7 +100,7 @@ class CategoriesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

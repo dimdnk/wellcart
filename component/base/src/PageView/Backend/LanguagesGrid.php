@@ -63,6 +63,7 @@ class LanguagesGrid extends Standard
                     ],
                 ]
             );
+        parent::configurePage();
 
     }
 

@@ -63,7 +63,7 @@ class GeoZonesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

@@ -63,7 +63,7 @@ class ZonesGrid extends Standard
                     ],
                 ]
             );
-
+        parent::configurePage();
     }
 
     /**

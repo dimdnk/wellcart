@@ -80,6 +80,7 @@ class NotificationsGrid extends Standard
                     ],
                 ]
             );
+        parent::configurePage();
     }
 
     /**
