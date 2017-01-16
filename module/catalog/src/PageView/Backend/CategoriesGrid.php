@@ -74,7 +74,7 @@ class CategoriesGrid extends Standard
      *
      * @return CategoriesGrid
      */
-    protected function configureQueryBuilder(QueryBuilder $qb)
+    public function configureQueryBuilder(QueryBuilder $qb)
     {
         parent::configureQueryBuilder($qb);
         $qb->excludeRoot()
@@ -87,7 +87,7 @@ class CategoriesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('catalog/categories/grid');
         $this->setPageTitle(__('Categories'))
@@ -114,7 +114,7 @@ class CategoriesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -198,5 +198,6 @@ class CategoriesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

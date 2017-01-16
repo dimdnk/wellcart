@@ -49,7 +49,7 @@ class ScopesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('api/oauth2-scopes/grid');
         $this->setPageTitle(__('OAuth2 Scopes'))
@@ -76,7 +76,7 @@ class ScopesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -154,5 +154,7 @@ class ScopesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
+
 }

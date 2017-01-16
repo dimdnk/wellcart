@@ -49,7 +49,7 @@ class ClientsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('api/oauth2-clients/grid');
         $this->setPageTitle(__('OAuth2 Clients'))
@@ -76,7 +76,7 @@ class ClientsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -146,5 +146,6 @@ class ClientsGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

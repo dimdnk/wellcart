@@ -50,7 +50,7 @@ class LanguagesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('base/languages/grid');
         $this->setPageTitle(__('Languages'))
@@ -77,7 +77,7 @@ class LanguagesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -191,5 +191,6 @@ class LanguagesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

@@ -50,7 +50,7 @@ class RolesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('user/roles/grid');
         $this->setPageTitle(__('User Roles'))
@@ -77,7 +77,7 @@ class RolesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -168,5 +168,6 @@ class RolesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

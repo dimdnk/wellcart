@@ -74,7 +74,7 @@ class AttributesGrid extends Standard
      *
      * @return AttributesGrid
      */
-    protected function configureQueryBuilder(QueryBuilder $qb)
+    public function configureQueryBuilder(QueryBuilder $qb)
     {
         parent::configureQueryBuilder($qb);
         $qb
@@ -86,7 +86,7 @@ class AttributesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('catalog/attributes/grid');
         $this->setPageTitle(__('Attributes'))
@@ -113,7 +113,7 @@ class AttributesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -196,5 +196,6 @@ class AttributesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

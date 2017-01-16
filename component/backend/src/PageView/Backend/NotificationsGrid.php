@@ -56,7 +56,7 @@ class NotificationsGrid extends Standard
      *
      * @return $this
      */
-    protected function configureQueryBuilder(QueryBuilder $qb)
+    public function configureQueryBuilder(QueryBuilder $qb)
     {
         parent::configureQueryBuilder($qb);
         $qb->notDeleted();
@@ -67,7 +67,7 @@ class NotificationsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('admin/notifications/grid');
         $this->setPageTitle(__('Admin Notifications'))
@@ -93,7 +93,7 @@ class NotificationsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'desc');
 
@@ -203,5 +203,6 @@ class NotificationsGrid extends Standard
             )
         );
         $this->addGroupAction($action);
+        parent::configureGrid();
     }
 }

@@ -50,7 +50,7 @@ class UrlRewritesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('base/url-rewrites/grid');
         $this->setPageTitle(__('URL Rewrites'))
@@ -77,7 +77,7 @@ class UrlRewritesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -176,5 +176,6 @@ class UrlRewritesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

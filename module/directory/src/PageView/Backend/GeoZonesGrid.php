@@ -50,7 +50,7 @@ class GeoZonesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('directory/geo-zones/grid');
         $this->setPageTitle(__('Geo Zone List'))
@@ -77,7 +77,7 @@ class GeoZonesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -168,5 +168,6 @@ class GeoZonesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

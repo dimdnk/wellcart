@@ -74,7 +74,7 @@ class ProductsGrid extends Standard
      *
      * @return ProductsGrid
      */
-    protected function configureQueryBuilder(QueryBuilder $qb)
+    public function configureQueryBuilder(QueryBuilder $qb)
     {
         parent::configureQueryBuilder($qb);
         $qb->filterByLanguage($this->language)
@@ -86,7 +86,7 @@ class ProductsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('catalog/products/grid');
         $this->setPageTitle(__('Products'))
@@ -112,7 +112,7 @@ class ProductsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -190,5 +190,6 @@ class ProductsGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

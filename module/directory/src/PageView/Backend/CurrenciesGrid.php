@@ -55,7 +55,7 @@ class CurrenciesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('directory/currencies/grid');
         $this->setPageTitle(__('Currency List'))
@@ -82,7 +82,7 @@ class CurrenciesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -218,5 +218,6 @@ class CurrenciesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

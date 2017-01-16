@@ -286,7 +286,7 @@ abstract class Standard
      *
      * @return void
      */
-    protected function newGridInstance()
+    final protected function newGridInstance()
     {
         /* @var $grid \WellCart\Ui\Datagrid\Datagrid */
         $grid = $this->getServiceLocator()->get('ZfcDatagrid\Datagrid');
@@ -341,14 +341,18 @@ abstract class Standard
      *
      * @return void
      */
-    abstract protected function configureGrid();
+    public function configureGrid()
+    {
+        $this->getEventManager()
+            ->trigger(__FUNCTION__, $this);
+    }
 
     /**
      * Initialize query builder
      *
      * @param QueryBuilder $qb
      */
-    protected function configureQueryBuilder(QueryBuilder $qb)
+    public function configureQueryBuilder(QueryBuilder $qb)
     {
         $qb->setCacheable(true);
     }
@@ -382,5 +386,5 @@ abstract class Standard
      *
      * @return void
      */
-    abstract protected function configurePage();
+    abstract public function configurePage();
 }

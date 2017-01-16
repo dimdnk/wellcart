@@ -50,7 +50,7 @@ class AccountsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('user/accounts/grid');
         $this->setPageTitle(__('User Accounts'))
@@ -77,7 +77,7 @@ class AccountsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -175,5 +175,6 @@ class AccountsGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

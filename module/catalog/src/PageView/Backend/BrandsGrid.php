@@ -50,7 +50,7 @@ class BrandsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('catalog/brands/grid');
         $this->setPageTitle(__('Brands List'))
@@ -77,7 +77,7 @@ class BrandsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -147,5 +147,6 @@ class BrandsGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

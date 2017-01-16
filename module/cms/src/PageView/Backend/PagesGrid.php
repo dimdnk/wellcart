@@ -71,7 +71,7 @@ class PagesGrid extends Standard
      *
      * @return PagesGrid
      */
-    protected function configureQueryBuilder(QueryBuilder $qb)
+    public function configureQueryBuilder(QueryBuilder $qb)
     {
         parent::configureQueryBuilder($qb);
         $qb->filterByLanguage($this->language);
@@ -82,7 +82,7 @@ class PagesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('cms/pages/grid');
         $this->setPageTitle(__('Pages'))
@@ -109,7 +109,7 @@ class PagesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -192,5 +192,6 @@ class PagesGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }

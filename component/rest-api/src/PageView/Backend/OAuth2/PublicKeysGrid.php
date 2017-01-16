@@ -49,7 +49,7 @@ class PublicKeysGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configurePage()
+    public function configurePage()
     {
         $this->addLayoutHandle('api/oauth2-public-keys/grid');
         $this->setPageTitle(__('OAuth2 Public Keys'))
@@ -75,7 +75,7 @@ class PublicKeysGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function configureGrid()
+    public function configureGrid()
     {
         $this->setDefaultOrder($this->idFieldName, 'asc');
 
@@ -160,5 +160,6 @@ class PublicKeysGrid extends Standard
                 )
             );
         $this->addToolbarButton($action);
+        parent::configureGrid();
     }
 }
