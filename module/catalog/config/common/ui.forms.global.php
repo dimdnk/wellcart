@@ -536,7 +536,12 @@ $forms = [
                 ],
             ],
 
-            'categories'      => [],
+            'categories'      => [
+                'options' => [
+                    'twb-layout'  => 'horizontal',
+                    'column-size' => 'md-8 col-sm-12',
+                ],
+            ],
             'brand'           => [
                 'options'    => [
                     'twb-layout'       => 'horizontal',
