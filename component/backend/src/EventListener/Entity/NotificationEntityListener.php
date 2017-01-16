@@ -24,6 +24,6 @@ class NotificationEntityListener
         $notification->setIsRead(true)
             ->setIsDeleted(true);
         $em->persist($notification);
-        $em->flush($notification);
+        $em->flush();
     }
 }

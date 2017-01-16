@@ -365,8 +365,6 @@ trait EventDrivenRepositoryTrait
     public function add(Entity $entity)
     {
         $this->_em->persist($entity);
-        $this->_em->flush($entity);
-
         return $entity;
     }
 
