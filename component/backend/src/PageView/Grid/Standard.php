@@ -344,7 +344,11 @@ abstract class Standard
     public function configureGrid()
     {
         $this->getEventManager()
-            ->trigger(__FUNCTION__, $this);
+            ->trigger(
+                __FUNCTION__,
+                $this,
+                ['grid' => $this->grid]
+            );
     }
 
     /**
