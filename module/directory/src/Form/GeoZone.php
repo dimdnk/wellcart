@@ -56,7 +56,7 @@ class GeoZone extends AbstractForm
         $geoZoneFieldset->setUseAsBaseFieldset(true);
         $this->add($geoZoneFieldset, ['priority' => 700]);
 
-        $this->addToolbarButton(
+        $this->addToolbarAction(
             [
                 'name'    => 'save',
                 'type'    => 'Submit',
@@ -70,7 +70,7 @@ class GeoZone extends AbstractForm
         $saveAndContinue
             ->setName('save_and_continue_edit')
             ->setLabel(__('Save & Continue Edit'));
-        $this->addToolbarButton($saveAndContinue, 120000);
+        $this->addToolbarAction($saveAndContinue, 120000);
 
 
         $this->setValidationGroup(

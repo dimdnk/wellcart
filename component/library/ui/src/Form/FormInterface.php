@@ -12,10 +12,10 @@ interface FormInterface
 {
     public function backButton(bool $value = null);
     public function resetButton(bool $value = null);
-    public function getToolbarButtons();
-    public function addToolbarButton($button, $priority = 0);
-    public function getToolbarButton($name);
-    public function removeToolbarButton($name);
+    public function getToolbarActions();
+    public function addToolbarAction($button, $priority = 0);
+    public function getToolbarAction($name);
+    public function removeToolbarAction($name);
     public function getLayout();
     public function setLayout(string $layout);
     public function getUiConfigKey();

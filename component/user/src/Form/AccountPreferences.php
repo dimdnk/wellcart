@@ -242,7 +242,7 @@ class AccountPreferences extends AbstractForm
             ['priority' => 330]
         );
 
-        $this->addToolbarButton(
+        $this->addToolbarAction(
             [
                 'name'    => 'save',
                 'type'    => 'Submit',

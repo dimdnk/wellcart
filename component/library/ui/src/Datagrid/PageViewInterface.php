@@ -16,9 +16,9 @@ interface PageViewInterface extends
     public function configureGrid();
     public function getUiConfigKey();
     public function setUiConfigKey(string $uiConfigKey);
-    public function addToolbarButton(ToolbarButton $button);
-    public function getToolbarButton($name);
-    public function removeToolbarButton($name);
+    public function addToolbarAction(ToolbarAction $button);
+    public function getToolbarAction($name);
+    public function removeToolbarAction($name);
     public function getColumn($name);
     public function removeColumn($name);
     public function addGroupAction(GroupAction $button);

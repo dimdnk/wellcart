@@ -18,39 +18,39 @@ class Datagrid extends DatagridAbstract
     /**
      * @var PriorityList
      */
-    protected $toolbarButtons;
+    protected $toolbarActions;
 
     public function __construct()
     {
-        $this->toolbarButtons = new PriorityList;
-        $this->toolbarButtons->isLIFO(false);
+        $this->toolbarActions = new PriorityList;
+        $this->toolbarActions->isLIFO(false);
     }
 
     /**
      * @return PriorityList
      */
-    public function getToolbarButtons()
+    public function getToolbarActions()
     {
-        return $this->toolbarButtons;
+        return $this->toolbarActions;
     }
 
-    public function addToolbarButton(ToolbarButton $button, $priority = 0)
+    public function addToolbarAction(ToolbarAction $button, $priority = 0)
     {
-        $this->toolbarButtons->insert(
+        $this->toolbarActions->insert(
             $button->getName(), $button, $priority
         );
 
         return $this;
     }
 
-    public function getToolbarButton($name)
+    public function getToolbarAction($name)
     {
-        return $this->toolbarButtons->get($name);
+        return $this->toolbarActions->get($name);
     }
 
-    public function removeToolbarButton($name)
+    public function removeToolbarAction($name)
     {
-        $this->toolbarButtons->remove($name);
+        $this->toolbarActions->remove($name);
 
         return $this;
     }

@@ -192,7 +192,7 @@ class Account extends AbstractForm
             ['priority' => 200]
         );
 
-        $this->addToolbarButton(
+        $this->addToolbarAction(
             [
                 'name'    => 'save',
                 'type'    => 'Submit',
@@ -206,7 +206,7 @@ class Account extends AbstractForm
         $saveAndContinue
             ->setName('save_and_continue_edit')
             ->setLabel(__('Save & Continue Edit'));
-        $this->addToolbarButton($saveAndContinue, 120000);
+        $this->addToolbarAction($saveAndContinue, 120000);
 
         $this->getEventManager()->trigger('init', $this);
     }

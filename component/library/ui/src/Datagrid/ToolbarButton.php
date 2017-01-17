@@ -8,7 +8,7 @@
 declare(strict_types = 1);
 namespace WellCart\Ui\Datagrid;
 
-class ToolbarButton
+class ToolbarAction
 {
 
     /**
@@ -52,7 +52,7 @@ class ToolbarButton
     /**
      * @param string $name
      *
-     * @return ToolbarButton
+     * @return ToolbarAction
      */
     public function setName(string $name)
     {
@@ -87,7 +87,7 @@ class ToolbarButton
     /**
      * @param string $link
      *
-     * @return ToolbarButton
+     * @return ToolbarAction
      */
     public function setLink(string $link)
     {
@@ -107,7 +107,7 @@ class ToolbarButton
     /**
      * @param string $class
      *
-     * @return ToolbarButton
+     * @return ToolbarAction
      */
     public function setClass($class)
     {
@@ -127,7 +127,7 @@ class ToolbarButton
     /**
      * @param string $target
      *
-     * @return ToolbarButton
+     * @return ToolbarAction
      */
     public function setTarget($target)
     {
@@ -147,7 +147,7 @@ class ToolbarButton
     /**
      * @param string $icon
      *
-     * @return ToolbarButton
+     * @return ToolbarAction
      */
     public function setIcon(string $icon)
     {
@@ -167,7 +167,7 @@ class ToolbarButton
     /**
      * @param string $label
      *
-     * @return ToolbarButton
+     * @return ToolbarAction
      */
     public function setLabel($label)
     {

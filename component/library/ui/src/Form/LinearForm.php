@@ -20,7 +20,7 @@ class LinearForm extends AbstractForm implements FormInterface
     /**
      * @var PriorityList
      */
-    protected $toolbarButtons;
+    protected $toolbarActions;
 
     /**
      * @var bool
@@ -48,8 +48,8 @@ class LinearForm extends AbstractForm implements FormInterface
     public function __construct($name = null, $options = [])
     {
         parent::__construct($name, $options);
-        $this->toolbarButtons = new PriorityList;
-        $this->toolbarButtons->isLIFO(false);
+        $this->toolbarActions = new PriorityList;
+        $this->toolbarActions->isLIFO(false);
     }
 
 
@@ -74,12 +74,12 @@ class LinearForm extends AbstractForm implements FormInterface
     /**
      * @return PriorityList
      */
-    public function getToolbarButtons()
+    public function getToolbarActions()
     {
-        return $this->toolbarButtons;
+        return $this->toolbarActions;
     }
 
-    public function addToolbarButton($button, $priority = 0)
+    public function addToolbarAction($button, $priority = 0)
     {
         if ($button instanceof ElementInterface) {
             $name = $button->getName();
@@ -108,7 +108,7 @@ class LinearForm extends AbstractForm implements FormInterface
         }
 
         $this->add($button, ['priority' => $priority]);
-        $this->toolbarButtons->insert(
+        $this->toolbarActions->insert(
             $name, $this->get($name), $priority
         );
 
@@ -116,12 +116,12 @@ class LinearForm extends AbstractForm implements FormInterface
     }
 
 
-    public function getToolbarButton($name)
+    public function getToolbarAction($name)
     {
-        return $this->toolbarButtons->get($name);
+        return $this->toolbarActions->get($name);
     }
 
-    public function removeToolbarButton($name)
+    public function removeToolbarAction($name)
     {
         $this->getEventManager()->trigger
         (
@@ -129,7 +129,7 @@ class LinearForm extends AbstractForm implements FormInterface
             $this,
             compact('name')
         );
-        $this->toolbarButtons->remove($name);
+        $this->toolbarActions->remove($name);
         $this->remove($name);
         $this->getEventManager()->trigger
         (

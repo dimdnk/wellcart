@@ -152,7 +152,7 @@ class GeoZonesGrid extends Standard
         $this->addGroupAction($action);
 
 
-        $action = new Datagrid\ToolbarButton();
+        $action = new Datagrid\ToolbarAction();
         $action->setLabel(__('Create'))
             ->setName('create')
             ->setClass(
@@ -167,7 +167,7 @@ class GeoZonesGrid extends Standard
                     ]
                 )
             );
-        $this->addToolbarButton($action);
+        $this->addToolbarAction($action);
         parent::configureGrid();
     }
 }

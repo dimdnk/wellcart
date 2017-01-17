@@ -145,7 +145,7 @@ class PublicKeysGrid extends Standard
         $this->addColumn($col);
 
 
-        $action = new Datagrid\ToolbarButton();
+        $action = new Datagrid\ToolbarAction();
         $action->setLabel(__('Create'))
             ->setName('create')
             ->setClass(
@@ -160,7 +160,7 @@ class PublicKeysGrid extends Standard
                     ]
                 )
             );
-        $this->addToolbarButton($action);
+        $this->addToolbarAction($action);
         parent::configureGrid();
     }
 }

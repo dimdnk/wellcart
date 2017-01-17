@@ -53,7 +53,7 @@ abstract class Standard
     /**
      * @var PriorityList
      */
-    protected $toolbarButtons;
+    protected $toolbarActions;
 
     /**
      * @var PriorityList
@@ -84,8 +84,8 @@ abstract class Standard
     {
         $this->columns = new PriorityList;
         $this->columns->isLIFO(false);
-        $this->toolbarButtons = new PriorityList;
-        $this->toolbarButtons->isLIFO(false);
+        $this->toolbarActions = new PriorityList;
+        $this->toolbarActions->isLIFO(false);
         $this->groupActions = new PriorityList;
         $this->groupActions->isLIFO(false);
         parent::__construct($variables, $options);
@@ -93,25 +93,25 @@ abstract class Standard
 
 
     /**
-     * @param Datagrid\ToolbarButton $button
+     * @param Datagrid\ToolbarAction $button
      *
      * @return $this
      */
-    public function addToolbarButton(Datagrid\ToolbarButton $button)
+    public function addToolbarAction(Datagrid\ToolbarAction $button)
     {
-        $this->toolbarButtons->insert($button->getName(), $button);
+        $this->toolbarActions->insert($button->getName(), $button);
 
         return $this;
     }
 
-    public function getToolbarButton($name)
+    public function getToolbarAction($name)
     {
-        return $this->toolbarButtons->get($name);
+        return $this->toolbarActions->get($name);
     }
 
-    public function removeToolbarButton($name)
+    public function removeToolbarAction($name)
     {
-        $this->toolbarButtons->remove($name);
+        $this->toolbarActions->remove($name);
 
         return $this;
     }
@@ -173,8 +173,8 @@ abstract class Standard
         foreach ($this->columns as $col) {
             $this->grid->addColumn($col);
         }
-        foreach ($this->toolbarButtons as $btn) {
-            $this->grid->addToolbarButton($btn);
+        foreach ($this->toolbarActions as $btn) {
+            $this->grid->addToolbarAction($btn);
         }
         foreach ($this->groupActions as $btn) {
             $this->grid->addMassAction($btn);

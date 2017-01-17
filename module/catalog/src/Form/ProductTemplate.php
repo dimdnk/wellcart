@@ -54,7 +54,7 @@ class ProductTemplate extends AbstractForm
         $productTemplateFieldset->setUseAsBaseFieldset(true);
         $this->add($productTemplateFieldset, ['priority' => 700]);
 
-        $this->addToolbarButton(
+        $this->addToolbarAction(
             [
                 'name'    => 'save',
                 'type'    => 'Submit',
@@ -68,7 +68,7 @@ class ProductTemplate extends AbstractForm
         $saveAndContinue
             ->setName('save_and_continue_edit')
             ->setLabel(__('Save & Continue Edit'));
-        $this->addToolbarButton($saveAndContinue, 120000);
+        $this->addToolbarAction($saveAndContinue, 120000);
 
         $this->setValidationGroup(
             [
