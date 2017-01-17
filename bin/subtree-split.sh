@@ -59,7 +59,7 @@ remote module-cms git@github.com:wellcart/module-cms.git
 remote module-catalog git@github.com:wellcart/module-catalog.git
 
 split 'component/library/utility' component-utility
-split 'component/mapping-drivers' component-mapping-drivers
+split 'component/library/mapping-drivers' component-mapping-drivers
 
 split 'component/library/console' component-console
 split 'component/library/mail' component-mail

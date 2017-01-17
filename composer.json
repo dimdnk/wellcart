@@ -302,7 +302,7 @@
     ],
     "classmap": [
       "component/library/",
-      "component/mapping-drivers/",
+      "component/library/mapping-drivers/",
       "component/schema-migration/src/",
       "component/command-bus/src/",
       "component/library/utility/src/",
