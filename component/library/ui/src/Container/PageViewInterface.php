@@ -10,5 +10,5 @@ namespace WellCart\Ui\Container;
 
 interface PageViewInterface
 {
-
+  public function configurePage();
 }

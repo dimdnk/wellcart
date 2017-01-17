@@ -10,5 +10,8 @@ namespace WellCart\Ui\Container\LayoutView;
 
 class LayoutView extends AbstractLayoutView
 {
+    public function configurePage()
+    {
 
+    }
 }

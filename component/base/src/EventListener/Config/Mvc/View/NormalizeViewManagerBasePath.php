@@ -22,7 +22,7 @@ class NormalizeViewManagerBasePath
      */
     public function __invoke(EventInterface $event)
     {
-        $values = &$event->getParams()['values'];
+        $values = &$event->getParam('values');
         foreach ($values as $key => $value) {
             if ($key == 'router.base_path') {
                 $values['view_manager.base_path'] = $value;

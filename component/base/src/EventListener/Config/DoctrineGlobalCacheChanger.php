@@ -23,7 +23,7 @@ class DoctrineGlobalCacheChanger
      */
     public function __invoke(EventInterface $event)
     {
-        $values = &$event->getParams()['values'];
+        $values = &$event->getParam('values');
         $cacheInstance
             = (!empty($values['wellcart.doctrine.global_cache_instance']))
             ?

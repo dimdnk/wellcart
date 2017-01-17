@@ -22,7 +22,7 @@ class PrepareLayoutItemView
      */
     public function __invoke(EventInterface $event)
     {
-        $block = $event->getParams()['block'];
+        $block = $event->getParam('block');
         $block->prepare();
 
         return $block;

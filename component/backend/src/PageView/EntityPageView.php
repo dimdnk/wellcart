@@ -150,4 +150,9 @@ class EntityPageView extends AbstractPageView
 
         return $this;
     }
+
+    public function configurePage()
+    {
+
+    }
 }

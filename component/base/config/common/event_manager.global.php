@@ -11,6 +11,7 @@ namespace WellCart\Base;
 use ConLayout\Block\Factory\BlockFactory;
 use WellCart\Base\Service\ConfigurationEditor;
 use WellCart\Form\Form;
+use WellCart\View\Model\ViewModel;
 
 return
     [
@@ -39,6 +40,12 @@ return
                     'id'       => Form::class,
                     'event'    => 'init',
                     'listener' => EventListener\Ui\PrepareFormLayout::class,
+                    'priority' => -100,
+                ],
+                EventListener\Ui\PrepareGridLayout::class                         => [
+                    'id'       => ViewModel::class,
+                    'event'    => 'configureGrid',
+                    'listener' => EventListener\Ui\PrepareGridLayout::class,
                     'priority' => -100,
                 ],
             ],
