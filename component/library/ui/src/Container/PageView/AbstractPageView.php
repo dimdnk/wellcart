@@ -19,7 +19,9 @@ abstract class AbstractPageView
     PageViewInterface,
     LayoutManagerAwareInterface
 {
-
     use LayoutManagerAwareTrait;
 
+    public function configurePage()
+    {
+    }
 }

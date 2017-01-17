@@ -121,7 +121,7 @@ abstract class Config
 
                 // The key used to create the configuration cache file name.
                 'config_cache_key'         =>
-                    $_ENV['WELLCART_APPLICATION_ENV'] . '_'
+                    PHP_SAPI . '_' . $_ENV['WELLCART_APPLICATION_ENV'] . '_'
                     . $_ENV['WELLCART_APPLICATION_CONTEXT'],
 
                 // Whether or not to enable a module class map cache.
@@ -131,7 +131,7 @@ abstract class Config
 
                 // The key used to create the class map cache file name.
                 'module_map_cache_key'     =>
-                    $_ENV['WELLCART_APPLICATION_ENV'] . '_'
+                    PHP_SAPI . '_' . $_ENV['WELLCART_APPLICATION_ENV'] . '_'
                     . $_ENV['WELLCART_APPLICATION_CONTEXT'],
 
                 // The path in which to cache merged configuration.
