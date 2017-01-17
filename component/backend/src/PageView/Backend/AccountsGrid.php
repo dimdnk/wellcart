@@ -106,38 +106,38 @@ class AccountsGrid extends Standard
         $this->addColumn($col);
 
 
-        $updateButton = new Datagrid\ActionButton();
-        $updateButton->setLabel('<i class="fa fa-pencil-square-o"></i>');
-        $updateButton->setAttribute('class', 'btn btn-primary btn-xs');
-        $updateButton->setAttribute('title', __('Edit'));
-        $updateButton->setAttribute('data-toggle', 'tooltip');
+        $updateAction = new Datagrid\ActionButton();
+        $updateAction->setLabel('<i class="fa fa-pencil-square-o"></i>');
+        $updateAction->setAttribute('class', 'btn btn-primary btn-xs');
+        $updateAction->setAttribute('title', __('Edit'));
+        $updateAction->setAttribute('data-toggle', 'tooltip');
 
-        $updateButton->setAttribute(
+        $updateAction->setAttribute(
             'href',
             url_to_route(
                 $this->routeName(),
                 [
                     'action' => 'update',
-                    'id'     => $updateButton->getRowIdPlaceholder(),
+                    'id'     => $updateAction->getRowIdPlaceholder(),
                 ]
             )
         );
-        $deleteButton = new Datagrid\ActionButton();
-        $deleteButton->setLabel('<i class="fa fa-trash-o"></i>');
-        $deleteButton->setAttribute('class', 'btn btn-danger btn-xs');
-        $deleteButton->setAttribute('title', __('Delete'));
-        $deleteButton->setAttribute('data-toggle', 'tooltip');
-        $deleteButton->setAttribute(
+        $deleteAction = new Datagrid\ActionButton();
+        $deleteAction->setLabel('<i class="fa fa-trash-o"></i>');
+        $deleteAction->setAttribute('class', 'btn btn-danger btn-xs');
+        $deleteAction->setAttribute('title', __('Delete'));
+        $deleteAction->setAttribute('data-toggle', 'tooltip');
+        $deleteAction->setAttribute(
             'data-confirm',
             __('Are you sure you want to delete this item?')
         );
-        $deleteButton->setAttribute(
+        $deleteAction->setAttribute(
             'href',
             url_to_route(
                 $this->routeName(),
                 [
                     'action' => 'delete',
-                    'id'     => $deleteButton->getRowIdPlaceholder(),
+                    'id'     => $deleteAction->getRowIdPlaceholder(),
                 ]
             )
         );
@@ -145,8 +145,8 @@ class AccountsGrid extends Standard
         $col = new Datagrid\ActionsColumn();
         $col->setLabel(__('Actions'));
         $col->setWidth(20);
-        $col->addAction($updateButton);
-        $col->addAction($deleteButton);
+        $col->addAction($updateAction);
+        $col->addAction($deleteAction);
         $this->addColumn($col);
 
 
