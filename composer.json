@@ -298,14 +298,14 @@
     },
     "files": [
       "component/base/src/functions.php",
-      "component/utility/src/functions.php"
+      "component/library/utility/src/functions.php"
     ],
     "classmap": [
       "component/library/",
       "component/mapping-drivers/",
       "component/schema-migration/src/",
       "component/command-bus/src/",
-      "component/utility/src/",
+      "component/library/utility/src/",
       "theme/frontend-ui/",
       "theme/backend-ui/",
       "theme/setup-ui/"
