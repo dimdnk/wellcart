@@ -10,7 +10,7 @@ namespace WellCart\Ui\Datagrid;
 
 use ZfcDatagrid\Column\Action\Button as AbstractAction;
 
-class RowButton extends AbstractAction
+class ActionButton extends AbstractAction
 {
 
 }

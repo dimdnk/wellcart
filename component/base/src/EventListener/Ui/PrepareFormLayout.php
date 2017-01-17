@@ -16,6 +16,7 @@ use WellCart\Utility\Config;
 use Zend\EventManager\EventInterface;
 use Zend\Form\Element;
 use Zend\Form\FieldsetInterface;
+use SplPriorityQueue;
 
 class PrepareFormLayout
 {
@@ -34,6 +35,10 @@ class PrepareFormLayout
         if (empty($config)) {
             return;
         }
+
+        $middlewares = Arr::get($config,  'middlewares', []);
+        unset($config['middlewares']);
+
         if(!empty($config['options']))
         {
             $form->setOptions($config['options']);
@@ -45,6 +50,10 @@ class PrepareFormLayout
             unset($config['attributes']);
         }
         $this->composeForm($form, $config);
+        if(!empty($middlewares))
+        {
+            $this->handleMiddlewares($middlewares, $form);
+        }
     }
 
     /**
@@ -99,5 +108,26 @@ class PrepareFormLayout
 
         }
         unset($options, $attributes);
+    }
+
+    public function handleMiddlewares(array $config, FormInterface $form)
+    {
+        $middlewares = new SplPriorityQueue();
+        foreach ($config as $key => $value) {
+            if (is_string($key) && is_array($value)) {
+                $middleware = $key;
+                $priority = isset($value['priority']) ? $value['priority'] : 0;
+            } else {
+                $middleware = $value;
+                $priority = 0;
+            }
+
+            $middlewares->insert($middleware, $priority);
+        }
+        $orderedMiddlewares = iterator_to_array($middlewares, false);
+        foreach ($orderedMiddlewares as $callable)
+        {
+            $callable($form);
+        }
     }
 }

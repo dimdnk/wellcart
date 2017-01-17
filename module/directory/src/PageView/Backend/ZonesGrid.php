@@ -113,7 +113,7 @@ class ZonesGrid extends Standard
         $this->addColumn($col);
 
 
-        $updateButton = new Datagrid\RowButton();
+        $updateButton = new Datagrid\ActionButton();
         $updateButton->setLabel('<i class="fa fa-pencil-square-o"></i>');
         $updateButton->setAttribute('class', 'btn btn-primary btn-xs');
         $updateButton->setAttribute('title', __('Edit'));
@@ -128,7 +128,7 @@ class ZonesGrid extends Standard
                 ]
             )
         );
-        $deleteButton = new Datagrid\RowButton();
+        $deleteButton = new Datagrid\ActionButton();
         $deleteButton->setLabel('<i class="fa fa-trash-o"></i>');
         $deleteButton->setAttribute('class', 'btn btn-danger btn-xs');
         $deleteButton->setAttribute('title', __('Delete'));
