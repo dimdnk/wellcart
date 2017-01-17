@@ -18,6 +18,6 @@ interface FormInterface
     public function removeToolbarButton($name);
     public function getLayout();
     public function setLayout(string $layout);
-    public function getUiConfigSection();
-    public function setUiConfigSection(string $uiConfigSection);
+    public function getUiConfigKey();
+    public function setUiConfigKey(string $uiConfigKey);
 }

@@ -40,7 +40,7 @@ class LinearForm extends AbstractForm implements FormInterface
     /**
      * @var string
      */
-    protected $uiConfigSection;
+    protected $uiConfigKey;
 
     /**
      * @inheritDoc
@@ -165,20 +165,20 @@ class LinearForm extends AbstractForm implements FormInterface
     /**
      * @return string
      */
-    public function getUiConfigSection()
+    public function getUiConfigKey()
     {
-        return ($this->uiConfigSection) ? $this->uiConfigSection
+        return ($this->uiConfigKey) ? $this->uiConfigKey
             : $this->getName();
     }
 
     /**
-     * @param string $uiConfigSection
+     * @param string $uiConfigKey
      *
      * @return Form
      */
-    public function setUiConfigSection(string $uiConfigSection)
+    public function setUiConfigKey(string $uiConfigKey)
     {
-        $this->uiConfigSection = $uiConfigSection;
+        $this->uiConfigKey = $uiConfigKey;
 
         return $this;
     }

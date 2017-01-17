@@ -22,7 +22,9 @@ use Zend\Stdlib\PriorityList;
 
 abstract class Standard
     extends EntityPageView
-    implements ServiceLocatorAwareInterface
+    implements
+    Datagrid\PageViewInterface,
+    ServiceLocatorAwareInterface
 {
     use ServiceLocatorAwareTrait;
 
@@ -72,6 +74,8 @@ abstract class Standard
     protected $template = 'wellcart-backend/page-view/grid/standard/layout';
 
     protected $limitPerPage = 20;
+
+    protected $uiConfigKey;
 
     /**
      * @inheritDoc
@@ -375,7 +379,7 @@ abstract class Standard
      * @param        $sortBy
      * @param string $sortOrder
      *
-     * @return GridFilterBuilder
+     * @return Standard
      */
     public function setDefaultOrder($sortBy, $sortOrder = 'asc')
     {
@@ -396,5 +400,17 @@ abstract class Standard
     {
         $this->getEventManager()
             ->trigger(__FUNCTION__, $this);
+    }
+
+    public function getUiConfigKey()
+    {
+        return ($this->uiConfigKey) ? $this->uiConfigKey
+            : $this->getId();
+    }
+
+    public function setUiConfigKey(string $uiConfigKey)
+    {
+        $this->uiConfigKey = $uiConfigKey;
+        return $this;
     }
 }

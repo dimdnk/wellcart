@@ -10,14 +10,12 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\EventListener\Ui;
 
-use WellCart\Ui\Form\FormInterface;
+use WellCart\Ui\Datagrid\PageViewInterface;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use Zend\EventManager\EventInterface;
-use Zend\Form\Element;
-use Zend\Form\FieldsetInterface;
 
-class PrepareFormLayout
+class PrepareGridLayout
 {
 
     /**
@@ -25,26 +23,27 @@ class PrepareFormLayout
      */
     public function __invoke(EventInterface $event)
     {
-        $form = $event->getTarget();
-        if (!$form instanceof FormInterface) {
+        $page = $event->getTarget();
+        if (!$page instanceof PageViewInterface) {
             return;
         }
-        $name = $form->getUiConfigKey();
-        $config = Config::get('ui.component.form.' . $name, []);
+        $grid = $event->getParam('grid');
+        $name = $page->getUiConfigKey();
+        $config = Config::get('ui.component.grid.' . $name, []);
         if (empty($config)) {
             return;
         }
         if(!empty($config['options']))
         {
-            $form->setOptions($config['options']);
+            $page->setOptions($config['options']);
             unset($config['options']);
         }
         if(!empty($config['attributes']))
         {
-            $form->setAttributes($config['attributes']);
+            $page->setAttributes($config['attributes']);
             unset($config['attributes']);
         }
-        $this->composeForm($form, $config);
+        $this->composeGrid($page, $config);
     }
 
     /**
@@ -53,7 +52,7 @@ class PrepareFormLayout
      * @param FieldsetInterface $fieldset
      * @param array             $config
      */
-    public function composeForm(
+    public function composeGrid(
         FieldsetInterface $fieldset,
         array $config
     ) {
@@ -63,7 +62,7 @@ class PrepareFormLayout
         }
         foreach ($fieldset as $element) {
             if ($element instanceof FieldsetInterface) {
-                $this->composeForm(
+                $this->composeGrid(
                     $element, Arr::get($config, $element->getName(), [])
                 );
                 continue;
