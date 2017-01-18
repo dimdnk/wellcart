@@ -127,6 +127,7 @@ class PrepareFormLayout
         $orderedMiddlewares = iterator_to_array($middlewares, false);
         foreach ($orderedMiddlewares as $callable)
         {
+            $callable = new $callable;
             $callable($form);
         }
     }

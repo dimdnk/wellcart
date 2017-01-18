@@ -100,6 +100,7 @@ class PrepareGridLayout
         }
         $orderedMiddlewares = iterator_to_array($middlewares, false);
         foreach ($orderedMiddlewares as $callable) {
+            $callable = new $callable;
             $callable($page, $grid);
         }
     }
