@@ -93,7 +93,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
             return $this->get($element);
         }
         if($this->has($element)){
-            return $element;
+            return $this->get($element);
         }
         $keys = explode($delimiter, $element);
         $result = $this;
