@@ -39,7 +39,7 @@ class Column extends Select
     /**
      * @param boolean $sortable
      *
-     * @return Text
+     * @return Column
      */
     public function setSortable(bool $sortable)
     {
@@ -59,7 +59,7 @@ class Column extends Select
     /**
      * @param boolean $filterable
      *
-     * @return Text
+     * @return Column
      */
     public function setFilterable(bool $filterable)
     {
@@ -80,7 +80,7 @@ class Column extends Select
      * @param string $formElement
      * @param string $expression
      *
-     * @return Text
+     * @return Column
      */
     public function setFilter(string $formElement, string $expression)
     {

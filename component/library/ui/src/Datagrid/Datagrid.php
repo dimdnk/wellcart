@@ -8,6 +8,7 @@
 declare(strict_types = 1);
 namespace WellCart\Ui\Datagrid;
 
+use WellCart\Backend\Exception\RuntimeException;
 use Zend\Stdlib\PriorityList;
 use ZfcDatagrid\Datagrid as DatagridAbstract;
 use ZfcDatagrid\PrepareData;
@@ -53,6 +54,18 @@ class Datagrid extends DatagridAbstract
         $this->toolbarActions->remove($name);
 
         return $this;
+    }
+
+    public function getActionsColumn()
+    {
+        foreach ($this->columns as $column)
+        {
+            if($column instanceof ActionsColumn)
+            {
+                return $column;
+            }
+        }
+        return;
     }
 
     /**
