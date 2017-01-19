@@ -6,5 +6,5 @@
  */
 ;
 'use strict';
-require(ENV.WellCartAdmin.Modules, function (WellCartAdmin) {
+require(ENV.WellCartBackend.Modules, function (WellCartBackend) {
 });

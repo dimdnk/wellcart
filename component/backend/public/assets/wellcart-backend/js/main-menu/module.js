@@ -6,6 +6,6 @@
  */
 ;
 'use strict';
-define(["assets/wellcart-backend/js/application"], function (WellCartAdmin) {
+define(["assets/wellcart-backend/js/application"], function (WellCartBackend) {
 
 });
