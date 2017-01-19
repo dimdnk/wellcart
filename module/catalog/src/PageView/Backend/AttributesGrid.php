@@ -94,7 +94,7 @@ class AttributesGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Attributes'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -105,7 +105,7 @@ class AttributesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/catalog/attributes';
     }
@@ -132,7 +132,7 @@ class AttributesGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'update',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -151,7 +151,7 @@ class AttributesGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -170,7 +170,7 @@ class AttributesGrid extends Standard
         $action->setLabel(__('Delete'));
         $action->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'deleteAttributes',
@@ -189,7 +189,7 @@ class AttributesGrid extends Standard
             ->setIcon('fa fa-plus')
             ->setLink(
                 url_to_route(
-                    $this->routeName(),
+                    $this->getRouteName(),
                     [
                         'action' => 'create',
                     ]

@@ -163,7 +163,7 @@ abstract class Standard
 
         $this->addLayoutHandle($this->layout, -1);
         $scope = $this->scope();
-        $route = $this->routeName();
+        $route = $this->getRouteName();
 
         $this->newGridInstance();
         $this->configureGrid();
@@ -283,7 +283,7 @@ abstract class Standard
      *
      * @return string
      */
-    abstract protected function routeName();
+    abstract public function getRouteName();
 
     /**
      * Grid factory

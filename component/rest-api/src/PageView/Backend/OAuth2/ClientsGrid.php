@@ -57,7 +57,7 @@ class ClientsGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Clients'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -68,7 +68,7 @@ class ClientsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/api/oauth2-clients';
     }
@@ -95,7 +95,7 @@ class ClientsGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'update',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -114,7 +114,7 @@ class ClientsGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -139,7 +139,7 @@ class ClientsGrid extends Standard
             ->setIcon('fa fa-plus')
             ->setLink(
                 url_to_route(
-                    $this->routeName(),
+                    $this->getRouteName(),
                     [
                         'action' => 'create',
                     ]

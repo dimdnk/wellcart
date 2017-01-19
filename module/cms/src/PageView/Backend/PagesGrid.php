@@ -90,7 +90,7 @@ class PagesGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Pages'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -101,7 +101,7 @@ class PagesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/cms/pages';
     }
@@ -128,7 +128,7 @@ class PagesGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'update',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -147,7 +147,7 @@ class PagesGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -166,7 +166,7 @@ class PagesGrid extends Standard
         $action->setLabel(__('Delete'));
         $action->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'deletePages',
@@ -185,7 +185,7 @@ class PagesGrid extends Standard
             ->setIcon('fa fa-plus')
             ->setLink(
                 url_to_route(
-                    $this->routeName(),
+                    $this->getRouteName(),
                     [
                         'action' => 'create',
                     ]

@@ -58,7 +58,7 @@ class GeoZonesGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Geo Zones'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -69,7 +69,7 @@ class GeoZonesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/directory/geo-zones';
     }
@@ -104,7 +104,7 @@ class GeoZonesGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'update',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -123,7 +123,7 @@ class GeoZonesGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -142,7 +142,7 @@ class GeoZonesGrid extends Standard
         $action->setLabel(__('Delete'));
         $action->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'delete',
@@ -161,7 +161,7 @@ class GeoZonesGrid extends Standard
             ->setIcon('fa fa-plus')
             ->setLink(
                 url_to_route(
-                    $this->routeName(),
+                    $this->getRouteName(),
                     [
                         'action' => 'create',
                     ]

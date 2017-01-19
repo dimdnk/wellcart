@@ -57,7 +57,7 @@ class AccountsGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Administrators'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -68,7 +68,7 @@ class AccountsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/admin/accounts';
     }
@@ -115,7 +115,7 @@ class AccountsGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'update',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -134,7 +134,7 @@ class AccountsGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -154,7 +154,7 @@ class AccountsGrid extends Standard
         $action->setLabel(__('Delete'));
         $action->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'delete',
@@ -172,7 +172,7 @@ class AccountsGrid extends Standard
             ->setIcon('fa fa-plus')
             ->setLink(
                 url_to_route(
-                    $this->routeName(),
+                    $this->getRouteName(),
                     [
                         'action' => 'create',
                     ]

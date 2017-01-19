@@ -75,7 +75,7 @@ class NotificationsGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Notifications'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -86,7 +86,7 @@ class NotificationsGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/admin/notifications';
     }
@@ -144,7 +144,7 @@ class NotificationsGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'mark-as-read',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -164,7 +164,7 @@ class NotificationsGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -183,7 +183,7 @@ class NotificationsGrid extends Standard
         $action->setLabel(__('Mark as Read'));
         $action->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'mark-as-read',
@@ -196,7 +196,7 @@ class NotificationsGrid extends Standard
         $action->setLabel(__('Delete'));
         $action->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'delete',

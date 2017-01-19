@@ -55,6 +55,11 @@ class PrepareGridLayout
         }
     }
 
+    /**
+     * @param array $actions
+     * @param PageViewInterface $page
+     * @param Datagrid\Datagrid $grid
+     */
     public function groupActionsFactory(
         array $actions,
         PageViewInterface $page,
@@ -63,9 +68,30 @@ class PrepareGridLayout
     {
         foreach ($actions as $index => $spec) {
 
+            $action = new Datagrid\GroupAction();
+            $action->setLabel(__(Arr::get($spec, 'label', '')));
+            $action->setLink(
+                url_to_route(
+                    Arr::get($spec, 'route.name') ?: $page->getRouteName(),
+                    [
+                        'action' => Arr::get($spec,
+                            'route.action',
+                            'group-action-handler'
+                        ),
+                        'id' => Arr::get($spec, 'action'),
+                    ]
+                )
+            );
+            $page->addGroupAction($action);
+
         }
     }
 
+    /**
+     * @param array $buttons
+     * @param PageViewInterface $page
+     * @param Datagrid\Datagrid $grid
+     */
     public function toolbarFactory(
         array $buttons,
         PageViewInterface $page,
@@ -74,9 +100,30 @@ class PrepareGridLayout
     {
         foreach ($buttons as $index => $spec) {
 
+            $action = new Datagrid\ToolbarAction();
+            $action->setLabel(__(Arr::get($spec, 'label', '')))
+                ->setName(Arr::get($spec, 'name', $index))
+                ->setClass(
+                    Arr::get($spec, 'class', 'btn btn-toolbar-action')
+                )
+                ->setIcon(Arr::get($spec, 'icon'))
+                ->setLink(
+                    url_to_route(
+                        Arr::get($spec, 'route.name') ?: $page->getRouteName(),
+                        [
+                            'action' => Arr::get($spec, 'route.action'),
+                        ]
+                    )
+                );
+            $page->addToolbarAction($action);
         }
     }
 
+    /**
+     * @param array $columns
+     * @param PageViewInterface $page
+     * @param Datagrid\Datagrid $grid
+     */
     public function columnsFactory(
         array $columns,
         PageViewInterface $page,
@@ -85,18 +132,23 @@ class PrepareGridLayout
     {
         foreach ($columns as $index => $spec) {
             $col = new Datagrid\Column($index);
-            $col->setLabel(__(Arr::get($spec, 'label')));
+            $col->setLabel(__(Arr::get($spec, 'label', '')));
             $col->setWidth(Arr::get($spec, 'width'));
             $col->setSortable(Arr::get($spec, 'sortable', true));
             $col->setFilterable(Arr::get($spec, 'filterable', true));
             $col->setFilter(
                 Arr::get($spec, 'filter.element', 'text'),
-                Arr::get($spec, 'filter.element', 'text')
+                Arr::get($spec, 'filter.expression', 'like')
             );
             $page->addColumn($col);
         }
     }
 
+    /**
+     * @param array $actions
+     * @param PageViewInterface $page
+     * @param Datagrid\Datagrid $grid
+     */
     public function actionsFactory(
         array $actions,
         PageViewInterface $page,
@@ -116,7 +168,7 @@ class PrepareGridLayout
             $action->setAttribute(
                 'href',
                 url_to_route(
-                    Arr::get($spec, 'route.name') ?: $page->routeName(),
+                    Arr::get($spec, 'route.name') ?: $page->getRouteName(),
                     [
                         'action' => Arr::get($spec, 'route.action'),
                         'id' => $action->getRowIdPlaceholder(),
@@ -128,6 +180,11 @@ class PrepareGridLayout
         $page->addColumn($control);
     }
 
+    /**
+     * @param array $config
+     * @param PageViewInterface $page
+     * @param Datagrid\Datagrid $grid
+     */
     public function handleMiddlewares(
         array $config,
         PageViewInterface $page,

@@ -63,7 +63,7 @@ class CurrenciesGrid extends Standard
                 [
                     'list' => [
                         'label'  => __('Currencies'),
-                        'route'  => $this->routeName(),
+                        'route'  => $this->getRouteName(),
                         'params' => [],
                     ],
                 ]
@@ -74,7 +74,7 @@ class CurrenciesGrid extends Standard
     /**
      * {@inheritDoc}
      */
-    protected function routeName()
+    public function getRouteName()
     {
         return 'zfcadmin/directory/currencies';
     }
@@ -141,7 +141,7 @@ class CurrenciesGrid extends Standard
         $updateAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'update',
                     'id'     => $updateAction->getRowIdPlaceholder(),
@@ -160,7 +160,7 @@ class CurrenciesGrid extends Standard
         $deleteAction->setAttribute(
             'href',
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'delete',
                     'id'     => $deleteAction->getRowIdPlaceholder(),
@@ -179,7 +179,7 @@ class CurrenciesGrid extends Standard
         $delete->setTitle('Delete');
         $delete->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'delete',
@@ -192,7 +192,7 @@ class CurrenciesGrid extends Standard
         $updateRates->setTitle('Update currency rates');
         $updateRates->setLink(
             url_to_route(
-                $this->routeName(),
+                $this->getRouteName(),
                 [
                     'action' => 'group-action-handler',
                     'id'     => 'update_rates',
@@ -211,7 +211,7 @@ class CurrenciesGrid extends Standard
             ->setIcon('fa fa-plus')
             ->setLink(
                 url_to_route(
-                    $this->routeName(),
+                    $this->getRouteName(),
                     [
                         'action' => 'create',
                     ]

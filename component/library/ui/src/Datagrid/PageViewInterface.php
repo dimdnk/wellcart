@@ -13,6 +13,7 @@ use WellCart\ORM\QueryBuilder;
 interface PageViewInterface extends
     \WellCart\Ui\Container\PageViewInterface
 {
+    public function getRouteName();
     public function configureGrid();
     public function getUiConfigKey();
     public function setUiConfigKey(string $uiConfigKey);
