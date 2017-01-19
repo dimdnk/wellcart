@@ -36,7 +36,7 @@ before_install:
 
 before_script:
   - phpenv config-add travis.php.ini
-  - composer install
+  - composer install --no-interaction --prefer-source --no-suggest
   - composer show
 
 script: bin/phpunit

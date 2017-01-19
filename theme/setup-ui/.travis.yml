@@ -33,7 +33,7 @@ addons:
 
 before_install:
   - composer self-update && composer --version
-  - composer install
+  - composer install --no-interaction --prefer-source --no-suggest
   - sh -c "if [ '$DB' = 'mysql' ]; then mysql -u root -e 'CREATE DATABASE IF NOT EXISTS wellcart;'; fi"
   - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'CREATE DATABASE wellcart;' -U postgres; fi"
   - chmod 0777 ./bin/

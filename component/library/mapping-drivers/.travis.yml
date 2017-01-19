@@ -35,7 +35,7 @@ before_install:
   - composer self-update && composer --version
 
 before_script:
-  - composer install
+  - composer install --no-interaction --prefer-source --no-suggest
   - composer show
 
 script: bin/phpunit
