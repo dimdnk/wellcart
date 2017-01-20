@@ -380,7 +380,7 @@ return [
         'client-side-application' => [
             'modules' => [
                 'assets/wellcart-backend/js/main-menu/module',
-                'assets/wellcart-backend/js/admin/module',
+                'assets/wellcart-backend/js/backend/module',
             ],
         ],
     ],
