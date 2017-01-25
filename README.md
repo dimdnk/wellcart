@@ -62,6 +62,7 @@ Third-party frameworks utilized in this framework:
     - [BitWeb\CronModule](https://github.com/BitWeb/zf2-cron-module)
     - [SlmQueue](https://github.com/juriansluiman/SlmQueue)
     - [HumusAmqpModule](https://github.com/prolic/HumusAmqpModule)
+    - [Rollout](https://github.com/adlogix/zf2-opensoft-rollout)
     - [Codeception](http://codeception.com)
 
 2. JavaScript - [jQuery](https://github.com/jquery/jquery/)
