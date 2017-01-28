@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "69a8a9618532bb08031cb5b489190f6a",
+    "content-hash": "184b54a0983b2e54b854c4f4234f8337",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -4553,16 +4553,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.8",
+            "version": "5.7.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "bee7755d964f8e56d6ecb79046480fd0320b686d"
+                "reference": "69f832b87c731d5cacad7f91948778fe98335fdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bee7755d964f8e56d6ecb79046480fd0320b686d",
-                "reference": "bee7755d964f8e56d6ecb79046480fd0320b686d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/69f832b87c731d5cacad7f91948778fe98335fdd",
+                "reference": "69f832b87c731d5cacad7f91948778fe98335fdd",
                 "shasum": ""
             },
             "require": {
@@ -4631,7 +4631,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-01-26T15:28:51+00:00"
+            "time": "2017-01-28T06:14:33+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -7454,16 +7454,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.31.0",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
+                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
-                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c6ff71094fde15d12398eaba029434b013dc5e59",
+                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59",
                 "shasum": ""
             },
             "require": {
@@ -7471,12 +7471,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "~3.2@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.31-dev"
+                    "dev-master": "1.30-dev"
                 }
             },
             "autoload": {
@@ -7511,7 +7511,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-01-11T19:36:15+00:00"
+            "time": "2016-12-23T11:06:22+00:00"
         },
         {
             "name": "webmozart/assert",
