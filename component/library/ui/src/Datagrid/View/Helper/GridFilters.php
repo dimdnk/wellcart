@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Ui\Datagrid\View\Helper;
 
 use WellCart\Form\Form;
@@ -65,7 +66,8 @@ class GridFilters extends AbstractHelper
         );
         $this->form->setName($scopeName);
 
-        foreach ($columns as $column) {
+        foreach ($columns as $column)
+        {
             $value = $values[$column];
             $spec
                 = [

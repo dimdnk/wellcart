@@ -9,10 +9,10 @@
 use WellCart\Directory\PageView;
 
 $grids = [
-    PageView\Backend\CountriesGrid::NAME    => [],
-    PageView\Backend\CurrenciesGrid::NAME    => [],
-    PageView\Backend\GeoZonesGrid::NAME    => [],
-    PageView\Backend\ZonesGrid::NAME    => [],
+    PageView\Backend\CountriesGrid::NAME  => [],
+    PageView\Backend\CurrenciesGrid::NAME => [],
+    PageView\Backend\GeoZonesGrid::NAME   => [],
+    PageView\Backend\ZonesGrid::NAME      => [],
 ];
 return [
     'ui' => [

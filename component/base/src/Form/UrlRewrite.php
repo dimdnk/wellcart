@@ -12,8 +12,8 @@ namespace WellCart\Base\Form;
 
 use WellCart\Base\Exception;
 use WellCart\Base\Spec\UrlRewriteEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 

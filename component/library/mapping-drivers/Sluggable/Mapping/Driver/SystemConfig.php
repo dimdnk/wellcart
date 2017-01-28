@@ -4,6 +4,7 @@
  */
 
 declare(strict_types = 1);
+
 namespace Gedmo\Sluggable\Mapping\Driver;
 
 use Doctrine\Common\Persistence\Mapping\MappingException;

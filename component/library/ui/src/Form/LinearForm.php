@@ -6,14 +6,14 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Ui\Form;
 
 use WellCart\Form\Form as AbstractForm;
-use Zend\Stdlib\PriorityList;
-
-
 use WellCart\Utility\Arr;
 use Zend\Form\ElementInterface;
+use Zend\Stdlib\PriorityList;
+
 
 class LinearForm extends AbstractForm implements FormInterface
 {

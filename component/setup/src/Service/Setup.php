@@ -73,12 +73,10 @@ class Setup
                     $this->refreshPermissions();
                 }
             );
-        }
-        catch (Throwable $e) {
+        } catch (Throwable $e) {
             unlink($dbConfigFile);
             throw $e;
-        }
-        finally {
+        } finally {
             ini_restore('max_execution_time');
         }
     }
@@ -151,11 +149,9 @@ class Setup
             $this->sm = $app->getServiceManager();
 
             return $result;
-        }
-        catch (Throwable $e) {
+        } catch (Throwable $e) {
             throw $e;
-        }
-        finally {
+        } finally {
             $_ENV['WELLCART_APPLICATION_CONTEXT']
                 = Application::CONTEXT_SETUP;
             $app->disableMaintenanceMode();
@@ -342,8 +338,7 @@ class Setup
                     $this->refreshPermissions();
                 }
             );
-        }
-        finally {
+        } finally {
             ini_restore('max_execution_time');
         }
     }
@@ -430,8 +425,7 @@ class Setup
                 Application::CONTEXT_GLOBAL,
                 $callback
             );
-        }
-        finally {
+        } finally {
             ini_restore('max_execution_time');
         }
     }
@@ -659,8 +653,7 @@ class Setup
                     $em->flush($admin);
                 }
             );
-        }
-        catch (Throwable $e) {
+        } catch (Throwable $e) {
             throw $e;
         }
 

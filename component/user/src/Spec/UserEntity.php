@@ -16,7 +16,7 @@ use WellCart\Base\Spec\LocaleLanguageEntity;
 interface UserEntity
 {
 
-    const STATE_ENABLED  = 1;
+    const STATE_ENABLED = 1;
     const STATE_DISABLED = 0;
 
     /**

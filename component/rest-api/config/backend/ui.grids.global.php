@@ -9,9 +9,9 @@
 use WellCart\RestApi\PageView;
 
 $grids = [
-    PageView\Backend\OAuth2\ClientsGrid::NAME => [],
+    PageView\Backend\OAuth2\ClientsGrid::NAME    => [],
     PageView\Backend\OAuth2\PublicKeysGrid::NAME => [],
-    PageView\Backend\OAuth2\ScopesGrid::NAME => [],
+    PageView\Backend\OAuth2\ScopesGrid::NAME     => [],
 ];
 return [
     'ui' => [

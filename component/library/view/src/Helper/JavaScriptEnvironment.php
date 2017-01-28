@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\View\Helper;
 
 use WellCart\Utility\Arr;
@@ -97,8 +98,7 @@ class JavaScriptEnvironment extends AbstractHelper
 
             return "\n\t<script type=\"text/javascript\">
             \n" . $output . "</script>\n";
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             $msg = get_class($e) . ': ' . $e->getMessage();
             trigger_error($msg, E_USER_ERROR);
 

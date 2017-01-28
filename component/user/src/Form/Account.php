@@ -10,8 +10,8 @@ declare(strict_types = 1);
 
 namespace WellCart\User\Form;
 
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\User\Exception;
 use WellCart\User\Spec\UserEntity;
 use Zend\Form\Factory;

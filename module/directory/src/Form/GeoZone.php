@@ -14,8 +14,8 @@ use WellCart\Directory\Exception;
 use WellCart\Directory\Form\GeoZone\GeoZoneFieldset;
 use WellCart\Directory\Spec\GeoZoneEntity;
 use WellCart\Directory\Spec\GeoZoneMapEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -25,6 +25,7 @@ class GeoZone extends AbstractForm
      * Canonical form name
      */
     const NAME = 'directory_geo_zone';
+
     /**
      * Form constructor
      *

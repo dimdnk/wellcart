@@ -12,8 +12,8 @@ namespace WellCart\Directory\Form;
 
 use WellCart\Directory\Exception;
 use WellCart\Directory\Spec\CurrencyEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -23,6 +23,7 @@ class Currency extends AbstractForm
      * Canonical form name
      */
     const NAME = 'directory_currency';
+
     /**
      * Form constructor
      *

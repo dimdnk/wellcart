@@ -13,7 +13,7 @@ use WellCart\Base\Entity\Locale\Language as LanguageEntity;
 return [
     'domain' => [
         'mapping' => [
-           Entity\Administrator::class =>
+            Entity\Administrator::class =>
                 [
                     'type'            => 'entity',
                     'repositoryClass' => Repository\Administrators::class,

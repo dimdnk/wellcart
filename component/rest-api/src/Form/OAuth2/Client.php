@@ -10,10 +10,10 @@ declare(strict_types = 1);
 
 namespace WellCart\RestApi\Form\OAuth2;
 
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\RestApi\Entity\OAuth2\Client as ClientEntity;
 use WellCart\RestApi\Exception;
 use WellCart\RestApi\Hydrator\OAuth2\ClientHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -23,6 +23,7 @@ class Client extends AbstractForm
      * Canonical form name
      */
     const NAME = 'api_client';
+
     /**
      * Form constructor
      *

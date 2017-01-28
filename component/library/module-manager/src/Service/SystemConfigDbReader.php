@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\ModuleManager\Service;
 
 use PDO;
@@ -71,8 +72,7 @@ class SystemConfigDbReader
                 $rows = $result->fetchAll(PDO::FETCH_ASSOC);
                 $this->config = $this->buildConfig($rows);
             }
-        }
-        catch (PDOException $e) {
+        } catch (PDOException $e) {
             $this->config = new Config([]);
         }
 

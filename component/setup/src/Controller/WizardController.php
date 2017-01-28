@@ -48,8 +48,7 @@ class WizardController extends AbstractActionController implements
                 if ($currentStep->isComplete()) {
                     return $this->prg();
                 }
-            }
-            catch (Throwable $e) {
+            } catch (Throwable $e) {
                 error_log($e->__toString());
                 $this->getLogger()
                     ->emerg($e);

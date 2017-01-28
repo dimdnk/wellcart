@@ -11,7 +11,7 @@ namespace WellCart\Catalog\Factory\FormElement;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Catalog\Spec\FeatureRepository;
-use \WellCart\Form\Element\MultiCheckbox;
+use WellCart\Form\Element\MultiCheckbox;
 
 class FeaturesMultiCheckboxSelectorFactory
 {

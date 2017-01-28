@@ -12,8 +12,8 @@ namespace WellCart\Backend\Form;
 
 use WellCart\Backend\Exception;
 use WellCart\Backend\Spec\AdministratorEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 

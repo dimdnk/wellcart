@@ -92,8 +92,7 @@ class PreferencesController extends AbstractActionController
                             'Settings have been successfully changed.'
                         );
                 }
-            }
-            catch (\Throwable $e) {
+            } catch (\Throwable $e) {
                 $this->getLogger()->emerg($e->getMessage());
                 $this->flashMessenger()
                     ->addWarningMessage(

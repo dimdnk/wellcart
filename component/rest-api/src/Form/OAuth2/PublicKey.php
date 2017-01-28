@@ -10,10 +10,10 @@ declare(strict_types = 1);
 
 namespace WellCart\RestApi\Form\OAuth2;
 
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
 use WellCart\RestApi\Entity\OAuth2\PublicKey as PublicKeyEntity;
 use WellCart\RestApi\Exception;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -23,6 +23,7 @@ class PublicKey extends AbstractForm
      * Canonical form name
      */
     const NAME = 'api_key';
+
     /**
      * Form constructor
      *

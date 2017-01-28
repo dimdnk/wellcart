@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Mvc;
 
 use WellCart\Mvc\Application\MaintenanceMode;
@@ -21,19 +22,19 @@ class Application extends AbstractApplication
     /**
      * Possible environments
      */
-    const ENV_PRODUCTION  = 'production';
+    const ENV_PRODUCTION = 'production';
     const ENV_DEVELOPMENT = 'development';
-    const ENV_TESTING     = 'testing';
-    const ENV_STAGING     = 'staging';
+    const ENV_TESTING = 'testing';
+    const ENV_STAGING = 'staging';
     /**
      * Possible contexts
      */
-    const CONTEXT_COMMON   = 'common';
-    const CONTEXT_CONSOLE  = 'console';
-    const CONTEXT_API      = 'api';
+    const CONTEXT_COMMON = 'common';
+    const CONTEXT_CONSOLE = 'console';
+    const CONTEXT_API = 'api';
     const CONTEXT_FRONTEND = 'frontend';
-    const CONTEXT_BACKEND  = 'backend';
-    const CONTEXT_SETUP    = 'setup';
+    const CONTEXT_BACKEND = 'backend';
+    const CONTEXT_SETUP = 'setup';
     /**
      * Special context for loading all existed modules
      */

@@ -39,8 +39,7 @@ class UpdateCurrencyRatesController extends AbstractConsoleController implements
                     Color::GREEN
                 );
             }
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             $this->getLogger()->crit($e);
             $console->writeLine(
                 sprintf("Error during import: %s", $e->getMessage()),

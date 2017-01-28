@@ -44,8 +44,7 @@ class CacheController extends AbstractConsoleController implements
                 "Finished.",
                 Color::GREEN
             );
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(

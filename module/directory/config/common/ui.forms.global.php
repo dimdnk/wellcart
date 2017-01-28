@@ -9,7 +9,7 @@
 
 use WellCart\Directory\Form;
 
-$forms =                  [
+$forms = [
     Form\Country::NAME => [
         'save' => [
             'options'    => [

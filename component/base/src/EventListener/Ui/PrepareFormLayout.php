@@ -10,13 +10,13 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\EventListener\Ui;
 
+use SplPriorityQueue;
 use WellCart\Ui\Form\FormInterface;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use Zend\EventManager\EventInterface;
 use Zend\Form\Element;
 use Zend\Form\FieldsetInterface;
-use SplPriorityQueue;
 
 class PrepareFormLayout
 {
@@ -36,22 +36,19 @@ class PrepareFormLayout
             return;
         }
 
-        $middlewares = Arr::get($config,  'middlewares', []);
+        $middlewares = Arr::get($config, 'middlewares', []);
         unset($config['middlewares']);
 
-        if(!empty($config['options']))
-        {
+        if (!empty($config['options'])) {
             $form->setOptions($config['options']);
             unset($config['options']);
         }
-        if(!empty($config['attributes']))
-        {
+        if (!empty($config['attributes'])) {
             $form->setAttributes($config['attributes']);
             unset($config['attributes']);
         }
         $this->composeForm($form, $config);
-        if(!empty($middlewares))
-        {
+        if (!empty($middlewares)) {
             $this->handleMiddlewares($middlewares, $form);
         }
     }
@@ -125,8 +122,7 @@ class PrepareFormLayout
             $middlewares->insert($middleware, $priority);
         }
         $orderedMiddlewares = iterator_to_array($middlewares, false);
-        foreach ($orderedMiddlewares as $callable)
-        {
+        foreach ($orderedMiddlewares as $callable) {
             $callable = new $callable;
             $callable($form);
         }

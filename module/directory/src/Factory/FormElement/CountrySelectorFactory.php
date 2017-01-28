@@ -20,8 +20,8 @@ class CountrySelectorFactory
     {
         $countries = $sm->getServiceLocator()
             ->get(
-           CountryRepository::class
-        );
+                CountryRepository::class
+            );
 
         $options = $countries->toOptionsList();
         $countrySelector = new CountrySelector(

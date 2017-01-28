@@ -24,6 +24,7 @@ class Brand extends AbstractForm
      * Canonical form name
      */
     const NAME = 'catalog_brand';
+
     /**
      * Form constructor
      *

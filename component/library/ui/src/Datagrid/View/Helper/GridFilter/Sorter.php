@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Ui\Datagrid\View\Helper\GridFilter;
 
 use WellCart\Utility\Arr;
@@ -80,7 +81,8 @@ class Sorter
      */
     public function link($column, $label)
     {
-        if (!$this->offsetExists($column)) {
+        if (!$this->offsetExists($column))
+        {
             return $label;
         }
 
@@ -93,19 +95,23 @@ class Sorter
 
 
         $currentSortBy = Arr::get($_GET, 'sortBy');
-        if ($column == $currentSortBy) {
+        if ($column == $currentSortBy)
+        {
             $params['sortOrder'] = ($sortOrder == 'asc') ? 'desc' : 'asc';
-        } else {
+        } else
+        {
             $params['sortOrder'] = $this->defaultOrder['sortOrder'];
         }
 
         $querySuffix = '?' . http_build_query($params->toArray(), '', '&amp;');
         $chevron = '';
-        if ($column == $currentSortBy) {
+        if ($column == $currentSortBy)
+        {
             $chevron
                 = ' <i class="fa fa-angle-%s"></i>';
             $icon = 'down';
-            if ($sortOrder == 'desc') {
+            if ($sortOrder == 'desc')
+            {
                 $icon = 'up';
             }
             $chevron = sprintf($chevron, $icon);

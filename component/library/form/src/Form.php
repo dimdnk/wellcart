@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Form;
 
 use WellCart\InputFilter\DomainInputFilterSpecConfigTrait;
@@ -27,6 +28,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
     use DomainInputFilterSpecConfigTrait,
         AddAttributesToRequiredFieldsTrait,
         EventManagerAwareTrait;
+
     /**
      * @inheritDoc
      */
@@ -67,44 +69,23 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         return $result;
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function remove($elementOrFieldset)
-    {
-        $this->getEventManager()->trigger
-        (
-            __FUNCTION__ . '.pre',
-            $this, compact('elementOrFieldset')
-        );
-        parent::remove($elementOrFieldset);
-        $this->getEventManager()->trigger
-        (
-            __FUNCTION__ . '.post',
-            $this, compact('elementOrFieldset')
-        );
-
-        return $this;
-    }
-
     public function getFromTree(string $element, $delimiter = '.')
     {
-        if(strpos($element, $delimiter) === false){
+        if (strpos($element, $delimiter) === false) {
             return $this->get($element);
         }
-        if($this->has($element)){
+        if ($this->has($element)) {
             return $this->get($element);
         }
         $keys = explode($delimiter, $element);
         $result = $this;
         do {
             $key = array_shift($keys);
-            if($result->has($key))
-            {
+            if ($result->has($key)) {
                 $result = $result->get($key);
             } else {
-              $result = false;
-              break;
+                $result = false;
+                break;
             }
         } while ($keys);
         return $result;
@@ -193,6 +174,26 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
         (
             __FUNCTION__ . '.post',
             $this
+        );
+
+        return $this;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function remove($elementOrFieldset)
+    {
+        $this->getEventManager()->trigger
+        (
+            __FUNCTION__ . '.pre',
+            $this, compact('elementOrFieldset')
+        );
+        parent::remove($elementOrFieldset);
+        $this->getEventManager()->trigger
+        (
+            __FUNCTION__ . '.post',
+            $this, compact('elementOrFieldset')
         );
 
         return $this;
@@ -551,7 +552,6 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
 
         return $result;
     }
-
 
 
     /**

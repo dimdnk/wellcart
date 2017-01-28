@@ -148,8 +148,7 @@ final class ErrorHandler
                     $e['line']
                 );
             }
-        }
-        catch (ErrorException $e) {
+        } catch (ErrorException $e) {
             if (error_reporting()) {
                 $this->enableMaintenanceMode("Internal Server Error", $e);
             } else {

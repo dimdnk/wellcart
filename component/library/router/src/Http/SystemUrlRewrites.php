@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Router\Http;
 
 use Doctrine\DBAL\Exception\TableNotFoundException;
@@ -94,8 +95,7 @@ class SystemUrlRewrites implements RouteInterface
             $urlRewrite = $this->urlRewrites->findOneByRequestPath(
                 $requestPath
             );
-        }
-        catch (TableNotFoundException $e) {
+        } catch (TableNotFoundException $e) {
             $urlRewrite = null;
         }
 

@@ -71,8 +71,7 @@ class ConfirmEmailController extends AbstractActionController
                 );
 
             return $this->redirect()->toRoute('zfcuser');
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
             $this->flashMessenger()

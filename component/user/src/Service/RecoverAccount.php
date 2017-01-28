@@ -161,8 +161,7 @@ class RecoverAccount
         try {
             $user->setPasswordResetToken($token);
             $this->sendConfirmationEmail($user, $route);
-        }
-        catch (\Throwable $exception) {
+        } catch (\Throwable $exception) {
             $user->setPasswordResetToken(null);
             $this->getLogger()->err($exception->__toString());
             $this->getEventManager()->trigger(

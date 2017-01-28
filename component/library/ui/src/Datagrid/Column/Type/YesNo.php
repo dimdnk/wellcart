@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Ui\Datagrid\Column\Type;
 
 use WellCart\Utility\Booleans;
@@ -27,7 +28,8 @@ class YesNo extends PhpString
      */
     public function getUserValue($value)
     {
-        if ($value === '') {
+        if ($value === '')
+        {
             return;
         }
         $validator = new Booleans();

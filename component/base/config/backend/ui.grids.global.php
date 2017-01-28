@@ -10,7 +10,7 @@ use WellCart\Base\PageView;
 
 $grids = [
     PageView\Backend\UrlRewritesGrid::NAME => [],
-    PageView\Backend\LanguagesGrid::NAME => [],
+    PageView\Backend\LanguagesGrid::NAME   => [],
 ];
 return [
     'ui' => [

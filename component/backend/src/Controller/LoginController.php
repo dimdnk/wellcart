@@ -77,8 +77,7 @@ class LoginController extends UserController
 
                 return $this->redirect()->toRoute('zfcadmin');
             }
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             error_log($e->__toString());
             $this->flashMessenger()->addErrorMessage($e->getMessage());
 

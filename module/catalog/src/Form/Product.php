@@ -29,6 +29,7 @@ class Product extends AbstractForm
      * Canonical form name
      */
     const NAME = 'catalog_product';
+
     /**
      * Form constructor
      *

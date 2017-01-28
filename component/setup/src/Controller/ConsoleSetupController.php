@@ -95,8 +95,7 @@ class ConsoleSetupController extends AbstractConsoleController implements
                 "WellCart installed successfully.",
                 Color::GREEN
             );
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(
@@ -125,8 +124,7 @@ class ConsoleSetupController extends AbstractConsoleController implements
                 "WellCart upgraded successfully.",
                 Color::GREEN
             );
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(
@@ -165,8 +163,7 @@ class ConsoleSetupController extends AbstractConsoleController implements
                 "Finished.",
                 Color::GREEN
             );
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             error_log($e->__toString());
             $console->writeLine(
                 sprintf(

@@ -16,7 +16,7 @@ interface PageEntity
 {
 
     const STATUS_VISIBLE = 1;
-    const STATUS_HIDDEN  = 0;
+    const STATUS_HIDDEN = 0;
 
     /**
      * Object constructor

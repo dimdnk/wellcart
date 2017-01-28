@@ -13,8 +13,8 @@ namespace WellCart\Catalog\Form;
 use WellCart\Catalog\Exception;
 use WellCart\Catalog\Spec\CategoryEntity;
 use WellCart\Catalog\Spec\CategoryI18nEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -24,6 +24,7 @@ class Category extends AbstractForm
      * Canonical form name
      */
     const NAME = 'catalog_category';
+
     /**
      * Form constructor
      *

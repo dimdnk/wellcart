@@ -75,8 +75,7 @@ class RecoverAccountController extends AbstractActionController
                         );
 
                     return $this->redirect()->toRoute('zfcadmin');
-                }
-                catch (\Throwable $e) {
+                } catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e->getMessage());
                     $this->flashMessenger()
@@ -149,8 +148,7 @@ class RecoverAccountController extends AbstractActionController
                         );
 
                     return $this->redirect()->toRoute('zfcadmin');
-                }
-                catch (\Throwable $e) {
+                } catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e);
                     $this->flashMessenger()

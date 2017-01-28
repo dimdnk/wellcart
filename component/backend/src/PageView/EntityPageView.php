@@ -141,6 +141,11 @@ class EntityPageView extends AbstractPageView
         return $this->getVariable('containerClass');
     }
 
+    public function configurePage()
+    {
+
+    }
+
     /**
      * @return EntityPageView
      */
@@ -149,10 +154,5 @@ class EntityPageView extends AbstractPageView
         $this->setVariable('containerClass', $cssClass);
 
         return $this;
-    }
-
-    public function configurePage()
-    {
-
     }
 }

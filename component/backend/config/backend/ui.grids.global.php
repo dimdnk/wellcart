@@ -9,7 +9,7 @@
 use WellCart\Backend\PageView;
 
 $grids = [
-    PageView\Backend\AccountsGrid::NAME => [],
+    PageView\Backend\AccountsGrid::NAME      => [],
     PageView\Backend\NotificationsGrid::NAME => [],
 ];
 return [

@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Mvc\Controller\Feature\Crud;
 
 trait FindOrNotFoundTrait
@@ -21,7 +22,8 @@ trait FindOrNotFoundTrait
         $id = abs((int)$this->params()->fromRoute('id'));
         $entity = call_user_func_array([$this->repository, $method], [$id]);
 
-        if (!$entity) {
+        if (!$entity)
+        {
             $this->flashMessenger()
                 ->addErrorMessage($errorMessage);
 

@@ -116,8 +116,7 @@ class SetupPageVariables extends AbstractListenerAggregate
                 );
                 try {
                     $val = url_to_route($key);
-                }
-                catch (\Throwable $e) {
+                } catch (\Throwable $e) {
                     error_log($e->__toString());
                     $val = null;
                 }

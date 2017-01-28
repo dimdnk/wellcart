@@ -6,6 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 declare(strict_types = 1);
+
 namespace WellCart\Ui\Form;
 
 use WellCart\Ui\Form\LinearForm as AbstractForm;
@@ -53,10 +54,10 @@ class TabbedForm extends AbstractForm implements FormInterface
 
     public function setTabsSpecification(array $tabs)
     {
-        foreach ($tabs as $tabId => $tab)
-        {
-            $this->addTab($tabId,
-               __(Arr::get($tab, 'label','')),
+        foreach ($tabs as $tabId => $tab) {
+            $this->addTab(
+                $tabId,
+                __(Arr::get($tab, 'label', '')),
                 Arr::get($tab, 'elements', []),
                 Arr::get($tab, 'options', []),
                 Arr::get($tab, 'attributes', []),
@@ -66,22 +67,13 @@ class TabbedForm extends AbstractForm implements FormInterface
         return $this;
     }
 
-
-    /**
-     * @return mixed
-     */
-    public function getTabs()
-    {
-        return $this->tabs;
-    }
-
     /**
      * @param string $id
      * @param string $label
-     * @param array $elements
-     * @param array $options
-     * @param array $attributes
-     * @param int   $priority
+     * @param array  $elements
+     * @param array  $options
+     * @param array  $attributes
+     * @param int    $priority
      *
      * @return TabbedForm
      */
@@ -101,20 +93,30 @@ class TabbedForm extends AbstractForm implements FormInterface
             ->setAttributes($attributes);
 
         foreach ($elements as $k => $element) {
-            if(is_string($element)) {
+            if (is_string($element)) {
                 $element = $this->getFromTree($element);
-            } elseif(is_array($element)) {
+            } elseif (is_array($element)) {
                 $element = $this->getFromTree($k);
-                if($element) {
-                    $element->setOptions(Arr::get($elements[$k],'options', []));
+                if ($element) {
+                    $element->setOptions(
+                        Arr::get($elements[$k], 'options', [])
+                    );
                 }
             }
-            if($element) {
+            if ($element) {
                 $tab->add($element->getName(), $element);
             }
         }
         $this->tabs->insert($id, $tab, $priority);
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTabs()
+    {
+        return $this->tabs;
     }
 
     public function removeTab($id)

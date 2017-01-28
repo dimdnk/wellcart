@@ -8,7 +8,7 @@
 
 use WellCart\RestApi\Form;
 
-$forms =             [
+$forms = [
     Form\OAuth2\Client::NAME => [
         'save' => [
             'options'    => [

@@ -46,6 +46,7 @@ class ScopesGrid extends Standard
 
         return parent::setRepository($repository);
     }
+
     /**
      * {@inheritDoc}
      */

@@ -13,8 +13,8 @@ namespace WellCart\CMS\Form;
 use WellCart\CMS\Exception;
 use WellCart\CMS\Spec\PageEntity;
 use WellCart\CMS\Spec\PageI18nEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -24,6 +24,7 @@ class Page extends AbstractForm
      * Canonical form name
      */
     const NAME = 'cms_page';
+
     /**
      * Form constructor
      *

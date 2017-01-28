@@ -79,8 +79,7 @@ class SettingsController extends AbstractActionController
 
                     return $this->redirect()->refresh();
                 }
-            }
-            catch (\Throwable $e) {
+            } catch (\Throwable $e) {
                 $this->getLogger()->emerg($e);
                 $this->flashMessenger()
                     ->addWarningMessage(

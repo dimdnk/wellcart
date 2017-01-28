@@ -15,8 +15,8 @@ use WellCart\Catalog\Spec\FeatureEntity;
 use WellCart\Catalog\Spec\FeatureI18nEntity;
 use WellCart\Catalog\Spec\FeatureValueEntity;
 use WellCart\Catalog\Spec\FeatureValueI18nEntity;
-use WellCart\Ui\Form\LinearForm as AbstractForm;
 use WellCart\Hydrator\DoctrineObject as ObjectHydrator;
+use WellCart\Ui\Form\LinearForm as AbstractForm;
 use Zend\Form\Factory;
 use Zend\Form\FormInterface;
 
@@ -26,6 +26,7 @@ class Feature extends AbstractForm
      * Canonical form name
      */
     const NAME = 'catalog_feature';
+
     /**
      * Form constructor
      *

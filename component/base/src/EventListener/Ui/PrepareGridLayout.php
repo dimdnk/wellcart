@@ -11,13 +11,12 @@ declare(strict_types = 1);
 namespace WellCart\Base\EventListener\Ui;
 
 use SplPriorityQueue;
+use WellCart\Ui\Datagrid;
+use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 use WellCart\Ui\Datagrid\PageViewInterface;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use Zend\EventManager\EventInterface;
-
-use WellCart\Ui\Datagrid;
-use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class PrepareGridLayout
 {
@@ -56,7 +55,7 @@ class PrepareGridLayout
     }
 
     /**
-     * @param array $actions
+     * @param array             $actions
      * @param PageViewInterface $page
      * @param Datagrid\Datagrid $grid
      */
@@ -64,8 +63,7 @@ class PrepareGridLayout
         array $actions,
         PageViewInterface $page,
         Datagrid\Datagrid $grid
-    )
-    {
+    ) {
         foreach ($actions as $index => $spec) {
 
             $action = new Datagrid\GroupAction();
@@ -74,11 +72,12 @@ class PrepareGridLayout
                 url_to_route(
                     Arr::get($spec, 'route.name') ?: $page->getRouteName(),
                     [
-                        'action' => Arr::get($spec,
+                        'action' => Arr::get(
+                            $spec,
                             'route.action',
                             'group-action-handler'
                         ),
-                        'id' => Arr::get($spec, 'action'),
+                        'id'     => Arr::get($spec, 'action'),
                     ]
                 )
             );
@@ -88,7 +87,7 @@ class PrepareGridLayout
     }
 
     /**
-     * @param array $buttons
+     * @param array             $buttons
      * @param PageViewInterface $page
      * @param Datagrid\Datagrid $grid
      */
@@ -96,8 +95,7 @@ class PrepareGridLayout
         array $buttons,
         PageViewInterface $page,
         Datagrid\Datagrid $grid
-    )
-    {
+    ) {
         foreach ($buttons as $index => $spec) {
 
             $action = new Datagrid\ToolbarAction();
@@ -120,7 +118,7 @@ class PrepareGridLayout
     }
 
     /**
-     * @param array $columns
+     * @param array             $columns
      * @param PageViewInterface $page
      * @param Datagrid\Datagrid $grid
      */
@@ -128,8 +126,7 @@ class PrepareGridLayout
         array $columns,
         PageViewInterface $page,
         Datagrid\Datagrid $grid
-    )
-    {
+    ) {
         foreach ($columns as $index => $spec) {
             $col = new Datagrid\Column($index);
             $col->setLabel(__(Arr::get($spec, 'label', '')));
@@ -145,7 +142,7 @@ class PrepareGridLayout
     }
 
     /**
-     * @param array $actions
+     * @param array             $actions
      * @param PageViewInterface $page
      * @param Datagrid\Datagrid $grid
      */
@@ -153,8 +150,7 @@ class PrepareGridLayout
         array $actions,
         PageViewInterface $page,
         Datagrid\Datagrid $grid
-    )
-    {
+    ) {
         $control = $grid->getActionsColumn();
         if (!$control) {
             return;
@@ -171,7 +167,7 @@ class PrepareGridLayout
                     Arr::get($spec, 'route.name') ?: $page->getRouteName(),
                     [
                         'action' => Arr::get($spec, 'route.action'),
-                        'id' => $action->getRowIdPlaceholder(),
+                        'id'     => $action->getRowIdPlaceholder(),
                     ]
                 )
             );
@@ -181,7 +177,7 @@ class PrepareGridLayout
     }
 
     /**
-     * @param array $config
+     * @param array             $config
      * @param PageViewInterface $page
      * @param Datagrid\Datagrid $grid
      */
@@ -189,8 +185,7 @@ class PrepareGridLayout
         array $config,
         PageViewInterface $page,
         Datagrid\Datagrid $grid
-    )
-    {
+    ) {
         $middlewares = new SplPriorityQueue();
         foreach ($config as $key => $value) {
             if (is_string($key) && is_array($value)) {

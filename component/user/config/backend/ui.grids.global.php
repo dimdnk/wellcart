@@ -10,7 +10,7 @@ use WellCart\User\PageView;
 
 $grids = [
     PageView\Backend\AccountsGrid::NAME => [],
-    PageView\Backend\RolesGrid::NAME => [],
+    PageView\Backend\RolesGrid::NAME    => [],
 ];
 return [
     'ui' => [
