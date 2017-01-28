@@ -28,8 +28,7 @@ class YesNo extends PhpString
      */
     public function getUserValue($value)
     {
-        if ($value === '')
-        {
+        if ($value === '') {
             return;
         }
         $validator = new Booleans();

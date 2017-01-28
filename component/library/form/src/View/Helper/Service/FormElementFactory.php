@@ -32,13 +32,11 @@ class FormElementFactory
         $classMap = Config::get('form_element_configuration.class_map', []);
         $typeMap = Config::get('form_element_configuration.type_map', []);
 
-        foreach ($classMap as $class => $plugin)
-        {
+        foreach ($classMap as $class => $plugin) {
             $helper->addClass($class, $plugin);
         }
 
-        foreach ($typeMap as $type => $plugin)
-        {
+        foreach ($typeMap as $type => $plugin) {
             $helper->addType($type, $plugin);
         }
 

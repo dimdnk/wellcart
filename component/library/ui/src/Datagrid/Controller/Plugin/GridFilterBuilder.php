@@ -57,14 +57,12 @@ class GridFilterBuilder extends AbstractPlugin
     {
         $this->setScope($scope);
         $isReset = $this->getValue('reset_filters');
-        if ($isReset)
-        {
+        if ($isReset) {
             $this->getController()
                 ->redirect()
                 ->toRoute();
         }
-        if ($queryBuilder)
-        {
+        if ($queryBuilder) {
             $this->setQuery($queryBuilder);
         }
 
@@ -155,12 +153,10 @@ class GridFilterBuilder extends AbstractPlugin
     {
 
         $value = $this->getValue($column);
-        if (is_array($value))
-        {
+        if (is_array($value)) {
             $value = array_map('trim', $value);
             $value = array_map('strip_tags', $value);
-        } else
-        {
+        } else {
             $value = strip_tags(
                 trim((string)$value)
             );
@@ -188,11 +184,9 @@ class GridFilterBuilder extends AbstractPlugin
         $values = $this->scopes[$this->scope]['values'];
         $rootAlias = $queryBuilder->getRootAliases()[0] . '.';
 
-        foreach ($expressions as $column => $expression)
-        {
+        foreach ($expressions as $column => $expression) {
             $value = (isset($values[$column])) ? $values[$column] : null;
-            if ($value === '' || $value === null)
-            {
+            if ($value === '' || $value === null) {
                 continue;
             }
             $this->applyCondition(
@@ -205,8 +199,7 @@ class GridFilterBuilder extends AbstractPlugin
             ) == 'desc') ? 'desc'
             : 'asc';
         $sortBy = $request->getQuery('sortBy', $this->defaultOrder['sortBy']);
-        if (array_key_exists($sortBy, $expressions))
-        {
+        if (array_key_exists($sortBy, $expressions)) {
             $queryBuilder->resetDQLPart('orderBy');
             $sortBy = Str::underscored2camel($sortBy);
             $queryBuilder->orderBy(
@@ -230,31 +223,24 @@ class GridFilterBuilder extends AbstractPlugin
         QueryBuilder $queryBuilder
     ) {
         $column = Str::underscored2camel($column);
-        if (strpos($column, '.') !== false)
-        {
+        if (strpos($column, '.') !== false) {
             $prefix = '';
         }
-        switch ($expressionType)
-        {
+        switch ($expressionType) {
 
             case self::RANGE:
                 $start = $end = null;
-                if (is_string($value))
-                {
+                if (is_string($value)) {
                     $arr = explode(' - ', $value);
-                    if (count($arr) == 2)
-                    {
+                    if (count($arr) == 2) {
                         list($start, $end) = $arr;
                     }
-                } elseif (is_array($value) && count($value) == 2)
-                {
+                } elseif (is_array($value) && count($value) == 2) {
                     $start = current($value);
                     $end = next($value);
                 }
-                if (!empty($start) && !empty($end))
-                {
-                    if ($start <= $end)
-                    {
+                if (!empty($start) && !empty($end)) {
+                    if ($start <= $end) {
                         $_param = preg_replace(
                             "/[^A-Za-z0-9?! ]/", "", $column
                         );
@@ -276,20 +262,16 @@ class GridFilterBuilder extends AbstractPlugin
 
             case self::BETWEEN:
                 $start = $end = null;
-                if (is_string($value))
-                {
+                if (is_string($value)) {
                     $arr = explode(' - ', $value);
-                    if (count($arr) == 2)
-                    {
+                    if (count($arr) == 2) {
                         list($start, $end) = $arr;
                     }
-                } elseif (is_array($value) && count($value) == 2)
-                {
+                } elseif (is_array($value) && count($value) == 2) {
                     $start = current($value);
                     $end = next($value);
                 }
-                if (!empty($start) && !empty($end))
-                {
+                if (!empty($start) && !empty($end)) {
                     $queryBuilder->andWhere(
                         $queryBuilder->expr()
                             ->between(
@@ -381,8 +363,7 @@ class GridFilterBuilder extends AbstractPlugin
     public function setDefaultOrder($sortBy, $sortOrder = 'asc')
     {
         $formElements = $this->scopes[$this->scope]['form_elements'];
-        if (array_key_exists($sortBy, $formElements))
-        {
+        if (array_key_exists($sortBy, $formElements)) {
             $this->defaultOrder = [
                 'sortBy'    => $sortBy,
                 'sortOrder' => $sortOrder,

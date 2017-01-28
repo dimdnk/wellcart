@@ -16,8 +16,7 @@ trait ActionGrantedTrait
 
     protected function isGrantedOrDeny($permission)
     {
-        if (!$this->isGranted($permission))
-        {
+        if (!$this->isGranted($permission)) {
             throw new AccessDeniedException(
                 sprintf(
                     'Access denied to "%s" for "%s".', $permission,

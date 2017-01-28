@@ -66,8 +66,7 @@ class GridFilters extends AbstractHelper
         );
         $this->form->setName($scopeName);
 
-        foreach ($columns as $column)
-        {
+        foreach ($columns as $column) {
             $value = $values[$column];
             $spec
                 = [

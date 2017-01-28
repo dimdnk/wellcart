@@ -40,11 +40,9 @@ return $coverage;',
             var_export($filter->getWhitelistedFiles(), 1)
         );
 
-        if ($target !== null)
-        {
+        if ($target !== null) {
             return file_put_contents($target, $output);
-        } else
-        {
+        } else {
             return $output;
         }
     }

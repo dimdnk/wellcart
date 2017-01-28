@@ -47,30 +47,23 @@ trait EntityPersistenceAwareTrait
         $reuseMatchedParams = false
     ) {
         $isUpdate = true;
-        if (is_object($entity) && method_exists($entity, 'getId'))
-        {
+        if (is_object($entity) && method_exists($entity, 'getId')) {
             $isUpdate = (bool)$entity->getId();
         }
 
-        if ($entity instanceof Entity)
-        {
+        if ($entity instanceof Entity) {
             $command = new PersistEntity($entity);
-        } else
-        {
+        } else {
             $command = $entity;
         }
-        try
-        {
+        try {
             $this->commandBus()->handle($command);
-            if (method_exists($command, 'getEntity'))
-            {
+            if (method_exists($command, 'getEntity')) {
                 $entity = $command->getEntity();
             }
-            if ($isUpdate)
-            {
+            if ($isUpdate) {
                 $message = $messageOnUpdate;
-            } else
-            {
+            } else {
                 $message = $messageOnCreate;
             }
 
@@ -80,14 +73,12 @@ trait EntityPersistenceAwareTrait
             $this->plugin('postRedirectGet')
                 ->getSessionContainer()
                 ->exchangeArray([]);
-            if ($entity instanceof Entity && $entity->getId())
-            {
+            if ($entity instanceof Entity && $entity->getId()) {
                 $continueEdit = Arr::get(
                     $this->getRequest()->getPost(),
                     'save_and_continue_edit', false
                 );
-                if ($continueEdit !== false)
-                {
+                if ($continueEdit !== false) {
                     $params = [
                         'id'     => $entity->getId(),
                         'action' => 'update',
@@ -102,15 +93,12 @@ trait EntityPersistenceAwareTrait
                     $options,
                     $reuseMatchedParams
                 );
-        } catch (\Throwable $e)
-        {
+        } catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
-            if ($e instanceof \DomainException)
-            {
+            if ($e instanceof \DomainException) {
                 $message = $e->getMessage();
-            } else
-            {
+            } else {
                 $message = $this->__(
                     'An unexpected error occurred. Please try again or contact Customer Support.'
                 );
@@ -142,32 +130,26 @@ trait EntityPersistenceAwareTrait
         $options = [],
         $reuseMatchedParams = false
     ) {
-        if (!$callback instanceof Closure)
-        {
+        if (!$callback instanceof Closure) {
             $entity = $callback;
-            $callback = function ($em) use ($entity)
-            {
+            $callback = function ($em) use ($entity) {
                 $em->remove($entity);
 
                 return $entity;
             };
         }
 
-        try
-        {
+        try {
             $this->commandBus()->handle($callback);
             $this->flashMessenger()
                 ->addSuccessMessage($successMessage);
-        } catch (\Throwable $e)
-        {
+        } catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
 
-            if ($e instanceof \DomainException)
-            {
+            if ($e instanceof \DomainException) {
                 $message = $e->getMessage();
-            } else
-            {
+            } else {
                 $message = $this->__(
                     'An unexpected error occurred. Please try again or contact Customer Support.'
                 );
@@ -215,29 +197,23 @@ trait EntityPersistenceAwareTrait
                 $reuseMatchedParams
             );
 
-        if (!$actionName)
-        {
+        if (!$actionName) {
             return $result;
         }
 
-        try
-        {
+        try {
             $this->repository->performGroupAction($actionName, $ids, true);
-        } catch (ExpectedResultException $e)
-        {
+        } catch (ExpectedResultException $e) {
             $successMessage = $e->getMessage();
             $this->flashMessenger()
                 ->addSuccessMessage($successMessage);
-        } catch (\Throwable $e)
-        {
+        } catch (\Throwable $e) {
             $this->getLogger()
                 ->emerg($e);
 
-            if ($e instanceof \DomainException)
-            {
+            if ($e instanceof \DomainException) {
                 $message = $e->getMessage();
-            } else
-            {
+            } else {
                 $message = $this->__(
                     'An unexpected error occurred. Please try again or contact Customer Support.'
                 );

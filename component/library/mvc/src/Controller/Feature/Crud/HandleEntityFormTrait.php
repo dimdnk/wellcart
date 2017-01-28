@@ -42,12 +42,10 @@ trait HandleEntityFormTrait
         $reuseMatchedParams = false
     ) {
         $entity = $entityContainer;
-        if (!$entityContainer instanceof Entity)
-        {
+        if (!$entityContainer instanceof Entity) {
             if (is_object($entityContainer)
                 && method_exists($entityContainer, 'getEntity')
-            )
-            {
+            ) {
                 $entity = $entityContainer->getEntity();
             }
         }
@@ -61,8 +59,7 @@ trait HandleEntityFormTrait
             ->setForm($form);
 
         $id = null;
-        if ($entity->getId() > 0)
-        {
+        if ($entity->getId() > 0) {
             $id = $entity->getId();
         }
 
@@ -71,8 +68,7 @@ trait HandleEntityFormTrait
          */
         $request = $this->getRequest();
         $prg = (!$form->isMultipart()) ? $this->prg() : [];
-        if ($request->isPost())
-        {
+        if ($request->isPost()) {
             $post = $request->getPost($form->getName(), []);
             $files = $request->getFiles($form->getName(), []);
             $post = Arr::merge(
@@ -80,8 +76,7 @@ trait HandleEntityFormTrait
             );
 
             $form->setData($post);
-            if ($form->isValid())
-            {
+            if ($form->isValid()) {
                 $entity = $form->getData();
                 $entity->setId($id);
 
@@ -95,8 +90,7 @@ trait HandleEntityFormTrait
                     $reuseMatchedParams
                 );
             }
-        } elseif (!empty($prg[$form->getName()]))
-        {
+        } elseif (!empty($prg[$form->getName()])) {
             $form->setData((array)$prg[$form->getName()]);
             $form->isValid();
         }

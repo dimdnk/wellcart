@@ -22,8 +22,7 @@ trait FindOrNotFoundTrait
         $id = abs((int)$this->params()->fromRoute('id'));
         $entity = call_user_func_array([$this->repository, $method], [$id]);
 
-        if (!$entity)
-        {
+        if (!$entity) {
             $this->flashMessenger()
                 ->addErrorMessage($errorMessage);
 
