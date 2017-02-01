@@ -389,7 +389,7 @@ class Setup
             }
 
             foreach ($paths as $type => $dirs) {
-                $assetsPath = WELLCART_PUBLIC_PATH . $type . DS;
+                $assetsPath = WELLCART_PUBLIC_PATH . $type . '/';
                 foreach ($paths[$type] as $modPublic) {
                     $objects = scandir($modPublic);
                     foreach ($objects as $src) {
@@ -398,8 +398,8 @@ class Setup
                         }
                         $src = $modPublic . $src;
                         list(, $filename) = explode(
-                            $type . DS,
-                            str_replace('\\', DS, $src)
+                            $type . '/',
+                            str_replace('\\', '/', $src)
                         );
                         $destination = $assetsPath . $filename;
                         if ($src != $destination) {
