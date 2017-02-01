@@ -7,9 +7,10 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Theme\SetupUi;
+namespace WellCart\Theme\SetupUi\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Theme\SetupUi\Module;
 
 class ModuleTest extends TestCase
 {

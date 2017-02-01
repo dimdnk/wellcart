@@ -82,7 +82,7 @@
   "autoload": {
     "classmap": [
       "./src/Module.php",
-      "tests/unit/"
+      "tests/"
     ]
   }
 }

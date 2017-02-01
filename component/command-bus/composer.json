@@ -80,7 +80,7 @@
   },
   "autoload-dev": {
     "classmap": [
-      "tests/unit/"
+      "tests/"
     ]
   }
 }
