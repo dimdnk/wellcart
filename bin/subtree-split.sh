@@ -58,6 +58,30 @@ remote module-directory git@github.com:wellcart/module-directory.git
 remote module-cms git@github.com:wellcart/module-cms.git
 remote module-catalog git@github.com:wellcart/module-catalog.git
 
+split 'component/library/utility' component-utility
+split 'component/library/mapping-drivers' component-mapping-drivers
+
+split 'component/library/console' component-console
+split 'component/library/mail' component-mail
+split 'component/library/db' component-db
+split 'component/library/filter' component-filter
+split 'component/library/form' component-form
+split 'component/library/hydrator' component-hydrator
+split 'component/library/input-filter' component-input-filter
+split 'component/library/log' component-log
+split 'component/library/module-manager' component-module-manager
+split 'component/library/mvc' component-mvc
+split 'component/library/navigation' component-navigation
+split 'component/library/orm' component-orm
+split 'component/library/router' component-router
+split 'component/library/service-manager' component-service-manager
+split 'component/library/session' component-session
+split 'component/library/stdlib' component-stdlib
+split 'component/library/test' component-test
+split 'component/library/ui' component-ui
+split 'component/library/validator' component-validator
+split 'component/library/view' component-view
+split 'component/metapackage' component-metapackage
 
 split 'component/base' component-base
 split 'component/schema-migration' component-schema-migration
@@ -66,6 +90,9 @@ split 'component/setup' component-setup
 split 'component/user' component-user
 split 'component/backend' component-backend
 split 'component/rest-api' component-rest-api
+split 'theme/frontend-ui' theme-frontend-ui
+split 'theme/setup-ui' theme-setup-ui
+split 'theme/backend-ui' theme-backend-ui
 split 'module/directory' module-directory
 split 'module/cms' module-cms
 split 'module/catalog' module-catalog
