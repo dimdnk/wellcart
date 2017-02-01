@@ -91,7 +91,7 @@ class ProductTemplateI18n extends AbstractRepository
 
         foreach ($ids as $id) {
             $object = $em->find(
-                'WellCart\Catalog\Spec\ProductTemplateEntity',
+                ProductTemplateEntity::class,
                 $id
             );
             if ($object !== null) {

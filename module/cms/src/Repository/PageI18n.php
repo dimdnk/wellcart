@@ -117,7 +117,7 @@ class PageI18n extends AbstractRepository implements PageI18nRepository
         );
 
         foreach ($ids as $id) {
-            $object = $em->find('WellCart\CMS\Spec\PageEntity', $id);
+            $object = $em->find(PageEntity::class, $id);
             if ($object !== null) {
                 $this->_em->remove($object);
                 $result[] = $ids;
