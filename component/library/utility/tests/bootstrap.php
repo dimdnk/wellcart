@@ -19,8 +19,6 @@ error_reporting(E_ALL);
 date_default_timezone_set('UTC');
 
 defined('REQUEST_MICROTIME') || define('REQUEST_MICROTIME', microtime(true));
-define('DS', '/');
-define('PS', PATH_SEPARATOR);
 define('TIME_NOW', time());
 
 // check PHP version
