@@ -7,11 +7,12 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\SchemaMigration;
+namespace WellCart\SchemaMigration\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
+use WellCart\SchemaMigration\Module;
 
 class ModuleTest extends TestCase
 {

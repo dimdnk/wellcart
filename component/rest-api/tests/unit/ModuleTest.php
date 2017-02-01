@@ -7,11 +7,12 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\RestApi;
+namespace WellCart\RestApi\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
+use WellCart\RestApi\Module;
 
 class ModuleTest extends TestCase
 {

@@ -7,9 +7,10 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Catalog;
+namespace WellCart\Catalog\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Catalog\Module;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
 

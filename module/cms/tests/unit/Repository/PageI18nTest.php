@@ -8,10 +8,12 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\CMS\Repository;
+namespace WellCart\CMS\Test\Unit\Repository;
 
 use PHPUnit\Framework\TestCase;
 use WellCart\CMS\Entity\Page;
+use WellCart\CMS\Entity\PageI18n;
+use WellCart\CMS\Repository\PageI18nQuery;
 use WellCart\CMS\Spec\PageI18nRepository;
 
 class PageI18nTest extends TestCase
@@ -67,7 +69,7 @@ class PageI18nTest extends TestCase
     {
         $this->assertInternalType(
             'array',
-            $this->object->performGroupDeletePages([])
+            $this->object->performGroupDeletePages([1])
         );
     }
 

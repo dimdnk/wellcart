@@ -7,11 +7,14 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\CMS\Entity;
+namespace WellCart\CMS\Test\Unit\Entity;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
 use WellCart\Base\Entity\Locale\Language;
+use WellCart\Base\Spec\LocaleLanguageEntity;
+use WellCart\CMS\Entity\Page;
+use WellCart\CMS\Entity\PageI18n;
 
 class PageI18nTest extends TestCase
 {
@@ -36,7 +39,7 @@ class PageI18nTest extends TestCase
     public function testSetId()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setId(1)
         );
     }
@@ -53,7 +56,7 @@ class PageI18nTest extends TestCase
     public function testSetCreatedAt()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setCreatedAt(new DateTime)
         );
     }
@@ -61,12 +64,12 @@ class PageI18nTest extends TestCase
     public function testSetUpdatedAt()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setUpdatedAt(null)
         );
 
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setUpdatedAt(new DateTime)
         );
     }
@@ -91,7 +94,7 @@ class PageI18nTest extends TestCase
     public function setMetaTitle()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setMetaTitle('data')
         );
     }
@@ -99,9 +102,9 @@ class PageI18nTest extends TestCase
     public function testGetPage()
     {
         $this->assertNull($this->object->getPage());
-        $this->object->setPage(new Page);
+        $this->object->setPage(new Page());
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->getPage()
         );
     }
@@ -109,11 +112,11 @@ class PageI18nTest extends TestCase
     public function testSetPage()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setPage(null)
         );
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setPage(new Page)
         );
     }
@@ -123,7 +126,7 @@ class PageI18nTest extends TestCase
         $this->assertNull($this->object->getLanguage());
         $this->object->setLanguage(new Language());
         $this->assertInstanceOf(
-            'WellCart\Base\Spec\LocaleLanguageEntity',
+            LocaleLanguageEntity::class,
             $this->object->getLanguage()
         );
     }
@@ -131,11 +134,11 @@ class PageI18nTest extends TestCase
     public function testSetLanguage()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setLanguage(null)
         );
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setLanguage(new Language())
         );
     }
@@ -150,7 +153,7 @@ class PageI18nTest extends TestCase
     public function setBody()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setBody('data')
         );
     }
@@ -165,7 +168,7 @@ class PageI18nTest extends TestCase
     public function testSetMetaDescription()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setMetaDescription('data')
         );
     }
@@ -180,7 +183,7 @@ class PageI18nTest extends TestCase
     public function testSetMetaKeywords()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setMetaKeywords('data')
         );
     }
@@ -195,7 +198,7 @@ class PageI18nTest extends TestCase
     public function testSetTitle()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setTitle('data')
         );
     }
@@ -210,7 +213,7 @@ class PageI18nTest extends TestCase
     public function testSetPageId()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\PageI18n',
+            PageI18n::class,
             $this->object->setPageId(1)
         );
     }

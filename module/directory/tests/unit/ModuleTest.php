@@ -6,9 +6,10 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-namespace WellCart\Directory;
+namespace WellCart\Directory\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Directory\Module;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
 

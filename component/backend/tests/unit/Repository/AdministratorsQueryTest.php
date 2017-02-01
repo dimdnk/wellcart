@@ -8,10 +8,11 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Backend\Repository;
+namespace WellCart\Backend\Test\Unit\Repository;
 
 use PHPUnit\Framework\TestCase;
 use WellCart\Backend\Entity\Administrator;
+use WellCart\Backend\Repository\AdministratorsQuery;
 
 class AdministratorsQueryTest extends TestCase
 {

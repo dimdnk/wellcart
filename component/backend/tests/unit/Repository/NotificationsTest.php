@@ -8,9 +8,11 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Backend\Repository;
+namespace WellCart\Backend\Test\Unit\Repository;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Backend\Repository\Notifications;
+use WellCart\Backend\Repository\NotificationsQuery;
 use WellCart\Backend\Spec\NotificationRepository;
 
 class NotificationsTest extends TestCase

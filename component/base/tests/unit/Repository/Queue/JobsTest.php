@@ -7,9 +7,11 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Base\Repository\Queue;
+namespace WellCart\Base\Test\Unit\Repository\Queue;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Base\Repository\Queue\Jobs;
+use WellCart\Base\Repository\Queue\JobsQuery;
 use WellCart\Base\Spec\JobQueueRepository;
 
 class JobsTest extends TestCase

@@ -7,9 +7,11 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Base\Repository;
+namespace WellCart\Base\Test\Unit\Repository;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Base\Entity\Configuration;
+use WellCart\Base\Repository\ConfigurationQuery;
 use WellCart\Base\Spec\ConfigurationRepository;
 
 class ConfigurationTest extends TestCase

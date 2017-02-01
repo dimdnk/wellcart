@@ -8,10 +8,11 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Backend\Entity;
+namespace WellCart\Backend\Test\Unit\Entity;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
+use WellCart\Backend\Entity\Notification;
 
 class NotificationTest extends TestCase
 {

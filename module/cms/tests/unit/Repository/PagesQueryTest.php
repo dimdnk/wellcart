@@ -8,9 +8,10 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\CMS\Repository;
+namespace WellCart\CMS\Test\Unit\Repository;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\CMS\Repository\PagesQuery;
 use WellCart\CMS\Spec\PageRepository;
 
 class PagesQueryTest extends TestCase

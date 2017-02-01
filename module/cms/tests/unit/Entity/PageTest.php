@@ -7,10 +7,12 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\CMS\Entity;
+namespace WellCart\CMS\Test\Unit\Entity;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
+use WellCart\CMS\Entity\Page;
+use WellCart\CMS\Entity\PageI18n;
 use WellCart\CMS\Spec\PageEntity;
 use WellCart\Stdlib\Collection\ArrayCollection;
 
@@ -37,7 +39,7 @@ class PageTest extends TestCase
     public function testSetId()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setId(1)
         );
     }
@@ -54,7 +56,7 @@ class PageTest extends TestCase
     public function testSetCreatedAt()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setCreatedAt(new DateTime)
         );
     }
@@ -62,12 +64,12 @@ class PageTest extends TestCase
     public function testSetUpdatedAt()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setUpdatedAt(null)
         );
 
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setUpdatedAt(new DateTime)
         );
     }
@@ -87,7 +89,7 @@ class PageTest extends TestCase
         $collection = new ArrayCollection();
         $collection->add(new PageI18n());
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->addTranslations($collection)
         );
     }
@@ -97,11 +99,11 @@ class PageTest extends TestCase
         $translation = new PageI18n;
         $translation->setId(1);
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->addTranslation($translation)
         );
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->addTranslation($translation)
         );
     }
@@ -111,7 +113,7 @@ class PageTest extends TestCase
         $collection = new ArrayCollection();
         $collection->add(new PageI18n());
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->removeTranslations($collection)
         );
     }
@@ -119,7 +121,7 @@ class PageTest extends TestCase
     public function testRemoveTranslation()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->removeTranslation(new PageI18n)
         );
     }
@@ -140,7 +142,7 @@ class PageTest extends TestCase
     public function testSetStatus()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setStatus(PageEntity::STATUS_HIDDEN)
         );
     }
@@ -154,7 +156,7 @@ class PageTest extends TestCase
     {
         $cloned = clone $this->object;
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $cloned
         );
     }
@@ -170,7 +172,7 @@ class PageTest extends TestCase
     public function testSetTranslations()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setTranslations(new ArrayCollection())
         );
     }
@@ -185,7 +187,7 @@ class PageTest extends TestCase
     public function testSetUrlKey()
     {
         $this->assertInstanceOf(
-            'WellCart\CMS\Entity\Page',
+            Page::class,
             $this->object->setUrlKey('url_key')
         );
     }

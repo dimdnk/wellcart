@@ -8,9 +8,10 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\ItemView;
+namespace WellCart\Base\Test\Unit\ItemView;
 
 use PHPUnit\Framework\TestCase;
+use WellCart\Base\ItemView\HtmlHead;
 
 class HtmlHeadTest extends TestCase
 {

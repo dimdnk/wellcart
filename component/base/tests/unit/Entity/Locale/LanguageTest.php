@@ -8,10 +8,11 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Base\Entity\Locale;
+namespace WellCart\Base\Test\Unit\Entity\Locale;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
+use WellCart\Base\Entity\Locale\Language;
 
 class LanguageTest extends TestCase
 {

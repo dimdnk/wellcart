@@ -7,10 +7,11 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Base\Entity\Queue;
+namespace WellCart\Base\Test\Unit\Entity\Queue;
 
 use DateTime;
 use PHPUnit\Framework\TestCase;
+use WellCart\Base\Entity\Queue\Job;
 
 class JobTest extends TestCase
 {

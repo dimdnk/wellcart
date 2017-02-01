@@ -7,10 +7,11 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Base\Repository\Locale;
+namespace WellCart\Base\Test\Unit\Repository\Locale;
 
 use PHPUnit\Framework\TestCase;
 use WellCart\Base\Entity\Locale\Language;
+use WellCart\Base\Repository\Locale\LanguagesQuery;
 
 class LanguagesQueryTest extends TestCase
 {
