@@ -7,7 +7,7 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\CMS;
+namespace WellCart\CMS\Test\Unit;
 
 use PHPUnit\Framework\TestCase;
 use WellCart\ModuleManager\ModuleConfiguration;
