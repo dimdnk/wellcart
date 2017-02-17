@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 use WellCart\Directory\Module;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
+use Zend\Console\Console;
 
 class ModuleTest extends TestCase
 {
@@ -62,5 +63,10 @@ class ModuleTest extends TestCase
     public function testGetAbsolutePath()
     {
         $this->assertTrue(is_dir($this->object->getAbsolutePath()));
+    }
+
+    public function testGetConsoleUsage()
+    {
+      $this->assertInternalType('array', $this->object->getConsoleUsage(Console::getInstance()));
     }
 }

@@ -8,7 +8,6 @@ Thumbs.db
 .idea
 .project
 .settings
-.buildpath
 composer.lock
 /vendor
 /build
