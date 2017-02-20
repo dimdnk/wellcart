@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form\Element;
 
 use WellCart\Directory\Form\Element\ZoneSelector;
 
-class ZoneSelectorTest extends \PHPUnit_Framework_TestCase
+class ZoneSelectorTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ZoneSelector

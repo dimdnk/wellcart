@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Console;
 
 use WellCart\Directory\Controller\Console\UpdateCurrencyRatesController;
 
-class UpdateCurrencyRatesControllerTest extends \PHPUnit_Framework_TestCase
+class UpdateCurrencyRatesControllerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var UpdateCurrencyRatesController

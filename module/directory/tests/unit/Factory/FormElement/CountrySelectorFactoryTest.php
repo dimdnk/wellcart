@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Factory\FormElement;
 
 use WellCart\Directory\Factory\FormElement\CountrySelectorFactory;
 
-class CountrySelectorFactoryTest extends \PHPUnit_Framework_TestCase
+class CountrySelectorFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CountrySelectorFactory

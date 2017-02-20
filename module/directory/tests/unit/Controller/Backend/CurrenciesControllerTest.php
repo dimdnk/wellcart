@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\CurrenciesController;
 
-class CurrenciesControllerTest extends \PHPUnit_Framework_TestCase
+class CurrenciesControllerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CurrenciesController

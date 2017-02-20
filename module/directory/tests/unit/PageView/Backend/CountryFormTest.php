@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\CountryForm;
 
-class CountryFormTest extends \PHPUnit_Framework_TestCase
+class CountryFormTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CountryForm

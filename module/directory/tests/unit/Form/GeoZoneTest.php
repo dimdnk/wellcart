@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form;
 
 use WellCart\Directory\Form\GeoZone;
 
-class GeoZoneTest extends \PHPUnit_Framework_TestCase
+class GeoZoneTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GeoZone

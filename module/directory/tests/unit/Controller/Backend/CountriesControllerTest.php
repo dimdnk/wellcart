@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 use WellCart\Directory\Controller\Backend\CountriesController;
 
 
-class CountriesControllerTest extends \PHPUnit_Framework_TestCase
+class CountriesControllerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CountriesController

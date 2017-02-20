@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\EventListener\Entity;
 
 use WellCart\Directory\EventListener\Entity\CurrencyEntityListener;
 
-class CurrencyEntityListenerTest extends \PHPUnit_Framework_TestCase
+class CurrencyEntityListenerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CurrencyEntityListener

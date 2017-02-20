@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Factory\FormElement;
 
 use WellCart\Directory\Factory\FormElement\ZoneSelectorFactory;
 
-class ZoneSelectorFactoryTest extends \PHPUnit_Framework_TestCase
+class ZoneSelectorFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ZoneSelectorFactory

@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\PageView\Backend;
 
 use WellCart\CMS\PageView\Backend\PagesGrid;
 
-class PagesGridTest extends \PHPUnit_Framework_TestCase
+class PagesGridTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var PagesGrid

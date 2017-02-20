@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
 use WellCart\Directory\Factory\Controller\Backend\CurrenciesControllerFactory;
 
-class CurrenciesControllerFactoryTest extends \PHPUnit_Framework_TestCase
+class CurrenciesControllerFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CurrenciesControllerFactory

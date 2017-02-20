@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form;
 
 use WellCart\Directory\Form\Country;
 
-class CountryTest extends \PHPUnit_Framework_TestCase
+class CountryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Country

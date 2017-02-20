@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\CurrenciesQuery;
 
-class CurrenciesQueryTest extends \PHPUnit_Framework_TestCase
+class CurrenciesQueryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CurrenciesQuery

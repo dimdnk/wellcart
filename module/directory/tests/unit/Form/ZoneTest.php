@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form;
 
 use WellCart\Directory\Form\Zone;
 
-class ZoneTest extends \PHPUnit_Framework_TestCase
+class ZoneTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Zone

@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\ZonesQuery;
 
-class ZonesQueryTest extends \PHPUnit_Framework_TestCase
+class ZonesQueryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ZonesQuery

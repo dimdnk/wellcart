@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\Countries;
 
-class CountriesTest extends \PHPUnit_Framework_TestCase
+class CountriesTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Countries

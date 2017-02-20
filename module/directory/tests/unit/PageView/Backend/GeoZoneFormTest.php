@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\GeoZoneForm;
 
-class GeoZoneFormTest extends \PHPUnit_Framework_TestCase
+class GeoZoneFormTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GeoZoneForm

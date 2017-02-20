@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\Currencies;
 
-class CurrenciesTest extends \PHPUnit_Framework_TestCase
+class CurrenciesTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Currencies

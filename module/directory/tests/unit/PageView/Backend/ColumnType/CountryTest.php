@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend\ColumnType;
 
 use WellCart\Directory\PageView\Backend\ColumnType\Country;
 
-class CountryTest extends \PHPUnit_Framework_TestCase
+class CountryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Country

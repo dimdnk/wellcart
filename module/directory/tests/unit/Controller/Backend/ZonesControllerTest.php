@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\ZonesController;
 
-class ZonesControllerTest extends \PHPUnit_Framework_TestCase
+class ZonesControllerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ZonesController

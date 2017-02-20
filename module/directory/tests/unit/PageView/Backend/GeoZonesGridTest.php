@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\GeoZonesGrid;
 
-class GeoZonesGridTest extends \PHPUnit_Framework_TestCase
+class GeoZonesGridTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GeoZonesGrid

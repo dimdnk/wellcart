@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\Zones;
 
-class ZonesTest extends \PHPUnit_Framework_TestCase
+class ZonesTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Zones

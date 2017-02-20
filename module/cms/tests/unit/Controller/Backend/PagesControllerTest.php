@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\Controller\Backend;
 
 use WellCart\CMS\Controller\Backend\PagesController;
 
-class PagesControllerTest extends \PHPUnit_Framework_TestCase
+class PagesControllerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var PagesController

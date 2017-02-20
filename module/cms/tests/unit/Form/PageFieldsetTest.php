@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\Form;
 
 use WellCart\CMS\Form\PageFieldset;
 
-class PageFieldsetTest extends \PHPUnit_Framework_TestCase
+class PageFieldsetTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var PageFieldset

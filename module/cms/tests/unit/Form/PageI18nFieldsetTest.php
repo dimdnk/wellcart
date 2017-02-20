@@ -4,7 +4,7 @@ namespace WellCart\CMS\Test\Unit\Form;
 
 use WellCart\CMS\Form\PageI18nFieldset;
 
-class PageI18nFieldsetTest extends \PHPUnit_Framework_TestCase
+class PageI18nFieldsetTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var PageI18nFieldset

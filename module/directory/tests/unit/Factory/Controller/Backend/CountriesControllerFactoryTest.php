@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
 use WellCart\Directory\Factory\Controller\Backend\CountriesControllerFactory;
 
-class CountriesControllerFactoryTest extends \PHPUnit_Framework_TestCase
+class CountriesControllerFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CountriesControllerFactory

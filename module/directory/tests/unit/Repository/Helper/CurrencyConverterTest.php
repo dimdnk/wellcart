@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository\Helper;
 
 use WellCart\Directory\Repository\Helper\CurrencyConverter;
 
-class CurrencyConverterTest extends \PHPUnit_Framework_TestCase
+class CurrencyConverterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CurrencyConverter

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\ZoneForm;
 
-class ZoneFormTest extends \PHPUnit_Framework_TestCase
+class ZoneFormTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ZoneForm

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\CurrencyForm;
 
-class CurrencyFormTest extends \PHPUnit_Framework_TestCase
+class CurrencyFormTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CurrencyForm

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\GeoZoneMapsQuery;
 
-class GeoZoneMapsQueryTest extends \PHPUnit_Framework_TestCase
+class GeoZoneMapsQueryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GeoZoneMapsQuery

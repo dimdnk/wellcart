@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
 use WellCart\Directory\Factory\Controller\Backend\GeoZonesControllerFactory;
 
-class GeoZonesControllerFactoryTest extends \PHPUnit_Framework_TestCase
+class GeoZonesControllerFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GeoZonesControllerFactory

@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\PageView\Backend;
 
 use WellCart\CMS\PageView\Backend\PageForm;
 
-class PageFormTest extends \PHPUnit_Framework_TestCase
+class PageFormTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var PageForm

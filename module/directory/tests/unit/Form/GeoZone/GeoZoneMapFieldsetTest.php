@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Form\GeoZone;
 
 use WellCart\Directory\Form\GeoZone\GeoZoneMapFieldset;
 
-class GeoZoneMapFieldsetTest extends \PHPUnit_Framework_TestCase
+class GeoZoneMapFieldsetTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var GeoZoneMapFieldset

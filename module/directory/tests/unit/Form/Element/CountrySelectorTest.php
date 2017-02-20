@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Form\Element;
 
 use WellCart\Directory\Form\Element\CountrySelector;
 
-class CountrySelectorTest extends \PHPUnit_Framework_TestCase
+class CountrySelectorTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var CountrySelector
