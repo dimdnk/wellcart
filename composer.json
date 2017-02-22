@@ -108,6 +108,7 @@
     "prolic/humus-amqp-module": "dev-master"
   },
   "require-dev": {
+    "phpunit/phpunit-skeleton-generator": "*", 
     "phpunit/phpunit": "^5.7.0",
     "codeception/codeception": "2.2.*",
     "edgedesign/phpqa": "^1.9.1",
