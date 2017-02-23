@@ -26,6 +26,7 @@ class PageTest extends TestCase
 
     public function setUp()
     {
+      parent::setUp();
         $this->object = new Page();
     }
 

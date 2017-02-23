@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\Test\Unit\ItemView;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\ItemView\Text;
 
 class TextTest extends TestCase

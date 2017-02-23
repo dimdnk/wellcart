@@ -4,7 +4,7 @@ namespace WellCart\Catalog\Test\Unit\Command;
 use WellCart\Catalog\Command\PersistProduct;
 
 
-class PersistProductTest extends \PHPUnit\Framework\TestCase
+class PersistProductTest extends \WellCart\Test\TestCase
 {
     /**
      * @var PersistProduct
@@ -17,6 +17,7 @@ class PersistProductTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new PersistProduct();
     }
 

@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\Test\Unit\Repository;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\Repository\UrlRewrites;
 use WellCart\Base\Repository\UrlRewritesQuery;
 use WellCart\Base\Spec\UrlRewriteRepository;

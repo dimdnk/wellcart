@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\Controller\Backend;
 
 use WellCart\CMS\Controller\Backend\PagesController;
 
-class PagesControllerTest extends \PHPUnit\Framework\TestCase
+class PagesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var PagesController
@@ -16,6 +16,7 @@ class PagesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new PagesController;
     }
 

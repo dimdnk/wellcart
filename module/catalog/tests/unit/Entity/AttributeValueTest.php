@@ -3,7 +3,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 
 use WellCart\Catalog\Entity\AttributeValue;
 
-class AttributeValueTest extends \PHPUnit\Framework\TestCase
+class AttributeValueTest extends \WellCart\Test\TestCase
 {
     /**
      * @var AttributeValue
@@ -16,6 +16,7 @@ class AttributeValueTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new AttributeValue;
     }
 

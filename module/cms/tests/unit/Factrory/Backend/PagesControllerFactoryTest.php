@@ -10,9 +10,9 @@ namespace WellCart\CMS\Test\Unit\Factory\Controller\Backend;
 
 use WellCart\CMS\Controller\Backend\PagesController;
 use WellCart\CMS\Factory\Controller\Backend\PagesControllerFactory;
-use WellCart\Test\Factory\FactoryTestCase;
+use WellCart\Test\TestCase;
 
-class PagesControllerFactoryTest extends FactoryTestCase
+class PagesControllerFactoryTest extends TestCase
 {
   /**
    * @var PagesControllerFactory

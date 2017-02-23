@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Backend\Test\Unit\Entity;
 
 use DateTime;
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Backend\Entity\Notification;
 
 class NotificationTest extends TestCase
@@ -24,6 +24,7 @@ class NotificationTest extends TestCase
 
     public function setUp()
     {
+      parent::setUp();
         $this->object = new Notification();
     }
 

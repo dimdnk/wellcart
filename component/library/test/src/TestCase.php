@@ -8,17 +8,22 @@
 
 declare(strict_types = 1);
 
-namespace WellCart\Test\Factory;
+namespace WellCart\Test;
 
-use PHPUnit\Framework\TestCase;
 use Interop\Container\ContainerInterface;
+use WellCart\Mvc\Application;
 
-abstract class FactoryTestCase extends TestCase
+abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
+  /**
+   * @var Application
+   */
+  protected $application;
   /**
    * @var ContainerInterface
    */
   protected $container;
+
 
   /**
    * Sets up the fixture, for example, open a network connection.
@@ -27,6 +32,7 @@ abstract class FactoryTestCase extends TestCase
   protected function setUp()
   {
     parent::setUp();
-    $this->container = application()->getServiceManager();
+    $this->application = application();
+    $this->container = $this->application->getServiceManager();
   }
 }

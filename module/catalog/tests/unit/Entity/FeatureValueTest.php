@@ -3,7 +3,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 
 use WellCart\Catalog\Entity\FeatureValue;
 
-class FeatureValueTest extends \PHPUnit\Framework\TestCase
+class FeatureValueTest extends \WellCart\Test\TestCase
 {
     /**
      * @var FeatureValue
@@ -16,6 +16,7 @@ class FeatureValueTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new FeatureValue;
     }
 

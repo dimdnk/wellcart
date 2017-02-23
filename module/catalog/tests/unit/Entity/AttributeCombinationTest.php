@@ -4,7 +4,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 
 use WellCart\Catalog\Entity\AttributeCombination;
 
-class AttributeCombinationTest extends \PHPUnit\Framework\TestCase
+class AttributeCombinationTest extends \WellCart\Test\TestCase
 {
     /**
      * @var AttributeCombination
@@ -17,6 +17,7 @@ class AttributeCombinationTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new AttributeCombination;
     }
 

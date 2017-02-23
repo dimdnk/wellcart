@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\CurrenciesController;
 
-class CurrenciesControllerTest extends \PHPUnit\Framework\TestCase
+class CurrenciesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrenciesController
@@ -16,6 +16,7 @@ class CurrenciesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrenciesController();
     }
 

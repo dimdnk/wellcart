@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository\Helper;
 
 use WellCart\Directory\Repository\Helper\CurrencyConverter;
 
-class CurrencyConverterTest extends \PHPUnit\Framework\TestCase
+class CurrencyConverterTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrencyConverter
@@ -16,6 +16,7 @@ class CurrencyConverterTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrencyConverter;
     }
 

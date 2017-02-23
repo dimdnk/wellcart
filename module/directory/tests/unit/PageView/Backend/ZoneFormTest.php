@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\ZoneForm;
 
-class ZoneFormTest extends \PHPUnit\Framework\TestCase
+class ZoneFormTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZoneForm
@@ -16,6 +16,7 @@ class ZoneFormTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZoneForm;
     }
 

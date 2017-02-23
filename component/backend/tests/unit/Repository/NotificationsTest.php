@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Backend\Test\Unit\Repository;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Backend\Repository\Notifications;
 use WellCart\Backend\Repository\NotificationsQuery;
 use WellCart\Backend\Spec\NotificationRepository;

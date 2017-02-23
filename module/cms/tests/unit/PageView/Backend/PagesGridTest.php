@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\PageView\Backend;
 
 use WellCart\CMS\PageView\Backend\PagesGrid;
 
-class PagesGridTest extends \PHPUnit\Framework\TestCase
+class PagesGridTest extends \WellCart\Test\TestCase
 {
     /**
      * @var PagesGrid
@@ -16,6 +16,7 @@ class PagesGridTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new PagesGrid();
     }
 

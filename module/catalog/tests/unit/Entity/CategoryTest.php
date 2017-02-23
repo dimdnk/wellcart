@@ -4,7 +4,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 use WellCart\Catalog\Entity\Category;
 
 
-class CategoryTest extends \PHPUnit\Framework\TestCase
+class CategoryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Category
@@ -17,6 +17,7 @@ class CategoryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Category;
     }
 

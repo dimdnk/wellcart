@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\CurrencyForm;
 
-class CurrencyFormTest extends \PHPUnit\Framework\TestCase
+class CurrencyFormTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrencyForm
@@ -16,6 +16,7 @@ class CurrencyFormTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrencyForm;
     }
 

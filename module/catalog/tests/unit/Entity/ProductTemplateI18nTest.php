@@ -3,7 +3,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 
 use WellCart\Catalog\Entity\ProductTemplateI18n;
 
-class ProductTemplateI18nTest extends \PHPUnit\Framework\TestCase
+class ProductTemplateI18nTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ProductTemplateI18n
@@ -16,6 +16,7 @@ class ProductTemplateI18nTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ProductTemplateI18n;
     }
 

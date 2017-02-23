@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\Form;
 
 use WellCart\CMS\Form\Page;
 
-class PageTest extends \PHPUnit\Framework\TestCase
+class PageTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Page
@@ -16,6 +16,7 @@ class PageTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Page;
     }
 

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Console;
 
 use WellCart\Directory\Controller\Console\UpdateCurrencyRatesController;
 
-class UpdateCurrencyRatesControllerTest extends \PHPUnit\Framework\TestCase
+class UpdateCurrencyRatesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var UpdateCurrencyRatesController
@@ -16,6 +16,7 @@ class UpdateCurrencyRatesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new UpdateCurrencyRatesController;
     }
 

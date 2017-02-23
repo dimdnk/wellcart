@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\ZonesQuery;
 
-class ZonesQueryTest extends \PHPUnit\Framework\TestCase
+class ZonesQueryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZonesQuery
@@ -17,6 +17,7 @@ class ZonesQueryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZonesQuery;
     }
 

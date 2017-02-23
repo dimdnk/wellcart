@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\GeoZoneMapsQuery;
 
-class GeoZoneMapsQueryTest extends \PHPUnit\Framework\TestCase
+class GeoZoneMapsQueryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var GeoZoneMapsQuery
@@ -16,6 +16,7 @@ class GeoZoneMapsQueryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new GeoZoneMapsQuery;
     }
 

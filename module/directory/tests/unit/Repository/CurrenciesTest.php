@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\Currencies;
 
-class CurrenciesTest extends \PHPUnit\Framework\TestCase
+class CurrenciesTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Currencies
@@ -17,6 +17,7 @@ class CurrenciesTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Currencies;
     }
 

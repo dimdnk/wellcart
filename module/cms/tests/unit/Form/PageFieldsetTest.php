@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\Form;
 
 use WellCart\CMS\Form\PageFieldset;
 
-class PageFieldsetTest extends \PHPUnit\Framework\TestCase
+class PageFieldsetTest extends \WellCart\Test\TestCase
 {
     /**
      * @var PageFieldset
@@ -16,6 +16,7 @@ class PageFieldsetTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new PageFieldset;
     }
 

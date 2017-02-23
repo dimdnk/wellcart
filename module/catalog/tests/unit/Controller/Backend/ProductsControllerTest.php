@@ -3,7 +3,7 @@ namespace WellCart\Catalog\Test\Unit\Controller\Backend;
 
 use WellCart\Catalog\Controller\Backend\ProductsController;
 
-class ProductsControllerTest extends \PHPUnit\Framework\TestCase
+class ProductsControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ProductsController
@@ -16,6 +16,7 @@ class ProductsControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ProductsController;
     }
 

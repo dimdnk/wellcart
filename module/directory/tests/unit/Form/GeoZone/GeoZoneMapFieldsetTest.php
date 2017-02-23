@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Form\GeoZone;
 
 use WellCart\Directory\Form\GeoZone\GeoZoneMapFieldset;
 
-class GeoZoneMapFieldsetTest extends \PHPUnit\Framework\TestCase
+class GeoZoneMapFieldsetTest extends \WellCart\Test\TestCase
 {
     /**
      * @var GeoZoneMapFieldset
@@ -16,6 +16,7 @@ class GeoZoneMapFieldsetTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new GeoZoneMapFieldset;
     }
 

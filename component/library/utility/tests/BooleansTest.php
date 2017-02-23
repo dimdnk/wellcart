@@ -8,7 +8,7 @@
 
 namespace WellCart\Utility;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 
 /**
  * Boolean helper test.
@@ -83,6 +83,7 @@ class BooleansTest extends TestCase
 
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Booleans();
     }
 

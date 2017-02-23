@@ -3,7 +3,7 @@ namespace WellCart\Catalog\Test\Unit\Controller\Backend;
 
 use WellCart\Catalog\Controller\Backend\AttributesController;
 
-class AttributesControllerTest extends \PHPUnit\Framework\TestCase
+class AttributesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var AttributesController
@@ -16,6 +16,7 @@ class AttributesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new AttributesController;
     }
 

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\CountriesGrid;
 
-class CountriesGridTest extends \PHPUnit\Framework\TestCase
+class CountriesGridTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CountriesGrid
@@ -16,6 +16,7 @@ class CountriesGridTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CountriesGrid;
     }
 

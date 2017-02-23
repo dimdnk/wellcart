@@ -10,7 +10,7 @@ declare(strict_types = 1);
 namespace WellCart\Base\Test\Unit\Entity\Queue;
 
 use DateTime;
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\Entity\Queue\Job;
 
 class JobTest extends TestCase
@@ -23,6 +23,7 @@ class JobTest extends TestCase
 
     public function setUp()
     {
+      parent::setUp();
         $this->object = new Job();
     }
 

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\ZonesController;
 
-class ZonesControllerTest extends \PHPUnit\Framework\TestCase
+class ZonesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZonesController
@@ -16,6 +16,7 @@ class ZonesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZonesController();
     }
 

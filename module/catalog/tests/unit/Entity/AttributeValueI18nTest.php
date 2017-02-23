@@ -4,7 +4,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 use WellCart\Catalog\Entity\AttributeValueI18n;
 
 
-class AttributeValueI18nTest extends \PHPUnit\Framework\TestCase
+class AttributeValueI18nTest extends \WellCart\Test\TestCase
 {
     /**
      * @var AttributeValueI18n
@@ -17,6 +17,7 @@ class AttributeValueI18nTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new AttributeValueI18n;
     }
 

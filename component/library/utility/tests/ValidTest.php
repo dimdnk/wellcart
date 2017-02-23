@@ -9,7 +9,7 @@
 namespace WellCart\Utility;
 
 use ArrayObject;
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 
 class ValidTest extends TestCase
 {

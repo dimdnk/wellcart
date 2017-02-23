@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\EventListener\Entity;
 
 use WellCart\Directory\EventListener\Entity\CurrencyEntityListener;
 
-class CurrencyEntityListenerTest extends \PHPUnit\Framework\TestCase
+class CurrencyEntityListenerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrencyEntityListener
@@ -16,6 +16,7 @@ class CurrencyEntityListenerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrencyEntityListener;
     }
 

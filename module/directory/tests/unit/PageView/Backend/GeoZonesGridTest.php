@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\GeoZonesGrid;
 
-class GeoZonesGridTest extends \PHPUnit\Framework\TestCase
+class GeoZonesGridTest extends \WellCart\Test\TestCase
 {
     /**
      * @var GeoZonesGrid
@@ -16,6 +16,7 @@ class GeoZonesGridTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new GeoZonesGrid;
     }
 

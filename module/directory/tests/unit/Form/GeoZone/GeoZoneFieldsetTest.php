@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form\GeoZone;
 
 use WellCart\Directory\Form\GeoZone\GeoZoneFieldset;
 
-class GeoZoneFieldsetTest extends \PHPUnit\Framework\TestCase
+class GeoZoneFieldsetTest extends \WellCart\Test\TestCase
 {
     /**
      * @var GeoZoneFieldset
@@ -17,6 +17,7 @@ class GeoZoneFieldsetTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new GeoZoneFieldset;
     }
 

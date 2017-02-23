@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Entity;
 
 use WellCart\Directory\Entity\Country;
 
-class CountryTest extends \PHPUnit\Framework\TestCase
+class CountryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Country
@@ -17,6 +17,7 @@ class CountryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Country;
     }
 

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\GeoZonesController;
 
-class GeoZonesControllerTest extends \PHPUnit\Framework\TestCase
+class GeoZonesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var GeoZonesController
@@ -16,6 +16,7 @@ class GeoZonesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new GeoZonesController();
     }
 

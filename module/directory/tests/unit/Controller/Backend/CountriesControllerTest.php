@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Controller\Backend;
 use WellCart\Directory\Controller\Backend\CountriesController;
 
 
-class CountriesControllerTest extends \PHPUnit\Framework\TestCase
+class CountriesControllerTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CountriesController
@@ -17,6 +17,7 @@ class CountriesControllerTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CountriesController();
     }
 

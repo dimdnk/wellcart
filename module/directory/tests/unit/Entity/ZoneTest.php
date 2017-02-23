@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Entity;
 
 use WellCart\Directory\Entity\Zone;
 
-class ZoneTest extends \PHPUnit\Framework\TestCase
+class ZoneTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Zone
@@ -16,6 +16,7 @@ class ZoneTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Zone;
     }
 

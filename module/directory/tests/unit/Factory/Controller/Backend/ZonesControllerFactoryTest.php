@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
 use WellCart\Directory\Factory\Controller\Backend\ZonesControllerFactory;
 
-class ZonesControllerFactoryTest extends \PHPUnit\Framework\TestCase
+class ZonesControllerFactoryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZonesControllerFactory
@@ -16,6 +16,7 @@ class ZonesControllerFactoryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZonesControllerFactory;
     }
 

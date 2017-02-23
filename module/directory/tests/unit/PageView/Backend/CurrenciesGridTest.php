@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\CurrenciesGrid;
 
-class CurrenciesGridTest extends \PHPUnit\Framework\TestCase
+class CurrenciesGridTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrenciesGrid
@@ -16,6 +16,7 @@ class CurrenciesGridTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrenciesGrid;
     }
 

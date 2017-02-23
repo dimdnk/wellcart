@@ -8,7 +8,7 @@
 
 namespace WellCart\Utility;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 
 /**
  * Test for PHP Environment initializer

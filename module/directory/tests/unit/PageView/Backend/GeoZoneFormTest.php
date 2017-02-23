@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\GeoZoneForm;
 
-class GeoZoneFormTest extends \PHPUnit\Framework\TestCase
+class GeoZoneFormTest extends \WellCart\Test\TestCase
 {
     /**
      * @var GeoZoneForm
@@ -16,6 +16,7 @@ class GeoZoneFormTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new GeoZoneForm;
     }
 

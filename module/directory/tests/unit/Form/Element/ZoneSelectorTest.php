@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form\Element;
 
 use WellCart\Directory\Form\Element\ZoneSelector;
 
-class ZoneSelectorTest extends \PHPUnit\Framework\TestCase
+class ZoneSelectorTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZoneSelector
@@ -17,6 +17,7 @@ class ZoneSelectorTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZoneSelector;
     }
 

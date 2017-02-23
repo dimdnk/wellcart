@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\CountryForm;
 
-class CountryFormTest extends \PHPUnit\Framework\TestCase
+class CountryFormTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CountryForm
@@ -16,6 +16,7 @@ class CountryFormTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CountryForm();
     }
 

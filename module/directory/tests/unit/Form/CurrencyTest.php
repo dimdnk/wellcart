@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Form;
 
 use WellCart\Directory\Form\Currency;
 
-class CurrencyTest extends \PHPUnit\Framework\TestCase
+class CurrencyTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Currency
@@ -17,6 +17,7 @@ class CurrencyTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Currency;
     }
 

@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\CurrenciesQuery;
 
-class CurrenciesQueryTest extends \PHPUnit\Framework\TestCase
+class CurrenciesQueryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrenciesQuery
@@ -16,6 +16,7 @@ class CurrenciesQueryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrenciesQuery;
     }
 

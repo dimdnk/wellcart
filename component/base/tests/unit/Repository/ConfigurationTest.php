@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\Test\Unit\Repository;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\Entity\Configuration;
 use WellCart\Base\Repository\ConfigurationQuery;
 use WellCart\Base\Spec\ConfigurationRepository;

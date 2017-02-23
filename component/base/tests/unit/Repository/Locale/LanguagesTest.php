@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\Test\Unit\Repository\Locale;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\Repository\Locale\Languages;
 use WellCart\Base\Repository\Locale\LanguagesQuery;
 use WellCart\Base\Spec\LocaleLanguageEntity;

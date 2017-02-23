@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\Test\Unit;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\Module;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;
@@ -24,6 +24,7 @@ class ModuleTest extends TestCase
 
     public function setUp()
     {
+      parent::setUp();
         $this->object = new Module();
     }
 

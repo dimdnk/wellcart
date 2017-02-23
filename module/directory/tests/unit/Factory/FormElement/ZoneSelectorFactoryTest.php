@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Factory\FormElement;
 
 use WellCart\Directory\Factory\FormElement\ZoneSelectorFactory;
 
-class ZoneSelectorFactoryTest extends \PHPUnit\Framework\TestCase
+class ZoneSelectorFactoryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZoneSelectorFactory
@@ -16,6 +16,7 @@ class ZoneSelectorFactoryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZoneSelectorFactory;
     }
 

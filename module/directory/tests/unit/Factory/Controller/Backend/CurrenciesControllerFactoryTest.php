@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
 use WellCart\Directory\Factory\Controller\Backend\CurrenciesControllerFactory;
 
-class CurrenciesControllerFactoryTest extends \PHPUnit\Framework\TestCase
+class CurrenciesControllerFactoryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CurrenciesControllerFactory
@@ -17,6 +17,7 @@ class CurrenciesControllerFactoryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CurrenciesControllerFactory;
     }
 

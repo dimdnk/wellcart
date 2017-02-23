@@ -3,7 +3,7 @@ namespace WellCart\CMS\Test\Unit\PageView\Backend;
 
 use WellCart\CMS\PageView\Backend\PageForm;
 
-class PageFormTest extends \PHPUnit\Framework\TestCase
+class PageFormTest extends \WellCart\Test\TestCase
 {
     /**
      * @var PageForm
@@ -16,6 +16,7 @@ class PageFormTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new PageForm();
     }
 

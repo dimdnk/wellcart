@@ -4,7 +4,7 @@ namespace WellCart\CMS\Test\Unit\Form;
 
 use WellCart\CMS\Form\PageI18nFieldset;
 
-class PageI18nFieldsetTest extends \PHPUnit\Framework\TestCase
+class PageI18nFieldsetTest extends \WellCart\Test\TestCase
 {
     /**
      * @var PageI18nFieldset
@@ -17,6 +17,7 @@ class PageI18nFieldsetTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new PageI18nFieldset;
     }
 

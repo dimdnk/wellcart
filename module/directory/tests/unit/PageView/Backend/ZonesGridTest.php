@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\PageView\Backend;
 
 use WellCart\Directory\PageView\Backend\ZonesGrid;
 
-class ZonesGridTest extends \PHPUnit\Framework\TestCase
+class ZonesGridTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ZonesGrid
@@ -16,6 +16,7 @@ class ZonesGridTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ZonesGrid;
     }
 

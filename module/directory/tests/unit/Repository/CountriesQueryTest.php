@@ -3,7 +3,7 @@ namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\CountriesQuery;
 
-class CountriesQueryTest extends \PHPUnit\Framework\TestCase
+class CountriesQueryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CountriesQuery
@@ -16,6 +16,7 @@ class CountriesQueryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CountriesQuery;
     }
 

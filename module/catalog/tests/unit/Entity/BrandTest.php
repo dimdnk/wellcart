@@ -4,7 +4,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 
 use WellCart\Catalog\Entity\Brand;
 
-class BrandTest extends \PHPUnit\Framework\TestCase
+class BrandTest extends \WellCart\Test\TestCase
 {
     /**
      * @var Brand
@@ -17,6 +17,7 @@ class BrandTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new Brand;
     }
 

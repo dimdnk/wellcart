@@ -4,7 +4,7 @@ namespace WellCart\Catalog\Test\Unit\Entity;
 use WellCart\Catalog\Entity\ProductImage;
 
 
-class ProductImageTest extends \PHPUnit\Framework\TestCase
+class ProductImageTest extends \WellCart\Test\TestCase
 {
     /**
      * @var ProductImage
@@ -17,6 +17,7 @@ class ProductImageTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new ProductImage;
     }
 

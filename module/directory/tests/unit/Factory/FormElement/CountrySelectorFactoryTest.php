@@ -4,7 +4,7 @@ namespace WellCart\Directory\Test\Unit\Factory\FormElement;
 
 use WellCart\Directory\Factory\FormElement\CountrySelectorFactory;
 
-class CountrySelectorFactoryTest extends \PHPUnit\Framework\TestCase
+class CountrySelectorFactoryTest extends \WellCart\Test\TestCase
 {
     /**
      * @var CountrySelectorFactory
@@ -17,6 +17,7 @@ class CountrySelectorFactoryTest extends \PHPUnit\Framework\TestCase
      */
     protected function setUp()
     {
+      parent::setUp();
         $this->object = new CountrySelectorFactory;
     }
 

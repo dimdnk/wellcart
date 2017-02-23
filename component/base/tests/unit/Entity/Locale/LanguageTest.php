@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Base\Test\Unit\Entity\Locale;
 
 use DateTime;
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Base\Entity\Locale\Language;
 
 class LanguageTest extends TestCase
@@ -24,6 +24,7 @@ class LanguageTest extends TestCase
 
     public function setUp()
     {
+      parent::setUp();
         $this->object = new Language();
     }
 
