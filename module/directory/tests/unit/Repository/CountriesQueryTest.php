@@ -52,7 +52,7 @@ class CountriesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CountriesQuery;
+        $this->object = new CountriesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

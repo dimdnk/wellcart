@@ -2,25 +2,20 @@
 
 namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
+use WellCart\Directory\Controller\Backend\CountriesController;
 use WellCart\Directory\Factory\Controller\Backend\CountriesControllerFactory;
 
 class CountriesControllerFactoryTest extends \WellCart\Test\TestCase
 {
-
     /**
      * @var CountriesControllerFactory
      */
     protected $object;
 
-    /**
-     * @todo   Implement testInvoke().
-     */
     public function testInvoke()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertInstanceOf(CountriesController::class,
+            $this->object->__invoke($this->container->get('ControllerManager')));
     }
 
     /**

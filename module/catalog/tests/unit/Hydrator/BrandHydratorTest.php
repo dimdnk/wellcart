@@ -31,7 +31,7 @@ class BrandHydratorTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new BrandHydrator;
+        $this->object = new BrandHydrator($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

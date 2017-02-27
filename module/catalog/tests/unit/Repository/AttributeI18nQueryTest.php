@@ -41,7 +41,7 @@ class AttributeI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new AttributeI18nQuery;
+        $this->object = new AttributeI18nQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

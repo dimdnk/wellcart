@@ -63,7 +63,7 @@ class CategoryI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CategoryI18nQuery;
+        $this->object = new CategoryI18nQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

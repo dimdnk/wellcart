@@ -31,7 +31,7 @@ class AttributesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new AttributesQuery;
+        $this->object = new AttributesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

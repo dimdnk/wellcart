@@ -42,7 +42,7 @@ class ZonesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ZonesQuery;
+        $this->object = new ZonesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
+use WellCart\Directory\Controller\Backend\ZonesController;
 use WellCart\Directory\Factory\Controller\Backend\ZonesControllerFactory;
 
 class ZonesControllerFactoryTest extends \WellCart\Test\TestCase
@@ -12,15 +13,10 @@ class ZonesControllerFactoryTest extends \WellCart\Test\TestCase
      */
     protected $object;
 
-    /**
-     * @todo   Implement testInvoke().
-     */
     public function testInvoke()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertInstanceOf(ZonesController::class,
+            $this->object->__invoke($this->container->get('ControllerManager')));
     }
 
     /**

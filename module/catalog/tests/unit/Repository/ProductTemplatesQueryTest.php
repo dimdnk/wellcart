@@ -31,7 +31,7 @@ class ProductTemplatesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductTemplatesQuery;
+        $this->object = new ProductTemplatesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

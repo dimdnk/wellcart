@@ -41,7 +41,7 @@ class ProductImagesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductImagesQuery;
+        $this->object = new ProductImagesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

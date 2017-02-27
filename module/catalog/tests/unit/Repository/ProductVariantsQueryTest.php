@@ -20,7 +20,7 @@ class ProductVariantsQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductVariantsQuery;
+        $this->object = new ProductVariantsQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

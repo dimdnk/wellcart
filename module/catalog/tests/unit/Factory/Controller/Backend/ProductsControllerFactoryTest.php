@@ -2,6 +2,7 @@
 
 namespace WellCart\Catalog\Test\Unit\Factory\Controller\Backend;
 
+use WellCart\Catalog\Controller\Backend\ProductsController;
 use WellCart\Catalog\Factory\Controller\Backend\ProductsControllerFactory;
 
 class ProductsControllerFactoryTest extends \WellCart\Test\TestCase
@@ -17,10 +18,8 @@ class ProductsControllerFactoryTest extends \WellCart\Test\TestCase
      */
     public function testInvoke()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertInstanceOf(ProductsController::class,
+            $this->object->__invoke($this->container->get('ControllerManager')));
     }
 
     /**

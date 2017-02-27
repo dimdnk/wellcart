@@ -30,7 +30,7 @@ class FeatureValuesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new FeatureValuesQuery;
+        $this->object = new FeatureValuesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

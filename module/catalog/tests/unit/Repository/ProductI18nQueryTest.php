@@ -53,7 +53,7 @@ class ProductI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductI18nQuery;
+        $this->object = new ProductI18nQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

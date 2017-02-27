@@ -3,6 +3,7 @@
 namespace WellCart\Directory\Test\Unit\Factory\Controller\Backend;
 
 
+use WellCart\Directory\Controller\Backend\CurrenciesController;
 use WellCart\Directory\Factory\Controller\Backend\CurrenciesControllerFactory;
 
 class CurrenciesControllerFactoryTest extends \WellCart\Test\TestCase
@@ -13,15 +14,10 @@ class CurrenciesControllerFactoryTest extends \WellCart\Test\TestCase
      */
     protected $object;
 
-    /**
-     * @todo   Implement testInvoke().
-     */
     public function testInvoke()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertInstanceOf(CurrenciesController::class,
+            $this->object->__invoke($this->container->get('ControllerManager')));
     }
 
     /**

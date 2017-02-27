@@ -19,7 +19,7 @@ class BrandsQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new BrandsQuery;
+        $this->object = new BrandsQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

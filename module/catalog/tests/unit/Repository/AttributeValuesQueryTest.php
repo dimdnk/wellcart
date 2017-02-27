@@ -30,7 +30,7 @@ class AttributeValuesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new AttributeValuesQuery;
+        $this->object = new AttributeValuesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

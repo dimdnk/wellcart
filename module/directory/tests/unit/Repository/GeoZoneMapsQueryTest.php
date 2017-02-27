@@ -19,7 +19,7 @@ class GeoZoneMapsQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new GeoZoneMapsQuery;
+        $this->object = new GeoZoneMapsQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

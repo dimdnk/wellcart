@@ -97,7 +97,7 @@ class CategoriesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CategoriesQuery;
+        $this->object = new CategoriesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

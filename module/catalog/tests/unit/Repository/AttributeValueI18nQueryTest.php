@@ -30,7 +30,7 @@ class AttributeValueI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new AttributeValueI18nQuery;
+        $this->object = new AttributeValueI18nQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**

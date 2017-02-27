@@ -52,7 +52,7 @@ class CurrenciesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CurrenciesQuery;
+        $this->object = new CurrenciesQuery($this->container->get('Doctrine\ORM\EntityManager'));
     }
 
     /**
