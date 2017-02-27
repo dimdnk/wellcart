@@ -1,4 +1,5 @@
 <?php
+
 namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\CountriesController;
@@ -6,28 +7,11 @@ use WellCart\Directory\Controller\Backend\CountriesController;
 
 class CountriesControllerTest extends \WellCart\Test\TestCase
 {
+
     /**
      * @var CountriesController
      */
     protected $object;
-
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp()
-    {
-      parent::setUp();
-        $this->object = new CountriesController();
-    }
-
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
-    }
 
     /**
      * @todo   Implement testListAction().
@@ -126,5 +110,23 @@ class CountriesControllerTest extends \WellCart\Test\TestCase
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
         );
+    }
+
+    /**
+     * Sets up the fixture, for example, opens a network connection.
+     * This method is called before a test is executed.
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->object = new CountriesController();
+    }
+
+    /**
+     * Tears down the fixture, for example, closes a network connection.
+     * This method is called after a test is executed.
+     */
+    protected function tearDown()
+    {
     }
 }

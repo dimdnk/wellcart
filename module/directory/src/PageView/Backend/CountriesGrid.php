@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace WellCart\Directory\PageView\Backend;
 
@@ -15,10 +15,10 @@ use WellCart\Directory\Exception;
 use WellCart\Directory\Spec\CountryRepository;
 use WellCart\ORM\Repository;
 use WellCart\Ui\Datagrid;
-use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 
 class CountriesGrid extends Standard
 {
+
     /**
      * Canonical grid name
      */

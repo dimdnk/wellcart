@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace WellCart\Directory\Controller\Console;
 
@@ -39,7 +39,8 @@ class UpdateCurrencyRatesController extends AbstractConsoleController implements
                     Color::GREEN
                 );
             }
-        } catch (\Throwable $e) {
+        }
+        catch (\Throwable $e) {
             $this->getLogger()->crit($e);
             $console->writeLine(
                 sprintf("Error during import: %s", $e->getMessage()),

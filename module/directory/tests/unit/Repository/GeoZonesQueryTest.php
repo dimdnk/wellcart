@@ -1,10 +1,12 @@
 <?php
+
 namespace WellCart\Directory\Test\Unit\Repository;
 
 use WellCart\Directory\Repository\GeoZonesQuery;
 
 class GeoZonesQueryTest extends \WellCart\Test\TestCase
 {
+
     /**
      * @var GeoZonesQuery
      */
@@ -16,7 +18,7 @@ class GeoZonesQueryTest extends \WellCart\Test\TestCase
      */
     protected function setUp()
     {
-      parent::setUp();
+        parent::setUp();
         $this->object = new GeoZonesQuery;
     }
 

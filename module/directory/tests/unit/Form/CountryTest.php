@@ -1,4 +1,5 @@
 <?php
+
 namespace WellCart\Directory\Test\Unit\Form;
 
 
@@ -6,28 +7,11 @@ use WellCart\Directory\Form\Country;
 
 class CountryTest extends \WellCart\Test\TestCase
 {
+
     /**
      * @var Country
      */
     protected $object;
-
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp()
-    {
-      parent::setUp();
-        $this->object = new Country;
-    }
-
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
-    }
 
     /**
      * @todo   Implement testBind().
@@ -49,5 +33,23 @@ class CountryTest extends \WellCart\Test\TestCase
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
         );
+    }
+
+    /**
+     * Sets up the fixture, for example, opens a network connection.
+     * This method is called before a test is executed.
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->object = new Country;
+    }
+
+    /**
+     * Tears down the fixture, for example, closes a network connection.
+     * This method is called after a test is executed.
+     */
+    protected function tearDown()
+    {
     }
 }
