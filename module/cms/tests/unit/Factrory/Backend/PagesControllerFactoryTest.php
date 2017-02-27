@@ -14,21 +14,23 @@ use WellCart\Test\TestCase;
 
 class PagesControllerFactoryTest extends TestCase
 {
-  /**
-   * @var PagesControllerFactory
-   */
-  private $object;
 
-  public function setUp()
-  {
-    parent::setUp();
-    $this->object = new PagesControllerFactory();
-  }
+    /**
+     * @var PagesControllerFactory
+     */
+    private $object;
 
-  public function testInvoke()
-  {
-    $this->assertInstanceOf(PagesController::class,
-      $this->object->__invoke($this->container->get('ControllerManager'))
-    );
-  }
+    public function setUp()
+    {
+        parent::setUp();
+        $this->object = new PagesControllerFactory();
+    }
+
+    public function testInvoke()
+    {
+        $this->assertInstanceOf(
+            PagesController::class,
+            $this->object->__invoke($this->container->get('ControllerManager'))
+        );
+    }
 }

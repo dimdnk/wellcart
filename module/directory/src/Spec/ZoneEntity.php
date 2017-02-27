@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace WellCart\Directory\Spec;
 
@@ -14,7 +14,7 @@ interface ZoneEntity
 {
 
     const STATUS_DISABLED = 0;
-    const STATUS_ENABLED = 1;
+    const STATUS_ENABLED  = 1;
 
     /**
      * Object constructor

@@ -1,32 +1,16 @@
 <?php
+
 namespace WellCart\Catalog\Test\Unit\Controller\Backend;
 
 use WellCart\Catalog\Controller\Backend\CategoriesController;
 
 class CategoriesControllerTest extends \WellCart\Test\TestCase
 {
+
     /**
      * @var CategoriesController
      */
     protected $object;
-
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp()
-    {
-      parent::setUp();
-        $this->object = new CategoriesController;
-    }
-
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
-    }
 
     /**
      * @todo   Implement testListAction().
@@ -125,5 +109,23 @@ class CategoriesControllerTest extends \WellCart\Test\TestCase
         $this->markTestIncomplete(
             'This test has not been implemented yet.'
         );
+    }
+
+    /**
+     * Sets up the fixture, for example, opens a network connection.
+     * This method is called before a test is executed.
+     */
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->object = new CategoriesController;
+    }
+
+    /**
+     * Tears down the fixture, for example, closes a network connection.
+     * This method is called after a test is executed.
+     */
+    protected function tearDown()
+    {
     }
 }

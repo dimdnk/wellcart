@@ -24,7 +24,7 @@ class ModuleTest extends TestCase
 
     public function setUp()
     {
-      parent::setUp();
+        parent::setUp();
         $this->object = new Module();
     }
 
@@ -68,6 +68,8 @@ class ModuleTest extends TestCase
 
     public function testGetConsoleUsage()
     {
-      $this->assertInternalType('array', $this->object->getConsoleUsage(Console::getInstance()));
+        $this->assertInternalType(
+            'array', $this->object->getConsoleUsage(Console::getInstance())
+        );
     }
 }

@@ -5,7 +5,7 @@
  * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace WellCart\CMS\Test\Unit\Entity;
 
@@ -26,7 +26,7 @@ class PageI18nTest extends TestCase
 
     public function setUp()
     {
-      parent::setUp();
+        parent::setUp();
         $this->object = new PageI18n();
     }
 

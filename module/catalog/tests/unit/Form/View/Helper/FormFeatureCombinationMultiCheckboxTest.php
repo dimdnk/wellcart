@@ -1,4 +1,5 @@
 <?php
+
 namespace WellCart\Catalog\Test\Unit\Form\View\Helper;
 
 
@@ -6,6 +7,7 @@ use WellCart\Catalog\Form\View\Helper\FormFeatureCombinationMultiCheckbox;
 
 class FormFeatureCombinationMultiCheckboxTest extends \WellCart\Test\TestCase
 {
+
     /**
      * @var FormFeatureCombinationMultiCheckbox
      */
@@ -17,7 +19,7 @@ class FormFeatureCombinationMultiCheckboxTest extends \WellCart\Test\TestCase
      */
     protected function setUp()
     {
-      parent::setUp();
+        parent::setUp();
         $this->object = new FormFeatureCombinationMultiCheckbox;
     }
 
