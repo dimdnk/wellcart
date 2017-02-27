@@ -3,6 +3,7 @@
 namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\ZonesController;
+use WellCart\Directory\Repository\Zones;
 
 class ZonesControllerTest extends \WellCart\Test\TestCase
 {
@@ -129,7 +130,7 @@ class ZonesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ZonesController();
+        $this->object = new ZonesController($this->container->get(Zones::class));
     }
 
     /**

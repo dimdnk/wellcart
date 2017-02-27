@@ -35,4 +35,16 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
     $this->application = application();
     $this->container = $this->application->getServiceManager();
   }
+
+    /**
+    * Finds an entry of the container by its identifier and returns it.
+    *
+    * @param string $id Identifier of the entry to look for.
+    *
+    * @return mixed Entry.
+    */
+   public function get($id)
+   {
+      return $this->container->get($id);
+   }
 }

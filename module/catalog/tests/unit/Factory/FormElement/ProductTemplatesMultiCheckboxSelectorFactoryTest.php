@@ -14,9 +14,9 @@ class ProductTemplatesMultiCheckboxSelectorFactoryTest
     protected $object;
 
     /**
-     * @todo   Implement test__invoke().
+     * @todo   Implement testInvoke().
      */
-    public function test__invoke()
+    public function testInvoke()
     {
         // Remove the following lines when you implement this test.
         $this->markTestIncomplete(

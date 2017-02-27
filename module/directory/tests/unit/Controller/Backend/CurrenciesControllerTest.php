@@ -3,6 +3,7 @@
 namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\CurrenciesController;
+use WellCart\Directory\Repository\Currencies;
 
 class CurrenciesControllerTest extends \WellCart\Test\TestCase
 {
@@ -118,7 +119,7 @@ class CurrenciesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CurrenciesController();
+        $this->object = new CurrenciesController($this->get(Currencies::class));
     }
 
     /**

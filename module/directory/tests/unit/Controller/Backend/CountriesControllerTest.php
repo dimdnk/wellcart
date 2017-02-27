@@ -3,6 +3,7 @@
 namespace WellCart\Directory\Test\Unit\Controller\Backend;
 
 use WellCart\Directory\Controller\Backend\CountriesController;
+use WellCart\Directory\Repository\Countries;
 
 
 class CountriesControllerTest extends \WellCart\Test\TestCase
@@ -119,7 +120,7 @@ class CountriesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CountriesController();
+        $this->object = new CountriesController($this->get(Countries::class));
     }
 
     /**
