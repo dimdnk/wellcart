@@ -1,12 +1,21 @@
 <?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+declare(strict_types=1);
 
 namespace WellCart\Catalog\Test\Unit\Repository;
+
+use WellCart\Catalog\Repository\ProductTemplateI18nQuery;
 
 class ProductTemplateI18nQueryTest extends \WellCart\Test\TestCase
 {
 
     /**
-     * @var ProductTemplateI18nQuery+
+     * @var ProductTemplateI18nQuery
      */
     protected $object;
 

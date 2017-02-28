@@ -1,7 +1,15 @@
 <?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+declare(strict_types=1);
 
 namespace WellCart\Directory\Test\Unit\Repository;
 
+use WellCart\Directory\Repository\GeoZones;
 use WellCart\Directory\Repository\GeoZonesQuery;
 
 class GeoZonesQueryTest extends \WellCart\Test\TestCase
@@ -19,7 +27,7 @@ class GeoZonesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new GeoZonesQuery($this->container->get('Doctrine\ORM\EntityManager'));
+        $this->object = $this->container->get(GeoZones::class)->finder();
     }
 
     /**

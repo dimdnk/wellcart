@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace WellCart\CMS\Test\Unit;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\CMS\Module;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;

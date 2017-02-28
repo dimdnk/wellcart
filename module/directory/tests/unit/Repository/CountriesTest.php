@@ -1,4 +1,11 @@
 <?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+declare(strict_types=1);
 
 namespace WellCart\Directory\Test\Unit\Repository;
 
@@ -52,7 +59,7 @@ class CountriesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new Countries;
+        $this->object = $this->container->get(Countries::class);
     }
 
     /**

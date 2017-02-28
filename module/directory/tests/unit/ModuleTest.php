@@ -8,7 +8,7 @@
 
 namespace WellCart\Directory\Test\Unit;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\Directory\Module;
 use WellCart\ModuleManager\ModuleConfiguration;
 use WellCart\Mvc\Application;

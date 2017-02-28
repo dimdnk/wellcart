@@ -10,9 +10,9 @@ declare(strict_types=1);
 
 namespace WellCart\CMS\Test\Unit\Repository;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\CMS\Entity\Page;
-use WellCart\CMS\Entity\PageI18n;
+use WellCart\CMS\Repository\PageI18n;
 use WellCart\CMS\Repository\PageI18nQuery;
 use WellCart\CMS\Spec\PageI18nRepository;
 
@@ -26,11 +26,8 @@ class PageI18nTest extends TestCase
 
     public function setUp()
     {
-        $this->object = application()
-            ->getServiceManager()
-            ->get(
-                PageI18nRepository::class
-            );
+      parent::setUp();
+        $this->object = $this->container->get(PageI18nRepository::class);
     }
 
     public function testFinder()

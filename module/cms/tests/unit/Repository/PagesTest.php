@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace WellCart\CMS\Test\Unit\Repository;
 
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\CMS\Repository\Pages;
 use WellCart\CMS\Repository\PagesQuery;
 use WellCart\CMS\Spec\PageRepository;
@@ -25,11 +25,8 @@ class PagesTest extends TestCase
 
     public function setUp()
     {
-        $this->object = application()
-            ->getServiceManager()
-            ->get(
-                PageRepository::class
-            );
+      parent::setUp();
+        $this->object = $this->container->get(PageRepository::class);
     }
 
     public function testFinder()

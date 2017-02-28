@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace WellCart\CMS\Test\Unit\Entity;
 
 use DateTime;
-use PHPUnit\Framework\TestCase;
+use WellCart\Test\TestCase;
 use WellCart\CMS\Entity\Page;
 use WellCart\CMS\Entity\PageI18n;
 use WellCart\CMS\Spec\PageEntity;
