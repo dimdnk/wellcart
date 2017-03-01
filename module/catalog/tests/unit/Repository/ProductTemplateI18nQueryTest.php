@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace WellCart\Catalog\Test\Unit\Repository;
 
+use WellCart\Catalog\Repository\ProductTemplateI18n;
 use WellCart\Catalog\Repository\ProductTemplateI18nQuery;
 
 class ProductTemplateI18nQueryTest extends \WellCart\Test\TestCase
@@ -48,7 +49,7 @@ class ProductTemplateI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductTemplateI18nQuery($this->container->get('Doctrine\ORM\EntityManager'));
+        $this->object = $this->container->get(ProductTemplateI18n::class)->finder();
     }
 
     /**

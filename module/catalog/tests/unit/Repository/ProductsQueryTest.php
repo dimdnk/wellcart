@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace WellCart\Catalog\Test\Unit\Repository;
 
+use WellCart\Catalog\Repository\Products;
 use WellCart\Catalog\Repository\ProductsQuery;
 
 class ProductsQueryTest extends \WellCart\Test\TestCase
@@ -59,7 +60,7 @@ class ProductsQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductsQuery($this->container->get('Doctrine\ORM\EntityManager'));
+        $this->object = $this->container->get(Products::class)->finder();
     }
 
     /**

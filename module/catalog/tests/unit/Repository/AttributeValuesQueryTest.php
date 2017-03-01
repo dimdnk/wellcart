@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace WellCart\Catalog\Test\Unit\Repository;
 
+use WellCart\Catalog\Repository\AttributeValues;
 use WellCart\Catalog\Repository\AttributeValuesQuery;
 
 class AttributeValuesQueryTest extends \WellCart\Test\TestCase
@@ -37,7 +38,7 @@ class AttributeValuesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new AttributeValuesQuery($this->container->get('Doctrine\ORM\EntityManager'));
+        $this->object = $this->container->get(AttributeValues::class)->finder();
     }
 
     /**

@@ -49,7 +49,7 @@ class FeatureValuesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new FeatureValues;
+        $this->object = $this->container->get(FeatureValues::class);
     }
 
     /**

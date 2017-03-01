@@ -59,7 +59,7 @@ class AttributesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new Attributes;
+        $this->object = $this->container->get(Attributes::class);
     }
 
     /**

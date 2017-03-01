@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace WellCart\Catalog\Test\Unit\Repository;
 
+use WellCart\Catalog\Repository\Features;
 use WellCart\Catalog\Repository\FeaturesQuery;
 
 class FeaturesQueryTest extends \WellCart\Test\TestCase
@@ -37,7 +38,7 @@ class FeaturesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new FeaturesQuery($this->container->get('Doctrine\ORM\EntityManager'));
+        $this->object = $this->container->get(Features::class)->finder();
     }
 
     /**

@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace WellCart\Catalog\Test\Unit\Repository;
 
 
+use WellCart\Catalog\Repository\Categories;
 use WellCart\Catalog\Repository\CategoriesQuery;
 
 class CategoriesQueryTest extends \WellCart\Test\TestCase
@@ -104,7 +105,7 @@ class CategoriesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CategoriesQuery($this->container->get('Doctrine\ORM\EntityManager'));
+        $this->object = $this->container->get(Categories::class)->finder();
     }
 
     /**

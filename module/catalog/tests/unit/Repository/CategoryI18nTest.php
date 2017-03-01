@@ -81,7 +81,7 @@ class CategoryI18nTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CategoryI18n;
+        $this->object = $this->container->get(CategoryI18n::class);
     }
 
     /**
