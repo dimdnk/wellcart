@@ -48,7 +48,7 @@ class ZoneFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ZoneForm;
+        $this->object = $this->container->get(ZoneForm::class);
     }
 
     /**

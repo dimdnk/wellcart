@@ -114,7 +114,7 @@ class FeaturesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new FeaturesController;
+        $this->object = $this->container->get('ControllerManager')->get(FeaturesController::class);
     }
 
     /**

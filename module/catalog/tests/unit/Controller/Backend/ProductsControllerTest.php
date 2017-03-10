@@ -125,7 +125,7 @@ class ProductsControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductsController;
+        $this->object = $this->container->get('ControllerManager')->get(ProductsController::class);
     }
 
     /**

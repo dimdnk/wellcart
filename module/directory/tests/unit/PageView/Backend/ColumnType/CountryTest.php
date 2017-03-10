@@ -37,7 +37,7 @@ class CountryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new Country;
+        $this->object =  new Country;
     }
 
     /**

@@ -127,7 +127,7 @@ class CountriesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CountriesController($this->get(Countries::class));
+        $this->object = $this->container->get('ControllerManager')->get(CountriesController::class);
     }
 
     /**

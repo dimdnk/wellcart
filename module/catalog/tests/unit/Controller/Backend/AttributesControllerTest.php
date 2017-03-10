@@ -125,7 +125,7 @@ class AttributesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new AttributesController;
+        $this->object = $this->container->get('ControllerManager')->get(AttributesController::class);
     }
 
     /**

@@ -92,7 +92,7 @@ class PagesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new PagesGrid();
+        $this->object = $this->container->get(PagesGrid::class);
     }
 
     /**

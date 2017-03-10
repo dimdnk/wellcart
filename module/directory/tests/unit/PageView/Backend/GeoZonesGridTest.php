@@ -70,7 +70,7 @@ class GeoZonesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new GeoZonesGrid;
+        $this->object = $this->container->get(GeoZonesGrid::class);
     }
 
     /**

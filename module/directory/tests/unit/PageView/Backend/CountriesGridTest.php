@@ -70,7 +70,7 @@ class CountriesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CountriesGrid;
+        $this->object = $this->container->get( CountriesGrid::class);
     }
 
     /**

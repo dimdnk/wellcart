@@ -137,7 +137,7 @@ class ZonesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ZonesController($this->container->get(Zones::class));
+        $this->object = $this->container->get('ControllerManager')->get(ZonesController::class);
     }
 
     /**

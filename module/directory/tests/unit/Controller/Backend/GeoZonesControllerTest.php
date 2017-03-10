@@ -126,7 +126,7 @@ class GeoZonesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new GeoZonesController($this->container->get(GeoZones::class));
+        $this->object = $this->container->get('ControllerManager')->get(GeoZonesController::class);
     }
 
     /**

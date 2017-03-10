@@ -48,7 +48,7 @@ class PageFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new PageForm();
+        $this->object = $this->container->get(PageForm::class);
     }
 
     /**

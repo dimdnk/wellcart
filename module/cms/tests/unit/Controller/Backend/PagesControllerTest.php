@@ -125,7 +125,7 @@ class PagesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new PagesController;
+        $this->object = $this->container->get('ControllerManager')->get(PagesController::class);
     }
 
     /**
