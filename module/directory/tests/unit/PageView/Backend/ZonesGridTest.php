@@ -70,7 +70,7 @@ class ZonesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(ZonesGrid::class);
+        $this->object = $this->get(ZonesGrid::class);
     }
 
     /**

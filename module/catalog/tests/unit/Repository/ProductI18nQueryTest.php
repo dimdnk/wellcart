@@ -61,7 +61,7 @@ class ProductI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(ProductI18n::class)->finder();
+        $this->object = $this->get(ProductI18n::class)->finder();
     }
 
     /**

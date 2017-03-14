@@ -71,7 +71,7 @@ class CategoriesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Categories::class);
+        $this->object = $this->get(Categories::class);
     }
 
     /**

@@ -27,7 +27,7 @@ class BrandsQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Brands::class)->finder();
+        $this->object = $this->get(Brands::class)->finder();
     }
 
     /**

@@ -48,7 +48,7 @@ class CategoryFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CategoryForm;
+        $this->object = $this->get(CategoryForm::class);
     }
 
     /**

@@ -48,7 +48,7 @@ class GeoZoneMapsTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(GeoZoneMaps::class);
+        $this->object = $this->get(GeoZoneMaps::class);
     }
 
     /**

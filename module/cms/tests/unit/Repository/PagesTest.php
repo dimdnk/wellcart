@@ -26,7 +26,7 @@ class PagesTest extends TestCase
     public function setUp()
     {
       parent::setUp();
-        $this->object = $this->container->get(PageRepository::class);
+        $this->object = $this->get(PageRepository::class);
     }
 
     public function testFinder()

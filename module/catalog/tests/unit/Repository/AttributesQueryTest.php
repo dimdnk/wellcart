@@ -39,7 +39,7 @@ class AttributesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Attributes::class)->finder();
+        $this->object = $this->get(Attributes::class)->finder();
     }
 
     /**

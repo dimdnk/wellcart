@@ -48,7 +48,7 @@ class ProductTemplateFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductTemplateForm;
+        $this->object = $this->get(ProductTemplateForm::class);
     }
 
     /**

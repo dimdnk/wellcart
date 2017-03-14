@@ -48,7 +48,7 @@ class PageTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Page::class);
+        $this->object = $this->get(Page::class);
     }
 
     /**

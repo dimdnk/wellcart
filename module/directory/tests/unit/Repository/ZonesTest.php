@@ -81,7 +81,7 @@ class ZonesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-      $this->object = $this->container->get(Zones::class);
+      $this->object = $this->get(Zones::class);
     }
 
     /**

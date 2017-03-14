@@ -27,7 +27,7 @@ class PageI18nTest extends TestCase
     public function setUp()
     {
       parent::setUp();
-        $this->object = $this->container->get(PageI18nRepository::class);
+        $this->object = $this->get(PageI18nRepository::class);
     }
 
     public function testFinder()

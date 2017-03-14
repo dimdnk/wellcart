@@ -104,7 +104,7 @@ class ProductTemplateI18nTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(ProductTemplateI18n::class);
+        $this->object = $this->get(ProductTemplateI18n::class);
     }
 
     /**

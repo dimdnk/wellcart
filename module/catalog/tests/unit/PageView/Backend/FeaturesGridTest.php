@@ -93,7 +93,7 @@ class FeaturesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new FeaturesGrid;
+        $this->object = $this->get(FeaturesGrid::class);
     }
 
     /**

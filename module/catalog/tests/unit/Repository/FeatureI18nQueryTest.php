@@ -49,7 +49,7 @@ class FeatureI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(FeatureI18n::class)->finder();
+        $this->object = $this->get(FeatureI18n::class)->finder();
     }
 
     /**

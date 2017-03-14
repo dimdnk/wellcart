@@ -38,7 +38,7 @@ class AttributeValueI18nQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(AttributeValueI18n::class)->finder();
+        $this->object = $this->get(AttributeValueI18n::class)->finder();
     }
 
     /**

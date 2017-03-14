@@ -60,7 +60,7 @@ class AttributeValueI18nTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(AttributeValueI18n::class);
+        $this->object = $this->get(AttributeValueI18n::class);
     }
 
     /**

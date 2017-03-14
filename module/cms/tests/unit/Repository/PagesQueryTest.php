@@ -25,7 +25,7 @@ class PagesQueryTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(PageRepository::class)->finder();
+        $this->object = $this->get(PageRepository::class)->finder();
     }
 
     public function testVisible()

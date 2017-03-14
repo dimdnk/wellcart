@@ -70,7 +70,7 @@ class CurrenciesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(CurrenciesGrid::class);
+        $this->object = $this->get(CurrenciesGrid::class);
     }
 
     /**

@@ -73,7 +73,7 @@ class FeaturesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Features::class);
+        $this->object = $this->get(Features::class);
     }
 
     /**

@@ -82,7 +82,7 @@ class CurrenciesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Currencies::class);
+        $this->object = $this->get(Currencies::class);
     }
 
     /**

@@ -27,7 +27,7 @@ class GeoZoneMapsQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(GeoZoneMaps::class)->finder();
+        $this->object = $this->get(GeoZoneMaps::class)->finder();
     }
 
     /**

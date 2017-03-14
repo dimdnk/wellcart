@@ -81,7 +81,7 @@ class AttributeI18nTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(AttributeI18n::class);
+        $this->object = $this->get(AttributeI18n::class);
     }
 
     /**

@@ -126,7 +126,7 @@ class CurrenciesControllerTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get('ControllerManager')->get(CurrenciesController::class);
+        $this->object = $this->get('ControllerManager')->get(CurrenciesController::class);
     }
 
     /**

@@ -49,7 +49,7 @@ class ProductVariantsTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(ProductVariants::class)->finder();
+        $this->object = $this->get(ProductVariants::class)->finder();
     }
 
     /**

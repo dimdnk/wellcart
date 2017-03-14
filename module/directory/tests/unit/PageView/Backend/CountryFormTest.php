@@ -48,7 +48,7 @@ class CountryFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get( CountryForm::class);
+        $this->object = $this->get( CountryForm::class);
     }
 
     /**

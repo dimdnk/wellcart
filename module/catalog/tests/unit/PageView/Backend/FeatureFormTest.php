@@ -48,7 +48,7 @@ class FeatureFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new FeatureForm();
+        $this->object = $this->get(FeatureForm::class);
     }
 
     /**

@@ -59,7 +59,7 @@ class CountriesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Countries::class);
+        $this->object = $this->get(Countries::class);
     }
 
     /**

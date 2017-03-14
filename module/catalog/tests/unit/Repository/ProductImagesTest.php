@@ -49,7 +49,7 @@ class ProductImagesTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(ProductImages::class);
+        $this->object = $this->get(ProductImages::class);
     }
 
     /**

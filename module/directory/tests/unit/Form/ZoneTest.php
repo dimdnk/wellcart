@@ -49,7 +49,7 @@ class ZoneTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Zone::class);
+        $this->object = $this->get(Zone::class);
     }
 
     /**

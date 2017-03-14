@@ -92,7 +92,7 @@ class ProductsGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new ProductsGrid;
+        $this->object = $this->get(ProductsGrid::class);
     }
 
     /**

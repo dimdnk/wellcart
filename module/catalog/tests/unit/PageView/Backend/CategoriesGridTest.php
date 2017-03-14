@@ -92,7 +92,7 @@ class CategoriesGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new CategoriesGrid;
+        $this->object = $this->get(CategoriesGrid::class);
     }
 
     /**

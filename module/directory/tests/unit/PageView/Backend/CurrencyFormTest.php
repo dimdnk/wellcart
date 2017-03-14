@@ -48,7 +48,7 @@ class CurrencyFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(CurrencyForm::class);
+        $this->object = $this->get(CurrencyForm::class);
     }
 
     /**

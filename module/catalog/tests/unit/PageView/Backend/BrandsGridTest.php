@@ -70,7 +70,7 @@ class BrandsGridTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new BrandsGrid;
+        $this->object = $this->get(BrandsGrid::class);
     }
 
     /**

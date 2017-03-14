@@ -60,7 +60,7 @@ class CountriesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Countries::class)->finder();
+        $this->object = $this->get(Countries::class)->finder();
     }
 
     /**

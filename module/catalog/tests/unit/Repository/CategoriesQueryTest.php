@@ -105,7 +105,7 @@ class CategoriesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Categories::class)->finder();
+        $this->object = $this->get(Categories::class)->finder();
     }
 
     /**

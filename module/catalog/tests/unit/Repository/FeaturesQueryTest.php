@@ -38,7 +38,7 @@ class FeaturesQueryTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(Features::class)->finder();
+        $this->object = $this->get(Features::class)->finder();
     }
 
     /**

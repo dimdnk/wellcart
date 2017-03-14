@@ -48,7 +48,7 @@ class BrandFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new BrandForm;
+        $this->object = $this->get(BrandForm::class);
     }
 
     /**

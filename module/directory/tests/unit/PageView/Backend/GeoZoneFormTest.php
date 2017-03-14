@@ -48,7 +48,7 @@ class GeoZoneFormTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = $this->container->get(GeoZoneForm::class);
+        $this->object = $this->get(GeoZoneForm::class);
     }
 
     /**
