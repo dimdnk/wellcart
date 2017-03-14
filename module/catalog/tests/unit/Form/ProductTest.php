@@ -59,7 +59,7 @@ class ProductTest extends \WellCart\Test\TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new Product;
+        $this->object = $this->get(Product::class);
     }
 
     /**
