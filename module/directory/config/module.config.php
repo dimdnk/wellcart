@@ -26,7 +26,9 @@ return [
             Spec\GeoZoneRepository::class          => Repository\GeoZones::class,
             Spec\ZoneRepository::class             => Repository\Zones::class,
         ],
-        'factories'          => [],
+        'factories'          => [
+            PageView\Backend\CurrenciesGrid::class => Factory\PageView\Backend\CurrenciesGridFactory::class,
+        ],
         'abstract_factories' => [],
         'services'           => [],
         'initializers'       => [],

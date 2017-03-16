@@ -13,20 +13,6 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
-
-        PageView\Backend\CurrenciesGrid::class =>
-            function (ContainerInterface $services) {
-                return new PageView\Backend\CurrenciesGrid(
-                    $services->get(
-                        Spec\CurrencyRepository::class
-                    ),
-                    $services
-                        ->get('Zend\Authentication\AuthenticationService')
-                        ->getIdentity()
-                        ->getTimeZone()
-                );
-            },
-
         PageView\Backend\CurrencyForm::class =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\CurrencyForm(
