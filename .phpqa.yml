@@ -1,0 +1,8 @@
+﻿phpstan:
+    level: 0
+report:
+    phploc: build/phploc.xsl
+    phpcpd: build/phpcpd.xsl
+    phpcs: build/phpcs.xsl
+    pdepend: build/pdepend.xsl
+    phpmd: build/phpmd.xsl
