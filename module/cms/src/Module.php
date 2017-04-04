@@ -18,14 +18,12 @@ use WellCart\Setup\Feature\DataFixturesProviderInterface;
 use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\Form\Factory as FormFactory;
 use Zend\ModuleManager\Feature;
-use ZF\Apigility\Provider\ApigilityProviderInterface;
 
 class Module implements
     Feature\ConfigProviderInterface,
     Feature\ServiceProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
-    ApigilityProviderInterface,
     VersionProviderInterface,
     ModulePathProviderInterface
 {

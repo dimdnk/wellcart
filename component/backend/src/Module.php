@@ -19,7 +19,6 @@ use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use Zend\Mvc\MvcEvent;
-use ZF\Apigility\Provider\ApigilityProviderInterface;
 
 class Module implements
     Feature\BootstrapListenerInterface,
@@ -28,7 +27,6 @@ class Module implements
     VersionProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
-    ApigilityProviderInterface,
     ModulePathProviderInterface
 {
 

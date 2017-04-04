@@ -17,7 +17,6 @@ use WellCart\Setup\Feature\DataFixturesProviderInterface;
 use WellCart\Setup\Feature\MigrationsProviderInterface;
 use Zend\Console\Adapter\AdapterInterface;
 use Zend\ModuleManager\Feature;
-use ZF\Apigility\Provider\ApigilityProviderInterface;
 
 class Module implements
     Feature\ConfigProviderInterface,
@@ -26,7 +25,6 @@ class Module implements
     VersionProviderInterface,
     DataFixturesProviderInterface,
     MigrationsProviderInterface,
-    ApigilityProviderInterface,
     ModulePathProviderInterface
 {
 

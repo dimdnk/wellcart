@@ -30,7 +30,6 @@ use Zend\ModuleManager\ModuleManagerInterface;
 use Zend\Mvc\MvcEvent;
 use Zend\Validator\AbstractValidator;
 use Zend\View\Helper\PaginationControl;
-use ZF\Apigility\Provider\ApigilityProviderInterface;
 
 class Module implements
     Feature\BootstrapListenerInterface,
@@ -38,7 +37,6 @@ class Module implements
     Feature\ServiceProviderInterface,
     Feature\ConsoleUsageProviderInterface,
     Feature\ControllerPluginProviderInterface,
-    ApigilityProviderInterface,
     Feature\ControllerProviderInterface,
     Feature\InitProviderInterface,
     Feature\FormElementProviderInterface,
