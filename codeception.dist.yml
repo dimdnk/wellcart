@@ -11,7 +11,6 @@ include:
  - component/schema-migration/tests
  - component/setup/tests
  - component/backend/tests
- - component/rest-api/tests
  - component/user/tests
  - module/cms/tests
  - module/directory/tests

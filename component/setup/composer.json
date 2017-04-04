@@ -66,7 +66,6 @@
           "require": {
             "-90000": "WellCart\\Theme\\FrontendUi",
             "-80200": "WellCart\\Theme\\SetupUi",
-            "-72750": "WellCart\\RestApi",
             "70000": "WellCart\\Setup"
           }
         }
@@ -82,7 +81,6 @@
     "php": "^7.0.0",
     "wellcart/component-base": "0.1.*",
     "wellcart/component-backend": "0.1.*",
-    "wellcart/component-rest-api": "0.1.*",
     "wellcart/component-user": "0.1.*",
     "wellcart/theme-setup-ui": "0.1.*"
   },

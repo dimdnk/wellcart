@@ -64,7 +64,6 @@
     "wellcart/component-base": "0.1.*",
     "wellcart/component-backend": "0.1.*",
     "wellcart/component-setup": "0.1.*",
-    "wellcart/component-rest-api": "0.1.*",
     "wellcart/module-directory": "0.1.*"
   },
   "require-dev": {

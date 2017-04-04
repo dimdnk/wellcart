@@ -49,7 +49,6 @@ remote component-command-bus git@github.com:wellcart/component-command-bus.git
 remote component-setup git@github.com:wellcart/component-setup.git
 remote component-user git@github.com:wellcart/component-user.git
 remote component-backend git@github.com:wellcart/component-backend.git
-remote component-rest-api git@github.com:wellcart/component-rest-api.git
 remote theme-frontend-ui git@github.com:wellcart/theme-frontend-ui.git
 remote theme-setup-ui git@github.com:wellcart/theme-setup-ui.git
 remote theme-backend-ui git@github.com:wellcart/theme-backend-ui.git
@@ -89,7 +88,6 @@ split 'component/command-bus' component-command-bus
 split 'component/setup' component-setup
 split 'component/user' component-user
 split 'component/backend' component-backend
-split 'component/rest-api' component-rest-api
 split 'theme/frontend-ui' theme-frontend-ui
 split 'theme/setup-ui' theme-setup-ui
 split 'theme/backend-ui' theme-backend-ui

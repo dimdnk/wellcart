@@ -65,8 +65,7 @@
     "netglue/zf2-money-module": "0.1.*",
     "wellcart/component-base": "0.1.*",
     "wellcart/component-setup": "0.1.*",
-    "wellcart/component-backend": "0.1.*",
-    "wellcart/component-rest-api": "0.1.*"
+    "wellcart/component-backend": "0.1.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7.0",

@@ -1,8 +1,0 @@
-﻿phpstan:
-    level: 0
-report:
-    phploc: tests/build/phploc.xsl
-    phpcpd: tests/build/phpcpd.xsl
-    phpcs: tests/build/phpcs.xsl
-    pdepend: tests/build/pdepend.xsl
-    phpmd: tests/build/phpmd.xsl
