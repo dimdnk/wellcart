@@ -4,7 +4,7 @@ local.php
 application.config.php
 db.global.php
 phpunit.xml
-codeception.yml
+
 maintenance.flag
 Maintenance.html
 *.suite.yml

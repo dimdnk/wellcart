@@ -63,7 +63,6 @@ Third-party frameworks utilized in this framework:
     - [SlmQueue](https://github.com/juriansluiman/SlmQueue)
     - [HumusAmqpModule](https://github.com/prolic/HumusAmqpModule)
     - [Rollout](https://github.com/adlogix/zf2-opensoft-rollout)
-    - [Codeception](http://codeception.com)
 
 2. JavaScript - [jQuery](https://github.com/jquery/jquery/)
 3. CSS/JS - [Bootstrap 3](https://github.com/twbs/bootstrap/), [JQuery UI](http://jqueryui.com/)
