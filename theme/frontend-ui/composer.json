@@ -47,7 +47,6 @@
       "WellCart\\Setup\\Composer\\ScriptHandler::createProjectDirectories",
       "WellCart\\Setup\\Composer\\ScriptHandler::setPermissions"
     ],
-    "test": "codecept run",
     "coveralls": "coveralls",
     "cs": "phpcs",
     "cs-fix": "phpcbf"
