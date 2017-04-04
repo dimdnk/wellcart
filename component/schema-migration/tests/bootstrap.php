@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\SchemaMigration\Test;
 
-use Codeception\Util\Autoload as CodeceptionAutoload;
+
 use josegonzalez\Dotenv\Loader as Dotenv;
 use RuntimeException;
 use WellCart\Mvc\Application;
@@ -29,11 +29,6 @@ if (!defined('WELLCART')) {
      */
     Bootstrap::init();
 }
-
-CodeceptionAutoload::addNamespace(
-    'WellCart\SchemaMigration\Test',
-    __DIR__ . '/support'
-);
 
 /**
  * Bootstrap test environment

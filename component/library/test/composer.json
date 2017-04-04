@@ -34,8 +34,7 @@
   "require": {
     "php": "^7.0.0",
     "zendframework/zend-test": "2.5.*",
-    "phpunit/phpunit": "^5.7.0",
-    "codeception/codeception": "2.2.*"
+    "phpunit/phpunit": "^5.7.0"
   },
   "require-dev": {
     "edgedesign/phpqa": "^1.9.1",
@@ -48,9 +47,6 @@
     "ext-xdebug": "Extension which provides debugging and profiling capabilities, make possible code coverage support."
   },
   "autoload": {
-    "files": [
-      "./lib/Codeception/SuiteManager.php"
-    ],
     "classmap": [
       "./lib"
     ],

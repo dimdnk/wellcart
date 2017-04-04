@@ -8,7 +8,7 @@
 
 namespace WellCart\CommandBus\Test;
 
-use Codeception\Util\Autoload as CodeceptionAutoload;
+
 use josegonzalez\Dotenv\Loader as Dotenv;
 use RuntimeException;
 use WellCart\Mvc\Application;
@@ -28,11 +28,6 @@ if (!defined('WELLCART')) {
     Bootstrap::init();
     application();
 }
-
-CodeceptionAutoload::addNamespace(
-    'WellCart\CommandBus\Test',
-    __DIR__ . '/support'
-);
 
 /**
  * Bootstrap test environment
