@@ -16,7 +16,7 @@ return [
         'maintenance'          => [
             'message'     => 'Service Temporarily Unavailable',
             'status_code' => Response::STATUS_CODE_503,
-            'template'    => __DIR__ . '/../data/Maintenance.html',
+            'template'    => __DIR__ . '/../../data/Maintenance.html',
         ],
         'localization'         =>
             [
