@@ -3,10 +3,10 @@
 @import "../../lib/font-awesome/css/font-awesome.min.css";
 @import "../../lib/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css";
 @import "../../lib/chosen/css/chosen.min.css";
-@import "../../lib/web/daterangepicker/daterangepicker.css";
-@import "../../lib/web/icheck/blue.css";
-@import "../../lib/web/bootstrap-switch/bootstrap-switch.css";
-@import "../../lib/web/switchery/switchery.css";
+@import "../../lib/web-components/daterangepicker/daterangepicker.css";
+@import "../../lib/web-components/icheck/blue.css";
+@import "../../lib/web-components/bootstrap-switch/bootstrap-switch.css";
+@import "../../lib/web-components/switchery/switchery.css";
 
 html {
     -ms-text-size-adjust: 100%;

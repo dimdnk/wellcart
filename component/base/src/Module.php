@@ -203,8 +203,8 @@ class Module implements
     public function getSetupMigrations(): array
     {
         return [
-            '20170101000000' => new Setup\Schema\Install(
-                '20170101000000'
+            '20170601000000' => new Setup\Schema\Install(
+                '20170601000000'
             ),
         ];
     }
@@ -217,8 +217,8 @@ class Module implements
     public function getSetupDataFixtures(): array
     {
         return [
-            '20170101000000' => new Setup\Data\Install(
-                '20170101000000'
+            '20170601000000' => new Setup\Data\Install(
+                '20170601000000'
             ),
         ];
     }
