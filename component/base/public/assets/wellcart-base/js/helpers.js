@@ -7,8 +7,8 @@
 ;
 'use strict';
 
-require(['jquery', 'bootstrap', 'datetimepicker', 'daterangepicker', 'bootstrap-switch', 'nanoscroller', 'chosen'],
-    function ($, Bootstrap, datetimepicker, daterangepicker, bootstrapSwitch, nanoScroller, chosen) {
+require(['jquery', 'bootstrap', 'datetimepicker', 'daterangepicker', 'bootstrap-switch', 'chosen'],
+    function ($, Bootstrap, datetimepicker, daterangepicker, bootstrapSwitch, chosen) {
 
         var switcherEl = document.querySelector('.switchery-element');
         if (switcherEl !== null) {
@@ -33,8 +33,6 @@ require(['jquery', 'bootstrap', 'datetimepicker', 'daterangepicker', 'bootstrap-
         });
 
         $("input.switch-element").bootstrapSwitch();
-
-        $(".nscroller-element").nanoScroller();
 
         $("select.chosen-element").chosen({width: '100%'});
 
