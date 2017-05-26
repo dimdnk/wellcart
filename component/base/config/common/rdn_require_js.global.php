@@ -8,29 +8,29 @@
 return [
     'rdn_require_js' =>
         [
-            'library' => '/assets/lib/web/require.js',
+            'library' => '/assets/lib/web-components/require.js',
             'config'  => [
                 'baseUrl' => '/',
                 'paths'   => [
                     'wellcart'               => 'assets/wellcart-base/js/wellcart',
                     'jquery'                 => 'assets/lib/jquery/jquery.min',
                     'jquery-ui'              => 'assets/lib/jquery-ui/jquery-ui.min',
-                    'jquery-ujs'             => 'assets/lib/web/jquery-ujs',
+                    'jquery-ujs'             => 'assets/lib/web-components/jquery-ujs',
                     'jquery-cookie'          => 'assets/lib/jquery-cookie/jquery.cookie',
                     'tinymce'                => 'assets/lib/tinymce/tinymce.min',
                     'moment'                 => 'assets/lib/moment/min/moment-with-locales.min',
                     'bootstrap'              => 'assets/lib/bootstrap/js/bootstrap.min',
-                    'sluggable'              => 'assets/lib/web/speakingurl',
+                    'sluggable'              => 'assets/lib/web-components/speakingurl',
                     'datetimepicker'         => 'assets/lib/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
-                    'daterangepicker'        => 'assets/lib/web/daterangepicker/daterangepicker',
-                    'bootbox'                => 'assets/lib/web/bootbox',
-                    'icheck'                 => 'assets/lib/web/icheck/icheck',
-                    'bootstrap-switch'       => 'assets/lib/web/bootstrap-switch/bootstrap-switch',
-                    'switchery'              => 'assets/lib/web/switchery/switchery',
+                    'daterangepicker'        => 'assets/lib/web-components/daterangepicker/daterangepicker',
+                    'bootbox'                => 'assets/lib/web-components/bootbox',
+                    'icheck'                 => 'assets/lib/web-components/icheck/icheck',
+                    'bootstrap-switch'       => 'assets/lib/web-components/bootstrap-switch/bootstrap-switch',
+                    'switchery'              => 'assets/lib/web-components/switchery/switchery',
                     'chosen'                 => 'assets/lib/chosen/js/chosen.jquery.min',
-                    'jquery.validate.min'    => 'assets/lib/web/validation/jquery.validate',
-                    '../jquery.validate.min' => 'assets/lib/web/validation/jquery.validate',
-                    './jquery.validate.min'  => 'assets/lib/web/validation/jquery.validate',
+                    'jquery.validate.min'    => 'assets/lib/web-components/validation/jquery.validate',
+                    '../jquery.validate.min' => 'assets/lib/web-components/validation/jquery.validate',
+                    './jquery.validate.min'  => 'assets/lib/web-components/validation/jquery.validate',
                 ],
                 'shim'    => [
                     'jquery'           => [
