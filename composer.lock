@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0dadd52b39e221c1ad690fdd328a72eb",
+    "content-hash": "39475f733aadbada6fe7a251bdff0db6",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -119,6 +119,70 @@
                 "zf2"
             ],
             "time": "2016-10-06T08:37:35+00:00"
+        },
+        {
+            "name": "antasoft/web-components",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/DimaDenisenko/web-components-blueprint.git",
+                "reference": "65075fe38cd5d8dd9f68faedd9efcabec6d1f08b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/DimaDenisenko/web-components-blueprint/get/65075fe38cd5d8dd9f68faedd9efcabec6d1f08b.zip",
+                "reference": "65075fe38cd5d8dd9f68faedd9efcabec6d1f08b",
+                "shasum": ""
+            },
+            "require": {
+                "blueimp/jquery-file-upload": "^9.18.0",
+                "components/bootstrap": "3.3.*",
+                "components/font-awesome": "4.7.*",
+                "components/jquery": "^3.2.0",
+                "components/jquery-cookie": "1.4.*",
+                "components/jqueryui": "1.12.*",
+                "drmonty/chosen": "1.6.*",
+                "eonasdan/bootstrap-datetimepicker": "4.17.*",
+                "ivaynberg/select2": "4.0.*",
+                "moment/moment": "2.*",
+                "oro/moment-timezone": "0.5.*",
+                "php": "^7.0.0",
+                "robloach/component-installer": "0.2.3",
+                "tinymce/tinymce": "^4.6.0"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "fonts/*/*",
+                        "fonts/*",
+                        "validation/localization/*.js",
+                        "validation/*.js",
+                        "bootstrap-switch/*",
+                        "daterangepicker/*",
+                        "icheck/skins/minimal/blue/*",
+                        "icheck/*",
+                        "switchery/*",
+                        "*.js"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dima Denisenko",
+                    "email": "antasoft@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "homepage": "https://bitbucket.org/DimaDenisenko/web-components-blueprint",
+            "time": "2017-05-26T09:19:08+00:00"
         },
         {
             "name": "atukai/at-php-settings",
@@ -659,57 +723,6 @@
             "time": "2016-10-25T10:56:23+00:00"
         },
         {
-            "name": "components/handlebars.js",
-            "version": "v4.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/handlebars.js.git",
-                "reference": "20a28b5c118366830c6b6dd30e07a0f0e834c35f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/handlebars.js/zipball/20a28b5c118366830c6b6dd30e07a0f0e834c35f",
-                "reference": "20a28b5c118366830c6b6dd30e07a0f0e834c35f",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "name": "handlebars",
-                    "scripts": [
-                        "handlebars.js"
-                    ],
-                    "files": [
-                        "handlebars.runtime.js"
-                    ],
-                    "shim": {
-                        "exports": "Handlebars"
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Wanstrath",
-                    "homepage": "http://chriswanstrath.com"
-                }
-            ],
-            "description": "Handlebars.js and Mustache are both logicless templating languages that keep the view and the code separated like we all know they should be.",
-            "homepage": "http://handlebarsjs.com",
-            "keywords": [
-                "handlebars",
-                "html",
-                "mustache"
-            ],
-            "time": "2017-05-21T12:13:10+00:00"
-        },
-        {
             "name": "components/jquery",
             "version": "3.2.1",
             "source": {
@@ -881,56 +894,6 @@
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
             "time": "2016-09-16T05:47:55+00:00"
-        },
-        {
-            "name": "components/underscore",
-            "version": "1.8.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/underscore.git",
-                "reference": "91142c898763ca8bb23a32a9808735e4998839d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/underscore/zipball/91142c898763ca8bb23a32a9808735e4998839d1",
-                "reference": "91142c898763ca8bb23a32a9808735e4998839d1",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "underscore.js"
-                    ],
-                    "files": [
-                        "underscore-min.js",
-                        "underscore-min.map"
-                    ],
-                    "shim": {
-                        "exports": "_"
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Ashkenas",
-                    "email": "jeremy@documentcloud.org"
-                }
-            ],
-            "description": "JavaScript's functional programming helper library.",
-            "homepage": "http://underscorejs.org",
-            "keywords": [
-                "browser",
-                "client",
-                "functional",
-                "server",
-                "util"
-            ],
-            "time": "2015-10-16T14:27:39+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -3461,16 +3424,16 @@
         },
         {
             "name": "oro/moment-timezone",
-            "version": "0.3.1",
+            "version": "0.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orocrm/moment-timezone.git",
-                "reference": "2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c"
+                "reference": "d2511dc23b199c67be2dea8d8c3fb1e5f59f3745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/moment-timezone/zipball/2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c",
-                "reference": "2f3cd6557178ef10bdbef8d8e5c218a37eb7df1c",
+                "url": "https://api.github.com/repos/orocrm/moment-timezone/zipball/d2511dc23b199c67be2dea8d8c3fb1e5f59f3745",
+                "reference": "d2511dc23b199c67be2dea8d8c3fb1e5f59f3745",
                 "shasum": ""
             },
             "require": {
@@ -3511,7 +3474,7 @@
                 "tz",
                 "zone"
             ],
-            "time": "2015-05-26T14:29:56+00:00"
+            "time": "2016-10-28T15:17:16+00:00"
         },
         {
             "name": "patchwork/utf8",
@@ -4883,16 +4846,16 @@
         },
         {
             "name": "robmorgan/phinx",
-            "version": "v0.6.6",
+            "version": "v0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robmorgan/phinx.git",
-                "reference": "cc97b79f62c2180caba0be1d3744a335a296a678"
+                "reference": "15e43d10dd99ac818c8d65735c50191bcbeafdbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/cc97b79f62c2180caba0be1d3744a335a296a678",
-                "reference": "cc97b79f62c2180caba0be1d3744a335a296a678",
+                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/15e43d10dd99ac818c8d65735c50191bcbeafdbc",
+                "reference": "15e43d10dd99ac818c8d65735c50191bcbeafdbc",
                 "shasum": ""
             },
             "require": {
@@ -4945,7 +4908,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2017-01-23T08:53:20+00:00"
+            "time": "2017-02-28T18:34:31+00:00"
         },
         {
             "name": "rwoverdijk/assetmanager",
@@ -6896,16 +6859,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.6.1",
+            "version": "4.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "a4129cbcaea6d4e9c26b103f11e2215dd85b8cb7"
+                "reference": "58f9639d8b200df62a22153d79bd76234b803978"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/a4129cbcaea6d4e9c26b103f11e2215dd85b8cb7",
-                "reference": "a4129cbcaea6d4e9c26b103f11e2215dd85b8cb7",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/58f9639d8b200df62a22153d79bd76234b803978",
+                "reference": "58f9639d8b200df62a22153d79bd76234b803978",
                 "shasum": ""
             },
             "type": "component",
@@ -6938,7 +6901,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2017-05-10T13:42:57+00:00"
+            "time": "2017-05-23T11:47:02+00:00"
         },
         {
             "name": "twig/twig",
@@ -7050,74 +7013,6 @@
                 "validate"
             ],
             "time": "2016-11-23T20:04:58+00:00"
-        },
-        {
-            "name": "wellcart/web",
-            "version": "0.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://bitbucket.org/wellcart/web-components.git",
-                "reference": "848b2479188ed9a000bfe1fb9fe26dc0ed800737"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://bitbucket.org/wellcart/web-components/get/848b2479188ed9a000bfe1fb9fe26dc0ed800737.zip",
-                "reference": "848b2479188ed9a000bfe1fb9fe26dc0ed800737",
-                "shasum": ""
-            },
-            "require": {
-                "blueimp/jquery-file-upload": "^9.14.0",
-                "components/bootstrap": "3.3.*",
-                "components/font-awesome": "4.7.*",
-                "components/handlebars.js": "4.0.*",
-                "components/jquery": "^3.1.0",
-                "components/jquery-cookie": "1.4.*",
-                "components/jqueryui": "1.12.*",
-                "components/underscore": "1.8.*",
-                "drmonty/chosen": "1.6.*",
-                "eonasdan/bootstrap-datetimepicker": "4.17.*",
-                "ivaynberg/select2": "4.0.*",
-                "moment/moment": "2.*",
-                "oro/moment-timezone": "0.3.*",
-                "php": "^7.0.0",
-                "robloach/component-installer": "0.2.3",
-                "tinymce/tinymce": "^4.4.0"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "files": [
-                        "fonts/*/*",
-                        "fonts/*",
-                        "validation/localization/*.js",
-                        "validation/*.js",
-                        "bootstrap-switch/*",
-                        "daterangepicker/*",
-                        "icheck/skins/minimal/blue/*",
-                        "icheck/*",
-                        "maskedinput/*",
-                        "nanoscroller/*",
-                        "switchery/*",
-                        "*.js"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Dima Denisenko",
-                    "email": "dima@wellcart.org",
-                    "role": "Developer"
-                }
-            ],
-            "homepage": "http://wellcart.org/",
-            "time": "2016-11-18T17:02:38+00:00"
         },
         {
             "name": "zendexperts/ze-theme",

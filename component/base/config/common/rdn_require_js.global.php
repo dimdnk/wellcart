@@ -13,8 +13,6 @@ return [
                 'baseUrl' => '/',
                 'paths'   => [
                     'wellcart'               => 'assets/wellcart-base/js/wellcart',
-                    'handlebars'             => 'assets/lib/handlebars/handlebars.runtime',
-                    'underscore'             => 'assets/lib/underscore/underscore-min',
                     'jquery'                 => 'assets/lib/jquery/jquery.min',
                     'jquery-ui'              => 'assets/lib/jquery-ui/jquery-ui.min',
                     'jquery-ujs'             => 'assets/lib/web/jquery-ujs',
@@ -23,14 +21,12 @@ return [
                     'moment'                 => 'assets/lib/moment/min/moment-with-locales.min',
                     'bootstrap'              => 'assets/lib/bootstrap/js/bootstrap.min',
                     'sluggable'              => 'assets/lib/web/speakingurl',
-                    'FastClick'              => 'assets/lib/web/fastclick',
                     'datetimepicker'         => 'assets/lib/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
                     'daterangepicker'        => 'assets/lib/web/daterangepicker/daterangepicker',
                     'bootbox'                => 'assets/lib/web/bootbox',
                     'icheck'                 => 'assets/lib/web/icheck/icheck',
                     'bootstrap-switch'       => 'assets/lib/web/bootstrap-switch/bootstrap-switch',
                     'switchery'              => 'assets/lib/web/switchery/switchery',
-                    'nanoscroller'           => 'assets/lib/web/nanoscroller/nanoscroller',
                     'chosen'                 => 'assets/lib/chosen/js/chosen.jquery.min',
                     'jquery.validate.min'    => 'assets/lib/web/validation/jquery.validate',
                     '../jquery.validate.min' => 'assets/lib/web/validation/jquery.validate',
@@ -39,9 +35,6 @@ return [
                 'shim'    => [
                     'jquery'           => [
                         'exports' => '$',
-                    ],
-                    'underscore'       => [
-                        'exports' => '_',
                     ],
                     'jquery-ui'        => [
                         'deps' => ['jquery'],
@@ -59,9 +52,6 @@ return [
                     'icheck'           => [
                         'deps' => ['jquery'],
                     ],
-                    'nanoscroller'     => [
-                        'deps' => ['jquery'],
-                    ],
                     'chosen'           => [
                         'deps' => ['jquery'],
                     ],
@@ -69,7 +59,6 @@ return [
                         'deps'    => ['jquery'],
                         'exports' => 'bootstrapSwitch',
                     ],
-                    'FastClick'        => ['exports' => 'FastClick'],
                     'tinymce'          => ['exports' => 'tinymce'],
                     'moment'           => ['exports' => 'moment'],
                     'datetimepicker'   => [
