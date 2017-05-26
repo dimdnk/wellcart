@@ -37,7 +37,7 @@
     "zendexperts/ze-theme": "1.0.*@dev",
     "hummer2k/conlayout": "^3.2",
     "hummer2k/convarnish": "^2.0",
-    "neilime/zf2-twb-bundle": "2.*@stable",
+    "neilime/zf2-twb-bundle": "3.*@stable",
     "neeckeloo/wizard": "1.0.1",
     "stroker/form": "^1.0.0",
     "thadafinser/zfc-datagrid": "1.3.*",
