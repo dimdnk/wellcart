@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import "../../../assets/lib/web/fonts/Roboto.css";
-@import "../../../assets/lib/web/fonts/IcoMoon.css";
+@import "../../../assets/lib/web-components/fonts/Roboto.css";
+@import "../../../assets/lib/web-components/fonts/IcoMoon.css";
 
 body {
     position: relative;
