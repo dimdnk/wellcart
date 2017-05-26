@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebb1fbc7e186ff1e559d1a5979fee9d6",
+    "content-hash": "4799d3c1e61d91961b0a9e98377c71cd",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -183,51 +183,6 @@
             ],
             "homepage": "https://bitbucket.org/DimaDenisenko/web-components-blueprint",
             "time": "2017-05-26T10:21:55+00:00"
-        },
-        {
-            "name": "atukai/at-php-settings",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/atukai/AtPhpSettings.git",
-                "reference": "bd9b13125b5fff61db79806024fcd0788ee01274"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/atukai/AtPhpSettings/zipball/bd9b13125b5fff61db79806024fcd0788ee01274",
-                "reference": "bd9b13125b5fff61db79806024fcd0788ee01274",
-                "shasum": ""
-            },
-            "require": {
-                "zendframework/zend-eventmanager": "2.*",
-                "zendframework/zend-mvc": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "AtPhpSettings\\": "src/"
-                },
-                "classmap": [
-                    "./Module.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Alexander Tukai",
-                    "email": "atukai@gmail.com"
-                }
-            ],
-            "description": "A ZF2 module for managing php settings.",
-            "homepage": "https://github.com/atukai/AtPhpSettings",
-            "keywords": [
-                "AtPhpSettings",
-                "Settings",
-                "atukai",
-                "php",
-                "zf2"
-            ],
-            "time": "2015-09-30T08:27:25+00:00"
         },
         {
             "name": "beberlei/DoctrineExtensions",

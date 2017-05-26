@@ -100,7 +100,7 @@ class SetupPageVariables extends AbstractListenerAggregate
         }
 
         $routesConfig = Config::get('router.routes', []);
-        unset($routesConfig['zf-apigility'], $routesConfig['api'], $routesConfig['zfcadmin']);
+        unset($routesConfig['api'], $routesConfig['zfcadmin']);
 
         $routesFlatConfig = Arr::flattenSeparated($routesConfig, '/');
         $routesFlatConfig = Arr::build(

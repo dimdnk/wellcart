@@ -48,7 +48,6 @@ Third-party frameworks utilized in this framework:
     - [Doctrine ORM](http://www.doctrine-project.org/)
     - [DoctrineDataFixture](https://github.com/Hounddog/DoctrineDataFixtureModule)
     - [ZF-Commons](https://github.com/ZF-Commons/)
-    - [Apigility](https://apigility.org/)
     - [AssetManager](https://github.com/RWOverdijk/AssetManager) 
     - [Phinx Migrations](https://phinx.org/) 
     - [AcMailer](https://github.com/acelaya/ZF2-AcMailer)

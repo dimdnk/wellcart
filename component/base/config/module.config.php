@@ -393,26 +393,6 @@ return [
             'ZeTheme\Adapter\Route' => 'ZeTheme\Adapter\Route',
         ],
     ],
-    'php_settings'               => [
-        'realpath_cache_size'     => '128K',
-        'realpath_cache_ttl'      => 1800,
-        'upload_tmp_dir'          => WELLCART_UPLOAD_PATH,
-        'file_uploads'            => true,
-        'log_errors'              => true,
-        'display_errors'          => true,
-        'display_startup_errors'  => true,
-        'short_open_tag'          => true,
-        'memory_limit'            => '255M',
-        'max_execution_time'      => 800,
-        'max_input_nesting_level' => 64,
-        'max_input_vars'          => 500,
-        'upload_max_filesize'     => '30M',
-        'max_post_size'           => '30M',
-        'max_file_uploads'        => 10,
-        'error_log'               => WELLCART_STORAGE_PATH . 'logs' . DS
-            . 'error.log',
-        'session.save_path'       => WELLCART_STORAGE_PATH . 'sessions' . DS,
-    ],
     'log'                        => [
         'logger'                  => [
             'writers' => [

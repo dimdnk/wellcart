@@ -24,17 +24,6 @@ return [
         ],
     ],
 
-    'php_settings' => [
-        'log_errors'             => true,
-        'display_errors'         => true,
-        'display_startup_errors' => true,
-        'short_open_tag'         => true,
-        'memory_limit'           => '512M',
-        'max_execution_time'     => 0,
-        'error_log'              => sys_get_temp_dir()
-            . '/wellcart-setup-php-error.log',
-    ],
-
     /**
      * Session configuration
      */
