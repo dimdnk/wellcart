@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "39475f733aadbada6fe7a251bdff0db6",
+    "content-hash": "ebb1fbc7e186ff1e559d1a5979fee9d6",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -4461,54 +4461,6 @@
             "time": "2013-07-22T20:01:48+00:00"
         },
         {
-            "name": "radnan/rdn-csv",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/radnan/rdn-csv.git",
-                "reference": "a7bdd4ee99d47f23e2ffd8720210f62113a3a056"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/radnan/rdn-csv/zipball/a7bdd4ee99d47f23e2ffd8720210f62113a3a056",
-                "reference": "a7bdd4ee99d47f23e2ffd8720210f62113a3a056",
-                "shasum": ""
-            },
-            "require": {
-                "zendframework/zend-http": "2.*",
-                "zendframework/zend-mvc": "2.*"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "*",
-                "phpunit/phpunit": "3.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "RdnCsv\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "radnan",
-                    "email": "rafiadnan47@gmail.com"
-                }
-            ],
-            "description": "Zend Framework 2 module to export and import CSV files",
-            "keywords": [
-                "csv",
-                "export",
-                "import",
-                "zend",
-                "zf2"
-            ],
-            "time": "2014-04-19T05:22:58+00:00"
-        },
-        {
             "name": "radnan/rdn-factory",
             "version": "v1.0.2",
             "source": {
@@ -8892,27 +8844,30 @@
         },
         {
             "name": "zendframework/zend-mvc",
-            "version": "2.7.10",
+            "version": "2.7.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-mvc.git",
-                "reference": "9b705d5d5c7ed3808f8d52b440f612d9dc28c395"
+                "reference": "badb5bdbdae0706d1ef8928cbc1088cca0e6a3cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-mvc/zipball/9b705d5d5c7ed3808f8d52b440f612d9dc28c395",
-                "reference": "9b705d5d5c7ed3808f8d52b440f612d9dc28c395",
+                "url": "https://api.github.com/repos/zendframework/zend-mvc/zipball/badb5bdbdae0706d1ef8928cbc1088cca0e6a3cb",
+                "reference": "badb5bdbdae0706d1ef8928cbc1088cca0e6a3cb",
                 "shasum": ""
             },
             "require": {
                 "container-interop/container-interop": "^1.1",
                 "php": "^5.5 || ^7.0",
                 "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
-                "zendframework/zend-form": "^2.7",
+                "zendframework/zend-form": "^2.8.2",
                 "zendframework/zend-hydrator": "^1.1 || ^2.1",
                 "zendframework/zend-psr7bridge": "^0.2",
                 "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
                 "zendframework/zend-stdlib": "^2.7.5 || ^3.0"
+            },
+            "replace": {
+                "zendframework/zend-router": "^2.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "1.7.*",
@@ -8934,7 +8889,6 @@
                 "zendframework/zend-text": "^2.6",
                 "zendframework/zend-uri": "^2.5",
                 "zendframework/zend-validator": "^2.6",
-                "zendframework/zend-version": "^2.5",
                 "zendframework/zend-view": "^2.6.3"
             },
             "suggest": {
@@ -8955,7 +8909,6 @@
                 "zendframework/zend-text": "Zend\\Text component",
                 "zendframework/zend-uri": "Zend\\Uri component",
                 "zendframework/zend-validator": "Zend\\Validator component",
-                "zendframework/zend-version": "Zend\\Version component",
                 "zendframework/zend-view": "Zend\\View component"
             },
             "type": "library",
@@ -8979,7 +8932,7 @@
                 "mvc",
                 "zf2"
             ],
-            "time": "2016-06-13T16:52:36+00:00"
+            "time": "2017-04-27T15:44:01+00:00"
         },
         {
             "name": "zendframework/zend-navigation",
@@ -9307,66 +9260,6 @@
                 "psr-7"
             ],
             "time": "2016-05-10T21:44:39+00:00"
-        },
-        {
-            "name": "zendframework/zend-router",
-            "version": "2.7.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-router.git",
-                "reference": "04f16978364d97b653d943bad02a301f6cb619a8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-router/zipball/04f16978364d97b653d943bad02a301f6cb619a8",
-                "reference": "04f16978364d97b653d943bad02a301f6cb619a8",
-                "shasum": ""
-            },
-            "require": {
-                "container-interop/container-interop": "^1.1",
-                "php": "^5.5 || ^7.0",
-                "zendframework/zend-http": "^2.5",
-                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
-                "zendframework/zend-stdlib": "^2.7.5 || ^3.0"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "^4.5",
-                "sebastian/version": "^1.0.4",
-                "zendframework/zend-console": "^2.6",
-                "zendframework/zend-filter": "^2.6.1",
-                "zendframework/zend-i18n": "^2.6",
-                "zendframework/zend-uri": "^2.5",
-                "zendframework/zend-validator": "^2.6"
-            },
-            "suggest": {
-                "zendframework/zend-console": "Zend\\Console component",
-                "zendframework/zend-filter": "Zend\\Filter component",
-                "zendframework/zend-i18n": "Zend\\I18n component for translatable segments",
-                "zendframework/zend-validator": "Zend\\Validator component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev",
-                    "dev-develop": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Mvc\\Router\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zend-router",
-            "keywords": [
-                "mvc",
-                "zf2"
-            ],
-            "time": "2016-03-08T18:18:41+00:00"
         },
         {
             "name": "zendframework/zend-serializer",
