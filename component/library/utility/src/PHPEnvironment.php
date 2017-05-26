@@ -112,7 +112,7 @@ abstract class PHPEnvironment
         if (PHP_SAPI == 'cli') {
             ini_set('max_execution_time', 0);
         } else {
-            ini_set('max_execution_time', 120);
+            ini_set('max_execution_time', 800);
         }
 
         if (extension_loaded('xdebug')) {
@@ -162,6 +162,22 @@ abstract class PHPEnvironment
         ini_set('intl.default_locale', 'en-US');
 
         Locale::setDefault('en-US');
+        foreach([
+        'realpath_cache_size'     => '128K',
+        'realpath_cache_ttl'      => 1800,
+        'upload_tmp_dir'          => WELLCART_UPLOAD_PATH,
+        'file_uploads'            => true,        
+        'max_input_nesting_level' => 64,
+        'max_input_vars'          => 500,
+        'upload_max_filesize'     => '30M',
+        'max_post_size'           => '30M',
+        'max_file_uploads'        => 10,
+        'error_log'               => WELLCART_STORAGE_PATH . 'logs' . DS . 'error.log',
+        'session.save_path'       => WELLCART_STORAGE_PATH . 'sessions' . DS,
+        ] as $key => $value)
+        {
+            ini_set($key, $value);
+        }
 
         $errorHandler = new ErrorHandler();
         // Enable error handling, converts all PHP errors to exceptions.
