@@ -53,7 +53,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.0.0",
+    "php": "^7.1.0",
     "robmorgan/phinx": "0.8.*",
     "fzaninotto/faker": "1.6.*",
     "wellcart/component-base": "0.1.*"

@@ -32,7 +32,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.0.0",
+    "php": "^7.1.0",
     "zendframework/zend-db": "2.8.*",
     "phpmd/phpmd": "2.*",
     "sebastian/phpcpd": "2.*",

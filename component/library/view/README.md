@@ -8,7 +8,7 @@ The components of the view layer.
 
 ### System Requirements
 
-Library requires PHP 7.0.0 or later; we recommend using the
+Library requires PHP 7.1.0 or later; we recommend using the
 latest PHP version whenever possible.
 
 ##### WellCart tries to be strict standard compliant, including by not limited to:

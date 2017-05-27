@@ -146,7 +146,7 @@
                 "ivaynberg/select2": "4.0.*",
                 "moment/moment": "2.*",
                 "oro/moment-timezone": "0.5.*",
-                "php": "^7.0.0",
+                "php": "^7.1.0",
                 "robloach/component-installer": "0.2.3",
                 "tinymce/tinymce": "^4.6.0"
             },
@@ -2652,7 +2652,7 @@
             },
             "require": {
                 "m1/env": "2.*",
-                "php": ">=7.0.0"
+                "php": ">=7.1.0"
             },
             "require-dev": {
                 "php-mock/php-mock-phpunit": "^1.1",
@@ -7223,7 +7223,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || 7.0.0 - 7.0.4 || ^7.0.6",
+                "php": "^5.5 || 7.1.0 - 7.0.4 || ^7.0.6",
                 "zendframework/zend-eventmanager": "^2.6 || ^3.0"
             },
             "require-dev": {
@@ -12275,7 +12275,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.0.0",
+        "php": "^7.1.0",
         "ext-json": "*",
         "ext-curl": "*",
         "ext-openssl": "*",

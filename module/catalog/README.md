@@ -14,7 +14,7 @@ Category Management. It includes CRUD operation of category
 
 ### System Requirements
 
-Module requires PHP 7.0.0 or later; we recommend using the
+Module requires PHP 7.1.0 or later; we recommend using the
 latest PHP version whenever possible.
 
 Required extensions:

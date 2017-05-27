@@ -116,7 +116,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.0.0",
+    "php": "^7.1.0",
     "wellcart/component-library": "0.1.*",
     "wellcart/component-setup": "0.1.*",
     "wellcart/component-backend": "0.1.*",

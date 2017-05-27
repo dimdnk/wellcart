@@ -28,7 +28,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.0.0",
+    "php": "^7.1.0",
     "gedmo/doctrine-extensions": "2.4.*"
   },
   "require-dev": {

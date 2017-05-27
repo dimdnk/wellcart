@@ -13,7 +13,7 @@ The CMS module allows creating, editing and managing pages with different conten
 
 ### System Requirements
 
-Module requires PHP 7.0.0 or later; we recommend using the
+Module requires PHP 7.1.0 or later; we recommend using the
 latest PHP version whenever possible.
 
 Required extensions:

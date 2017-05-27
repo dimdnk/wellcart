@@ -9,8 +9,8 @@
 /**
  * Check PHP version
  */
-if (version_compare(phpversion(), '7.0.0', '<') === true) {
-    echo 'WellCart supports PHP 7.0.0 or newer. Your version is '
+if (version_compare(phpversion(), '7.1.0', '<') === true) {
+    echo 'WellCart supports PHP 7.1.0 or newer. Your version is '
         . phpversion() . '.';
     exit;
 }

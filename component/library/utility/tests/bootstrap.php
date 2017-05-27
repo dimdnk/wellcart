@@ -22,9 +22,9 @@ defined('REQUEST_MICROTIME') || define('REQUEST_MICROTIME', microtime(true));
 define('TIME_NOW', time());
 
 // check PHP version
-if (version_compare(phpversion(), '7.0.0', '<') === true) {
+if (version_compare(phpversion(), '7.1.0', '<') === true) {
     throw new RuntimeException(
-        'WellCart Utility supports PHP 7.0.0 or newer. Your version is '
+        'WellCart Utility supports PHP 7.1.0 or newer. Your version is '
         . phpversion() . ".\n"
     );
 }
