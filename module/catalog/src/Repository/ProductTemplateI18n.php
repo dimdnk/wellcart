@@ -180,7 +180,7 @@ class ProductTemplateI18n extends AbstractRepository
         );
 
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\ProductTemplateEntity')
+            ->getRepository(ProductTemplateEntity::class)
             ->findAllIds();
     }
 }

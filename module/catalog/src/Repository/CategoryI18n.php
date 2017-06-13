@@ -85,7 +85,7 @@ class CategoryI18n extends AbstractRepository implements CategoryI18nRepository
     public function createCategoryEntity()
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\CategoryEntity')
+            ->getRepository(CategoryEntity::class)
             ->createEntity();
     }
 
@@ -100,7 +100,7 @@ class CategoryI18n extends AbstractRepository implements CategoryI18nRepository
         );
 
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\CategoryEntity')
+            ->getRepository(CategoryEntity::class)
             ->findAllIds();
     }
 }

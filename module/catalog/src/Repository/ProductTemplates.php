@@ -110,7 +110,7 @@ class ProductTemplates extends AbstractRepository
     public function createProductTemplateEntity()
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\ProductTemplateEntity')
+            ->getRepository(ProductTemplateEntity::class)
             ->createEntity();
     }
 

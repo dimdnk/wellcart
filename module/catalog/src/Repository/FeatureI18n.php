@@ -70,7 +70,7 @@ class FeatureI18n extends AbstractRepository implements FeatureI18nRepository
 
         return $this->getEntityManager()
             ->find(
-                'WellCart\Catalog\Spec\FeatureEntity',
+                FeatureEntity::class,
                 (int)$id
             );
     }
@@ -83,7 +83,7 @@ class FeatureI18n extends AbstractRepository implements FeatureI18nRepository
     public function createFeatureEntity()
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\FeatureEntity')
+            ->getRepository(FeatureEntity::class)
             ->createEntity();
     }
 }

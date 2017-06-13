@@ -81,7 +81,7 @@ class PageI18n extends AbstractRepository implements PageI18nRepository
     public function createPageEntity()
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\CMS\Spec\PageEntity')
+            ->getRepository(PageEntity::class)
             ->createEntity();
     }
 

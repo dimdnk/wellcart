@@ -82,7 +82,7 @@ class ProductI18n extends AbstractRepository implements ProductI18nRepository
     public function createProductEntity()
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\ProductEntity')
+            ->getRepository(ProductEntity::class)
             ->createEntity();
     }
 
@@ -97,7 +97,7 @@ class ProductI18n extends AbstractRepository implements ProductI18nRepository
         );
 
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\ProductEntity')
+            ->getRepository(ProductEntity::class)
             ->findAllIds();
     }
 }

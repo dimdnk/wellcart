@@ -11,6 +11,7 @@ declare(strict_types=1);
 namespace WellCart\Directory\Repository;
 
 use WellCart\Directory\Spec\GeoZoneRepository;
+use WellCart\Directory\Spec\ZoneEntity;
 use WellCart\ORM\AbstractRepository;
 
 class GeoZones extends AbstractRepository implements GeoZoneRepository
@@ -55,7 +56,7 @@ class GeoZones extends AbstractRepository implements GeoZoneRepository
     public function getZoneOptionsByCountry($country, $emptyOption = false)
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\Directory\Spec\ZoneEntity')
+            ->getRepository(ZoneEntity::class)
             ->toOptionsList($country, $emptyOption);
     }
 }

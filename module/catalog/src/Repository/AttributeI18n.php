@@ -84,7 +84,7 @@ class AttributeI18n extends AbstractRepository
     public function createAttributeEntity()
     {
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\AttributeEntity')
+            ->getRepository(AttributeEntity::class)
             ->createEntity();
     }
 
@@ -99,7 +99,7 @@ class AttributeI18n extends AbstractRepository
         );
 
         return $this->getEntityManager()
-            ->getRepository('WellCart\Catalog\Spec\AttributeEntity')
+            ->getRepository(AttributeEntity::class)
             ->findAllIds();
     }
 }
