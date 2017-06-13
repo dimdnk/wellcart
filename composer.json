@@ -50,7 +50,7 @@
     "josegonzalez/dotenv": "~3.0",
     "zendframework/zend-router": "2.7.*", 
     "zendframework/zend-servicemanager": "2.7.*",
-    "zendframework/zend-router": "2.7.*",
+    "zendframework/zend-config-aggregator": "1.*",
     "zendframework/zend-developer-tools": "1.1.*",
     "container-interop/container-interop": "^1.2.0",
     "adlogix/zf2-opensoft-rollout": "^1.0.0",

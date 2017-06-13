@@ -49,6 +49,7 @@
     "wellcart/component-schema-migration": "0.1.*",
     "wellcart/component-command-bus": "0.1.*",
     "wellcart/component-mapping-drivers": "0.1.*",
+    "zendframework/zend-config-aggregator": "1.*",
     "zendframework/zend-developer-tools": "1.1.*",
     "container-interop/container-interop": "^1.2.0",
     "adlogix/zf2-opensoft-rollout": "^1.0.0",
