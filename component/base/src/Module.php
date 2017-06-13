@@ -16,12 +16,13 @@ use Locale;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
-use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\ModuleManager\ModuleConfigProvider;
 use WellCart\Mvc\Application;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
 use WellCart\Setup\Feature\DataFixturesProviderInterface;
 use WellCart\Setup\Feature\MigrationsProviderInterface;
 use WellCart\Utility\Config;
+use Zend\ConfigAggregator\ConfigAggregator;
 use Zend\Console\Adapter\AdapterInterface as ConsoleAdapter;
 use Zend\Console\Console;
 use Zend\EventManager\EventInterface;
@@ -188,11 +189,11 @@ class Module implements
     /**
      * Returns configuration to merge with application configuration
      *
-     * @return ModuleConfiguration
+     * @return array
      */
     public function getConfig()
     {
-        return new ModuleConfiguration(__DIR__ . '/../config');
+      return (new ConfigAggregator([new ModuleConfigProvider(__DIR__ . '/../config')]))->getMergedConfig();
     }
 
     /**

@@ -10,7 +10,7 @@ declare(strict_types = 1);
 namespace WellCart\Backend;
 
 use WellCart\Test\TestCase;
-use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\ModuleManager\ModuleConfigProvider;
 use WellCart\Mvc\Application;
 
 class ModuleTest extends TestCase
@@ -42,11 +42,11 @@ class ModuleTest extends TestCase
     public function testGetConfig()
     {
         $this->assertInstanceOf(
-            ModuleConfiguration::class, $this->object->getConfig()
+            ModuleConfigProvider::class, $this->object->getConfig()
         );
         $_ENV['WELLCART_APPLICATION_CONTEXT'] = Application::CONTEXT_API;
         $this->assertInstanceOf(
-            ModuleConfiguration::class, $this->object->getConfig()
+            ModuleConfigProvider::class, $this->object->getConfig()
         );
     }
 

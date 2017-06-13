@@ -10,7 +10,7 @@ namespace WellCart\Directory\Test\Unit;
 
 use WellCart\Test\TestCase;
 use WellCart\Directory\Module;
-use WellCart\ModuleManager\ModuleConfiguration;
+use WellCart\ModuleManager\ModuleConfigProvider;
 use WellCart\Mvc\Application;
 use Zend\Console\Console;
 
@@ -36,11 +36,11 @@ class ModuleTest extends TestCase
     public function testGetConfig()
     {
         $this->assertInstanceOf(
-            ModuleConfiguration::class, $this->object->getConfig()
+            ModuleConfigProvider::class, $this->object->getConfig()
         );
         $_ENV['WELLCART_APPLICATION_CONTEXT'] = Application::CONTEXT_API;
         $this->assertInstanceOf(
-            ModuleConfiguration::class, $this->object->getConfig()
+            ModuleConfigProvider::class, $this->object->getConfig()
         );
     }
 
