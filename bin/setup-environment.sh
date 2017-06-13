@@ -41,7 +41,7 @@ mysql -u root -e "GRANT ALL PRIVILEGES ON * . * TO 'wellcart'@'localhost';"
 
 service mysql restart
 
-apt -y install php7.0-cli php7.0-common libapache2-mod-php7.0 php-memcached php-memcache php-mongo php-amqp php7.0 php7.0-mysql php-http php-xdebug php7.0-mbstring php7.0-bcmath php-imagick php-xml php-mcrypt php-zip php-pear imagemagick php7.0-dev php7.0-gd npm nodejs-legacy php7.0-json php7.0-curl php7.0-sqlite3 php7.0-intl php7.0-pgsql
+apt -y install php7.1-cli php7.1-common libapache2-mod-php7.1 php-memcached php-memcache php-mongo php-amqp php7.1 php7.1-mysql php-http php-xdebug php7.1-mbstring php7.1-bcmath php-imagick php-xml php-mcrypt php-zip php-pear imagemagick php7.1-dev php7.1-gd npm nodejs-legacy php7.1-json php7.1-curl php7.1-sqlite3 php7.1-intl php7.1-pgsql
 pecl channel-update pecl.php.net
 
 npm install -g grunt-cli bower less sass
