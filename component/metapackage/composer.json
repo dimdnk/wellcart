@@ -53,7 +53,6 @@
     "container-interop/container-interop": "^1.2.0",
     "adlogix/zf2-opensoft-rollout": "^1.0.0",
     "zendframework/zend-router": "2.7.*",
-    "zf-commons/zfc-twig": "dev-master",
     "slm/queue": "1.0.*",
     "slm/queue-doctrine": "1.0.*",
     "bitweb/zf2-cron-module": "2.0.*",

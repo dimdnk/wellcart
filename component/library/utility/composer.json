@@ -27,7 +27,6 @@
     "jbroadway/urlify": "1.*",
     "patchwork/utf8": "1.*",
     "raulfraile/ladybug": "1.*",
-    "twig/twig": "<=1.30.0",
     "nesbot/carbon": "1.*",
     "josegonzalez/dotenv": "~3.0",
     "crazycodr/standard-exceptions": "^2.1.0"
