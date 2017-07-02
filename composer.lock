@@ -1771,16 +1771,16 @@
         },
         {
             "name": "doctrine/mongodb",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb.git",
-                "reference": "293ad1ee54b507e269d6a1309dbeb8c00621b00e"
+                "reference": "70bcf794bb9ad32224a03288adbc4e7bae1bdd85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb/zipball/293ad1ee54b507e269d6a1309dbeb8c00621b00e",
-                "reference": "293ad1ee54b507e269d6a1309dbeb8c00621b00e",
+                "url": "https://api.github.com/repos/doctrine/mongodb/zipball/70bcf794bb9ad32224a03288adbc4e7bae1bdd85",
+                "reference": "70bcf794bb9ad32224a03288adbc4e7bae1bdd85",
                 "shasum": ""
             },
             "require": {
@@ -1790,7 +1790,7 @@
             },
             "require-dev": {
                 "jmikola/geojson": "^1.0",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^5.7 || ^6.0"
             },
             "suggest": {
                 "alcaeus/mongo-php-adapter": "Allows usage of PHP 7",
@@ -1799,7 +1799,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -1844,7 +1844,7 @@
                 "mongodb",
                 "persistence"
             ],
-            "time": "2016-11-22T19:01:59+00:00"
+            "time": "2017-06-30T09:45:35+00:00"
         },
         {
             "name": "doctrine/mongodb-odm",
@@ -2235,16 +2235,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.29",
+            "version": "v2.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "f65c02eae3bff1aa57709ea4c8ca26947df95b9c"
+                "reference": "5e2cc07beb0cd24345cbe02eb7afc3b23f9cd488"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/f65c02eae3bff1aa57709ea4c8ca26947df95b9c",
-                "reference": "f65c02eae3bff1aa57709ea4c8ca26947df95b9c",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/5e2cc07beb0cd24345cbe02eb7afc3b23f9cd488",
+                "reference": "5e2cc07beb0cd24345cbe02eb7afc3b23f9cd488",
                 "shasum": ""
             },
             "require": {
@@ -2309,7 +2309,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2017-05-29T17:33:48+00:00"
+            "time": "2017-07-02T09:46:37+00:00"
         },
         {
             "name": "hounddog/doctrine-data-fixture-module",
@@ -3950,16 +3950,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.20",
+            "version": "5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -4028,7 +4028,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-05-22T07:42:55+00:00"
+            "time": "2017-06-21T08:11:54+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4091,16 +4091,16 @@
         },
         {
             "name": "prolic/humus-amqp",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/prolic/HumusAmqp.git",
-                "reference": "eb023f4207ab99bd21c83f8ef64928012e24c91c"
+                "reference": "bc002f4e9c9af8c6481c598ef1919d8f27ffce06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/prolic/HumusAmqp/zipball/eb023f4207ab99bd21c83f8ef64928012e24c91c",
-                "reference": "eb023f4207ab99bd21c83f8ef64928012e24c91c",
+                "url": "https://api.github.com/repos/prolic/HumusAmqp/zipball/bc002f4e9c9af8c6481c598ef1919d8f27ffce06",
+                "reference": "bc002f4e9c9af8c6481c598ef1919d8f27ffce06",
                 "shasum": ""
             },
             "require": {
@@ -4116,7 +4116,7 @@
                 "container-interop/container-interop": "^1.1",
                 "friendsofphp/php-cs-fixer": "^1.12.2",
                 "malukenho/docheader": "^0.1.4",
-                "php-amqplib/php-amqplib": "^2.6.3",
+                "php-amqplib/php-amqplib": "^2.7-rc1",
                 "phpspec/prophecy": "^1.6",
                 "phpunit/phpunit": "^5.6",
                 "sandrokeil/interop-config": "^1.0",
@@ -4126,9 +4126,9 @@
             },
             "suggest": {
                 "container-interop/container-interop": "For usage of provided factories",
-                "ext-amqp": ">= 1.7.1 For usage together with php amqp extension",
+                "ext-amqp": ">= 1.9.1 For usage together with php amqp extension",
                 "ext-pcntl": "For process control management",
-                "php-amqplib/php-amqplib": ">= 2.6.3 For usage together with php-amqplib",
+                "php-amqplib/php-amqplib": ">= 2.7.0-rc1 For usage together with php-amqplib",
                 "sandrokeil/interop-config": "For usage of provided factories",
                 "symfony/console": "For usage of the provided console tool"
             },
@@ -4166,7 +4166,7 @@
                 "rabbit",
                 "rabbitmq"
             ],
-            "time": "2017-02-07T07:16:38+00:00"
+            "time": "2017-06-18T14:29:40+00:00"
         },
         {
             "name": "prolic/humus-amqp-module",
@@ -4756,12 +4756,12 @@
             "version": "v0.8.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/robmorgan/phinx.git",
+                "url": "https://github.com/cakephp/phinx.git",
                 "reference": "7a19de5bebc59321edd9613bc2a667e7f96224ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robmorgan/phinx/zipball/7a19de5bebc59321edd9613bc2a667e7f96224ec",
+                "url": "https://api.github.com/repos/cakephp/phinx/zipball/7a19de5bebc59321edd9613bc2a667e7f96224ec",
                 "reference": "7a19de5bebc59321edd9613bc2a667e7f96224ec",
                 "shasum": ""
             },
@@ -9445,29 +9445,29 @@
         },
         {
             "name": "zendframework/zend-session",
-            "version": "2.7.3",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-session.git",
-                "reference": "346e9709657b81a5d53d70ce754730a26d1f02f2"
+                "reference": "b1486c382decc241de8b1c7778eaf2f0a884f67d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-session/zipball/346e9709657b81a5d53d70ce754730a26d1f02f2",
-                "reference": "346e9709657b81a5d53d70ce754730a26d1f02f2",
+                "url": "https://api.github.com/repos/zendframework/zend-session/zipball/b1486c382decc241de8b1c7778eaf2f0a884f67d",
+                "reference": "b1486c382decc241de8b1c7778eaf2f0a884f67d",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0",
+                "php": "^7.0 || ^5.6",
                 "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
                 "zendframework/zend-stdlib": "^2.7 || ^3.0"
             },
             "require-dev": {
                 "container-interop/container-interop": "^1.1",
-                "fabpot/php-cs-fixer": "1.7.*",
                 "mongodb/mongodb": "^1.0.1",
-                "phpunit/phpunit": "~4.0",
+                "phpunit/phpunit": "^6.0.8 || ^5.7.15",
                 "zendframework/zend-cache": "^2.6.1",
+                "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-db": "^2.7",
                 "zendframework/zend-http": "^2.5.4",
                 "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
@@ -9484,8 +9484,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev",
-                    "dev-develop": "2.8-dev"
+                    "dev-master": "2.8-dev",
+                    "dev-develop": "2.9-dev"
                 },
                 "zf": {
                     "component": "Zend\\Session",
@@ -9507,7 +9507,7 @@
                 "session",
                 "zf2"
             ],
-            "time": "2016-07-05T18:32:50+00:00"
+            "time": "2017-06-19T21:31:39+00:00"
         },
         {
             "name": "zendframework/zend-soap",
@@ -10656,6 +10656,55 @@
             "time": "2017-04-03T22:37:00+00:00"
         },
         {
+            "name": "consolidation/config",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/consolidation/config.git",
+                "reference": "b30571aa8f0eae40581ae8b8aeaa26706b444781"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/consolidation/config/zipball/b30571aa8f0eae40581ae8b8aeaa26706b444781",
+                "reference": "b30571aa8f0eae40581ae8b8aeaa26706b444781",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/dot-access-data": "^1.1.0",
+                "grasmash/yaml-expander": "^1.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4",
+                "satooshi/php-coveralls": "^1.0",
+                "squizlabs/php_codesniffer": "2.*",
+                "symfony/console": "^2.5|^3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Consolidation\\Config\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
+                }
+            ],
+            "description": "Provide configuration services for a commandline tool.",
+            "time": "2017-06-28T18:24:02+00:00"
+        },
+        {
             "name": "consolidation/log",
             "version": "1.0.3",
             "source": {
@@ -10753,24 +10802,23 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "1.0.8",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "256943c290b74639a21e0010aeb70f9e474edf18"
+                "reference": "36fe43c6be39dd2299d9a3e551f45c5ac15013ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/256943c290b74639a21e0010aeb70f9e474edf18",
-                "reference": "256943c290b74639a21e0010aeb70f9e474edf18",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/36fe43c6be39dd2299d9a3e551f45c5ac15013ec",
+                "reference": "36fe43c6be39dd2299d9a3e551f45c5ac15013ec",
                 "shasum": ""
             },
             "require": {
                 "consolidation/annotated-command": "^2.2",
+                "consolidation/config": "^1",
                 "consolidation/log": "~1",
                 "consolidation/output-formatters": "^3.1.5",
-                "dflydev/dot-access-data": "^1.1.0",
-                "grasmash/yaml-expander": "^1.1",
                 "league/container": "^2.2",
                 "php": ">=5.5.0",
                 "symfony/console": "~2.8|~3.0",
@@ -10829,7 +10877,7 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2017-06-03T03:18:12+00:00"
+            "time": "2017-06-29T15:42:54+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -11797,16 +11845,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.5",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d"
+                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
-                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0808939f81c1347a3c8a82a5925385a08074b0f1",
+                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1",
                 "shasum": ""
             },
             "require": {
@@ -11844,7 +11892,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-03-05T18:23:57+00:00"
+            "time": "2017-06-28T20:53:48+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -12539,16 +12587,16 @@
         },
         {
             "name": "theseer/fdomdocument",
-            "version": "1.6.5",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/fDOMDocument.git",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d"
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/8dcfd392135a5bd938c3c83ea71419501ad9855d",
-                "reference": "8dcfd392135a5bd938c3c83ea71419501ad9855d",
+                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/6e8203e40a32a9c770bcb62fe37e68b948da6dca",
+                "reference": "6e8203e40a32a9c770bcb62fe37e68b948da6dca",
                 "shasum": ""
             },
             "require": {
@@ -12575,7 +12623,7 @@
             ],
             "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
             "homepage": "https://github.com/theseer/fDOMDocument",
-            "time": "2017-04-21T14:50:31+00:00"
+            "time": "2017-06-30T11:53:12+00:00"
         }
     ],
     "aliases": [],
