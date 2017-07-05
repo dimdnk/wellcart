@@ -4032,16 +4032,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.4.3",
+            "version": "3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24"
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
-                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/a23b761686d50a560cc56233b9ecf49597cc9118",
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118",
                 "shasum": ""
             },
             "require": {
@@ -4087,7 +4087,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-12-08T20:27:08+00:00"
+            "time": "2017-06-30T09:13:00+00:00"
         },
         {
             "name": "prolic/humus-amqp",
@@ -5995,16 +5995,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "35716d4904e0506a7a5a9bcf23f854aeb5719bca"
+                "reference": "a094618deb9a3fe1c3cf500a796e167d0495a274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/35716d4904e0506a7a5a9bcf23f854aeb5719bca",
-                "reference": "35716d4904e0506a7a5a9bcf23f854aeb5719bca",
+                "url": "https://api.github.com/repos/symfony/config/zipball/a094618deb9a3fe1c3cf500a796e167d0495a274",
+                "reference": "a094618deb9a3fe1c3cf500a796e167d0495a274",
                 "shasum": ""
             },
             "require": {
@@ -6012,10 +6012,12 @@
                 "symfony/filesystem": "~2.8|~3.0"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3"
+                "symfony/dependency-injection": "<3.3",
+                "symfony/finder": "<3.3"
             },
             "require-dev": {
                 "symfony/dependency-injection": "~3.3",
+                "symfony/finder": "~3.3",
                 "symfony/yaml": "~3.0"
             },
             "suggest": {
@@ -6051,20 +6053,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-02T18:07:20+00:00"
+            "time": "2017-06-16T12:40:34+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.22",
+            "version": "v2.8.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3ef6ef64abecd566d551d9e7f6393ac6e93b2462"
+                "reference": "46e65f8d98c9ab629bbfcc16a4ff023f61c37fb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3ef6ef64abecd566d551d9e7f6393ac6e93b2462",
-                "reference": "3ef6ef64abecd566d551d9e7f6393ac6e93b2462",
+                "url": "https://api.github.com/repos/symfony/console/zipball/46e65f8d98c9ab629bbfcc16a4ff023f61c37fb2",
+                "reference": "46e65f8d98c9ab629bbfcc16a4ff023f61c37fb2",
                 "shasum": ""
             },
             "require": {
@@ -6112,7 +6114,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-02T14:36:56+00:00"
+            "time": "2017-07-03T08:04:30+00:00"
         },
         {
             "name": "symfony/debug",
@@ -6173,16 +6175,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "4cec19ec1d25f22e1ec8ab14635d3879a1287053"
+                "reference": "986a633c92220ecb22ad06820a1df126c7a4f9eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/4cec19ec1d25f22e1ec8ab14635d3879a1287053",
-                "reference": "4cec19ec1d25f22e1ec8ab14635d3879a1287053",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/986a633c92220ecb22ad06820a1df126c7a4f9eb",
+                "reference": "986a633c92220ecb22ad06820a1df126c7a4f9eb",
                 "shasum": ""
             },
             "require": {
@@ -6239,20 +6241,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-06T03:13:52+00:00"
+            "time": "2017-06-20T14:01:46+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "c709670bf64721202ddbe4162846f250735842c0"
+                "reference": "311fa718389efbd8b627c272b9324a62437018cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c709670bf64721202ddbe4162846f250735842c0",
-                "reference": "c709670bf64721202ddbe4162846f250735842c0",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/311fa718389efbd8b627c272b9324a62437018cc",
+                "reference": "311fa718389efbd8b627c272b9324a62437018cc",
                 "shasum": ""
             },
             "require": {
@@ -6288,11 +6290,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-28T14:08:56+00:00"
+            "time": "2017-06-24T09:29:48+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -6341,7 +6343,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v2.8.22",
+            "version": "v2.8.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -6454,16 +6456,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "8e30690c67aafb6c7992d6d8eb0d707807dd3eaf"
+                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/8e30690c67aafb6c7992d6d8eb0d707807dd3eaf",
-                "reference": "8e30690c67aafb6c7992d6d8eb0d707807dd3eaf",
+                "url": "https://api.github.com/repos/symfony/process/zipball/5ab8949b682b1bf9d4511a228b5e045c96758c30",
+                "reference": "5ab8949b682b1bf9d4511a228b5e045c96758c30",
                 "shasum": ""
             },
             "require": {
@@ -6499,20 +6501,20 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-22T12:32:03+00:00"
+            "time": "2017-07-03T08:12:02+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "dc3b2a0c6cfff60327ba1c043a82092735397543"
+                "reference": "35dd5fb003c90e8bd4d8cabdf94bf9c96d06fdc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/dc3b2a0c6cfff60327ba1c043a82092735397543",
-                "reference": "dc3b2a0c6cfff60327ba1c043a82092735397543",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/35dd5fb003c90e8bd4d8cabdf94bf9c96d06fdc3",
+                "reference": "35dd5fb003c90e8bd4d8cabdf94bf9c96d06fdc3",
                 "shasum": ""
             },
             "require": {
@@ -6564,20 +6566,20 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-22T07:42:36+00:00"
+            "time": "2017-06-24T16:45:30+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063"
+                "reference": "1f93a8d19b8241617f5074a123e282575b821df8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/9752a30000a8ca9f4b34b5227d15d0101b96b063",
-                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/1f93a8d19b8241617f5074a123e282575b821df8",
+                "reference": "1f93a8d19b8241617f5074a123e282575b821df8",
                 "shasum": ""
             },
             "require": {
@@ -6619,7 +6621,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-02T22:05:06+00:00"
+            "time": "2017-06-15T12:58:50+00:00"
         },
         {
             "name": "tck/zf2-imageresizer",
@@ -12475,16 +12477,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "4054a102470665451108f9b59305c79176ef98f0"
+                "reference": "67535f1e3fd662bdc68d7ba317c93eecd973617e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4054a102470665451108f9b59305c79176ef98f0",
-                "reference": "4054a102470665451108f9b59305c79176ef98f0",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/67535f1e3fd662bdc68d7ba317c93eecd973617e",
+                "reference": "67535f1e3fd662bdc68d7ba317c93eecd973617e",
                 "shasum": ""
             },
             "require": {
@@ -12534,11 +12536,11 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-06-04T18:15:29+00:00"
+            "time": "2017-06-09T14:53:08+00:00"
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
