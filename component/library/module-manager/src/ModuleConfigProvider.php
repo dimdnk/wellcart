@@ -42,8 +42,8 @@ class ModuleConfigProvider
     public function __invoke()
     {
         $context = application_context();
-        $commonPath = $this->dir . Application::CONTEXT_COMMON . DS . '{{,*.}global,{,*.}local}.php';
-        $contextPath = $this->dir . $context . DS . '{{,*.}global,{,*.}local}.php';
+        $commonPath = $this->dir . Application::CONTEXT_COMMON . DS . '*.php';
+        $contextPath = $this->dir . $context . DS . '*.php';
 
         $files = array_merge( [$this->dir . 'module.config.php'], glob($commonPath, GLOB_BRACE));
         if (!application_context(Application::CONTEXT_COMMON)) {
