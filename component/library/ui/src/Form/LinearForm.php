@@ -87,7 +87,7 @@ class LinearForm extends AbstractForm implements FormInterface
             $button->setAttribute(
                 'data-disable-with', sprintf(
                     '<span class="fa fa-%s"></span> %s',
-                    $button->getOption('fontAwesome')['icon'],
+                    Arr::get((array)$button->getOption('fontAwesome'), 'icon', 'check-circle'),
                     $button->getLabel()
                 )
             );
