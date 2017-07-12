@@ -15,6 +15,7 @@ composer.lock
 /bin
 *~
 report.xml
+*.local.php
 *.suite.yml
 maintenance.flag
 Maintenance.html
