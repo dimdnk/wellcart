@@ -13,7 +13,6 @@ composer.lock
 /build
 /public
 /bin
-apigility-ui
 *~
 report.xml
 .env

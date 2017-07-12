@@ -13,10 +13,8 @@ composer.lock
 /vendor
 /build
 /bin
-apigility-ui
 *~
 report.xml
-
 *.suite.yml
 maintenance.flag
 Maintenance.html

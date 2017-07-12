@@ -10,7 +10,6 @@ Thumbs.db
 .project
 .settings
 composer.lock
-
 *.suite.yml
 /public/assets
 /public/media
@@ -18,7 +17,6 @@ composer.lock
 /vendor
 /build
 /bin
-apigility-ui
 *~
 report.xml
 .env
