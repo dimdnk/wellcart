@@ -16,4 +16,4 @@ composer.lock
 *~
 report.xml
 .env
-*.local.php
+*local.php

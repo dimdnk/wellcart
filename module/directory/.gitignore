@@ -16,7 +16,7 @@ composer.lock
 *~
 report.xml
 *.suite.yml
-*.local.php
+*local.php
 maintenance.flag
 Maintenance.html
 .env

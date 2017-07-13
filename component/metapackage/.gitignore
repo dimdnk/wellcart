@@ -13,7 +13,7 @@ composer.lock
 /build
 /public
 /bin
-*.local.php
+*local.php
 *~
 report.xml
 .env

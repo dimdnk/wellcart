@@ -1,10 +1,8 @@
 *.phar
-local.php
-*.local.php
+*local.php
 application.config.php
 db.global.php
 phpunit.xml
-
 maintenance.flag
 Maintenance.html
 *.suite.yml

@@ -14,7 +14,7 @@ composer.lock
 /public
 /bin
 *~
-*.local.php
+*local.php
 report.xml
 .env
 .vagrant
