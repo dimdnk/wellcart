@@ -47,9 +47,9 @@
         "common": {
           "name": "common",
           "extends": false,
-          "require": {
-            "-72730": "WellCart\\CMS"
-          }
+          "require": [
+            {"name": "WellCart\\CMS", "priority": -72730}
+          ]
         }
       }
     },

@@ -48,12 +48,12 @@
         "common": {
           "name": "common",
           "extends": false,
-          "require": {
-            "-72852": "ZfcUser",
-            "-72851": "ZfcUserDoctrineORM",
-            "-72850": "ZfcRbac",
-            "-72820": "WellCart\\User"
-          }
+          "require": [
+            {"name": "ZfcUser", "priority": -72852},
+            {"name": "ZfcUserDoctrineORM", "priority": -72851},
+            {"name": "ZfcRbac", "priority": -72850},
+            {"name": "WellCart\\User", "priority": -72820}
+          ]
         }
       }
     },

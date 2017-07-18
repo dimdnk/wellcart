@@ -47,10 +47,10 @@
         "common": {
           "name": "common",
           "extends": false,
-          "require": {
-            "-72741": "NetglueMoney",
-            "-72740": "WellCart\\Directory"
-          }
+          "require": [
+            {"name": "NetglueMoney", "priority": -72741},
+            {"name": "WellCart\\Directory", "priority": -72740}
+          ]
         }
       }
     },

@@ -44,8 +44,7 @@
   "extra": {
     "wellcart": {
       "type": "component",
-      "name": "WellCart\\CommandBus",
-      "priority": -72923
+      "name": "WellCart\\CommandBus"
     },
     "zf": {
       "component": "WellCart\\CommandBus"

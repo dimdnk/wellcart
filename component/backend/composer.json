@@ -48,10 +48,10 @@
         "common": {
           "name": "common",
           "extends": false,
-          "require": {
-            "-72810": "ZfcAdmin",
-            "-72800": "WellCart\\Backend"
-          }
+          "require": [
+            {"name": "ZfcAdmin", "priority": -72810},
+            {"name": "WellCart\\Backend", "priority": -72800}
+          ]
         }
       }
     },

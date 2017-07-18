@@ -46,28 +46,28 @@
       "name": "WellCart\\Setup",
       "context": {
         "common": {
-          "exclude": {
-            "70000": "WellCart\\Setup"
-          }
+          "exclude": [
+            {"name": "WellCart\\Setup", "priority": 70000}
+          ]
         },
         "frontend": {
-          "exclude": {
-            "70000": "WellCart\\Setup"
-          }
+          "exclude": [
+            {"name": "WellCart\\Setup", "priority": 70000}
+          ]
         },
         "backend": {
-          "exclude": {
-            "70000": "WellCart\\Setup"
-          }
+          "exclude": [
+            {"name": "WellCart\\Setup", "priority": 70000}
+          ]
         },
         "setup": {
           "name": "setup",
           "extends": false,
-          "require": {
-            "-90000": "WellCart\\Theme\\FrontendUi",
-            "-80200": "WellCart\\Theme\\SetupUi",
-            "70000": "WellCart\\Setup"
-          }
+          "require": [
+            {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
+            {"name": "WellCart\\Theme\\SetupUi", "priority": -80200},
+            {"name": "WellCart\\Setup", "priority": 70000}
+          ]
         }
       }
     },

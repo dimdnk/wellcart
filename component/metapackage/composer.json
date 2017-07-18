@@ -97,37 +97,37 @@
         "global": {
           "name": "global",
           "extends": false,
-          "require": {}
+          "require": []
         },
         "common": {
           "name": "common",
           "extends": false,
-          "require": {}
+          "require": []
         },
         "console": {
           "name": "console",
           "extends": "common",
-          "require": {}
+          "require": []
         },
         "api": {
           "name": "api",
           "extends": "common",
-          "require": {}
+          "require": []
         },
         "frontend": {
           "name": "frontend",
           "extends": "common",
-          "require": {}
+          "require": []
         },
         "backend": {
           "name": "backend",
           "extends": "frontend",
-          "require": {}
+          "require": []
         },
         "setup": {
           "name": "setup",
           "extends": false,
-          "require": {}
+          "require": []
         }
       }
     },

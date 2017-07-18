@@ -57,18 +57,18 @@
       "name": "WellCart\\Theme\\FrontendUi",
       "context": {
         "common": {
-          "require": {
-            "-90000": "WellCart\\Theme\\FrontendUi"
-          }
+          "require": [
+            {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000}
+          ]
         },
         "frontend": {
-          "require": {}
+          "require": []
         },
         "backend": {
-          "require": {}
+          "require": []
         },
         "setup": {
-          "require": {}
+          "require": []
         }
       }
     },
