@@ -13,6 +13,7 @@ use Interop\Container\ContainerInterface;
 use WellCart\Mvc\Application;
 use WellCart\Utility\Arr;
 use Zend\Mvc\Service\ModuleManagerFactory as AbstractFactory;
+use SplPriorityQueue;
 
 class ModuleManagerFactory extends AbstractFactory
 {
@@ -102,8 +103,15 @@ class ModuleManagerFactory extends AbstractFactory
             }
             $modules = Arr::merge($modules, $defaultModules);
         }
+        $queue = new SplPriorityQueue();
+        foreach ($modules as $module)
+        {
+          $queue->insert($module['name'], $module['priority']);
+        }
+        $modules = array_reverse(array_unique(iterator_to_array($queue, false)));
 
         foreach ($currentContextData['exclude'] as $excludeModule) {
+            $excludeModule = $excludeModule['name'];
             $idx = array_search($excludeModule, $modules);
             if ($idx !== false) {
                 unset($modules[$idx]);
@@ -129,11 +137,11 @@ class ModuleManagerFactory extends AbstractFactory
 
         foreach ($files as $file) {
             foreach ($file as $spec) {
-                if (empty($spec->extra->wellcart->context)
+                if (empty($spec['extra']['wellcart']['context'])
                 ) {
                     continue;
                 }
-                $ctxData = $spec->extra->wellcart->context;
+                $ctxData = $spec['extra']['wellcart']['context'];
                 foreach ($ctxData as $contextName => $contextData) {
                     if (!isset($contextInfo[$contextName])) {
                         $contextInfo[$contextName] = [
@@ -144,22 +152,22 @@ class ModuleManagerFactory extends AbstractFactory
                         ];
                     }
 
-                    if (!empty($contextData->extends)
+                    if (!empty($contextData['extends'])
                         && $contextInfo[$contextName]['extends'] === false
                     ) {
                         $contextInfo[$contextName]['extends']
-                            = (string)$contextData->extends;
+                            = (string)$contextData['extends'];
                     }
-                    if (!empty($contextData->require)) {
+                    if (!empty($contextData['require'])) {
                         $contextInfo[$contextName]['require'] = Arr::merge(
                             $contextInfo[$contextName]['require'],
-                            (array)$contextData->require
+                            (array)$contextData['require']
                         );
                     }
-                    if (!empty($contextData->exclude)) {
+                    if (!empty($contextData['exclude'])) {
                         $contextInfo[$contextName]['exclude'] = Arr::merge(
                             $contextInfo[$contextName]['exclude'],
-                            (array)$contextData->exclude
+                            (array)$contextData['exclude']
                         );
                     }
                 }
@@ -179,6 +187,6 @@ class ModuleManagerFactory extends AbstractFactory
      */
     protected function readFile($file)
     {
-        return json_decode(file_get_contents($file));
+        return json_decode(file_get_contents($file), true);
     }
 }
