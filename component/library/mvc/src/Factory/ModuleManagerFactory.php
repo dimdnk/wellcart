@@ -107,10 +107,9 @@ class ModuleManagerFactory extends AbstractFactory
         $queue->isLIFO(false);
         foreach ($modules as $module)
         {
-          $queue->insert($module['name'], $module['priority']);
+          $queue->insert($module['name'], $module['name'],  $module['priority']);
         }
-        $modules = array_unique(iterator_to_array($queue, false));
-
+        $modules = array_unique(array_reverse($queue->toArray()));
         foreach ($currentContextData['exclude'] as $excludeModule) {
             $excludeModule = $excludeModule['name'];
             $idx = array_search($excludeModule, $modules);
