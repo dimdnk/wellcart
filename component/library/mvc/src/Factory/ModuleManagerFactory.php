@@ -13,7 +13,7 @@ use Interop\Container\ContainerInterface;
 use WellCart\Mvc\Application;
 use WellCart\Utility\Arr;
 use Zend\Mvc\Service\ModuleManagerFactory as AbstractFactory;
-use SplPriorityQueue;
+use Zend\Stdlib\PriorityList;
 
 class ModuleManagerFactory extends AbstractFactory
 {
@@ -103,12 +103,13 @@ class ModuleManagerFactory extends AbstractFactory
             }
             $modules = Arr::merge($modules, $defaultModules);
         }
-        $queue = new SplPriorityQueue();
+        $queue = new PriorityList();
+        $queue->isLIFO(false);
         foreach ($modules as $module)
         {
           $queue->insert($module['name'], $module['priority']);
         }
-        $modules = array_reverse(array_unique(iterator_to_array($queue, false)));
+        $modules = array_unique(iterator_to_array($queue, false));
 
         foreach ($currentContextData['exclude'] as $excludeModule) {
             $excludeModule = $excludeModule['name'];
