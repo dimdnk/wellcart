@@ -117,9 +117,6 @@ class ModuleManagerFactory extends AbstractFactory
                 unset($modules[$idx]);
             }
         }
-
-        ksort($modules);
-
         return $modules;
     }
 
