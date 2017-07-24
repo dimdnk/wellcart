@@ -100,7 +100,7 @@ return [
                             'createdAt'              =>
                                 [
                                     'column'   => 'created_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => false,
                                     'gedmo'    =>
                                         [
@@ -113,7 +113,7 @@ return [
                             'updatedAt'              =>
                                 [
                                     'column'   => 'updated_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => true,
                                     'gedmo'    =>
                                         [
@@ -241,7 +241,7 @@ return [
                             'createdAt'              =>
                                 [
                                     'column'   => 'created_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => false,
                                     'gedmo'    =>
                                         [
@@ -254,7 +254,7 @@ return [
                             'updatedAt'              =>
                                 [
                                     'column'   => 'updated_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => true,
                                     'gedmo'    =>
                                         [
@@ -317,7 +317,7 @@ return [
                             'createdAt'   =>
                                 [
                                     'column'   => 'created_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => false,
                                     'gedmo'    =>
                                         [
@@ -330,7 +330,7 @@ return [
                             'updatedAt'   =>
                                 [
                                     'column'   => 'updated_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => true,
                                     'gedmo'    =>
                                         [
@@ -448,7 +448,7 @@ return [
                             'createdAt'   =>
                                 [
                                     'column'   => 'created_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => false,
                                     'gedmo'    =>
                                         [
@@ -461,7 +461,7 @@ return [
                             'updatedAt'   =>
                                 [
                                     'column'   => 'updated_at',
-                                    'type'     => 'datetime',
+                                    'type'     => 'timestamp',
                                     'nullable' => true,
                                     'gedmo'    =>
                                         [
