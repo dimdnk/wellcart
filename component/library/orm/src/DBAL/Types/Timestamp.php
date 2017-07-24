@@ -65,6 +65,14 @@ class Timestamp extends Type
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        return new \DateTime('@'.$value);
+        if($value == '0000-00-00 00:00:00')
+        {
+          return null;
+        } elseif(is_numeric($value))
+        {
+          return new \DateTime('@'.$value);
+        } else {
+          return new \DateTime($value);
+        }
     }
 }
