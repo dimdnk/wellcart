@@ -83,12 +83,12 @@ class Install extends AbstractMigration
             )
             ->addColumn(
                 'created_at',
-                'datetime',
-                ['null' => true, 'default' => null, 'comment' => 'Created At']
+                'timestamp',
+                ['null' => true,  'default' => 'CURRENT_TIMESTAMP', 'comment' => 'Created At']
             )
             ->addColumn(
                 'updated_at',
-                'datetime',
+                'timestamp',
                 ['null' => true, 'default' => null, 'comment' => 'Updated At']
             )
             ->addIndex(
@@ -175,17 +175,17 @@ class Install extends AbstractMigration
             )
             ->addColumn(
                 'created_at',
-                'datetime',
-                ['null' => false, 'comment' => 'Created At']
+                'timestamp',
+                ['null' => false, 'default' => 'CURRENT_TIMESTAMP', 'comment' => 'Created At']
             )
             ->addColumn(
                 'updated_at',
-                'datetime',
+                'timestamp',
                 ['null' => true, 'default' => null, 'comment' => 'Updated At']
             )
             ->addColumn(
                 'deleted_at',
-                'datetime',
+                'timestamp',
                 ['null' => true, 'default' => null, 'comment' => 'Deleted At']
             )
             ->create();
