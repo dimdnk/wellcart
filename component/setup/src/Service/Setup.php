@@ -32,7 +32,7 @@ class Setup
     /**
      * The lowest supported MySQL version
      */
-    const MYSQL_VERSION_REQUIRED = '5.6.0';
+    const MYSQL_VERSION_REQUIRED = '5.7.8';
 
     /**
      * @var ServiceManager
