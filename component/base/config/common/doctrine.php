@@ -273,6 +273,7 @@ return ['doctrine' => [
                 'money'            => 'Oro\DBAL\Types\MoneyType',
                 'object'           => 'Oro\DBAL\Types\ObjectType',
                 'percent'          => 'Oro\DBAL\Types\PercentType',
+                'timestamp'        => 'WellCart\ORM\DBAL\Types\Timestamp'
             ],
         ],
     ],
