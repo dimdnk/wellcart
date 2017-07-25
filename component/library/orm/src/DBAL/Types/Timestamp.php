@@ -50,7 +50,8 @@ class Timestamp extends Type
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
         if ($value instanceof \DateTime) {
-            return $value->getTimestamp();
+            $value->setTimezone(new \DateTimeZone('UTC'));
+            return $value->format("Y-m-d H:i:s");
         }
         return (int)$value;
     }
@@ -72,7 +73,7 @@ class Timestamp extends Type
         {
           return new \DateTime('@'.$value);
         } else {
-          return new \DateTime($value);
+          return new \DateTime('@'.strtotime($value));
         }
     }
 }
