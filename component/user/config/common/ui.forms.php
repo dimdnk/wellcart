@@ -51,6 +51,9 @@ $forms = [
                     'class' => 'col-md-4',
                 ],
             ],
+            'attributes' => [
+                'class' => 'icheck-element',
+          ],
         ],
 
         'language' => [
@@ -179,9 +182,9 @@ $forms = [
                     'class' => 'col-md-4',
                 ],
             ],
-            'attributes' => [
-                'class' => 'icheck-element',
-            ],
+          'attributes' => [
+            'class' => 'icheck-element',
+          ],
         ],
     ],
 ];
