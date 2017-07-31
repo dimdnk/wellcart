@@ -66,7 +66,7 @@ class Timestamp extends Type
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        if($value == '0000-00-00 00:00:00')
+        if($value == '0000-00-00 00:00:00' || $value === null)
         {
           return null;
         } elseif(is_numeric($value))
