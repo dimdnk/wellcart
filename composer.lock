@@ -487,16 +487,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.18.0",
+            "version": "v9.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "a136ef0280c40a53f40c4411c0d4ec0964713a52"
+                "reference": "ddab05075a7b9a48c614200ffa8adb00e0b0ae79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/a136ef0280c40a53f40c4411c0d4ec0964713a52",
-                "reference": "a136ef0280c40a53f40c4411c0d4ec0964713a52",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/ddab05075a7b9a48c614200ffa8adb00e0b0ae79",
+                "reference": "ddab05075a7b9a48c614200ffa8adb00e0b0ae79",
                 "shasum": ""
             },
             "type": "library",
@@ -533,7 +533,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2017-03-29T09:26:17+00:00"
+            "time": "2017-08-28T05:21:47+00:00"
         },
         {
             "name": "ccampbell/chromephp",
