@@ -487,16 +487,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.19.0",
+            "version": "v9.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "ddab05075a7b9a48c614200ffa8adb00e0b0ae79"
+                "reference": "88fabe7bb9bb99ee8be332546f953adf2ed9ed57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/ddab05075a7b9a48c614200ffa8adb00e0b0ae79",
-                "reference": "ddab05075a7b9a48c614200ffa8adb00e0b0ae79",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/88fabe7bb9bb99ee8be332546f953adf2ed9ed57",
+                "reference": "88fabe7bb9bb99ee8be332546f953adf2ed9ed57",
                 "shasum": ""
             },
             "type": "library",
@@ -533,7 +533,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2017-08-28T05:21:47+00:00"
+            "time": "2017-09-05T05:45:32+00:00"
         },
         {
             "name": "ccampbell/chromephp",
@@ -885,16 +885,16 @@
         },
         {
             "name": "cron/cron",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cron/Cron.git",
-                "reference": "9ad4f078fe9b5cabbe0ea04b7d3dc47efdd161ce"
+                "reference": "9e4e736ce589b0a4e82c327f9e48516d8f4dc619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cron/Cron/zipball/9ad4f078fe9b5cabbe0ea04b7d3dc47efdd161ce",
-                "reference": "9ad4f078fe9b5cabbe0ea04b7d3dc47efdd161ce",
+                "url": "https://api.github.com/repos/Cron/Cron/zipball/9e4e736ce589b0a4e82c327f9e48516d8f4dc619",
+                "reference": "9e4e736ce589b0a4e82c327f9e48516d8f4dc619",
                 "shasum": ""
             },
             "require": {
@@ -926,7 +926,7 @@
                 }
             ],
             "description": "Cronjobs",
-            "time": "2017-08-30T17:37:55+00:00"
+            "time": "2017-08-31T05:05:07+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -3498,16 +3498,16 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "144c307535e82c8fdcaacbcfc1d6d8eeb896687c"
+                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/144c307535e82c8fdcaacbcfc1d6d8eeb896687c",
-                "reference": "144c307535e82c8fdcaacbcfc1d6d8eeb896687c",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
+                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
                 "shasum": ""
             },
             "require": {
@@ -3548,7 +3548,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2015-12-27T11:43:31+00:00"
+            "time": "2017-09-11T18:02:19+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -6002,16 +6002,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "6ac0cc1f047c1dbc058fc25b7a4d91b068ed4488"
+                "reference": "f9f19a39ee178f61bb2190f51ff7c517c2159315"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/6ac0cc1f047c1dbc058fc25b7a4d91b068ed4488",
-                "reference": "6ac0cc1f047c1dbc058fc25b7a4d91b068ed4488",
+                "url": "https://api.github.com/repos/symfony/config/zipball/f9f19a39ee178f61bb2190f51ff7c517c2159315",
+                "reference": "f9f19a39ee178f61bb2190f51ff7c517c2159315",
                 "shasum": ""
             },
             "require": {
@@ -6060,7 +6060,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-03T08:59:45+00:00"
+            "time": "2017-09-04T16:28:07+00:00"
         },
         {
             "name": "symfony/console",
@@ -6182,16 +6182,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "2ac658972626c75cbde7b0067c84b988170a6907"
+                "reference": "e593f06dd90a81c7b70ac1c49862a061b0ec06d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2ac658972626c75cbde7b0067c84b988170a6907",
-                "reference": "2ac658972626c75cbde7b0067c84b988170a6907",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e593f06dd90a81c7b70ac1c49862a061b0ec06d2",
+                "reference": "e593f06dd90a81c7b70ac1c49862a061b0ec06d2",
                 "shasum": ""
             },
             "require": {
@@ -6248,11 +6248,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-28T22:20:37+00:00"
+            "time": "2017-09-05T20:39:38+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -6301,7 +6301,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -6463,7 +6463,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -6512,7 +6512,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -6577,7 +6577,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -11440,16 +11440,16 @@
         },
         {
             "name": "nette/caching",
-            "version": "v2.5.5",
+            "version": "v2.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/caching.git",
-                "reference": "997d3b9868840da8b51f27565bfe1a8210e94620"
+                "reference": "1231735b5135ca02bd381b70482c052d2a90bdc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/caching/zipball/997d3b9868840da8b51f27565bfe1a8210e94620",
-                "reference": "997d3b9868840da8b51f27565bfe1a8210e94620",
+                "url": "https://api.github.com/repos/nette/caching/zipball/1231735b5135ca02bd381b70482c052d2a90bdc9",
+                "reference": "1231735b5135ca02bd381b70482c052d2a90bdc9",
                 "shasum": ""
             },
             "require": {
@@ -11505,20 +11505,20 @@
                 "nette",
                 "sqlite"
             ],
-            "time": "2017-08-18T15:20:18+00:00"
+            "time": "2017-08-30T12:12:25+00:00"
         },
         {
             "name": "nette/di",
-            "version": "v2.4.9",
+            "version": "v2.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/di.git",
-                "reference": "25437788ff126d0ae6b1f2f684ecdd823812abba"
+                "reference": "a4b3be935b755f23aebea1ce33d7e3c832cdff98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/di/zipball/25437788ff126d0ae6b1f2f684ecdd823812abba",
-                "reference": "25437788ff126d0ae6b1f2f684ecdd823812abba",
+                "url": "https://api.github.com/repos/nette/di/zipball/a4b3be935b755f23aebea1ce33d7e3c832cdff98",
+                "reference": "a4b3be935b755f23aebea1ce33d7e3c832cdff98",
                 "shasum": ""
             },
             "require": {
@@ -11563,9 +11563,18 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "Nette Dependency Injection Component",
+            "description": "💎 Nette Dependency Injection Container: Flexible, compiled and full-featured DIC with perfectly usable autowiring and support for all new PHP 7.1 features.",
             "homepage": "https://nette.org",
-            "time": "2017-07-11T17:55:11+00:00"
+            "keywords": [
+                "compiled",
+                "di",
+                "dic",
+                "factory",
+                "ioc",
+                "nette",
+                "static"
+            ],
+            "time": "2017-08-31T22:42:00+00:00"
         },
         {
             "name": "nette/finder",
@@ -12575,7 +12584,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.3.8",
+            "version": "v3.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
