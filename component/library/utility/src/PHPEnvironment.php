@@ -100,6 +100,17 @@ abstract class PHPEnvironment
                 'WELLCART_APPLICATION_CONTEXT'
             ) ?: 'global';
         }
+        
+        if (empty($_SERVER['ENABLE_IIS_REWRITES']) || ($_SERVER['ENABLE_IIS_REWRITES'] != 1)) {
+            /*
+             * Unset headers used by IIS URL rewrites.
+             */
+            unset($_SERVER['HTTP_X_REWRITE_URL']);
+            unset($_SERVER['HTTP_X_ORIGINAL_URL']);
+            unset($_SERVER['IIS_WasUrlRewritten']);
+            unset($_SERVER['UNENCODED_URL']);
+            unset($_SERVER['ORIG_PATH_INFO']);
+        }
 
         // Set error reporting level.
         error_reporting(E_ALL | E_STRICT);
