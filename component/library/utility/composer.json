@@ -28,7 +28,7 @@
     "patchwork/utf8": "1.*",
     "raulfraile/ladybug": "1.*",
     "nesbot/carbon": "1.*",
-    "josegonzalez/dotenv": "~3.0",
+    "vlucas/phpdotenv": "^2.4",
     "crazycodr/standard-exceptions": "^2.1.0"
   },
   "suggest": {

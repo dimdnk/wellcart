@@ -8,7 +8,7 @@
 
 declare(strict_types = 1);
 
-use josegonzalez\Dotenv\Loader as Dotenv;
+use Dotenv\Dotenv;
 use WellCart\Mvc\Application;
 use WellCart\Utility\Config;
 use WellCart\Utility\PHPEnvironment;
@@ -74,12 +74,8 @@ HTML;
     }
 
     if (is_file(__DIR__ . '/config/.env')) {
-        Dotenv::load(
-            [
-                'filepath' => __DIR__ . '/config/.env',
-                'toEnv'    => true,
-            ]
-        );
+      $dotenv = new Dotenv(__DIR__ . '/config/');
+      $dotenv->load();
     }
 
     defined('WELLCART_ROOT')

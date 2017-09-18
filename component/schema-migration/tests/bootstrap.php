@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\SchemaMigration\Test;
 
 
-use josegonzalez\Dotenv\Loader as Dotenv;
+use Dotenv\Dotenv;
 use RuntimeException;
 use WellCart\Mvc\Application;
 use WellCart\Utility\Config;
@@ -46,12 +46,8 @@ class Bootstrap
     public static function init()
     {
         if (is_file(__DIR__ . '/config/.env')) {
-            Dotenv::load(
-                [
-                    'filepath' => __DIR__ . '/config/.env',
-                    'toEnv'    => true,
-                ]
-            );
+          $dotenv = new Dotenv(__DIR__ . '/config/');
+          $dotenv->load();
         }
 
         // Define application environment

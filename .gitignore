@@ -10,7 +10,6 @@ Thumbs.db
 .project
 .settings
 composer.lock
-*.suite.yml
 /public/assets
 /public/media
 /public/themes
@@ -24,4 +23,3 @@ report.xml
 *local.php
 maintenance.flag
 Maintenance.html
-tests/_output/*
