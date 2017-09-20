@@ -6677,16 +6677,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.6.6",
+            "version": "4.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "50b5a77af8ef1a1da362e60ad32ace4131e2dbf0"
+                "reference": "9f9cf10d009892009a296dff48970b079ec78c7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/50b5a77af8ef1a1da362e60ad32ace4131e2dbf0",
-                "reference": "50b5a77af8ef1a1da362e60ad32ace4131e2dbf0",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/9f9cf10d009892009a296dff48970b079ec78c7a",
+                "reference": "9f9cf10d009892009a296dff48970b079ec78c7a",
                 "shasum": ""
             },
             "type": "component",
@@ -6719,7 +6719,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2017-08-30T12:11:58+00:00"
+            "time": "2017-09-18T11:31:55+00:00"
         },
         {
             "name": "twig/twig",
@@ -10554,16 +10554,16 @@
     "packages-dev": [
         {
             "name": "consolidation/annotated-command",
-            "version": "2.5.1",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "e325349acaebc2ba39a8e77143c17a5881a44d8f"
+                "reference": "7a634471471b913e63888b64b626b544799db282"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/e325349acaebc2ba39a8e77143c17a5881a44d8f",
-                "reference": "e325349acaebc2ba39a8e77143c17a5881a44d8f",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/7a634471471b913e63888b64b626b544799db282",
+                "reference": "7a634471471b913e63888b64b626b544799db282",
                 "shasum": ""
             },
             "require": {
@@ -10602,7 +10602,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2017-09-18T03:20:24+00:00"
+            "time": "2017-09-18T21:45:28+00:00"
         },
         {
             "name": "consolidation/config",
@@ -12413,16 +12413,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "c7594a88ae75401e8f8d0bd4deb8431b39045c51"
+                "reference": "3c2d0a0fe39684ba0c1eb842a6a775d0b938d699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/c7594a88ae75401e8f8d0bd4deb8431b39045c51",
-                "reference": "c7594a88ae75401e8f8d0bd4deb8431b39045c51",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/3c2d0a0fe39684ba0c1eb842a6a775d0b938d699",
+                "reference": "3c2d0a0fe39684ba0c1eb842a6a775d0b938d699",
                 "shasum": ""
             },
             "require": {
@@ -12432,7 +12432,7 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0"
             },
             "bin": [
                 "bin/phpcs",
@@ -12460,7 +12460,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-07-18T01:12:32+00:00"
+            "time": "2017-09-19T22:47:14+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
