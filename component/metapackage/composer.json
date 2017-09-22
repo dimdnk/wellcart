@@ -64,7 +64,6 @@
     "acelaya/zf2-acmailer": "5.*",
     "swix/swix-em-config": "dev-master",
     "firephp/firephp-core": "0.4.*",
-    "leafo/scssphp": "^0.6.5",
     "ccampbell/chromephp": "4.*",
     "tinymce/tinymce": "4.4.*"
   },
