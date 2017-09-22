@@ -56,7 +56,6 @@
     "adlogix/zf2-opensoft-rollout": "^1.0.0",
     "gedmo/doctrine-extensions": "2.4.*",
     "doctrine/doctrine-module": "^1.2.0",
-    "doctrine/doctrine-mongo-odm-module": "0.11.*",
     "beberlei/DoctrineExtensions": "1.*",
     "slm/queue": "1.0.*",
     "slm/queue-doctrine": "1.0.*",

@@ -20,9 +20,6 @@
     "bin-dir": "bin/",
     "process-timeout": 4000,
     "sort-packages": true,
-    "platform": {
-      "ext-mongo": "1.6"
-    },
     "preferred-install": "dist",
     "component-dir": "tests/public/assets/lib",
     "component-baseurl": "/assets/lib"
