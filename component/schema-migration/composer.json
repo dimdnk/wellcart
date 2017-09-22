@@ -22,10 +22,7 @@
     "sort-packages": true,
     "preferred-install": "dist",
     "component-dir": "tests/public/assets/lib",
-    "component-baseurl": "/assets/lib",
-    "platform": {
-      "ext-mongo": "1.6"
-    }
+    "component-baseurl": "/assets/lib"
   },
   "scripts": {
     "post-install-cmd": [

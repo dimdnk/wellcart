@@ -32,9 +32,6 @@
     "bin-dir": "bin/",
     "sort-packages": true,
     "preferred-install": "dist",
-    "platform": {
-      "ext-mongo": "1.6"
-    },
     "component-dir": "tests/public/assets/lib",
     "component-baseurl": "/assets/lib"
   },
