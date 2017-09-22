@@ -15,7 +15,7 @@ class EscapeHtmlAttr extends \Zend\View\Helper\EscapeHtmlAttr
 {
   public function __invoke($value, $recurse = self::RECURSE_NONE)
   {
-    if(empty($value))
+    if($value === '' || (is_array($value) && empty($value)))
     {
       $value = null;
     }
