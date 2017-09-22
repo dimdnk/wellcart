@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "be1ae4451536250e2b21d34374f009a7",
+    "content-hash": "3e59108113b1026fa8a249d191240a28",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -6292,91 +6292,6 @@
             "time": "2015-11-24T09:09:26+00:00"
         },
         {
-            "name": "thadafinser/zfc-datagrid",
-            "version": "v1.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ThaDafinser/ZfcDatagrid.git",
-                "reference": "1259e0b85be51fce381f6bada53107302e47bcd3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ThaDafinser/ZfcDatagrid/zipball/1259e0b85be51fce381f6bada53107302e47bcd3",
-                "reference": "1259e0b85be51fce381f6bada53107302e47bcd3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~5.6|~7.0",
-                "zendframework/zend-cache": "~2.5",
-                "zendframework/zend-http": "~2.5",
-                "zendframework/zend-modulemanager": "~2.5",
-                "zendframework/zend-mvc": "~2.7|~3.0",
-                "zendframework/zend-paginator": "~2.5",
-                "zendframework/zend-servicemanager": "~2.7|~3.0",
-                "zendframework/zend-session": "~2.5",
-                "zendframework/zend-view": "~2.5"
-            },
-            "require-dev": {
-                "doctrine/doctrine-orm-module": "^1.1.1",
-                "friendsofphp/php-cs-fixer": "^1.11",
-                "phpoffice/phpexcel": "^1.8",
-                "phpunit/phpunit": "^5.6.1",
-                "tecnickcom/tcpdf": "^6.2",
-                "zendframework/zend-console": "~2.5",
-                "zendframework/zend-db": "~2.5",
-                "zendframework/zend-i18n": "~2.5",
-                "zendframework/zend-json": "~2.5",
-                "zendframework/zend-text": "~2.5"
-            },
-            "suggest": {
-                "doctrine/doctrine-orm-module": "for doctrine support",
-                "ext-intl": "*",
-                "phpoffice/phpexcel": "^1.8",
-                "tecnickcom/tcpdf": "^6.2",
-                "zendframework/zend-json": "to support date ranges",
-                "zendframework/zend-text": "~2.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev",
-                    "dev-develop": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ZfcDatagrid\\": "src/ZfcDatagrid"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Martin Keckeis",
-                    "email": "martin.keckeis1@gmail.com"
-                }
-            ],
-            "description": "Zend Framework 2 Module that provides a datagrid for different datasources and output formats",
-            "keywords": [
-                "Zend Framework",
-                "ZfcDatagrid",
-                "bootstrap",
-                "datagrid",
-                "datatable",
-                "doctrine",
-                "excel",
-                "jqgrid",
-                "module",
-                "pdf",
-                "zf2",
-                "zfc-datagrid"
-            ],
-            "abandoned": "zfc-datagrid/zfc-datagrid",
-            "time": "2017-02-18T10:24:40+00:00"
-        },
-        {
             "name": "tinymce/tinymce",
             "version": "4.6.7",
             "source": {
@@ -10200,6 +10115,90 @@
                 "zf2"
             ],
             "time": "2015-07-20T20:10:49+00:00"
+        },
+        {
+            "name": "zfc-datagrid/zfc-datagrid",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zfc-datagrid/zfc-datagrid.git",
+                "reference": "1259e0b85be51fce381f6bada53107302e47bcd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zfc-datagrid/zfc-datagrid/zipball/1259e0b85be51fce381f6bada53107302e47bcd3",
+                "reference": "1259e0b85be51fce381f6bada53107302e47bcd3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.6|~7.0",
+                "zendframework/zend-cache": "~2.5",
+                "zendframework/zend-http": "~2.5",
+                "zendframework/zend-modulemanager": "~2.5",
+                "zendframework/zend-mvc": "~2.7|~3.0",
+                "zendframework/zend-paginator": "~2.5",
+                "zendframework/zend-servicemanager": "~2.7|~3.0",
+                "zendframework/zend-session": "~2.5",
+                "zendframework/zend-view": "~2.5"
+            },
+            "require-dev": {
+                "doctrine/doctrine-orm-module": "^1.1.1",
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "phpoffice/phpexcel": "^1.8",
+                "phpunit/phpunit": "^5.6.1",
+                "tecnickcom/tcpdf": "^6.2",
+                "zendframework/zend-console": "~2.5",
+                "zendframework/zend-db": "~2.5",
+                "zendframework/zend-i18n": "~2.5",
+                "zendframework/zend-json": "~2.5",
+                "zendframework/zend-text": "~2.5"
+            },
+            "suggest": {
+                "doctrine/doctrine-orm-module": "for doctrine support",
+                "ext-intl": "*",
+                "phpoffice/phpexcel": "^1.8",
+                "tecnickcom/tcpdf": "^6.2",
+                "zendframework/zend-json": "to support date ranges",
+                "zendframework/zend-text": "~2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev",
+                    "dev-develop": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ZfcDatagrid\\": "src/ZfcDatagrid"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Keckeis",
+                    "email": "martin.keckeis1@gmail.com"
+                }
+            ],
+            "description": "Zend Framework 2 Module that provides a datagrid for different datasources and output formats",
+            "keywords": [
+                "Zend Framework",
+                "ZfcDatagrid",
+                "bootstrap",
+                "datagrid",
+                "datatable",
+                "doctrine",
+                "excel",
+                "jqgrid",
+                "module",
+                "pdf",
+                "zf2",
+                "zfc-datagrid"
+            ],
+            "time": "2017-02-18T10:24:40+00:00"
         },
         {
             "name": "zfr/rbac",
