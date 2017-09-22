@@ -79,7 +79,6 @@
     "swix/swix-em-config": "dev-master",
     "hounddog/doctrine-data-fixture-module": "0.*",
     "firephp/firephp-core": "0.4.*",
-    "leafo/scssphp": "^0.6.5",
     "ccampbell/chromephp": "4.*",
     "oro/doctrine-extensions": "^1.0.0",
     "zf-commons/zfc-user": "~1.4.0",
