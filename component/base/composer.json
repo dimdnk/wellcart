@@ -73,7 +73,6 @@
             {"name": "Wizard", "priority": -72927},
             {"name": "Soflomo\\Purifier", "priority": -72925},
             {"name": "DoctrineModule", "priority": -72924},
-            {"name": "DoctrineMongoODMModule", "priority": -72923},
             {"name": "DoctrineORMModule", "priority": -72922},
             {"name": "DoctrineDataFixtureModule", "priority": -72920},
             {"name": "SlmQueue", "priority": -72919},
