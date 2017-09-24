@@ -433,6 +433,7 @@ $forms = [
                     'label'    => 'General',
                     'options'  => ['layout' => '2columns'],
                     'elements' => [
+                        'product.product_template'=> ['options' => ['tab' => 'general-left']],
                         'product.translations'    => ['options' => ['tab' => 'general-left']],
                         'product.status'          => ['options' => ['tab' => 'general-right']],
                         'product.brand'           => ['options' => ['tab' => 'general-right']],

@@ -93,7 +93,7 @@ class Product extends AbstractForm
 
         $validationGroup = [
             'product' => [
-                //'product_template',
+                'product_template',
                 'status',
                 'url_key',
                 'features',

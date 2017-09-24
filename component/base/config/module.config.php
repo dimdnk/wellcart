@@ -274,10 +274,15 @@ return [
             'gridFilters' => \WellCart\Ui\Datagrid\View\Helper\GridFilters::class,
             'locale'      => \WellCart\View\Helper\Locale::class,
             'date'        => \WellCart\View\Helper\Date::class,
+            'form_element'=> \WellCart\Form\View\Helper\FormElement::class,
         ],
         'factories'  => [
             'messenger'   => MessengerFactory::class,
-            'formelement' => 'WellCart\Form\View\Helper\Service\FormElementFactory',
+            'form_element' => 'WellCart\Form\View\Helper\Service\FormElementFactory',
+            'formelement'  => 'WellCart\Form\View\Helper\Service\FormElementFactory',
+            'formElement'  => 'WellCart\Form\View\Helper\Service\FormElementFactory',
+            'FormElement'  => 'WellCart\Form\View\Helper\Service\FormElementFactory',
+            \WellCart\Form\View\Helper\FormElement::class  => 'WellCart\Form\View\Helper\Service\FormElementFactory',
 
             \WellCart\Ui\Datagrid\View\Helper\GridFilters::class => \WellCart\Ui\Factory\Datagrid\ViewHelper\GridFiltersFactory::class,
             \WellCart\View\Helper\Locale::class                  => \WellCart\View\Factory\Helper\LocaleFactory::class,

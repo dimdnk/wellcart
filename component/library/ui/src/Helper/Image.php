@@ -40,7 +40,7 @@ class Image extends AbstractHelper
 
         return sprintf(
             $this->format,
-            strpos($src, 'http') === 0 ? $src : $basePath($src),
+            strpos((string)$src, 'http') === 0 ? $src : $basePath($src),
             !empty($class) ? " class=\"$class\"" : ''
         );
     }
