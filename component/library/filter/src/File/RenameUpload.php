@@ -91,6 +91,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
         if ($isUploaded) {
             $finalTarget = $this->fixCaseInsensitiveFilename($finalTarget);
             $finalTarget = $this->transliterateFilename($finalTarget);
+            error_log($finalTarget);
             $finalTarget = $this->fileDispersion($finalTarget);
         }
 
@@ -105,7 +106,7 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
     protected function createFolders()
     {
         $dir = null;
-        $target = $this->getTargetDirectory();
+        $target = $this->targetDirectory;
         if (!empty($target)) {
             $target = rtrim($target, '/') . DS;
             $this->setTarget($target);
@@ -276,8 +277,11 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
             $dispersionPath = $this->getDispersionPath($file);
             $directory = pathinfo($finalTarget, PATHINFO_DIRNAME) .
                 $dispersionPath;
-            $this->setTargetDirectory($directory);
+            $originalTargetDir = $this->targetDirectory;
+
+            $this->targetDirectory = $directory;
             $this->createFolders();
+            $this->targetDirectory = $originalTargetDir;
             $finalTarget = $directory . $file;
         }
 
