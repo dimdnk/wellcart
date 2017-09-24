@@ -91,7 +91,6 @@ class RenameUpload extends \Zend\Filter\File\RenameUpload
         if ($isUploaded) {
             $finalTarget = $this->fixCaseInsensitiveFilename($finalTarget);
             $finalTarget = $this->transliterateFilename($finalTarget);
-            error_log($finalTarget);
             $finalTarget = $this->fileDispersion($finalTarget);
         }
 
