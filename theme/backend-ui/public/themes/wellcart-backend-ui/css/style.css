@@ -34,7 +34,9 @@ a:active {
 a.btn:visited {
     color: #fff;
 }
-
+a.btn-default:visited {
+    color: #000;
+}
 .btn:active:focus,
 .btn:focus,
 .dropdown-menu > li > a,

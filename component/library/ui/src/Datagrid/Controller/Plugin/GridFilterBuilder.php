@@ -271,6 +271,10 @@ class GridFilterBuilder extends AbstractPlugin
                     $start = current($value);
                     $end = next($value);
                 }
+                if(strtotime($start) === strtotime($end))
+                {
+                  $start = $end = null;
+                }
                 if (!empty($start) && !empty($end)) {
                     $queryBuilder->andWhere(
                         $queryBuilder->expr()
