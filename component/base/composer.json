@@ -65,7 +65,6 @@
             {"name": "RdnRequireJS", "priority": -72936},
             {"name": "AssetManager", "priority": -72935},
             {"name": "TwbBundle", "priority": -72934},
-            {"name": "ZfSnapJquery", "priority": -72933},
             {"name": "ZfcDatagrid", "priority": -72932},
             {"name": "StrokerForm", "priority": -72930},
             {"name": "TckImageResizer", "priority": -72929},

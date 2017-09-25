@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "50e337b891101e07a00002a6809a1218",
+    "content-hash": "a24f6d5823994f14b57450fd448d15d1",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -4934,58 +4934,6 @@
                 "serialization"
             ],
             "time": "2015-05-08T13:34:17+00:00"
-        },
-        {
-            "name": "snapshotpl/zf-snap-jquery",
-            "version": "0.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/snapshotpl/ZfSnapJquery.git",
-                "reference": "549b02c7c38c43621fb0765f79c5404259488f42"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/snapshotpl/ZfSnapJquery/zipball/549b02c7c38c43621fb0765f79c5404259488f42",
-                "reference": "549b02c7c38c43621fb0765f79c5404259488f42",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "zendframework/zend-modulemanager": "2.*",
-                "zendframework/zend-view": "2.*"
-            },
-            "require-dev": {
-                "zendframework/zendframework": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "ZfSnapJquery": "src/"
-                },
-                "classmap": [
-                    "Module.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Witold Wasiczko",
-                    "email": "witold@wasiczko.pl",
-                    "homepage": "http://www.psd2html.pl/"
-                }
-            ],
-            "description": "jQuery and jQuery UI helpers and form elements for Zend Framework 2",
-            "keywords": [
-                "Zend Framework",
-                "javascript",
-                "jquery",
-                "jquery-ui",
-                "zf2"
-            ],
-            "time": "2014-05-15T19:03:43+00:00"
         },
         {
             "name": "soflomo/purifier",
