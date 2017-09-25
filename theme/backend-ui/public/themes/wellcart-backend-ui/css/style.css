@@ -31,6 +31,10 @@ a:active {
     color: #000;
 }
 
+a.btn-primary:visited {
+    color: #fff;
+}
+
 .btn:active:focus,
 .btn:focus,
 .dropdown-menu > li > a,
