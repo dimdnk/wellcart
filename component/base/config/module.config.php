@@ -661,17 +661,4 @@ return [
         'public_path'   => WELLCART_PUBLIC_PATH,
         'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json',
     ],
-    'slm_queue' => [
-        'queue_manager' => [
-            'factories' => [
-                'system' => 'SlmQueueDoctrine\Factory\DoctrineQueueFactory',
-            ],
-        ],
-        'queues'        => [
-            'system' => [
-                'table_name' => 'base_job_queue',
-            ],
-        ],
-        'job_manager'   => [],
-    ],
 ];

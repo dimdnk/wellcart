@@ -57,8 +57,6 @@
     "gedmo/doctrine-extensions": "2.4.*",
     "doctrine/doctrine-module": "^1.2.0",
     "beberlei/DoctrineExtensions": "1.*",
-    "slm/queue": "1.0.*",
-    "slm/queue-doctrine": "1.0.*",
     "bitweb/zf2-cron-module": "2.0.*",
     "zendexperts/ze-theme": "1.0.*@dev",
     "hummer2k/conlayout": "^3.2",
@@ -87,8 +85,7 @@
     "robmorgan/phinx": "0.8.*",
     "fzaninotto/faker": "1.6.*",
     "simple-bus/asynchronous": "2.*",
-    "netglue/zf2-money-module": "0.1.*",
-    "prolic/humus-amqp-module": "dev-master"
+    "netglue/zf2-money-module": "0.1.*"
   },
   "require-dev": {
     "phpunit/phpunit-skeleton-generator": "*",
@@ -146,7 +143,6 @@
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "Adlogix\\Zf2Rollout", "priority": -72949},
             {"name": "ZfcBase", "priority": -72948},
-            {"name": "HumusAmqpModule", "priority": -72946},
             {"name": "ZeTheme", "priority": -72945},
             {"name": "AcMailer", "priority": -72943},
             {"name": "SwixEmConfig", "priority": -72942},
@@ -167,8 +163,6 @@
             {"name": "DoctrineModule", "priority": -72924},
             {"name": "DoctrineORMModule", "priority": -72922},
             {"name": "DoctrineDataFixtureModule", "priority": -72920},
-            {"name": "SlmQueue", "priority": -72919},
-            {"name": "SlmQueueDoctrine", "priority": -72918},
             {"name": "BitWeb\\CronModule", "priority": -72917},
             {"name": "WellCart\\Base", "priority": -72900},
             {"name": "ZfcUser", "priority": -72852},

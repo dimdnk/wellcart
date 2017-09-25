@@ -59,8 +59,6 @@ Third-party frameworks utilized in this framework:
     - [TwbBundle](https://github.com/neilime/zf2-twb-bundle)
     - [RdnRequireJS](https://github.com/radnan/rdn-require-js)
     - [BitWeb\CronModule](https://github.com/BitWeb/zf2-cron-module)
-    - [SlmQueue](https://github.com/juriansluiman/SlmQueue)
-    - [HumusAmqpModule](https://github.com/prolic/HumusAmqpModule)
     - [Rollout](https://github.com/adlogix/zf2-opensoft-rollout)
 
 2. JavaScript - [jQuery](https://github.com/jquery/jquery/)

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e59108113b1026fa8a249d191240a28",
+    "content-hash": "50e337b891101e07a00002a6809a1218",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -2478,68 +2478,6 @@
             "time": "2016-11-11T18:43:20+00:00"
         },
         {
-            "name": "marc-mabe/php-enum",
-            "version": "v2.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/marc-mabe/php-enum.git",
-                "reference": "09f0163a6e040d5e9de9271fd6cfdefb12e3e498"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/marc-mabe/php-enum/zipball/09f0163a6e040d5e9de9271fd6cfdefb12e3e498",
-                "reference": "09f0163a6e040d5e9de9271fd6cfdefb12e3e498",
-                "shasum": ""
-            },
-            "require": {
-                "ext-reflection": "*",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "php": "PHP>=5.4 will be required for using trait EnumSerializableTrait"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev",
-                    "dev-1.x": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MabeEnum\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Marc Bennewitz",
-                    "email": "dev@mabe.berlin",
-                    "homepage": "http://mabe.berlin/",
-                    "role": "Lead"
-                }
-            ],
-            "description": "Simple and fast implementation of enumerations with native PHP 5.3 and upper",
-            "homepage": "https://github.com/marc-mabe/php-enum",
-            "keywords": [
-                "enum",
-                "enum-map",
-                "enum-set",
-                "enumeration",
-                "enummap",
-                "enumset",
-                "type-hint",
-                "typehint"
-            ],
-            "time": "2016-12-21T13:13:11+00:00"
-        },
-        {
             "name": "moment/moment",
             "version": "2.18.1",
             "source": {
@@ -3546,16 +3484,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.21",
+            "version": "5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
+                "reference": "10df877596c9906d4110b5b905313829043f2ada"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
-                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/10df877596c9906d4110b5b905313829043f2ada",
+                "reference": "10df877596c9906d4110b5b905313829043f2ada",
                 "shasum": ""
             },
             "require": {
@@ -3624,7 +3562,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-21T08:11:54+00:00"
+            "time": "2017-09-24T07:23:38+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -3684,146 +3622,6 @@
                 "xunit"
             ],
             "time": "2017-06-30T09:13:00+00:00"
-        },
-        {
-            "name": "prolic/humus-amqp",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/prolic/HumusAmqp.git",
-                "reference": "e1f298debdfdf609c742258ccfee37c149dde57c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/prolic/HumusAmqp/zipball/e1f298debdfdf609c742258ccfee37c149dde57c",
-                "reference": "e1f298debdfdf609c742258ccfee37c149dde57c",
-                "shasum": ""
-            },
-            "require": {
-                "beberlei/assert": "^2.4",
-                "marc-mabe/php-enum": "^2.2",
-                "php": "~7.0",
-                "psr/log": "^1.0"
-            },
-            "conflict": {
-                "container-interop/container-interop": "<1.2",
-                "sandrokeil/interop-config": "<1.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "2.0.0",
-                "malukenho/docheader": "^0.1.4",
-                "php-amqplib/php-amqplib": "^2.7-rc1",
-                "phpspec/prophecy": "^1.6",
-                "phpunit/phpunit": "^5.6",
-                "psr/container": "^1.0",
-                "sandrokeil/interop-config": "^1.0",
-                "satooshi/php-coveralls": "^1.0",
-                "symfony/console": "^2.5|^3.0",
-                "zendframework/zend-servicemanager": "^2.7 || ^3.0"
-            },
-            "suggest": {
-                "container-interop/container-interop": "For usage of provided factories",
-                "ext-amqp": ">= 1.9.1 For usage together with php amqp extension",
-                "ext-pcntl": "For process control management",
-                "php-amqplib/php-amqplib": ">= 2.7.0-rc1 For usage together with php-amqplib",
-                "sandrokeil/interop-config": "For usage of provided factories",
-                "symfony/console": "For usage of the provided console tool"
-            },
-            "bin": [
-                "bin/humus-amqp"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Humus\\Amqp\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sascha-Oliver Prolic",
-                    "email": "saschaprolic@googlemail.com"
-                }
-            ],
-            "description": "PHP-AMQP library with RabbitMQ Extensions",
-            "homepage": "https://github.com/prolic/HumusAmqp",
-            "keywords": [
-                "AMQP",
-                "humus",
-                "messaging",
-                "queue",
-                "rabbit",
-                "rabbitmq"
-            ],
-            "time": "2017-09-14T12:01:34+00:00"
-        },
-        {
-            "name": "prolic/humus-amqp-module",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/prolic/HumusAmqpModule.git",
-                "reference": "9a4ee9b87a01f1ac268438e5308dc353d3684935"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/prolic/HumusAmqpModule/zipball/9a4ee9b87a01f1ac268438e5308dc353d3684935",
-                "reference": "9a4ee9b87a01f1ac268438e5308dc353d3684935",
-                "shasum": ""
-            },
-            "require": {
-                "container-interop/container-interop": "^1.1",
-                "php": "^7.0",
-                "prolic/humus-amqp": "^1.0",
-                "sandrokeil/interop-config": "^1.0",
-                "symfony/console": "^2.5|^3.0",
-                "zendframework/zend-modulemanager": "^2.7"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.11.5",
-                "phpspec/prophecy": "^1.6",
-                "phpunit/phpunit": "^5.4",
-                "satooshi/php-coveralls": "^1.0"
-            },
-            "bin": [
-                "bin/humus-amqp-module"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "HumusAmqpModule\\": "src/",
-                    "HumusAmqpModuleTest\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sascha-Oliver Prolic",
-                    "email": "saschaprolic@googlemail.com"
-                }
-            ],
-            "description": "AMQP module for Zend Framework 2 to integrate RabbitMQ",
-            "homepage": "https://github.com/prolic/HumusAmqpModule",
-            "keywords": [
-                "AMQP",
-                "humus",
-                "queue",
-                "rabbit",
-                "rabbitmq",
-                "zf2"
-            ],
-            "time": "2016-08-14T07:57:46+00:00"
         },
         {
             "name": "psr/container",
@@ -4483,71 +4281,6 @@
             "time": "2017-07-31T07:32:20+00:00"
         },
         {
-            "name": "sandrokeil/interop-config",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sandrokeil/interop-config.git",
-                "reference": "3af5adeceab5fef7c3bbec132b4ddd64316dccc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sandrokeil/interop-config/zipball/3af5adeceab5fef7c3bbec132b4ddd64316dccc4",
-                "reference": "3af5adeceab5fef7c3bbec132b4ddd64316dccc4",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5 || ^7.0"
-            },
-            "require-dev": {
-                "phpbench/phpbench": "^1.0@dev",
-                "phpunit/php-invoker": "^1.1",
-                "phpunit/phpunit": "^4.8 || ^5.2",
-                "squizlabs/php_codesniffer": "^2.5",
-                "tobiju/bookdown-bootswatch-templates": "^1.0"
-            },
-            "suggest": {
-                "container-interop/container-interop": "To retrieve config in your factories"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev",
-                    "dev-develop": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Interop\\Config\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sandro Keil",
-                    "homepage": "https://sandro-keil.de",
-                    "role": "maintainer"
-                }
-            ],
-            "description": "Provides interfaces and a concrete implementation to create instances depending on configuration via factory classes and ensures a valid config structure. It can also be used to auto discover factories and to create configuration files.",
-            "homepage": "https://github.com/sandrokeil/interop-config",
-            "keywords": [
-                "config",
-                "configuration",
-                "factory",
-                "interfaces",
-                "interop",
-                "options",
-                "php",
-                "service",
-                "standard"
-            ],
-            "time": "2016-03-05T18:11:53+00:00"
-        },
-        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
@@ -5201,151 +4934,6 @@
                 "serialization"
             ],
             "time": "2015-05-08T13:34:17+00:00"
-        },
-        {
-            "name": "slm/queue",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/juriansluiman/SlmQueue.git",
-                "reference": "39410434b7e5f71ab4a36a4bfda6c2657b93e9c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/juriansluiman/SlmQueue/zipball/39410434b7e5f71ab4a36a4bfda6c2657b93e9c1",
-                "reference": "39410434b7e5f71ab4a36a4bfda6c2657b93e9c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5",
-                "zendframework/zend-eventmanager": "^2.6 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.7 || ^3.0",
-                "zendframework/zend-stdlib": "^2.7 || ^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8",
-                "squizlabs/php_codesniffer": "^2.0",
-                "zendframework/zend-config": "^2.6",
-                "zendframework/zend-console": "^2.6",
-                "zendframework/zend-i18n": "^2.6",
-                "zendframework/zend-log": "^2.7",
-                "zendframework/zend-modulemanager": "^2.5",
-                "zendframework/zend-mvc": "^2.5",
-                "zendframework/zend-serializer": "^2.6",
-                "zendframework/zend-view": "^2.7"
-            },
-            "suggest": {
-                "slm/queue-beanstalkd": "If you are using Beanstalk",
-                "slm/queue-doctrine": "If you are using Doctrine ORM",
-                "slm/queue-sqs": "If you are using Amazon SQS"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SlmQueue\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jurian Sluiman",
-                    "email": "jurian@juriansluiman.nl",
-                    "homepage": "http://juriansluiman.nl"
-                },
-                {
-                    "name": "Michaël Gallego",
-                    "email": "mic.gallego@gmail.com",
-                    "homepage": "http://www.michaelgallego.fr"
-                },
-                {
-                    "name": "Bas Kamer",
-                    "email": "baskamer@gmail.com"
-                }
-            ],
-            "description": "Zend Framework 2 module that integrates with various queue management systems",
-            "homepage": "https://github.com/juriansluiman/SlmQueue",
-            "keywords": [
-                "job",
-                "queue",
-                "zf2"
-            ],
-            "time": "2017-05-10T08:49:38+00:00"
-        },
-        {
-            "name": "slm/queue-doctrine",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/juriansluiman/SlmQueueDoctrine.git",
-                "reference": "e4e44fa093999b14f22b89ec78a4767106eadcb3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/juriansluiman/SlmQueueDoctrine/zipball/e4e44fa093999b14f22b89ec78a4767106eadcb3",
-                "reference": "e4e44fa093999b14f22b89ec78a4767106eadcb3",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/dbal": "^2.5",
-                "doctrine/doctrine-orm-module": "~0.7 || ^1.0",
-                "php": "^5.5 || ^7.0",
-                "slm/queue": "^1.0",
-                "zendframework/zend-eventmanager": "^2.6 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.7 || ^3.0",
-                "zendframework/zend-stdlib": "^2.2 || ^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8",
-                "squizlabs/php_codesniffer": "^2.1",
-                "zendframework/zend-config": "^2.2",
-                "zendframework/zend-i18n": "^2.5",
-                "zendframework/zend-log": "^2.5",
-                "zendframework/zend-modulemanager": "^2.5",
-                "zendframework/zend-mvc": "^2.5",
-                "zendframework/zend-serializer": "^2.5",
-                "zendframework/zend-view": "^2.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SlmQueueDoctrine\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Stefan Kleff",
-                    "email": "s.kleff@goalio.de",
-                    "homepage": "http://www.goalio.de"
-                }
-            ],
-            "description": "Zend Framework 2 module that integrates Doctrine as queuing system",
-            "homepage": "https://github.com/juriansluiman/SlmQueueDoctrine",
-            "keywords": [
-                "database",
-                "db",
-                "doctrine",
-                "job",
-                "queue",
-                "zf2"
-            ],
-            "time": "2017-03-22T08:50:39+00:00"
         },
         {
             "name": "snapshotpl/zf-snap-jquery",
@@ -8436,30 +8024,27 @@
         },
         {
             "name": "zendframework/zend-mvc",
-            "version": "2.7.12",
+            "version": "2.7.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-mvc.git",
-                "reference": "badb5bdbdae0706d1ef8928cbc1088cca0e6a3cb"
+                "reference": "9b705d5d5c7ed3808f8d52b440f612d9dc28c395"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-mvc/zipball/badb5bdbdae0706d1ef8928cbc1088cca0e6a3cb",
-                "reference": "badb5bdbdae0706d1ef8928cbc1088cca0e6a3cb",
+                "url": "https://api.github.com/repos/zendframework/zend-mvc/zipball/9b705d5d5c7ed3808f8d52b440f612d9dc28c395",
+                "reference": "9b705d5d5c7ed3808f8d52b440f612d9dc28c395",
                 "shasum": ""
             },
             "require": {
                 "container-interop/container-interop": "^1.1",
                 "php": "^5.5 || ^7.0",
                 "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
-                "zendframework/zend-form": "^2.8.2",
+                "zendframework/zend-form": "^2.7",
                 "zendframework/zend-hydrator": "^1.1 || ^2.1",
                 "zendframework/zend-psr7bridge": "^0.2",
                 "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
                 "zendframework/zend-stdlib": "^2.7.5 || ^3.0"
-            },
-            "replace": {
-                "zendframework/zend-router": "^2.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "1.7.*",
@@ -8481,6 +8066,7 @@
                 "zendframework/zend-text": "^2.6",
                 "zendframework/zend-uri": "^2.5",
                 "zendframework/zend-validator": "^2.6",
+                "zendframework/zend-version": "^2.5",
                 "zendframework/zend-view": "^2.6.3"
             },
             "suggest": {
@@ -8501,6 +8087,7 @@
                 "zendframework/zend-text": "Zend\\Text component",
                 "zendframework/zend-uri": "Zend\\Uri component",
                 "zendframework/zend-validator": "Zend\\Validator component",
+                "zendframework/zend-version": "Zend\\Version component",
                 "zendframework/zend-view": "Zend\\View component"
             },
             "type": "library",
@@ -8524,7 +8111,7 @@
                 "mvc",
                 "zf2"
             ],
-            "time": "2017-04-27T15:44:01+00:00"
+            "time": "2016-06-13T16:52:36+00:00"
         },
         {
             "name": "zendframework/zend-navigation",
@@ -8852,6 +8439,66 @@
                 "psr-7"
             ],
             "time": "2016-05-10T21:44:39+00:00"
+        },
+        {
+            "name": "zendframework/zend-router",
+            "version": "2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-router.git",
+                "reference": "04f16978364d97b653d943bad02a301f6cb619a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-router/zipball/04f16978364d97b653d943bad02a301f6cb619a8",
+                "reference": "04f16978364d97b653d943bad02a301f6cb619a8",
+                "shasum": ""
+            },
+            "require": {
+                "container-interop/container-interop": "^1.1",
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-http": "^2.5",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7.5 || ^3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "^4.5",
+                "sebastian/version": "^1.0.4",
+                "zendframework/zend-console": "^2.6",
+                "zendframework/zend-filter": "^2.6.1",
+                "zendframework/zend-i18n": "^2.6",
+                "zendframework/zend-uri": "^2.5",
+                "zendframework/zend-validator": "^2.6"
+            },
+            "suggest": {
+                "zendframework/zend-console": "Zend\\Console component",
+                "zendframework/zend-filter": "Zend\\Filter component",
+                "zendframework/zend-i18n": "Zend\\I18n component for translatable segments",
+                "zendframework/zend-validator": "Zend\\Validator component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev",
+                    "dev-develop": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Mvc\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-router",
+            "keywords": [
+                "mvc",
+                "zf2"
+            ],
+            "time": "2016-03-08T18:18:41+00:00"
         },
         {
             "name": "zendframework/zend-serializer",
@@ -10451,16 +10098,16 @@
         },
         {
             "name": "consolidation/robo",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/Robo.git",
-                "reference": "46340c0ba2477e6f30a22ebaa072da0ba2b15bb1"
+                "reference": "21370cc6fea83729ab6d903f8f382389b14ae90c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/Robo/zipball/46340c0ba2477e6f30a22ebaa072da0ba2b15bb1",
-                "reference": "46340c0ba2477e6f30a22ebaa072da0ba2b15bb1",
+                "url": "https://api.github.com/repos/consolidation/Robo/zipball/21370cc6fea83729ab6d903f8f382389b14ae90c",
+                "reference": "21370cc6fea83729ab6d903f8f382389b14ae90c",
                 "shasum": ""
             },
             "require": {
@@ -10526,7 +10173,7 @@
                 }
             ],
             "description": "Modern task runner",
-            "time": "2017-07-28T21:29:52+00:00"
+            "time": "2017-09-23T15:53:19+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -10589,16 +10236,16 @@
         },
         {
             "name": "edgedesign/phpqa",
-            "version": "v1.13.0",
+            "version": "v1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdgedesignCZ/phpqa.git",
-                "reference": "12ea25ebf914b80415ee661f80c8edfcc4ecebbe"
+                "reference": "586c3b463f4cad60f30febdfa74c80435462fee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/12ea25ebf914b80415ee661f80c8edfcc4ecebbe",
-                "reference": "12ea25ebf914b80415ee661f80c8edfcc4ecebbe",
+                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/586c3b463f4cad60f30febdfa74c80435462fee5",
+                "reference": "586c3b463f4cad60f30febdfa74c80435462fee5",
                 "shasum": ""
             },
             "require": {
@@ -10627,7 +10274,8 @@
                 "jakub-onderka/php-console-highlighter": "Colored output in parallel-lint",
                 "jakub-onderka/php-parallel-lint": "Check PHP syntax",
                 "phpstan/phpstan": "PHP Static Analysis Tool - discover bugs in your code without running it!",
-                "phpunit/phpunit": "The PHP Unit Testing framework"
+                "phpunit/phpunit": "The PHP Unit Testing framework",
+                "vimeo/psalm": "A static analysis tool for finding errors in PHP applications"
             },
             "bin": [
                 "phpqa"
@@ -10658,7 +10306,7 @@
                 "qa",
                 "static analysis"
             ],
-            "time": "2017-08-05T07:02:49+00:00"
+            "time": "2017-09-24T08:07:58+00:00"
         },
         {
             "name": "grasmash/yaml-expander",
@@ -12317,8 +11965,7 @@
     "stability-flags": {
         "zendexperts/ze-theme": 20,
         "neilime/zf2-twb-bundle": 0,
-        "swix/swix-em-config": 20,
-        "prolic/humus-amqp-module": 20
+        "swix/swix-em-config": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
