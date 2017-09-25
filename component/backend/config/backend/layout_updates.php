@@ -6,6 +6,8 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 
+namespace WellCart\Backend;
+
 return [
     'layout_updates' => [
         'backend/theme/wellcart-backend-ui' => [
@@ -14,12 +16,12 @@ return [
                     'page.header.head'                       => [
                         'capture_to' => 'PageHeader',
                         'parent'     => 'action.result',
-                        'class'      => 'WellCart\Backend\ItemView\PageHead',
+                        'class'      => ItemView\PageHead::class,
                         'blocks'     => [
                             'page.navigation.breadcrumbs' => [
                                 'capture_to' => 'breadcrumbs',
                                 'parent'     => 'page.header.head',
-                                'class'      => 'WellCart\Backend\ItemView\PageNavigator',
+                                'class'      => ItemView\PageNavigator::class,
                             ],
                         ],
                     ],
@@ -40,12 +42,12 @@ return [
                     'page.header.head'                       => [
                         'capture_to' => 'PageHeader',
                         'parent'     => 'action.result',
-                        'class'      => 'WellCart\Backend\ItemView\PageHead',
+                        'class'      => ItemView\PageHead::class,
                         'blocks'     => [
                             'page.navigation.breadcrumbs' => [
                                 'capture_to' => 'breadcrumbs',
                                 'parent'     => 'page.header.head',
-                                'class'      => 'WellCart\Backend\ItemView\PageNavigator',
+                                'class'      => ItemView\PageNavigator::class,
                             ],
                         ],
                     ],

@@ -31,7 +31,7 @@ return [
     'doctrine' => [
         'authentication' => [
             'orm_default' => [
-                'identity_class'      => 'WellCart\Backend\Entity\Administrator',
+                'identity_class'      => Entity\Administrator::class,
                 'identity_property'   => 'email',
                 'credential_property' => 'password',
             ],
@@ -39,7 +39,7 @@ return [
     ],
 
     'zfcuser' => [
-        'user_entity_class'    => 'WellCart\Backend\Entity\Administrator',
+        'user_entity_class'    => Entity\Administrator::class,
         'auth_identity_fields' => ['email'],
         'enable_registration'  => false,
         'enable_username'      => false,
