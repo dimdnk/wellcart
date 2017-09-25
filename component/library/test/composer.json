@@ -31,7 +31,7 @@
   "require": {
     "php": "^7.1.0",
     "zendframework/zend-test": "2.5.*",
-    "phpunit/phpunit": "^5.7.0"
+    "phpunit/phpunit": "^5.7.22"
   },
   "require-dev": {
     "edgedesign/phpqa": "^1.12.1",
