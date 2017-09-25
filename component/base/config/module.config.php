@@ -81,7 +81,6 @@ return [
             Spec\ConfigurationRepository::class  => Repository\Configuration::class,
             Spec\UrlRewriteRepository::class     => Repository\UrlRewrites::class,
             Spec\LocaleLanguageRepository::class => Repository\Locale\Languages::class,
-            Spec\JobQueueRepository::class       => Repository\Queue\Jobs::class,
         ],
         'services'           => [],
         'initializers'       => [],

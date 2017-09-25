@@ -110,13 +110,6 @@ return [
                         Spec\LocaleLanguageEntity::class
                     );
             },
-        Repository\Queue\Jobs::class               =>
-            function (ContainerInterface $services) {
-                return $services->get('wellcart_base_object_manager')
-                    ->getRepository(
-                        Spec\JobQueueEntity::class
-                    );
-            },
         Form\Locale\Language::class                =>
             function (ContainerInterface $services) {
                 $form = new Form\Locale\Language(

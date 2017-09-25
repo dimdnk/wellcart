@@ -295,7 +295,6 @@ return ['doctrine' => [
                 'WellCart\Base\Spec\ConfigurationEntity'  => 'WellCart\Base\Entity\Configuration',
                 'WellCart\Base\Spec\LocaleLanguageEntity' => 'WellCart\Base\Entity\Locale\Language',
                 'WellCart\Base\Spec\UrlRewriteEntity'     => 'WellCart\Base\Entity\UrlRewrite',
-                'WellCart\Base\Spec\JobQueueEntity'       => 'WellCart\Base\Entity\Queue\Job',
                 'Base::Configuration'                     => 'WellCart\Base\Entity\Configuration',
                 'Base::Locale\Language'                   => 'WellCart\Base\Entity\Locale\Language',
                 'Base::UrlRewrite'                        => 'WellCart\Base\Entity\UrlRewrite',

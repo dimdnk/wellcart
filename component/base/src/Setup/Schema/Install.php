@@ -184,60 +184,6 @@ class Install extends AbstractMigration
                 ['null' => true, 'default' => null, 'comment' => 'Updated At']
             )
             ->create();
-
-        $this->table(
-            'base_job_queue',
-            [
-                'comment'     => 'Queue Data',
-                'id'          => 'id',
-                'primary_key' => ['id'],
-            ]
-        )
-            ->addColumn(
-                'queue',
-                'string',
-                ['null' => false, 'limit' => 64, 'comment' => 'Queue']
-            )
-            ->addColumn(
-                'data',
-                'text',
-                ['null' => false, 'comment' => 'Queue Data']
-            )
-            ->addColumn(
-                'status',
-                'boolean',
-                ['null' => false, 'default' => true, 'comment' => 'Status']
-            )
-            ->addColumn(
-                'created',
-                'timestamp',
-                ['null' => true, 'default' => 'CURRENT_TIMESTAMP', 'comment' => 'Created At']
-            )
-            ->addColumn(
-                'scheduled',
-                'timestamp',
-                ['null'    => true, 'default' => null,
-                 'comment' => 'Updated At']
-            )
-            ->addColumn(
-                'executed',
-                'timestamp',
-                ['null' => true, 'default' => null, 'comment' => 'Executed At']
-            )
-            ->addColumn(
-                'finished',
-                'timestamp',
-                ['null' => true, 'default' => null, 'comment' => 'Finished At']
-            )
-            ->addColumn(
-                'message',
-                'text',
-                ['null' => true, 'comment' => 'Message']
-            )
-            ->addColumn('trace', 'text', ['null' => true, 'comment' => 'Trace'])
-            ->addIndex(['status', 'queue', 'scheduled'], ['name' => 'pop'])
-            ->addIndex(['status', 'queue', 'finished'], ['name' => 'prune'])
-            ->create();
     }
 
     /**
@@ -245,7 +191,6 @@ class Install extends AbstractMigration
      */
     public function down()
     {
-        $this->table('base_job_queue')->drop();
         $this->table('base_locale_languages')->drop();
         $this->table('base_url_rewrites')->drop();
         $this->table('base_configuration')->drop();
