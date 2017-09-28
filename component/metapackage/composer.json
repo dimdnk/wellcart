@@ -53,7 +53,7 @@
     "zendframework/zend-developer-tools": "1.1.*",
     "container-interop/container-interop": "^1.2.0",
     "adlogix/zf2-opensoft-rollout": "^1.0.0",
-    "zendframework/zend-router": "2.7.*",
+    "zendframework/zend-router": "3.*",
     "bitweb/zf2-cron-module": "2.0.*",
     "tck/zf2-imageresizer": "1.*",
     "radnan/rdn-factory": "1.*",

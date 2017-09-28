@@ -48,7 +48,7 @@
     "ext-xsl": "*",
     "antasoft/web-components": "^0.1.0",
     "vlucas/phpdotenv": "^2.4",
-    "zendframework/zend-router": "2.7.*",
+    "zendframework/zend-router": "3.*",
     "zendframework/zend-servicemanager": "2.7.*",
     "zendframework/zend-config-aggregator": "1.*",
     "zendframework/zend-developer-tools": "1.1.*",
