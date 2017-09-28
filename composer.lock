@@ -186,16 +186,16 @@
         },
         {
             "name": "beberlei/DoctrineExtensions",
-            "version": "v1.0.17",
+            "version": "v1.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/DoctrineExtensions.git",
-                "reference": "608854d5979e21cd8290ddf03a92f55017f62c80"
+                "reference": "b793f269d76ad050d6e8d74597ea161211cde112"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/608854d5979e21cd8290ddf03a92f55017f62c80",
-                "reference": "608854d5979e21cd8290ddf03a92f55017f62c80",
+                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/b793f269d76ad050d6e8d74597ea161211cde112",
+                "reference": "b793f269d76ad050d6e8d74597ea161211cde112",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
                 "doctrine",
                 "orm"
             ],
-            "time": "2017-06-16T07:29:39+00:00"
+            "time": "2017-09-27T11:34:07+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -2307,16 +2307,16 @@
         },
         {
             "name": "ivaynberg/select2",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/select2/select2.git",
-                "reference": "566c7846fbf8c3b7674346f26d0ee872c0a77629"
+                "reference": "16f6b10628f9000918708cef9b3da615119cf6d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/select2/select2/zipball/566c7846fbf8c3b7674346f26d0ee872c0a77629",
-                "reference": "566c7846fbf8c3b7674346f26d0ee872c0a77629",
+                "url": "https://api.github.com/repos/select2/select2/zipball/16f6b10628f9000918708cef9b3da615119cf6d6",
+                "reference": "16f6b10628f9000918708cef9b3da615119cf6d6",
                 "shasum": ""
             },
             "require": {
@@ -2343,8 +2343,8 @@
                 "MIT"
             ],
             "description": "Select2 is a jQuery based replacement for select boxes.",
-            "homepage": "https://select2.github.io/",
-            "time": "2016-05-27T01:16:06+00:00"
+            "homepage": "https://select2.org/",
+            "time": "2017-09-24T16:09:35+00:00"
         },
         {
             "name": "jbroadway/urlify",
@@ -5875,16 +5875,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2"
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eab7c3288ae6603d7d6f92b531626af2b162d1f2",
-                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+                "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
                 "shasum": ""
             },
             "require": {
@@ -5937,7 +5937,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-06-07T18:47:58+00:00"
+            "time": "2017-09-27T18:10:31+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -10258,16 +10258,16 @@
         },
         {
             "name": "grasmash/yaml-expander",
-            "version": "1.1.1",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/grasmash/yaml-expander.git",
-                "reference": "720c54b2c99b80d5d696714b6826183d34edce93"
+                "reference": "9ec59ccc7a630eb2637639e8214e70d27675456b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/grasmash/yaml-expander/zipball/720c54b2c99b80d5d696714b6826183d34edce93",
-                "reference": "720c54b2c99b80d5d696714b6826183d34edce93",
+                "url": "https://api.github.com/repos/grasmash/yaml-expander/zipball/9ec59ccc7a630eb2637639e8214e70d27675456b",
+                "reference": "9ec59ccc7a630eb2637639e8214e70d27675456b",
                 "shasum": ""
             },
             "require": {
@@ -10301,7 +10301,7 @@
                 }
             ],
             "description": "Expands internal property references in a yaml file.",
-            "time": "2017-08-01T16:15:05+00:00"
+            "time": "2017-09-26T16:57:45+00:00"
         },
         {
             "name": "guzzle/guzzle",
