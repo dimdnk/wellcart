@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f3888220dc4f0e26d704fc238a37d3c",
+    "content-hash": "f7182b642799e3f7f1a4df061131c57b",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -6040,57 +6040,6 @@
             "time": "2016-11-23T20:04:58+00:00"
         },
         {
-            "name": "zendexperts/ze-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ZendExperts/ZeTheme.git",
-                "reference": "52a1a480021be7fa66df0c9081314274662afb70"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ZendExperts/ZeTheme/zipball/52a1a480021be7fa66df0c9081314274662afb70",
-                "reference": "52a1a480021be7fa66df0c9081314274662afb70",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "ZeTheme": "src/"
-                },
-                "classmap": [
-                    "./"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "New BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Cosmin Harangus",
-                    "homepage": "http://www.zendexperts.com"
-                }
-            ],
-            "description": "ZeTheme is a Zend Framework 2 module that allows you to switch between various themes. The module does not contain any themes, but you can create your own.",
-            "homepage": "https://github.com/ZendExperts/ZeTheme",
-            "keywords": [
-                "module",
-                "templating",
-                "view",
-                "zf2"
-            ],
-            "time": "2014-01-09T16:06:45+00:00"
-        },
-        {
             "name": "zendframework/zend-authentication",
             "version": "2.5.3",
             "source": {
@@ -11910,7 +11859,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "zendexperts/ze-theme": 20,
         "neilime/zf2-twb-bundle": 0,
         "swix/swix-em-config": 20
     },
