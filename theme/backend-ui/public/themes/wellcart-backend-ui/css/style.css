@@ -531,7 +531,13 @@ textarea {
         margin-right: 0;
     }
 }
-
+.nav-stacked > li > a {
+	color: #07d;
+}
+.nav-stacked > li > a {
+	color: #07d;
+	border-radius: 5px 25px 25px 5px;
+}
 .breadcrumb > li > a:focus,
 .breadcrumb > li > a:hover {
     opacity: .85;
