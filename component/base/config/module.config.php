@@ -397,6 +397,7 @@ return [
         'theme' => [
             'default_theme' => 'wellcart-frontend-ui',
             'adapters' => [
+                'WellCart\Ui\Theme\Adapter\Configuration' => 'WellCart\Ui\Theme\Adapter\Configuration',
                 'WellCart\Ui\Theme\Adapter\Route' => 'WellCart\Ui\Theme\Adapter\Route',
             ],
         ],

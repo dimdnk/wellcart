@@ -58,6 +58,7 @@ class Manager
                 $this->adapters->insert($adapter, $priority++);
             }
         }
+        $this->init();
     }
 
     /**
