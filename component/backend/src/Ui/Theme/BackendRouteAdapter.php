@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Backend\Ui\Theme;
 
 use WellCart\Mvc\Application;
-use ZeTheme\Adapter\Route;
+use WellCart\Ui\Theme\Adapter\Route;
 
 class BackendRouteAdapter extends Route
 {

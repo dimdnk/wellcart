@@ -23,7 +23,7 @@ return [
             'Application'                                                     => 'WellCart\Mvc\Factory\ApplicationFactory',
             'stroker_form.renderer'                                           => 'WellCart\Form\Factory\StrokerForm\RendererFactory',
             'Zend\Db\Adapter\Adapter'                                         => 'WellCart\Db\Factory\Adapter\MasterSlaveAdapterFactory',
-            'ZeThemeManager'                                                  => 'WellCart\Ui\Factory\Theme\ManagerFactory',
+            'WellCart\Ui\Theme\Manager'                                       => 'WellCart\Ui\Factory\Theme\ManagerFactory',
             'ZfcDatagrid\Datagrid'                                            => 'WellCart\Ui\Factory\Datagrid\DatagridFactory',
             'WellCart\Ui\Layout\EventListener\AreaBasedOnThemeContext'        => 'WellCart\Ui\Factory\Layout\EventListener\AreaBasedOnThemeContextFactory',
             'WellCart\Ui\Layout\EventListener\ActionHandlesListener'          => 'WellCart\Ui\Factory\Layout\EventListener\ActionHandlesListenerFactory',
@@ -396,7 +396,7 @@ return [
     'ze_theme'                   => [
         'default_theme' => 'wellcart-frontend-ui',
         'adapters'      => [
-            'ZeTheme\Adapter\Route' => 'ZeTheme\Adapter\Route',
+            'WellCart\Ui\Theme\Adapter\Route' => 'WellCart\Ui\Theme\Adapter\Route',
         ],
     ],
     'log'                        => [

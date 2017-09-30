@@ -25,7 +25,7 @@ class AreaBasedOnThemeContextFactory
     ): AreaBasedOnThemeContext {
         return new AreaBasedOnThemeContext(
             $container->get(LayoutUpdaterInterface::class),
-            $container->get('ZeThemeManager')
+            $container->get('WellCart\Ui\Theme\Manager')
         );
     }
 }

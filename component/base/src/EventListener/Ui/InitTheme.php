@@ -61,9 +61,9 @@ class InitTheme extends AbstractListenerAggregate
         $requireJS->__invoke();
 
         /**
-         * @var $themeManager \ZeTheme\Manager
+         * @var $themeManager \WellCart\Ui\Theme\Manager
          */
-        $themeManager = $services->get('ZeThemeManager');
+        $themeManager = $services->get('WellCart\Ui\Theme\Manager');
 
         $theme = $themeManager->getTheme();
         $themeConfig = $themeManager->getThemeConfig($theme);

@@ -11,7 +11,7 @@ namespace WellCart\Ui\Theme;
 
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
-use ZeTheme\Manager as AbstractManager;
+use WellCart\Ui\Theme\Manager as AbstractManager;
 
 class Manager extends AbstractManager
 {
