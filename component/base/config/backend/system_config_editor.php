@@ -190,9 +190,9 @@ return
                             'label'    => 'Design',
                             'priority' => -21,
                             'elements' => [
-                                'ze_theme.default_theme' =>
+                                'wellcart.theme.default_theme' =>
                                     [
-                                        'name'                       => 'ze_theme.default_theme',
+                                        'name'                       => 'wellcart.theme.default_theme',
                                         'options'                    => [
                                             'label'            => 'Theme',
                                             'twb-layout'       => 'horizontal',

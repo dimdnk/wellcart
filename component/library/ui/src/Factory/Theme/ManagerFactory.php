@@ -24,7 +24,7 @@ class ManagerFactory
     {
         $config = $container->get('Configuration');
 
-        $manager = new Manager($container, $config['ze_theme']);
+        $manager = new Manager($container, $config['wellcart']['theme']);
 
         return $manager;
     }

@@ -99,7 +99,7 @@ class Module implements
                         'fieldsets' => [
                             'design' => [
                                 'elements' => [
-                                    'ze_theme.default_theme' =>
+                                    'wellcart.theme.default_theme' =>
                                         [
                                             'options' => [
                                                 'value_options' =>

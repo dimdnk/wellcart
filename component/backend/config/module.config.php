@@ -117,10 +117,11 @@ return [
             ],
         ],
     ],
-
-    'ze_theme' => [
-        'adapters' => [
-            Ui\Theme\BackendRouteAdapter::class => Ui\Theme\BackendRouteAdapter::class,
+    'wellcart' => [
+        'theme' => [
+            'adapters' => [
+                Ui\Theme\BackendRouteAdapter::class => Ui\Theme\BackendRouteAdapter::class,
+            ],
         ],
     ],
     'zfcadmin' => [
@@ -372,15 +373,6 @@ return [
                 'daterange'      => [
                     'enabled' => false,
                 ],
-            ],
-        ],
-    ],
-    // Client-side application configuration
-    'wellcart-backend' => [
-        'client-side-application' => [
-            'modules' => [
-                'assets/wellcart-backend/js/main-menu/module',
-                'assets/wellcart-backend/js/backend/module',
             ],
         ],
     ],

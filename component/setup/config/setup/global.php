@@ -13,6 +13,10 @@ return [
         'website'              => [
             'name' => 'WellCart',
         ],
+        'theme'     => [
+            'default_theme' => 'wellcart-setup-ui',
+            'routes'        => [],
+        ],
         'email_communications' => [
             'enabled' => false,
         ],
@@ -55,10 +59,6 @@ return [
         'template_path_stack'      => [
             __DIR__ . '/../../view',
         ],
-    ],
-    'ze_theme'     => [
-        'default_theme' => 'wellcart-setup-ui',
-        'routes'        => [],
     ],
     'wizard'       => [
         /**

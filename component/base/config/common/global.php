@@ -42,5 +42,6 @@ return [
             ],
         ],
         'doctrine'             => ['global_cache_instance' => 'array',],
+        'theme' => [],
     ],
 ];
