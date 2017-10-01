@@ -13,6 +13,7 @@ namespace WellCart\Base;
 use ConLayout\ModuleManager\Feature\BlockProviderInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Locale;
+use WellCart\Base\EventListener\LoadModulesPostListener;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use WellCart\ModuleManager\Listener\ConfigListener;
@@ -27,6 +28,7 @@ use Zend\Console\Adapter\AdapterInterface as ConsoleAdapter;
 use Zend\Console\Console;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
+use Zend\ModuleManager\ModuleEvent;
 use Zend\ModuleManager\ModuleManagerInterface;
 use Zend\Mvc\MvcEvent;
 use Zend\Validator\AbstractValidator;
@@ -183,7 +185,11 @@ class Module implements
         $configListener = new ConfigListener();
         $events->attach($configListener, -70);
 
-
+        $events->getSharedManager()->attach(
+            '*',
+            ModuleEvent::EVENT_LOAD_MODULES_POST,
+            new LoadModulesPostListener()
+        );
     }
 
     /**
