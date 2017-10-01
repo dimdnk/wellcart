@@ -56,8 +56,6 @@
     "zendframework/zend-router": "3.*",
     "bitweb/zf2-cron-module": "2.0.*",
     "tck/zf2-imageresizer": "1.*",
-    "radnan/rdn-factory": "1.*",
-    "radnan/rdn-require-js": "1.*",
     "acelaya/zf2-acmailer": "5.*",
     "firephp/firephp-core": "0.4.*",
     "ccampbell/chromephp": "4.*",

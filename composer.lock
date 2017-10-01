@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd4cd4cca4f7a43b2956d885c8d0e8ed",
+    "content-hash": "19c87bbf99ecdbe231069253af105c43",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -3809,95 +3809,6 @@
                 "url"
             ],
             "time": "2013-07-22T20:01:48+00:00"
-        },
-        {
-            "name": "radnan/rdn-factory",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/radnan/rdn-factory.git",
-                "reference": "7efb4b37ade8f2cb15c675f7b390b6338cdae91a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/radnan/rdn-factory/zipball/7efb4b37ade8f2cb15c675f7b390b6338cdae91a",
-                "reference": "7efb4b37ade8f2cb15c675f7b390b6338cdae91a",
-                "shasum": ""
-            },
-            "require": {
-                "zendframework/zend-form": "2.*",
-                "zendframework/zend-mvc": "2.*",
-                "zendframework/zend-servicemanager": "2.*",
-                "zendframework/zend-stdlib": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "RdnFactory\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "radnan",
-                    "email": "rafiadnan47@gmail.com"
-                }
-            ],
-            "description": "Zend Framework 2 module to help create factory classes",
-            "keywords": [
-                "factory",
-                "plugins",
-                "zend",
-                "zf2"
-            ],
-            "time": "2014-11-14T06:07:27+00:00"
-        },
-        {
-            "name": "radnan/rdn-require-js",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/radnan/rdn-require-js.git",
-                "reference": "166cbfb7e1581afa6ce4c22901194d3159926dbd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/radnan/rdn-require-js/zipball/166cbfb7e1581afa6ce4c22901194d3159926dbd",
-                "reference": "166cbfb7e1581afa6ce4c22901194d3159926dbd",
-                "shasum": ""
-            },
-            "require": {
-                "radnan/rdn-factory": "1.*",
-                "zendframework/zend-modulemanager": "2.*",
-                "zendframework/zend-mvc": "2.*",
-                "zendframework/zend-view": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "RdnRequireJS\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "radnan",
-                    "email": "rafiadnan47@gmail.com"
-                }
-            ],
-            "description": "Zend Framework 2 RequireJS module",
-            "keywords": [
-                "requirejs",
-                "zend",
-                "zf2"
-            ],
-            "time": "2014-02-16T21:19:21+00:00"
         },
         {
             "name": "raulfraile/ladybug",
