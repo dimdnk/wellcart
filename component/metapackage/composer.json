@@ -59,7 +59,6 @@
     "radnan/rdn-factory": "1.*",
     "radnan/rdn-require-js": "1.*",
     "acelaya/zf2-acmailer": "5.*",
-    "swix/swix-em-config": "dev-master",
     "firephp/firephp-core": "0.4.*",
     "ccampbell/chromephp": "4.*",
     "tinymce/tinymce": "4.4.*"

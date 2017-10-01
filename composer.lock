@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7182b642799e3f7f1a4df061131c57b",
+    "content-hash": "bd4cd4cca4f7a43b2956d885c8d0e8ed",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -5081,53 +5081,6 @@
             "time": "2017-06-01T07:14:08+00:00"
         },
         {
-            "name": "swix/swix-em-config",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/a-vasyliev/swix-em-config.git",
-                "reference": "b3a95e467f640a73a6f287ac56b370055e88a969"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/a-vasyliev/swix-em-config/zipball/b3a95e467f640a73a6f287ac56b370055e88a969",
-                "reference": "b3a95e467f640a73a6f287ac56b370055e88a969",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "zendframework/zendframework": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "SwixEmConfig": [
-                        "src/"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrii Vasyliev",
-                    "email": "contact@andrey-vasiliev.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Swix Event Manager configuration helper module. Allows to attach listeners and aggregates via application config",
-            "homepage": "https://github.com/a-vasyliev/swix-em-config",
-            "keywords": [
-                "config",
-                "configuration",
-                "event manager",
-                "zf2"
-            ],
-            "time": "2016-04-18T20:05:20+00:00"
-        },
-        {
             "name": "symfony/config",
             "version": "v3.3.9",
             "source": {
@@ -10132,16 +10085,16 @@
         },
         {
             "name": "edgedesign/phpqa",
-            "version": "v1.14.0",
+            "version": "v1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EdgedesignCZ/phpqa.git",
-                "reference": "586c3b463f4cad60f30febdfa74c80435462fee5"
+                "reference": "756ea0cdab576294bc01e5598084034f5fc2619a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/586c3b463f4cad60f30febdfa74c80435462fee5",
-                "reference": "586c3b463f4cad60f30febdfa74c80435462fee5",
+                "url": "https://api.github.com/repos/EdgedesignCZ/phpqa/zipball/756ea0cdab576294bc01e5598084034f5fc2619a",
+                "reference": "756ea0cdab576294bc01e5598084034f5fc2619a",
                 "shasum": ""
             },
             "require": {
@@ -10202,7 +10155,7 @@
                 "qa",
                 "static analysis"
             ],
-            "time": "2017-09-24T08:07:58+00:00"
+            "time": "2017-09-30T09:51:10+00:00"
         },
         {
             "name": "grasmash/yaml-expander",
@@ -11859,8 +11812,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "neilime/zf2-twb-bundle": 0,
-        "swix/swix-em-config": 20
+        "neilime/zf2-twb-bundle": 0
     },
     "prefer-stable": true,
     "prefer-lowest": false,
