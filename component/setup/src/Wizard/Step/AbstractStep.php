@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Setup\Wizard\Step;
 
 use WellCart\Setup\Service\Setup;
-use Wizard\Step\AbstractStep as Step;
+use WellCart\Ui\Wizard\Step\AbstractStep as Step;
 
 class AbstractStep extends Step
 {

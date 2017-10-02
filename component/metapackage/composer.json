@@ -43,6 +43,7 @@
     "wellcart/component-stdlib": "0.1.*",
     "wellcart/component-test": "0.1.*",
     "wellcart/component-ui": "0.1.*",
+    "wellcart/component-ui-wizard": "0.1.*",
     "wellcart/component-validator": "0.1.*",
     "wellcart/component-view": "0.1.*",
     "wellcart/component-mail": "0.1.*",

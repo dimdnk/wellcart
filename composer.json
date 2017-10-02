@@ -66,7 +66,6 @@
     "acelaya/zf2-acmailer": "5.*",
     "neilime/zf2-twb-bundle": "3.*@stable",
     "zfc-datagrid/zfc-datagrid": "1.3.*",
-    "neeckeloo/wizard": "1.0.1",
     "stroker/form": "^1.0.0",
     "soflomo/purifier": "1.0.*",
     "hounddog/doctrine-data-fixture-module": "0.*",
@@ -80,7 +79,8 @@
     "robmorgan/phinx": "0.8.*",
     "fzaninotto/faker": "1.6.*",
     "simple-bus/asynchronous": "2.*",
-    "netglue/zf2-money-module": "0.1.*"
+    "netglue/zf2-money-module": "0.1.*",
+    "symfony/options-resolver": "~2.6"
   },
   "require-dev": {
     "phpunit/phpunit-skeleton-generator": "*",
@@ -147,7 +147,7 @@
             {"name": "ZfcDatagrid", "priority": -72932},
             {"name": "StrokerForm", "priority": -72930},
             {"name": "TckImageResizer", "priority": -72929},
-            {"name": "Wizard", "priority": -72927},
+            {"name": "WellCart\\Ui\\Wizard", "priority": -72927},
             {"name": "Soflomo\\Purifier", "priority": -72925},
             {"name": "DoctrineModule", "priority": -72924},
             {"name": "DoctrineORMModule", "priority": -72922},
@@ -199,7 +199,7 @@
             {"name": "TwbBundle", "priority": -72919},
             {"name": "StrokerForm", "priority": -72915},
             {"name": "WellCart\\CommandBus", "priority": -72913},
-            {"name": "Wizard", "priority": -72912},
+            {"name": "WellCart\\Ui\\Wizard", "priority": -72912},
             {"name": "WellCart\\Base", "priority": -72900},
             {"name": "ZendDeveloperTools", "priority": -72938},
             {"name": "WellCart\\Setup", "priority": 70000}

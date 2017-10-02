@@ -13,7 +13,7 @@ namespace WellCart\Setup\Controller;
 use Throwable;
 use WellCart\Mvc\Controller\AbstractControllerTrait;
 use WellCart\Setup\Service\Setup as SetupService;
-use Wizard\WizardFactory;
+use WellCart\Ui\Wizard\WizardFactory;
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\Log\LoggerAwareInterface;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -30,7 +30,7 @@ class WizardController extends AbstractActionController implements
      */
     public function processAction(SetupService $setup, WizardFactory $wizard)
     {
-        /* @var $wizard \Wizard\WizardInterface */
+        /* @var $wizard \WellCart\Ui\Wizard\WizardInterface */
         $wizard = $wizard->create('setup');
         $currentStep = $wizard->getCurrentStep();
         $currentStep->setSetupService($setup);

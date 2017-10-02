@@ -1,0 +1,28 @@
+<?php
+/**
+ * Wizard configuration
+ *
+ * If you have a ./configs/autoload/ directory set up for your project, you can
+ * drop this config file in it and change the values as you wish.
+ */
+$wizard = [
+    /**
+     * Default layout template of the wizard
+     */
+    'default_layout_template' => 'wizard/layout',
+
+    /**
+     * Default wizard class
+     */
+    'default_class' => 'WellCart\Ui\Wizard\Wizard',
+
+    /**
+     * Wizard list
+     */
+    'wizards' => [],
+];
+
+/**
+ * You do not need to edit below this line
+ */
+return ['wizard' => $wizard];

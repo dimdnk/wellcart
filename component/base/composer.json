@@ -64,7 +64,7 @@
             {"name": "ZfcDatagrid", "priority": -72932},
             {"name": "StrokerForm", "priority": -72930},
             {"name": "TckImageResizer", "priority": -72929},
-            {"name": "Wizard", "priority": -72927},
+            {"name": "WellCart\\Ui\\Wizard", "priority": -72927},
             {"name": "Soflomo\\Purifier", "priority": -72925},
             {"name": "DoctrineModule", "priority": -72924},
             {"name": "DoctrineORMModule", "priority": -72922},
@@ -88,7 +88,7 @@
             {"name": "TwbBundle", "priority": -72919},
             {"name": "StrokerForm", "priority": -72915},
             {"name": "WellCart\\CommandBus", "priority": -72913},
-            {"name": "Wizard", "priority": -72912},
+            {"name": "WellCart\\Ui\\Wizard", "priority": -72912},
             {"name": "WellCart\\Base", "priority": -72900}
           ]
         }

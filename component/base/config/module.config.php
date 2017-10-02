@@ -653,7 +653,7 @@ return [
         /**
          * Default wizard class
          */
-        'default_class' => 'Wizard\Wizard',
+        'default_class' => 'WellCart\Ui\Wizard\Wizard',
         /**
          * Wizard list
          */

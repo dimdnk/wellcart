@@ -1,0 +1,15 @@
+<?php echo $this->partial('wizard/header', array('wizard' => $this->wizard)) ?>
+<?php
+$wizardForm = $this->wizard->getForm();
+$wizardForm->prepare();
+
+$currentStep = $this->wizard->getCurrentStep();
+?>
+<?php echo $this->form()->openTag($wizardForm) . PHP_EOL; ?>
+    <?php
+    echo $this->partial($currentStep->getViewTemplate(), array(
+        'form' => $wizardForm->get('step')
+    ));
+    ?>
+    <?php echo $this->partial('wizard/buttons', array('wizard' => $this->wizard)) ?>
+<?php echo $this->form()->closeTag($wizardForm) . PHP_EOL; ?>
