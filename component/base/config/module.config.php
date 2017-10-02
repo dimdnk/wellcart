@@ -665,7 +665,7 @@ return [
         'public_path' => WELLCART_PUBLIC_PATH,
         'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json',
     ],
-  'rdn_require_js' => [
+  'require_js' => [
     'library' => '//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js',
     'config' => [
       'baseUrl'  => '',

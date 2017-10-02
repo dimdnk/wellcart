@@ -17,7 +17,7 @@ class RequireJSFactory
   public function __invoke(ContainerInterface $container): RequireJS
 	{
     $container = $container->getServiceLocator();
-		$config = $container->get('Configuration')['rdn_require_js'];
+		$config = $container->get('Configuration')['require_js'];
 
 		if (PHP_SAPI != 'cli')
 		{

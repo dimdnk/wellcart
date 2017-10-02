@@ -6,7 +6,7 @@
  * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
  */
 return [
-    'rdn_require_js' =>
+    'require_js' =>
         [
             'library' => '/assets/lib/web-components/require.js',
             'config'  => [
