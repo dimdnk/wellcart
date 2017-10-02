@@ -274,6 +274,7 @@ return [
             'locale' => \WellCart\View\Helper\Locale::class,
             'date' => \WellCart\View\Helper\Date::class,
             'form_element' => \WellCart\Form\View\Helper\FormElement::class,
+            'RequireJS' => 'RdnRequireJS:RequireJS',
         ],
         'factories' => [
             'messenger' => MessengerFactory::class,
@@ -286,6 +287,7 @@ return [
             \WellCart\Ui\Datagrid\View\Helper\GridFilters::class => \WellCart\Ui\Factory\Datagrid\ViewHelper\GridFiltersFactory::class,
             \WellCart\View\Helper\Locale::class => \WellCart\View\Factory\Helper\LocaleFactory::class,
             \WellCart\View\Helper\Date::class => \WellCart\View\Factory\Helper\DateFactory::class,
+            'RdnRequireJS:RequireJS' => \WellCart\View\Factory\Helper\RequireJSFactory::class,
         ],
         'invokables' => [
             'assetPath' => ViewHelper\AssetPath::class,
@@ -663,4 +665,14 @@ return [
         'public_path' => WELLCART_PUBLIC_PATH,
         'manifest_file' => WELLCART_ASSETS_PATH . 'revision-manifest.json',
     ],
+  'rdn_require_js' => [
+    'library' => '//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js',
+    'config' => [
+      'baseUrl'  => '',
+      'paths'    => [],
+      'packages' => [],
+      'shim'     => [],
+      'deps'     => [],
+    ],
+  ],
 ];

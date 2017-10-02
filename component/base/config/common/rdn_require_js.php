@@ -32,6 +32,7 @@ return [
                     '../jquery.validate.min' => 'assets/lib/web-components/validation/jquery.validate',
                     './jquery.validate.min'  => 'assets/lib/web-components/validation/jquery.validate',
                 ],
+                'packages'  => [],
                 'shim'    => [
                     'jquery'           => [
                         'exports' => '$',
