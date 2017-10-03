@@ -1,19 +1,14 @@
 <?php
-/**
- * Factory for the formPrepare view helper
- *
- * @category  StrokerForm
- * @package   StrokerForm\Service
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Factory;
 
-use StrokerForm\View\Helper\FormPrepare;
+namespace WellCart\Form\JsValidation\Factory;
+
+use WellCart\Form\JsValidation\View\Helper\FormPrepare;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-
+/**
+ * Factory for the formPrepare view helper
+ */
 class FormPrepareFactory implements FactoryInterface
 {
     /**

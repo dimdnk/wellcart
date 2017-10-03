@@ -1,17 +1,9 @@
 <?php
-/**
- * RendererFactory
- *
- * @category  StrokerForm\Factory\Renderer\JqueryValidate
- * @package   StrokerForm\Factory\Renderer\JqueryValidate
- * @copyright 2013 ACSI Holding bv (http://www.acsi.eu)
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Factory\Renderer\JqueryValidate;
+namespace WellCart\Form\JsValidation\Factory\Renderer\JqueryValidate;
 
-use StrokerForm\Renderer\JqueryValidate\Renderer;
-use StrokerForm\Renderer\JqueryValidate\Rule\RulePluginManager;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Renderer;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RulePluginManager;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 

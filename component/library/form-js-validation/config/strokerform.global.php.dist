@@ -1,5 +1,5 @@
 <?php
-use \StrokerForm\Renderer\JqueryValidate\Options;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Options;
 return array(
     'stroker_form' => array(
         'activeRenderers' => array(

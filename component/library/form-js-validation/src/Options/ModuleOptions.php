@@ -1,20 +1,15 @@
 <?php
-/**
- * Defines all possible options for the module
- *
- * @category  StrokerForm
- * @package   StrokerForm\Options
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Options;
+
+namespace WellCart\Form\JsValidation\Options;
 
 use InvalidArgumentException;
 use Zend\ServiceManager\Config;
 use Zend\ServiceManager\ConfigInterface;
 use Zend\Stdlib\AbstractOptions;
-
+/**
+ * Defines all possible options for the module
+ */
 class ModuleOptions extends AbstractOptions
 {
     /**

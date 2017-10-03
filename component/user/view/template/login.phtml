@@ -11,7 +11,7 @@ $this->headTitle(__('Sign In'));
 $form = $this->loginForm;
 
 $form->prepare();
-$this->strokerFormPrepare($form->getName(), $form);
+$this->jsValidationFormPrepare($form->getName(), $form);
 
 $form->setAttribute('action', $this->url('zfcuser/login'));
 $form->setAttribute('method', 'post');

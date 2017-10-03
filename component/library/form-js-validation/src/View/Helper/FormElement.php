@@ -1,16 +1,8 @@
 <?php
-/**
- * Extends the default zf2 forminput view helper
- *
- * @category  StrokerForm
- * @package   StrokerForm\View
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\View\Helper;
+namespace WellCart\Form\JsValidation\View\Helper;
 
-use StrokerForm\Renderer\RendererInterface;
+use WellCart\Form\JsValidation\Renderer\RendererInterface;
 use Zend\Form\ElementInterface;
 use Zend\Form\Exception;
 use Zend\Form\View\Helper\FormElement as BaseHelper;

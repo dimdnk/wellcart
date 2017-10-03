@@ -1,18 +1,11 @@
 <?php
-/**
- * Renderer for the jquery.validate plugin
- *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer\JqueryValidate;
 
-use StrokerForm\Renderer\AbstractValidateRenderer;
-use StrokerForm\Renderer\JqueryValidate\Rule\RuleInterface;
-use StrokerForm\Renderer\JqueryValidate\Rule\RulePluginManager;
+namespace WellCart\Form\JsValidation\Renderer\JqueryValidate;
+
+use WellCart\Form\JsValidation\Renderer\AbstractValidateRenderer;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RuleInterface;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RulePluginManager;
 use Zend\Form\Element\Email;
 use Zend\Form\ElementInterface;
 use Zend\Form\FormInterface;
@@ -21,7 +14,9 @@ use Zend\Validator\EmailAddress;
 use Zend\Validator\Regex;
 use Zend\Validator\ValidatorInterface;
 use Zend\View\Renderer\PhpRenderer as View;
-
+/**
+ * Renderer for the jquery.validate plugin
+ */
 class Renderer extends AbstractValidateRenderer
 {
     /**
@@ -143,16 +138,6 @@ class Renderer extends AbstractValidateRenderer
         if ($rule !== null) {
             $rules = $rule->getRules($validator, $element);
             $messages = $rule->getMessages($validator);
-        } elseif (!$this->getOptions()->isDisableAjaxFallback()) {
-            //fallback ajax
-            $ajaxUri = $this->getHttpRouter()->assemble(['form' => $formAlias], ['name' => 'strokerform-ajax-validate']);
-            $rules = [
-                'remote' => [
-                    'url'  => $ajaxUri,
-                    'type' => 'POST'
-                ]
-            ];
-            $messages = [];
         }
 
         if (count($rules) > 0) {

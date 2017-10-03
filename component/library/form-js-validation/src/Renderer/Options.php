@@ -1,15 +1,6 @@
 <?php
-/**
- * Options for renderers
- *
- * @category   StrokerForm
- * @package    StrokerForm\Renderer
- * @subpackage JqueryValidate
- * @copyright  2012 Bram Gerritsen
- * @version    SVN: $Id$
- */
 
-namespace StrokerForm\Renderer;
+namespace WellCart\Form\JsValidation\Renderer;
 
 use Zend\Stdlib\AbstractOptions;
 

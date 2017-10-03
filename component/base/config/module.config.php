@@ -21,7 +21,7 @@ return [
     'service_manager' => [
         'factories' => [
             'Application' => 'WellCart\Mvc\Factory\ApplicationFactory',
-            'stroker_form.renderer' => 'WellCart\Form\Factory\StrokerForm\RendererFactory',
+            'stroker_form.renderer' => 'WellCart\Form\Factory\WellCart\Form\JsValidation\RendererFactory',
             'Zend\Db\Adapter\Adapter' => 'WellCart\Db\Factory\Adapter\MasterSlaveAdapterFactory',
             'WellCart\Ui\Theme\Manager' => 'WellCart\Ui\Factory\Theme\ManagerFactory',
             'ZfcDatagrid\Datagrid' => 'WellCart\Ui\Factory\Datagrid\DatagridFactory',
@@ -454,7 +454,7 @@ return [
         ],
         'renderer_options' => [
             'stroker_form.renderer.jqueryvalidate' => [
-                'options_class' => 'StrokerForm\Renderer\JqueryValidate\Options',
+                'options_class' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Options',
             ],
         ],
     ],

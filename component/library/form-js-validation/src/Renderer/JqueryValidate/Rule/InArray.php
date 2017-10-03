@@ -1,14 +1,6 @@
 <?php
-/**
- * InArray
- *
- * @category  StrokerForm\Renderer\JqueryValidate\Rule
- * @package   StrokerForm\Renderer\JqueryValidate\Rule
- * @copyright 2013 ACSI Holding bv (http://www.acsi.eu)
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer\JqueryValidate\Rule;
+namespace WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule;
 
 use Zend\Form\ElementInterface;
 use Zend\Validator\ValidatorInterface;

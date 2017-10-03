@@ -1,16 +1,8 @@
 <?php
-/**
- * Abstract form renderer
- *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer;
+namespace WellCart\Form\JsValidation\Renderer;
 
-use StrokerForm\FormManager;
+use WellCart\Form\JsValidation\FormManager;
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\I18n\Translator\TranslatorAwareTrait;
 use Zend\Mvc\Router\RouteInterface;

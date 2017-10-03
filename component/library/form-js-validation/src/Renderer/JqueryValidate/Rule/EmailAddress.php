@@ -1,14 +1,6 @@
 <?php
-/**
- * EmailAddress
- *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer\JqueryValidate\Rule;
+namespace WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule;
 
 use Zend\Form\ElementInterface;
 use Zend\Validator\ValidatorInterface;

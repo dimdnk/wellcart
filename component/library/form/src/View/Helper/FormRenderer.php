@@ -29,7 +29,7 @@ class FormRenderer extends TwbBundleForm
     ) {
         if ($form) {
             $form->prepare();
-            $this->view->strokerFormPrepare($form->getName(), $form);
+            $this->view->jsValidationFormPrepare($form->getName(), $form);
         }
 
         $html = '';

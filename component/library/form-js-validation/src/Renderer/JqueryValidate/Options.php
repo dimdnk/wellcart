@@ -1,17 +1,12 @@
 <?php
+
+
+namespace WellCart\Form\JsValidation\Renderer\JqueryValidate;
+
 /**
  * Options for the jquery validate renderer
- *
- * @category   StrokerForm
- * @package    StrokerForm\Renderer
- * @subpackage JqueryValidate
- * @copyright  2012 Bram Gerritsen
- * @version    SVN: $Id$
  */
-
-namespace StrokerForm\Renderer\JqueryValidate;
-
-class Options extends \StrokerForm\Renderer\Options
+class Options extends \WellCart\Form\JsValidation\Renderer\Options
 {
     /**
      * @var array

@@ -1,14 +1,6 @@
 <?php
-/**
- * RulePluginManager
- *
- * @category  StrokerForm\Renderer\JqueryValidate\Rule
- * @package   StrokerForm\Renderer\JqueryValidate\Rule
- * @copyright 2013 ACSI Holding bv (http://www.acsi.eu)
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer\JqueryValidate\Rule;
+namespace WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule;
 
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\ServiceManager\AbstractPluginManager;
@@ -23,18 +15,18 @@ class RulePluginManager extends AbstractPluginManager
      */
 
     protected $invokableClasses = [
-        'between' => 'StrokerForm\Renderer\JqueryValidate\Rule\Between',
-        'creditcard' => 'StrokerForm\Renderer\JqueryValidate\Rule\CreditCard',
-        'digits' => 'StrokerForm\Renderer\JqueryValidate\Rule\Digits',
-        'emailaddress' => 'StrokerForm\Renderer\JqueryValidate\Rule\EmailAddress',
-        'greaterthan' => 'StrokerForm\Renderer\JqueryValidate\Rule\GreaterThan',
-        'identical' => 'StrokerForm\Renderer\JqueryValidate\Rule\Identical',
-        'lessthan' => 'StrokerForm\Renderer\JqueryValidate\Rule\LessThan',
-        'notempty' => 'StrokerForm\Renderer\JqueryValidate\Rule\NotEmpty',
-        'stringlength' => 'StrokerForm\Renderer\JqueryValidate\Rule\StringLength',
-        'uri' => 'StrokerForm\Renderer\JqueryValidate\Rule\Uri',
-        'inarray' => 'StrokerForm\Renderer\JqueryValidate\Rule\InArray',
-        'regex' => 'StrokerForm\Renderer\JqueryValidate\Rule\Regex',
+        'between' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\Between',
+        'creditcard' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\CreditCard',
+        'digits' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\Digits',
+        'emailaddress' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\EmailAddress',
+        'greaterthan' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\GreaterThan',
+        'identical' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\Identical',
+        'lessthan' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\LessThan',
+        'notempty' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\NotEmpty',
+        'stringlength' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\StringLength',
+        'uri' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\Uri',
+        'inarray' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\InArray',
+        'regex' => 'WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\Regex',
     ];
 
 

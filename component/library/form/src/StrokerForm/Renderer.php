@@ -9,10 +9,10 @@ declare(strict_types = 1);
 
 namespace WellCart\Form\StrokerForm;
 
-use StrokerForm\FormManager;
-use StrokerForm\Renderer\JqueryValidate\Options;
-use StrokerForm\Renderer\JqueryValidate\Rule\RulePluginManager;
-use StrokerForm\Renderer\RendererInterface;
+use WellCart\Form\JsValidation\FormManager;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Options;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RulePluginManager;
+use WellCart\Form\JsValidation\Renderer\RendererInterface;
 use Zend\Form\Element\Email;
 use Zend\Form\ElementInterface;
 use Zend\Form\FormInterface;

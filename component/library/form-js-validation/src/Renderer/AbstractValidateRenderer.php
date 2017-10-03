@@ -1,14 +1,6 @@
 <?php
-/**
- * Description
- *
- * @category  Acsi
- * @package   Acsi\
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer;
+namespace WellCart\Form\JsValidation\Renderer;
 
 use Zend\Form\Element\MultiCheckbox;
 use Zend\Form\Element\Radio;

@@ -1,14 +1,6 @@
 <?php
-/**
- * Description
- *
- * @category  StrokerForm
- * @package   StrokerForm\Renderer
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Renderer;
+namespace WellCart\Form\JsValidation\Renderer;
 
 use Zend\Form\ElementInterface;
 use Zend\Form\FormInterface;

@@ -1,16 +1,8 @@
 <?php
-/**
- * This view helper makes the view and form available in the renderers
- *
- * @category  StrokerForm
- * @package   StrokerForm\View
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\View\Helper;
+namespace WellCart\Form\JsValidation\View\Helper;
 
-use StrokerForm\Renderer\RendererInterface;
+use WellCart\Form\JsValidation\Renderer\RendererInterface;
 use Zend\Form\FormInterface;
 use Zend\Form\View\Helper\AbstractHelper;
 

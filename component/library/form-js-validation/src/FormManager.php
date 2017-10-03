@@ -1,14 +1,7 @@
 <?php
-/**
- * Form manager
- *
- * @category  StrokerForm
- * @package   StrokerForm
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm;
+
+namespace WellCart\Form\JsValidation;
 
 use Zend\Form\FormInterface;
 use Zend\ServiceManager\AbstractPluginManager;

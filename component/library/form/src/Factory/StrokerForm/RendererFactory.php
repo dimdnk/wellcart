@@ -10,9 +10,9 @@ declare(strict_types = 1);
 namespace WellCart\Form\Factory\StrokerForm;
 
 use Interop\Container\ContainerInterface;
-use StrokerForm\Renderer\JqueryValidate\Options;
-use StrokerForm\Renderer\JqueryValidate\Rule\RulePluginManager;
-use WellCart\Form\StrokerForm\Renderer;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Options;
+use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RulePluginManager;
+use WellCart\Form\WellCart\Form\JsValidation\Renderer;
 
 class RendererFactory
 {

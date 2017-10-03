@@ -1,14 +1,6 @@
 <?php
-/**
- * Regex
- *
- * @category  AcsiWidget\Renderer\JqueryValidate\Rule
- * @package   AcsiWidget\Renderer\JqueryValidate\Rule
- * @copyright 2016 ACSI Holding bv (http://www.acsi.eu)
- * @version   SVN: $Id: $
- */
 
-namespace StrokerForm\Renderer\JqueryValidate\Rule;
+namespace WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule;
 
 use Zend\Form\ElementInterface;
 use Zend\Validator\ValidatorInterface;

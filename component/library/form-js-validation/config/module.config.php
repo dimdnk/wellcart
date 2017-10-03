@@ -1,5 +1,5 @@
 <?php
-use StrokerForm\Controller\AjaxController;
+use WellCart\Form\JsValidation\Controller\AjaxController;
 
 return [
     'stroker_form' => [

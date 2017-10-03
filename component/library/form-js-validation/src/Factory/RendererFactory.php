@@ -1,19 +1,11 @@
 <?php
-/**
- * Description
- *
- * @category  Acsi
- * @package   Acsi\
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Factory;
+namespace WellCart\Form\JsValidation\Factory;
 
-use StrokerForm\FormManager;
-use StrokerForm\Options\ModuleOptions;
-use StrokerForm\Renderer\RendererCollection;
-use StrokerForm\Renderer\RendererInterface;
+use WellCart\Form\JsValidation\FormManager;
+use WellCart\Form\JsValidation\Options\ModuleOptions;
+use WellCart\Form\JsValidation\Renderer\RendererCollection;
+use WellCart\Form\JsValidation\Renderer\RendererInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 

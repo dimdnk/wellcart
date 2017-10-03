@@ -1,16 +1,8 @@
 <?php
-/**
- * Description
- *
- * @category  StrokerForm
- * @package   StrokerForm\Service
- * @copyright 2012 Bram Gerritsen
- * @version   SVN: $Id$
- */
 
-namespace StrokerForm\Factory;
+namespace WellCart\Form\JsValidation\Factory;
 
-use StrokerForm\View\Helper\FormElement;
+use WellCart\Form\JsValidation\View\Helper\FormElement;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
