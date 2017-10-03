@@ -455,8 +455,6 @@ return [
         'renderer_options' => [
             'stroker_form.renderer.jqueryvalidate' => [
                 'options_class' => 'StrokerForm\Renderer\JqueryValidate\Options',
-                'include_assets' => false,
-                'use_twitter_bootstrap' => false,
             ],
         ],
     ],

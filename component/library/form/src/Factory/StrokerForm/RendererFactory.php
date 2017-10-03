@@ -29,7 +29,7 @@ class RendererFactory
         $pluginManager->setServiceLocator($container);
         $renderer->setRulePluginManager($pluginManager);
 
-        $config = ['include_assets' => false];
+        $config = [];
         $options = new Options($config);
         $renderer->setDefaultOptions($options);
         $renderer->setOptions($config);

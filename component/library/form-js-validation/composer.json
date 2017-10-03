@@ -1,0 +1,26 @@
+{
+    "name": "wellcart/component-form-js-validation",
+    "description": "ZF2 module for extending forms with live clientside validation",
+    "type": "library",   
+    "require": {
+        "php": ">=7.0",
+        "zendframework/zend-eventmanager": "~2",
+        "zendframework/zend-form": "~2",
+        "zendframework/zend-http": "~2",
+        "zendframework/zend-json": "~2",
+        "zendframework/zend-mvc": "~2",
+        "zendframework/zend-cache": "~2",
+        "zendframework/zend-config": "~2",
+        "zendframework/zend-i18n": "~2",
+        "zendframework/zend-i18n-resources": "~2",
+        "zendframework/zend-inputfilter": "~2",
+        "zendframework/zend-servicemanager": "~2",
+        "zendframework/zend-validator": "~2",
+        "zendframework/zend-view": "~2"
+    },
+    "autoload": {
+        "psr-4": {
+            "StrokerForm\\": "src/"
+        }
+    }
+}
