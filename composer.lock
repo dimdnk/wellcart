@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "37d51a045797fe4f4917f91077bb2180",
+    "content-hash": "d9f55de3d1054264572d663f2ad421fd",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -186,16 +186,16 @@
         },
         {
             "name": "beberlei/DoctrineExtensions",
-            "version": "v1.0.18",
+            "version": "v1.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/DoctrineExtensions.git",
-                "reference": "b793f269d76ad050d6e8d74597ea161211cde112"
+                "reference": "edc0ef1bf7b9f84f91fbd1f27560395ce70a3092"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/b793f269d76ad050d6e8d74597ea161211cde112",
-                "reference": "b793f269d76ad050d6e8d74597ea161211cde112",
+                "url": "https://api.github.com/repos/beberlei/DoctrineExtensions/zipball/edc0ef1bf7b9f84f91fbd1f27560395ce70a3092",
+                "reference": "edc0ef1bf7b9f84f91fbd1f27560395ce70a3092",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
                 "doctrine",
                 "orm"
             ],
-            "time": "2017-09-27T11:34:07+00:00"
+            "time": "2017-10-02T17:29:15+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -5568,16 +5568,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "4.6.7",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "9f9cf10d009892009a296dff48970b079ec78c7a"
+                "reference": "188f36662f3e31a3954db7aa5382533d6b64207c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/9f9cf10d009892009a296dff48970b079ec78c7a",
-                "reference": "9f9cf10d009892009a296dff48970b079ec78c7a",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/188f36662f3e31a3954db7aa5382533d6b64207c",
+                "reference": "188f36662f3e31a3954db7aa5382533d6b64207c",
                 "shasum": ""
             },
             "type": "component",
@@ -5610,7 +5610,7 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2017-09-18T11:31:55+00:00"
+            "time": "2017-10-03T11:25:12+00:00"
         },
         {
             "name": "twig/twig",

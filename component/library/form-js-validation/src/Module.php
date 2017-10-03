@@ -1,4 +1,11 @@
 <?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+declare(strict_types = 1);
 
 namespace WellCart\Form\JsValidation;
 
@@ -26,8 +33,8 @@ class Module implements
         return array(
             'factories' => array(
                 ModuleOptions::class                   => ModuleOptionsFactory::class,
-                'stroker_form.renderer'                => RendererFactory::class,
-                'stroker_form.renderer.jqueryvalidate' => jQueryRendererFactory::class,
+                'form_js_validation.renderer'                => RendererFactory::class,
+                'form_js_validation.renderer.jquery_validate' => jQueryRendererFactory::class,
             ),
         );
     }

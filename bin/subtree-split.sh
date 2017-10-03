@@ -25,6 +25,7 @@ remote component-mail git@github.com:wellcart/component-mail.git
 remote component-db git@github.com:wellcart/component-db.git
 remote component-filter git@github.com:wellcart/component-filter.git
 remote component-form git@github.com:wellcart/component-form.git
+remote component-form-js-validation git@github.com:wellcart/component-form-js-validation.git
 remote component-hydrator git@github.com:wellcart/component-hydrator.git
 remote component-input-filter git@github.com:wellcart/component-input-filter.git
 remote component-log git@github.com:wellcart/component-log.git
@@ -66,6 +67,7 @@ split 'component/library/mail' component-mail
 split 'component/library/db' component-db
 split 'component/library/filter' component-filter
 split 'component/library/form' component-form
+split 'component/library/form-js-validation' component-form-js-validation
 split 'component/library/hydrator' component-hydrator
 split 'component/library/input-filter' component-input-filter
 split 'component/library/log' component-log

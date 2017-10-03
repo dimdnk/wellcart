@@ -1,4 +1,11 @@
 <?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+declare(strict_types = 1);
 
 
 namespace WellCart\Form\JsValidation\Options;
@@ -16,15 +23,10 @@ class ModuleOptions extends AbstractOptions
      * @var array
      */
     private $activeRenderers = [];
-
-
     /**
      * @var array
      */
     private $rendererOptions = [];
-
-    /** @var array */
-    private $jqueryValidateRulePlugins = [];
 
     /**
      * @return array
@@ -84,21 +86,5 @@ class ModuleOptions extends AbstractOptions
     public function getRendererOptions($renderer)
     {
         return $this->rendererOptions[$renderer];
-    }
-
-    /**
-     * @return array
-     */
-    public function getJqueryValidateRulePlugins()
-    {
-        return $this->jqueryValidateRulePlugins;
-    }
-
-    /**
-     * @param array $jqueryValidateRulePlugins
-     */
-    public function setJqueryValidateRulePlugins(array $jqueryValidateRulePlugins)
-    {
-        $this->jqueryValidateRulePlugins = $jqueryValidateRulePlugins;
     }
 }

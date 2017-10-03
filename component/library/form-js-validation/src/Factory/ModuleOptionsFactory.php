@@ -1,4 +1,11 @@
 <?php
+/**
+ * WellCart Platform
+ *
+ * @copyright  Copyright (c) 2017 WellCart Development Team    http://wellcart.org/
+ * @license    http://www.opensource.org/licenses/BSD-3-Clause New BSD License
+ */
+declare(strict_types = 1);
 
 namespace WellCart\Form\JsValidation\Factory;
 
@@ -19,12 +26,7 @@ class ModuleOptionsFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $options = $serviceLocator->get('Config');
-        $options = isset($options['stroker_form']) ? $options['stroker_form'] : null;
-
-        if (null === $options) {
-            throw new RuntimeException('Configuration with key stroker_form not found');
-        }
-
+        $options = isset($options['wellcart']['form_js_validation']) ? $options['wellcart']['form_js_validation'] : [];
         return new ModuleOptions($options);
     }
 }

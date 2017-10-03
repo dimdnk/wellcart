@@ -21,7 +21,6 @@ return [
     'service_manager' => [
         'factories' => [
             'Application' => 'WellCart\Mvc\Factory\ApplicationFactory',
-            'stroker_form.renderer' => 'WellCart\Form\JsValidation\Factory\RendererFactory',
             'Zend\Db\Adapter\Adapter' => 'WellCart\Db\Factory\Adapter\MasterSlaveAdapterFactory',
             'WellCart\Ui\Theme\Manager' => 'WellCart\Ui\Factory\Theme\ManagerFactory',
             'ZfcDatagrid\Datagrid' => 'WellCart\Ui\Factory\Datagrid\DatagridFactory',
