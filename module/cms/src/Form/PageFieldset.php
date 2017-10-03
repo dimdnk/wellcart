@@ -40,7 +40,7 @@ class PageFieldset extends Fieldset
                 'type'       => 'checkbox',
                 'options'    => [
                     'label'               => __('Online'),
-                    'strokerform-exclude' => true,
+                    'js-validation-exclude' => true,
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,

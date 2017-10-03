@@ -91,18 +91,13 @@ class Renderer
     /**
      * Executed before the ZF2 view helper renders the element
      *
-     * @param string                          $formAlias
      * @param \Zend\View\Renderer\PhpRenderer $view
      * @param \Zend\Form\FormInterface        $form
      * @param array                           $options
      */
-    public function preRenderForm($formAlias, View $view,
-        FormInterface $form = null, array $options = []
+    public function preRenderForm( View $view,
+        FormInterface $form, array $options = []
     ) {
-        if ($form === null) {
-            $form = $this->getFormManager()->get($formAlias);
-        }
-
         $inputFilter = $form->getInputFilter();
 
         /** @var $element \Zend\Form\Element */
@@ -111,7 +106,7 @@ class Renderer
             $element = $validator['element'];
             foreach ($validator['validators'] as $val) {
                 $this->addValidationAttributesForElement(
-                    $formAlias, $element, $val['instance']
+                    $element, $val['instance']
                 );
             };
         }
@@ -199,13 +194,12 @@ class Renderer
     }
 
     /**
-     * @param string                             $formAlias
      * @param \Zend\Form\ElementInterface        $element
      * @param \Zend\Validator\ValidatorInterface $validator
      *
      * @return mixed|void
      */
-    protected function addValidationAttributesForElement($formAlias,
+    protected function addValidationAttributesForElement(
         ElementInterface $element, ValidatorInterface $validator = null
     ) {
         if (in_array(

@@ -27,7 +27,7 @@ This view helper add all the needed javascripts to the headScript view helper
 
 ```php
 <?php
-$this->jsValidationFormPrepare('my_form_alias');
+$this->jsValidationFormPrepare($form);
 
 // Do your normal form rendering here
 ```
@@ -43,10 +43,10 @@ When you are using the ZF2 view helpers for your form you could style the input 
 
 ## Excluding elements from clientside validation
 
-You can set the option `strokerform-exclude` on a form element
+You can set the option `js-validation-exclude` on a form element
 
 ```php
 $name = new Element('name');
 $name->setLabel('Your name');
-$name->setOption('strokerform-exclude', true);
+$name->setOption('js-validation-exclude', true);
 ```

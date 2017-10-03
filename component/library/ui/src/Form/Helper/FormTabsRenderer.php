@@ -32,7 +32,7 @@ class FormTabsRenderer extends AbstractHtmlElement
         $form->prepare();
         $view = $this->getView();
         $formName = $form->getName();
-        $view->jsValidationFormPrepare($formName, $form);
+        $view->jsValidationFormPrepare($form);
 
         $menu = $this->getTabMenuLinks($form);
         $html = $this->navTabs($menu, $form->getNavTabsAttributes());

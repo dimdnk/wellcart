@@ -61,16 +61,15 @@ class Renderer extends AbstractValidateRenderer
     /**
      * Executed before the ZF2 view helper renders the element
      *
-     * @param string                          $formAlias
      * @param \Zend\View\Renderer\PhpRenderer $view
      * @param \Zend\Form\FormInterface        $form
      * @param array                           $options
      *
      * @return FormInterface
      */
-    public function preRenderForm($formAlias, View $view, FormInterface $form = null, array $options = [])
+    public function preRenderForm( View $view, FormInterface $form, array $options = [])
     {
-        $form = parent::preRenderForm($formAlias, $view, $form, $options);
+        $form = parent::preRenderForm( $view, $form, $options);
 
         /** @var $options Options */
         $options = $this->getOptions();
@@ -109,13 +108,12 @@ class Renderer extends AbstractValidateRenderer
     }
 
     /**
-     * @param string                             $formAlias
      * @param \Zend\Form\ElementInterface        $element
      * @param \Zend\Validator\ValidatorInterface $validator
      *
      * @return mixed|void
      */
-    protected function addValidationAttributesForElement($formAlias, ElementInterface $element, ValidatorInterface $validator = null)
+    protected function addValidationAttributesForElement( ElementInterface $element, ValidatorInterface $validator = null)
     {
         if (in_array($this->getValidatorClassName($validator), $this->skipValidators)) {
             return;

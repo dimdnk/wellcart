@@ -19,20 +19,15 @@ abstract class AbstractValidateRenderer extends AbstractRenderer
     /**
      * Executed before the ZF2 view helper renders the element
      *
-     * @param string                          $formAlias
      * @param \Zend\View\Renderer\PhpRenderer $view
      * @param \Zend\Form\FormInterface        $form
      * @param array                           $options
      *
      * @return FormInterface
      */
-    public function preRenderForm($formAlias, View $view, FormInterface $form = null, array $options = [])
+    public function preRenderForm(View $view, FormInterface $form, array $options = [])
     {
         $this->setOptions($options);
-
-        if ($form === null) {
-            $form = $this->getFormManager()->get($formAlias);
-        }
 
         $inputFilter = $form->getInputFilter();
 
@@ -44,7 +39,7 @@ abstract class AbstractValidateRenderer extends AbstractRenderer
                 if ($val['instance'] instanceof Csrf) {
                     continue;
                 }
-                $this->addValidationAttributesForElement($formAlias, $element, $val['instance']);
+                $this->addValidationAttributesForElement($element, $val['instance']);
             };
         }
 
@@ -152,13 +147,12 @@ abstract class AbstractValidateRenderer extends AbstractRenderer
     }
 
     /**
-     * @param  string             $formAlias
      * @param  ElementInterface   $element
      * @param  ValidatorInterface $validator
      *
      * @return mixed
      */
-    abstract protected function addValidationAttributesForElement($formAlias, ElementInterface $element, ValidatorInterface $validator = null);
+    abstract protected function addValidationAttributesForElement( ElementInterface $element, ValidatorInterface $validator = null);
 
     /**
      * Get the name of the form element

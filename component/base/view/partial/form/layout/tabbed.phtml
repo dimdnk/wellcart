@@ -12,7 +12,7 @@ $form = $this->form;
 $helper = $this->plugin('formTabsRenderer');
 $form->prepare();
 $formName = $form->getName();
-$this->jsValidationFormPrepare($formName, $form);
+$this->jsValidationFormPrepare($form);
 $menu = $helper->getTabMenuLinks($form);
 
 echo $this->form()->openTag($form);

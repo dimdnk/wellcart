@@ -47,7 +47,7 @@ class Role extends AbstractForm
                 'type'       => 'checkbox',
                 'options'    => [
                     'label'               => __('Default role for new users'),
-                    'strokerform-exclude' => true,
+                    'js-validation-exclude' => true,
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,

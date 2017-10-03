@@ -150,7 +150,7 @@ class Brand extends AbstractForm
                 'type'       => 'checkbox',
                 'options'    => [
                     'label'               => __('Remove Image'),
-                    'strokerform-exclude' => true,
+                    'js-validation-exclude' => true,
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,

@@ -12,14 +12,13 @@ interface RendererInterface
     /**
      * Excecuted before the ZF2 view helper renders the element
      *
-     * @param string                   $formAlias
      * @param View                     $view
      * @param \Zend\Form\FormInterface $form
      * @param array                    $options
      *
      * @return
      */
-    public function preRenderForm($formAlias, View $view, FormInterface $form = null, array $options = []);
+    public function preRenderForm( View $view, FormInterface $form, array $options = []);
 
     /**
      * Excecuted before the ZF2 view helper renders the element

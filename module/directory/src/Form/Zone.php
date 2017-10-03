@@ -68,7 +68,7 @@ class Zone extends AbstractForm
                 'type'       => 'checkbox',
                 'options'    => [
                     'label'               => __('Is Enabled'),
-                    'strokerform-exclude' => true,
+                    'js-validation-exclude' => true,
                     'use_hidden_element'  => true,
                     'checked_value'       => 1,
                     'unchecked_value'     => 0,

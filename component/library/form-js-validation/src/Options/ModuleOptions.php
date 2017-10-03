@@ -17,10 +17,6 @@ class ModuleOptions extends AbstractOptions
      */
     private $activeRenderers = [];
 
-    /**
-     * @var array
-     */
-    private $forms = [];
 
     /**
      * @var array
@@ -44,31 +40,6 @@ class ModuleOptions extends AbstractOptions
     public function setActiveRenderers(array $activeRenderers)
     {
         $this->activeRenderers = $activeRenderers;
-    }
-
-    /**
-     * @return ConfigInterface
-     * @throws InvalidArgumentException
-     */
-    public function getForms()
-    {
-        if (is_array($this->forms)) {
-            $this->forms = new Config($this->forms);
-        }
-
-        if (!$this->forms instanceof ConfigInterface) {
-            throw new InvalidArgumentException('Plugins argument must be an array or instanceof Zend\ServiceManager\ConfigInterface');
-        }
-
-        return $this->forms;
-    }
-
-    /**
-     * @param array $forms
-     */
-    public function setForms($forms)
-    {
-        $this->forms = $forms;
     }
 
     /**

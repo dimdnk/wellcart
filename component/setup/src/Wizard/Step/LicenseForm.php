@@ -30,7 +30,7 @@ class LicenseForm extends Form implements InputFilterProviderInterface
                     'label'               => __(
                         'I agree to the above terms and conditions.'
                     ),
-                    'strokerform-exclude' => true,
+                    'js-validation-exclude' => true,
                     'use_hidden_element'  => false,
                     'checked_value'       => 1,
                 ],

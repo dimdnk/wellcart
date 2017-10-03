@@ -22,12 +22,11 @@ class FormPrepare extends AbstractHelper
     }
 
     /**
-     * @param string                   $formAlias
      * @param \Zend\Form\FormInterface $form
      * @param array                    $options
      */
-    public function __invoke($formAlias, FormInterface $form = null, array $options = [])
+    public function __invoke(FormInterface $form, array $options = [])
     {
-        $this->renderer->preRenderForm($formAlias, $this->getView(), $form, $options);
+        $this->renderer->preRenderForm($this->getView(), $form, $options);
     }
 }
