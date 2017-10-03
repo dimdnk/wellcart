@@ -4,7 +4,6 @@ namespace WellCart\Form\JsValidation\Renderer;
 
 use Zend\Form\ElementInterface;
 use Zend\Form\FormInterface;
-use Zend\Mvc\Router\RouteInterface;
 use Zend\Stdlib\AbstractOptions;
 use Zend\View\Renderer\PhpRenderer as View;
 
@@ -28,15 +27,6 @@ interface RendererInterface
      * @param ElementInterface $element
      */
     public function preRenderInputField(ElementInterface $element);
-
-    /**
-     * Set the route to use for serving assets
-     *
-     * @param  \Zend\Mvc\Router\RouteInterface $route
-     *
-     * @return mixed
-     */
-    public function setHttpRouter(RouteInterface $route);
 
     /**
      * Set renderer options

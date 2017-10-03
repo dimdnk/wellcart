@@ -7,19 +7,17 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Form\StrokerForm;
+namespace WellCart\Form\JsValidation\Renderer;
 
 use WellCart\Form\JsValidation\FormManager;
 use WellCart\Form\JsValidation\Renderer\JqueryValidate\Options;
 use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RulePluginManager;
-use WellCart\Form\JsValidation\Renderer\RendererInterface;
 use Zend\Form\Element\Email;
 use Zend\Form\ElementInterface;
 use Zend\Form\FormInterface;
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\I18n\Translator\TranslatorAwareTrait;
 use Zend\Json\Json;
-use Zend\Mvc\Router\RouteInterface;
 use Zend\Stdlib\AbstractOptions;
 use Zend\Validator\EmailAddress;
 use Zend\Validator\Regex;
@@ -31,11 +29,6 @@ class Renderer
 {
 
     use TranslatorAwareTrait;
-
-    /**
-     * @var \Zend\Mvc\Router\RouteInterface
-     */
-    protected $httpRouter;
 
     /**
      * @var AbstractOptions
@@ -75,22 +68,6 @@ class Renderer
      * @var array
      */
     private $messages = [];
-
-    /**
-     * @return RouteInterface
-     */
-    public function getHttpRouter()
-    {
-        return $this->httpRouter;
-    }
-
-    /**
-     * @param RouteInterface $assetRoute
-     */
-    public function setHttpRouter(RouteInterface $httpRouter)
-    {
-        $this->httpRouter = $httpRouter;
-    }
 
     /**
      * @param AbstractOptions $options
@@ -197,7 +174,7 @@ class Renderer
 
     public function getValidatorsForElement($inputFilter, $element)
     {
-        if ($element->getOption('strokerform-exclude')) {
+        if ($element->getOption('js-validation-exclude')) {
             return;
         }
 

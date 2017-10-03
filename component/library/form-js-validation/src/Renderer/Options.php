@@ -7,27 +7,6 @@ use Zend\Stdlib\AbstractOptions;
 class Options extends AbstractOptions
 {
     /**
-     * @var bool
-     */
-    private $includeAssets = true;
-
-    /**
-     * @return bool
-     */
-    public function getIncludeAssets()
-    {
-        return $this->includeAssets;
-    }
-
-    /**
-     * @param bool $includeAssets
-     */
-    public function setIncludeAssets($includeAssets)
-    {
-        $this->includeAssets = $includeAssets;
-    }
-
-    /**
      * True merging of two arrays, as opposed to PHPs default array_merge_recursive,
      * which doesn't do true merging of array keys
      *

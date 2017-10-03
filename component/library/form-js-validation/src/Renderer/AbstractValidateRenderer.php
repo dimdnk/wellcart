@@ -91,7 +91,7 @@ abstract class AbstractValidateRenderer extends AbstractRenderer
      */
     public function getValidatorsForElement(InputFilterInterface $inputFilter, ElementInterface $element)
     {
-        if ($element->getOption('strokerform-exclude')) {
+        if ($element->getOption('js-validation-exclude')) {
             return;
         }
 

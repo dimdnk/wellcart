@@ -3,7 +3,6 @@
 namespace WellCart\Form\JsValidation;
 
 use WellCart\Form\JsValidation\Factory\FormElementFactory;
-use WellCart\Form\JsValidation\Factory\FormManagerFactory;
 use WellCart\Form\JsValidation\Factory\FormPrepareFactory;
 use WellCart\Form\JsValidation\Factory\ModuleOptionsFactory;
 use WellCart\Form\JsValidation\Factory\Renderer\JqueryValidate\RendererFactory as jQueryRendererFactory;
@@ -27,7 +26,6 @@ class Module implements
         return array(
             'factories' => array(
                 ModuleOptions::class                   => ModuleOptionsFactory::class,
-                FormManager::class                     => FormManagerFactory::class,
                 'stroker_form.renderer'                => RendererFactory::class,
                 'stroker_form.renderer.jqueryvalidate' => jQueryRendererFactory::class,
             ),
@@ -50,7 +48,6 @@ class Module implements
     {
         return array(
             'factories' => array(
-                'form_element'       => FormElementFactory::class,
                 'jsValidationFormPrepare' => FormPrepareFactory::class
             )
         );

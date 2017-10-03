@@ -5,17 +5,11 @@ namespace WellCart\Form\JsValidation\Renderer;
 use WellCart\Form\JsValidation\FormManager;
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\I18n\Translator\TranslatorAwareTrait;
-use Zend\Mvc\Router\RouteInterface;
 use Zend\Stdlib\AbstractOptions;
 
 abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInterface
 {
     use TranslatorAwareTrait;
-
-    /**
-     * @var \Zend\Mvc\Router\RouteInterface
-     */
-    protected $httpRouter;
 
     /**
      * @var AbstractOptions
@@ -31,24 +25,6 @@ abstract class AbstractRenderer implements RendererInterface, TranslatorAwareInt
      * @var FormManager
      */
     protected $formManager;
-
-    /**
-     * @return RouteInterface
-     */
-    public function getHttpRouter()
-    {
-        return $this->httpRouter;
-    }
-
-    /**
-     * @param RouteInterface $httpRouter
-     *
-     * @return void
-     */
-    public function setHttpRouter(RouteInterface $httpRouter)
-    {
-        $this->httpRouter = $httpRouter;
-    }
 
     /**
      * @return AbstractOptions
