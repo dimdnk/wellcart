@@ -181,4 +181,24 @@ class ActionHandlesListener extends InjectTemplateListener
 
         return $actionHandles;
     }
+
+  /**
+   * Determine the module name of the controller
+   *
+   * @param  string $controller
+   *
+   * @return string
+   */
+  protected function deriveModuleNamespace($controller)
+  {
+    if (!strstr($controller, '\\')) {
+      return '';
+    }
+
+    // Retrieve second element representing module name.
+    $nsArray = explode('\\', $controller);
+    $subNsArray = array_slice($nsArray, 1, 1);
+
+    return implode('/', $subNsArray);
+  }
 }
