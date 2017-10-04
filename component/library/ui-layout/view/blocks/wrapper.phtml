@@ -1,0 +1,6 @@
+<?php
+$wrapper = $this->wrapper($this->wrapperTag);
+?>
+<?php echo $wrapper->openTag($this->wrapperAttributes) ?>
+<?php echo $this->render($this->originalTemplate) ?>
+<?php echo $wrapper->closeTag() ?>
