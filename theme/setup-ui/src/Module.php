@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Theme\SetupUi;
 
-use ConLayout\ModuleManager\Feature\BlockProviderInterface;
+use WellCart\Ui\Layout\ModuleManager\Feature\BlockProviderInterface;
 use WellCart\ModuleManager\Feature\ModulePathProviderInterface;
 use WellCart\ModuleManager\Feature\VersionProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;

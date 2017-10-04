@@ -74,7 +74,7 @@ class Module implements
         );
         $sharedEventManager
             ->attach(
-                'ConLayout\Layout\Layout',
+                'WellCart\Ui\Layout\Layout\Layout',
                 'isAllowed',
                 function ($e) use ($authService) {
                     return true;

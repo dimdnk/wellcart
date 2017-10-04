@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\EventListener\Ui;
 
-use ConLayout\View\Helper\BodyClass;
+use WellCart\Ui\Layout\View\Helper\BodyClass;
 use WellCart\Utility\Arr;
 use WellCart\Utility\Config;
 use WellCart\View\Helper\JavaScriptEnvironment;

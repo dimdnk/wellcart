@@ -28,7 +28,7 @@ class UnauthorizedStrategyFactory
 
         return new UnauthorizedStrategy(
             $moduleOptions->getUnauthorizedStrategy(),
-            $container->get('ConLayout\Updater\LayoutUpdaterInterface')
+            $container->get('WellCart\Ui\Layout\Updater\LayoutUpdaterInterface')
         );
     }
 }

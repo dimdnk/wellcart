@@ -8,7 +8,7 @@
 
 namespace WellCart\Base;
 
-use ConLayout\Block\Factory\BlockFactory;
+use WellCart\Ui\Layout\Block\Factory\BlockFactory;
 use WellCart\Base\Service\ConfigurationEditor;
 use WellCart\Form\Form;
 use WellCart\View\Model\ViewModel;

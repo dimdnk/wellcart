@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base;
 
-use ConLayout\ModuleManager\Feature\BlockProviderInterface;
+use WellCart\Ui\Layout\ModuleManager\Feature\BlockProviderInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Locale;
 use WellCart\Base\EventListener\LoadModulesPostListener;

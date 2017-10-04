@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Backend\Rbac\View\Strategy;
 
-use ConLayout\Updater\LayoutUpdaterInterface;
+use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use WellCart\Mvc\Application;
 use WellCart\Mvc\Controller\PluginManagerAwareInterface;
 use WellCart\Mvc\Controller\PluginManagerAwareTrait;

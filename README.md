@@ -52,7 +52,6 @@ Third-party frameworks utilized in this framework:
     - [Phinx Migrations](https://phinx.org/) 
     - [AcMailer](https://github.com/acelaya/ZF2-AcMailer)
     - [ZfcDatagrid](https://github.com/ThaDafinser/ZfcDatagrid)
-    - [ConLayout](https://github.com/hummer2k/ConLayout)
     - [TckImageResizer](https://github.com/tck/zf2-imageresizer)
     - [TwbBundle](https://github.com/neilime/zf2-twb-bundle)
     - [BitWeb\CronModule](https://github.com/BitWeb/zf2-cron-module)

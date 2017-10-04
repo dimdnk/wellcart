@@ -8,8 +8,8 @@
 
 namespace WellCart\Base;
 
-use ConLayout\Block\BlockInterface;
-use ConLayout\BlockManager;
+use WellCart\Ui\Layout\Block\BlockInterface;
+use WellCart\Ui\Layout\BlockManager;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use WellCart\Mvc;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;

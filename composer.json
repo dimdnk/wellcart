@@ -57,7 +57,6 @@
     "doctrine/doctrine-module": "^1.2.0",
     "beberlei/DoctrineExtensions": "1.*",
     "bitweb/zf2-cron-module": "2.0.*",
-    "hummer2k/conlayout": "^3.2",
     "bjyoungblood/bjy-profiler": "1.*",
     "rwoverdijk/assetmanager": "~1.7.0",
     "tck/zf2-imageresizer": "1.*",

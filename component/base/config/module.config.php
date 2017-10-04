@@ -224,9 +224,9 @@ return [
             'xml' => false,
         ],
         'listeners' => [
-            'ConLayout\Listener\ActionHandlesListener' => false,
-            'ConLayout\Listener\LoadLayoutListener' => false,
-            'ConLayout\Listener\PrepareActionViewModelListener' => false,
+            'WellCart\Ui\Layout\Listener\ActionHandlesListener' => false,
+            'WellCart\Ui\Layout\Listener\LoadLayoutListener' => false,
+            'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => false,
         ],
         /**
          * available view helpers for view_helpers-instructions

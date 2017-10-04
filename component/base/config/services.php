@@ -8,7 +8,7 @@
 
 namespace WellCart\Base;
 
-use ConLayout\Block\BlockInterface;
+use WellCart\Ui\Layout\Block\BlockInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use Interop\Container\ContainerInterface;
 use WellCart\Base\EventListener;
