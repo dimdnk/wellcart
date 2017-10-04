@@ -4,10 +4,10 @@
  
  */
 
-namespace WellCart\Ui\Layout\Listener\Factory;
+namespace WellCart\Ui\Layout\EventListener\Factory;
 
 use WellCart\Ui\Layout\Block\BlockPoolInterface;
-use WellCart\Ui\Layout\Listener\PrepareActionViewModelListener;
+use WellCart\Ui\Layout\EventListener\PrepareActionViewModelListener;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;

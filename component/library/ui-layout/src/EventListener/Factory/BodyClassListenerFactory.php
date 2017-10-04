@@ -1,9 +1,7 @@
 <?php
+namespace WellCart\Ui\Layout\EventListener\Factory;
 
-namespace WellCart\Ui\Layout\Listener\Factory;
-
-use WellCart\Ui\Layout\Layout\LayoutInterface;
-use WellCart\Ui\Layout\Listener\LoadLayoutListener;
+use WellCart\Ui\Layout\EventListener\BodyClassListener;
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -12,29 +10,29 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  * @package WellCart\Ui\Layout
  
  */
-class LoadLayoutListenerFactory implements FactoryInterface
+class BodyClassListenerFactory implements FactoryInterface
 {
     /**
      *
      * @param ServiceLocatorInterface $serviceLocator
-     * @return LoadLayoutListener
+     * @return BodyClassListener
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        return $this($serviceLocator, LoadLayoutListener::class);
+        return $this($serviceLocator, BodyClassListener::class);
     }
 
     /**
      * @param ContainerInterface $container
      * @param $requestedName
      * @param array $options
-     * @return LoadLayoutListener
+     * @return BodyClassListener
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        $injectBlocksListener = new LoadLayoutListener(
-            $container->get(LayoutInterface::class)
+        $bodyClassHelper = $container->get('ViewHelperManager')->get('bodyClass');
+        return new BodyClassListener(
+            $bodyClassHelper
         );
-        return $injectBlocksListener;
     }
 }

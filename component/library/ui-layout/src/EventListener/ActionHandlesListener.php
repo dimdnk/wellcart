@@ -1,5 +1,5 @@
 <?php
-namespace WellCart\Ui\Layout\Listener;
+namespace WellCart\Ui\Layout\EventListener;
 
 use WellCart\Ui\Layout\Handle\Handle;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;

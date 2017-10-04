@@ -25,7 +25,6 @@ return [
             'WellCart\Ui\Theme\Manager' => 'WellCart\Ui\Factory\Theme\ManagerFactory',
             'ZfcDatagrid\Datagrid' => 'WellCart\Ui\Factory\Datagrid\DatagridFactory',
             'WellCart\Ui\Layout\EventListener\AreaBasedOnThemeContext' => 'WellCart\Ui\Factory\Layout\EventListener\AreaBasedOnThemeContextFactory',
-            'WellCart\Ui\Layout\EventListener\ActionHandlesListener' => 'WellCart\Ui\Factory\Layout\EventListener\ActionHandlesListenerFactory',
             'WellCart\Ui\Layout\EventListener\LoadLayoutListener' => 'WellCart\Ui\Factory\Layout\EventListener\LoadLayoutListenerFactory',
             'WellCart\Ui\Layout\EventListener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\EventListener\PrepareActionViewModelListenerFactory',
             'Router' => 'Zend\Mvc\Service\RouterFactory',

@@ -2,12 +2,12 @@
 
 namespace WellCart\Ui\Layout\Options;
 
-use WellCart\Ui\Layout\Listener\ActionHandlesListener;
-use WellCart\Ui\Layout\Listener\BodyClassListener;
-use WellCart\Ui\Layout\Listener\LayoutTemplateListener;
-use WellCart\Ui\Layout\Listener\LayoutUpdateListener;
-use WellCart\Ui\Layout\Listener\LoadLayoutListener;
-use WellCart\Ui\Layout\Listener\PrepareActionViewModelListener;
+use WellCart\Ui\Layout\EventListener\ActionHandlesListener;
+use WellCart\Ui\Layout\EventListener\BodyClassListener;
+use WellCart\Ui\Layout\EventListener\LayoutTemplateListener;
+use WellCart\Ui\Layout\EventListener\LayoutUpdateListener;
+use WellCart\Ui\Layout\EventListener\LoadLayoutListener;
+use WellCart\Ui\Layout\EventListener\PrepareActionViewModelListener;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Zend\Stdlib\AbstractOptions;
 

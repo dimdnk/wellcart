@@ -1,7 +1,7 @@
 <?php
-namespace WellCart\Ui\Layout\Listener;
+namespace WellCart\Ui\Layout\EventListener;
 
-use WellCart\Ui\Layout\Listener\BodyClassListener;
+use WellCart\Ui\Layout\EventListener\BodyClassListener;
 use WellCart\Ui\Layout\View\Helper\BodyClass;
 use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventManagerInterface;

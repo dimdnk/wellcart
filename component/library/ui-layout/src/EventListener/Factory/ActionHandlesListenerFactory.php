@@ -1,7 +1,7 @@
 <?php
-namespace WellCart\Ui\Layout\Listener\Factory;
+namespace WellCart\Ui\Layout\EventListener\Factory;
 
-use WellCart\Ui\Layout\Listener\ActionHandlesListener;
+use WellCart\Ui\Layout\EventListener\ActionHandlesListener;
 use WellCart\Ui\Layout\Options\ModuleOptions;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;

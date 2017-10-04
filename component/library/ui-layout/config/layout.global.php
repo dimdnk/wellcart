@@ -182,9 +182,9 @@ return [
          */
         /*
         'listeners' => [
-            'WellCart\Ui\Layout\Listener\ActionHandlesListener'  => true,
-            'WellCart\Ui\Layout\Listener\LoadLayoutListener'     => true,
-            'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => true
+            'WellCart\Ui\Layout\EventListener\ActionHandlesListener'  => true,
+            'WellCart\Ui\Layout\EventListener\LoadLayoutListener'     => true,
+            'WellCart\Ui\Layout\EventListener\PrepareActionViewModelListener' => true
         ]*/
     ]
   ]
