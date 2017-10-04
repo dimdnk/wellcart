@@ -114,7 +114,7 @@ class ConfigListener extends AbstractListenerAggregate
 
         $contextConfig = Arr::get($config, 'context_specific.' . $context, []);
         $config = Arr::merge($config, (array)$contextConfig);
-        unset($config['con-layout']['collectors']['filesystem']);
+        unset($config['wellcart']['layout']['collectors']['filesystem']);
         // Reset merged config
         $configListener->setMergedConfig($config);
         Config::load($config);

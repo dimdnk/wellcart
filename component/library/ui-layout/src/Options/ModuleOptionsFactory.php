@@ -31,7 +31,7 @@ class ModuleOptionsFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
         $config = $container->get('Config');
-        $options = isset($config['wellcart']['layout']) ? $config['layout'] : [];
+        $options = isset($config['wellcart']['layout']) ? $config['wellcart']['layout'] : [];
         $moduleOptions = new ModuleOptions(
             $options
         );

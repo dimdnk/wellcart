@@ -205,41 +205,6 @@ return [
 
     'view_helper_config' => [],
 
-    'con-layout' => [
-        'enable_debug' => true,
-        'default_area' => \WellCart\Mvc\Application::CONTEXT_GLOBAL,
-        'prefer_route_match_controller' => true,
-        'cache_buster_internal_base_dir' => WELLCART_PUBLIC_PATH,
-        'block_defaults' => [
-            'capture_to' => 'content',
-            'append' => true,
-            'class' => 'WellCart\Ui\Container\ItemView\ItemView',
-            'options' => [],
-            'variables' => [],
-            'template' => '',
-            'actions' => [],
-            'wrapper' => false,
-        ],
-        'layout_update_extensions' => [
-            'xml' => false,
-        ],
-        'listeners' => [
-            'WellCart\Ui\Layout\Listener\ActionHandlesListener' => false,
-            'WellCart\Ui\Layout\Listener\LoadLayoutListener' => false,
-            'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => false,
-        ],
-        /**
-         * available view helpers for view_helpers-instructions
-         */
-        'view_helpers' => [
-            'requireJS' => [
-                'method' => '__invoke',
-            ],
-            'javaScriptEnvironment' => [
-                'method' => 'set',
-            ],
-        ],
-    ],
     'controllers' => [
         'aliases' => [
             'Base::Console\Cache' => Controller\Console\CacheController::class,
@@ -402,6 +367,41 @@ return [
                 'WellCart\Ui\Theme\Adapter\Route' => 'WellCart\Ui\Theme\Adapter\Route',
             ],
         ],
+      'layout' => [
+        'enable_debug' => true,
+        'default_area' => \WellCart\Mvc\Application::CONTEXT_GLOBAL,
+        'prefer_route_match_controller' => true,
+        'cache_buster_internal_base_dir' => WELLCART_PUBLIC_PATH,
+        'block_defaults' => [
+          'capture_to' => 'content',
+          'append' => true,
+          'class' => 'WellCart\Ui\Container\ItemView\ItemView',
+          'options' => [],
+          'variables' => [],
+          'template' => '',
+          'actions' => [],
+          'wrapper' => false,
+        ],
+        'layout_update_extensions' => [
+          'xml' => false,
+        ],
+        'listeners' => [
+          'WellCart\Ui\Layout\Listener\ActionHandlesListener' => false,
+          'WellCart\Ui\Layout\Listener\LoadLayoutListener' => false,
+          'WellCart\Ui\Layout\Listener\PrepareActionViewModelListener' => false,
+        ],
+        /**
+         * available view helpers for view_helpers-instructions
+         */
+        'view_helpers' => [
+          'requireJS' => [
+            'method' => '__invoke',
+          ],
+          'javaScriptEnvironment' => [
+            'method' => 'set',
+          ],
+        ],
+      ],
     ],
     'log' => [
         'logger' => [

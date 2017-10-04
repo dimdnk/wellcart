@@ -43,7 +43,7 @@ class Module implements
     {
         return array_merge(
             include __DIR__ . '/../config/module.config.php',
-            include __DIR__ . '/../config/con-layout.global.php.dist'
+            include __DIR__ . '/../config/layout.global.php'
         );
     }
 

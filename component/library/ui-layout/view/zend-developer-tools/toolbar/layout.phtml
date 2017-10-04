@@ -8,7 +8,7 @@ use Zend\Debug\Debug;
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABXUlEQVRIS2NkoDFgpLH5DGALdh04HMjEyDyDkYlRjBoW/vv//zXDn/+prk7WG8EW7Dl47CXz1FYxRkYmhr85VQydH9YxMP1nZCgVDGTQfpgPVMHEcFW+nyS7///7/8rF3kocbMHew8f/M09pYwCayfAvu4qh+/16BgZGoAUCAUALCoHiTAzX5HpJsgCk2NnWEmgK1AKSdROhAW7Bmw8f/xOhnmQlIgL8EB/QzYJbd+4xfP/+A+xSLi5OBlVlRTAbWZyQN5D1Yfjg4uVrKPr1dbXA/Nt37zN8+/adkNlgeW5uLgYVJQUwm2gLiDIZi6LBYwHN4wA9bggFGSzuiA6iUQvgORlXPhg6QYScY5FzJMU5+eWbt/+ZWVgIpT6S5P/8+cMgISIMKU1PXbj8UU5Gio+FSpaADH/0+NkHM0NdQbAFu/cd9WdkZpxFrTr5/99/L/8y/Et1d7DdTPNWBQAu59kZuoTsCwAAAABJRU5ErkJggg==">
         <span class="zdt-toolbar-info"><?= $this->translate('Layout') ?></span>
     </div>
-    <div class="zdt-toolbar-detail zdt-toolbar-detail-overflow" id="zdt-conlayout-content">
+    <div class="zdt-toolbar-detail zdt-toolbar-detail-overflow" id="zdt-wellcart-ui-layout-content">
         <span class="zdt-toolbar-info">
             <span class="zdt-toolbar-info zdt-toolbar-info-heading">
                 <?= $this->translate('Merged layout instructions') ?>
@@ -83,7 +83,7 @@ use Zend\Debug\Debug;
 <script>
     if (typeof window.jQuery !== 'undefined') {
         (function($) {
-            $('.zdt-conlayout-entry').on('mouseenter', function() {
+            $('.zdt-wellcart-ui-layout-entry').on('mouseenter', function() {
                 var $detail = $(this).find('.zdt-toolbar-detail'),
                     offset  = $(this).offset().left,
                     width   = $detail.outerWidth(),

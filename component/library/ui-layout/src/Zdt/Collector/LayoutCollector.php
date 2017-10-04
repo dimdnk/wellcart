@@ -14,7 +14,7 @@ use ZendDeveloperTools\Collector\AbstractCollector;
  */
 class LayoutCollector extends AbstractCollector
 {
-    const NAME = 'con-layout';
+    const NAME = 'wellcart-ui-layout';
 
     /**
      *
