@@ -56,7 +56,6 @@ Third-party frameworks utilized in this framework:
     - [TckImageResizer](https://github.com/tck/zf2-imageresizer)
     - [TwbBundle](https://github.com/neilime/zf2-twb-bundle)
     - [BitWeb\CronModule](https://github.com/BitWeb/zf2-cron-module)
-    - [Rollout](https://github.com/adlogix/zf2-opensoft-rollout)
 
 2. JavaScript - [jQuery](https://github.com/jquery/jquery/)
 3. CSS/JS - [Bootstrap 3](https://github.com/twbs/bootstrap/), [JQuery UI](http://jqueryui.com/)

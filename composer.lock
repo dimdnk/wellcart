@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9f55de3d1054264572d663f2ad421fd",
+    "content-hash": "64b360903517c9a937a0d9c91e27f6ad",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -66,59 +66,6 @@
                 "zf2"
             ],
             "time": "2017-01-28T23:22:19+00:00"
-        },
-        {
-            "name": "adlogix/zf2-opensoft-rollout",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/adlogix/zf2-opensoft-rollout.git",
-                "reference": "cab372761e5819101d0ef4baa592d025426c1000"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/adlogix/zf2-opensoft-rollout/zipball/cab372761e5819101d0ef4baa592d025426c1000",
-                "reference": "cab372761e5819101d0ef4baa592d025426c1000",
-                "shasum": ""
-            },
-            "require": {
-                "opensoft/rollout": "~2.1",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "doctrine/orm": "*",
-                "phpunit/phpunit": "5.5.*",
-                "zendframework/zendframework": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Adlogix\\Zf2Rollout\\": "src/"
-                },
-                "classmap": [
-                    "./"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Toni Van de Voorde",
-                    "email": "toni.vdv@gmail.com",
-                    "homepage": "http://www.devexp.eu"
-                }
-            ],
-            "description": "ZF2 module for the Opensoft Rollout library",
-            "homepage": "https://github.com/adlogix/zf2-opensoft-rollout",
-            "keywords": [
-                "feature",
-                "feature flags",
-                "flags",
-                "zf2"
-            ],
-            "time": "2016-10-06T08:37:35+00:00"
         },
         {
             "name": "antasoft/web-components",
@@ -2744,58 +2691,6 @@
                 "zf2"
             ],
             "time": "2015-07-22T10:42:26+00:00"
-        },
-        {
-            "name": "opensoft/rollout",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/opensoft/rollout.git",
-                "reference": "2e5a72b7e59b7296d50f36404a1e404f67e67636"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/opensoft/rollout/zipball/2e5a72b7e59b7296d50f36404a1e404f67e67636",
-                "reference": "2e5a72b7e59b7296d50f36404a1e404f67e67636",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "doctrine/cache": "*",
-                "phpunit/phpunit": ">=4.0,<6.0"
-            },
-            "suggest": {
-                "doctrine/cache": "For use with the DoctrineCacheStorageAdapter",
-                "predis/predis": "For use with the RedisStorageAdapter"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Opensoft\\Rollout\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Richard Fullmer",
-                    "email": "richard.fullmer@opensoftdev.com"
-                }
-            ],
-            "description": "Feature switches or flags for PHP",
-            "keywords": [
-                "feature",
-                "flag",
-                "flipper",
-                "rollout",
-                "switches",
-                "toggle"
-            ],
-            "time": "2017-08-01T17:45:55+00:00"
         },
         {
             "name": "oro/doctrine-extensions",
