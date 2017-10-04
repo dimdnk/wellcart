@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Container\ItemView;
 
-use ConLayout\Block\BlockInterface;
+use WellCart\Ui\Layout\Block\BlockInterface;
 use WellCart\Mvc;
 use WellCart\Stdlib;
 use WellCart\Ui\Container\ItemViewInterface;

@@ -31,7 +31,6 @@
   "require": {
     "php": "^7.1.0",
     "rwoverdijk/assetmanager": "~1.7.0",
-    "hummer2k/conlayout": "^3.2",
     "neilime/zf2-twb-bundle": "3.*@stable",
     "zfc-datagrid/zfc-datagrid": "1.3.*",
     "antasoft/web-components": "^0.1.0"

@@ -9,8 +9,8 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Layout;
 
-use ConLayout\Controller\Plugin\LayoutManager;
-use ConLayout\Handle\Handle;
+use WellCart\Ui\Layout\Controller\Plugin\LayoutManager;
+use WellCart\Ui\Layout\Handle\Handle;
 
 trait LayoutManagerAwareTrait
 {

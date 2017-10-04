@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Factory\Layout\EventListener;
 
-use ConLayout\Updater\LayoutUpdaterInterface;
+use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
 use WellCart\Ui\Layout\EventListener\AreaBasedOnThemeContext;
 

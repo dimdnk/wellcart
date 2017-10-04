@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Layout\EventListener;
 
-use ConLayout\Updater\LayoutUpdaterInterface;
+use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use WellCart\Ui\Theme\Manager as ThemeManager;
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\ListenerAggregateInterface;

@@ -9,8 +9,8 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Factory\Layout\EventListener;
 
-use ConLayout\Options\ModuleOptions;
-use ConLayout\Updater\LayoutUpdaterInterface;
+use WellCart\Ui\Layout\Options\ModuleOptions;
+use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
 use WellCart\Ui\Layout\EventListener\ActionHandlesListener;
 

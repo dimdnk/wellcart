@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Layout;
 
-use ConLayout\Controller\Plugin\LayoutManager;
+use WellCart\Ui\Layout\Controller\Plugin\LayoutManager;
 
 interface LayoutManagerAwareInterface
 {

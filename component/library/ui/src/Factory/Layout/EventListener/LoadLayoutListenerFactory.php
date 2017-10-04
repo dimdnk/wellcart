@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Factory\Layout\EventListener;
 
-use ConLayout\Layout\LayoutInterface;
+use WellCart\Ui\Layout\Layout\LayoutInterface;
 use Interop\Container\ContainerInterface;
 use WellCart\Ui\Layout\EventListener\LoadLayoutListener;
 

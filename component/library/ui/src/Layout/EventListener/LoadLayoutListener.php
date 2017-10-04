@@ -14,7 +14,7 @@ use Zend\EventManager\EventManagerInterface;
 use Zend\Mvc\MvcEvent;
 
 class LoadLayoutListener
-    extends \ConLayout\Listener\LoadLayoutListener
+    extends \WellCart\Ui\Layout\Listener\LoadLayoutListenerr
 {
 
     /**

@@ -9,8 +9,8 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Layout\EventListener;
 
-use ConLayout\Block\BlockPoolInterface;
-use ConLayout\Layout\LayoutInterface;
+use WellCart\Ui\Layout\Block\BlockPoolInterface;
+use WellCart\Ui\Layout\Layout\LayoutInterface;
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\ListenerAggregateInterface;
 use Zend\EventManager\ListenerAggregateTrait;

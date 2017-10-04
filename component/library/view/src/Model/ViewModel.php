@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\View\Model;
 
-use ConLayout\Block\AbstractBlock as Model;
+use WellCart\Ui\Layout\Block\AbstractBlock as Model;
 use Zend\EventManager\EventManagerAwareInterface;
 use Zend\EventManager\EventManagerAwareTrait;
 
