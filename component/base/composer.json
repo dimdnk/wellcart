@@ -50,7 +50,6 @@
           "extends": false,
           "require": [
             {"name": "ConLayout", "priority": -90500},
-            {"name": "ConVarnish", "priority": -90400},
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "Adlogix\\Zf2Rollout", "priority": -72949},
             {"name": "ZfcBase", "priority": -72948},
@@ -81,7 +80,6 @@
           "extends": false,
           "require": [
             {"name": "ConLayout", "priority": -90500},
-            {"name": "ConVarnish", "priority": -90400},
             {"name": "ZfcBase", "priority": -72931},
             {"name": "BjyProfiler", "priority": -72925},
             {"name": "AssetManager", "priority": -72920},

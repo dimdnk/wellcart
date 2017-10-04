@@ -58,7 +58,6 @@
     "beberlei/DoctrineExtensions": "1.*",
     "bitweb/zf2-cron-module": "2.0.*",
     "hummer2k/conlayout": "^3.2",
-    "hummer2k/convarnish": "^2.0",
     "bjyoungblood/bjy-profiler": "1.*",
     "rwoverdijk/assetmanager": "~1.7.0",
     "tck/zf2-imageresizer": "1.*",
@@ -130,7 +129,6 @@
           ],
           "require": [
             {"name": "ConLayout", "priority": -90500},
-            {"name": "ConVarnish", "priority": -90400},
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "ZfcBase", "priority": -72948},
             {"name": "AcMailer", "priority": -72943},
@@ -186,7 +184,6 @@
           "extends": false,
           "require": [
             {"name": "ConLayout", "priority": -90500},
-            {"name": "ConVarnish", "priority": -90400},
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "WellCart\\Theme\\SetupUi", "priority": -80200},
             {"name": "ZfcBase", "priority": -72931},
