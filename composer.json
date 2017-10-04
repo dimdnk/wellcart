@@ -127,7 +127,7 @@
             {"name": "WellCart\\Setup", "priority": 70000}
           ],
           "require": [
-            {"name": "ConLayout", "priority": -90500},
+            {"name": "WellCart\\Ui\\Layout", "priority": -90500},
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "ZfcBase", "priority": -72948},
             {"name": "AcMailer", "priority": -72943},
@@ -182,7 +182,7 @@
           "name": "setup",
           "extends": false,
           "require": [
-            {"name": "ConLayout", "priority": -90500},
+            {"name": "WellCart\\Ui\\Layout", "priority": -90500},
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "WellCart\\Theme\\SetupUi", "priority": -80200},
             {"name": "ZfcBase", "priority": -72931},

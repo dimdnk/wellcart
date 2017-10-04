@@ -49,7 +49,7 @@
           "name": "common",
           "extends": false,
           "require": [
-            {"name": "ConLayout", "priority": -90500},
+            {"name": "WellCart\\Ui\\Layout", "priority": -90500},
             {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
             {"name": "Adlogix\\Zf2Rollout", "priority": -72949},
             {"name": "ZfcBase", "priority": -72948},
@@ -79,7 +79,7 @@
           "name": "setup",
           "extends": false,
           "require": [
-            {"name": "ConLayout", "priority": -90500},
+            {"name": "WellCart\\Ui\\Layout", "priority": -90500},
             {"name": "ZfcBase", "priority": -72931},
             {"name": "BjyProfiler", "priority": -72925},
             {"name": "AssetManager", "priority": -72920},
