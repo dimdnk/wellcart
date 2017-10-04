@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "64b360903517c9a937a0d9c91e27f6ad",
+    "content-hash": "87ccb39b0367813e8c1eb4fd629a5aa7",
     "packages": [
         {
             "name": "acelaya/zf2-acmailer",
@@ -2640,57 +2640,6 @@
                 "time"
             ],
             "time": "2017-01-16T07:55:07+00:00"
-        },
-        {
-            "name": "netglue/zf2-money-module",
-            "version": "0.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/netglue/ZF2-Money-Module.git",
-                "reference": "7d3f3bd8c494002cf52d9a83315e9b5ef275fa14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/netglue/ZF2-Money-Module/zipball/7d3f3bd8c494002cf52d9a83315e9b5ef275fa14",
-                "reference": "7d3f3bd8c494002cf52d9a83315e9b5ef275fa14",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "zendframework/zendframework": "~2.4"
-            },
-            "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master"
-            },
-            "type": "module",
-            "autoload": {
-                "psr-0": {
-                    "NetglueMoney": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "George Steel",
-                    "email": "george@net-glue.co.uk",
-                    "homepage": "http://netglue.co/"
-                }
-            ],
-            "description": "ZF2 Module that bundles Sebastian Bergmans money library and at some point will do other things too...",
-            "homepage": "https://github.com/netglue/zf2-money-module",
-            "keywords": [
-                "conversion",
-                "currency",
-                "module",
-                "money",
-                "netglue",
-                "zend",
-                "zf2"
-            ],
-            "time": "2015-07-22T10:42:26+00:00"
         },
         {
             "name": "oro/doctrine-extensions",

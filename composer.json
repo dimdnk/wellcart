@@ -77,7 +77,6 @@
     "robmorgan/phinx": "0.8.*",
     "fzaninotto/faker": "1.6.*",
     "simple-bus/asynchronous": "2.*",
-    "netglue/zf2-money-module": "0.1.*",
     "symfony/options-resolver": "~2.6"
   },
   "require-dev": {
@@ -158,7 +157,7 @@
             {"name": "ZfcAdmin", "priority": -72810},
             {"name": "WellCart\\Backend", "priority": -72800},
             {"name": "WellCart\\CMS", "priority": 20},
-            {"name": "NetglueMoney", "priority": 29},
+            {"name": "WellCart\\Money", "priority": 29},
             {"name": "WellCart\\Directory", "priority": 30},
             {"name": "WellCart\\Catalog", "priority": 40}
           ]

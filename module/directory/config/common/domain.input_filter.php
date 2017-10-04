@@ -190,7 +190,7 @@ return [
                                         'max'      => 3,
                                     ],
                                 ],
-                                'CurrencyCode'   => ['name' => 'NetglueMoney\Validator\CurrencyCode'],
+                                'CurrencyCode'   => ['name' => 'WellCart\Money\Validator\CurrencyCode'],
                                 'NoObjectExists' => [
                                     'name'    => 'WellCart\ORM\Validator\NoObjectExists',
                                     'options' => [
