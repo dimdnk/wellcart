@@ -39,6 +39,7 @@ remote component-session git@github.com:wellcart/component-session.git
 remote component-stdlib git@github.com:wellcart/component-stdlib.git
 remote component-test git@github.com:wellcart/component-test.git
 remote component-ui git@github.com:wellcart/component-ui.git
+remote component-ui-layout git@github.com:wellcart/component-ui-layout.git
 remote component-ui-wizard git@github.com:wellcart/component-ui-wizard.git
 remote component-validator git@github.com:wellcart/component-validator.git
 remote component-view git@github.com:wellcart/component-view.git
@@ -81,6 +82,7 @@ split 'component/library/session' component-session
 split 'component/library/stdlib' component-stdlib
 split 'component/library/test' component-test
 split 'component/library/ui' component-ui
+split 'component/library/ui-layout' component-ui-layout
 split 'component/library/ui-wizard' component-ui-wizard
 split 'component/library/validator' component-validator
 split 'component/library/view' component-view
