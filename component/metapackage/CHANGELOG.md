@@ -4,7 +4,7 @@ WellCart Platform Component Framework Change Log
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.1.0 - 2017-09-20
+## 0.1.0 - 2017-10-20
 
 Technology preview release.
 
