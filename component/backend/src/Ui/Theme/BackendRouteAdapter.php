@@ -23,19 +23,7 @@ class BackendRouteAdapter extends Route
      */
     public function getTheme()
     {
-        $app = $this->serviceLocator->get('Application');
-        $request = $app->getRequest();
-        $router = $this->serviceLocator->get('Router');
-        if (!$router->match($request)) {
-            return null;
-        }
-        $matchedRoute = $router->match($request)->getMatchedRouteName();
-        if (application_context(Application::CONTEXT_BACKEND)
-            || (
-                (strlen($matchedRoute) >= 8)
-                && substr($matchedRoute, 0, 8) == 'zfcadmin'
-            )
-        ) {
+        if (application_context(Application::CONTEXT_BACKEND)) {
             return 'wellcart-backend-ui';
         }
 
