@@ -208,7 +208,9 @@ abstract class PHPEnvironment
         ); // Redirects to an UTF-8 encoded URL if it's not already the case
         Bootup::filterRequestInputs(); // Normalizes HTTP inputs to UTF-8 NFC
 
-        (new \NunoMaduro\Collision\Provider)->register();
+        if (PHP_SAPI == 'cli') {
+            (new \NunoMaduro\Collision\Provider)->register();
+        }
         return true;
     }
 }
