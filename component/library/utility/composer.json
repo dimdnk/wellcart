@@ -29,6 +29,7 @@
     "raulfraile/ladybug": "1.*",
     "nesbot/carbon": "1.*",
     "vlucas/phpdotenv": "^2.4",
+    "nunomaduro/collision": "^1.1.6",
     "crazycodr/standard-exceptions": "^2.1.0"
   },
   "suggest": {

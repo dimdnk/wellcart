@@ -48,6 +48,7 @@
     "ext-xsl": "*",
     "antasoft/web-components": "^0.1.0",
     "vlucas/phpdotenv": "^2.4",
+    "nunomaduro/collision": "^1.1.6",
     "zendframework/zend-router": "3.*",
     "zendframework/zend-servicemanager": "2.7.*",
     "zendframework/zend-config-aggregator": "1.*",
