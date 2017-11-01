@@ -38,7 +38,7 @@ final class ErrorHandler
         if (error_reporting() && $code) {
             if ($code == E_USER_DEPRECATED) {
                 //error_log('Deprecated: ' . $error);
-                return true;
+                //return true;
             }
             // This error is not suppressed by current error reporting settings
             // Convert the error into an ErrorException
