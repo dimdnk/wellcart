@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Base\EventListener;
 
 use Zend\EventManager\EventInterface;
-use Zend\ServiceManager;
+use WellCart\ServiceManager;
 
 /**
  * Class ProxyListener

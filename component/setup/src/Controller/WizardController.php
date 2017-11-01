@@ -75,4 +75,12 @@ class WizardController extends AbstractActionController implements
             ->addChild($flashNotifications, 'notifications', true)
             ->addChild($notifications, 'notifications', true);
     }
+
+    /**
+     * @return \Zend\ServiceManager\ServiceLocatorInterface
+     */
+    public function getServiceLocator()
+    {
+        return $this->serviceLocator;
+    }
 }

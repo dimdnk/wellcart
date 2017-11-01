@@ -41,4 +41,13 @@ abstract class AbstractActionController
 {
 
     use AbstractControllerTrait;
+
+    /**
+     * @return \Zend\ServiceManager\ServiceLocatorInterface
+     */
+    public function getServiceLocator()
+    {
+        return $this->serviceLocator;
+    }
+
 }

@@ -24,7 +24,7 @@ class WizardFactoryFactory implements FactoryInterface
     {
         $config = $serviceLocator->get('WellCart\Ui\Wizard\Config');
 
-        $wizardFactory = new \WellCart\Ui\Wizard\WizardFactory($config);
+        $wizardFactory = new \WellCart\Ui\Wizard\WizardFactory($serviceLocator, $config);
 
         $stepFactory = $serviceLocator->get('WellCart\Ui\Wizard\Step\StepFactory');
         $wizardFactory->setStepFactory($stepFactory);

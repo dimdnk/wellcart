@@ -12,11 +12,9 @@ namespace WellCart\Ui\Wizard;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use WellCart\Ui\Wizard\Step\StepFactory;
-use WellCart\Ui\Wizard\WizardInterface;
 use Zend\ServiceManager\ServiceManager;
-use Zend\ServiceManager\ServiceManagerAwareInterface;
 
-class WizardFactory implements ServiceManagerAwareInterface
+class WizardFactory
 {
     /**
      * @var ServiceManager
@@ -41,17 +39,10 @@ class WizardFactory implements ServiceManagerAwareInterface
     /**
      * @param array $config
      */
-    public function __construct(array $config)
-    {
-        $this->config = (array) $config;
-    }
-
-    /**
-     * @param ServiceManager $serviceManager
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
+    public function __construct(ServiceManager $serviceManager, array $config)
     {
         $this->serviceManager = $serviceManager;
+        $this->config = (array) $config;
     }
 
     /**

@@ -12,31 +12,25 @@ namespace WellCart\Ui\Wizard\Form;
 
 use Zend\Form\Form;
 use Zend\Form\FormInterface;
-use Zend\ServiceManager\ServiceManager;
-use Zend\ServiceManager\ServiceManagerAwareInterface;
 
-class FormFactory implements ServiceManagerAwareInterface
+class FormFactory
 {
     /**
-     * @var ServiceManager
+     * @var
      */
-    protected $serviceManager;
+    private $formElementManager;
 
-    /**
-     * @param ServiceManager $serviceManager
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
+    public function __construct($formElementManager)
     {
-        $this->serviceManager = $serviceManager;
+        $this->formElementManager = $formElementManager;
     }
 
     /**
-     * @param  ServiceLocatorInterface $serviceLocator
      * @return FormInterface
      */
     public function create()
     {
-        $formElementManager = $this->serviceManager->get('FormElementManager');
+        $formElementManager = $this->formElementManager;
 
         $form = new Form();
         $form

@@ -14,6 +14,7 @@ use WellCart\Ui\Wizard\Wizard;
 use WellCart\Ui\Wizard\WizardInterface;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use WellCart\Ui\Wizard\Form\FormFactory;
 
 class WizardFactory implements FactoryInterface
 {
@@ -26,7 +27,7 @@ class WizardFactory implements FactoryInterface
         /* @var $wizard WizardInterface */
         $wizard = new \WellCart\Ui\Wizard\Wizard();
 
-        $formFactory = $serviceLocator->get('WellCart\Ui\Wizard\Form\FormFactory');
+        $formFactory = new FormFactory($serviceLocator->get('FormElementManager'));
         $wizard->setFormFactory($formFactory);
 
         $wizardProcessor = $serviceLocator->get('WellCart\Ui\Wizard\WizardProcessor');
