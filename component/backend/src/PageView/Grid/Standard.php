@@ -15,7 +15,6 @@ use WellCart\ORM\QueryBuilder;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
 use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Ui\Datagrid;
-use WellCart\Ui\Datagrid\Column\Type as ColumnType;
 use WellCart\Ui\Datagrid\Controller\Plugin\GridFilterBuilder;
 use Zend\Stdlib\ArrayUtils;
 use Zend\Stdlib\PriorityList;
