@@ -7,7 +7,7 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Router\Http\Factory;
+namespace WellCart\Router\Factory\Http;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Base\Spec\UrlRewriteRepository;

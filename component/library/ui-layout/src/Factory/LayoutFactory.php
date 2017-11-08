@@ -1,12 +1,9 @@
 <?php
-/**
- * @package WellCart\Ui\Layout
 
- */
-
-namespace WellCart\Ui\Layout\Layout;
+namespace WellCart\Ui\Layout\Factory;
 
 use WellCart\Ui\Layout\Block\BlockPoolInterface;
+use WellCart\Ui\Layout\Layout\Layout;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
 use Zend\Mvc\View\Http\ViewManager;

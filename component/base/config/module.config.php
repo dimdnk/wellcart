@@ -461,7 +461,7 @@ return [
             'SkippableSegment' => 'WellCart\Router\Http\SkippableSegment',
         ],
         'factories' => [
-            'SystemUrlRewritesHandler' => 'WellCart\Router\Http\Factory\SystemUrlRewritesFactory',
+            'SystemUrlRewritesHandler' => 'WellCart\Router\Factory\Http\SystemUrlRewritesFactory',
         ],
     ],
     'form_elements' => [

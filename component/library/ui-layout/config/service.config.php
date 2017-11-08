@@ -10,7 +10,7 @@ use WellCart\Ui\Layout\Generator\BlocksGenerator;
 use WellCart\Ui\Layout\Generator\BlocksGeneratorFactory;
 use WellCart\Ui\Layout\Generator\ViewHelperGenerator;
 use WellCart\Ui\Layout\Generator\ViewHelperGeneratorFactory;
-use WellCart\Ui\Layout\Layout\LayoutFactory;
+use WellCart\Ui\Layout\Factory\LayoutFactory;
 use WellCart\Ui\Layout\Layout\LayoutInterface;
 use WellCart\Ui\Layout\EventListener\ActionHandlesListener;
 use WellCart\Ui\Layout\EventListener\BodyClassListener;
