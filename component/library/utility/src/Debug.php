@@ -24,6 +24,6 @@ abstract class Debug
      */
     public static function dump($var)
     {
-        ladybug_dump($var);
+        dump($var);
     }
 }

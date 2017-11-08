@@ -34,7 +34,7 @@
     "ext-intl": "*",
     "jbroadway/urlify": "1.*",
     "patchwork/utf8": "1.*",
-    "raulfraile/ladybug": "1.*",
+    "symfony/var-dumper": "3.*",
     "nesbot/carbon": "1.*",
     "ext-PDO": "*",
     "ext-pdo_mysql": "*",
