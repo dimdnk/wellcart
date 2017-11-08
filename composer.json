@@ -126,39 +126,132 @@
           "name": "common",
           "extends": false,
           "exclude": [
-            {"name": "WellCart\\Setup", "priority": 70000}
+            {
+              "name": "WellCart\\Setup",
+              "priority": 70000
+            }
           ],
           "require": [
-            {"name": "WellCart\\Ui\\Layout", "priority": -90500},
-            {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
-            {"name": "ZfcBase", "priority": -72948},
-            {"name": "AcMailer", "priority": -72943},
-            {"name": "BjyProfiler", "priority": -72941},
-            {"name": "ZendDeveloperTools", "priority": -72940},
-            {"name": "WellCart\\CommandBus", "priority": -72939},
-            {"name": "WellCart\\SchemaMigration", "priority": -72938},
-            {"name": "AssetManager", "priority": -72935},
-            {"name": "TwbBundle", "priority": -72934},
-            {"name": "ZfcDatagrid", "priority": -72932},
-            {"name": "WellCart\\Form\\JsValidation", "priority": -72930},
-            {"name": "TckImageResizer", "priority": -72929},
-            {"name": "WellCart\\Ui\\Wizard", "priority": -72927},
-            {"name": "Soflomo\\Purifier", "priority": -72925},
-            {"name": "DoctrineModule", "priority": -72924},
-            {"name": "DoctrineORMModule", "priority": -72922},
-            {"name": "DoctrineDataFixtureModule", "priority": -72920},
-            {"name": "BitWeb\\CronModule", "priority": -72917},
-            {"name": "WellCart\\Base", "priority": -72900},
-            {"name": "ZfcUser", "priority": -72852},
-            {"name": "ZfcUserDoctrineORM", "priority": -72851},
-            {"name": "ZfcRbac", "priority": -72850},
-            {"name": "WellCart\\User", "priority": -72820},
-            {"name": "ZfcAdmin", "priority": -72810},
-            {"name": "WellCart\\Backend", "priority": -72800},
-            {"name": "WellCart\\CMS", "priority": 20},
-            {"name": "WellCart\\Money", "priority": 29},
-            {"name": "WellCart\\Directory", "priority": 30},
-            {"name": "WellCart\\Catalog", "priority": 40}
+            {
+              "name": "WellCart\\Ui\\Layout",
+              "priority": -90500
+            },
+            {
+              "name": "WellCart\\Theme\\FrontendUi",
+              "priority": -90000
+            },
+            {
+              "name": "ZfcBase",
+              "priority": -72948
+            },
+            {
+              "name": "AcMailer",
+              "priority": -72943
+            },
+            {
+              "name": "BjyProfiler",
+              "priority": -72941
+            },
+            {
+              "name": "ZendDeveloperTools",
+              "priority": -72940
+            },
+            {
+              "name": "WellCart\\CommandBus",
+              "priority": -72939
+            },
+            {
+              "name": "WellCart\\SchemaMigration",
+              "priority": -72938
+            },
+            {
+              "name": "AssetManager",
+              "priority": -72935
+            },
+            {
+              "name": "TwbBundle",
+              "priority": -72934
+            },
+            {
+              "name": "ZfcDatagrid",
+              "priority": -72932
+            },
+            {
+              "name": "WellCart\\Form\\JsValidation",
+              "priority": -72930
+            },
+            {
+              "name": "TckImageResizer",
+              "priority": -72929
+            },
+            {
+              "name": "WellCart\\Ui\\Wizard",
+              "priority": -72927
+            },
+            {
+              "name": "Soflomo\\Purifier",
+              "priority": -72925
+            },
+            {
+              "name": "DoctrineModule",
+              "priority": -72924
+            },
+            {
+              "name": "DoctrineORMModule",
+              "priority": -72922
+            },
+            {
+              "name": "DoctrineDataFixtureModule",
+              "priority": -72920
+            },
+            {
+              "name": "BitWeb\\CronModule",
+              "priority": -72917
+            },
+            {
+              "name": "WellCart\\Base",
+              "priority": -72900
+            },
+            {
+              "name": "ZfcUser",
+              "priority": -72852
+            },
+            {
+              "name": "ZfcUserDoctrineORM",
+              "priority": -72851
+            },
+            {
+              "name": "ZfcRbac",
+              "priority": -72850
+            },
+            {
+              "name": "WellCart\\User",
+              "priority": -72820
+            },
+            {
+              "name": "ZfcAdmin",
+              "priority": -72810
+            },
+            {
+              "name": "WellCart\\Backend",
+              "priority": -72800
+            },
+            {
+              "name": "WellCart\\CMS",
+              "priority": 20
+            },
+            {
+              "name": "WellCart\\Money",
+              "priority": 29
+            },
+            {
+              "name": "WellCart\\Directory",
+              "priority": 30
+            },
+            {
+              "name": "WellCart\\Catalog",
+              "priority": 40
+            }
           ]
         },
         "console": {
@@ -170,33 +263,78 @@
           "name": "frontend",
           "extends": "common",
           "require": [
-            {"name": "WellCart\\Theme\\BackendUi", "priority": -80400}
+            {
+              "name": "WellCart\\Theme\\BackendUi",
+              "priority": -80400
+            }
           ]
         },
         "backend": {
           "name": "backend",
           "extends": "frontend",
           "require": [
-            {"name": "WellCart\\Theme\\BackendUi", "priority": -80400}
+            {
+              "name": "WellCart\\Theme\\BackendUi",
+              "priority": -80400
+            }
           ]
         },
         "setup": {
           "name": "setup",
           "extends": false,
           "require": [
-            {"name": "WellCart\\Ui\\Layout", "priority": -90500},
-            {"name": "WellCart\\Theme\\FrontendUi", "priority": -90000},
-            {"name": "WellCart\\Theme\\SetupUi", "priority": -80200},
-            {"name": "ZfcBase", "priority": -72931},
-            {"name": "BjyProfiler", "priority": -72925},
-            {"name": "AssetManager", "priority": -72920},
-            {"name": "TwbBundle", "priority": -72919},
-            {"name": "WellCart\\Form\\JsValidation", "priority": -72915},
-            {"name": "WellCart\\CommandBus", "priority": -72913},
-            {"name": "WellCart\\Ui\\Wizard", "priority": -72912},
-            {"name": "WellCart\\Base", "priority": -72900},
-            {"name": "ZendDeveloperTools", "priority": -72938},
-            {"name": "WellCart\\Setup", "priority": 70000}
+            {
+              "name": "WellCart\\Ui\\Layout",
+              "priority": -90500
+            },
+            {
+              "name": "WellCart\\Theme\\FrontendUi",
+              "priority": -90000
+            },
+            {
+              "name": "WellCart\\Theme\\SetupUi",
+              "priority": -80200
+            },
+            {
+              "name": "ZfcBase",
+              "priority": -72931
+            },
+            {
+              "name": "BjyProfiler",
+              "priority": -72925
+            },
+            {
+              "name": "AssetManager",
+              "priority": -72920
+            },
+            {
+              "name": "TwbBundle",
+              "priority": -72919
+            },
+            {
+              "name": "WellCart\\Form\\JsValidation",
+              "priority": -72915
+            },
+            {
+              "name": "WellCart\\CommandBus",
+              "priority": -72913
+            },
+            {
+              "name": "WellCart\\Ui\\Wizard",
+              "priority": -72912
+            },
+            {
+              "name": "WellCart\\Base",
+              "priority": -72900
+            },
+            {
+              "name": "ZendDeveloperTools",
+              "priority": -72938
+            },
+            {
+              "name": "WellCart\\Setup",
+              "priority": 70000
+            }
           ]
         }
       }
@@ -206,6 +344,12 @@
       "dev-develop": "0.2.x-dev"
     }
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "WellCart\\Base\\": "component/base/src/",
