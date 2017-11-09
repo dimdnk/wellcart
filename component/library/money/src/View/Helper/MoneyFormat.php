@@ -17,11 +17,10 @@ namespace WellCart\Money\View\Helper;
 
 use Locale;
 use NumberFormatter;
-use WellCart\Money\I18n\LocaleAwareInterface;
+use WellCart\I18n\LocaleAwareInterface;
 use WellCart\Money\Exception;
 use Zend\View\Helper\AbstractHelper;
 use WellCart\Money\Money\Money;
-use WellCart\Money\Money\Currency;
 
 
 class MoneyFormat extends AbstractHelper implements LocaleAwareInterface

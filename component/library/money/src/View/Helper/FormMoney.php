@@ -12,7 +12,7 @@ namespace WellCart\Money\View\Helper;
 use Zend\Form\View\Helper\FormInput;
 use Locale;
 use NumberFormatter;
-use WellCart\Money\I18n\LocaleAwareInterface;
+use WellCart\I18n\LocaleAwareInterface;
 use Zend\Form\Exception;
 use Zend\Form\ElementInterface;
 class FormMoney extends FormInput implements LocaleAwareInterface

@@ -70,16 +70,6 @@ class Module implements
         return array(
             'factories' => array(
                 'WellCart\Money\Service\CurrencyList' => 'WellCart\Money\Factory\CurrencyListFactory',
-                'WellCart\Money\I18n\DefaultLocale' => 'WellCart\Money\I18n\DefaultLocale',
-            ),
-            'invokables' => array(
-
-            ),
-            'aliases' => array(
-                'DefaultLocale' => 'WellCart\Money\I18n\DefaultLocale',
-            ),
-            'initializers' => array(
-                'WellCart\Money\I18n\DefaultLocale' => 'WellCart\Money\I18n\DefaultLocale',
             ),
         );
     }
@@ -112,7 +102,7 @@ class Module implements
                 'WellCart\Money\Form\Element\Money' => 'WellCart\Money\Form\Element\Money',
             ),
             'initializers' => array(
-                'WellCart\Money\I18n\DefaultLocale',
+                'WellCart\I18n\DefaultLocale',
             ),
         );
     }
@@ -128,7 +118,7 @@ class Module implements
                 'WellCart\Money\Validator\CurrencyCode' => 'WellCart\Money\Factory\CurrencyCodeValidatorFactory',
             ),
             'initializers' => array(
-                'WellCart\Money\I18n\DefaultLocale',
+                'WellCart\I18n\DefaultLocale',
             ),
         );
     }
@@ -137,7 +127,7 @@ class Module implements
     {
         return array(
             'initializers' => array(
-                'WellCart\Money\I18n\DefaultLocale',
+                'WellCart\I18n\DefaultLocale',
             ),
             'invokables' => array(
                 'moneyFormat' => 'WellCart\Money\View\Helper\MoneyFormat',

@@ -33,6 +33,7 @@
     "wellcart/component-hydrator": "0.1.*",
     "wellcart/component-input-filter": "0.1.*",
     "wellcart/component-log": "0.1.*",
+    "wellcart/component-i18n": "0.1.*",
     "wellcart/component-module-manager": "0.1.*",
     "wellcart/component-mvc": "0.1.*",
     "wellcart/component-navigation": "0.1.*",

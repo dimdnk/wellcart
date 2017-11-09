@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace WellCart\Money\I18n;
+namespace WellCart\I18n;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;

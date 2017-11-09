@@ -29,6 +29,7 @@ remote component-form-js-validation git@github.com:wellcart/component-form-js-va
 remote component-hydrator git@github.com:wellcart/component-hydrator.git
 remote component-input-filter git@github.com:wellcart/component-input-filter.git
 remote component-log git@github.com:wellcart/component-log.git
+remote component-i18n git@github.com:wellcart/component-i18n.git
 remote component-module-manager git@github.com:wellcart/component-module-manager.git
 remote component-mvc git@github.com:wellcart/component-mvc.git
 remote component-navigation git@github.com:wellcart/component-navigation.git
@@ -72,6 +73,7 @@ split 'component/library/form-js-validation' component-form-js-validation
 split 'component/library/hydrator' component-hydrator
 split 'component/library/input-filter' component-input-filter
 split 'component/library/log' component-log
+split 'component/library/i18n' component-i18n
 split 'component/library/module-manager' component-module-manager
 split 'component/library/mvc' component-mvc
 split 'component/library/navigation' component-navigation

@@ -30,7 +30,11 @@ use Zend\Stdlib\InitializableInterface;
 use Zend\Validator\Csrf as CsrfValidator;
 
 return [
+    'aliases' => [
+        'DefaultLocale' => 'WellCart\I18n\DefaultLocale',
+    ],
     'factories'    => [
+      'WellCart\I18n\DefaultLocale' => 'WellCart\I18n\DefaultLocale',
         Mvc\Application\MaintenanceMode::class =>
             function (ContainerInterface $services) {
                 return $services->get('Application')
@@ -239,6 +243,7 @@ return [
                     $service->setLogger($logger);
                 }
             },
+        'WellCart\I18n\DefaultLocale' => 'WellCart\I18n\DefaultLocale',
         'Zend\I18n\Translator\TranslatorAwareInterface'
                                                                =>
             function ($service, $services) {
