@@ -4,7 +4,7 @@ WellCart Platform UI Components
 Provides a set of commonly needed data UI elements.
 
 * [License Agreement](LICENSE.md)
-* [Installation Instructions](docs/Component_Installation_Instructions.md)
+* [Installation Instructions](docs/01. Introduction.md)
 
 ### System Requirements
 
