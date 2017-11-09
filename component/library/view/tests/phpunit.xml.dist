@@ -24,7 +24,7 @@
         beStrictAboutTestsThatDoNotTestAnything="true"
         beStrictAboutOutputDuringTests="true">
     <testsuites>
-        <testsuite name="WellCart View Component Test Suite">
+        <testsuite name="WellCart_View">
             <directory suffix="Test.php">./unit/</directory>
         </testsuite>
     </testsuites>

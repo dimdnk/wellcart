@@ -25,7 +25,7 @@
 
         beStrictAboutOutputDuringTests="true">
     <testsuites>
-        <testsuite name="WellCart InputFilter Component Test Suite">
+        <testsuite name="WellCart_InputFilter">
             <directory suffix="Test.php">./unit/</directory>
         </testsuite>
     </testsuites>

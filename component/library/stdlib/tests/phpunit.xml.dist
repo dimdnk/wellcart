@@ -24,7 +24,7 @@
         beStrictAboutTestsThatDoNotTestAnything="true"
         beStrictAboutOutputDuringTests="true">
     <testsuites>
-        <testsuite name="WellCart Stdlib Component Test Suite">
+        <testsuite name="WellCart_Stdlib">
             <directory suffix="Test.php">./unit/</directory>
         </testsuite>
     </testsuites>

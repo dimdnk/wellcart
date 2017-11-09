@@ -66,7 +66,6 @@ AddDefaultCharset UTF-8
     RewriteCond %{QUERY_STRING} ftp\:     [NC,OR]
     RewriteCond %{QUERY_STRING} http\:    [NC,OR]
     RewriteCond %{QUERY_STRING} https\:   [NC,OR]
-    RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
     RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
     RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
     RewriteCond %{QUERY_STRING} ^.*(\[|\]|\(|\)|<|>|'|"|;|\?|\*).* [NC,OR]
@@ -82,7 +81,7 @@ AddDefaultCharset UTF-8
     RewriteCond %{REQUEST_METHOD} ^TRAC[EK]
     RewriteRule .* - [L,R=405]
 
-    RewriteRule ^(data|config|modules|packages|vendor|bootstrap.php|script.php|environment.php|.svn|.git|.txt|.phar|.md|.zip) - [F,L]
+    RewriteRule ^(data|config|modules|vendor|bootstrap.php|environment.php|.svn|.git|.txt|.phar|.md|.zip) - [F,L]
     
     # RewriteRule    ^(admin+)/?  admin.php  [NC,L]
     # RewriteRule    ^(api+)/?    api.php    [NC,L]

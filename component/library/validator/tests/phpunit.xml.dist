@@ -24,7 +24,7 @@
         beStrictAb
         beStrictAboutOutputDuringTests="true">
     <testsuites>
-        <testsuite name="WellCart Validator Component Test Suite">
+        <testsuite name="WellCart_Validator">
             <directory suffix="Test.php">./unit/</directory>
         </testsuite>
     </testsuites>

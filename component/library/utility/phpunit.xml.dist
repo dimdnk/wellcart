@@ -24,7 +24,7 @@
         beStrictAboutOutputDuringTests="true"
         bootstrap="./tests/bootstrap.php">
     <testsuites>
-        <testsuite name="WellCart Utility Test Suite">
+        <testsuite name="WellCart_Utility">
             <directory suffix="Test.php">./tests/</directory>
         </testsuite>
     </testsuites>
