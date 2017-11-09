@@ -28,7 +28,6 @@ Required extensions:
 * ctype
 * spl
 * xsl
-* Safe_mode off
 * Memory_limit no less than 255Mb
 * MySQL 5.6 or newer / PostgreSQL/EnterpriseDB 9.1 and above
 

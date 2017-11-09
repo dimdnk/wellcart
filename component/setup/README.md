@@ -32,7 +32,6 @@ Required extensions:
 * ctype
 * spl
 * xsl
-* Safe_mode off
 
 ##### WellCart tries to be strict standard compliant, including by not limited to:
 

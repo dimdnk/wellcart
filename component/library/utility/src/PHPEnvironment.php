@@ -118,7 +118,6 @@ abstract class PHPEnvironment
         ini_set('display_errors', true);
         ini_set('display_startup_errors', true);
         ini_set('short_open_tag', true);
-        ini_set('always_populate_raw_post_data', -1);
 
         if (PHP_SAPI == 'cli') {
             ini_set('max_execution_time', 0);
