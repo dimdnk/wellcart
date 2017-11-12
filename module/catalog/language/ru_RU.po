@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 17:14+0300\n"
-"PO-Revision-Date: 2017-08-29 17:14+0300\n"
-"Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
+"POT-Creation-Date: 2017-11-12 16:33+0200\n"
+"PO-Revision-Date: 2017-11-12 16:33+0200\n"
+"Last-Translator: Dima Denisenko <dmitry.denisenko@amadeus.com>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -12,165 +12,165 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate;__;setLabel;setValue;setLegend;_refresh\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Controller/Admin/AttributesController.php:88
+#: ../src/Controller/Backend/AttributesController.php:90
 msgid "Attribute successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/AttributesController.php:89
+#: ../src/Controller/Backend/AttributesController.php:91
 msgid "Attribute successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/AttributesController.php:105
-#: ../src/Controller/Admin/AttributesController.php:126
+#: ../src/Controller/Backend/AttributesController.php:107
+#: ../src/Controller/Backend/AttributesController.php:128
 msgid "This attribute no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/AttributesController.php:136
+#: ../src/Controller/Backend/AttributesController.php:138
 msgid "Attribute was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/BrandsController.php:85
+#: ../src/Controller/Backend/BrandsController.php:86
 msgid "Brand successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/BrandsController.php:86
+#: ../src/Controller/Backend/BrandsController.php:87
 msgid "Brand successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/BrandsController.php:102
-#: ../src/Controller/Admin/BrandsController.php:119
+#: ../src/Controller/Backend/BrandsController.php:103
+#: ../src/Controller/Backend/BrandsController.php:120
 msgid "This brand no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/BrandsController.php:125
+#: ../src/Controller/Backend/BrandsController.php:126
 msgid "Brand profile was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/CategoriesController.php:90
+#: ../src/Controller/Backend/CategoriesController.php:92
 msgid "Category successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/CategoriesController.php:91
+#: ../src/Controller/Backend/CategoriesController.php:93
 msgid "Category successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/CategoriesController.php:107
-#: ../src/Controller/Admin/CategoriesController.php:127
+#: ../src/Controller/Backend/CategoriesController.php:109
+#: ../src/Controller/Backend/CategoriesController.php:129
 msgid "This category no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/CategoriesController.php:137
+#: ../src/Controller/Backend/CategoriesController.php:139
 msgid "Category was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/FeaturesController.php:88
+#: ../src/Controller/Backend/FeaturesController.php:90
 msgid "Feature successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/FeaturesController.php:89
+#: ../src/Controller/Backend/FeaturesController.php:91
 msgid "Feature successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/FeaturesController.php:105
-#: ../src/Controller/Admin/FeaturesController.php:126
+#: ../src/Controller/Backend/FeaturesController.php:107
+#: ../src/Controller/Backend/FeaturesController.php:128
 msgid "This feature no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/FeaturesController.php:136
+#: ../src/Controller/Backend/FeaturesController.php:138
 msgid "Feature was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductTemplatesController.php:88
+#: ../src/Controller/Backend/ProductTemplatesController.php:90
 msgid "Product template successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductTemplatesController.php:89
+#: ../src/Controller/Backend/ProductTemplatesController.php:91
 msgid "Product template successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductTemplatesController.php:105
-#: ../src/Controller/Admin/ProductTemplatesController.php:126
+#: ../src/Controller/Backend/ProductTemplatesController.php:107
+#: ../src/Controller/Backend/ProductTemplatesController.php:128
 msgid "This group no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductTemplatesController.php:136
+#: ../src/Controller/Backend/ProductTemplatesController.php:138
 msgid "Product template was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductsController.php:93
+#: ../src/Controller/Backend/ProductsController.php:96
 msgid "Product successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductsController.php:94
+#: ../src/Controller/Backend/ProductsController.php:97
 msgid "Product successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductsController.php:110
-#: ../src/Controller/Admin/ProductsController.php:131
+#: ../src/Controller/Backend/ProductsController.php:113
+#: ../src/Controller/Backend/ProductsController.php:134
 msgid "This product no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/ProductsController.php:141
+#: ../src/Controller/Backend/ProductsController.php:144
 msgid "Product was deleted successfully."
 msgstr ""
 
-#: ../src/Form/Attribute.php:64 ../src/Form/Brand.php:156
-#: ../src/Form/Category.php:58 ../src/Form/Feature.php:64
-#: ../src/Form/Product.php:76 ../src/Form/ProductTemplate.php:59
+#: ../src/Form/Attribute.php:68 ../src/Form/Brand.php:135
+#: ../src/Form/Category.php:62 ../src/Form/Feature.php:68
+#: ../src/Form/Product.php:82 ../src/Form/ProductTemplate.php:63
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/Attribute.php:78 ../src/Form/Brand.php:170
-#: ../src/Form/Category.php:72 ../src/Form/Feature.php:78
-#: ../src/Form/Product.php:90 ../src/Form/ProductTemplate.php:73
+#: ../src/Form/Attribute.php:76 ../src/Form/Brand.php:143
+#: ../src/Form/Category.php:70 ../src/Form/Feature.php:76
+#: ../src/Form/Product.php:90 ../src/Form/ProductTemplate.php:71
 msgid "Save & Continue Edit"
 msgstr ""
 
 #: ../src/Form/Attribute/AttributeFieldset.php:45
-#: ../src/Form/Category/CategoryI18nFieldset.php:75
+#: ../src/Form/Category/CategoryI18nFieldset.php:67
 #: ../src/Form/Feature/FeatureFieldset.php:45
-#: ../src/Form/Product/ProductFieldset.php:302
-#: ../src/Form/Product/ProductI18nFieldset.php:75
+#: ../src/Form/Product/ProductFieldset.php:284
+#: ../src/Form/Product/ProductI18nFieldset.php:70
 msgid "Description"
 msgstr ""
 
 #: ../src/Form/Attribute/AttributeFieldset.php:47
-#: ../src/Form/Feature/FeatureFieldset.php:49
+#: ../src/Form/Feature/FeatureFieldset.php:47
 msgid "Internal name for administrators."
 msgstr ""
 
-#: ../src/Form/Attribute/AttributeFieldset.php:67
-#: ../src/Form/Feature/FeatureFieldset.php:67
+#: ../src/Form/Attribute/AttributeFieldset.php:62
+#: ../src/Form/Feature/FeatureFieldset.php:62
 msgid "Product Templates"
 msgstr ""
 
-#: ../src/Form/Attribute/AttributeFieldset.php:108
-#: ../src/Form/Attribute/AttributeFieldset.php:162
-#: ../src/Form/Attribute/AttributeValueFieldset.php:86
-#: ../src/Form/Feature/FeatureFieldset.php:107
-#: ../src/Form/Feature/FeatureFieldset.php:161
-#: ../src/Form/Feature/FeatureValueFieldset.php:86
+#: ../src/Form/Attribute/AttributeFieldset.php:98
+#: ../src/Form/Attribute/AttributeFieldset.php:144
+#: ../src/Form/Attribute/AttributeValueFieldset.php:79
+#: ../src/Form/Feature/FeatureFieldset.php:97
+#: ../src/Form/Feature/FeatureFieldset.php:144
+#: ../src/Form/Feature/FeatureValueFieldset.php:81
 #: ../src/Form/ProductTemplate/ProductTemplateFieldset.php:40
 msgid "Sort Order"
 msgstr ""
 
-#: ../src/Form/Attribute/AttributeFieldset.php:128
+#: ../src/Form/Attribute/AttributeFieldset.php:113
 msgid "Add Attribute Value"
 msgstr ""
 
-#: ../src/Form/Attribute/AttributeFieldset.php:159
-#: ../src/Form/Feature/FeatureFieldset.php:158
+#: ../src/Form/Attribute/AttributeFieldset.php:141
+#: ../src/Form/Feature/FeatureFieldset.php:141
 #: ../src/Form/ProductTemplate/ProductTemplateI18nFieldset.php:56
-#: ../src/PageView/Admin/AttributesGrid.php:124
-#: ../src/PageView/Admin/BrandsGrid.php:90
-#: ../src/PageView/Admin/CategoriesGrid.php:126
-#: ../src/PageView/Admin/FeaturesGrid.php:125
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:124
-#: ../src/PageView/Admin/ProductsGrid.php:124
+#: ../src/PageView/Backend/AttributesGrid.php:121
+#: ../src/PageView/Backend/BrandsGrid.php:85
+#: ../src/PageView/Backend/CategoriesGrid.php:122
+#: ../src/PageView/Backend/FeaturesGrid.php:121
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:121
+#: ../src/PageView/Backend/ProductsGrid.php:121
 msgid "Name"
 msgstr ""
 
@@ -179,10 +179,10 @@ msgstr ""
 msgid "Display Name"
 msgstr ""
 
-#: ../src/Form/Attribute/AttributeValueFieldset.php:55
-#: ../src/Form/Feature/FeatureValueFieldset.php:55
-#: ../src/Form/Product/ImagesFieldset.php:59
-#: ../src/Form/Product/VariantsFieldset.php:59
+#: ../src/Form/Attribute/AttributeValueFieldset.php:48
+#: ../src/Form/Feature/FeatureValueFieldset.php:50
+#: ../src/Form/Product/ImagesFieldset.php:50
+#: ../src/Form/Product/VariantsFieldset.php:51
 msgid "Remove"
 msgstr ""
 
@@ -190,35 +190,35 @@ msgstr ""
 msgid "Attribute Value Name"
 msgstr ""
 
-#: ../src/Form/Brand.php:48
+#: ../src/Form/Brand.php:52
 msgid "Brand Name"
 msgstr ""
 
-#: ../src/Form/Brand.php:68
+#: ../src/Form/Brand.php:67
 msgid "Brand Image"
 msgstr ""
 
-#: ../src/Form/Brand.php:87 ../src/Form/Category/CategoryI18nFieldset.php:92
-#: ../src/Form/Product/ProductI18nFieldset.php:95
+#: ../src/Form/Brand.php:81 ../src/Form/Category/CategoryI18nFieldset.php:78
+#: ../src/Form/Product/ProductI18nFieldset.php:84
 msgid "Page Title"
 msgstr ""
 
-#: ../src/Form/Brand.php:106 ../src/Form/Category/CategoryI18nFieldset.php:109
-#: ../src/Form/Product/ProductI18nFieldset.php:112
+#: ../src/Form/Brand.php:95 ../src/Form/Category/CategoryI18nFieldset.php:89
+#: ../src/Form/Product/ProductI18nFieldset.php:95
 msgid "Meta Keywords"
 msgstr ""
 
-#: ../src/Form/Brand.php:125 ../src/Form/Category/CategoryI18nFieldset.php:126
-#: ../src/Form/Product/ProductI18nFieldset.php:129
+#: ../src/Form/Brand.php:109 ../src/Form/Category/CategoryI18nFieldset.php:100
+#: ../src/Form/Product/ProductI18nFieldset.php:105
 msgid "Meta Description"
 msgstr ""
 
-#: ../src/Form/Brand.php:128 ../src/Form/Category/CategoryI18nFieldset.php:129
-#: ../src/Form/Product/ProductI18nFieldset.php:132
+#: ../src/Form/Brand.php:110 ../src/Form/Category/CategoryI18nFieldset.php:101
+#: ../src/Form/Product/ProductI18nFieldset.php:106
 msgid "Maximum 255 chars"
 msgstr ""
 
-#: ../src/Form/Brand.php:216
+#: ../src/Form/Brand.php:152
 msgid "Remove Image"
 msgstr ""
 
@@ -226,20 +226,20 @@ msgstr ""
 msgid "Parent Category"
 msgstr ""
 
-#: ../src/Form/Category/CategoryFieldset.php:64
+#: ../src/Form/Category/CategoryFieldset.php:58
 msgid "Visibility"
 msgstr ""
 
-#: ../src/Form/Category/CategoryFieldset.php:71
+#: ../src/Form/Category/CategoryFieldset.php:60
 msgid "Hidden"
 msgstr ""
 
-#: ../src/Form/Category/CategoryFieldset.php:72
+#: ../src/Form/Category/CategoryFieldset.php:61
 msgid "Visible"
 msgstr ""
 
-#: ../src/Form/Category/CategoryFieldset.php:89
-#: ../src/Form/Product/ProductFieldset.php:139
+#: ../src/Form/Category/CategoryFieldset.php:77
+#: ../src/Form/Product/ProductFieldset.php:124
 msgid "URL Key"
 msgstr ""
 
@@ -247,7 +247,7 @@ msgstr ""
 msgid "Category Name"
 msgstr ""
 
-#: ../src/Form/Feature/FeatureFieldset.php:127
+#: ../src/Form/Feature/FeatureFieldset.php:113
 msgid "Add Feature Value"
 msgstr ""
 
@@ -255,36 +255,11 @@ msgstr ""
 msgid "Feature Value Name"
 msgstr ""
 
-#: ../src/Form/Product.php:137
-msgid "General"
-msgstr ""
-
-#: ../src/Form/Product.php:138
-#: ../src/Form/ProductTemplate/ProductTemplateFieldset.php:101
-#: ../src/PageView/Admin/FeatureForm.php:39
-#: ../src/PageView/Admin/FeatureForm.php:43
-#: ../src/PageView/Admin/FeaturesGrid.php:94
-#: ../src/PageView/Admin/FeaturesGrid.php:98
-msgid "Features"
-msgstr ""
-
-#: ../src/Form/Product.php:139 ../src/Form/Product/ProductFieldset.php:186
-#: ../src/PageView/Admin/CategoriesGrid.php:95
-#: ../src/PageView/Admin/CategoriesGrid.php:99
-#: ../src/PageView/Admin/CategoryForm.php:40
-#: ../src/PageView/Admin/CategoryForm.php:44
-msgid "Categories"
-msgstr ""
-
-#: ../src/Form/Product.php:140
-msgid "Images"
-msgstr ""
-
-#: ../src/Form/Product/ImagesFieldset.php:70
+#: ../src/Form/Product/ImagesFieldset.php:61
 msgid "Alt Text"
 msgstr ""
 
-#: ../src/Form/Product/ImagesFieldset.php:87
+#: ../src/Form/Product/ImagesFieldset.php:72
 msgid "Image File"
 msgstr ""
 
@@ -292,47 +267,51 @@ msgstr ""
 msgid "Template"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:88
+#: ../src/Form/Product/ProductFieldset.php:82
 msgid "Brand"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:113
-msgid "Status"
+#: ../src/Form/Product/ProductFieldset.php:101
+msgid "Online"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:120
+#: ../src/Form/Product/ProductFieldset.php:103
 msgid "Disable"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:121
+#: ../src/Form/Product/ProductFieldset.php:104
 msgid "Enable"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:209
+#: ../src/Form/Product/ProductFieldset.php:147
+msgid "Add feature"
+msgstr ""
+
+#: ../src/Form/Product/ProductFieldset.php:199
 msgid "Add Variant"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:229
+#: ../src/Form/Product/ProductFieldset.php:215
 msgid "Add Image"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:259
-#: ../src/Form/Product/VariantsFieldset.php:111
+#: ../src/Form/Product/ProductFieldset.php:241
+#: ../src/Form/Product/VariantsFieldset.php:89
 msgid "SKU"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:263
-#: ../src/Form/Product/VariantsFieldset.php:71
+#: ../src/Form/Product/ProductFieldset.php:245
+#: ../src/Form/Product/VariantsFieldset.php:63
 msgid "Quantity"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:267
-#: ../src/Form/Product/VariantsFieldset.php:90
-#: ../src/PageView/Admin/ProductsGrid.php:131
+#: ../src/Form/Product/ProductFieldset.php:249
+#: ../src/Form/Product/VariantsFieldset.php:74
+#: ../src/PageView/Backend/ProductsGrid.php:128
 msgid "Price"
 msgstr ""
 
-#: ../src/Form/Product/ProductFieldset.php:299
+#: ../src/Form/Product/ProductFieldset.php:281
 msgid "Image"
 msgstr ""
 
@@ -340,156 +319,171 @@ msgstr ""
 msgid "Product Name"
 msgstr ""
 
-#: ../src/Form/ProductTemplate/ProductTemplateFieldset.php:81
-#: ../src/PageView/Admin/AttributeForm.php:41
-#: ../src/PageView/Admin/AttributeForm.php:45
-#: ../src/PageView/Admin/AttributesGrid.php:94
-#: ../src/PageView/Admin/AttributesGrid.php:98
+#: ../src/Form/ProductTemplate/ProductTemplateFieldset.php:76
+#: ../src/PageView/Backend/AttributeForm.php:41
+#: ../src/PageView/Backend/AttributeForm.php:45
+#: ../src/PageView/Backend/AttributesGrid.php:92
+#: ../src/PageView/Backend/AttributesGrid.php:96
 msgid "Attributes"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributeForm.php:60
+#: ../src/Form/ProductTemplate/ProductTemplateFieldset.php:91
+#: ../src/PageView/Backend/FeatureForm.php:40
+#: ../src/PageView/Backend/FeatureForm.php:44
+#: ../src/PageView/Backend/FeaturesGrid.php:92
+#: ../src/PageView/Backend/FeaturesGrid.php:96
+msgid "Features"
+msgstr ""
+
+#: ../src/PageView/Backend/AttributeForm.php:60
 #, php-format
 msgid "Edit attribute: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributeForm.php:66
+#: ../src/PageView/Backend/AttributeForm.php:66
 msgid "Create new attribute"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:131
-#: ../src/PageView/Admin/BrandsGrid.php:97
-#: ../src/PageView/Admin/CategoriesGrid.php:134
-#: ../src/PageView/Admin/FeaturesGrid.php:132
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:131
-#: ../src/PageView/Admin/ProductsGrid.php:137
+#: ../src/PageView/Backend/AttributesGrid.php:128
+#: ../src/PageView/Backend/BrandsGrid.php:92
+#: ../src/PageView/Backend/CategoriesGrid.php:130
+#: ../src/PageView/Backend/FeaturesGrid.php:128
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:128
+#: ../src/PageView/Backend/ProductsGrid.php:136
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:133
-#: ../src/PageView/Admin/BrandsGrid.php:99
-#: ../src/PageView/Admin/CategoriesGrid.php:136
-#: ../src/PageView/Admin/FeaturesGrid.php:134
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:133
-#: ../src/PageView/Admin/ProductsGrid.php:139
+#: ../src/PageView/Backend/AttributesGrid.php:130
+#: ../src/PageView/Backend/BrandsGrid.php:94
+#: ../src/PageView/Backend/CategoriesGrid.php:132
+#: ../src/PageView/Backend/FeaturesGrid.php:130
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:130
+#: ../src/PageView/Backend/ProductsGrid.php:138
 msgid "Edit"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:146
-#: ../src/PageView/Admin/BrandsGrid.php:112
-#: ../src/PageView/Admin/CategoriesGrid.php:149
-#: ../src/PageView/Admin/FeaturesGrid.php:147
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:146
-#: ../src/PageView/Admin/ProductsGrid.php:152
+#: ../src/PageView/Backend/AttributesGrid.php:143
+#: ../src/PageView/Backend/BrandsGrid.php:107
+#: ../src/PageView/Backend/CategoriesGrid.php:145
+#: ../src/PageView/Backend/FeaturesGrid.php:143
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:143
+#: ../src/PageView/Backend/ProductsGrid.php:151
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:148
-#: ../src/PageView/Admin/AttributesGrid.php:173
-#: ../src/PageView/Admin/BrandsGrid.php:114
-#: ../src/PageView/Admin/CategoriesGrid.php:151
-#: ../src/PageView/Admin/CategoriesGrid.php:176
-#: ../src/PageView/Admin/FeaturesGrid.php:149
-#: ../src/PageView/Admin/FeaturesGrid.php:174
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:148
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:173
-#: ../src/PageView/Admin/ProductsGrid.php:154
+#: ../src/PageView/Backend/AttributesGrid.php:145
+#: ../src/PageView/Backend/AttributesGrid.php:170
+#: ../src/PageView/Backend/BrandsGrid.php:109
+#: ../src/PageView/Backend/CategoriesGrid.php:147
+#: ../src/PageView/Backend/CategoriesGrid.php:172
+#: ../src/PageView/Backend/FeaturesGrid.php:145
+#: ../src/PageView/Backend/FeaturesGrid.php:170
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:145
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:170
+#: ../src/PageView/Backend/ProductsGrid.php:153
 msgid "Delete"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:152
-#: ../src/PageView/Admin/BrandsGrid.php:118
-#: ../src/PageView/Admin/CategoriesGrid.php:155
-#: ../src/PageView/Admin/FeaturesGrid.php:153
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:152
-#: ../src/PageView/Admin/ProductsGrid.php:158
+#: ../src/PageView/Backend/AttributesGrid.php:149
+#: ../src/PageView/Backend/BrandsGrid.php:113
+#: ../src/PageView/Backend/CategoriesGrid.php:151
+#: ../src/PageView/Backend/FeaturesGrid.php:149
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:149
+#: ../src/PageView/Backend/ProductsGrid.php:157
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:166
-#: ../src/PageView/Admin/BrandsGrid.php:132
-#: ../src/PageView/Admin/CategoriesGrid.php:169
-#: ../src/PageView/Admin/FeaturesGrid.php:167
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:166
-#: ../src/PageView/Admin/ProductsGrid.php:172
+#: ../src/PageView/Backend/AttributesGrid.php:163
+#: ../src/PageView/Backend/BrandsGrid.php:127
+#: ../src/PageView/Backend/CategoriesGrid.php:165
+#: ../src/PageView/Backend/FeaturesGrid.php:163
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:163
+#: ../src/PageView/Backend/ProductsGrid.php:171
 msgid "Actions"
 msgstr ""
 
-#: ../src/PageView/Admin/AttributesGrid.php:187
-#: ../src/PageView/Admin/BrandsGrid.php:140
-#: ../src/PageView/Admin/CategoriesGrid.php:190
-#: ../src/PageView/Admin/FeaturesGrid.php:188
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:187
-#: ../src/PageView/Admin/ProductsGrid.php:180
+#: ../src/PageView/Backend/AttributesGrid.php:184
+#: ../src/PageView/Backend/BrandsGrid.php:135
+#: ../src/PageView/Backend/CategoriesGrid.php:186
+#: ../src/PageView/Backend/FeaturesGrid.php:184
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:184
+#: ../src/PageView/Backend/ProductsGrid.php:179
 msgid "Create"
 msgstr ""
 
-#: ../src/PageView/Admin/BrandForm.php:40
-#: ../src/PageView/Admin/BrandForm.php:44
-#: ../src/PageView/Admin/BrandsGrid.php:63
+#: ../src/PageView/Backend/BrandForm.php:41
+#: ../src/PageView/Backend/BrandForm.php:45
+#: ../src/PageView/Backend/BrandsGrid.php:60
 msgid "Brands"
 msgstr ""
 
-#: ../src/PageView/Admin/BrandForm.php:55
+#: ../src/PageView/Backend/BrandForm.php:56
 #, php-format
 msgid "Edit Brand: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/BrandForm.php:60
+#: ../src/PageView/Backend/BrandForm.php:61
 #, php-format
 msgid "Create Brand %s"
 msgstr ""
 
-#: ../src/PageView/Admin/BrandsGrid.php:59
+#: ../src/PageView/Backend/BrandsGrid.php:56
 msgid "Brands List"
 msgstr ""
 
-#: ../src/PageView/Admin/CategoryForm.php:59
+#: ../src/PageView/Backend/CategoriesGrid.php:93
+#: ../src/PageView/Backend/CategoriesGrid.php:97
+#: ../src/PageView/Backend/CategoryForm.php:41
+#: ../src/PageView/Backend/CategoryForm.php:45
+msgid "Categories"
+msgstr ""
+
+#: ../src/PageView/Backend/CategoryForm.php:60
 #, php-format
 msgid "Edit Category: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/CategoryForm.php:65
+#: ../src/PageView/Backend/CategoryForm.php:66
 msgid "Create new Category"
 msgstr ""
 
-#: ../src/PageView/Admin/FeatureForm.php:58
+#: ../src/PageView/Backend/FeatureForm.php:59
 #, php-format
 msgid "Edit Feature: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/FeatureForm.php:64
+#: ../src/PageView/Backend/FeatureForm.php:65
 msgid "Create new Feature"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductForm.php:39
-#: ../src/PageView/Admin/ProductForm.php:43
-#: ../src/PageView/Admin/ProductsGrid.php:94
-#: ../src/PageView/Admin/ProductsGrid.php:98
+#: ../src/PageView/Backend/ProductForm.php:40
+#: ../src/PageView/Backend/ProductForm.php:44
+#: ../src/PageView/Backend/ProductsGrid.php:92
+#: ../src/PageView/Backend/ProductsGrid.php:96
 msgid "Products"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductForm.php:58
+#: ../src/PageView/Backend/ProductForm.php:59
 #, php-format
 msgid "Edit Product: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductForm.php:64
+#: ../src/PageView/Backend/ProductForm.php:65
 msgid "Create new Product"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductTemplateForm.php:40
-#: ../src/PageView/Admin/ProductTemplateForm.php:44
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:93
-#: ../src/PageView/Admin/ProductTemplatesGrid.php:97
+#: ../src/PageView/Backend/ProductTemplateForm.php:41
+#: ../src/PageView/Backend/ProductTemplateForm.php:45
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:92
+#: ../src/PageView/Backend/ProductTemplatesGrid.php:96
 msgid "Product templates"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductTemplateForm.php:59
+#: ../src/PageView/Backend/ProductTemplateForm.php:60
 #, php-format
 msgid "Edit product template: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/ProductTemplateForm.php:65
+#: ../src/PageView/Backend/ProductTemplateForm.php:66
 msgid "Create new product template"
 msgstr ""

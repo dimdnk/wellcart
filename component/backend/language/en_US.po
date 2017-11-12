@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 17:12+0300\n"
-"PO-Revision-Date: 2017-08-29 17:12+0300\n"
-"Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
+"POT-Creation-Date: 2017-11-12 16:31+0200\n"
+"PO-Revision-Date: 2017-11-12 16:31+0200\n"
+"Last-Translator: Dima Denisenko <dmitry.denisenko@amadeus.com>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -12,44 +12,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate;__;setLabel;setValue;setLegend;_refresh\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Command/Handler/PersistAdminAccountHandler.php:71
+#: ../src/Command/Handler/PersistAdminAccountHandler.php:73
 msgid ""
 "Please enter 6 or more characters for password. Repeat to confirm. Leading "
 "or trailing spaces will be ignored. "
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:114
+#: ../src/Controller/Backend/AccountsController.php:116
 msgid "Admin profile successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:115
+#: ../src/Controller/Backend/AccountsController.php:117
 msgid "Admin profile successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:137
-#: ../src/Controller/Admin/AccountsController.php:156
+#: ../src/Controller/Backend/AccountsController.php:139
+#: ../src/Controller/Backend/AccountsController.php:159
 msgid "This admin account no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:162
+#: ../src/Controller/Backend/AccountsController.php:165
 msgid "Admin was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/NotificationsController.php:58
-#: ../src/Controller/Admin/NotificationsController.php:78
+#: ../src/Controller/Backend/NotificationsController.php:58
+#: ../src/Controller/Backend/NotificationsController.php:78
 msgid "This message no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/NotificationsController.php:64
+#: ../src/Controller/Backend/NotificationsController.php:64
 msgid "Notification was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/NotificationsController.php:85
-#: ../src/Controller/Admin/NotificationsController.php:86
+#: ../src/Controller/Backend/NotificationsController.php:86
+#: ../src/Controller/Backend/NotificationsController.php:87
 msgid "The message has been marked as Read."
 msgstr ""
 
@@ -63,30 +63,30 @@ msgstr ""
 msgid "We'll email you a link to reset your password."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:83
-#: ../src/Controller/RecoverAccountController.php:153
-#: ../src/Controller/SettingsController.php:86
+#: ../src/Controller/RecoverAccountController.php:84
+#: ../src/Controller/RecoverAccountController.php:157
+#: ../src/Controller/SettingsController.php:87
 msgid ""
 "An unexpected error occurred. Please try again or contact Customer Support."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:114
+#: ../src/Controller/RecoverAccountController.php:116
 msgid "Your password reset link has expired."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:143
+#: ../src/Controller/RecoverAccountController.php:146
 msgid "You update your password. Please, log in."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:183
+#: ../src/Controller/RecoverAccountController.php:188
 msgid "You are already logged in."
 msgstr ""
 
-#: ../src/EventListener/SetupPageVariables.php:109
+#: ../src/EventListener/Ui/SetupPageVariables.php:110
 msgid "Control Panel"
 msgstr ""
 
-#: ../src/Form/Account.php:46 ../src/PageView/Admin/AccountsGrid.php:88
+#: ../src/Form/Account.php:51 ../src/PageView/Backend/AccountsGrid.php:85
 #: ../view/template/login/form.phtml:20
 msgid "Email"
 msgstr ""
@@ -95,35 +95,35 @@ msgstr ""
 msgid "Roles"
 msgstr ""
 
-#: ../src/Form/Account.php:86
+#: ../src/Form/Account.php:81
 msgid "Language"
 msgstr ""
 
-#: ../src/Form/Account.php:107
+#: ../src/Form/Account.php:97
 msgid "Timezone"
 msgstr ""
 
-#: ../src/Form/Account.php:128 ../src/PageView/Admin/AccountsGrid.php:96
+#: ../src/Form/Account.php:113 ../src/PageView/Backend/AccountsGrid.php:93
 msgid "First Name"
 msgstr ""
 
-#: ../src/Form/Account.php:148 ../src/PageView/Admin/AccountsGrid.php:104
+#: ../src/Form/Account.php:128 ../src/PageView/Backend/AccountsGrid.php:101
 msgid "Last Name"
 msgstr ""
 
-#: ../src/Form/Account.php:193
+#: ../src/Form/Account.php:168
 msgid "New Password"
 msgstr ""
 
-#: ../src/Form/Account.php:214
+#: ../src/Form/Account.php:184
 msgid "Password Verify"
 msgstr ""
 
-#: ../src/Form/Account.php:235
+#: ../src/Form/Account.php:200
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/Account.php:249
+#: ../src/Form/Account.php:208
 msgid "Save & Continue Edit"
 msgstr ""
 
@@ -131,93 +131,93 @@ msgstr ""
 msgid "Demo Application"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountForm.php:41
-#: ../src/PageView/Admin/AccountForm.php:45
-#: ../src/PageView/Admin/AccountsGrid.php:62
+#: ../src/PageView/Backend/AccountForm.php:42
+#: ../src/PageView/Backend/AccountForm.php:46
+#: ../src/PageView/Backend/AccountsGrid.php:59
 msgid "Administrators"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountForm.php:57
+#: ../src/PageView/Backend/AccountForm.php:58
 #, php-format
 msgid "Edit administrator account: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountForm.php:65
+#: ../src/PageView/Backend/AccountForm.php:66
 #, php-format
 msgid "Register administrator account %s"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:58
+#: ../src/PageView/Backend/AccountsGrid.php:55
 msgid "Administrator Accounts"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:113
+#: ../src/PageView/Backend/AccountsGrid.php:110
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:115
+#: ../src/PageView/Backend/AccountsGrid.php:112
 msgid "Edit"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:129
-#: ../src/PageView/Admin/NotificationsGrid.php:159
+#: ../src/PageView/Backend/AccountsGrid.php:126
+#: ../src/PageView/Backend/NotificationsGrid.php:156
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:131
-#: ../src/PageView/Admin/AccountsGrid.php:157
-#: ../src/PageView/Admin/NotificationsGrid.php:161
-#: ../src/PageView/Admin/NotificationsGrid.php:199
+#: ../src/PageView/Backend/AccountsGrid.php:128
+#: ../src/PageView/Backend/AccountsGrid.php:154
+#: ../src/PageView/Backend/NotificationsGrid.php:158
+#: ../src/PageView/Backend/NotificationsGrid.php:196
 msgid "Delete"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:135
-#: ../src/PageView/Admin/NotificationsGrid.php:165
+#: ../src/PageView/Backend/AccountsGrid.php:132
+#: ../src/PageView/Backend/NotificationsGrid.php:162
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:149
-#: ../src/PageView/Admin/NotificationsGrid.php:179
+#: ../src/PageView/Backend/AccountsGrid.php:146
+#: ../src/PageView/Backend/NotificationsGrid.php:176
 msgid "Actions"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:170
+#: ../src/PageView/Backend/AccountsGrid.php:167
 msgid "Create"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:75
+#: ../src/PageView/Backend/NotificationsGrid.php:73
 msgid "Admin Notifications"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:79
+#: ../src/PageView/Backend/NotificationsGrid.php:77
 msgid "Notifications"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:105
+#: ../src/PageView/Backend/NotificationsGrid.php:102
 msgid "Date Added"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:125
+#: ../src/PageView/Backend/NotificationsGrid.php:122
 msgid "Title"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:134
+#: ../src/PageView/Backend/NotificationsGrid.php:131
 msgid "Message"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:142
+#: ../src/PageView/Backend/NotificationsGrid.php:139
 msgid "<i class=\"fa fa-check-circle-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:144
+#: ../src/PageView/Backend/NotificationsGrid.php:141
 msgid "Mark As Read"
 msgstr ""
 
-#: ../src/PageView/Admin/NotificationsGrid.php:186
+#: ../src/PageView/Backend/NotificationsGrid.php:183
 msgid "Mark as Read"
 msgstr ""
 
-#: ../src/PageView/Grid/Standard.php:292
+#: ../src/PageView/Grid/Standard.php:310
 msgid "ID"
 msgstr ""
 

@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 17:14+0300\n"
-"PO-Revision-Date: 2017-08-29 17:14+0300\n"
-"Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
+"POT-Creation-Date: 2017-11-12 16:32+0200\n"
+"PO-Revision-Date: 2017-11-12 16:32+0200\n"
+"Last-Translator: Dima Denisenko <dmitry.denisenko@amadeus.com>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -12,54 +12,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate;__;setLabel;setValue;setLegend;_refresh\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Command/Handler/PersistUserAccountHandler.php:62
+#: ../src/Command/Handler/PersistUserAccountHandler.php:63
 msgid ""
 "Please enter 6 or more characters for password. Repeat to confirm. Leading "
 "or trailing spaces will be ignored. "
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:119
+#: ../src/Controller/Backend/AccountsController.php:121
 msgid "User profile successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:120
+#: ../src/Controller/Backend/AccountsController.php:122
 msgid "User profile successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:140
-#: ../src/Controller/Admin/AccountsController.php:159
+#: ../src/Controller/Backend/AccountsController.php:142
+#: ../src/Controller/Backend/AccountsController.php:162
 msgid "This user account no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/AccountsController.php:165
+#: ../src/Controller/Backend/AccountsController.php:168
 msgid "User was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/Acl/RolesController.php:88
+#: ../src/Controller/Backend/Acl/RolesController.php:89
 msgid "Role successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/Acl/RolesController.php:89
+#: ../src/Controller/Backend/Acl/RolesController.php:90
 msgid "Role successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/Acl/RolesController.php:105
-#: ../src/Controller/Admin/Acl/RolesController.php:122
+#: ../src/Controller/Backend/Acl/RolesController.php:106
+#: ../src/Controller/Backend/Acl/RolesController.php:123
 msgid "This role no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/Acl/RolesController.php:128
+#: ../src/Controller/Backend/Acl/RolesController.php:129
 msgid "Role was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/PreferencesController.php:92
-#: ../src/Controller/ConfirmEmailController.php:79
-#: ../src/Controller/RecoverAccountController.php:78
-#: ../src/Controller/RecoverAccountController.php:147
+#: ../src/Controller/Backend/PreferencesController.php:100
+#: ../src/Controller/ConfirmEmailController.php:80
+#: ../src/Controller/RecoverAccountController.php:79
+#: ../src/Controller/RecoverAccountController.php:151
 msgid ""
 "An unexpected error occurred. Please try again or contact Customer Support."
 msgstr ""
@@ -68,7 +68,7 @@ msgstr ""
 msgid "This confirmation key is invalid or has expired."
 msgstr ""
 
-#: ../src/Controller/ConfirmEmailController.php:66
+#: ../src/Controller/ConfirmEmailController.php:67
 #, php-format
 msgid "Thank you for registering with %s. Please, log in."
 msgstr ""
@@ -79,15 +79,15 @@ msgid ""
 "recovery link at your email address in a few minutes."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:108
+#: ../src/Controller/RecoverAccountController.php:110
 msgid "Your password reset link has expired."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:137
+#: ../src/Controller/RecoverAccountController.php:140
 msgid "You update your password. Please, log in."
 msgstr ""
 
-#: ../src/Controller/RecoverAccountController.php:175
+#: ../src/Controller/RecoverAccountController.php:180
 msgid "You are already logged in."
 msgstr ""
 
@@ -95,248 +95,237 @@ msgstr ""
 msgid "This account is not confirmed. Please, check your email."
 msgstr ""
 
-#: ../src/EventListener/Login/HandleFailedLoginCount.php:70
+#: ../src/EventListener/Login/HandleFailedLoginCount.php:73
 msgid "You exceeded the maximum allowed number of login attempt."
 msgstr ""
 
 #: ../src/EventListener/Registration/AddRequiredFieldsToForm.php:35
-#: ../src/Form/Account.php:127 ../src/PageView/Admin/AccountsGrid.php:97
+#: ../src/Form/Account.php:112 ../src/PageView/Backend/AccountsGrid.php:93
 msgid "First Name"
 msgstr ""
 
 #: ../src/EventListener/Registration/AddRequiredFieldsToForm.php:48
-#: ../src/Form/Account.php:148 ../src/PageView/Admin/AccountsGrid.php:104
+#: ../src/Form/Account.php:128 ../src/PageView/Backend/AccountsGrid.php:100
 msgid "Last Name"
 msgstr ""
 
-#: ../src/Form/Account.php:46 ../src/PageView/Admin/AccountsGrid.php:90
+#: ../src/Factory/FormElement/AccountsSelectorFactory.php:29
+msgid "- Select user account -"
+msgstr ""
+
+#: ../src/Form/Account.php:51 ../src/PageView/Backend/AccountsGrid.php:86
 #: ../view/template/login.phtml:22
 msgid "Email"
 msgstr ""
 
-#: ../src/Form/Account.php:66 ../src/PageView/Admin/RoleForm.php:43
+#: ../src/Form/Account.php:66 ../src/PageView/Backend/RoleForm.php:44
 msgid "Roles"
 msgstr ""
 
-#: ../src/Form/Account.php:86
+#: ../src/Form/Account.php:81
 msgid "Language"
 msgstr ""
 
-#: ../src/Form/Account.php:106
+#: ../src/Form/Account.php:96
 msgid "Timezone"
 msgstr ""
 
-#: ../src/Form/Account.php:181
+#: ../src/Form/Account.php:156
 msgid "New Password"
 msgstr ""
 
-#: ../src/Form/Account.php:202
+#: ../src/Form/Account.php:172
 msgid "Password Verify"
 msgstr ""
 
-#: ../src/Form/Account.php:236 ../src/Form/AccountPreferences.php:290
-#: ../src/Form/Acl/Role.php:137
+#: ../src/Form/Account.php:201 ../src/Form/AccountPreferences.php:250
+#: ../src/Form/Acl/Role.php:120
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/Account.php:250 ../src/Form/Acl/Role.php:151
+#: ../src/Form/Account.php:209 ../src/Form/Acl/Role.php:128
 msgid "Save & Continue Edit"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:39
+#: ../src/Form/AccountPreferences.php:47
 msgid "Enable Registration"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:43
+#: ../src/Form/AccountPreferences.php:49
 msgid "Allows users to register through the website."
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:49 ../src/Form/AccountPreferences.php:98
-#: ../src/Form/AccountPreferences.php:125
-#: ../src/Form/AccountPreferences.php:247
+#: ../src/Form/AccountPreferences.php:52 ../src/Form/AccountPreferences.php:92
+#: ../src/Form/AccountPreferences.php:115
+#: ../src/Form/AccountPreferences.php:212
 msgid "No"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:50 ../src/Form/AccountPreferences.php:99
-#: ../src/Form/AccountPreferences.php:126
-#: ../src/Form/AccountPreferences.php:248
+#: ../src/Form/AccountPreferences.php:53 ../src/Form/AccountPreferences.php:93
+#: ../src/Form/AccountPreferences.php:116
+#: ../src/Form/AccountPreferences.php:213
 msgid "Yes"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:70 ../src/Form/AccountPreferences.php:219
+#: ../src/Form/AccountPreferences.php:73 ../src/Form/AccountPreferences.php:194
 msgid "Email Sender"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:91
+#: ../src/Form/AccountPreferences.php:90
 msgid "Send Welcome Email"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:118
+#: ../src/Form/AccountPreferences.php:113
 msgid "Require Emails Confirmation"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:145
+#: ../src/Form/AccountPreferences.php:135
 msgid "Login Form Timeout"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:149
+#: ../src/Form/AccountPreferences.php:137
 msgid ""
 "Specify the timeout for the CSRF security field of the login form in seconds."
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:169
+#: ../src/Form/AccountPreferences.php:154
 msgid "Registration Form Timeout"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:173
+#: ../src/Form/AccountPreferences.php:156
 msgid ""
 "Specify the timeout for the CSRF security field of the registration form."
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:193
+#: ../src/Form/AccountPreferences.php:173
 msgid "Max Login Attempts"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:197
+#: ../src/Form/AccountPreferences.php:175
 msgid "Maximum login attempts allowed before the account is locked."
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:240
+#: ../src/Form/AccountPreferences.php:210
 msgid "Allow Admin Password Reset"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:267
+#: ../src/Form/AccountPreferences.php:232
 msgid "Reset Link Expiration Period"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:270
+#: ../src/Form/AccountPreferences.php:233
 msgid "In days"
 msgstr ""
 
-#: ../src/Form/AccountPreferences.php:311
-msgid "Log In"
-msgstr ""
-
-#: ../src/Form/AccountPreferences.php:321
-msgid "Registration"
-msgstr ""
-
-#: ../src/Form/AccountPreferences.php:335
-msgid "Password Options"
-msgstr ""
-
-#: ../src/Form/Acl/Role.php:45
+#: ../src/Form/Acl/Role.php:49
 msgid "Default role for new users"
 msgstr ""
 
-#: ../src/Form/Acl/Role.php:69
+#: ../src/Form/Acl/Role.php:67
 msgid "Name"
 msgstr ""
 
-#: ../src/Form/Acl/Role.php:87
+#: ../src/Form/Acl/Role.php:80
 msgid "Description"
 msgstr ""
 
-#: ../src/Form/Acl/Role.php:106
+#: ../src/Form/Acl/Role.php:94
 msgid "Permissions"
 msgstr ""
 
-#: ../src/Form/RecoverAccount.php:33
+#: ../src/Form/RecoverAccount.php:37
 msgid "Email Address"
 msgstr ""
 
-#: ../src/Form/RecoverAccount.php:49 ../src/Form/RecoverAccount.php:54
-#: ../src/Form/RecoverAccount.php:55
+#: ../src/Form/RecoverAccount.php:53 ../src/Form/RecoverAccount.php:58
+#: ../src/Form/RecoverAccount.php:59
 msgid "Reset Password"
 msgstr ""
 
-#: ../src/Module.php:204
-msgid "- Select user account -"
-msgstr ""
-
-#: ../src/PageView/Admin/AccountForm.php:39
-#: ../src/PageView/Admin/AccountsGrid.php:59
+#: ../src/PageView/Backend/AccountForm.php:40
+#: ../src/PageView/Backend/AccountsGrid.php:56
 msgid "User Accounts"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountForm.php:43
-#: ../src/PageView/Admin/AccountsGrid.php:63
-#: ../src/PageView/Admin/PreferencesForm.php:27
-#: ../src/PageView/Admin/PreferencesForm.php:32
+#: ../src/PageView/Backend/AccountForm.php:44
+#: ../src/PageView/Backend/AccountsGrid.php:60
+#: ../src/PageView/Backend/PreferencesForm.php:27
+#: ../src/PageView/Backend/PreferencesForm.php:32
 msgid "Users"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountForm.php:55
+#: ../src/PageView/Backend/AccountForm.php:56
 #, php-format
 msgid "Edit user account: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountForm.php:63
+#: ../src/PageView/Backend/AccountForm.php:64
 #, php-format
 msgid "Register user account %s"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:112
-#: ../src/PageView/Admin/RolesGrid.php:105
+#: ../src/PageView/Backend/AccountsGrid.php:108
+#: ../src/PageView/Backend/RolesGrid.php:100
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:114
-#: ../src/PageView/Admin/RolesGrid.php:107
+#: ../src/PageView/Backend/AccountsGrid.php:110
+#: ../src/PageView/Backend/RolesGrid.php:102
 msgid "Edit"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:127
-#: ../src/PageView/Admin/RolesGrid.php:120
+#: ../src/PageView/Backend/AccountsGrid.php:123
+#: ../src/PageView/Backend/RolesGrid.php:115
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:129
-#: ../src/PageView/Admin/AccountsGrid.php:154
-#: ../src/PageView/Admin/RolesGrid.php:122
-#: ../src/PageView/Admin/RolesGrid.php:147
+#: ../src/PageView/Backend/AccountsGrid.php:125
+#: ../src/PageView/Backend/AccountsGrid.php:150
+#: ../src/PageView/Backend/RolesGrid.php:117
+#: ../src/PageView/Backend/RolesGrid.php:142
 msgid "Delete"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:133
-#: ../src/PageView/Admin/RolesGrid.php:126
+#: ../src/PageView/Backend/AccountsGrid.php:129
+#: ../src/PageView/Backend/RolesGrid.php:121
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:147
-#: ../src/PageView/Admin/RolesGrid.php:140
+#: ../src/PageView/Backend/AccountsGrid.php:143
+#: ../src/PageView/Backend/RolesGrid.php:135
 msgid "Actions"
 msgstr ""
 
-#: ../src/PageView/Admin/AccountsGrid.php:168
-#: ../src/PageView/Admin/RolesGrid.php:161
+#: ../src/PageView/Backend/AccountsGrid.php:164
+#: ../src/PageView/Backend/RolesGrid.php:156
 msgid "Create"
 msgstr ""
 
-#: ../src/PageView/Admin/PreferencesForm.php:28
+#: ../src/PageView/Backend/PreferencesForm.php:28
 msgid "SignUp & SignIn Options"
 msgstr ""
 
-#: ../src/PageView/Admin/RoleForm.php:39 ../src/PageView/Admin/RolesGrid.php:59
-#: ../src/PageView/Admin/RolesGrid.php:63
+#: ../src/PageView/Backend/RoleForm.php:40
+#: ../src/PageView/Backend/RolesGrid.php:56
+#: ../src/PageView/Backend/RolesGrid.php:60
 msgid "User Roles"
 msgstr ""
 
-#: ../src/PageView/Admin/RoleForm.php:55
+#: ../src/PageView/Backend/RoleForm.php:56
 #, php-format
 msgid "Edit access role settings: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/RoleForm.php:63
+#: ../src/PageView/Backend/RoleForm.php:64
 #, php-format
 msgid "Create new role %s"
 msgstr ""
 
-#: ../src/PageView/Admin/RolesGrid.php:90
+#: ../src/PageView/Backend/RolesGrid.php:85
 msgid "Role Name"
 msgstr ""
 
-#: ../src/PageView/Admin/RolesGrid.php:97
+#: ../src/PageView/Backend/RolesGrid.php:92
 msgid "Is Default"
 msgstr ""
 
@@ -345,7 +334,7 @@ msgstr ""
 msgid "[%s] Password Reset Confirmation for %s"
 msgstr ""
 
-#: ../src/Service/Registration/AccountEmailHandler.php:160
+#: ../src/Service/Registration/AccountEmailHandler.php:159
 #: ../src/Service/Registration/AccountEmailHandler.php:286
 #, php-format
 msgid "Welcome to %s"

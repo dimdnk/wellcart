@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WellCart Platform\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-29 17:12+0300\n"
-"PO-Revision-Date: 2017-08-29 17:13+0300\n"
-"Last-Translator: Dima Denisenko <dima@wellcart.org>\n"
+"POT-Creation-Date: 2017-11-12 16:30+0200\n"
+"PO-Revision-Date: 2017-11-12 16:30+0200\n"
+"Last-Translator: Dima Denisenko <dmitry.denisenko@amadeus.com>\n"
 "Language-Team: WellCart Development Team <translate@wellcart.org>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -12,178 +12,178 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate;__;setValue;setLabel;setLegend;_refresh\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../src/Controller/Admin/LanguagesController.php:89
+#: ../src/Controller/Backend/LanguagesController.php:90
 msgid "Language profile successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/LanguagesController.php:90
+#: ../src/Controller/Backend/LanguagesController.php:91
 msgid "Language profile successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/LanguagesController.php:108
-#: ../src/Controller/Admin/LanguagesController.php:129
+#: ../src/Controller/Backend/LanguagesController.php:109
+#: ../src/Controller/Backend/LanguagesController.php:130
 msgid "This language no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/LanguagesController.php:135
+#: ../src/Controller/Backend/LanguagesController.php:136
 msgid "Language was deleted successfully."
 msgstr ""
 
-#: ../src/Controller/Admin/UrlRewritesController.php:89
+#: ../src/Controller/Backend/UrlRewritesController.php:90
 msgid "Url Rewrite successfully created."
 msgstr ""
 
-#: ../src/Controller/Admin/UrlRewritesController.php:90
+#: ../src/Controller/Backend/UrlRewritesController.php:91
 msgid "Url Rewrite successfully modified."
 msgstr ""
 
-#: ../src/Controller/Admin/UrlRewritesController.php:108
-#: ../src/Controller/Admin/UrlRewritesController.php:129
+#: ../src/Controller/Backend/UrlRewritesController.php:109
+#: ../src/Controller/Backend/UrlRewritesController.php:130
 msgid "This url rewrite no longer exists."
 msgstr ""
 
-#: ../src/Controller/Admin/UrlRewritesController.php:135
+#: ../src/Controller/Backend/UrlRewritesController.php:136
 msgid "URL rewrite was deleted successfully."
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:44
+#: ../src/Form/Locale/Language.php:48
 msgid "Is Active"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:68
+#: ../src/Form/Locale/Language.php:66
 msgid "Is Primary"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:92
+#: ../src/Form/Locale/Language.php:84
 msgid "Name"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:112
-#: ../src/PageView/Admin/LanguagesGrid.php:105
+#: ../src/Form/Locale/Language.php:99
+#: ../src/PageView/Backend/LanguagesGrid.php:100
 msgid "Code"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:131
+#: ../src/Form/Locale/Language.php:113
 msgid "Locale"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:150
+#: ../src/Form/Locale/Language.php:127
 msgid "Territory"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:181 ../src/Form/UrlRewrite.php:96
-#: ../src/Service/ConfigurationEditor.php:271
-#: ../src/Service/ConfigurationEditor.php:279
-#: ../src/Service/ConfigurationEditor.php:284
+#: ../src/Form/Locale/Language.php:153 ../src/Form/UrlRewrite.php:90
+#: ../src/Service/ConfigurationEditor.php:281
+#: ../src/Service/ConfigurationEditor.php:289
+#: ../src/Service/ConfigurationEditor.php:294
 msgid "Save"
 msgstr ""
 
-#: ../src/Form/Locale/Language.php:195 ../src/Form/UrlRewrite.php:110
+#: ../src/Form/Locale/Language.php:161 ../src/Form/UrlRewrite.php:98
 msgid "Save & Continue Edit"
 msgstr ""
 
-#: ../src/Form/UrlRewrite.php:44
+#: ../src/Form/UrlRewrite.php:48
 msgid "Request Path"
 msgstr ""
 
-#: ../src/Form/UrlRewrite.php:65 ../src/PageView/Admin/UrlRewritesGrid.php:97
+#: ../src/Form/UrlRewrite.php:64 ../src/PageView/Backend/UrlRewritesGrid.php:92
 msgid "Target Path"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguageForm.php:40
-#: ../src/PageView/Admin/LanguageForm.php:44
-#: ../src/PageView/Admin/LanguagesGrid.php:60
-#: ../src/PageView/Admin/LanguagesGrid.php:64
+#: ../src/PageView/Backend/LanguageForm.php:41
+#: ../src/PageView/Backend/LanguageForm.php:45
+#: ../src/PageView/Backend/LanguagesGrid.php:56
+#: ../src/PageView/Backend/LanguagesGrid.php:60
 msgid "Languages"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguageForm.php:56
+#: ../src/PageView/Backend/LanguageForm.php:57
 #, php-format
 msgid "Edit language settings: %s"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguageForm.php:64
+#: ../src/PageView/Backend/LanguageForm.php:65
 #, php-format
 msgid "Create language settings %s"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:91
+#: ../src/PageView/Backend/LanguagesGrid.php:86
 msgid "Language"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:98
+#: ../src/PageView/Backend/LanguagesGrid.php:93
 msgid "ISO"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:113
+#: ../src/PageView/Backend/LanguagesGrid.php:108
 msgid "Enabled"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:121
+#: ../src/PageView/Backend/LanguagesGrid.php:116
 msgid "Primary"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:129
-#: ../src/PageView/Admin/UrlRewritesGrid.php:113
+#: ../src/PageView/Backend/LanguagesGrid.php:124
+#: ../src/PageView/Backend/UrlRewritesGrid.php:108
 msgid "<i class=\"fa fa-pencil-square-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:131
-#: ../src/PageView/Admin/UrlRewritesGrid.php:115
+#: ../src/PageView/Backend/LanguagesGrid.php:126
+#: ../src/PageView/Backend/UrlRewritesGrid.php:110
 msgid "Edit"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:144
-#: ../src/PageView/Admin/UrlRewritesGrid.php:128
+#: ../src/PageView/Backend/LanguagesGrid.php:139
+#: ../src/PageView/Backend/UrlRewritesGrid.php:123
 msgid "<i class=\"fa fa-trash-o\"></i>"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:146
-#: ../src/PageView/Admin/LanguagesGrid.php:171
-#: ../src/PageView/Admin/UrlRewritesGrid.php:130
-#: ../src/PageView/Admin/UrlRewritesGrid.php:155
+#: ../src/PageView/Backend/LanguagesGrid.php:141
+#: ../src/PageView/Backend/LanguagesGrid.php:166
+#: ../src/PageView/Backend/UrlRewritesGrid.php:125
+#: ../src/PageView/Backend/UrlRewritesGrid.php:150
 msgid "Delete"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:150
-#: ../src/PageView/Admin/UrlRewritesGrid.php:134
+#: ../src/PageView/Backend/LanguagesGrid.php:145
+#: ../src/PageView/Backend/UrlRewritesGrid.php:129
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:164
-#: ../src/PageView/Admin/UrlRewritesGrid.php:148
+#: ../src/PageView/Backend/LanguagesGrid.php:159
+#: ../src/PageView/Backend/UrlRewritesGrid.php:143
 msgid "Actions"
 msgstr ""
 
-#: ../src/PageView/Admin/LanguagesGrid.php:185
-#: ../src/PageView/Admin/UrlRewritesGrid.php:169
+#: ../src/PageView/Backend/LanguagesGrid.php:180
+#: ../src/PageView/Backend/UrlRewritesGrid.php:164
 msgid "Create"
 msgstr ""
 
-#: ../src/PageView/Admin/UrlRewriteForm.php:40
-#: ../src/PageView/Admin/UrlRewriteForm.php:44
-#: ../src/PageView/Admin/UrlRewritesGrid.php:59
-#: ../src/PageView/Admin/UrlRewritesGrid.php:63
+#: ../src/PageView/Backend/UrlRewriteForm.php:41
+#: ../src/PageView/Backend/UrlRewriteForm.php:45
+#: ../src/PageView/Backend/UrlRewritesGrid.php:56
+#: ../src/PageView/Backend/UrlRewritesGrid.php:60
 msgid "URL Rewrites"
 msgstr ""
 
-#: ../src/PageView/Admin/UrlRewriteForm.php:54
+#: ../src/PageView/Backend/UrlRewriteForm.php:55
 msgid "Edit URL Rewrite"
 msgstr ""
 
-#: ../src/PageView/Admin/UrlRewriteForm.php:58
+#: ../src/PageView/Backend/UrlRewriteForm.php:59
 msgid "Add New URL Rewrite"
 msgstr ""
 
-#: ../src/PageView/Admin/UrlRewritesGrid.php:90
+#: ../src/PageView/Backend/UrlRewritesGrid.php:85
 msgid "Request  Path"
 msgstr ""
 
-#: ../src/PageView/Admin/UrlRewritesGrid.php:105
+#: ../src/PageView/Backend/UrlRewritesGrid.php:100
 msgid "Is System"
 msgstr ""
 
