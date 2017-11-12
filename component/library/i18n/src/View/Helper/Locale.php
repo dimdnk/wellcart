@@ -7,7 +7,7 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\View\Helper;
+namespace WellCart\I18n\View\Helper;
 
 use Zend\View\Helper\AbstractHelper;
 
@@ -15,11 +15,11 @@ class Locale extends AbstractHelper
 {
 
     /**
-     * @var \WellCart\Mvc\Controller\Plugin\Locale
+     * @var \WellCart\I18n\Controller\Plugin\Locale
      */
     protected $plugin;
 
-    public function __construct(\WellCart\Mvc\Controller\Plugin\Locale $plugin
+    public function __construct(\WellCart\I18n\Controller\Plugin\Locale $plugin
     ) {
         $this->plugin = $plugin;
     }

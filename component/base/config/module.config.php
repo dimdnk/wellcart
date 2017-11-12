@@ -248,7 +248,7 @@ return [
             \WellCart\Form\View\Helper\FormElement::class => 'WellCart\Form\View\Helper\Service\FormElementFactory',
 
             \WellCart\Ui\Datagrid\View\Helper\GridFilters::class => \WellCart\Ui\Factory\Datagrid\ViewHelper\GridFiltersFactory::class,
-            \WellCart\View\Helper\Locale::class => \WellCart\View\Factory\Helper\LocaleFactory::class,
+            \WellCart\I18n\View\Helper\Locale::class => \WellCart\I18n\View\Factory\Helper\LocaleFactory::class,
             \WellCart\View\Helper\Date::class => \WellCart\View\Factory\Helper\DateFactory::class,
             'RdnRequireJS:RequireJS' => \WellCart\View\Factory\Helper\RequireJSFactory::class,
         ],
@@ -302,10 +302,10 @@ return [
     ],
     'controller_plugins' => [
         'aliases' => [
-            'locale' => \WellCart\Mvc\Controller\Plugin\Locale::class,
+            'locale' => \WellCart\I18n\Controller\Plugin\Locale::class,
         ],
         'factories' => [
-            \WellCart\Mvc\Controller\Plugin\Locale::class => \WellCart\Mvc\Factory\ControllerPlugin\LocalePluginFactory::class,
+            \WellCart\I18n\Controller\Plugin\Locale::class => \WellCart\I18n\Factory\Controller\Plugin\LocalePluginFactory::class,
         ],
         'invokables' => [
             'gridFilterBuilder' => 'WellCart\Ui\Datagrid\Controller\Plugin\GridFilterBuilder',

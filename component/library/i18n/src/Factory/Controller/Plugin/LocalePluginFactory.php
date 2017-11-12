@@ -7,11 +7,11 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Mvc\Factory\ControllerPlugin;
+namespace WellCart\I18n\Factory\Controller\Plugin;
 
 use Interop\Container\ContainerInterface;
 use WellCart\Base\Entity\Locale\Language\DefaultLanguage;
-use WellCart\Mvc\Controller\Plugin\Locale as LocaleControllerPlugin;
+use WellCart\I18n\Controller\Plugin\Locale as LocaleControllerPlugin;
 
 class LocalePluginFactory
 {

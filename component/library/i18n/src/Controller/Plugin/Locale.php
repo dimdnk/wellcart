@@ -7,7 +7,7 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\Mvc\Controller\Plugin;
+namespace WellCart\I18n\Controller\Plugin;
 
 use Doctrine\Common\Collections\Collection;
 use WellCart\Base\Spec\LocaleLanguageEntity as Language;

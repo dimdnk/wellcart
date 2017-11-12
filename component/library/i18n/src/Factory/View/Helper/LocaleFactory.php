@@ -7,10 +7,10 @@
  */
 declare(strict_types = 1);
 
-namespace WellCart\View\Factory\Helper;
+namespace WellCart\I18n\View\Factory\Helper;
 
 use Interop\Container\ContainerInterface;
-use WellCart\View\Helper\Locale;
+use WellCart\I18n\View\Helper\Locale;
 
 class LocaleFactory
 {

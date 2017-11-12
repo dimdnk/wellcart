@@ -50,7 +50,7 @@ class DefaultLocale implements
             $serviceLocator = $serviceLocator->getServiceLocator();
         }
         $config = $serviceLocator->get('config');
-        $locale = isset($config['locale']) ? $config['locale'] : Locale::getDefault();
+        $locale = isset($config['wellcart']['localization']['locale']) ? $config['wellcart']['localization']['locale'] : Locale::getDefault();
         $this->setLocale($locale);
 
         return $this;
