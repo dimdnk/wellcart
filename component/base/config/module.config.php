@@ -234,7 +234,7 @@ return [
     'view_helpers' => [
         'aliases' => [
             'gridFilters' => \WellCart\Ui\Datagrid\View\Helper\GridFilters::class,
-            'locale' => \WellCart\View\Helper\Locale::class,
+            'locale' => \WellCart\I18n\View\Helper\Locale::class,
             'date' => \WellCart\View\Helper\Date::class,
             'form_element' => \WellCart\Form\View\Helper\FormElement::class,
             'RequireJS' => 'RdnRequireJS:RequireJS',
