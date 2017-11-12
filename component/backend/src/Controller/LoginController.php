@@ -87,4 +87,12 @@ class LoginController extends UserController
 
         return $this->redirect()->refresh();
     }
+
+    /**
+     * @return \Zend\ServiceManager\ServiceLocatorInterface
+     */
+    public function getServiceLocator()
+    {
+        return $this->serviceLocator;
+    }
 }

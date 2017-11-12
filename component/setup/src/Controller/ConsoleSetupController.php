@@ -175,4 +175,12 @@ class ConsoleSetupController extends AbstractConsoleController implements
             );
         }
     }
+
+    /**
+     * @return \Zend\ServiceManager\ServiceLocatorInterface
+     */
+    public function getServiceLocator()
+    {
+        return $this->serviceLocator;
+    }
 }
