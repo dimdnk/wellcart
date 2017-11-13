@@ -50,7 +50,7 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.1.0",
-    "robmorgan/phinx": "0.8.*",
+    "robmorgan/phinx": "0.9.*",
     "fzaninotto/faker": "1.6.*",
     "wellcart/component-base": "0.1.*"
   },

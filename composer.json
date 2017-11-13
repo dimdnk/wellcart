@@ -73,7 +73,7 @@
     "zf-commons/zfc-user-doctrine-orm": "1.*",
     "zf-commons/zfc-rbac": "^2.6.0",
     "zf-commons/zfc-admin": "0.2.*",
-    "robmorgan/phinx": "0.8.*",
+    "robmorgan/phinx": "0.9.*",
     "fzaninotto/faker": "1.6.*",
     "simple-bus/asynchronous": "2.*",
     "symfony/options-resolver": "~2.6"
