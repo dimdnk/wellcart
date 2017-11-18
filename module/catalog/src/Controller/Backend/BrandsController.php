@@ -85,7 +85,7 @@ class BrandsController extends AbstractActionController implements
             $entity,
             __('Brand successfully created.'),
             __('Brand successfully modified.'),
-            'zfcadmin/catalog/brands'
+            'backend/catalog/brands'
         );
     }
 
@@ -101,7 +101,7 @@ class BrandsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This brand no longer exists.'),
-            'zfcadmin/catalog/brands'
+            'backend/catalog/brands'
         );
 
         if ($domainResponse) {
@@ -118,13 +118,13 @@ class BrandsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This brand no longer exists.'),
-            'zfcadmin/catalog/brands'
+            'backend/catalog/brands'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Brand profile was deleted successfully.'),
-                'zfcadmin/catalog/brands'
+                'backend/catalog/brands'
             );
         }
     }

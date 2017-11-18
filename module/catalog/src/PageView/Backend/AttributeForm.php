@@ -43,7 +43,7 @@ class AttributeForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Attributes'),
-                        'route'  => 'zfcadmin/catalog/attributes',
+                        'route'  => 'backend/catalog/attributes',
                         'params' => [],
                     ],
                 ]

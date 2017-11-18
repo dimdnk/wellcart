@@ -71,7 +71,7 @@ class CountriesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/directory/countries';
+        return 'backend/directory/countries';
     }
 
     /**

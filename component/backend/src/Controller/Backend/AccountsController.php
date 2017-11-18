@@ -115,7 +115,7 @@ class AccountsController extends AbstractActionController implements
                     $command,
                     __('Admin profile successfully created.'),
                     __('Admin profile successfully modified.'),
-                    'zfcadmin/admin/accounts'
+                    'backend/admin/accounts'
                 );
             }
         }
@@ -137,7 +137,7 @@ class AccountsController extends AbstractActionController implements
     ) {
         $domainResponse = $this->findOrNotFound(
             __('This admin account no longer exists.'),
-            'zfcadmin/admin/accounts'
+            'backend/admin/accounts'
         );
 
         if ($domainResponse) {
@@ -157,13 +157,13 @@ class AccountsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This admin account no longer exists.'),
-            'zfcadmin/admin/accounts'
+            'backend/admin/accounts'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Admin was deleted successfully.'),
-                'zfcadmin/admin/accounts'
+                'backend/admin/accounts'
             );
         }
     }
@@ -188,7 +188,7 @@ class AccountsController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/admin/accounts'
+            'backend/admin/accounts'
         );
     }
 

@@ -71,7 +71,7 @@ class RolesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/user/roles';
+        return 'backend/user/roles';
     }
 
     /**

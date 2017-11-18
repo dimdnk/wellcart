@@ -71,7 +71,7 @@ class GeoZonesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/directory/geo-zones';
+        return 'backend/directory/geo-zones';
     }
 
     /**

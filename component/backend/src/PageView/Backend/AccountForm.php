@@ -44,7 +44,7 @@ class AccountForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Administrators'),
-                        'route'  => 'zfcadmin/admin/accounts',
+                        'route'  => 'backend/admin/accounts',
                         'params' => [],
                     ],
                 ]

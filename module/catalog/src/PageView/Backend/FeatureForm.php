@@ -42,7 +42,7 @@ class FeatureForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Features'),
-                        'route'  => 'zfcadmin/catalog/features',
+                        'route'  => 'backend/catalog/features',
                         'params' => [],
                     ],
                 ]

@@ -88,7 +88,7 @@ class RolesController extends AbstractActionController implements
             $entity,
             __('Role successfully created.'),
             __('Role successfully modified.'),
-            'zfcadmin/user/roles'
+            'backend/user/roles'
         );
     }
 
@@ -104,7 +104,7 @@ class RolesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This role no longer exists.'),
-            'zfcadmin/user/roles'
+            'backend/user/roles'
         );
 
         if ($domainResponse) {
@@ -121,13 +121,13 @@ class RolesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This role no longer exists.'),
-            'zfcadmin/user/roles'
+            'backend/user/roles'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Role was deleted successfully.'),
-                'zfcadmin/user/roles'
+                'backend/user/roles'
             );
         }
     }
@@ -152,7 +152,7 @@ class RolesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/user/roles'
+            'backend/user/roles'
         );
     }
 

@@ -107,7 +107,7 @@ class ProductTemplatesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/catalog/product-templates';
+        return 'backend/catalog/product-templates';
     }
 
     /**

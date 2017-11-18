@@ -77,7 +77,7 @@ class CurrenciesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/directory/currencies';
+        return 'backend/directory/currencies';
     }
 
     /**

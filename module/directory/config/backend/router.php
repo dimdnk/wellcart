@@ -16,7 +16,7 @@ namespace WellCart\Directory;
 return [
     'router' => [
         'routes' => [
-            'zfcadmin' => [
+            'backend' => [
                 'child_routes' => [
                     'directory' => [
                         'type'         => 'WellCart\Router\Http\Literal',

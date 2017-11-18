@@ -43,7 +43,7 @@ class CategoryForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Categories'),
-                        'route'  => 'zfcadmin/catalog/categories',
+                        'route'  => 'backend/catalog/categories',
                         'params' => [],
                     ],
                 ]

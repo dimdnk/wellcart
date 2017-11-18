@@ -107,7 +107,7 @@ class ProductsGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/catalog/products';
+        return 'backend/catalog/products';
     }
 
     /**

@@ -139,7 +139,7 @@ class ProductFieldset extends Fieldset
                 'type'       => 'htmlAnchor',
                 'options'    => [
                     'link'   => url_to_route(
-                        'zfcadmin/catalog/features',
+                        'backend/catalog/features',
                         [
                             'action' => 'create',
                         ]

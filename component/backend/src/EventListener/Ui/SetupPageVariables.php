@@ -58,7 +58,7 @@ class SetupPageVariables extends AbstractListenerAggregate
         $routeName = $matches->getMatchedRouteName();
         if (!$isLogged
             || (strlen($routeName) < 8
-                || substr($routeName, 0, 8) != 'zfcadmin')
+                || substr($routeName, 0, 8) != 'backend')
         ) {
             return;
         }
@@ -67,8 +67,8 @@ class SetupPageVariables extends AbstractListenerAggregate
          * @var $jsEnv JavaScriptEnvironment
          */
         $jsEnv = $viewHelperManager->get('jsEnv');
-        $routesConfig = ['zfcadmin' => Config::get(
-            'router.routes.zfcadmin',
+        $routesConfig = ['backend' => Config::get(
+            'router.routes.backend',
             []
         )];
         $routesFlatConfig = Arr::flattenSeparated($routesConfig, '/');

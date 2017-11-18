@@ -124,7 +124,7 @@ return [
             ],
         ],
     ],
-    'zfcadmin' => [
+    'backend' => [
         'use_admin_layout'      => true,
         'admin_layout_template' => 'layout/page-fluid-2columns',
     ],
@@ -190,7 +190,7 @@ return [
      */
     'router'       => [
         'routes' => [
-            'zfcadmin'               => [
+            'backend'               => [
                 'type'             => 'WellCart\Router\Http\Segment',
                 'javascript_route' => true,
                 'priority'         => -500,

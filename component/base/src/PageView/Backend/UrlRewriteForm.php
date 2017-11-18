@@ -43,7 +43,7 @@ class UrlRewriteForm extends Standard
                 [
                     'list' => [
                         'label'  => __('URL Rewrites'),
-                        'route'  => 'zfcadmin/base/url-rewrites',
+                        'route'  => 'backend/base/url-rewrites',
                         'params' => [],
                     ],
                 ]

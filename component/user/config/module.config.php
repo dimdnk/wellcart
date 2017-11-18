@@ -75,7 +75,7 @@ return [
      */
     'router'    => [
         'routes' => [
-            'zfcadmin'                   => [
+            'backend'                   => [
                 'child_routes' => [
                     'user' => [
                         'type'         => 'WellCart\Router\Http\Literal',

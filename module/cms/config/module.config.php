@@ -49,7 +49,7 @@ return [
      */
     'router'        => [
         'routes' => [
-            'zfcadmin' => [
+            'backend' => [
                 'child_routes' => [
                     'cms' => [
                         'type'         => 'WellCart\Router\Http\Literal',

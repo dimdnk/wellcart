@@ -22,7 +22,7 @@ $messages = $notifications->getMessages();
            aria-expanded="false"
            <?php else: ?>href="<?php
            echo $this->url(
-               'zfcadmin/admin/notifications'
+               'backend/admin/notifications'
            )
            ?>" <?php endif; ?> role="button"
         >
@@ -40,7 +40,7 @@ $messages = $notifications->getMessages();
                 <li>
                     <a href="<?php
                     echo $this->url(
-                        'zfcadmin/admin/notifications'
+                        'backend/admin/notifications'
                     )
                     ?>"><i class="fa fa-caret-right" aria-hidden="true"></i>
                         <?php echo sprintf(
@@ -63,14 +63,14 @@ $messages = $notifications->getMessages();
         <ul class="dropdown-menu" aria-labelledby="top-toolbar-user-menu">
             <li><a href="<?php
                 echo $this->url(
-                    'zfcadmin/admin/accounts',
+                    'backend/admin/accounts',
                     ['action' => 'update', 'id' => $admin->getId()]
                 )
                 ?>">
                     <i class="fa fa-pencil-square-o"></i>
                     &nbsp; <?php echo __('Profile') ?></a>
             </li>
-            <li><a href="<?php echo $this->url('zfcadmin/logout') ?>">
+            <li><a href="<?php echo $this->url('backend/logout') ?>">
                     <i class="fa fa-sign-out"></i>
                     &nbsp; <?php echo __('Logout') ?></a></li>
         </ul>

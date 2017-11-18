@@ -26,7 +26,7 @@ class RouteGuard
      */
     protected $rules
         = [
-            'zfcadmin*' => ['admin' => 'admin'],
+            'backend*' => ['admin' => 'admin'],
         ];
 
     /**

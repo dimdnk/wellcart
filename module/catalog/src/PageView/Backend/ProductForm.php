@@ -42,7 +42,7 @@ class ProductForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Products'),
-                        'route'  => 'zfcadmin/catalog/products',
+                        'route'  => 'backend/catalog/products',
                         'params' => [],
                     ],
                 ]

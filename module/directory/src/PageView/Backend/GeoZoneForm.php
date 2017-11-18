@@ -50,7 +50,7 @@ class GeoZoneForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Geo Zones'),
-                        'route'  => 'zfcadmin/directory/geo-zones',
+                        'route'  => 'backend/directory/geo-zones',
                         'params' => [],
                     ],
                 ]

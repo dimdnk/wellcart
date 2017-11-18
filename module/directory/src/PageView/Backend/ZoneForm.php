@@ -43,7 +43,7 @@ class ZoneForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Zones'),
-                        'route'  => 'zfcadmin/directory/zones',
+                        'route'  => 'backend/directory/zones',
                         'params' => [],
                     ],
                 ]

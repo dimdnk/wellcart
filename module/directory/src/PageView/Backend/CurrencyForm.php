@@ -43,7 +43,7 @@ class CurrencyForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Currencies'),
-                        'route'  => 'zfcadmin/directory/currencies',
+                        'route'  => 'backend/directory/currencies',
                         'params' => [],
                     ],
                 ]

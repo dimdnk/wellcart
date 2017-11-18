@@ -92,7 +92,7 @@ class PagesController extends AbstractActionController implements
             $entity,
             __('Page successfully created.'),
             __('Page successfully modified.'),
-            'zfcadmin/cms/pages'
+            'backend/cms/pages'
         );
     }
 
@@ -108,7 +108,7 @@ class PagesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This page no longer exists.'),
-            'zfcadmin/cms/pages',
+            'backend/cms/pages',
             [],
             [],
             false,
@@ -129,7 +129,7 @@ class PagesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This page no longer exists.'),
-            'zfcadmin/cms/pages',
+            'backend/cms/pages',
             [],
             [],
             false,
@@ -139,7 +139,7 @@ class PagesController extends AbstractActionController implements
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Page was deleted successfully.'),
-                'zfcadmin/cms/pages'
+                'backend/cms/pages'
             );
         }
     }
@@ -164,7 +164,7 @@ class PagesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/cms/pages'
+            'backend/cms/pages'
         );
     }
 

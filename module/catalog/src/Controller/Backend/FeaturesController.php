@@ -89,7 +89,7 @@ class FeaturesController extends AbstractActionController implements
             $entity,
             __('Feature successfully created.'),
             __('Feature successfully modified.'),
-            'zfcadmin/catalog/features'
+            'backend/catalog/features'
         );
     }
 
@@ -105,7 +105,7 @@ class FeaturesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This feature no longer exists.'),
-            'zfcadmin/catalog/features',
+            'backend/catalog/features',
             [],
             [],
             false,
@@ -126,7 +126,7 @@ class FeaturesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This feature no longer exists.'),
-            'zfcadmin/catalog/features',
+            'backend/catalog/features',
             [],
             [],
             false,
@@ -136,7 +136,7 @@ class FeaturesController extends AbstractActionController implements
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Feature was deleted successfully.'),
-                'zfcadmin/catalog/features'
+                'backend/catalog/features'
             );
         }
     }

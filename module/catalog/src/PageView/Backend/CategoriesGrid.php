@@ -108,7 +108,7 @@ class CategoriesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/catalog/categories';
+        return 'backend/catalog/categories';
     }
 
     /**

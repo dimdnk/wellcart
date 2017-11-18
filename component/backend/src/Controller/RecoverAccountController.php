@@ -74,7 +74,7 @@ class RecoverAccountController extends AbstractActionController
                             )
                         );
 
-                    return $this->redirect()->toRoute('zfcadmin');
+                    return $this->redirect()->toRoute('backend');
                 } catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e->getMessage());
@@ -117,7 +117,7 @@ class RecoverAccountController extends AbstractActionController
                     )
                 );
 
-            return $this->redirect()->toRoute('zfcadmin');
+            return $this->redirect()->toRoute('backend');
         }
 
         $form = $this->service->getChangePasswordForm();
@@ -147,7 +147,7 @@ class RecoverAccountController extends AbstractActionController
                             )
                         );
 
-                    return $this->redirect()->toRoute('zfcadmin');
+                    return $this->redirect()->toRoute('backend');
                 } catch (\Throwable $e) {
                     $this->getLogger()
                         ->emerg($e);
@@ -189,7 +189,7 @@ class RecoverAccountController extends AbstractActionController
                     )
                 );
 
-            return $this->redirect()->toRoute('zfcadmin');
+            return $this->redirect()->toRoute('backend');
         }
     }
 }

@@ -89,7 +89,7 @@ class LanguagesController extends AbstractActionController implements
             $entity,
             __('Language profile successfully created.'),
             __('Language profile successfully modified.'),
-            'zfcadmin/base/languages'
+            'backend/base/languages'
         );
     }
 
@@ -107,7 +107,7 @@ class LanguagesController extends AbstractActionController implements
     ) {
         $domainResponse = $this->findOrNotFound(
             __('This language no longer exists.'),
-            'zfcadmin/base/languages'
+            'backend/base/languages'
         );
 
         if ($domainResponse) {
@@ -128,13 +128,13 @@ class LanguagesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This language no longer exists.'),
-            'zfcadmin/base/languages'
+            'backend/base/languages'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Language was deleted successfully.'),
-                'zfcadmin/base/languages'
+                'backend/base/languages'
             );
         }
     }
@@ -159,7 +159,7 @@ class LanguagesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/base/languages'
+            'backend/base/languages'
         );
     }
 

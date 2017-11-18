@@ -16,7 +16,7 @@ namespace WellCart\Catalog;
 return [
     'router' => [
         'routes' => [
-            'zfcadmin' => [
+            'backend' => [
                 'child_routes' => [
                     'catalog' => [
                         'type'         => 'WellCart\Router\Http\Literal',

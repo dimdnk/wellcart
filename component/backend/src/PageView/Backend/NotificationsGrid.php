@@ -88,7 +88,7 @@ class NotificationsGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/admin/notifications';
+        return 'backend/admin/notifications';
     }
 
     /**

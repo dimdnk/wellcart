@@ -9,52 +9,52 @@
 return [
     'navigation' => [
         'backend_main_navigation' => [
-            'zfcadmin:catalog-section' => [
+            'backend:catalog-section' => [
                 'label'      => 'Catalog',
                 'icon'       => 'icon-grid',
-                'route'      => 'zfcadmin/catalog/products',
+                'route'      => 'backend/catalog/products',
                 'order'      => -300,
                 'permission' => 'catalog/view',
                 'pages'      => [
-                    'zfcadmin/catalog/products'          => [
+                    'backend/catalog/products'          => [
                         'label'      => 'Products',
-                        'route'      => 'zfcadmin/catalog/products',
+                        'route'      => 'backend/catalog/products',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/products/list',
                     ],
-                    'zfcadmin/catalog/categories'        => [
+                    'backend/catalog/categories'        => [
                         'label'      => 'Categories',
-                        'route'      => 'zfcadmin/catalog/categories',
+                        'route'      => 'backend/catalog/categories',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/categories/list',
                     ],
-                    'zfcadmin/catalog/product-templates' => [
+                    'backend/catalog/product-templates' => [
                         'label'      => 'Product Templates',
-                        'route'      => 'zfcadmin/catalog/product-templates',
+                        'route'      => 'backend/catalog/product-templates',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/product-templates/list',
                     ],
-                    'zfcadmin/catalog/attributes'        => [
+                    'backend/catalog/attributes'        => [
                         'label'      => 'Attributes',
-                        'route'      => 'zfcadmin/catalog/attributes',
+                        'route'      => 'backend/catalog/attributes',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/attributes/list',
                     ],
 
-                    'zfcadmin/catalog/features' => [
+                    'backend/catalog/features' => [
                         'label'      => 'Features',
-                        'route'      => 'zfcadmin/catalog/features',
+                        'route'      => 'backend/catalog/features',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/features/list',
                     ],
-                    'zfcadmin/catalog/brands'   => [
+                    'backend/catalog/brands'   => [
                         'label'      => 'Brands',
-                        'route'      => 'zfcadmin/catalog/brands',
+                        'route'      => 'backend/catalog/brands',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'catalog/brands/list',

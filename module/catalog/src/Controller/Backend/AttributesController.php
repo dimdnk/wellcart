@@ -89,7 +89,7 @@ class AttributesController extends AbstractActionController implements
             $entity,
             __('Attribute successfully created.'),
             __('Attribute successfully modified.'),
-            'zfcadmin/catalog/attributes'
+            'backend/catalog/attributes'
         );
     }
 
@@ -105,7 +105,7 @@ class AttributesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This attribute no longer exists.'),
-            'zfcadmin/catalog/attributes',
+            'backend/catalog/attributes',
             [],
             [],
             false,
@@ -126,7 +126,7 @@ class AttributesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This attribute no longer exists.'),
-            'zfcadmin/catalog/attributes',
+            'backend/catalog/attributes',
             [],
             [],
             false,
@@ -136,7 +136,7 @@ class AttributesController extends AbstractActionController implements
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Attribute was deleted successfully.'),
-                'zfcadmin/catalog/attributes'
+                'backend/catalog/attributes'
             );
         }
     }
@@ -161,7 +161,7 @@ class AttributesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/catalog/attributes'
+            'backend/catalog/attributes'
         );
     }
 

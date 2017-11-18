@@ -11,7 +11,7 @@ jQuery(function ($, undefined) {
         var select = $(this);
         var countryId = select.val();
         $.getJSON(
-            WellCart.urlToRoute('zfcadmin/directory/zones', {action: 'get-zone-options'}),
+            WellCart.urlToRoute('backend/directory/zones', {action: 'get-zone-options'}),
             {country_id: countryId}, function (data) {
                 var zoneSelector = $(select).closest('fieldset').find('select.zone-selector');
                 zoneSelector.empty();

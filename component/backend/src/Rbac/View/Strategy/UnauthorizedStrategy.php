@@ -72,7 +72,7 @@ class UnauthorizedStrategy extends Strategy implements
             return;
         }
         $routeName = $matched->getMatchedRouteName();
-        if (strlen($routeName) < 8 || substr($routeName, 0, 8) != 'zfcadmin'
+        if (strlen($routeName) < 8 || substr($routeName, 0, 8) != 'backend'
         ) {
             return;
         }

@@ -87,7 +87,7 @@ class AreaListener implements ListenerAggregateInterface
         $matchedRouteName = $routeMatch->getMatchedRouteName();
 
         // example for zfc admin
-        if (fnmatch('zfcadmin*', $matchedRouteName)) {
+        if (fnmatch('backend*', $matchedRouteName)) {
             $area = self::AREA_BACKEND;
         }
 

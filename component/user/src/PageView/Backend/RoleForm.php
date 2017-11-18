@@ -42,7 +42,7 @@ class RoleForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Roles'),
-                        'route'  => 'zfcadmin/user/roles',
+                        'route'  => 'backend/user/roles',
                         'params' => [],
                     ],
                 ]

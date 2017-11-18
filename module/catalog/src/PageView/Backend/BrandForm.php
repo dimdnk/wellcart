@@ -43,7 +43,7 @@ class BrandForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Brands'),
-                        'route'  => 'zfcadmin/catalog/brands',
+                        'route'  => 'backend/catalog/brands',
                         'params' => [],
                     ],
                 ]

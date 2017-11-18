@@ -103,7 +103,7 @@ class PagesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/cms/pages';
+        return 'backend/cms/pages';
     }
 
     /**

@@ -89,7 +89,7 @@ class UrlRewritesController extends AbstractActionController implements
             $entity,
             __('Url Rewrite successfully created.'),
             __('Url Rewrite successfully modified.'),
-            'zfcadmin/base/url-rewrites'
+            'backend/base/url-rewrites'
         );
     }
 
@@ -107,7 +107,7 @@ class UrlRewritesController extends AbstractActionController implements
     ) {
         $domainResponse = $this->findOrNotFound(
             __('This url rewrite no longer exists.'),
-            'zfcadmin/base/url-rewrites'
+            'backend/base/url-rewrites'
         );
 
         if ($domainResponse) {
@@ -128,13 +128,13 @@ class UrlRewritesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This url rewrite no longer exists.'),
-            'zfcadmin/base/url-rewrites'
+            'backend/base/url-rewrites'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('URL rewrite was deleted successfully.'),
-                'zfcadmin/base/url-rewrites'
+                'backend/base/url-rewrites'
             );
         }
     }
@@ -159,7 +159,7 @@ class UrlRewritesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/base/url-rewrites'
+            'backend/base/url-rewrites'
         );
     }
 

@@ -88,7 +88,7 @@ class GeoZonesController extends AbstractActionController implements
             $entity,
             __('Geo Zone successfully created.'),
             __('Geo Zone successfully modified.'),
-            'zfcadmin/directory/geo-zones'
+            'backend/directory/geo-zones'
         );
     }
 
@@ -104,7 +104,7 @@ class GeoZonesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This Geo Zone no longer exists.'),
-            'zfcadmin/directory/geo-zones'
+            'backend/directory/geo-zones'
         );
 
         if ($domainResponse) {
@@ -121,13 +121,13 @@ class GeoZonesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This geo zone no longer exists.'),
-            'zfcadmin/directory/geo-zones'
+            'backend/directory/geo-zones'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Geo Zone was deleted successfully.'),
-                'zfcadmin/directory/geo-zones'
+                'backend/directory/geo-zones'
             );
         }
     }
@@ -152,7 +152,7 @@ class GeoZonesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/directory/geo-zones'
+            'backend/directory/geo-zones'
         );
     }
 

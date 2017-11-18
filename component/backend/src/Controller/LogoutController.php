@@ -26,6 +26,6 @@ class LogoutController extends AbstractActionController
         $this->zfcUserAuthentication()->getAuthAdapter()->logoutAdapters();
         $this->zfcUserAuthentication()->getAuthService()->clearIdentity();
 
-        return $this->redirect()->toRoute('zfcadmin');
+        return $this->redirect()->toRoute('backend');
     }
 }

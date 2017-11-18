@@ -70,7 +70,7 @@ class AccountsGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/admin/accounts';
+        return 'backend/admin/accounts';
     }
 
     /**

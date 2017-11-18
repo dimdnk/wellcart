@@ -95,7 +95,7 @@ class ProductsController extends AbstractActionController implements
             $command,
             __('Product successfully created.'),
             __('Product successfully modified.'),
-            'zfcadmin/catalog/products'
+            'backend/catalog/products'
         );
     }
 
@@ -111,7 +111,7 @@ class ProductsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This product no longer exists.'),
-            'zfcadmin/catalog/products',
+            'backend/catalog/products',
             [],
             [],
             false,
@@ -132,7 +132,7 @@ class ProductsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This product no longer exists.'),
-            'zfcadmin/catalog/products',
+            'backend/catalog/products',
             [],
             [],
             false,
@@ -142,7 +142,7 @@ class ProductsController extends AbstractActionController implements
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Product was deleted successfully.'),
-                'zfcadmin/catalog/products'
+                'backend/catalog/products'
             );
         }
     }
@@ -167,7 +167,7 @@ class ProductsController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/catalog/products'
+            'backend/catalog/products'
         );
     }
 

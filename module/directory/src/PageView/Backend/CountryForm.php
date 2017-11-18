@@ -43,7 +43,7 @@ class CountryForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Countries'),
-                        'route'  => 'zfcadmin/directory/countries',
+                        'route'  => 'backend/directory/countries',
                         'params' => [],
                     ],
                 ]

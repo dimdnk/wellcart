@@ -43,7 +43,7 @@ class PageForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Pages'),
-                        'route'  => 'zfcadmin/cms/pages',
+                        'route'  => 'backend/cms/pages',
                         'params' => [],
                     ],
                 ]

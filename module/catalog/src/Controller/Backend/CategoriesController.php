@@ -91,7 +91,7 @@ class CategoriesController extends AbstractActionController implements
             $entity,
             __('Category successfully created.'),
             __('Category successfully modified.'),
-            'zfcadmin/catalog/categories'
+            'backend/catalog/categories'
         );
     }
 
@@ -107,7 +107,7 @@ class CategoriesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This category no longer exists.'),
-            'zfcadmin/catalog/categories',
+            'backend/catalog/categories',
             [],
             [],
             false,
@@ -127,7 +127,7 @@ class CategoriesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This category no longer exists.'),
-            'zfcadmin/catalog/categories',
+            'backend/catalog/categories',
             [],
             [],
             false,
@@ -137,7 +137,7 @@ class CategoriesController extends AbstractActionController implements
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Category was deleted successfully.'),
-                'zfcadmin/catalog/categories'
+                'backend/catalog/categories'
             );
         }
     }
@@ -162,7 +162,7 @@ class CategoriesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/catalog/categories'
+            'backend/catalog/categories'
         );
     }
 

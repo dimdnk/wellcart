@@ -43,7 +43,7 @@ class ProductTemplateForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Product templates'),
-                        'route'  => 'zfcadmin/catalog/product-templates',
+                        'route'  => 'backend/catalog/product-templates',
                         'params' => [],
                     ],
                 ]

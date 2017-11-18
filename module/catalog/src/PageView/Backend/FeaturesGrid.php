@@ -107,7 +107,7 @@ class FeaturesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/catalog/features';
+        return 'backend/catalog/features';
     }
 
     /**

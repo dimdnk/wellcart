@@ -12,21 +12,21 @@ return [
             'wellcart-backend/dashboard'       => [
                 'label'      => 'Dashboard',
                 'icon'       => 'fa fa-dashboard',
-                'route'      => 'zfcadmin',
+                'route'      => 'backend',
                 'order'      => -5000,
                 'permission' => 'admin/dashboard/view',
             ],
             'wellcart-backend/system-settings' => [
                 'label'      => 'Configuration',
                 'icon'       => 'icon-gear',
-                'route'      => 'zfcadmin/system-settings',
+                'route'      => 'backend/system-settings',
                 'order'      => 5000,
                 'permission' => 'admin/system-settings/general/view',
                 'pages'      => [
                     'wellcart-backend/system-settings' => [
                         'label'      => 'System Settings',
                         'icon'       => 'fa fa-cog',
-                        'route'      => 'zfcadmin/system-settings/sections',
+                        'route'      => 'backend/system-settings/sections',
                         'params'     => ['section' => 'general'],
                         'order'      => 9500,
                         'permission' => 'admin/system-settings/general/view',
@@ -36,9 +36,9 @@ return [
 
             'wellcart-user/accounts' => [
                 'pages' => [
-                    'zfcadmin/admin/accounts' => [
+                    'backend/admin/accounts' => [
                         'label'      => 'Administrators',
-                        'route'      => 'zfcadmin/admin/accounts',
+                        'route'      => 'backend/admin/accounts',
                         'action'     => 'list',
                         'order'      => -600,
                         'permission' => 'admin/accounts/list',

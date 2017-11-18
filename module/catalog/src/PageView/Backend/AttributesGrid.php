@@ -107,7 +107,7 @@ class AttributesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/catalog/attributes';
+        return 'backend/catalog/attributes';
     }
 
     /**

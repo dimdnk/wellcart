@@ -89,7 +89,7 @@ class CurrenciesController extends AbstractActionController implements
             $entity,
             __('Currency successfully created.'),
             __('Currency successfully modified.'),
-            'zfcadmin/directory/currencies'
+            'backend/directory/currencies'
         );
     }
 
@@ -105,7 +105,7 @@ class CurrenciesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This Currency no longer exists.'),
-            'zfcadmin/directory/currencies'
+            'backend/directory/currencies'
         );
         if ($domainResponse) {
             return $this->handleForm($formPageView, $form, $domainResponse);
@@ -121,13 +121,13 @@ class CurrenciesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This currency no longer exists.'),
-            'zfcadmin/directory/currencies'
+            'backend/directory/currencies'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Currency was deleted successfully.'),
-                'zfcadmin/directory/currencies'
+                'backend/directory/currencies'
             );
         }
     }
@@ -152,7 +152,7 @@ class CurrenciesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/directory/currencies'
+            'backend/directory/currencies'
         );
     }
 

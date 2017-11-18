@@ -12,7 +12,7 @@ return
                 'general'          => [
 
                     'label'      => 'General Settings',
-                    'route'      => 'zfcadmin/system-settings/sections',
+                    'route'      => 'backend/system-settings/sections',
                     'params'     => ['section' => 'general'],
                     'permission' => 'admin/system-settings/general/view',
                     'icon'       => 'fa fa-desktop',
@@ -230,7 +230,7 @@ return
                 'acmailer_options' => [
                     'label'      => 'Email',
                     'icon'       => 'fa fa-envelope',
-                    'route'      => 'zfcadmin/system-settings/sections',
+                    'route'      => 'backend/system-settings/sections',
                     'params'     => ['section' => 'acmailer_options'],
                     'permission' => 'admin/system-settings/acmailer_options/view',
                     'fieldsets'  => [
@@ -745,7 +745,7 @@ return
                 'advanced'         => [
                     'label'      => 'Advanced',
                   'icon'       => 'fa fa-cogs',
-                    'route'      => 'zfcadmin/system-settings/sections',
+                    'route'      => 'backend/system-settings/sections',
                     'params'     => ['section' => 'advanced'],
                     'permission' => 'admin/system-settings/advanced/view',
                     'fieldsets'  => [

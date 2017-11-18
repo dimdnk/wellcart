@@ -56,13 +56,13 @@ class NotificationsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This message no longer exists.'),
-            'zfcadmin/admin/notifications'
+            'backend/admin/notifications'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Notification was deleted successfully.'),
-                'zfcadmin/admin/notifications'
+                'backend/admin/notifications'
             );
         }
     }
@@ -76,7 +76,7 @@ class NotificationsController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This message no longer exists.'),
-            'zfcadmin/admin/notifications'
+            'backend/admin/notifications'
         );
         if ($domainResponse) {
             $domainResponse->setIsRead(true);
@@ -109,7 +109,7 @@ class NotificationsController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/admin/notifications'
+            'backend/admin/notifications'
         );
     }
 

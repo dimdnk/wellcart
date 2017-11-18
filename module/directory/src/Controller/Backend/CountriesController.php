@@ -88,7 +88,7 @@ class CountriesController extends AbstractActionController implements
             $entity,
             __('Country info successfully created.'),
             __('Country info successfully modified.'),
-            'zfcadmin/directory/countries'
+            'backend/directory/countries'
         );
     }
 
@@ -104,7 +104,7 @@ class CountriesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This country no longer exists.'),
-            'zfcadmin/directory/countries'
+            'backend/directory/countries'
         );
 
         if ($domainResponse) {
@@ -121,13 +121,13 @@ class CountriesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This country no longer exists.'),
-            'zfcadmin/directory/countries'
+            'backend/directory/countries'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Country was deleted successfully.'),
-                'zfcadmin/directory/countries'
+                'backend/directory/countries'
             );
         }
     }
@@ -152,7 +152,7 @@ class CountriesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/directory/countries'
+            'backend/directory/countries'
         );
     }
 

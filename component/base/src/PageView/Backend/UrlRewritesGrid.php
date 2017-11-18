@@ -71,7 +71,7 @@ class UrlRewritesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/base/url-rewrites';
+        return 'backend/base/url-rewrites';
     }
 
     /**

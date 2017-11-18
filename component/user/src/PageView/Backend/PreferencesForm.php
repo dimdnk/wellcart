@@ -30,7 +30,7 @@ class PreferencesForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Users'),
-                        'route'  => 'zfcadmin/user/accounts',
+                        'route'  => 'backend/user/accounts',
                         'params' => [],
                     ],
                 ]

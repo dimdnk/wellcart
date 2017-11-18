@@ -72,7 +72,7 @@ class ZonesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/directory/zones';
+        return 'backend/directory/zones';
     }
 
     /**

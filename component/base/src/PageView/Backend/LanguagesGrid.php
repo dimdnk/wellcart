@@ -72,7 +72,7 @@ class LanguagesGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/base/languages';
+        return 'backend/base/languages';
     }
 
     /**

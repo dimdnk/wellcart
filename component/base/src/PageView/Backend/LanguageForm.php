@@ -43,7 +43,7 @@ class LanguageForm extends Standard
                 [
                     'list' => [
                         'label'  => __('Languages'),
-                        'route'  => 'zfcadmin/base/languages',
+                        'route'  => 'backend/base/languages',
                         'params' => [],
                     ],
                 ]

@@ -11,30 +11,30 @@ return [
         'backend_main_navigation' => [
             'wellcart-backend/system-settings' => [
                 'pages' => [
-                    'zfcadmin/directory/currencies' => [
+                    'backend/directory/currencies' => [
                         'label'      => 'Currencies',
-                        'route'      => 'zfcadmin/directory/currencies',
+                        'route'      => 'backend/directory/currencies',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'directory/currencies/list',
                     ],
-                    'zfcadmin/directory/countries'  => [
+                    'backend/directory/countries'  => [
                         'label'      => 'Countries',
-                        'route'      => 'zfcadmin/directory/countries',
+                        'route'      => 'backend/directory/countries',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'directory/countries/list',
                     ],
-                    'zfcadmin/directory/zones'      => [
+                    'backend/directory/zones'      => [
                         'label'      => 'Zones',
-                        'route'      => 'zfcadmin/directory/zones',
+                        'route'      => 'backend/directory/zones',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'directory/zones/list',
                     ],
-                    'zfcadmin/directory/geo-zones'  => [
+                    'backend/directory/geo-zones'  => [
                         'label'      => 'Geo Zones',
-                        'route'      => 'zfcadmin/directory/geo-zones',
+                        'route'      => 'backend/directory/geo-zones',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'directory/geo-zones/list',

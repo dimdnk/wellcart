@@ -13,21 +13,21 @@ return [
                 'pages' => [
                     'wellcart-backend/system-settings' => [
                         'label'      => 'System Settings',
-                        'route'      => 'zfcadmin/system-settings/sections',
+                        'route'      => 'backend/system-settings/sections',
                         'params'     => ['section' => 'general'],
                         'order'      => 9500,
                         'permission' => 'admin/system-settings/general/view',
                     ],
-                    'zfcadmin/base/languages'          => [
+                    'backend/base/languages'          => [
                         'label'      => 'Languages',
-                        'route'      => 'zfcadmin/base/languages',
+                        'route'      => 'backend/base/languages',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'base/languages/list',
                     ],
-                    'zfcadmin/base/url-rewrites'       => [
+                    'backend/base/url-rewrites'       => [
                         'label'      => 'URL Rewrites',
-                        'route'      => 'zfcadmin/base/url-rewrites',
+                        'route'      => 'backend/base/url-rewrites',
                         'action'     => 'list',
                         'order'      => -300,
                         'permission' => 'base/url-rewrites/list',

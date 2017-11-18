@@ -9,14 +9,14 @@
 return [
     'navigation' => [
         'backend_main_navigation' => [
-            'zfcadmin:content-section' => [
+            'backend:content-section' => [
                 'label' => 'Content',
                 'icon'  => 'icon-folder5',
-                'route' => 'zfcadmin/cms/pages',
+                'route' => 'backend/cms/pages',
                 'pages' => [
-                    'zfcadmin/cms/pages' => [
+                    'backend/cms/pages' => [
                         'label'  => 'Pages',
-                        'route'  => 'zfcadmin/cms/pages',
+                        'route'  => 'backend/cms/pages',
                         'action' => 'list',
                     ],
                 ],

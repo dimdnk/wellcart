@@ -88,7 +88,7 @@ class ZonesController extends AbstractActionController implements
             $entity,
             __('Zone successfully created.'),
             __('Zone successfully modified.'),
-            'zfcadmin/directory/zones'
+            'backend/directory/zones'
         );
     }
 
@@ -104,7 +104,7 @@ class ZonesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This zone no longer exists.'),
-            'zfcadmin/directory/zones'
+            'backend/directory/zones'
         );
 
         if ($domainResponse) {
@@ -121,13 +121,13 @@ class ZonesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This zone no longer exists.'),
-            'zfcadmin/directory/zones'
+            'backend/directory/zones'
         );
         if ($domainResponse) {
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Zone was deleted successfully.'),
-                'zfcadmin/directory/zones'
+                'backend/directory/zones'
             );
         }
     }
@@ -163,7 +163,7 @@ class ZonesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/directory/zones'
+            'backend/directory/zones'
         );
     }
 

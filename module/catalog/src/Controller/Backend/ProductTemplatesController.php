@@ -89,7 +89,7 @@ class ProductTemplatesController extends AbstractActionController implements
             $entity,
             __('Product template successfully created.'),
             __('Product template successfully modified.'),
-            'zfcadmin/catalog/product-templates'
+            'backend/catalog/product-templates'
         );
     }
 
@@ -105,7 +105,7 @@ class ProductTemplatesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This group no longer exists.'),
-            'zfcadmin/catalog/product-templates',
+            'backend/catalog/product-templates',
             [],
             [],
             false,
@@ -126,7 +126,7 @@ class ProductTemplatesController extends AbstractActionController implements
     {
         $domainResponse = $this->findOrNotFound(
             __('This group no longer exists.'),
-            'zfcadmin/catalog/product-templates',
+            'backend/catalog/product-templates',
             [],
             [],
             false,
@@ -136,7 +136,7 @@ class ProductTemplatesController extends AbstractActionController implements
             return $this->attemptToDeleteEntity(
                 $domainResponse,
                 __('Product template was deleted successfully.'),
-                'zfcadmin/catalog/product-templates'
+                'backend/catalog/product-templates'
             );
         }
     }
@@ -161,7 +161,7 @@ class ProductTemplatesController extends AbstractActionController implements
         return $this->attemptToPerformGroupAction(
             $action,
             $ids,
-            'zfcadmin/catalog/product-templates'
+            'backend/catalog/product-templates'
         );
     }
 

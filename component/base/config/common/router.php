@@ -45,7 +45,7 @@ return [
                             ],
                         ],
                     ],
-                    'zfcadmin'                   => [
+                    'backend'                   => [
                         'type'          => 'WellCart\Router\Http\Segment',
                         'may_terminate' => true,
                         'options'       => [

@@ -71,7 +71,7 @@ class BrandsGrid extends Standard
      */
     public function getRouteName()
     {
-        return 'zfcadmin/catalog/brands';
+        return 'backend/catalog/brands';
     }
 
     /**
