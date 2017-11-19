@@ -10,7 +10,7 @@ return
          [
              'base_path'                => '/',
              'display_not_found_reason' => false,
-             'display_exceptions'       => true,
+             'display_exceptions'       => false,
              'doctype'                  => 'HTML5',
              'layout'                   => 'layout/page-fixed-1column',
              'not_found_template'       => 'error/404',
