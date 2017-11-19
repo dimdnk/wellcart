@@ -49,7 +49,6 @@
           "name": "common",
           "extends": false,
           "require": [
-            {"name": "ZfcAdmin", "priority": -72810},
             {"name": "WellCart\\Backend", "priority": -72800}
           ]
         }
@@ -69,7 +68,6 @@
   "prefer-stable": true,
   "require": {
     "php": "^7.1.0",
-    "zf-commons/zfc-admin": "0.2.*",
     "wellcart/component-base": "0.1.*",
     "wellcart/component-setup": "0.1.*",
     "wellcart/component-user": "0.1.*",
