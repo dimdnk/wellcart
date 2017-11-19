@@ -20,6 +20,7 @@ use Zend\ConfigAggregator\ConfigAggregator;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use Zend\Mvc\MvcEvent;
+use Zend\Mvc\Router\RouteMatch;
 
 class Module implements
     Feature\BootstrapListenerInterface,
@@ -58,6 +59,12 @@ class Module implements
     public function onBootstrap(EventInterface $e)
     {
         $target = $e->getTarget();
+
+        $app = $e->getParam('application');
+        $em  = $app->getEventManager();
+
+        $em->attach(MvcEvent::EVENT_DISPATCH, array($this, 'selectLayoutBasedOnRoute'));
+
         $target->getEventManager()->attach(
             $target->getServiceManager()->get(UnauthorizedStrategy::class)
         );
@@ -120,4 +127,34 @@ class Module implements
     {
         return str_replace('\\', DS, dirname(__DIR__)) . DS;
     }
+    /**
+     * Select the admin layout based on route name
+     *
+     * @param  MvcEvent $e
+     * @return void
+     */
+    public function selectLayoutBasedOnRoute(MvcEvent $e)
+    {
+        $app    = $e->getParam('application');
+        $sm     = $app->getServiceManager();
+        $config = $sm->get('config');
+
+        if (false === $config['wellcart']['backend']['use_admin_layout']) {
+            return;
+        }
+
+        $match      = $e->getRouteMatch();
+        $controller = $e->getTarget();
+        if (!$match instanceof RouteMatch
+            || 0 !== strpos($match->getMatchedRouteName(), 'backend')
+            || $controller->getEvent()->getResult()->terminate()
+        ) {
+            return;
+        }
+
+        $layout     = $config['wellcart']['backend']['admin_layout_template'];
+        $controller->layout($layout);
+    }
 }
+
+

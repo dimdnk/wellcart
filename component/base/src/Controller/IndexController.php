@@ -10,7 +10,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use WellCart\Mvc\Controller\AbstractActionController;
 
 class IndexController extends AbstractActionController
 {

@@ -123,11 +123,12 @@ return [
                 Ui\Theme\BackendRouteAdapter::class => Ui\Theme\BackendRouteAdapter::class,
             ],
         ],
+        'backend' => [
+            'use_admin_layout'      => true,
+            'admin_layout_template' => 'layout/page-fluid-2columns',
+        ],
     ],
-    'backend' => [
-        'use_admin_layout'      => true,
-        'admin_layout_template' => 'layout/page-fluid-2columns',
-    ],
+
 
 
     /**

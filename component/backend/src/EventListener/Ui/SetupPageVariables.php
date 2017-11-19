@@ -57,8 +57,8 @@ class SetupPageVariables extends AbstractListenerAggregate
         $isLogged = (bool)($userIdentity->__invoke());
         $routeName = $matches->getMatchedRouteName();
         if (!$isLogged
-            || (strlen($routeName) < 8
-                || substr($routeName, 0, 8) != 'backend')
+            || (strlen($routeName) < 7
+                || substr($routeName, 0, 7) != 'backend')
         ) {
             return;
         }
