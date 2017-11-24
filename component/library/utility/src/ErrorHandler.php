@@ -110,7 +110,7 @@ final class ErrorHandler
                 $error['code'] = $e->getCode();
                 $error['type'] = get_class($e);
                 $error['message'] = $e->getMessage();
-                $error['file'] = $e->getFile();
+                $error['file'] = str_replace(WELLCART_ROOT,'', $e->getFile());
                 $error['line'] = $e->getLine();
             }
             echo json_encode(['error' => $error]);
