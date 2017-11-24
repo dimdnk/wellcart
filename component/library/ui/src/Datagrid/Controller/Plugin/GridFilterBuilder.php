@@ -78,7 +78,7 @@ class GridFilterBuilder extends AbstractPlugin
     {
         $values = $this->getValues();
 
-        return (isset($values[$column])) ? $values[$column] : null;
+        return $values[$column] ??  null;
     }
 
     /**
@@ -185,7 +185,7 @@ class GridFilterBuilder extends AbstractPlugin
         $rootAlias = $queryBuilder->getRootAliases()[0] . '.';
 
         foreach ($expressions as $column => $expression) {
-            $value = (isset($values[$column])) ? $values[$column] : null;
+            $value = $values[$column] ?? null;
             if ($value === '' || $value === null) {
                 continue;
             }

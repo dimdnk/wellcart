@@ -167,8 +167,7 @@ class LinearForm extends AbstractForm implements FormInterface
      */
     public function getUiConfigKey()
     {
-        return ($this->uiConfigKey) ? $this->uiConfigKey
-            : $this->getName();
+        return $this->uiConfigKey ?? $this->getName();
     }
 
     /**
