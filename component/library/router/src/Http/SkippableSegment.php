@@ -110,9 +110,8 @@ class SkippableSegment extends Segment
             }
 
             $translator = $options['translator'];
-            $textDomain = (isset($options['text_domain'])
-                ? $options['text_domain'] : 'default');
-            $locale = (isset($options['locale']) ? $options['locale'] : null);
+            $textDomain = $options['text_domain'] ??  'default';
+            $locale = $options['locale'] ??  null;
         }
 
         $path = '';

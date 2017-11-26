@@ -403,8 +403,7 @@ abstract class Standard
 
     public function getUiConfigKey()
     {
-        return ($this->uiConfigKey) ? $this->uiConfigKey
-            : $this->getId();
+        return $this->uiConfigKey ?? $this->getId();
     }
 
     public function setUiConfigKey(string $uiConfigKey)
