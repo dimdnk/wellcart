@@ -12,7 +12,7 @@ Individual low coupled components, DI services, helpers & plugins for each simpl
 
 ### System Requirements
 
-Platform requires PHP 7.1.0 or later; we recommend using the
+Platform requires PHP 7.1.3 or later; we recommend using the
 latest PHP version whenever possible.
 
 Required extensions:

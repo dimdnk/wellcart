@@ -16,7 +16,7 @@ straightforward and easy.
 
 ### System Requirements
 
-Component requires PHP 7.1.0 or later; we recommend using the
+Component requires PHP 7.1.3 or later; we recommend using the
 latest PHP version whenever possible.
 
 Required extensions:

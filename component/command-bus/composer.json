@@ -56,7 +56,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.1.0",
+    "php": "^7.1.3",
     "simple-bus/asynchronous": "2.*",
     "wellcart/component-base": "0.1.*"
   },

@@ -58,7 +58,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.1.0",
+    "php": "^7.1.3",
     "wellcart/component-money": "0.1.*",
     "wellcart/component-base": "0.1.*",
     "wellcart/component-setup": "0.1.*",
