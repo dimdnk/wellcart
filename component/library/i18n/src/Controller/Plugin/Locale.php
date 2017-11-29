@@ -11,6 +11,7 @@ namespace WellCart\I18n\Controller\Plugin;
 
 use Doctrine\Common\Collections\Collection;
 use WellCart\Base\Spec\LocaleLanguageEntity as Language;
+use WellCart\Base\Spec\LocaleLanguageEntity;
 use Zend\I18n\Translator\TranslatorInterface;
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
 
@@ -59,7 +60,7 @@ class Locale extends AbstractPlugin
     /**
      * @return mixed
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->language;
     }

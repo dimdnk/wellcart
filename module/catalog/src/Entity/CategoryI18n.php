@@ -124,7 +124,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
     /**
      * @return \WellCart\Base\Spec\LocaleLanguageEntity
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->language;
     }
@@ -134,7 +134,7 @@ class CategoryI18n extends AbstractEntity implements CategoryI18nEntity
      *
      * @return CategoryI18nEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null
+    public function setLanguage(?LocaleLanguageEntity $language
     ): CategoryI18nEntity {
         $languageId = null;
         if ($language) {

@@ -70,7 +70,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
     /**
      * @return \WellCart\Base\Spec\LocaleLanguageEntity
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->language;
     }
@@ -80,7 +80,7 @@ class FeatureI18n extends AbstractEntity implements FeatureI18nEntity
      *
      * @return FeatureI18nEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null
+    public function setLanguage(?LocaleLanguageEntity $language
     ): FeatureI18nEntity {
         $this->language = $language;
 

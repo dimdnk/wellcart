@@ -9,6 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\I18n\View\Helper;
 
+use WellCart\Base\Spec\LocaleLanguageEntity;
 use Zend\View\Helper\AbstractHelper;
 
 class Locale extends AbstractHelper
@@ -53,7 +54,7 @@ class Locale extends AbstractHelper
     /**
      * @return mixed
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->plugin->getLanguage();
     }

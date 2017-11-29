@@ -74,7 +74,7 @@ class FeatureValueI18n extends AbstractEntity implements FeatureValueI18nEntity
     /**
      * @return \WellCart\Base\Spec\LocaleLanguageEntity
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->language;
     }
@@ -84,7 +84,7 @@ class FeatureValueI18n extends AbstractEntity implements FeatureValueI18nEntity
      *
      * @return FeatureValueI18nEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null
+    public function setLanguage(?LocaleLanguageEntity $language
     ): FeatureValueI18nEntity {
         $this->language = $language;
 

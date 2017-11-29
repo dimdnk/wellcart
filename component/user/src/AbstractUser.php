@@ -491,7 +491,7 @@ class AbstractUser extends AbstractEntity implements
      *
      * @return UserEntity
      */
-    public function setPasswordResetToken($passwordResetToken
+    public function setPasswordResetToken(?string $passwordResetToken
     ): UserEntity {
         $this->passwordResetToken = $passwordResetToken;
 
@@ -511,7 +511,7 @@ class AbstractUser extends AbstractEntity implements
      *
      * @return UserEntity
      */
-    public function setEmailConfirmationToken($emailConfirmationToken
+    public function setEmailConfirmationToken(?string $emailConfirmationToken
     ): UserEntity {
         $this->emailConfirmationToken = $emailConfirmationToken;
 
@@ -544,7 +544,7 @@ class AbstractUser extends AbstractEntity implements
     /**
      * @return LocaleLanguageEntity
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->language;
     }
@@ -554,7 +554,7 @@ class AbstractUser extends AbstractEntity implements
      *
      * @return UserEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null)
+    public function setLanguage(?LocaleLanguageEntity $language)
     {
         $this->language = $language;
 

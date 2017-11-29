@@ -37,14 +37,14 @@ interface FeatureI18nEntity
     /**
      * @return \WellCart\Base\Spec\LocaleLanguageEntity
      */
-    public function getLanguage();
+    public function getLanguage() :?LocaleLanguageEntity;
 
     /**
      * @param LocaleLanguageEntity|null $language
      *
      * @return FeatureI18nEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null);
+    public function setLanguage(?LocaleLanguageEntity $language);
 
     /**
      * @return int

@@ -71,7 +71,7 @@ class ProductTemplateI18n extends AbstractEntity
     /**
      * @return \WellCart\Base\Spec\LocaleLanguageEntity
      */
-    public function getLanguage()
+    public function getLanguage():?LocaleLanguageEntity
     {
         return $this->language;
     }
@@ -81,7 +81,7 @@ class ProductTemplateI18n extends AbstractEntity
      *
      * @return ProductTemplateI18nEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null
+    public function setLanguage(?LocaleLanguageEntity $language
     ): ProductTemplateI18nEntity {
         $this->language = $language;
 

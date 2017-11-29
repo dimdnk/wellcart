@@ -91,14 +91,14 @@ interface ProductI18nEntity
     /**
      * @return \WellCart\Base\Spec\LocaleLanguageEntity
      */
-    public function getLanguage();
+    public function getLanguage() :?LocaleLanguageEntity;
 
     /**
      * @param LocaleLanguageEntity|null $language
      *
      * @return ProductI18nEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null
+    public function setLanguage(?LocaleLanguageEntity $language
     ): ProductI18nEntity;
 
     /**

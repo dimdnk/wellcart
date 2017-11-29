@@ -294,7 +294,7 @@ interface UserEntity
      *
      * @return UserEntity
      */
-    public function setPasswordResetToken($passwordResetToken
+    public function setPasswordResetToken(?string $passwordResetToken
     ): UserEntity;
 
     /**
@@ -307,7 +307,7 @@ interface UserEntity
      *
      * @return UserEntity
      */
-    public function setEmailConfirmationToken($emailConfirmationToken
+    public function setEmailConfirmationToken(?string $emailConfirmationToken
     ): UserEntity;
 
     /**
@@ -325,12 +325,12 @@ interface UserEntity
     /**
      * @return LocaleLanguageEntity
      */
-    public function getLanguage();
+    public function getLanguage() :?LocaleLanguageEntity;
 
     /**
      * @param LocaleLanguageEntity $language
      *
      * @return UserEntity
      */
-    public function setLanguage(LocaleLanguageEntity $language = null);
+    public function setLanguage(?LocaleLanguageEntity $language);
 }
