@@ -22,7 +22,7 @@ class Administrator extends AbstractUser implements AdministratorEntity
      *
      * @return UserEntity
      */
-    public function setEmailConfirmationToken($emailConfirmationToken
+    public function setEmailConfirmationToken(?string $emailConfirmationToken
     ): UserEntity {
         $this->emailConfirmationToken = null;
 
