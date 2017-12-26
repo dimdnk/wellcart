@@ -12,6 +12,7 @@
         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.7/phpunit.xsd"
         bootstrap="./bootstrap.php"
         backupGlobals="false"
+        printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
         backupStaticAttributes="false"
         colors="true"
         convertErrorsToExceptions="true"

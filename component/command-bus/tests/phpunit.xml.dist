@@ -9,6 +9,7 @@
 -->
 <phpunit bootstrap="./bootstrap.php"
          backupGlobals="false"
+         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer"
          backupStaticAttributes="false"
          colors="true"
          convertErrorsToExceptions="true"
