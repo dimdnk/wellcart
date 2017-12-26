@@ -30,9 +30,9 @@
     <testsuites>
         <testsuite name="WellCart_Platform">
             <directory suffix="Test.php">./component/base/tests/unit/</directory>
-            <directory suffix="Test.php">./component/command-bus/tests/unit/</directory>
-            <directory suffix="Test.php">./component/schema-migration/tests/unit/</directory>
             <directory suffix="Test.php">./component/setup/tests/unit/</directory>
+            <directory suffix="Test.php">./component/command-bus/tests/unit/</directory>
+            <directory suffix="Test.php">./component/schema-migration/tests/unit/</directory>            
             <directory suffix="Test.php">./component/backend/tests/unit/</directory>
 
             <directory suffix="Test.php">./component/user/tests/unit/</directory>
