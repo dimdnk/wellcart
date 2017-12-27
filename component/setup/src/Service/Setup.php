@@ -493,9 +493,9 @@ class Setup
             'Server Capabilities' => [
                 'php_version' => [
                     'title'    => __('PHP Version'),
-                    'expected' => '>= 7.1.3',
+                    'expected' => '>= 7.2.0',
                     'value'    => phpversion(),
-                    'success'  => version_compare(phpversion(), '7.1.3', '>='),
+                    'success'  => version_compare(phpversion(), '7.2.0', '>='),
                 ],
             ],
             'PHP Settings'        => [

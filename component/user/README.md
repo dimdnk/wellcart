@@ -25,7 +25,7 @@ Responsibilities
 
 ### System Requirements
 
-Module requires PHP 7.1.3 or later; we recommend using the
+Module requires PHP 7.2.0 or later; we recommend using the
 latest PHP version whenever possible.
 
 Required extensions:

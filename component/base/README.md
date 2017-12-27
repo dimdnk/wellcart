@@ -16,7 +16,7 @@ as well as decreasing dependencies.
 
 ### System Requirements
 
-Library requires PHP 7.1.3 or later; we recommend using the
+Library requires PHP 7.2.0 or later; we recommend using the
 latest PHP version whenever possible.
 
 #### Required extensions:

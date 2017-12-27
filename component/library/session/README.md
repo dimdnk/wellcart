@@ -8,7 +8,7 @@ Manage and preserve session data, a logical complement of cookie data, across mu
 
 ### System Requirements
 
-Library requires PHP 7.1.3 or later; we recommend using the
+Library requires PHP 7.2.0 or later; we recommend using the
 latest PHP version whenever possible.
 
 ##### WellCart tries to be strict standard compliant, including by not limited to:

@@ -17,12 +17,12 @@ if (!defined('WELLCART')):
     /**
      * Check PHP version
      */
-    if (version_compare(phpversion(), '7.1.3', '<') === true) {
+    if (version_compare(phpversion(), '7.2.0', '<') === true) {
 
         $phpVersion = phpversion();
 
         if (PHP_SAPI == 'cli') {
-            echo 'WellCart supports PHP 7.1.3 or newer. Your version is '
+            echo 'WellCart supports PHP 7.2.0 or newer. Your version is '
                 . $phpVersion . ".\n";
         } else {
             echo <<<HTML
@@ -34,7 +34,7 @@ if (!defined('WELLCART')):
         </head>
         <body>
         <h4>Whoops, it looks like you have an invalid PHP version.</h4>
-        <p>WellCart supports PHP 7.1.3 or newer. Your version is $phpVersion.</p>
+        <p>WellCart supports PHP 7.2.0 or newer. Your version is $phpVersion.</p>
         </body>
     </html>
 HTML;
