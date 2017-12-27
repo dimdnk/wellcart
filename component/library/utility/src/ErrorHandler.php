@@ -36,9 +36,9 @@ final class ErrorHandler
         $code, $error, $file = null, $line = null
     ) {
         if (error_reporting() && $code) {
-            if ($code == E_USER_DEPRECATED) {
+            if ($code == E_USER_DEPRECATED || $code == E_DEPRECATED) {
                 //error_log('Deprecated: ' . $error);
-                //return true;
+                return true;
             }
             // This error is not suppressed by current error reporting settings
             // Convert the error into an ErrorException

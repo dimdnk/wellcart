@@ -143,7 +143,7 @@ class Renderer
             $validators = $this->getValidatorsForElement(
                 $inputFilter, $element
             );
-            if (count($validators) > 0) {
+            if ($validators && count($validators) > 0) {
                 $foundValidators[] = [
                     'element'    => $element,
                     'validators' => $validators,
