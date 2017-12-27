@@ -301,7 +301,7 @@ class Form extends \Zend\Form\Form implements EventManagerAwareInterface
     /**
      * @inheritdoc
      */
-    public function bindValues(array $values = [])
+    public function bindValues(array $values = [], array $validationGroup = null)
     {
         $this->getEventManager()->trigger
         (
