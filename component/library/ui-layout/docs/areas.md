@@ -74,7 +74,7 @@ class AreaListener implements ListenerAggregateInterface
         $this->layoutUpdater = $layoutUpdater;
     }
 
-    public function attach(EventManagerInterface $events)
+    public function attach(EventManagerInterface $events, $priority = 1)
     {
         $events->attach(MvcEvent::EVENT_DISPATCH, [$this, 'onDispatch']);
     }

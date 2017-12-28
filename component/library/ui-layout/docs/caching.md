@@ -37,7 +37,7 @@ class LayoutStructureCacheListener implements ListenerAggregateInterface
         $this->cache = $cache;
     }
 
-    public function attach(EventManagerInterface $events)
+    public function attach(EventManagerInterface $events, $priority = 1)
     {
         $events->getSharedManager()->attach(
             'WellCart\Ui\Layout\Updater\LayoutUpdater',

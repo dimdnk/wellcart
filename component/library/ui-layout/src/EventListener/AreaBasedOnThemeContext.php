@@ -37,7 +37,11 @@ class AreaBasedOnThemeContext implements
         $this->themeManager = $themeManager;
     }
 
-    public function attach(EventManagerInterface $events)
+  /**
+   * @param EventManagerInterface $events
+   * @param int                   $priority
+   */
+    public function attach(EventManagerInterface $events, $priority = 1)
     {
         $events->attach(MvcEvent::EVENT_DISPATCH, [$this, 'onDispatch']);
     }

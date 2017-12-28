@@ -24,7 +24,7 @@ class UnauthorizedStrategy extends AbstractListenerAggregate
     /**
      * {@inheritdoc}
      */
-    public function attach(EventManagerInterface $events)
+    public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(
             MvcEvent::EVENT_DISPATCH_ERROR,

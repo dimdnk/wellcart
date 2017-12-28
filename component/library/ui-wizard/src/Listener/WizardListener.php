@@ -23,7 +23,7 @@ class WizardListener implements ListenerAggregateInterface
     /**
      * @param EventManagerInterface $events
      */
-    public function attach(EventManagerInterface $events)
+    public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(WizardEvent::EVENT_POST_PROCESS_STEP, [$this, 'persistStep'], 100);
     }

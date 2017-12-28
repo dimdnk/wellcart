@@ -31,9 +31,10 @@ class ConfigListener extends AbstractListenerAggregate
     /**
      * Attach listener to ModuleEvent::EVENT_MERGE_CONFIG
      *
-     * @param  EventManagerInterface $events
-     */
-    public function attach(EventManagerInterface $events)
+   * @param EventManagerInterface $events
+   * @param int                   $priority
+   */
+    public function attach(EventManagerInterface $events, $priority = 1)
     {
         $this->listeners[] = $events->attach(
             ModuleEvent::EVENT_LOAD_MODULE_RESOLVE, [$this, 'onModuleResolve'],

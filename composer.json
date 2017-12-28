@@ -141,10 +141,6 @@
               "priority": -90000
             },
             {
-              "name": "ZfcBase",
-              "priority": -72948
-            },
-            {
               "name": "AcMailer",
               "priority": -72943
             },
@@ -290,10 +286,6 @@
             {
               "name": "WellCart\\Theme\\SetupUi",
               "priority": -80200
-            },
-            {
-              "name": "ZfcBase",
-              "priority": -72931
             },
             {
               "name": "BjyProfiler",
