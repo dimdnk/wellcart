@@ -7,22 +7,12 @@ use WellCart\Ui\Layout\Layout\Layout;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
 use Zend\Mvc\View\Http\ViewManager;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use WellCart\Ui\Layout\Options\ModuleOptions;
 
 class LayoutFactory implements FactoryInterface
 {
-    /**
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return Layout
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, Layout::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

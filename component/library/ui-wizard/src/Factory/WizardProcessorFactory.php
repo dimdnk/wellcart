@@ -10,21 +10,25 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Wizard\Factory;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Ui\Wizard\WizardProcessor;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class WizardProcessorFactory implements FactoryInterface
 {
-    /**
-     * @param  ServiceLocatorInterface $serviceLocator
-     * @return WizardProcessor
-    */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $request  = $serviceLocator->get('Request');
-        $response = $serviceLocator->get('Response');
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {       
+    $request  = $container->get('Request');
+    $response = $container->get('Response');
 
-        return new \WellCart\Ui\Wizard\WizardProcessor($request, $response);
-    }
+    return new \WellCart\Ui\Wizard\WizardProcessor($request, $response);
+  }
 }

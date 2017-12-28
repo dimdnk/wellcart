@@ -9,20 +9,11 @@ namespace WellCart\Ui\Layout\Zdt\Collector;
 use WellCart\Ui\Layout\Layout\LayoutInterface;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class LayoutCollectorFactory implements FactoryInterface
 {
-    /**
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, LayoutCollector::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

@@ -10,25 +10,29 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Wizard\Factory;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Ui\Wizard\Step\StepPluginManager;
 use Zend\ServiceManager\Config;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class StepPluginManagerFactory implements FactoryInterface
 {
-    /**
-     * @param  ServiceLocatorInterface $serviceLocator
-     * @return StepPluginManager
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $config = $serviceLocator->get('Config');
-        $configInstance = new Config($config['wizard_steps']);
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $config = $container->get('Config');
+    $configInstance = new Config($config['wizard_steps']);
 
-        $stepPluginManager = new StepPluginManager($configInstance);
-        $stepPluginManager->setServiceLocator($serviceLocator);
+    $stepPluginManager = new StepPluginManager($configInstance);
+    $stepPluginManager->setServiceLocator($container);
 
-        return $stepPluginManager;
-    }
+    return $stepPluginManager;
+  }
 }

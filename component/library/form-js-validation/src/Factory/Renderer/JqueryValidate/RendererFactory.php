@@ -9,26 +9,27 @@ declare(strict_types = 1);
 
 namespace WellCart\Form\JsValidation\Factory\Renderer\JqueryValidate;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Form\JsValidation\Renderer\JqueryValidate\Renderer;
 use WellCart\Form\JsValidation\Renderer\JqueryValidate\Rule\RulePluginManager;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class RendererFactory implements FactoryInterface
 {
-    /**
-     * Create service
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     *
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $renderer = new Renderer();
-        $pluginManager = new RulePluginManager();
-        $pluginManager->setServiceLocator($serviceLocator);
-        $renderer->setRulePluginManager($pluginManager);
-        return $renderer;
-    }
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $renderer = new Renderer();
+    $pluginManager = new RulePluginManager();
+    $pluginManager->setServiceLocator($container);
+    $renderer->setRulePluginManager($pluginManager);
+    return $renderer;
+  }
 }

@@ -8,23 +8,12 @@ namespace WellCart\Ui\Layout\View\Helper;
 
 use WellCart\Ui\Layout\Block\BlockPoolInterface;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class BlockFactory implements FactoryInterface
 {
-    /**
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return Block
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $container = $serviceLocator->getServiceLocator();
-        return $this($container, Block::class);
-    }
-
-    /**
+  /**
      * @param ContainerInterface $container
      * @param $requestedName
      * @param array|null $options

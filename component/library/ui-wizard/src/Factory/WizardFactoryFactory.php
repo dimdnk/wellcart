@@ -10,25 +10,29 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Wizard\Factory;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Ui\Wizard\WizardFactory;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class WizardFactoryFactory implements FactoryInterface
 {
-    /**
-     * @param  ServiceLocatorInterface $serviceLocator
-     * @return WizardFactory
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $config = $serviceLocator->get('WellCart\Ui\Wizard\Config');
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $config = $container->get('WellCart\Ui\Wizard\Config');
 
-        $wizardFactory = new \WellCart\Ui\Wizard\WizardFactory($serviceLocator, $config);
+    $wizardFactory = new \WellCart\Ui\Wizard\WizardFactory($container, $config);
 
-        $stepFactory = $serviceLocator->get('WellCart\Ui\Wizard\Step\StepFactory');
-        $wizardFactory->setStepFactory($stepFactory);
+    $stepFactory = $container->get('WellCart\Ui\Wizard\Step\StepFactory');
+    $wizardFactory->setStepFactory($stepFactory);
 
-        return $wizardFactory;
-    }
+    return $wizardFactory;
+  }
 }

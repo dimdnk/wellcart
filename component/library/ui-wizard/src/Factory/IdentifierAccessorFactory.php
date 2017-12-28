@@ -10,20 +10,24 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Wizard\Factory;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Ui\Wizard\Wizard\IdentifierAccessor;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class IdentifierAccessorFactory implements FactoryInterface
 {
-    /**
-     * @param  ServiceLocatorInterface $serviceLocator
-     * @return IdentifierAccessor
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $request = $serviceLocator->get('Request');
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $request = $container->get('Request');
 
-        return new IdentifierAccessor($request);
-    }
+    return new IdentifierAccessor($request);
+  }
 }

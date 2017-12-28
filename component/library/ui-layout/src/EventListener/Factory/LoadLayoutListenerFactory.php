@@ -5,7 +5,7 @@ namespace WellCart\Ui\Layout\EventListener\Factory;
 use WellCart\Ui\Layout\Layout\LayoutInterface;
 use WellCart\Ui\Layout\EventListener\LoadLayoutListener;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**

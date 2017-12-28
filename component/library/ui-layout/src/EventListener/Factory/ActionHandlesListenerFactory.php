@@ -5,7 +5,7 @@ use WellCart\Ui\Layout\EventListener\ActionHandlesListener;
 use WellCart\Ui\Layout\Options\ModuleOptions;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
@@ -14,16 +14,6 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  */
 class ActionHandlesListenerFactory implements FactoryInterface
 {
-    /**
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return ActionHandlesListener
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, ActionHandlesListener::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

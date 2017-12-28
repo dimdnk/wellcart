@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace WellCart\Money\Factory;
 
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 //use Zend\Form\FormElementManager;

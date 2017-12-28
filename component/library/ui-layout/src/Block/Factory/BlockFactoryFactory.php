@@ -5,7 +5,7 @@ namespace WellCart\Ui\Layout\Block\Factory;
 use WellCart\Ui\Layout\BlockManager;
 use WellCart\Ui\Layout\Options\ModuleOptions;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
@@ -14,11 +14,6 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  */
 class BlockFactoryFactory implements FactoryInterface
 {
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, BlockFactory::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

@@ -9,19 +9,11 @@ namespace WellCart\Ui\Layout\Generator;
 use WellCart\Ui\Layout\Block\BlockPoolInterface;
 use WellCart\Ui\Layout\Block\Factory\BlockFactoryInterface;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class BlocksGeneratorFactory implements FactoryInterface
 {
-    /**
-     * @inheritDoc
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, BlocksGenerator::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

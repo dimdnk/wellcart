@@ -8,21 +8,11 @@ namespace WellCart\Ui\Layout\Filter;
 
 use WellCart\Ui\Layout\Options\ModuleOptions;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class CacheBusterFilterFactory implements FactoryInterface
 {
-    /**
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $container = $serviceLocator->getServiceLocator();
-        return $this($container, CacheBusterFilter::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

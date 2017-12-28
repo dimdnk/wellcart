@@ -10,8 +10,12 @@ declare(strict_types = 1);
 
 namespace WellCart\Backend\Factory\Rbac\Guard;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Backend\Rbac\Guard\RouteGuard;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\MutableCreationOptionsInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -32,23 +36,23 @@ class RouteGuardFactory
         $this->options = $options;
     }
 
-    /**
-     * {@inheritDoc}
-     * @return RouteGuard
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $parentLocator = $serviceLocator->getServiceLocator();
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $parentLocator = $container->getServiceLocator();
 
-        /* @var \ZfcRbac\Options\ModuleOptions $moduleOptions */
-        $moduleOptions = $parentLocator->get('ZfcRbac\Options\ModuleOptions');
+    /* @var \ZfcRbac\Options\ModuleOptions $moduleOptions */
+    $moduleOptions = $parentLocator->get('ZfcRbac\Options\ModuleOptions');
 
-        /* @var \ZfcRbac\Service\RoleService $roleService */
-        $roleService = $parentLocator->get('ZfcRbac\Service\RoleService');
+    /* @var \ZfcRbac\Service\RoleService $roleService */
+    $roleService = $parentLocator->get('ZfcRbac\Service\RoleService');
 
-        $routeGuard = new RouteGuard($roleService, $this->options);
-        $routeGuard->setProtectionPolicy($moduleOptions->getProtectionPolicy());
+    $routeGuard = new RouteGuard($roleService, $this->options);
+    $routeGuard->setProtectionPolicy($moduleOptions->getProtectionPolicy());
 
-        return $routeGuard;
-    }
+    return $routeGuard;
+  }
 }

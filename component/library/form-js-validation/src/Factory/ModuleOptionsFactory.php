@@ -9,24 +9,25 @@ declare(strict_types = 1);
 
 namespace WellCart\Form\JsValidation\Factory;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use RuntimeException;
 use WellCart\Form\JsValidation\Options\ModuleOptions;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ModuleOptionsFactory implements FactoryInterface
 {
-    /**
-     * Create service
-     *
-     * @param  ServiceLocatorInterface $serviceLocator
-     *
-     * @return mixed
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $options = $serviceLocator->get('Config');
-        $options = isset($options['wellcart']['form_js_validation']) ? $options['wellcart']['form_js_validation'] : [];
-        return new ModuleOptions($options);
-    }
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $options = $container->get('Config');
+    $options = isset($options['wellcart']['form_js_validation']) ? $options['wellcart']['form_js_validation'] : [];
+    return new ModuleOptions($options);
+  }
 }

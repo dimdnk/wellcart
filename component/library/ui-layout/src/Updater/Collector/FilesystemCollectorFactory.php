@@ -8,19 +8,11 @@ namespace WellCart\Ui\Layout\Updater\Collector;
 
 use WellCart\Ui\Layout\Options\ModuleOptions;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class FilesystemCollectorFactory implements FactoryInterface
 {
-    /**
-     * @inheritDoc
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, FilesystemCollector::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

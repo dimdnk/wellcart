@@ -8,19 +8,11 @@ namespace WellCart\Ui\Layout\Generator;
 
 use WellCart\Ui\Layout\Options\ModuleOptions;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ViewHelperGeneratorFactory implements FactoryInterface
 {
-    /**
-     * @inheritDoc
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, ViewHelperGenerator::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

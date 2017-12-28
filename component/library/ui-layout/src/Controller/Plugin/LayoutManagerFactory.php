@@ -4,7 +4,7 @@ namespace WellCart\Ui\Layout\Controller\Plugin;
 use WellCart\Ui\Layout\Layout\LayoutInterface;
 use WellCart\Ui\Layout\Updater\LayoutUpdaterInterface;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 use WellCart\Ui\Layout\Block\BlockPoolInterface;
 
@@ -14,17 +14,6 @@ use WellCart\Ui\Layout\Block\BlockPoolInterface;
  */
 class LayoutManagerFactory implements FactoryInterface
 {
-    /**
-     *
-     * @param ServiceLocatorInterface $serviceLocator
-     * @return LayoutManager
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $container = $serviceLocator->getServiceLocator();
-        return $this($container, LayoutManager::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName

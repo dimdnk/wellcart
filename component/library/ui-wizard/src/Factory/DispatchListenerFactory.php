@@ -10,21 +10,25 @@ declare(strict_types = 1);
 
 namespace WellCart\Ui\Wizard\Factory;
 
+use Interop\Container\ContainerInterface;
+use Interop\Container\Exception\ContainerException;
 use WellCart\Ui\Wizard\Listener\DispatchListener;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Exception\ServiceNotCreatedException;
+use Zend\ServiceManager\Exception\ServiceNotFoundException;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class DispatchListenerFactory implements FactoryInterface
 {
-    /**
-     * @param  ServiceLocatorInterface $serviceLocator
-     * @return DispatchListener
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $resolver = $serviceLocator->get('WellCart\Ui\Wizard\WizardResolver');
-        $factory  = $serviceLocator->get('WellCart\Ui\Wizard\WizardFactory');
+  /**
+   * @inheritDoc
+   */
+  public function __invoke(ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    $resolver = $container->get('WellCart\Ui\Wizard\WizardResolver');
+    $factory  = $container->get('WellCart\Ui\Wizard\WizardFactory');
 
-        return new DispatchListener($resolver, $factory);
-    }
+    return new DispatchListener($resolver, $factory);
+  }
 }

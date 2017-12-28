@@ -8,19 +8,11 @@ namespace WellCart\Ui\Layout\Updater\Collector;
 
 use Interop\Container\ContainerInterface;
 use Zend\Config\Config;
-use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ConfigCollectorFactory implements FactoryInterface
 {
-    /**
-     * @inheritDoc
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this($serviceLocator, ConfigCollector::class);
-    }
-
     /**
      * @param ContainerInterface $container
      * @param $requestedName
