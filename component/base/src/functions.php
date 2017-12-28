@@ -36,7 +36,7 @@ if (!function_exists('url_to_route')) {
     /**
      * Generates a url given the name of a route.
      *
-     * @see    Zend\Mvc\Router\RouteInterface::assemble()
+     * @see    Zend\Router\RouteInterface::assemble()
      *
      * @param  string            $name               Name of the route
      * @param  array             $params             Parameters for the link

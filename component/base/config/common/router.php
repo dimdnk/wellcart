@@ -120,7 +120,7 @@ return [
                         'may_terminate' => true,
                         'child_routes'  => [
                             'resize' => [
-                                'type'    => 'Zend\Mvc\Router\Http\Regex',
+                                'type'    => 'Zend\Router\Http\Regex',
                                 'options' => [
                                     'regex'    => '/(?<file>.*?)\.\$(?<command>.*)\.(?<extension>[a-zA-Z]+)',
                                     'defaults' => [

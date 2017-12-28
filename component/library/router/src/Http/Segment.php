@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Segment as Route;
+use Zend\Router\Http\Segment as Route;
 
 class Segment extends Route
 {

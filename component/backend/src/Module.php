@@ -20,7 +20,7 @@ use Zend\ConfigAggregator\ConfigAggregator;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature;
 use Zend\Mvc\MvcEvent;
-use Zend\Mvc\Router\RouteMatch;
+use Zend\Router\RouteMatch;
 
 class Module implements
     Feature\BootstrapListenerInterface,

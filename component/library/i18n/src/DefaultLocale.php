@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace WellCart\I18n;
 
 use Interop\Container\ContainerInterface;
+use WellCart\Utility\Config;
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Locale;
 
@@ -23,7 +24,7 @@ class DefaultLocale implements
     array $options = null
   ) {
     if (null === $this->locale) {
-      $this->setLocaleFromConfig($container);
+      $this->setLocaleFromConfig();
     }
 
     return $this;
@@ -31,21 +32,12 @@ class DefaultLocale implements
 
     /**
      * Set the current default locale by finding it in config
-     * @param  ContainerInterface $serviceLocator
      * @return self
      */
-    public function setLocaleFromConfig(ContainerInterface $serviceLocator)
+    public function setLocaleFromConfig()
     {
-        /**
-         * We could be getting a Form Element Manager, Validator Manager et al
-         */
-        if (is_subclass_of($serviceLocator, 'Zend\ServiceManager\ServiceManager')) {
-            $serviceLocator = $serviceLocator->getServiceLocator();
-        }
-        $config = $serviceLocator->get('config');
-        $locale = isset($config['wellcart']['localization']['locale']) ? $config['wellcart']['localization']['locale'] : Locale::getDefault();
+        $locale = Config::get('wellcart.localization.locale', Locale::getDefault());
         $this->setLocale($locale);
-
         return $this;
     }
 

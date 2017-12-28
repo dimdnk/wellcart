@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Method as Route;
+use Zend\Router\Http\Method as Route;
 
 class Method extends Route
 {

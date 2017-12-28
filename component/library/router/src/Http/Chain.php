@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Chain as Route;
+use Zend\Router\Http\Chain as Route;
 
 class Chain extends Route
 {

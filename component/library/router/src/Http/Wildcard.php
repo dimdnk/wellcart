@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Wildcard as Route;
+use Zend\Router\Http\Wildcard as Route;
 
 class Wildcard extends Route
 {

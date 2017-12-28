@@ -14,7 +14,7 @@ use WellCart\Utility\Config;
 use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventManagerInterface;
 use Zend\Mvc\MvcEvent;
-use Zend\Mvc\Router\Http\TreeRouteStack;
+use Zend\Router\Http\TreeRouteStack;
 
 class SetupRouterBaseUrl extends AbstractListenerAggregate
 {

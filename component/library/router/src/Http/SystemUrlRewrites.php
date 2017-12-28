@@ -13,9 +13,9 @@ use Doctrine\DBAL\Exception\TableNotFoundException;
 use WellCart\Base\Spec\UrlRewriteEntity;
 use WellCart\Base\Spec\UrlRewriteRepository;
 use WellCart\Mvc\Application;
-use Zend\Mvc\Router\Exception;
-use Zend\Mvc\Router\Http\RouteInterface;
-use Zend\Mvc\Router\Http\RouteMatch;
+use Zend\Router\Exception;
+use Zend\Router\Http\RouteInterface;
+use Zend\Router\Http\RouteMatch;
 use Zend\Stdlib\RequestInterface as Request;
 use Zend\Uri\Uri;
 
@@ -63,7 +63,7 @@ class SystemUrlRewrites implements RouteInterface
     /**
      * match(): defined by RouteInterface interface.
      *
-     * @see    \Zend\Mvc\Router\RouteInterface::match()
+     * @see    \Zend\Router\RouteInterface::match()
      *
      * @param  Request $request
      *

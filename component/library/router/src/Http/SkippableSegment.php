@@ -10,8 +10,8 @@ declare(strict_types = 1);
 namespace WellCart\Router\Http;
 
 use Traversable;
-use Zend\Mvc\Router\Exception;
-use Zend\Mvc\Router\Http\Segment;
+use Zend\Router\Exception;
+use Zend\Router\Http\Segment;
 use Zend\Stdlib\ArrayUtils;
 
 /**
@@ -45,7 +45,7 @@ class SkippableSegment extends Segment
     /**
      * factory(): defined by RouteInterface interface.
      *
-     * @see \Zend\Mvc\Router\RouteInterface::factory()
+     * @see \Zend\Router\RouteInterface::factory()
      *
      * @param array|Traversable $options
      *

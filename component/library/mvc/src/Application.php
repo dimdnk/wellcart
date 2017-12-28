@@ -76,8 +76,7 @@ class Application extends AbstractApplication
         $this->environment = $environment;
         $this->maintenanceMode
             = ($maintenanceMode) ? $maintenanceMode : new MaintenanceMode();
-        parent::__construct(
-            $configuration, $serviceManager, $events, $request, $response
+        parent::__construct($serviceManager, $events, $request, $response
         );
     }
 

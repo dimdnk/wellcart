@@ -17,9 +17,9 @@ use WellCart\View\Helper\JavaScriptEnvironment;
 use Zend\EventManager\AbstractListenerAggregate;
 use Zend\EventManager\EventManagerInterface;
 use Zend\Mvc\MvcEvent;
-use Zend\Mvc\Router\Http\TreeRouteStack;
-use Zend\Mvc\Router\RouteMatch;
-use Zend\Mvc\Router\RouteStackInterface;
+use Zend\Router\Http\TreeRouteStack;
+use Zend\Router\RouteMatch;
+use Zend\Router\RouteStackInterface;
 use Zend\View\Helper\HeadTitle;
 
 class SetupPageVariables extends AbstractListenerAggregate

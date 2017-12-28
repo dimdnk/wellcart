@@ -11,6 +11,9 @@ namespace WellCart\Base;
 use WellCart\Form\Element as FormElement;
 use WellCart\View\Factory\Helper\MessengerFactory;
 use WellCart\View\Helper as ViewHelper;
+use Zend\Router\Http\HttpRouterFactory;
+use Zend\Router\RoutePluginManagerFactory;
+use Zend\Router\RouterFactory;
 
 return [
     /**
@@ -27,9 +30,9 @@ return [
             'WellCart\Ui\Layout\EventListener\AreaBasedOnThemeContext' => 'WellCart\Ui\Factory\Layout\EventListener\AreaBasedOnThemeContextFactory',
             'WellCart\Ui\Layout\EventListener\LoadLayoutListener' => 'WellCart\Ui\Factory\Layout\EventListener\LoadLayoutListenerFactory',
             'WellCart\Ui\Layout\EventListener\PrepareActionViewModelListener' => 'WellCart\Ui\Factory\Layout\EventListener\PrepareActionViewModelListenerFactory',
-            'Router' => 'Zend\Mvc\Service\RouterFactory',
-            'RoutePluginManager' => 'Zend\Mvc\Service\RoutePluginManagerFactory',
-            'HttpRouter' => 'Zend\Mvc\Service\HttpRouterFactory',
+            'Router' => RouterFactory::class,
+            'RoutePluginManager' => RoutePluginManagerFactory::class,
+            'HttpRouter' => HttpRouterFactory::class,
             Service\Route\Listing::class => Factory\Service\Route\ListingFactory::class,
 
         ],

@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Regex as Route;
+use Zend\Router\Http\Regex as Route;
 
 class Regex extends Route
 {

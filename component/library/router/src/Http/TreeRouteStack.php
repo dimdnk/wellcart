@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\TreeRouteStack as RouteStack;
+use Zend\Router\Http\TreeRouteStack as RouteStack;
 
 class TreeRouteStack extends RouteStack
 {

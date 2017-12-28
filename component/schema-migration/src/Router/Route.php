@@ -12,8 +12,8 @@ namespace WellCart\SchemaMigration\Router;
 
 use WellCart\SchemaMigration\Console\PhinxApplication;
 use Zend\Console\Request as ConsoleRequest;
-use Zend\Mvc\Router\Console\RouteInterface;
-use Zend\Mvc\Router\RouteMatch;
+use Zend\Router\Console\RouteInterface;
+use Zend\Router\RouteMatch;
 use Zend\Stdlib\RequestInterface as Request;
 
 class Route implements RouteInterface

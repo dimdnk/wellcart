@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Part as Route;
+use Zend\Router\Http\Part as Route;
 
 class Part extends Route
 {

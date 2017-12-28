@@ -11,7 +11,7 @@ declare(strict_types = 1);
 namespace WellCart\Ui\Wizard;
 
 use Zend\Http\Request as HttpRequest;
-use Zend\Mvc\Router\RouteInterface;
+use Zend\Router\RouteInterface;
 use Zend\Stdlib\RequestInterface;
 
 class WizardResolver

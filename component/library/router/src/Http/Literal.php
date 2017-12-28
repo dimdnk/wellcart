@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Router\Http;
 
-use Zend\Mvc\Router\Http\Literal as Route;
+use Zend\Router\Http\Literal as Route;
 
 class Literal extends Route
 {
