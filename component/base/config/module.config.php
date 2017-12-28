@@ -13,9 +13,13 @@ use WellCart\View\Factory\Helper\MessengerFactory;
 use WellCart\View\Helper as ViewHelper;
 use Zend\Filter\FilterPluginManagerFactory;
 use Zend\Form\FormElementManagerFactory;
+use Zend\Mvc\I18n\Translator;
+use Zend\Mvc\I18n\TranslatorFactory;
 use Zend\Router\Http\HttpRouterFactory;
 use Zend\Router\RoutePluginManagerFactory;
 use Zend\Router\RouterFactory;
+use Zend\Validator\ValidatorPluginManager;
+use Zend\Validator\ValidatorPluginManagerFactory;
 
 return [
     /**
@@ -38,6 +42,8 @@ return [
             Service\Route\Listing::class => Factory\Service\Route\ListingFactory::class,
             'FilterManager' => FilterPluginManagerFactory::class,
             'FormElementManager' => FormElementManagerFactory::class,
+            Translator::class => TranslatorFactory::class,
+            ValidatorPluginManager::class => ValidatorPluginManagerFactory::class,
 
         ],
         'abstract_factories' => [
@@ -79,6 +85,8 @@ return [
         ],
         'aliases' => [
             'translator' => 'MvcTranslator',
+            'MvcTranslator' => Translator::class,
+            'ValidatorManager' => ValidatorPluginManager::class,
             'UnderscoreNamingStrategy' => 'Zend\Hydrator\NamingStrategy\UnderscoreNamingStrategy',
             'wellcart_base_db_adapter' => 'Zend\Db\Adapter\Adapter',
             'wellcart_base_object_manager' => 'Doctrine\ORM\EntityManager',
@@ -245,6 +253,11 @@ return [
             'date' => \WellCart\View\Helper\Date::class,
             'form_element' => \WellCart\Form\View\Helper\FormElement::class,
             'RequireJS' => 'RdnRequireJS:RequireJS',
+
+
+
+            
+            
         ],
         'factories' => [
             'messenger' => MessengerFactory::class,
@@ -271,6 +284,7 @@ return [
             'forminput' => 'WellCart\Form\View\Helper\FormInput',
             'formselect' => 'WellCart\Form\View\Helper\FormSelect',
             'formlabel' => 'WellCart\Form\View\Helper\FormLabel',
+            'formLabel' => 'WellCart\Form\View\Helper\FormLabel',
             'formbutton' => 'WellCart\Form\View\Helper\FormButton',
             'formcheckbox' => 'WellCart\Form\View\Helper\FormCheckbox',
             'formcollection' => 'WellCart\Form\View\Helper\FormCollection',

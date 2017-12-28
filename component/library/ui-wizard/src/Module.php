@@ -24,7 +24,8 @@ class Module implements ConfigProviderInterface
         $serviceManager = $application->getServiceManager();
 
         $dispatchListener = $serviceManager->get('WellCart\Ui\Wizard\Listener\DispatchListener');
-        $application->getEventManager()->attach($dispatchListener);
+
+        $dispatchListener->attach($application->getEventManager());
     }
 
     public function getConfig()

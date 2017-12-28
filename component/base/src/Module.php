@@ -165,11 +165,6 @@ class Module implements
 
         PaginationControl::setDefaultScrollingStyle('sliding');
         PaginationControl::setDefaultViewPartial('partial/paginator/default');
-
-        $serviceManager->get('BlockManager')
-            ->addPeeringServiceManager(
-                $serviceManager
-            );
     }
 
     /**
