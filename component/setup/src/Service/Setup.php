@@ -240,11 +240,7 @@ class Setup
      */
     public function updateData()
     {
-        $command = new Command\ImportFixtureCommand();
-        $em = $this->getEntityManager();
-
-        $command->setEntityManager($em);
-
+        $command = new Command\ImportFixtureCommand($this->sm);
         $input = new IgnoreValidationArrayInput(
             ['--append' => '']
         );
