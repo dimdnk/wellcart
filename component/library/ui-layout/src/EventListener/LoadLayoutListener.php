@@ -38,10 +38,8 @@ class LoadLayoutListener implements ListenerAggregateInterface
     public function attach(EventManagerInterface $events, $priority = 1)
     {
         if (!Console::isConsole()) {
-            $this->listeners[] = $events->attach(
-                [MvcEvent::EVENT_DISPATCH, MvcEvent::EVENT_DISPATCH_ERROR],
-                [$this, 'loadLayout'], $priority
-            );
+            $this->listeners[] = $events->attach(MvcEvent::EVENT_DISPATCH,  [$this, 'loadLayout'], $priority);
+            $this->listeners[] = $events->attach(MvcEvent::EVENT_DISPATCH_ERROR, [$this, 'loadLayout'], $priority);
         }
     }
 

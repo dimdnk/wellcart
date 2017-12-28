@@ -12,6 +12,7 @@ use WellCart\Form\Element as FormElement;
 use WellCart\View\Factory\Helper\MessengerFactory;
 use WellCart\View\Helper as ViewHelper;
 use Zend\Filter\FilterPluginManagerFactory;
+use Zend\Form\FormElementManagerFactory;
 use Zend\Router\Http\HttpRouterFactory;
 use Zend\Router\RoutePluginManagerFactory;
 use Zend\Router\RouterFactory;
@@ -36,6 +37,7 @@ return [
             'HttpRouter' => HttpRouterFactory::class,
             Service\Route\Listing::class => Factory\Service\Route\ListingFactory::class,
             'FilterManager' => FilterPluginManagerFactory::class,
+            'FormElementManager' => FormElementManagerFactory::class,
 
         ],
         'abstract_factories' => [
