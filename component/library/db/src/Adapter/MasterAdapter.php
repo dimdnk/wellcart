@@ -13,10 +13,8 @@ use BjyProfiler\Db\Adapter\ProfilingAdapter;
 use Zend\Db\Adapter\Platform\PlatformInterface;
 use Zend\Db\Adapter\Profiler\ProfilerInterface;
 use Zend\Db\ResultSet\ResultSetInterface;
-use ZfcBase\Db\Adapter\MasterSlaveAdapterInterface;
 
 class MasterAdapter extends ProfilingAdapter
-    implements MasterSlaveAdapterInterface
 {
 
     /**

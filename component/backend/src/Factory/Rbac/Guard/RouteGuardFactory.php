@@ -16,11 +16,10 @@ use WellCart\Backend\Rbac\Guard\RouteGuard;
 use Zend\ServiceManager\Exception\ServiceNotCreatedException;
 use Zend\ServiceManager\Exception\ServiceNotFoundException;
 use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\ServiceManager\MutableCreationOptionsInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class RouteGuardFactory
-    implements FactoryInterface, MutableCreationOptionsInterface
+    implements FactoryInterface
 {
 
     /**

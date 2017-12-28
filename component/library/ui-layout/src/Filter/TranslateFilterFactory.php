@@ -8,7 +8,6 @@ namespace WellCart\Ui\Layout\Filter;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\ServiceManager\MutableCreationOptionsInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 class TranslateFilterFactory implements FactoryInterface

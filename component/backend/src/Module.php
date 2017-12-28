@@ -65,9 +65,7 @@ class Module implements
 
         $em->attach(MvcEvent::EVENT_DISPATCH, array($this, 'selectLayoutBasedOnRoute'));
 
-        $target->getEventManager()->attach(
-            $target->getServiceManager()->get(UnauthorizedStrategy::class)
-        );
+      $target->getServiceManager()->get(UnauthorizedStrategy::class)->attach($target->getEventManager());
     }
 
     /**

@@ -12,13 +12,13 @@ namespace WellCart\Setup\Console\Command;
 
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
-use DoctrineDataFixtureModule\Command\ImportCommand;
+use DoctrineDataFixtureModule\Command\FixturesLoadCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use WellCart\Setup\DataFixture\Loader;
 use WellCart\Setup\DataFixture\PermissionsLoader;
 
-class ImportFixtureCommand extends ImportCommand
+class ImportFixtureCommand extends FixturesLoadCommand
 {
 
     public function execute(InputInterface $input, OutputInterface $output)

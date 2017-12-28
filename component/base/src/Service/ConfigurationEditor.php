@@ -16,15 +16,15 @@ use WellCart\Base\Exception;
 use WellCart\Base\Spec\ConfigurationRepository;
 use WellCart\Form\Form;
 use WellCart\Utility\Arr;
+use Zend\EventManager\EventManagerAwareInterface;
+use Zend\EventManager\EventManagerAwareTrait;
 use Zend\Hydrator\ClassMethods;
 use Zend\Stdlib\PriorityList;
-use ZfcBase\EventManager\EventProvider;
 
-class ConfigurationEditor extends EventProvider
-    implements ObjectManagerAwareInterface
+class ConfigurationEditor  implements ObjectManagerAwareInterface, EventManagerAwareInterface
 {
 
-    use ProvidesObjectManager;
+    use ProvidesObjectManager, EventManagerAwareTrait;
 
     /**
      * Configuration
