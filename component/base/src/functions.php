@@ -55,7 +55,7 @@ if (!function_exists('url_to_route')) {
         if ($urlHelper === null) {
             $urlHelper = application()
                 ->getServiceManager()
-                ->get('viewhelpermanager')
+                ->get('ViewHelperManager')
                 ->get('url');
         }
 

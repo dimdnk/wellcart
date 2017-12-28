@@ -9,7 +9,7 @@
 namespace WellCart\Base;
 
 use WellCart\Ui\Layout\Block\BlockInterface;
-use WellCart\Ui\Layout\BlockManager;
+use Psr\Container\ContainerInterface as PsrContainerInterface;;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use WellCart\Mvc;
 use WellCart\ServiceManager\ServiceLocatorAwareInterface;
@@ -24,12 +24,12 @@ use Zend\Stdlib\InitializableInterface;
 return [
     'factories'    => [
         ItemView\Text::class     =>
-            function (BlockManager $sm) {
+            function (PsrContainerInterface $sm) {
                 return new ItemView\Text();
             },
         ItemView\HtmlHead::class =>
-            function (BlockManager $sm) {
-                return new ItemView\HtmlHead(
+            function (PsrContainerInterface $sm) {
+              return new ItemView\HtmlHead(
                     [],
                     [],
                     $sm->getServiceLocator()
@@ -44,7 +44,7 @@ return [
     'initializers' => [
         'Zend\Log\LoggerAwareInterface'
                                                                =>
-            function ($service, BlockManager $services) {
+            function ( PsrContainerInterface $services, $service) {
                 if ($service instanceof \Zend\Log\LoggerAwareInterface
                 ) {
                     $logger = $services->getServiceLocator()->get(
@@ -55,7 +55,7 @@ return [
             },
         'Zend\I18n\Translator\TranslatorAwareInterface'
                                                                =>
-            function ($service, BlockManager $services) {
+            function ( PsrContainerInterface $services, $service) {
                 if ($service instanceof
                     \Zend\I18n\Translator\TranslatorAwareInterface
                 ) {
@@ -66,7 +66,7 @@ return [
                 }
             },
         'WellCart\Mvc\Controller\PluginManagerAwareInterface'  =>
-            function ($service, BlockManager $services) {
+            function ( PsrContainerInterface $services, $service) {
                 if ($service instanceof
                     Mvc\Controller\PluginManagerAwareInterface
                 ) {
@@ -77,7 +77,7 @@ return [
                 }
             },
         'WellCart\Ui\Layout\LayoutManagerAwareTrait'           =>
-            function ($service, BlockManager $services) {
+            function ( PsrContainerInterface $services, $service) {
                 if ($service instanceof
                     LayoutManagerAwareInterface
                 ) {
@@ -88,7 +88,7 @@ return [
                 }
             },
         'WellCart\Stdlib\RequestAwareInterface'                =>
-            function ($service, BlockManager $services) {
+            function ( PsrContainerInterface $services, $service) {
                 if ($service instanceof RequestAwareInterface) {
                     $request = $services->getServiceLocator()->get(
                         'Request'
@@ -105,7 +105,7 @@ return [
                 }
             },
         'WellCart\Stdlib\ResponseAwareInterface'               =>
-            function ($service, BlockManager $services) {
+            function (PsrContainerInterface $services, $service) {
                 if ($service instanceof ResponseAwareInterface) {
                     $response = $services->getServiceLocator()->get(
                         'Response'
@@ -114,7 +114,7 @@ return [
                 }
             },
         'WellCart\View\Renderer\ViewRendererAwareInterface'    =>
-            function ($service, BlockManager $services) {
+            function (PsrContainerInterface $services, $service) {
                 if ($service instanceof ViewRendererAwareInterface
                     && !$service instanceof Root
                 ) {
@@ -132,7 +132,7 @@ return [
                 }
             },
         'WellCart\ServiceManager\ServiceLocatorAwareInterface' =>
-            function ($service, BlockManager $services) {
+            function (PsrContainerInterface $services, $service) {
                 if ($service instanceof
                     ServiceLocatorAwareInterface
                 ) {
@@ -140,7 +140,7 @@ return [
                 }
             },
         'Zend\Stdlib\InitializableInterface'                   =>
-            function ($service, BlockManager $services) {
+            function (PsrContainerInterface $services, $service) {
                 if ($service instanceof InitializableInterface) {
                     if ($service instanceof
                         ServiceLocatorAwareInterface
@@ -152,8 +152,7 @@ return [
             },
         'ObjectManagerInitializer'                             =>
             function (
-                $service,
-                $services
+              PsrContainerInterface $services, $service
             ) {
                 if ($service instanceof ObjectManagerAwareInterface) {
                     $entityManager = $services->getServiceLocator()

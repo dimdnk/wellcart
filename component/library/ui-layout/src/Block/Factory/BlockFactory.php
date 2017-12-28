@@ -80,6 +80,7 @@ final class BlockFactory implements
     {
         /* @var $block ModelInterface */
         $class = $this->getOption('class', $specs);
+
         if ($this->blockManager->has($class)) {
             $block = $this->blockManager->get($class);
         } elseif (class_exists($class)) {

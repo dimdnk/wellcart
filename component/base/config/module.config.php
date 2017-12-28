@@ -15,9 +15,12 @@ use Zend\Filter\FilterPluginManagerFactory;
 use Zend\Form\FormElementManagerFactory;
 use Zend\Mvc\I18n\Translator;
 use Zend\Mvc\I18n\TranslatorFactory;
+use Zend\Mvc\Plugin\FilePrg\FilePostRedirectGet;
+use Zend\Mvc\Plugin\Prg\PostRedirectGet;
 use Zend\Router\Http\HttpRouterFactory;
 use Zend\Router\RoutePluginManagerFactory;
 use Zend\Router\RouterFactory;
+use Zend\ServiceManager\Factory\InvokableFactory;
 use Zend\Validator\ValidatorPluginManager;
 use Zend\Validator\ValidatorPluginManagerFactory;
 
@@ -296,6 +299,7 @@ return [
             'formsrrors' => 'WellCart\Form\View\Helper\FormErrors',
             'javaScriptEnvironment' => ViewHelper\JavaScriptEnvironment::class,
             'formrenderer' => 'WellCart\Form\View\Helper\FormRenderer',
+            'formRenderer' => 'WellCart\Form\View\Helper\FormRenderer',
             'formhtmlanchor' => 'WellCart\Form\View\Helper\FormHtmlAnchor',
             'formdaterange' => 'WellCart\Form\View\Helper\FormDateRange',
             'formrangefilter' => 'WellCart\Form\View\Helper\FormRangeFilter',
@@ -324,15 +328,30 @@ return [
     'controller_plugins' => [
         'aliases' => [
             'locale' => \WellCart\I18n\Controller\Plugin\Locale::class,
+            'prg'             => PostRedirectGet::class,
+            'PostRedirectGet' => PostRedirectGet::class,
+            'postRedirectGet' => PostRedirectGet::class,
+            'postredirectget' => PostRedirectGet::class,
+            'Zend\Mvc\Controller\Plugin\PostRedirectGet' => PostRedirectGet::class,
+
+            'fileprg'             => FilePostRedirectGet::class,
+            'FilePostRedirectGet' => FilePostRedirectGet::class,
+            'filePostRedirectGet' => FilePostRedirectGet::class,
+            'filepostredirectget' => FilePostRedirectGet::class,
+            'Zend\Mvc\Controller\Plugin\FilePostRedirectGet' => FilePostRedirectGet::class,
         ],
         'factories' => [
             \WellCart\I18n\Controller\Plugin\Locale::class => \WellCart\I18n\Factory\Controller\Plugin\LocalePluginFactory::class,
+            PostRedirectGet::class => InvokableFactory::class,
+            FilePostRedirectGet::class => InvokableFactory::class,
+
         ],
         'invokables' => [
             'gridFilterBuilder' => 'WellCart\Ui\Datagrid\Controller\Plugin\GridFilterBuilder',
             'redirect' => 'WellCart\Mvc\Controller\Plugin\Redirect',
             'messenger' => 'WellCart\Mvc\Controller\Plugin\Messenger',
             'flashmessenger' => 'WellCart\Mvc\Controller\Plugin\FlashMessenger',
+            'flashMessenger' => 'WellCart\Mvc\Controller\Plugin\FlashMessenger',
             'createPageView' => 'WellCart\Mvc\Controller\Plugin\CreatePageView',
             'createViewModel' => 'WellCart\Mvc\Controller\Plugin\CreateViewModel',
             'createConsoleModel' => 'WellCart\Mvc\Controller\Plugin\CreateConsoleModel',
@@ -340,6 +359,8 @@ return [
             'createHalJsonModel' => 'WellCart\Mvc\Controller\Plugin\CreateHalJsonModel',
             'createJsonModel' => 'WellCart\Mvc\Controller\Plugin\CreateJsonModel',
             'invokeAction' => 'WellCart\Mvc\Controller\Plugin\InvokeAction',
+
+
         ],
     ],
     // Placeholder for console routes

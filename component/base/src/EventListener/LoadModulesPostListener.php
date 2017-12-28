@@ -61,10 +61,8 @@ class LoadModulesPostListener
 
         if (isset($config['event_manager']['aggregates'])) {
             foreach ($config['event_manager']['aggregates'] as $aggregate) {
-                $sem->attachAggregate(
-                    $serviceManager->get($aggregate['aggregate']),
-                    isset($aggregate['priority']) ? $aggregate['priority'] : 1
-                );
+              $serviceManager->get($aggregate['aggregate'])->attach($sem,  isset($aggregate['priority']) ? $aggregate['priority'] : 1);
+
             }
         }
     }

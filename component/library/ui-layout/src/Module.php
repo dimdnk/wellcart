@@ -82,6 +82,7 @@ class Module implements
     {
         $sm = $manager->getEvent()->getParam('ServiceManager');
         $serviceListener = $sm->get('ServiceListener');
+
         $serviceListener->addServiceManager(
             'BlockManager',
             'blocks',

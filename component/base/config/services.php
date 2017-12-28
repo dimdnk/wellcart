@@ -236,7 +236,7 @@ return [
     'initializers' => [
         'Zend\Log\LoggerAwareInterface'
                                                                =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof \Zend\Log\LoggerAwareInterface
                 ) {
                     $logger = $services->get('logger');
@@ -246,7 +246,7 @@ return [
         'WellCart\I18n\DefaultLocale' => 'WellCart\I18n\DefaultLocale',
         'Zend\I18n\Translator\TranslatorAwareInterface'
                                                                =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof
                     \Zend\I18n\Translator\TranslatorAwareInterface
                 ) {
@@ -255,7 +255,7 @@ return [
                 }
             },
         'WellCart\Mvc\Controller\PluginManagerAwareInterface'  =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof
                     Mvc\Controller\PluginManagerAwareInterface
                 ) {
@@ -264,7 +264,7 @@ return [
                 }
             },
         'WellCart\Ui\Layout\LayoutManagerAwareTrait'           =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof
                     LayoutManagerAwareInterface
                 ) {
@@ -275,7 +275,7 @@ return [
                 }
             },
         'WellCart\Stdlib\RequestAwareInterface'                =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof Stdlib\RequestAwareInterface) {
                     $request = $services->get('Request');
                     $service->setRequest($request);
@@ -288,14 +288,14 @@ return [
                 }
             },
         'WellCart\Stdlib\ResponseAwareInterface'               =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof Stdlib\ResponseAwareInterface) {
                     $response = $services->get('Response');
                     $service->setResponse($response);
                 }
             },
         'WellCart\View\Renderer\ViewRendererAwareInterface'    =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof ViewRendererAwareInterface
                     && !$service instanceof RootView
                 ) {
@@ -307,7 +307,7 @@ return [
                 }
             },
         'WellCart\ServiceManager\ServiceLocatorAwareInterface' =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof
                     ServiceLocatorAwareInterface
                 ) {
@@ -315,7 +315,7 @@ return [
                 }
             },
         'Zend\Stdlib\InitializableInterface'                   =>
-            function ($service, $services) {
+            function ($services, $service) {
                 if ($service instanceof InitializableInterface) {
                     if ($service instanceof
                         ServiceLocatorAwareInterface
@@ -327,8 +327,7 @@ return [
             },
         'ObjectManagerInitializer'                             =>
             function (
-                $service,
-                $services
+              $services, $service
             ) {
                 if ($service instanceof ObjectManagerAwareInterface) {
                     $entityManager = $services->get(

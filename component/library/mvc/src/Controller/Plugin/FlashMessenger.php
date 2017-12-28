@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace WellCart\Mvc\Controller\Plugin;
 
-use Zend\Mvc\Controller\Plugin\FlashMessenger as AbstractPlugin;
+use Zend\Mvc\Plugin\FlashMessenger\FlashMessenger as AbstractPlugin;
 
 class FlashMessenger extends AbstractPlugin
 {

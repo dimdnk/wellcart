@@ -41,12 +41,12 @@ class WizardFactory implements FactoryInterface
     $wizard->setIdentifierAccessor($identifierAccessor);
 
     $wizardListener = $container->get('WellCart\Ui\Wizard\Listener\WizardListener');
-    $wizard->getEventManager()->attachAggregate($wizardListener);
+    $wizardListener->attach($wizard->getEventManager());
 
     $stepCollection = $wizard->getSteps();
 
     $stepCollectionListener = $container->get('WellCart\Ui\Wizard\Listener\StepCollectionListener');
-    $stepCollection->getEventManager()->attachAggregate($stepCollectionListener);
+    $stepCollectionListener->attach($stepCollection->getEventManager());
 
     return $wizard;
   }

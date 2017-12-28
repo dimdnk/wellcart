@@ -298,7 +298,7 @@ class Module implements
         return [
             'initializers' => [
                 'WellCart\ServiceManager\ServiceLocatorAwareInterface' =>
-                    function ($service, $sm) {
+                    function ($sm, $service) {
                         if ($service instanceof
                             ServiceLocatorAwareInterface
                         ) {
@@ -308,10 +308,7 @@ class Module implements
                         }
                     },
                 'ObjectManagerInitializer'                             =>
-                    function (
-                        $service,
-                        $sm
-                    ) {
+                    function ($sm, $service) {
                         if ($service instanceof ObjectManagerAwareInterface) {
                             $services = $sm->getServiceLocator();
                             $entityManager = $services->get(

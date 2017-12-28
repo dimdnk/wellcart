@@ -11,19 +11,21 @@ declare(strict_types = 1);
 namespace WellCart\Setup\Controller;
 
 use WellCart\Mvc\Controller\AbstractControllerTrait;
+use WellCart\ServiceManager\ServiceLocatorAwareInterface;
+use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Setup\Service\Setup as SetupService;
 use WellCart\Utility\Arr;
 use Zend\Console\ColorInterface as Color;
 use Zend\I18n\Translator\TranslatorAwareInterface;
 use Zend\Log\LoggerAwareInterface;
-use Zend\Mvc\Controller\AbstractConsoleController;
+use Zend\Mvc\Console\Controller;
 
-class ConsoleSetupController extends AbstractConsoleController implements
+class ConsoleSetupController extends Controller\AbstractConsoleController implements
     LoggerAwareInterface,
-    TranslatorAwareInterface
+    TranslatorAwareInterface,
+    ServiceLocatorAwareInterface
 {
-
-    use AbstractControllerTrait;
+    use AbstractControllerTrait, ServiceLocatorAwareTrait;
 
     /**
      * @param SetupService $setupService
@@ -174,13 +176,5 @@ class ConsoleSetupController extends AbstractConsoleController implements
                 Color::RED
             );
         }
-    }
-
-    /**
-     * @return \Zend\ServiceManager\ServiceLocatorInterface
-     */
-    public function getServiceLocator()
-    {
-        return $this->serviceLocator;
     }
 }

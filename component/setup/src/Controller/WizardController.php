@@ -12,6 +12,8 @@ namespace WellCart\Setup\Controller;
 
 use Throwable;
 use WellCart\Mvc\Controller\AbstractControllerTrait;
+use WellCart\ServiceManager\ServiceLocatorAwareInterface;
+use WellCart\ServiceManager\ServiceLocatorAwareTrait;
 use WellCart\Setup\Service\Setup as SetupService;
 use WellCart\Ui\Wizard\WizardFactory;
 use Zend\I18n\Translator\TranslatorAwareInterface;
@@ -20,10 +22,10 @@ use Zend\Mvc\Controller\AbstractActionController;
 
 class WizardController extends AbstractActionController implements
     LoggerAwareInterface,
-    TranslatorAwareInterface
+    TranslatorAwareInterface, ServiceLocatorAwareInterface
 {
 
-    use AbstractControllerTrait;
+    use AbstractControllerTrait, ServiceLocatorAwareTrait;
 
     /**
      * @return array|\Zend\View\Model\ViewModel
@@ -74,13 +76,5 @@ class WizardController extends AbstractActionController implements
         return $wizard->getViewModel()
             ->addChild($flashNotifications, 'notifications', true)
             ->addChild($notifications, 'notifications', true);
-    }
-
-    /**
-     * @return \Zend\ServiceManager\ServiceLocatorInterface
-     */
-    public function getServiceLocator()
-    {
-        return $this->serviceLocator;
     }
 }

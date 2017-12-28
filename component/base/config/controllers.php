@@ -15,17 +15,15 @@ use Zend\Mvc\Controller\ControllerManager;
 return [
     'initializers' => [
         'WellCart\ServiceManager\ServiceLocatorAwareInterface' =>
-            function ($service, $sm) {
+            function ( $sm, $service) {
                 if ($service instanceof
                     ServiceLocatorAwareInterface
                 ) {
-                    $service->setServiceLocator($sm->getServiceLocator());
+                  $service->setServiceLocator($sm->getServiceLocator());
                 }
             },
         'ObjectManagerInitializer'                             =>
-            function (
-                $service,
-                $sm
+            function ($sm, $service
             ) {
                 if ($service instanceof ObjectManagerAwareInterface) {
                     $services = $sm->getServiceLocator();
@@ -37,7 +35,7 @@ return [
             },
         'Zend\Log\LoggerAwareInterface'
                                                                =>
-            function ($service, ControllerManager $sm) {
+            function ($sm, $service) {
                 if ($service instanceof \Zend\Log\LoggerAwareInterface
                 ) {
                     $logger = $sm->getServiceLocator()->get('logger');
@@ -46,7 +44,7 @@ return [
             },
         'Zend\I18n\Translator\TranslatorAwareInterface'
                                                                =>
-            function ($service, ControllerManager $sm) {
+            function ($sm, $service) {
                 if ($service instanceof
                     \Zend\I18n\Translator\TranslatorAwareInterface
                 ) {
