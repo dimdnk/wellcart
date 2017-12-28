@@ -35,8 +35,8 @@
     "php": "^7.2.0",
     "gedmo/doctrine-extensions": "2.4.*",
     "beberlei/DoctrineExtensions": "1.*",
-    "doctrine/doctrine-module": "^1.2.0",
-    "hounddog/doctrine-data-fixture-module": "0.*",
+    "doctrine/doctrine-module": "^1.1.5",
+    "dkorsak/doctrine-data-fixture-module": "1.*",
     "oro/doctrine-extensions": "^1.0.0"
   },
   "require-dev": {

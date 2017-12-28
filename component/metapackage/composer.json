@@ -55,9 +55,9 @@
     "zendframework/zend-developer-tools": "1.1.*",
     "container-interop/container-interop": "^1.2.0",
     "zendframework/zend-router": "3.*",
-    "bitweb/zf2-cron-module": "2.0.*",
+    "bitweb/zf3-cron-module": "1.0.*",
     "tck/zf2-imageresizer": "1.*",
-    "acelaya/zf2-acmailer": "5.*",
+    "acelaya/zf2-acmailer": "7.*",
     "firephp/firephp-core": "0.4.*",
     "ccampbell/chromephp": "4.*",
     "tinymce/tinymce": "4.4.*"
