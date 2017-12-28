@@ -183,7 +183,7 @@ class Module implements
     {
         $events = $manager->getEventManager();
         $configListener = new ConfigListener();
-        $events->attach($configListener, -70);
+        $configListener->attach($events);
 
         $events->getSharedManager()->attach(
             '*',

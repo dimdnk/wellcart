@@ -9,39 +9,32 @@ declare(strict_types=1);
 
 namespace WellCart\I18n;
 
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
-use Zend\ServiceManager\InitializerInterface;
-
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 use Locale;
 
 class DefaultLocale implements
-    FactoryInterface,
-    InitializerInterface
+    FactoryInterface
 {
 
     protected $locale;
 
-    /**
-     * Return an instance of myself
-     * @param  ServiceLocatorInterface $serviceLocator
-     * @return DefaultLocale
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        if (null === $this->locale) {
-            $this->setLocaleFromConfig($serviceLocator);
-        }
-
-        return $this;
+  public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName,
+    array $options = null
+  ) {
+    if (null === $this->locale) {
+      $this->setLocaleFromConfig($container);
     }
+
+    return $this;
+  }
 
     /**
      * Set the current default locale by finding it in config
-     * @param  ServiceLocatorInterface $serviceLocator
+     * @param  ContainerInterface $serviceLocator
      * @return self
      */
-    public function setLocaleFromConfig(ServiceLocatorInterface $serviceLocator)
+    public function setLocaleFromConfig(ContainerInterface $serviceLocator)
     {
         /**
          * We could be getting a Form Element Manager, Validator Manager et al
@@ -59,10 +52,10 @@ class DefaultLocale implements
     /**
      * Implements intializer interface
      * @param  mixed                   $instance
-     * @param  ServiceLocatorInterface $serviceLocator
+     * @param  ContainerInterface $serviceLocator
      * @return void
      */
-    public function initialize($instance, ServiceLocatorInterface $serviceLocator)
+    public function initialize($instance, ContainerInterface $serviceLocator)
     {
         /**
          * We might not have an object and without this, when the config
