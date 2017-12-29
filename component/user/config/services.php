@@ -14,6 +14,7 @@ use Zend\Form\Factory as FormFactory;
 
 return [
     'factories' => [
+        'zfcuser_register_form' => Factory\Form\RegisterFilterFactory::class,
         PageView\Backend\AccountForm::class                 =>
             function (ContainerInterface $services) {
                 return new PageView\Backend\AccountForm(
