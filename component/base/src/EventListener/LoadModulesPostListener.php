@@ -11,6 +11,10 @@ declare(strict_types = 1);
 
 namespace WellCart\Base\EventListener;
 
+use WellCart\Utility\Config;
+use Zend\EventManager\AbstractListenerAggregate;
+use Zend\EventManager\EventManagerInterface;
+use Zend\EventManager\ListenerAggregateInterface;
 use Zend\EventManager\SharedEventManager;
 use Zend\ModuleManager\ModuleEvent;
 use Zend\ServiceManager\ServiceManager;
@@ -18,8 +22,23 @@ use Zend\ServiceManager\ServiceManager;
 /**
  * Class MergeConfigListener
  */
-class LoadModulesPostListener
+class LoadModulesPostListener extends AbstractListenerAggregate implements
+  ListenerAggregateInterface
 {
+  /**
+   * Attach listener to ModuleEvent::EVENT_LOAD_MODULES_POST
+   *
+   * @param EventManagerInterface $events
+   * @param int                   $priority
+   */
+  public function attach(EventManagerInterface $events, $priority = 1)
+  {
+    $this->listeners[] = $events->attach(
+      ModuleEvent::EVENT_LOAD_MODULES_POST, [$this, '__invoke'],
+      999
+    );
+  }
+
     /**
      * Attach event listeners from 'event_manager' config section.
      * Provides easy way to attach listeners via SharedEventManager..
@@ -34,14 +53,13 @@ class LoadModulesPostListener
          */
         $serviceManager = $event->getParam('ServiceManager');
         $sem = $event->getTarget()->getEventManager()->getSharedManager();
-        $config = $serviceManager->get('Config');
-
-        if (!isset($config['event_manager'])) {
+        $config = Config::get('event_manager');
+        if (empty($config)) {
             return;
         }
 
-        if (isset($config['event_manager']['listeners'])) {
-            foreach ($config['event_manager']['listeners'] as $listener) {
+        if (isset($config['listeners'])) {
+            foreach ($config['listeners'] as $listener) {
                 // by default attach to any target
                 $listener['id'] = isset($listener['id']) ? $listener['id'] : '*';
                 // by default use standard priority
@@ -59,8 +77,8 @@ class LoadModulesPostListener
             }
         }
 
-        if (isset($config['event_manager']['aggregates'])) {
-            foreach ($config['event_manager']['aggregates'] as $aggregate) {
+        if (isset($config['aggregates'])) {
+            foreach ($config['aggregates'] as $aggregate) {
               $serviceManager->get($aggregate['aggregate'])->attach($sem,  isset($aggregate['priority']) ? $aggregate['priority'] : 1);
 
             }

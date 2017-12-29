@@ -180,11 +180,7 @@ class Module implements
         $configListener = new ConfigListener();
         $configListener->attach($events);
 
-        $events->getSharedManager()->attach(
-            '*',
-            ModuleEvent::EVENT_LOAD_MODULES_POST,
-            new LoadModulesPostListener()
-        );
+      (new LoadModulesPostListener())->attach($events);
     }
 
     /**
