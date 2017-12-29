@@ -10,12 +10,17 @@ declare(strict_types = 1);
 namespace WellCart\User\Factory\Form;
 use ZfcUser\Validator;
 use WellCart\User\Form\RegisterFilter;
+use WellCart\User\Form\Register;
 use Interop\Container\ContainerInterface;
-class RegisterFilterFactory extends  \ZfcUser\Factory\Form\Register
+class RegisterFactory extends  \ZfcUser\Factory\Form\Register
 {
     public function __invoke(ContainerInterface $serviceManager, $requestedName, array $options = null) {
 
-      $form = parent::__invoke($serviceManager, $requestedName, $options);
+      $options = $serviceManager->get('zfcuser_module_options');
+      $form = new Register(null, $options);
+
+      $form->setHydrator($serviceManager->get('zfcuser_register_form_hydrator'));
+
       $filter = new RegisterFilter(
         new Validator\NoRecordExists(array(
           'mapper' => $serviceManager->get('zfcuser_user_mapper'),
