@@ -29,7 +29,6 @@ return [
             PageView\Backend\PreferencesForm::class => PageView\Backend\PreferencesForm::class,
             Form\RecoverAccount::class              => Form\RecoverAccount::class,
 
-            EventListener\Registration\AddRequiredFieldsToFilter::class  => EventListener\Registration\AddRequiredFieldsToFilter::class,
             EventListener\Registration\AddRequiredFieldsToForm::class    => EventListener\Registration\AddRequiredFieldsToForm::class,
             EventListener\Registration\BindRequiredFieldsToEntity::class => EventListener\Registration\BindRequiredFieldsToEntity::class,
             EventListener\UnauthorizedStrategy::class                    => EventListener\UnauthorizedStrategy::class,

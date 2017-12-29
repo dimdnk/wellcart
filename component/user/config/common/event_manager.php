@@ -38,12 +38,6 @@ return [
                 'listener' => EventListener\Registration\AddRequiredFieldsToForm::class,
                 'priority' => -300,
             ],
-            EventListener\Registration\AddRequiredFieldsToFilter::class  => [
-                'id'       => 'ZfcUser\Form\RegisterFilter',
-                'event'    => 'init',
-                'listener' => EventListener\Registration\AddRequiredFieldsToFilter::class,
-                'priority' => -300,
-            ],
             EventListener\Registration\SetDefaultAccountSettings::class  => [
                 'id'       => Service\User::class,
                 'event'    => 'register',
