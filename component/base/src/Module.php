@@ -177,10 +177,8 @@ class Module implements
     public function init(ModuleManagerInterface $manager)
     {
         $events = $manager->getEventManager();
-        $configListener = new ConfigListener();
-        $configListener->attach($events);
-
-      (new LoadModulesPostListener())->attach($events);
+        (new ConfigListener())->attach($events);
+        (new LoadModulesPostListener())->attach($events);
     }
 
     /**
