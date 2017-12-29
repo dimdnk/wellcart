@@ -32,12 +32,6 @@ return [
                 'listener' => EventListener\Login\IdentityReview::class,
                 'priority' => -100000,
             ],
-            EventListener\Registration\AddRequiredFieldsToForm::class    => [
-                'id'       => 'ZfcUser\Form\Register',
-                'event'    => 'init',
-                'listener' => EventListener\Registration\AddRequiredFieldsToForm::class,
-                'priority' => -300,
-            ],
             EventListener\Registration\SetDefaultAccountSettings::class  => [
                 'id'       => Service\User::class,
                 'event'    => 'register',

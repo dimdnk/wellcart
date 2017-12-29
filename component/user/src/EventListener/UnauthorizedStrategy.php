@@ -14,6 +14,7 @@ use WellCart\Mvc\Application;
 use WellCart\Mvc\Exception\AccessDeniedException;
 use WellCart\View\Model\ViewModel;
 use Zend\EventManager\AbstractListenerAggregate;
+use Zend\EventManager\EventInterface;
 use Zend\EventManager\EventManagerInterface;
 use Zend\Http\Response as HttpResponse;
 use Zend\Mvc\MvcEvent;
@@ -38,8 +39,9 @@ class UnauthorizedStrategy extends AbstractListenerAggregate
      *
      * @param MvcEvent $e
      */
-    public function onError(MvcEvent $e)
+    public function onError(EventInterface $e)
     {
+        $e = $e->getTarget();
         $error = $e->getError();
         if ($error == Application::ERROR_EXCEPTION) {
             $exception = $e->getParam('exception');
@@ -49,8 +51,9 @@ class UnauthorizedStrategy extends AbstractListenerAggregate
         }
     }
 
-    private function forbidden(MvcEvent $event)
+    private function forbidden(EventInterface $event)
     {
+      $event = $event->getTarget();
         $model = new ViewModel();
         $model->setTemplate('error/403');
         $response = $event->getResponse() ?: new HttpResponse();

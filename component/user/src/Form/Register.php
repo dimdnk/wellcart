@@ -13,9 +13,42 @@ namespace WellCart\User\Form;
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\EventManager;
 use Zend\EventManager\SharedEventManager;
+use ZfcUser\Options\RegistrationOptionsInterface;
 
 class Register extends \ZfcUser\Form\Register
 {
+  public function __construct(?string $name,
+    RegistrationOptionsInterface $options
+  ) {
+    parent::__construct($name, $options);
+    $this->add(
+      [
+        'name'       => 'first_name',
+        'type'       => 'Text',
+        'options'    => [
+          'label' => __('First Name'),
+        ],
+        'attributes' => [
+          'autocomplete' => 'off',
+        ],
+      ]
+    );
+
+    $this->add(
+      [
+        'name'       => 'last_name',
+        'type'       => 'Text',
+        'options'    => [
+          'label' => __('Last Name'),
+        ],
+        'attributes' => [
+          'autocomplete' => 'off',
+        ],
+      ]
+    );
+  }
+
+
   /**
    * Retrieve the event manager
    *
